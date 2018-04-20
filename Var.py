@@ -938,6 +938,136 @@ class Info(object):
 			Telefone        = "None"
 
 
+	class IsoRadio(object):
+
+		class Status(object):
+
+			Contage         = 0
+			TotalRelogios   = 10
+
+
+		class Santana(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "orange"
+			RelogioCor		= "orange"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+		class SaoMatheus(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "orange"
+			RelogioCor		= "orange"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+
+		class VilaMariana(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "orange"
+			RelogioCor		= "orange"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+		class Lapa(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "orange"
+			RelogioCor		= "orange"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+		class SAmaro(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "orange"
+			RelogioCor		= "orange"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+		class CDutra(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "orange"
+			RelogioCor		= "orange"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+		class Tatuape(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "orange"
+			RelogioCor		= "orange"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+		class CLimpo(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "orange"
+			RelogioCor		= "orange"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+		class Ipiranga(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "orange"
+			RelogioCor		= "orange"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+		class AnaRosa(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "orange"
+			RelogioCor		= "orange"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+
 class Controle(object):
 
 	Status 		      		        = "red"
