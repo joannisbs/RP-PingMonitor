@@ -1097,8 +1097,6 @@ def TestaFuncion(empresa2,relogio2,ip2,port2):
 	GUI.update(empresa2,relogio2)
 
 
-
-
 def loop0():
 
 	while(1):
@@ -1536,7 +1534,18 @@ def AtualizaCor(empresa,relogio,result):
 			else:
 				Info.Building.RioJaneiro.ModuloCor  = "pink"
 				Info.Building.RioJaneiro.RelogioCor = "pink"
-	
+		
+
+		Info.Building.Status.Contage = 0
+		if Info.Building.Allianz.RelogioCor == "green" : 
+				Info.Building.Status.Contage = Info.Building.Status.Contage +1
+		if Info.Building.WTorre.RelogioCor == "green" : 
+				Info.Building.Status.Contage = Info.Building.Status.Contage +1
+		if Info.Building.RioJaneiro.RelogioCor == "green" : 
+				Info.Building.Status.Contage = Info.Building.Status.Contage +1
+			
+
+
 	######################################################### GRAVEX ###################################################
 
 	elif empresa == "gravex":
@@ -1960,7 +1969,7 @@ class MonitorPing(object):
 	def __init__(self,root):
 
 		self.Create_container(root)
-
+		self.Create_Building()
 	
 
 
@@ -1995,84 +2004,6 @@ class MonitorPing(object):
 
 
 
-
-
-######################################################### BUILDING #####################################################
-
-		if Info.Building.Allianz.RelogioCor == "green" : Info.Building.Status.Contage = Info.Building.Status.Contage +1
-		if Info.Building.WTorre.RelogioCor == "green" : Info.Building.Status.Contage = Info.Building.Status.Contage +1
-		if Info.Building.RioJaneiro.RelogioCor == "green" : Info.Building.Status.Contage = Info.Building.Status.Contage +1
-
-
-		self.msgBuilding                            = Label (self.ContainerBuilding,text = "Building")
-		self.msgBuilding                            ["height"]     = 1
-
-		self.msgBuildingCont                            = Label (self.ContainerBuilding,text = str(Info.Building.Status.Contage)+"/3")
-		self.msgBuildingCont                            ["height"]     = 1
-
-
-
-
-
-		self.botaoBuildingAllianz                                  = Button(self.ContainerBuilding)
-		self.botaoBuildingAllianz                   ["text"]       = "Allianz"
-		self.botaoBuildingAllianz                   ["background"] = Info.Building.Allianz.ModuloCor
-		self.botaoBuildingAllianz                   ["width"]      = 15
-		self.botaoBuildingAllianz                   ["height"]     = 1
-		self.botaoBuildingAllianz.bind              ("<Button-1>",lambda e: popup("Building","Allianz",
-													Info.Building.Allianz.IP, 
-													Info.Building.Allianz.Porta, 
-													Info.Building.Allianz.NumeroRep, 
-													Info.Building.Allianz.Responsavel, 
-													Info.Building.Allianz.Telefone))
-
-		self.botaoBuildingAllianzRelogio                           = Button(self.ContainerBuilding)
-		self.botaoBuildingAllianzRelogio            ["text"]       = "R"
-		self.botaoBuildingAllianzRelogio            ["background"] = Info.Building.Allianz.RelogioCor
-		self.botaoBuildingAllianzRelogio            ["width"]      = 1
-		self.botaoBuildingAllianzRelogio            ["height"]     = 1
-
-
-
-
-		self.botaoBuildingWTorre                                   = Button(self.ContainerBuilding)
-		self.botaoBuildingWTorre                    ["text"]       = "WTorre"
-		self.botaoBuildingWTorre                    ["background"] = Info.Building.WTorre.ModuloCor
-		self.botaoBuildingWTorre                    ["width"]      = 15
-		self.botaoBuildingWTorre                    ["height"]     = 1
-		self.botaoBuildingWTorre.bind              ("<Button-1>",lambda e: popup("Building","WTorre",
-													Info.Building.WTorre.IP, 
-													Info.Building.WTorre.Porta, 
-													Info.Building.WTorre.NumeroRep, 
-													Info.Building.WTorre.Responsavel, 
-													Info.Building.WTorre.Telefone))
-
-		self.botaoBuildingWTorreRelogio                            = Button(self.ContainerBuilding)
-		self.botaoBuildingWTorreRelogio             ["text"]       = "R"
-		self.botaoBuildingWTorreRelogio             ["background"] = Info.Building.WTorre.RelogioCor
-		self.botaoBuildingWTorreRelogio             ["width"]      = 1
-		self.botaoBuildingWTorreRelogio             ["height"]     = 1
-
-
-
-
-		self.botaoBuildingRioJaneiro                               = Button(self.ContainerBuilding)
-		self.botaoBuildingRioJaneiro                ["text"]       = "Rio De Janeiro"
-		self.botaoBuildingRioJaneiro                ["background"] = Info.Building.RioJaneiro.ModuloCor
-		self.botaoBuildingRioJaneiro                ["width"]      = 15
-		self.botaoBuildingRioJaneiro                ["height"]     = 1
-		self.botaoBuildingRioJaneiro.bind           ("<Button-1>",lambda e: popup("Building","Rio de Janeiro",
-													Info.Building.RioJaneiro.IP, 
-													Info.Building.RioJaneiro.Porta, 
-													Info.Building.RioJaneiro.NumeroRep, 
-													Info.Building.RioJaneiro.Responsavel, 
-													Info.Building.RioJaneiro.Telefone))
-
-		self.botaoBuildingRioJaneiroRelogio                        = Button(self.ContainerBuilding)
-		self.botaoBuildingRioJaneiroRelogio         ["text"]       = "R"
-		self.botaoBuildingRioJaneiroRelogio         ["background"] = Info.Building.RioJaneiro.RelogioCor
-		self.botaoBuildingRioJaneiroRelogio         ["width"]      = 1
-		self.botaoBuildingRioJaneiroRelogio         ["height"]     =  1
 
 
 
@@ -3722,21 +3653,6 @@ class MonitorPing(object):
 ############################################## GRIDS DOS BOTOES#########################################################
 
 
-######################################################### BUILDING #####################################################
-
-		self.msgBuilding.grid                       (row=0,column=0,sticky = "N")
-		self.msgBuildingCont.grid                   (row=0,column=1,sticky = "N")
-
-		self.botaoBuildingAllianz.grid              (row=1, column=0, sticky = "N")
-		self.botaoBuildingAllianzRelogio.grid       (row=1, column=1, sticky = "N")
-
-		self.botaoBuildingWTorre.grid               (row=2,column=0,sticky = "N")
-		self.botaoBuildingWTorreRelogio.grid        (row=2,column=1,sticky = "N")
-
-		self.botaoBuildingRioJaneiro.grid           (row=3,column=0,sticky = "N")
-		self.botaoBuildingRioJaneiroRelogio.grid    (row=3,column=1,sticky = "N")
-
-
 
 ######################################################### GRAVEX #######################################################
 
@@ -3827,14 +3743,105 @@ class MonitorPing(object):
 
 
 
-
-
-
-
-
-
-		Info.Building.Status.Contage = 0
 		Info.CasaCristo.Status.Contage = 0
+
+
+	def Create_Building(self):
+
+
+		if Info.Building.Allianz.RelogioCor == "green" : Info.Building.Status.Contage = Info.Building.Status.Contage +1
+		if Info.Building.WTorre.RelogioCor == "green" : Info.Building.Status.Contage = Info.Building.Status.Contage +1
+		if Info.Building.RioJaneiro.RelogioCor == "green" : Info.Building.Status.Contage = Info.Building.Status.Contage +1
+
+
+		self.msgBuilding                            = Label (self.ContainerBuilding,text = "Building")
+		self.msgBuilding                            ["height"]     = 1
+		self.msgBuilding.grid                       (row=0,column=0,sticky = "N")
+
+		self.msgBuildingCont                        = Label (self.ContainerBuilding,text = str(Info.Building.Status.Contage)+"/3")
+		self.msgBuildingCont                        ["height"]     = 1
+		self.msgBuildingCont.grid                   (row=0,column=1,sticky = "N")
+
+
+
+
+
+
+		self.botaoBuildingAllianz                                  = Button(self.ContainerBuilding)
+		self.botaoBuildingAllianz                   ["text"]       = "Allianz"
+		self.botaoBuildingAllianz                   ["background"] = Info.Building.Allianz.ModuloCor
+		self.botaoBuildingAllianz                   ["width"]      = 15
+		self.botaoBuildingAllianz                   ["height"]     = 1
+		self.botaoBuildingAllianz.bind              ("<Button-1>",lambda e: popup("Building","Allianz",
+													Info.Building.Allianz.IP, 
+													Info.Building.Allianz.Porta, 
+													Info.Building.Allianz.NumeroRep, 
+													Info.Building.Allianz.Responsavel, 
+													Info.Building.Allianz.Telefone))
+
+		self.botaoBuildingAllianzRelogio                           = Button(self.ContainerBuilding)
+		self.botaoBuildingAllianzRelogio            ["text"]       = "R"
+		self.botaoBuildingAllianzRelogio            ["background"] = Info.Building.Allianz.RelogioCor
+		self.botaoBuildingAllianzRelogio            ["width"]      = 1
+		self.botaoBuildingAllianzRelogio            ["height"]     = 1
+
+		self.botaoBuildingAllianz.grid       		(row=1, column=0, sticky = "N")
+		self.botaoBuildingAllianzRelogio.grid       (row=1, column=1, sticky = "N")
+
+
+
+
+
+
+		self.botaoBuildingWTorre                                   = Button(self.ContainerBuilding)
+		self.botaoBuildingWTorre                    ["text"]       = "WTorre"
+		self.botaoBuildingWTorre                    ["background"] = Info.Building.WTorre.ModuloCor
+		self.botaoBuildingWTorre                    ["width"]      = 15
+		self.botaoBuildingWTorre                    ["height"]     = 1
+		self.botaoBuildingWTorre.bind              ("<Button-1>",lambda e: popup("Building","WTorre",
+													Info.Building.WTorre.IP, 
+													Info.Building.WTorre.Porta, 
+													Info.Building.WTorre.NumeroRep, 
+													Info.Building.WTorre.Responsavel, 
+													Info.Building.WTorre.Telefone))
+
+		self.botaoBuildingWTorreRelogio                            = Button(self.ContainerBuilding)
+		self.botaoBuildingWTorreRelogio             ["text"]       = "R"
+		self.botaoBuildingWTorreRelogio             ["background"] = Info.Building.WTorre.RelogioCor
+		self.botaoBuildingWTorreRelogio             ["width"]      = 1
+		self.botaoBuildingWTorreRelogio             ["height"]     = 1
+
+		self.botaoBuildingWTorre.grid               (row=2,column=0,sticky = "N")
+		self.botaoBuildingWTorreRelogio.grid        (row=2,column=1,sticky = "N")
+
+
+
+
+
+
+		self.botaoBuildingRioJaneiro                               = Button(self.ContainerBuilding)
+		self.botaoBuildingRioJaneiro                ["text"]       = "Rio De Janeiro"
+		self.botaoBuildingRioJaneiro                ["background"] = Info.Building.RioJaneiro.ModuloCor
+		self.botaoBuildingRioJaneiro                ["width"]      = 15
+		self.botaoBuildingRioJaneiro                ["height"]     = 1
+		self.botaoBuildingRioJaneiro.bind           ("<Button-1>",lambda e: popup("Building","Rio de Janeiro",
+													Info.Building.RioJaneiro.IP, 
+													Info.Building.RioJaneiro.Porta, 
+													Info.Building.RioJaneiro.NumeroRep, 
+													Info.Building.RioJaneiro.Responsavel, 
+													Info.Building.RioJaneiro.Telefone))
+
+		self.botaoBuildingRioJaneiroRelogio                        = Button(self.ContainerBuilding)
+		self.botaoBuildingRioJaneiroRelogio         ["text"]       = "R"
+		self.botaoBuildingRioJaneiroRelogio         ["background"] = Info.Building.RioJaneiro.RelogioCor
+		self.botaoBuildingRioJaneiroRelogio         ["width"]      = 1
+		self.botaoBuildingRioJaneiroRelogio         ["height"]     =  1
+
+
+		self.botaoBuildingRioJaneiro.grid           (row=3,column=0,sticky = "N")
+		self.botaoBuildingRioJaneiroRelogio.grid    (row=3,column=1,sticky = "N")
+
+
 
 	def Create_container(self,root):
 
@@ -3938,6 +3945,10 @@ class MonitorPing(object):
 
 				self.botaoBuildingRioJaneiro.configure               	(bg=Info.Building.RioJaneiro.ModuloCor)
 				self.botaoBuildingRioJaneiroRelogio.configure        	(bg=Info.Building.RioJaneiro.RelogioCor)
+
+			self.msgBuildingCont.configure								(text=str(Info.Building.Status.Contage)+"/3")
+
+
 
 
 		elif empresa == "gravex":
