@@ -131,11 +131,11 @@ def TestaFuncion(empresa2,relogio2,ip2,port2):
 	testa = 4
 
 	AtualizaCor(empresa2,relogio2,int(testa))
-	Telas.Tela1 .update(empresa2,relogio2)
+	Telas.GUI_Tela1 .update(empresa2,relogio2)
 
 	testa = TestaPorta(ip2,port2) 
 	AtualizaCor(empresa2,relogio2,int(testa))
-	Telas.Tela1 .update(empresa2,relogio2)
+	Telas.GUI_Tela1 .update(empresa2,relogio2)
 
 
 def loop0():

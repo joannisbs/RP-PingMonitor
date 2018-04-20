@@ -949,4 +949,6 @@ class Controle(object):
 
 class Telas(object):
 
-	Tela1 = "null"
+	GUI_Tela1 							= "null"
+	GUI_Tela2							= "null"
+	GUI_Monitor							= "null"
