@@ -2043,7 +2043,15 @@ class MonitorPing(object):
 	
 		self.Create_BestInClass()
 
+		self.Create_Predman()
 
+		self.Create_Lotten()
+
+		self.Create_Tarek()
+
+		self.Create_Uniman()
+
+		
 
 
 
@@ -2190,8 +2198,6 @@ class MonitorPing(object):
 
 
 
-######################################################### BEST IN CLASS ################################################
-
 
 
 
@@ -2253,8 +2259,753 @@ class MonitorPing(object):
 
 
 
-######################################################### LOTTEN #######################################################
 
+
+######################################################### MILENIO ERVAS ################################################
+
+	
+		self.msgMilenioErvas = Label (self.ContainerMilenioErvas,text = "Milenio Ervas")
+		self.msgMilenioErvas["height"] = 1
+		self.msgMilenioErvas.grid(row=0,column=0,columnspan=2,sticky = "N")
+
+
+
+
+		self.botaoMilenioErvasSBC1620Loja1                             = Button(self.ContainerMilenioErvas)
+		self.botaoMilenioErvasSBC1620Loja1              ["text"]       = "1620 Loja1"
+		self.botaoMilenioErvasSBC1620Loja1              ["background"] = Info.MilenioErvas.Loja1.ModuloCor
+		self.botaoMilenioErvasSBC1620Loja1              ["width"]      = 15
+		self.botaoMilenioErvasSBC1620Loja1              ["height"]     = 1
+		self.botaoMilenioErvasSBC1620Loja1.bind         ("<Button-1>",lambda e: popup("MilenioErvas","1620 Loja1",
+														Info.MilenioErvas.Loja1.IP, 
+														Info.MilenioErvas.Loja1.Porta, 
+														Info.MilenioErvas.Loja1.NumeroRep, 
+														Info.MilenioErvas.Loja1.Responsavel, 
+														Info.MilenioErvas.Loja1.Telefone))
+		self.botaoMilenioErvasSBC1620Loja1.grid         (row=1, column=0, sticky = "N")
+
+		self.botaoMilenioErvasSBC1620Loja1Relogio                      = Button(self.ContainerMilenioErvas)
+		self.botaoMilenioErvasSBC1620Loja1Relogio       ["text"]       = "R"
+		self.botaoMilenioErvasSBC1620Loja1Relogio       ["background"] = Info.MilenioErvas.Loja1.RelogioCor
+		self.botaoMilenioErvasSBC1620Loja1Relogio       ["width"]      = 1
+		self.botaoMilenioErvasSBC1620Loja1Relogio       ["height"]     = 1
+		self.botaoMilenioErvasSBC1620Loja1Relogio.grid  (row=1, column=1, sticky = "N")
+
+
+
+
+		self.botaoMilenioErvasSBC692Loja2                               = Button(self.ContainerMilenioErvas)
+		self.botaoMilenioErvasSBC692Loja2                ["text"]       = "SBC692 Loja2"
+		self.botaoMilenioErvasSBC692Loja2                ["background"] = Info.MilenioErvas.Loja2.ModuloCor
+		self.botaoMilenioErvasSBC692Loja2                ["width"]      = 15
+		self.botaoMilenioErvasSBC692Loja2                ["height"]     = 1
+		self.botaoMilenioErvasSBC692Loja2.bind          ("<Button-1>",lambda e: popup("MilenioErvas","SBC692 Loja2",
+														Info.MilenioErvas.Loja2.IP, 
+														Info.MilenioErvas.Loja2.Porta, 
+														Info.MilenioErvas.Loja2.NumeroRep, 
+														Info.MilenioErvas.Loja2.Responsavel, 
+														Info.MilenioErvas.Loja2.Telefone))
+		self.botaoMilenioErvasSBC692Loja2.grid           (row=2,column=0,sticky = "N")
+
+		self.botaoMilenioErvasSBC692Loja2Relogio                        = Button(self.ContainerMilenioErvas)
+		self.botaoMilenioErvasSBC692Loja2Relogio         ["text"]       = "R"
+		self.botaoMilenioErvasSBC692Loja2Relogio         ["background"] = Info.MilenioErvas.Loja2.RelogioCor
+		self.botaoMilenioErvasSBC692Loja2Relogio         ["width"]      = 1
+		self.botaoMilenioErvasSBC692Loja2Relogio         ["height"]     = 1
+		self.botaoMilenioErvasSBC692Loja2Relogio.grid    (row=2,column=1,sticky = "N")
+
+
+
+
+		self.botaoMilenioErvasSaoMatheus                                = Button(self.ContainerMilenioErvas)
+		self.botaoMilenioErvasSaoMatheus                ["text"]       = "Sao Matheus"
+		self.botaoMilenioErvasSaoMatheus                ["background"] = Info.MilenioErvas.SaoMatheus.ModuloCor
+		self.botaoMilenioErvasSaoMatheus                ["width"]      = 15
+		self.botaoMilenioErvasSaoMatheus                ["height"]     = 1
+		self.botaoMilenioErvasSaoMatheus.bind           ("<Button-1>",lambda e: popup("MilenioErvas","Sao Matheus",
+														Info.MilenioErvas.SaoMatheus.IP, 
+														Info.MilenioErvas.SaoMatheus.Porta, 
+														Info.MilenioErvas.SaoMatheus.NumeroRep, 
+														Info.MilenioErvas.SaoMatheus.Responsavel, 
+														Info.MilenioErvas.SaoMatheus.Telefone))
+		self.botaoMilenioErvasSaoMatheus.grid           (row=3,column=0,sticky = "N")
+
+		self.botaoMilenioErvasSaoMatheusRelogio                        = Button(self.ContainerMilenioErvas)
+		self.botaoMilenioErvasSaoMatheusRelogio         ["text"]       = "R"
+		self.botaoMilenioErvasSaoMatheusRelogio         ["background"] = Info.MilenioErvas.SaoMatheus.RelogioCor
+		self.botaoMilenioErvasSaoMatheusRelogio         ["width"]      = 1
+		self.botaoMilenioErvasSaoMatheusRelogio         ["height"]     =  1
+		self.botaoMilenioErvasSaoMatheusRelogio.grid    (row=3,column=1,sticky = "N")
+
+
+
+
+
+		self.botaoMilenioErvasDiadema                                 = Button(self.ContainerMilenioErvas)
+		self.botaoMilenioErvasDiadema                  ["text"]       = "Diadema"
+		self.botaoMilenioErvasDiadema                  ["background"] = Info.MilenioErvas.Diadema.ModuloCor
+		self.botaoMilenioErvasDiadema                  ["width"]      = 15
+		self.botaoMilenioErvasDiadema                  ["height"]     = 1
+		self.botaoMilenioErvasDiadema.bind             ("<Button-1>",lambda e: popup("MilenioErvas","Diadema",
+														Info.MilenioErvas.Diadema.IP, 
+														Info.MilenioErvas.Diadema.Porta, 
+														Info.MilenioErvas.Diadema.NumeroRep, 
+														Info.MilenioErvas.Diadema.Responsavel, 
+														Info.MilenioErvas.Diadema.Telefone))
+		self.botaoMilenioErvasDiadema.grid             (row=4,column=0,sticky = "N")
+
+		self.botaoMilenioErvasDiademaRelogio                          = Button(self.ContainerMilenioErvas)
+		self.botaoMilenioErvasDiademaRelogio           ["text"]       = "R"
+		self.botaoMilenioErvasDiademaRelogio           ["background"] = Info.MilenioErvas.Diadema.RelogioCor
+		self.botaoMilenioErvasDiademaRelogio           ["width"]      = 1
+		self.botaoMilenioErvasDiademaRelogio           ["height"]     =  1
+		self.botaoMilenioErvasDiademaRelogio.grid      (row=4,column=1,sticky = "N")
+
+
+
+
+
+
+
+		
+
+############################################## GRIDS ###################################################################
+############################################## GRIDS DOS BOTOES#########################################################
+
+
+
+######################################################### GRAVEX #######################################################
+
+		self.msgGravex.grid                         (row=0,column=0,sticky = "N")
+
+		self.botaoGravexADM.grid                    (row=1,column=0,sticky = "N")
+		self.botaoGravexADMRelogio.grid             (row=1,column=1,sticky = "N")
+
+		self.botaoGravexLoja.grid                   (row=2,column=0,sticky = "N")
+		self.botaoGravexLojaRelogio.grid            (row=2,column=1,sticky = "N")
+
+		self.botaoGravexMiMarcos.grid               (row=3,column=0,sticky = "N")
+		self.botaoGravexMiMarcosRelogio.grid        (row=3,column=1,sticky = "N")
+
+		self.botaoGravexDantChini.grid              (row=4,column=0,sticky = "N")
+		self.botaoGravexDantChiniRelogio.grid       (row=4,column=1,sticky = "N")
+
+
+
+########################################################## LASER #######################################################
+
+		self.msgLaser.grid(row=0,column=0,sticky = "N")
+
+		self.botaoAcademia.grid                     (row=1,column=0,sticky = "N")
+		self.botaoRAcademia.grid                    (row=1,column=1,sticky = "N")
+
+		self.botaoInstituto.grid                    (row=2,column=0,sticky = "N")
+		self.botaoRInstituto.grid                   (row=2,column=1,sticky = "N")
+
+	def Create_Predman(self):
+
+		self.msgPredman = Label (self.ContainerPredman,text = "Predman")
+		self.msgPredman.grid(row=0,column=0,sticky = "N")
+
+
+
+
+		self.botaoPredmanBunge                                    = Button(self.ContainerPredman)
+		self.botaoPredmanBunge                     ["text"]       = "Bunge"
+		self.botaoPredmanBunge                     ["background"] = Info.Predman.Bunge.ModuloCor
+		self.botaoPredmanBunge                     ["width"]      = 15
+		self.botaoPredmanBunge                     ["height"]     = 1
+		self.botaoPredmanBunge.bind                ("<Button-1>",lambda e: popup("Predman","Bunge",
+													Info.Predman.Bunge.IP, 
+													Info.Predman.Bunge.Porta, 
+													Info.Predman.Bunge.NumeroRep, 
+													Info.Predman.Bunge.Responsavel, 
+													Info.Predman.Bunge.Telefone))
+		self.botaoPredmanBunge.grid                (row=1,column=0,sticky = "N")
+
+		self.botaoPredmanBungeRelogio                             = Button(self.ContainerPredman)
+		self.botaoPredmanBungeRelogio              ["text"]       = "R"
+		self.botaoPredmanBungeRelogio              ["background"] = Info.Predman.Bunge.RelogioCor
+		self.botaoPredmanBungeRelogio              ["width"]      = 1
+		self.botaoPredmanBungeRelogio              ["height"]     = 1
+		self.botaoPredmanBungeRelogio.grid         (row=1,column=1,sticky = "N")
+
+
+
+
+		self.botaoPredmanCabot                                    = Button(self.ContainerPredman)
+		self.botaoPredmanCabot                     ["text"]       = "Cabot"
+		self.botaoPredmanCabot                     ["background"] = Info.Predman.Cabot.ModuloCor
+		self.botaoPredmanCabot                     ["width"]      = 15
+		self.botaoPredmanCabot                     ["height"]     = 1
+		self.botaoPredmanCabot.bind                ("<Button-1>",lambda e: popup("Predman","Cabot",
+										 			Info.Predman.Cabot.IP, 
+													Info.Predman.Cabot.Porta, 
+													Info.Predman.Cabot.NumeroRep, 
+													Info.Predman.Cabot.Responsavel, 
+													Info.Predman.Cabot.Telefone))
+		self.botaoPredmanCabot.grid                (row=2,column=0,sticky = "N")
+
+		self.botaoPredmanCabotRelogio                             = Button(self.ContainerPredman)
+		self.botaoPredmanCabotRelogio              ["text"]       = "R"
+		self.botaoPredmanCabotRelogio              ["background"] = Info.Predman.Cabot.RelogioCor
+		self.botaoPredmanCabotRelogio              ["width"]      = 1
+		self.botaoPredmanCabotRelogio              ["height"]     = 1		
+		self.botaoPredmanCabotRelogio.grid         (row=2,column=1,sticky = "N")
+
+
+
+
+		self.botaoPredmanKellogs                                 = Button(self.ContainerPredman)
+		self.botaoPredmanKellogs                  ["text"]       = "Kellogs"
+		self.botaoPredmanKellogs                  ["background"] = Info.Predman.Kellogs.ModuloCor
+		self.botaoPredmanKellogs                  ["width"]      = 15
+		self.botaoPredmanKellogs                  ["height"]     = 1
+		self.botaoPredmanKellogs.bind             ("<Button-1>",lambda e: popup("Predman","Kellogs",
+													Info.Predman.Kellogs.IP, 
+													Info.Predman.Kellogs.Porta, 
+													Info.Predman.Kellogs.NumeroRep, 
+													Info.Predman.Kellogs.Responsavel, 
+													Info.Predman.Kellogs.Telefone))
+		self.botaoPredmanKellogs.grid             (row=3,column=0,sticky = "N")
+
+		self.botaoPredmanKellogsRelogio                          = Button(self.ContainerPredman)
+		self.botaoPredmanKellogsRelogio           ["text"]       = "R"
+		self.botaoPredmanKellogsRelogio           ["background"] = Info.Predman.Kellogs.RelogioCor
+		self.botaoPredmanKellogsRelogio           ["width"]      = 1
+		self.botaoPredmanKellogsRelogio           ["height"]     = 1		
+		self.botaoPredmanKellogsRelogio.grid      (row=3,column=1,sticky = "N")
+
+
+
+
+		self.botaoPredmanMagazine                                = Button(self.ContainerPredman)
+		self.botaoPredmanMagazine                 ["text"]       = "Magazine"
+		self.botaoPredmanMagazine                 ["background"] = Info.Predman.Magazine.ModuloCor
+		self.botaoPredmanMagazine                 ["width"]      = 15
+		self.botaoPredmanMagazine                 ["height"]     = 1
+		self.botaoPredmanMagazine.bind            ("<Button-1>",lambda e: popup("Predman","Magazine",
+													Info.Predman.Magazine.IP, 
+													Info.Predman.Magazine.Porta, 
+													Info.Predman.Magazine.NumeroRep, 
+													Info.Predman.Magazine.Responsavel, 
+													Info.Predman.Magazine.Telefone))
+		self.botaoPredmanMagazine.grid            (row=4,column=0,sticky = "N")
+
+		self.botaoPredmanMagazineRelogio                         = Button(self.ContainerPredman)
+		self.botaoPredmanMagazineRelogio          ["text"]       = "R"
+		self.botaoPredmanMagazineRelogio          ["background"] = Info.Predman.Magazine.RelogioCor
+		self.botaoPredmanMagazineRelogio          ["width"]      = 1
+		self.botaoPredmanMagazineRelogio          ["height"]     = 1
+		self.botaoPredmanMagazineRelogio.grid     (row=4,column=1,sticky = "N")
+
+
+
+
+		self.botaoPredmanOxiteno1                                = Button(self.ContainerPredman)
+		self.botaoPredmanOxiteno1                 ["text"]       = "Oxiteno 1"
+		self.botaoPredmanOxiteno1                 ["background"] = Info.Predman.Oxiteno1.ModuloCor
+		self.botaoPredmanOxiteno1                 ["width"]      = 15
+		self.botaoPredmanOxiteno1                 ["height"]     = 1
+		self.botaoPredmanOxiteno1.bind            ("<Button-1>",lambda e: popup("Predman","Oxiteno 1",
+													Info.Predman.Oxiteno1.IP, 
+													Info.Predman.Oxiteno1.Porta, 
+													Info.Predman.Oxiteno1.NumeroRep, 
+													Info.Predman.Oxiteno1.Responsavel, 
+													Info.Predman.Oxiteno1.Telefone))
+		self.botaoPredmanOxiteno1.grid            (row=5,column=0,sticky = "N")
+
+		self.botaoPredmanOxiteno1Relogio                         = Button(self.ContainerPredman)
+		self.botaoPredmanOxiteno1Relogio          ["text"]       = "R"
+		self.botaoPredmanOxiteno1Relogio          ["background"] = Info.Predman.Oxiteno1.RelogioCor
+		self.botaoPredmanOxiteno1Relogio          ["width"]      = 1
+		self.botaoPredmanOxiteno1Relogio          ["height"]     = 1		
+		self.botaoPredmanOxiteno1Relogio.grid     (row=5,column=1,sticky = "N")
+
+
+
+
+		self.botaoPredmanOxiteno2                                = Button(self.ContainerPredman)
+		self.botaoPredmanOxiteno2                 ["text"]       = "Oxiteno 2"
+		self.botaoPredmanOxiteno2                 ["background"] = Info.Predman.Oxiteno2.ModuloCor
+		self.botaoPredmanOxiteno2                 ["width"]      = 15
+		self.botaoPredmanOxiteno2                 ["height"]     = 1
+		self.botaoPredmanOxiteno2.bind            ("<Button-1>",lambda e: popup("Predman","Oxiteno 2",
+													Info.Predman.Oxiteno2.IP, 
+													Info.Predman.Oxiteno2.Porta, 
+													Info.Predman.Oxiteno2.NumeroRep, 
+													Info.Predman.Oxiteno2.Responsavel, 
+													Info.Predman.Oxiteno2.Telefone))
+		self.botaoPredmanOxiteno2.grid            (row=6,column=0,sticky = "N")
+
+		self.botaoPredmanOxiteno2Relogio                         = Button(self.ContainerPredman)
+		self.botaoPredmanOxiteno2Relogio          ["text"]       = "R"
+		self.botaoPredmanOxiteno2Relogio          ["background"] = Info.Predman.Oxiteno2.RelogioCor
+		self.botaoPredmanOxiteno2Relogio          ["width"]      = 1
+		self.botaoPredmanOxiteno2Relogio          ["height"]     = 1
+		self.botaoPredmanOxiteno2Relogio.grid     (row=6,column=1,sticky = "N")
+
+
+
+
+
+		self.botaoPredmanOxiteno3                                = Button(self.ContainerPredman)
+		self.botaoPredmanOxiteno3                 ["text"]       = "Oxiteno 3"
+		self.botaoPredmanOxiteno3                 ["background"] = Info.Predman.Oxiteno3.ModuloCor
+		self.botaoPredmanOxiteno3                 ["width"]      = 15
+		self.botaoPredmanOxiteno3                 ["height"]     = 1
+		self.botaoPredmanOxiteno3.bind            ("<Button-1>",lambda e: popup("Predman","Oxiteno 3",
+													Info.Predman.Oxiteno3.IP, 
+													Info.Predman.Oxiteno3.Porta, 
+													Info.Predman.Oxiteno3.NumeroRep, 
+													Info.Predman.Oxiteno3.Responsavel, 
+													Info.Predman.Oxiteno3.Telefone))
+		self.botaoPredmanOxiteno3.grid           (row=7,column=0,sticky = "N")
+
+		self.botaoPredmanOxiteno3Relogio                         = Button(self.ContainerPredman)
+		self.botaoPredmanOxiteno3Relogio          ["text"]       = "R"
+		self.botaoPredmanOxiteno3Relogio          ["background"] = Info.Predman.Oxiteno3.RelogioCor
+		self.botaoPredmanOxiteno3Relogio          ["width"]      = 1
+		self.botaoPredmanOxiteno3Relogio          ["height"]     = 1
+		self.botaoPredmanOxiteno3Relogio.grid      (row=7,column=1,sticky = "N")
+
+
+
+
+		self.botaoPredmanPrysmianES                              = Button(self.ContainerPredman)
+		self.botaoPredmanPrysmianES               ["text"]       = "Prysmian ES"
+		self.botaoPredmanPrysmianES               ["background"] = Info.Predman.PrysmianES.ModuloCor
+		self.botaoPredmanPrysmianES               ["width"]      = 15
+		self.botaoPredmanPrysmianES               ["height"]     = 1
+		self.botaoPredmanPrysmianES.bind          ("<Button-1>",lambda e: popup("Predman","Prysmian ES",
+													Info.Predman.PrysmianES.IP, 
+													Info.Predman.PrysmianES.Porta, 
+													Info.Predman.PrysmianES.NumeroRep, 
+													Info.Predman.PrysmianES.Responsavel, 
+													Info.Predman.PrysmianES.Telefone))
+		self.botaoPredmanPrysmianES.grid          (row=8,column=0,sticky = "N")
+
+		self.botaoPredmanPrysmianESRelogio                       = Button(self.ContainerPredman)
+		self.botaoPredmanPrysmianESRelogio        ["text"]       = "R"
+		self.botaoPredmanPrysmianESRelogio        ["background"] = Info.Predman.PrysmianES.RelogioCor
+		self.botaoPredmanPrysmianESRelogio        ["width"]      = 1
+		self.botaoPredmanPrysmianESRelogio        ["height"]     = 1
+		self.botaoPredmanPrysmianESRelogio.grid   (row=8,column=1,sticky = "N")
+
+
+
+
+		self.botaoPredmanTradegar                                = Button(self.ContainerPredman)
+		self.botaoPredmanTradegar                 ["text"]       = "Tradegar"
+		self.botaoPredmanTradegar                 ["background"] = Info.Predman.Tradegar.ModuloCor
+		self.botaoPredmanTradegar                 ["width"]      = 15
+		self.botaoPredmanTradegar                 ["height"]     = 1
+		self.botaoPredmanTradegar.bind            ("<Button-1>",lambda e: popup("Predman","Tradegar",
+													Info.Predman.Tradegar.IP, 
+													Info.Predman.Tradegar.Porta, 
+													Info.Predman.Tradegar.NumeroRep, 
+													Info.Predman.Tradegar.Responsavel, 
+													Info.Predman.Tradegar.Telefone))
+		self.botaoPredmanTradegar.grid            (row=9,column=0,sticky = "N")
+
+		self.botaoPredmanTradegarRelogio                         = Button(self.ContainerPredman)
+		self.botaoPredmanTradegarRelogio          ["text"]       = "R"
+		self.botaoPredmanTradegarRelogio          ["background"] = Info.Predman.Tradegar.RelogioCor
+		self.botaoPredmanTradegarRelogio          ["width"]      = 1
+		self.botaoPredmanTradegarRelogio          ["height"]     = 1
+		self.botaoPredmanTradegarRelogio.grid     (row=9,column=1,sticky = "N")
+
+
+
+
+		self.botaoPredmanPortao1                                 = Button(self.ContainerPredman)
+		self.botaoPredmanPortao1                  ["text"]       = "Sorocaba PP1"
+		self.botaoPredmanPortao1                  ["background"] = Info.Predman.Portao1.ModuloCor
+		self.botaoPredmanPortao1                  ["width"]      = 15
+		self.botaoPredmanPortao1                  ["height"]     = 1
+		self.botaoPredmanPortao1.bind             ("<Button-1>",lambda e: popup("Predman","Sorocaba PP1",
+													Info.Predman.Portao1.IP, 
+													Info.Predman.Portao1.Porta, 
+													Info.Predman.Portao1.NumeroRep, 
+													Info.Predman.Portao1.Responsavel, 
+													Info.Predman.Portao1.Telefone))
+		self.botaoPredmanPortao1.grid             (row=10,column=0,sticky = "N")
+
+		self.botaoPredmanPortao1Relogio                          = Button(self.ContainerPredman)
+		self.botaoPredmanPortao1Relogio           ["text"]       = "R"
+		self.botaoPredmanPortao1Relogio           ["background"] = Info.Predman.Portao1.RelogioCor
+		self.botaoPredmanPortao1Relogio           ["width"]      = 1
+		self.botaoPredmanPortao1Relogio           ["height"]     = 1
+		self.botaoPredmanPortao1Relogio.grid      (row=10,column=1,sticky = "N")
+
+
+
+
+		self.botaoPredmanPortao2                                 = Button(self.ContainerPredman)
+		self.botaoPredmanPortao2                  ["text"]       = "Sorocaba PP2"
+		self.botaoPredmanPortao2                  ["background"] = Info.Predman.Portao2.ModuloCor
+		self.botaoPredmanPortao2                  ["width"]      = 15
+		self.botaoPredmanPortao2                  ["height"]     = 1
+		self.botaoPredmanPortao2.bind             ("<Button-1>",lambda e: popup("Predman","Sorocaba PP2",
+												   	  Info.Predman.Portao2.IP, 
+													  Info.Predman.Portao2.Porta, 
+													  Info.Predman.Portao2.NumeroRep, 
+													  Info.Predman.Portao2.Responsavel, 
+													  Info.Predman.Portao2.Telefone))
+		self.botaoPredmanPortao2.grid             (row=11,column=0,sticky = "N")
+
+		self.botaoPredmanPortao2                                 = Button(self.ContainerPredman)
+		self.botaoPredmanPortao2                  ["text"]       = "R"
+		self.botaoPredmanPortao2                  ["background"] = Info.Predman.Portao2.RelogioCor
+		self.botaoPredmanPortao2                  ["width"]      = 1
+		self.botaoPredmanPortao2                  ["height"]     = 1
+		self.botaoPredmanPortao2.grid             (row=11,column=1,sticky = "N")
+
+
+
+
+		self.botaoPredmanSabic                                   = Button(self.ContainerPredman)
+		self.botaoPredmanSabic                    ["text"]       = "Sabic"
+		self.botaoPredmanSabic                    ["background"] = Info.Predman.Sabic.ModuloCor
+		self.botaoPredmanSabic                    ["width"]      = 15
+		self.botaoPredmanSabic                    ["height"]     = 1
+		self.botaoPredmanSabic.bind               ("<Button-1>",lambda e: popup("Predman","Sabic",
+													Info.Predman.Sabic.IP, 
+													Info.Predman.Sabic.Porta, 
+													Info.Predman.Sabic.NumeroRep, 
+													Info.Predman.Sabic.Responsavel, 
+													Info.Predman.Sabic.Telefone))
+		self.botaoPredmanSabic.grid                (row=12,column=0,sticky = "N")
+
+		self.botaoPredmanSabicRelogio                            = Button(self.ContainerPredman)
+		self.botaoPredmanSabicRelogio             ["text"]       = "R"
+		self.botaoPredmanSabicRelogio             ["background"] = Info.Predman.Sabic.RelogioCor
+		self.botaoPredmanSabicRelogio             ["width"]      = 1
+		self.botaoPredmanSabicRelogio             ["height"]     = 1
+		self.botaoPredmanSabicRelogio.grid        (row=12,column=1,sticky = "N")
+
+
+
+
+		self.botaoPredmanSantherBraganca                         = Button(self.ContainerPredman)
+		self.botaoPredmanSantherBraganca          ["text"]       = "S. Braganca"
+		self.botaoPredmanSantherBraganca          ["background"] = Info.Predman.SBraganca.ModuloCor
+		self.botaoPredmanSantherBraganca          ["width"]      = 15
+		self.botaoPredmanSantherBraganca          ["height"]     = 1
+		self.botaoPredmanSantherBraganca.bind     ("<Button-1>",lambda e: popup("Predman","Santher Braganca",
+												     	Info.Predman.SBraganca.IP, 
+														Info.Predman.SBraganca.Porta, 
+														Info.Predman.SBraganca.NumeroRep, 
+														Info.Predman.SBraganca.Responsavel, 
+														Info.Predman.SBraganca.Telefone))
+		self.botaoPredmanSantherBraganca.grid      (row=13,column=0,sticky = "N")
+
+		self.botaoPredmanSantherBragancaRelogio                  = Button(self.ContainerPredman)
+		self.botaoPredmanSantherBragancaRelogio   ["text"]       = "R"
+		self.botaoPredmanSantherBragancaRelogio   ["background"] = Info.Predman.SBraganca.RelogioCor
+		self.botaoPredmanSantherBragancaRelogio   ["width"]      = 1
+		self.botaoPredmanSantherBragancaRelogio   ["height"]     = 1
+		self.botaoPredmanSantherBragancaRelogio.grid (row=13,column=1,sticky = "N")
+
+
+
+
+
+		self.botaoPredmanSantherPenha                             = Button(self.ContainerPredman)
+		self.botaoPredmanSantherPenha              ["text"]       = "S. Penha"
+		self.botaoPredmanSantherPenha              ["background"] = Info.Predman.SPenha.ModuloCor
+		self.botaoPredmanSantherPenha              ["width"]      = 15
+		self.botaoPredmanSantherPenha              ["height"]     = 1
+		self.botaoPredmanSantherPenha.bind         ("<Button-1>",lambda e: popup("Predman","Santher Penha",
+												     	Info.Predman.SPenha.IP, 
+														Info.Predman.SPenha.Porta, 
+														Info.Predman.SPenha.NumeroRep, 
+														Info.Predman.SPenha.Responsavel, 
+														Info.Predman.SPenha.Telefone))
+		self.botaoPredmanSantherPenha.grid         (row=14,column=0,sticky = "N")
+
+		self.botaoPredmanSantherPenhaRelogio                      = Button(self.ContainerPredman)
+		self.botaoPredmanSantherPenhaRelogio       ["text"]       = "R"
+		self.botaoPredmanSantherPenhaRelogio       ["background"] = Info.Predman.SPenha.RelogioCor
+		self.botaoPredmanSantherPenhaRelogio       ["width"]      = 1
+		self.botaoPredmanSantherPenhaRelogio       ["height"]     = 1
+		self.botaoPredmanSantherPenhaRelogio.grid  (row=14,column=1,sticky = "N")
+
+
+
+
+
+		self.botaoPredmanFaurencia                               = Button(self.ContainerPredman)
+		self.botaoPredmanFaurencia                ["text"]       = "Faurencia"
+		self.botaoPredmanFaurencia                ["background"] = Info.Predman.Faurencia.ModuloCor
+		self.botaoPredmanFaurencia                ["width"]      = 15
+		self.botaoPredmanFaurencia                ["height"]     = 1
+		self.botaoPredmanFaurencia.bind           ("<Button-1>",lambda e: popup("Predman","Faurencia",
+												     	Info.Predman.Faurencia.IP, 
+														Info.Predman.Faurencia.Porta, 
+														Info.Predman.Faurencia.NumeroRep, 
+														Info.Predman.Faurencia.Responsavel, 
+														Info.Predman.Faurencia.Telefone))
+		self.botaoPredmanFaurencia.grid           (row=15,column=0,sticky = "N")
+
+		self.botaoPredmanFaurenciaRelogio                        = Button(self.ContainerPredman)
+		self.botaoPredmanFaurenciaRelogio         ["text"]       = "R"
+		self.botaoPredmanFaurenciaRelogio         ["background"] = Info.Predman.Faurencia.RelogioCor
+		self.botaoPredmanFaurenciaRelogio         ["width"]      = 1
+		self.botaoPredmanFaurenciaRelogio         ["height"]     = 1
+		self.botaoPredmanFaurenciaRelogio.grid    (row=15,column=1,sticky = "N")
+
+
+
+
+
+		self.botaoPredmanAdmRondonopolis                         = Button(self.ContainerPredman)
+		self.botaoPredmanAdmRondonopolis          ["text"]       = "Adm Rond."
+		self.botaoPredmanAdmRondonopolis          ["background"] = Info.Predman.AdmRondonopolis.ModuloCor
+		self.botaoPredmanAdmRondonopolis          ["width"]      = 15
+		self.botaoPredmanAdmRondonopolis          ["height"]     = 1
+		self.botaoPredmanAdmRondonopolis.bind     ("<Button-1>",lambda e: popup("Predman","Adm Rondonopolis",
+												     	Info.Predman.AdmRondonopolis.IP, 
+														Info.Predman.AdmRondonopolis.Porta, 
+														Info.Predman.AdmRondonopolis.NumeroRep, 
+														Info.Predman.AdmRondonopolis.Responsavel, 
+														Info.Predman.AdmRondonopolis.Telefone))
+		self.botaoPredmanAdmRondonopolis.grid     (row=16,column=0,sticky = "N")
+
+		self.botaoPredmanAdmRondonopolisRelogio                  = Button(self.ContainerPredman)
+		self.botaoPredmanAdmRondonopolisRelogio   ["text"]       = "R"
+		self.botaoPredmanAdmRondonopolisRelogio   ["background"] = Info.Predman.AdmRondonopolis.RelogioCor
+		self.botaoPredmanAdmRondonopolisRelogio   ["width"]      = 1
+		self.botaoPredmanAdmRondonopolisRelogio   ["height"]     = 1
+		self.botaoPredmanAdmRondonopolisRelogio.grid  (row=16,column=1,sticky = "N")
+
+
+
+
+
+		self.botaoPredmanVilaVelha                               = Button(self.ContainerPredman)
+		self.botaoPredmanVilaVelha                ["text"]       = "Vila Velha"
+		self.botaoPredmanVilaVelha                ["background"] = Info.Predman.VilaVelha.ModuloCor
+		self.botaoPredmanVilaVelha                ["width"]      = 15
+		self.botaoPredmanVilaVelha                ["height"]     = 1
+		self.botaoPredmanVilaVelha.bind           ("<Button-1>",lambda e: popup("Predman","Vila Velha",
+												     	Info.Predman.VilaVelha.IP, 
+														Info.Predman.VilaVelha.Porta, 
+														Info.Predman.VilaVelha.NumeroRep, 
+														Info.Predman.VilaVelha.Responsavel, 
+														Info.Predman.VilaVelha.Telefone))
+		self.botaoPredmanVilaVelha.grid           (row=17,column=0,sticky = "N")
+
+		self.botaoPredmanVilaVelhaRelogio                        = Button(self.ContainerPredman)
+		self.botaoPredmanVilaVelhaRelogio         ["text"]       = "R"
+		self.botaoPredmanVilaVelhaRelogio         ["background"] = Info.Predman.VilaVelha.RelogioCor
+		self.botaoPredmanVilaVelhaRelogio         ["width"]      = 1
+		self.botaoPredmanVilaVelhaRelogio         ["height"]     = 1
+		self.botaoPredmanVilaVelhaRelogio.grid    (row=17,column=1,sticky = "N")
+
+
+	def Create_Uniman(self):
+
+
+
+		self.msgUniman = Label (self.ContainerUniman,text = "Uniman")
+		self.msgUniman["height"] = 1
+		self.msgUniman.grid(row=0,column=0,sticky = "N")
+
+
+
+
+		self.botaoUnimanSaintGobain                                  = Button(self.ContainerUniman)
+		self.botaoUnimanSaintGobain                   ["text"]       = "Saint Gobain"
+		self.botaoUnimanSaintGobain                   ["background"] = Info.Uniman.SaintGobain.ModuloCor
+		self.botaoUnimanSaintGobain                   ["width"]      = 15
+		self.botaoUnimanSaintGobain                   ["height"]     = 1
+		self.botaoUnimanSaintGobain.bind             ("<Button-1>",lambda e: popup("Uniman","Saint Gobain",
+														Info.Uniman.SaintGobain.IP, 
+														Info.Uniman.SaintGobain.Porta, 
+														Info.Uniman.SaintGobain.NumeroRep, 
+														Info.Uniman.SaintGobain.Responsavel, 
+														Info.Uniman.SaintGobain.Telefone))
+		self.botaoUnimanSaintGobain.grid              (row=1, column=0, sticky = "N")
+
+		self.botaoUnimanSaintGobainRelogio                           = Button(self.ContainerUniman)
+		self.botaoUnimanSaintGobainRelogio            ["text"]       = "R"
+		self.botaoUnimanSaintGobainRelogio            ["background"] = Info.Uniman.SaintGobain.RelogioCor
+		self.botaoUnimanSaintGobainRelogio            ["width"]      = 1
+		self.botaoUnimanSaintGobainRelogio            ["height"]     = 1
+		self.botaoUnimanSaintGobainRelogio.grid       (row=1, column=1, sticky = "N")
+
+
+
+
+		self.botaoUnimanPPMSecoia                                   = Button(self.ContainerUniman)
+		self.botaoUnimanPPMSecoia                    ["text"]       = "PPM Secoia"
+		self.botaoUnimanPPMSecoia                    ["background"] = Info.Uniman.PPMSecoia.ModuloCor
+		self.botaoUnimanPPMSecoia                    ["width"]      = 15
+		self.botaoUnimanPPMSecoia                    ["height"]     = 1
+		self.botaoUnimanPPMSecoia.bind              ("<Button-1>",lambda e: popup("Uniman","PPM Secoia",
+														Info.Uniman.PPMSecoia.IP, 
+														Info.Uniman.PPMSecoia.Porta, 
+														Info.Uniman.PPMSecoia.NumeroRep, 
+														Info.Uniman.PPMSecoia.Responsavel, 
+														Info.Uniman.PPMSecoia.Telefone))
+		self.botaoUnimanPPMSecoia.grid               (row=2,column=0,sticky = "N")
+
+		self.botaoUnimanPPMSecoiaRelogio                            = Button(self.ContainerUniman)
+		self.botaoUnimanPPMSecoiaRelogio             ["text"]       = "R"
+		self.botaoUnimanPPMSecoiaRelogio             ["background"] = Info.Uniman.PPMSecoia.RelogioCor
+		self.botaoUnimanPPMSecoiaRelogio             ["width"]      = 1
+		self.botaoUnimanPPMSecoiaRelogio             ["height"]     = 1
+		self.botaoUnimanPPMSecoiaRelogio.grid        (row=2,column=1,sticky = "N")
+
+
+
+
+		self.botaoUnimanTitan                                       = Button(self.ContainerUniman)
+		self.botaoUnimanTitan                        ["text"]       = "Titan"
+		self.botaoUnimanTitan                        ["background"] = Info.Uniman.Titan.ModuloCor
+		self.botaoUnimanTitan                        ["width"]      = 15
+		self.botaoUnimanTitan                        ["height"]     = 1
+		self.botaoUnimanPPMSecoia.bind               ("<Button-1>",lambda e: popup("Uniman","Titan",
+														Info.Uniman.Titan.IP, 
+														Info.Uniman.Titan.Porta, 
+														Info.Uniman.Titan.NumeroRep, 
+														Info.Uniman.Titan.Responsavel, 
+														Info.Uniman.Titan.Telefone))
+		self.botaoUnimanTitan.grid                   (row=3,column=0,sticky = "N")
+
+		self.botaoUnimanTitanRelogio                                = Button(self.ContainerUniman)
+		self.botaoUnimanTitanRelogio                 ["text"]       = "R"
+		self.botaoUnimanTitanRelogio                 ["background"] = Info.Uniman.Titan.RelogioCor
+		self.botaoUnimanTitanRelogio                 ["width"]      = 1
+		self.botaoUnimanTitanRelogio                 ["height"]     =  1
+		self.botaoUnimanTitanRelogio.grid            (row=3,column=1,sticky = "N")
+
+
+
+
+
+		self.botaoUnimanSekurity                                   = Button(self.ContainerUniman)
+		self.botaoUnimanSekurity                    ["text"]       = "Sekurity"
+		self.botaoUnimanSekurity                    ["background"] = Info.Uniman.Sekurity.ModuloCor
+		self.botaoUnimanSekurity                    ["width"]      = 15
+		self.botaoUnimanSekurity                    ["height"]     = 1
+		self.botaoUnimanSekurity.bind                ("<Button-1>",lambda e: popup("Uniman","Sekurity",
+														Info.Uniman.Sekurity.IP, 
+														Info.Uniman.Sekurity.Porta, 
+														Info.Uniman.Sekurity.NumeroRep, 
+														Info.Uniman.Sekurity.Responsavel, 
+														Info.Uniman.Sekurity.Telefone))
+		self.botaoUnimanSekurity.grid               (row=4,column=0,sticky = "N")
+
+		self.botaoUnimanSekurityRelogio                            = Button(self.ContainerUniman)
+		self.botaoUnimanSekurityRelogio             ["text"]       = "R"
+		self.botaoUnimanSekurityRelogio             ["background"] = Info.Uniman.Sekurity.RelogioCor
+		self.botaoUnimanSekurityRelogio             ["width"]      = 1
+		self.botaoUnimanSekurityRelogio             ["height"]     =  1
+		self.botaoUnimanSekurityRelogio.grid        (row=4,column=1,sticky = "N")
+
+
+	def Create_Tarek(self):
+
+		self.msgTarek = Label (self.ContainerTarek,text = "Grupo Tarek")
+		self.msgTarek["height"] = 1
+		self.msgTarek.grid(row=0,column=0,sticky = "N")
+
+
+
+
+		self.botaoTahine                                         = Button(self.ContainerTarek)
+		self.botaoTahine                          ["text"]       = "Tahine"
+		self.botaoTahine                          ["background"] = Info.Tarek.Tahine.ModuloCor
+		self.botaoTahine                          ["width"]      = 15
+		self.botaoTahine                          ["height"]     = 1
+		self.botaoTahine.bind                     ("<Button-1>",lambda e: popup("Tarek","Tahine",
+													Info.Tarek.Tahine.IP, 
+													Info.Tarek.Tahine.Porta, 
+													Info.Tarek.Tahine.NumeroRep, 
+													Info.Tarek.Tahine.Responsavel, 
+													Info.Tarek.Tahine.Telefone))
+		self.botaoTahine.grid                     (row=1,column=0,sticky = "N")
+
+		self.botaoTahineRelogio                                  = Button(self.ContainerTarek)
+		self.botaoTahineRelogio                   ["text"]       = "R"
+		self.botaoTahineRelogio                   ["background"] = Info.Tarek.Tahine.RelogioCor
+		self.botaoTahineRelogio                   ["height"]     = 1
+		self.botaoTahineRelogio                   ["width"]      = 1
+		self.botaoTahineRelogio.grid              (row=1,column=1,sticky = "N")
+
+
+
+
+		self.botaoTarek                                          = Button(self.ContainerTarek)
+		self.botaoTarek                           ["text"]       = "Tarek"
+		self.botaoTarek                           ["background"] = Info.Tarek.Tarek.ModuloCor
+		self.botaoTarek                           ["height"]     = 1
+		self.botaoTarek                           ["width"]      = 15
+		self.botaoTarek.bind                      ("<Button-1>",lambda e: popup("Tarek","Tarek",
+													Info.Tarek.Tarek.IP, 
+													Info.Tarek.Tarek.Porta, 
+													Info.Tarek.Tarek.NumeroRep, 
+													Info.Tarek.Tarek.Responsavel, 
+													Info.Tarek.Tarek.Telefone))
+		self.botaoTarek.grid                      (row=2,column=0,sticky = "N")
+
+		self.botaoTarekRelogio                                   = Button(self.ContainerTarek)
+		self.botaoTarekRelogio                    ["text"]       = "R"
+		self.botaoTarekRelogio                    ["background"] = Info.Tarek.Tarek.RelogioCor
+		self.botaoTarekRelogio                    ["width"]      = 1
+		self.botaoTarekRelogio                    ["height"]     = 1
+		self.botaoTarekRelogio.grid               (row=2,column=1,sticky = "N")
+
+
+
+
+		self.botaoTafadalu                                       = Button(self.ContainerTarek)
+		self.botaoTafadalu                        ["text"]       = "Tafadalu"
+		self.botaoTafadalu                        ["background"] = Info.Tarek.Tafadalu.ModuloCor
+		self.botaoTafadalu                        ["height"]     = 1
+		self.botaoTafadalu                        ["width"]=15
+		self.botaoTafadalu.bind                   ("<Button-1>",lambda e: popup("Tarek","Tafadalu",
+													Info.Tarek.Tafadalu.IP, 
+													Info.Tarek.Tafadalu.Porta, 
+													Info.Tarek.Tafadalu.NumeroRep, 
+													Info.Tarek.Tafadalu.Responsavel, 
+													Info.Tarek.Tafadalu.Telefone))
+		self.botaoTafadalu.grid                   (row=3,column=0,sticky = "N")
+
+		self.botaoTafadaluRelogio                               = Button(self.ContainerTarek)
+		self.botaoTafadaluRelogio                ["text"]       = "R"
+		self.botaoTafadaluRelogio                ["background"] = Info.Tarek.Tafadalu.RelogioCor
+		self.botaoTafadaluRelogio                ["height"]     = 1
+		self.botaoTafadaluRelogio                ["width"]      = 1
+		self.botaoTafadaluRelogio.grid           (row=3,column=1,sticky = "N")
+
+
+
+
+		self.botaoTalami                                        = Button(self.ContainerTarek)
+		self.botaoTalami                         ["text"]       = "Talami"
+		self.botaoTalami                         ["background"] = Info.Tarek.Talami.ModuloCor
+		self.botaoTalami                         ["width"]      = 15
+		self.botaoTalami                         ["height"]     = 1
+		self.botaoTalami.bind                    ("<Button-1>",lambda e: popup("Tarek","Talami",
+													Info.Tarek.Talami.IP, 
+													Info.Tarek.Talami.Porta, 
+													Info.Tarek.Talami.NumeroRep, 
+													Info.Tarek.Talami.Responsavel, 
+													Info.Tarek.Talami.Telefone))
+		self.botaoTalami.grid                    (row=4,column=0,sticky = "N")
+
+		self.botaoTalamiRelogio                                 = Button(self.ContainerTarek)
+		self.botaoTalamiRelogio                  ["text"]       = "R"
+		self.botaoTalamiRelogio                  ["background"] = Info.Tarek.Talami.RelogioCor
+		self.botaoTalamiRelogio                  ["width"]      = 1
+		self.botaoTalamiRelogio                  ["height"]     = 1
+		self.botaoTalamiRelogio.grid             (row=4,column=1,sticky = "N")
+
+
+	def Create_Lotten(self):
 
 		self.msgLotten = Label (self.ContainerLotten,text = "Lotten")
 		self.msgLotten.grid(row=0,column=0,sticky = "N")
@@ -2679,754 +3430,6 @@ class MonitorPing(object):
 		self.botaoLottenGuarulhosRelogio        ["width"]      = 1
 		self.botaoLottenGuarulhosRelogio        ["height"]     = 1
 		self.botaoLottenGuarulhosRelogio.grid   (row=18,column=1,sticky = "N")
-
-
-
-######################################################### PREDMAN ######################################################
-
-
-		self.msgPredman = Label (self.ContainerPredman,text = "Predman")
-		self.msgPredman.grid(row=0,column=0,sticky = "N")
-
-
-
-
-		self.botaoPredmanBunge                                    = Button(self.ContainerPredman)
-		self.botaoPredmanBunge                     ["text"]       = "Bunge"
-		self.botaoPredmanBunge                     ["background"] = Info.Predman.Bunge.ModuloCor
-		self.botaoPredmanBunge                     ["width"]      = 15
-		self.botaoPredmanBunge                     ["height"]     = 1
-		self.botaoPredmanBunge.bind                ("<Button-1>",lambda e: popup("Predman","Bunge",
-													Info.Predman.Bunge.IP, 
-													Info.Predman.Bunge.Porta, 
-													Info.Predman.Bunge.NumeroRep, 
-													Info.Predman.Bunge.Responsavel, 
-													Info.Predman.Bunge.Telefone))
-		self.botaoPredmanBunge.grid                (row=1,column=0,sticky = "N")
-
-		self.botaoPredmanBungeRelogio                             = Button(self.ContainerPredman)
-		self.botaoPredmanBungeRelogio              ["text"]       = "R"
-		self.botaoPredmanBungeRelogio              ["background"] = Info.Predman.Bunge.RelogioCor
-		self.botaoPredmanBungeRelogio              ["width"]      = 1
-		self.botaoPredmanBungeRelogio              ["height"]     = 1
-		self.botaoPredmanBungeRelogio.grid         (row=1,column=1,sticky = "N")
-
-
-
-
-		self.botaoPredmanCabot                                    = Button(self.ContainerPredman)
-		self.botaoPredmanCabot                     ["text"]       = "Cabot"
-		self.botaoPredmanCabot                     ["background"] = Info.Predman.Cabot.ModuloCor
-		self.botaoPredmanCabot                     ["width"]      = 15
-		self.botaoPredmanCabot                     ["height"]     = 1
-		self.botaoPredmanCabot.bind                ("<Button-1>",lambda e: popup("Predman","Cabot",
-										 			Info.Predman.Cabot.IP, 
-													Info.Predman.Cabot.Porta, 
-													Info.Predman.Cabot.NumeroRep, 
-													Info.Predman.Cabot.Responsavel, 
-													Info.Predman.Cabot.Telefone))
-		self.botaoPredmanCabot.grid                (row=2,column=0,sticky = "N")
-
-		self.botaoPredmanCabotRelogio                             = Button(self.ContainerPredman)
-		self.botaoPredmanCabotRelogio              ["text"]       = "R"
-		self.botaoPredmanCabotRelogio              ["background"] = Info.Predman.Cabot.RelogioCor
-		self.botaoPredmanCabotRelogio              ["width"]      = 1
-		self.botaoPredmanCabotRelogio              ["height"]     = 1		
-		self.botaoPredmanCabotRelogio.grid         (row=2,column=1,sticky = "N")
-
-
-
-
-		self.botaoPredmanKellogs                                 = Button(self.ContainerPredman)
-		self.botaoPredmanKellogs                  ["text"]       = "Kellogs"
-		self.botaoPredmanKellogs                  ["background"] = Info.Predman.Kellogs.ModuloCor
-		self.botaoPredmanKellogs                  ["width"]      = 15
-		self.botaoPredmanKellogs                  ["height"]     = 1
-		self.botaoPredmanKellogs.bind             ("<Button-1>",lambda e: popup("Predman","Kellogs",
-													Info.Predman.Kellogs.IP, 
-													Info.Predman.Kellogs.Porta, 
-													Info.Predman.Kellogs.NumeroRep, 
-													Info.Predman.Kellogs.Responsavel, 
-													Info.Predman.Kellogs.Telefone))
-		self.botaoPredmanKellogs.grid             (row=3,column=0,sticky = "N")
-
-		self.botaoPredmanKellogsRelogio                          = Button(self.ContainerPredman)
-		self.botaoPredmanKellogsRelogio           ["text"]       = "R"
-		self.botaoPredmanKellogsRelogio           ["background"] = Info.Predman.Kellogs.RelogioCor
-		self.botaoPredmanKellogsRelogio           ["width"]      = 1
-		self.botaoPredmanKellogsRelogio           ["height"]     = 1		
-		self.botaoPredmanKellogsRelogio.grid      (row=3,column=1,sticky = "N")
-
-
-
-
-		self.botaoPredmanMagazine                                = Button(self.ContainerPredman)
-		self.botaoPredmanMagazine                 ["text"]       = "Magazine"
-		self.botaoPredmanMagazine                 ["background"] = Info.Predman.Magazine.ModuloCor
-		self.botaoPredmanMagazine                 ["width"]      = 15
-		self.botaoPredmanMagazine                 ["height"]     = 1
-		self.botaoPredmanMagazine.bind            ("<Button-1>",lambda e: popup("Predman","Magazine",
-													Info.Predman.Magazine.IP, 
-													Info.Predman.Magazine.Porta, 
-													Info.Predman.Magazine.NumeroRep, 
-													Info.Predman.Magazine.Responsavel, 
-													Info.Predman.Magazine.Telefone))
-		self.botaoPredmanMagazine.grid            (row=4,column=0,sticky = "N")
-
-		self.botaoPredmanMagazineRelogio                         = Button(self.ContainerPredman)
-		self.botaoPredmanMagazineRelogio          ["text"]       = "R"
-		self.botaoPredmanMagazineRelogio          ["background"] = Info.Predman.Magazine.RelogioCor
-		self.botaoPredmanMagazineRelogio          ["width"]      = 1
-		self.botaoPredmanMagazineRelogio          ["height"]     = 1
-		self.botaoPredmanMagazineRelogio.grid     (row=4,column=1,sticky = "N")
-
-
-
-
-		self.botaoPredmanOxiteno1                                = Button(self.ContainerPredman)
-		self.botaoPredmanOxiteno1                 ["text"]       = "Oxiteno 1"
-		self.botaoPredmanOxiteno1                 ["background"] = Info.Predman.Oxiteno1.ModuloCor
-		self.botaoPredmanOxiteno1                 ["width"]      = 15
-		self.botaoPredmanOxiteno1                 ["height"]     = 1
-		self.botaoPredmanOxiteno1.bind            ("<Button-1>",lambda e: popup("Predman","Oxiteno 1",
-													Info.Predman.Oxiteno1.IP, 
-													Info.Predman.Oxiteno1.Porta, 
-													Info.Predman.Oxiteno1.NumeroRep, 
-													Info.Predman.Oxiteno1.Responsavel, 
-													Info.Predman.Oxiteno1.Telefone))
-		self.botaoPredmanOxiteno1.grid            (row=5,column=0,sticky = "N")
-
-		self.botaoPredmanOxiteno1Relogio                         = Button(self.ContainerPredman)
-		self.botaoPredmanOxiteno1Relogio          ["text"]       = "R"
-		self.botaoPredmanOxiteno1Relogio          ["background"] = Info.Predman.Oxiteno1.RelogioCor
-		self.botaoPredmanOxiteno1Relogio          ["width"]      = 1
-		self.botaoPredmanOxiteno1Relogio          ["height"]     = 1		
-		self.botaoPredmanOxiteno1Relogio.grid     (row=5,column=1,sticky = "N")
-
-
-
-
-		self.botaoPredmanOxiteno2                                = Button(self.ContainerPredman)
-		self.botaoPredmanOxiteno2                 ["text"]       = "Oxiteno 2"
-		self.botaoPredmanOxiteno2                 ["background"] = Info.Predman.Oxiteno2.ModuloCor
-		self.botaoPredmanOxiteno2                 ["width"]      = 15
-		self.botaoPredmanOxiteno2                 ["height"]     = 1
-		self.botaoPredmanOxiteno2.bind            ("<Button-1>",lambda e: popup("Predman","Oxiteno 2",
-													Info.Predman.Oxiteno2.IP, 
-													Info.Predman.Oxiteno2.Porta, 
-													Info.Predman.Oxiteno2.NumeroRep, 
-													Info.Predman.Oxiteno2.Responsavel, 
-													Info.Predman.Oxiteno2.Telefone))
-		self.botaoPredmanOxiteno2.grid            (row=6,column=0,sticky = "N")
-
-		self.botaoPredmanOxiteno2Relogio                         = Button(self.ContainerPredman)
-		self.botaoPredmanOxiteno2Relogio          ["text"]       = "R"
-		self.botaoPredmanOxiteno2Relogio          ["background"] = Info.Predman.Oxiteno2.RelogioCor
-		self.botaoPredmanOxiteno2Relogio          ["width"]      = 1
-		self.botaoPredmanOxiteno2Relogio          ["height"]     = 1
-		self.botaoPredmanOxiteno2Relogio.grid     (row=6,column=1,sticky = "N")
-
-
-
-
-
-		self.botaoPredmanOxiteno3                                = Button(self.ContainerPredman)
-		self.botaoPredmanOxiteno3                 ["text"]       = "Oxiteno 3"
-		self.botaoPredmanOxiteno3                 ["background"] = Info.Predman.Oxiteno3.ModuloCor
-		self.botaoPredmanOxiteno3                 ["width"]      = 15
-		self.botaoPredmanOxiteno3                 ["height"]     = 1
-		self.botaoPredmanOxiteno3.bind            ("<Button-1>",lambda e: popup("Predman","Oxiteno 3",
-													Info.Predman.Oxiteno3.IP, 
-													Info.Predman.Oxiteno3.Porta, 
-													Info.Predman.Oxiteno3.NumeroRep, 
-													Info.Predman.Oxiteno3.Responsavel, 
-													Info.Predman.Oxiteno3.Telefone))
-		self.botaoPredmanOxiteno3.grid           (row=7,column=0,sticky = "N")
-
-		self.botaoPredmanOxiteno3Relogio                         = Button(self.ContainerPredman)
-		self.botaoPredmanOxiteno3Relogio          ["text"]       = "R"
-		self.botaoPredmanOxiteno3Relogio          ["background"] = Info.Predman.Oxiteno3.RelogioCor
-		self.botaoPredmanOxiteno3Relogio          ["width"]      = 1
-		self.botaoPredmanOxiteno3Relogio          ["height"]     = 1
-		self.botaoPredmanOxiteno3Relogio.grid      (row=7,column=1,sticky = "N")
-
-
-
-
-		self.botaoPredmanPrysmianES                              = Button(self.ContainerPredman)
-		self.botaoPredmanPrysmianES               ["text"]       = "Prysmian ES"
-		self.botaoPredmanPrysmianES               ["background"] = Info.Predman.PrysmianES.ModuloCor
-		self.botaoPredmanPrysmianES               ["width"]      = 15
-		self.botaoPredmanPrysmianES               ["height"]     = 1
-		self.botaoPredmanPrysmianES.bind          ("<Button-1>",lambda e: popup("Predman","Prysmian ES",
-													Info.Predman.PrysmianES.IP, 
-													Info.Predman.PrysmianES.Porta, 
-													Info.Predman.PrysmianES.NumeroRep, 
-													Info.Predman.PrysmianES.Responsavel, 
-													Info.Predman.PrysmianES.Telefone))
-		self.botaoPredmanPrysmianES.grid          (row=8,column=0,sticky = "N")
-
-		self.botaoPredmanPrysmianESRelogio                       = Button(self.ContainerPredman)
-		self.botaoPredmanPrysmianESRelogio        ["text"]       = "R"
-		self.botaoPredmanPrysmianESRelogio        ["background"] = Info.Predman.PrysmianES.RelogioCor
-		self.botaoPredmanPrysmianESRelogio        ["width"]      = 1
-		self.botaoPredmanPrysmianESRelogio        ["height"]     = 1
-		self.botaoPredmanPrysmianESRelogio.grid   (row=8,column=1,sticky = "N")
-
-
-
-
-		self.botaoPredmanTradegar                                = Button(self.ContainerPredman)
-		self.botaoPredmanTradegar                 ["text"]       = "Tradegar"
-		self.botaoPredmanTradegar                 ["background"] = Info.Predman.Tradegar.ModuloCor
-		self.botaoPredmanTradegar                 ["width"]      = 15
-		self.botaoPredmanTradegar                 ["height"]     = 1
-		self.botaoPredmanTradegar.bind            ("<Button-1>",lambda e: popup("Predman","Tradegar",
-													Info.Predman.Tradegar.IP, 
-													Info.Predman.Tradegar.Porta, 
-													Info.Predman.Tradegar.NumeroRep, 
-													Info.Predman.Tradegar.Responsavel, 
-													Info.Predman.Tradegar.Telefone))
-		self.botaoPredmanTradegar.grid            (row=9,column=0,sticky = "N")
-
-		self.botaoPredmanTradegarRelogio                         = Button(self.ContainerPredman)
-		self.botaoPredmanTradegarRelogio          ["text"]       = "R"
-		self.botaoPredmanTradegarRelogio          ["background"] = Info.Predman.Tradegar.RelogioCor
-		self.botaoPredmanTradegarRelogio          ["width"]      = 1
-		self.botaoPredmanTradegarRelogio          ["height"]     = 1
-		self.botaoPredmanTradegarRelogio.grid     (row=9,column=1,sticky = "N")
-
-
-
-
-		self.botaoPredmanPortao1                                 = Button(self.ContainerPredman)
-		self.botaoPredmanPortao1                  ["text"]       = "Sorocaba PP1"
-		self.botaoPredmanPortao1                  ["background"] = Info.Predman.Portao1.ModuloCor
-		self.botaoPredmanPortao1                  ["width"]      = 15
-		self.botaoPredmanPortao1                  ["height"]     = 1
-		self.botaoPredmanPortao1.bind             ("<Button-1>",lambda e: popup("Predman","Sorocaba PP1",
-													Info.Predman.Portao1.IP, 
-													Info.Predman.Portao1.Porta, 
-													Info.Predman.Portao1.NumeroRep, 
-													Info.Predman.Portao1.Responsavel, 
-													Info.Predman.Portao1.Telefone))
-		self.botaoPredmanPortao1.grid             (row=10,column=0,sticky = "N")
-
-		self.botaoPredmanPortao1Relogio                          = Button(self.ContainerPredman)
-		self.botaoPredmanPortao1Relogio           ["text"]       = "R"
-		self.botaoPredmanPortao1Relogio           ["background"] = Info.Predman.Portao1.RelogioCor
-		self.botaoPredmanPortao1Relogio           ["width"]      = 1
-		self.botaoPredmanPortao1Relogio           ["height"]     = 1
-		self.botaoPredmanPortao1Relogio.grid      (row=10,column=1,sticky = "N")
-
-
-
-
-		self.botaoPredmanPortao2                                 = Button(self.ContainerPredman)
-		self.botaoPredmanPortao2                  ["text"]       = "Sorocaba PP2"
-		self.botaoPredmanPortao2                  ["background"] = Info.Predman.Portao2.ModuloCor
-		self.botaoPredmanPortao2                  ["width"]      = 15
-		self.botaoPredmanPortao2                  ["height"]     = 1
-		self.botaoPredmanPortao2.bind             ("<Button-1>",lambda e: popup("Predman","Sorocaba PP2",
-												   	  Info.Predman.Portao2.IP, 
-													  Info.Predman.Portao2.Porta, 
-													  Info.Predman.Portao2.NumeroRep, 
-													  Info.Predman.Portao2.Responsavel, 
-													  Info.Predman.Portao2.Telefone))
-		self.botaoPredmanPortao2.grid             (row=11,column=0,sticky = "N")
-
-		self.botaoPredmanPortao2                                 = Button(self.ContainerPredman)
-		self.botaoPredmanPortao2                  ["text"]       = "R"
-		self.botaoPredmanPortao2                  ["background"] = Info.Predman.Portao2.RelogioCor
-		self.botaoPredmanPortao2                  ["width"]      = 1
-		self.botaoPredmanPortao2                  ["height"]     = 1
-		self.botaoPredmanPortao2.grid             (row=11,column=1,sticky = "N")
-
-
-
-
-		self.botaoPredmanSabic                                   = Button(self.ContainerPredman)
-		self.botaoPredmanSabic                    ["text"]       = "Sabic"
-		self.botaoPredmanSabic                    ["background"] = Info.Predman.Sabic.ModuloCor
-		self.botaoPredmanSabic                    ["width"]      = 15
-		self.botaoPredmanSabic                    ["height"]     = 1
-		self.botaoPredmanSabic.bind               ("<Button-1>",lambda e: popup("Predman","Sabic",
-													Info.Predman.Sabic.IP, 
-													Info.Predman.Sabic.Porta, 
-													Info.Predman.Sabic.NumeroRep, 
-													Info.Predman.Sabic.Responsavel, 
-													Info.Predman.Sabic.Telefone))
-		self.botaoPredmanSabic.grid                (row=12,column=0,sticky = "N")
-
-		self.botaoPredmanSabicRelogio                            = Button(self.ContainerPredman)
-		self.botaoPredmanSabicRelogio             ["text"]       = "R"
-		self.botaoPredmanSabicRelogio             ["background"] = Info.Predman.Sabic.RelogioCor
-		self.botaoPredmanSabicRelogio             ["width"]      = 1
-		self.botaoPredmanSabicRelogio             ["height"]     = 1
-		self.botaoPredmanSabicRelogio.grid        (row=12,column=1,sticky = "N")
-
-
-
-
-		self.botaoPredmanSantherBraganca                         = Button(self.ContainerPredman)
-		self.botaoPredmanSantherBraganca          ["text"]       = "S. Braganca"
-		self.botaoPredmanSantherBraganca          ["background"] = Info.Predman.SBraganca.ModuloCor
-		self.botaoPredmanSantherBraganca          ["width"]      = 15
-		self.botaoPredmanSantherBraganca          ["height"]     = 1
-		self.botaoPredmanSantherBraganca.bind     ("<Button-1>",lambda e: popup("Predman","Santher Braganca",
-												     	Info.Predman.SBraganca.IP, 
-														Info.Predman.SBraganca.Porta, 
-														Info.Predman.SBraganca.NumeroRep, 
-														Info.Predman.SBraganca.Responsavel, 
-														Info.Predman.SBraganca.Telefone))
-		self.botaoPredmanSantherBraganca.grid      (row=13,column=0,sticky = "N")
-
-		self.botaoPredmanSantherBragancaRelogio                  = Button(self.ContainerPredman)
-		self.botaoPredmanSantherBragancaRelogio   ["text"]       = "R"
-		self.botaoPredmanSantherBragancaRelogio   ["background"] = Info.Predman.SBraganca.RelogioCor
-		self.botaoPredmanSantherBragancaRelogio   ["width"]      = 1
-		self.botaoPredmanSantherBragancaRelogio   ["height"]     = 1
-		self.botaoPredmanSantherBragancaRelogio.grid (row=13,column=1,sticky = "N")
-
-
-
-
-
-		self.botaoPredmanSantherPenha                             = Button(self.ContainerPredman)
-		self.botaoPredmanSantherPenha              ["text"]       = "S. Penha"
-		self.botaoPredmanSantherPenha              ["background"] = Info.Predman.SPenha.ModuloCor
-		self.botaoPredmanSantherPenha              ["width"]      = 15
-		self.botaoPredmanSantherPenha              ["height"]     = 1
-		self.botaoPredmanSantherPenha.bind         ("<Button-1>",lambda e: popup("Predman","Santher Penha",
-												     	Info.Predman.SPenha.IP, 
-														Info.Predman.SPenha.Porta, 
-														Info.Predman.SPenha.NumeroRep, 
-														Info.Predman.SPenha.Responsavel, 
-														Info.Predman.SPenha.Telefone))
-		self.botaoPredmanSantherPenha.grid         (row=14,column=0,sticky = "N")
-
-		self.botaoPredmanSantherPenhaRelogio                      = Button(self.ContainerPredman)
-		self.botaoPredmanSantherPenhaRelogio       ["text"]       = "R"
-		self.botaoPredmanSantherPenhaRelogio       ["background"] = Info.Predman.SPenha.RelogioCor
-		self.botaoPredmanSantherPenhaRelogio       ["width"]      = 1
-		self.botaoPredmanSantherPenhaRelogio       ["height"]     = 1
-		self.botaoPredmanSantherPenhaRelogio.grid  (row=14,column=1,sticky = "N")
-
-
-
-
-
-		self.botaoPredmanFaurencia                               = Button(self.ContainerPredman)
-		self.botaoPredmanFaurencia                ["text"]       = "Faurencia"
-		self.botaoPredmanFaurencia                ["background"] = Info.Predman.Faurencia.ModuloCor
-		self.botaoPredmanFaurencia                ["width"]      = 15
-		self.botaoPredmanFaurencia                ["height"]     = 1
-		self.botaoPredmanFaurencia.bind           ("<Button-1>",lambda e: popup("Predman","Faurencia",
-												     	Info.Predman.Faurencia.IP, 
-														Info.Predman.Faurencia.Porta, 
-														Info.Predman.Faurencia.NumeroRep, 
-														Info.Predman.Faurencia.Responsavel, 
-														Info.Predman.Faurencia.Telefone))
-		self.botaoPredmanFaurencia.grid           (row=15,column=0,sticky = "N")
-
-		self.botaoPredmanFaurenciaRelogio                        = Button(self.ContainerPredman)
-		self.botaoPredmanFaurenciaRelogio         ["text"]       = "R"
-		self.botaoPredmanFaurenciaRelogio         ["background"] = Info.Predman.Faurencia.RelogioCor
-		self.botaoPredmanFaurenciaRelogio         ["width"]      = 1
-		self.botaoPredmanFaurenciaRelogio         ["height"]     = 1
-		self.botaoPredmanFaurenciaRelogio.grid    (row=15,column=1,sticky = "N")
-
-
-
-
-
-		self.botaoPredmanAdmRondonopolis                         = Button(self.ContainerPredman)
-		self.botaoPredmanAdmRondonopolis          ["text"]       = "Adm Rond."
-		self.botaoPredmanAdmRondonopolis          ["background"] = Info.Predman.AdmRondonopolis.ModuloCor
-		self.botaoPredmanAdmRondonopolis          ["width"]      = 15
-		self.botaoPredmanAdmRondonopolis          ["height"]     = 1
-		self.botaoPredmanAdmRondonopolis.bind     ("<Button-1>",lambda e: popup("Predman","Adm Rondonopolis",
-												     	Info.Predman.AdmRondonopolis.IP, 
-														Info.Predman.AdmRondonopolis.Porta, 
-														Info.Predman.AdmRondonopolis.NumeroRep, 
-														Info.Predman.AdmRondonopolis.Responsavel, 
-														Info.Predman.AdmRondonopolis.Telefone))
-		self.botaoPredmanAdmRondonopolis.grid     (row=16,column=0,sticky = "N")
-
-		self.botaoPredmanAdmRondonopolisRelogio                  = Button(self.ContainerPredman)
-		self.botaoPredmanAdmRondonopolisRelogio   ["text"]       = "R"
-		self.botaoPredmanAdmRondonopolisRelogio   ["background"] = Info.Predman.AdmRondonopolis.RelogioCor
-		self.botaoPredmanAdmRondonopolisRelogio   ["width"]      = 1
-		self.botaoPredmanAdmRondonopolisRelogio   ["height"]     = 1
-		self.botaoPredmanAdmRondonopolisRelogio.grid  (row=16,column=1,sticky = "N")
-
-
-
-
-
-		self.botaoPredmanVilaVelha                               = Button(self.ContainerPredman)
-		self.botaoPredmanVilaVelha                ["text"]       = "Vila Velha"
-		self.botaoPredmanVilaVelha                ["background"] = Info.Predman.VilaVelha.ModuloCor
-		self.botaoPredmanVilaVelha                ["width"]      = 15
-		self.botaoPredmanVilaVelha                ["height"]     = 1
-		self.botaoPredmanVilaVelha.bind           ("<Button-1>",lambda e: popup("Predman","Vila Velha",
-												     	Info.Predman.VilaVelha.IP, 
-														Info.Predman.VilaVelha.Porta, 
-														Info.Predman.VilaVelha.NumeroRep, 
-														Info.Predman.VilaVelha.Responsavel, 
-														Info.Predman.VilaVelha.Telefone))
-		self.botaoPredmanVilaVelha.grid           (row=17,column=0,sticky = "N")
-
-		self.botaoPredmanVilaVelhaRelogio                        = Button(self.ContainerPredman)
-		self.botaoPredmanVilaVelhaRelogio         ["text"]       = "R"
-		self.botaoPredmanVilaVelhaRelogio         ["background"] = Info.Predman.VilaVelha.RelogioCor
-		self.botaoPredmanVilaVelhaRelogio         ["width"]      = 1
-		self.botaoPredmanVilaVelhaRelogio         ["height"]     = 1
-		self.botaoPredmanVilaVelhaRelogio.grid    (row=17,column=1,sticky = "N")
-
-
-
-######################################################### TAREK ########################################################
-
-
-
-
-		self.msgTarek = Label (self.ContainerTarek,text = "Grupo Tarek")
-		self.msgTarek["height"] = 1
-		self.msgTarek.grid(row=0,column=0,sticky = "N")
-
-
-
-
-		self.botaoTahine                                         = Button(self.ContainerTarek)
-		self.botaoTahine                          ["text"]       = "Tahine"
-		self.botaoTahine                          ["background"] = Info.Tarek.Tahine.ModuloCor
-		self.botaoTahine                          ["width"]      = 15
-		self.botaoTahine                          ["height"]     = 1
-		self.botaoTahine.bind                     ("<Button-1>",lambda e: popup("Tarek","Tahine",
-													Info.Tarek.Tahine.IP, 
-													Info.Tarek.Tahine.Porta, 
-													Info.Tarek.Tahine.NumeroRep, 
-													Info.Tarek.Tahine.Responsavel, 
-													Info.Tarek.Tahine.Telefone))
-		self.botaoTahine.grid                     (row=1,column=0,sticky = "N")
-
-		self.botaoTahineRelogio                                  = Button(self.ContainerTarek)
-		self.botaoTahineRelogio                   ["text"]       = "R"
-		self.botaoTahineRelogio                   ["background"] = Info.Tarek.Tahine.RelogioCor
-		self.botaoTahineRelogio                   ["height"]     = 1
-		self.botaoTahineRelogio                   ["width"]      = 1
-		self.botaoTahineRelogio.grid              (row=1,column=1,sticky = "N")
-
-
-
-
-		self.botaoTarek                                          = Button(self.ContainerTarek)
-		self.botaoTarek                           ["text"]       = "Tarek"
-		self.botaoTarek                           ["background"] = Info.Tarek.Tarek.ModuloCor
-		self.botaoTarek                           ["height"]     = 1
-		self.botaoTarek                           ["width"]      = 15
-		self.botaoTarek.bind                      ("<Button-1>",lambda e: popup("Tarek","Tarek",
-													Info.Tarek.Tarek.IP, 
-													Info.Tarek.Tarek.Porta, 
-													Info.Tarek.Tarek.NumeroRep, 
-													Info.Tarek.Tarek.Responsavel, 
-													Info.Tarek.Tarek.Telefone))
-		self.botaoTarek.grid                      (row=2,column=0,sticky = "N")
-
-		self.botaoTarekRelogio                                   = Button(self.ContainerTarek)
-		self.botaoTarekRelogio                    ["text"]       = "R"
-		self.botaoTarekRelogio                    ["background"] = Info.Tarek.Tarek.RelogioCor
-		self.botaoTarekRelogio                    ["width"]      = 1
-		self.botaoTarekRelogio                    ["height"]     = 1
-		self.botaoTarekRelogio.grid               (row=2,column=1,sticky = "N")
-
-
-
-
-		self.botaoTafadalu                                       = Button(self.ContainerTarek)
-		self.botaoTafadalu                        ["text"]       = "Tafadalu"
-		self.botaoTafadalu                        ["background"] = Info.Tarek.Tafadalu.ModuloCor
-		self.botaoTafadalu                        ["height"]     = 1
-		self.botaoTafadalu                        ["width"]=15
-		self.botaoTafadalu.bind                   ("<Button-1>",lambda e: popup("Tarek","Tafadalu",
-													Info.Tarek.Tafadalu.IP, 
-													Info.Tarek.Tafadalu.Porta, 
-													Info.Tarek.Tafadalu.NumeroRep, 
-													Info.Tarek.Tafadalu.Responsavel, 
-													Info.Tarek.Tafadalu.Telefone))
-		self.botaoTafadalu.grid                   (row=3,column=0,sticky = "N")
-
-		self.botaoTafadaluRelogio                               = Button(self.ContainerTarek)
-		self.botaoTafadaluRelogio                ["text"]       = "R"
-		self.botaoTafadaluRelogio                ["background"] = Info.Tarek.Tafadalu.RelogioCor
-		self.botaoTafadaluRelogio                ["height"]     = 1
-		self.botaoTafadaluRelogio                ["width"]      = 1
-		self.botaoTafadaluRelogio.grid           (row=3,column=1,sticky = "N")
-
-
-
-
-		self.botaoTalami                                        = Button(self.ContainerTarek)
-		self.botaoTalami                         ["text"]       = "Talami"
-		self.botaoTalami                         ["background"] = Info.Tarek.Talami.ModuloCor
-		self.botaoTalami                         ["width"]      = 15
-		self.botaoTalami                         ["height"]     = 1
-		self.botaoTalami.bind                    ("<Button-1>",lambda e: popup("Tarek","Talami",
-													Info.Tarek.Talami.IP, 
-													Info.Tarek.Talami.Porta, 
-													Info.Tarek.Talami.NumeroRep, 
-													Info.Tarek.Talami.Responsavel, 
-													Info.Tarek.Talami.Telefone))
-		self.botaoTalami.grid                    (row=4,column=0,sticky = "N")
-
-		self.botaoTalamiRelogio                                 = Button(self.ContainerTarek)
-		self.botaoTalamiRelogio                  ["text"]       = "R"
-		self.botaoTalamiRelogio                  ["background"] = Info.Tarek.Talami.RelogioCor
-		self.botaoTalamiRelogio                  ["width"]      = 1
-		self.botaoTalamiRelogio                  ["height"]     = 1
-		self.botaoTalamiRelogio.grid             (row=4,column=1,sticky = "N")
-
-
-
-######################################################### MILENIO ERVAS ################################################
-
-	
-		self.msgMilenioErvas = Label (self.ContainerMilenioErvas,text = "Milenio Ervas")
-		self.msgMilenioErvas["height"] = 1
-		self.msgMilenioErvas.grid(row=0,column=0,columnspan=2,sticky = "N")
-
-
-
-
-		self.botaoMilenioErvasSBC1620Loja1                             = Button(self.ContainerMilenioErvas)
-		self.botaoMilenioErvasSBC1620Loja1              ["text"]       = "1620 Loja1"
-		self.botaoMilenioErvasSBC1620Loja1              ["background"] = Info.MilenioErvas.Loja1.ModuloCor
-		self.botaoMilenioErvasSBC1620Loja1              ["width"]      = 15
-		self.botaoMilenioErvasSBC1620Loja1              ["height"]     = 1
-		self.botaoMilenioErvasSBC1620Loja1.bind         ("<Button-1>",lambda e: popup("MilenioErvas","1620 Loja1",
-														Info.MilenioErvas.Loja1.IP, 
-														Info.MilenioErvas.Loja1.Porta, 
-														Info.MilenioErvas.Loja1.NumeroRep, 
-														Info.MilenioErvas.Loja1.Responsavel, 
-														Info.MilenioErvas.Loja1.Telefone))
-		self.botaoMilenioErvasSBC1620Loja1.grid         (row=1, column=0, sticky = "N")
-
-		self.botaoMilenioErvasSBC1620Loja1Relogio                      = Button(self.ContainerMilenioErvas)
-		self.botaoMilenioErvasSBC1620Loja1Relogio       ["text"]       = "R"
-		self.botaoMilenioErvasSBC1620Loja1Relogio       ["background"] = Info.MilenioErvas.Loja1.RelogioCor
-		self.botaoMilenioErvasSBC1620Loja1Relogio       ["width"]      = 1
-		self.botaoMilenioErvasSBC1620Loja1Relogio       ["height"]     = 1
-		self.botaoMilenioErvasSBC1620Loja1Relogio.grid  (row=1, column=1, sticky = "N")
-
-
-
-
-		self.botaoMilenioErvasSBC692Loja2                               = Button(self.ContainerMilenioErvas)
-		self.botaoMilenioErvasSBC692Loja2                ["text"]       = "SBC692 Loja2"
-		self.botaoMilenioErvasSBC692Loja2                ["background"] = Info.MilenioErvas.Loja2.ModuloCor
-		self.botaoMilenioErvasSBC692Loja2                ["width"]      = 15
-		self.botaoMilenioErvasSBC692Loja2                ["height"]     = 1
-		self.botaoMilenioErvasSBC692Loja2.bind          ("<Button-1>",lambda e: popup("MilenioErvas","SBC692 Loja2",
-														Info.MilenioErvas.Loja2.IP, 
-														Info.MilenioErvas.Loja2.Porta, 
-														Info.MilenioErvas.Loja2.NumeroRep, 
-														Info.MilenioErvas.Loja2.Responsavel, 
-														Info.MilenioErvas.Loja2.Telefone))
-		self.botaoMilenioErvasSBC692Loja2.grid           (row=2,column=0,sticky = "N")
-
-		self.botaoMilenioErvasSBC692Loja2Relogio                        = Button(self.ContainerMilenioErvas)
-		self.botaoMilenioErvasSBC692Loja2Relogio         ["text"]       = "R"
-		self.botaoMilenioErvasSBC692Loja2Relogio         ["background"] = Info.MilenioErvas.Loja2.RelogioCor
-		self.botaoMilenioErvasSBC692Loja2Relogio         ["width"]      = 1
-		self.botaoMilenioErvasSBC692Loja2Relogio         ["height"]     = 1
-		self.botaoMilenioErvasSBC692Loja2Relogio.grid    (row=2,column=1,sticky = "N")
-
-
-
-
-		self.botaoMilenioErvasSaoMatheus                                = Button(self.ContainerMilenioErvas)
-		self.botaoMilenioErvasSaoMatheus                ["text"]       = "Sao Matheus"
-		self.botaoMilenioErvasSaoMatheus                ["background"] = Info.MilenioErvas.SaoMatheus.ModuloCor
-		self.botaoMilenioErvasSaoMatheus                ["width"]      = 15
-		self.botaoMilenioErvasSaoMatheus                ["height"]     = 1
-		self.botaoMilenioErvasSaoMatheus.bind           ("<Button-1>",lambda e: popup("MilenioErvas","Sao Matheus",
-														Info.MilenioErvas.SaoMatheus.IP, 
-														Info.MilenioErvas.SaoMatheus.Porta, 
-														Info.MilenioErvas.SaoMatheus.NumeroRep, 
-														Info.MilenioErvas.SaoMatheus.Responsavel, 
-														Info.MilenioErvas.SaoMatheus.Telefone))
-		self.botaoMilenioErvasSaoMatheus.grid           (row=3,column=0,sticky = "N")
-
-		self.botaoMilenioErvasSaoMatheusRelogio                        = Button(self.ContainerMilenioErvas)
-		self.botaoMilenioErvasSaoMatheusRelogio         ["text"]       = "R"
-		self.botaoMilenioErvasSaoMatheusRelogio         ["background"] = Info.MilenioErvas.SaoMatheus.RelogioCor
-		self.botaoMilenioErvasSaoMatheusRelogio         ["width"]      = 1
-		self.botaoMilenioErvasSaoMatheusRelogio         ["height"]     =  1
-		self.botaoMilenioErvasSaoMatheusRelogio.grid    (row=3,column=1,sticky = "N")
-
-
-
-
-
-		self.botaoMilenioErvasDiadema                                 = Button(self.ContainerMilenioErvas)
-		self.botaoMilenioErvasDiadema                  ["text"]       = "Diadema"
-		self.botaoMilenioErvasDiadema                  ["background"] = Info.MilenioErvas.Diadema.ModuloCor
-		self.botaoMilenioErvasDiadema                  ["width"]      = 15
-		self.botaoMilenioErvasDiadema                  ["height"]     = 1
-		self.botaoMilenioErvasDiadema.bind             ("<Button-1>",lambda e: popup("MilenioErvas","Diadema",
-														Info.MilenioErvas.Diadema.IP, 
-														Info.MilenioErvas.Diadema.Porta, 
-														Info.MilenioErvas.Diadema.NumeroRep, 
-														Info.MilenioErvas.Diadema.Responsavel, 
-														Info.MilenioErvas.Diadema.Telefone))
-		self.botaoMilenioErvasDiadema.grid             (row=4,column=0,sticky = "N")
-
-		self.botaoMilenioErvasDiademaRelogio                          = Button(self.ContainerMilenioErvas)
-		self.botaoMilenioErvasDiademaRelogio           ["text"]       = "R"
-		self.botaoMilenioErvasDiademaRelogio           ["background"] = Info.MilenioErvas.Diadema.RelogioCor
-		self.botaoMilenioErvasDiademaRelogio           ["width"]      = 1
-		self.botaoMilenioErvasDiademaRelogio           ["height"]     =  1
-		self.botaoMilenioErvasDiademaRelogio.grid      (row=4,column=1,sticky = "N")
-
-
-
-######################################################### UNIMAN #######################################################
-
-
-		self.msgUniman = Label (self.ContainerUniman,text = "Uniman")
-		self.msgUniman["height"] = 1
-		self.msgUniman.grid(row=0,column=0,sticky = "N")
-
-
-
-
-		self.botaoUnimanSaintGobain                                  = Button(self.ContainerUniman)
-		self.botaoUnimanSaintGobain                   ["text"]       = "Saint Gobain"
-		self.botaoUnimanSaintGobain                   ["background"] = Info.Uniman.SaintGobain.ModuloCor
-		self.botaoUnimanSaintGobain                   ["width"]      = 15
-		self.botaoUnimanSaintGobain                   ["height"]     = 1
-		self.botaoUnimanSaintGobain.bind             ("<Button-1>",lambda e: popup("Uniman","Saint Gobain",
-														Info.Uniman.SaintGobain.IP, 
-														Info.Uniman.SaintGobain.Porta, 
-														Info.Uniman.SaintGobain.NumeroRep, 
-														Info.Uniman.SaintGobain.Responsavel, 
-														Info.Uniman.SaintGobain.Telefone))
-		self.botaoUnimanSaintGobain.grid              (row=1, column=0, sticky = "N")
-
-		self.botaoUnimanSaintGobainRelogio                           = Button(self.ContainerUniman)
-		self.botaoUnimanSaintGobainRelogio            ["text"]       = "R"
-		self.botaoUnimanSaintGobainRelogio            ["background"] = Info.Uniman.SaintGobain.RelogioCor
-		self.botaoUnimanSaintGobainRelogio            ["width"]      = 1
-		self.botaoUnimanSaintGobainRelogio            ["height"]     = 1
-		self.botaoUnimanSaintGobainRelogio.grid       (row=1, column=1, sticky = "N")
-
-
-
-
-		self.botaoUnimanPPMSecoia                                   = Button(self.ContainerUniman)
-		self.botaoUnimanPPMSecoia                    ["text"]       = "PPM Secoia"
-		self.botaoUnimanPPMSecoia                    ["background"] = Info.Uniman.PPMSecoia.ModuloCor
-		self.botaoUnimanPPMSecoia                    ["width"]      = 15
-		self.botaoUnimanPPMSecoia                    ["height"]     = 1
-		self.botaoUnimanPPMSecoia.bind              ("<Button-1>",lambda e: popup("Uniman","PPM Secoia",
-														Info.Uniman.PPMSecoia.IP, 
-														Info.Uniman.PPMSecoia.Porta, 
-														Info.Uniman.PPMSecoia.NumeroRep, 
-														Info.Uniman.PPMSecoia.Responsavel, 
-														Info.Uniman.PPMSecoia.Telefone))
-		self.botaoUnimanPPMSecoia.grid               (row=2,column=0,sticky = "N")
-
-		self.botaoUnimanPPMSecoiaRelogio                            = Button(self.ContainerUniman)
-		self.botaoUnimanPPMSecoiaRelogio             ["text"]       = "R"
-		self.botaoUnimanPPMSecoiaRelogio             ["background"] = Info.Uniman.PPMSecoia.RelogioCor
-		self.botaoUnimanPPMSecoiaRelogio             ["width"]      = 1
-		self.botaoUnimanPPMSecoiaRelogio             ["height"]     = 1
-		self.botaoUnimanPPMSecoiaRelogio.grid        (row=2,column=1,sticky = "N")
-
-
-
-
-		self.botaoUnimanTitan                                       = Button(self.ContainerUniman)
-		self.botaoUnimanTitan                        ["text"]       = "Titan"
-		self.botaoUnimanTitan                        ["background"] = Info.Uniman.Titan.ModuloCor
-		self.botaoUnimanTitan                        ["width"]      = 15
-		self.botaoUnimanTitan                        ["height"]     = 1
-		self.botaoUnimanPPMSecoia.bind               ("<Button-1>",lambda e: popup("Uniman","Titan",
-														Info.Uniman.Titan.IP, 
-														Info.Uniman.Titan.Porta, 
-														Info.Uniman.Titan.NumeroRep, 
-														Info.Uniman.Titan.Responsavel, 
-														Info.Uniman.Titan.Telefone))
-		self.botaoUnimanTitan.grid                   (row=3,column=0,sticky = "N")
-
-		self.botaoUnimanTitanRelogio                                = Button(self.ContainerUniman)
-		self.botaoUnimanTitanRelogio                 ["text"]       = "R"
-		self.botaoUnimanTitanRelogio                 ["background"] = Info.Uniman.Titan.RelogioCor
-		self.botaoUnimanTitanRelogio                 ["width"]      = 1
-		self.botaoUnimanTitanRelogio                 ["height"]     =  1
-		self.botaoUnimanTitanRelogio.grid            (row=3,column=1,sticky = "N")
-
-
-
-
-
-		self.botaoUnimanSekurity                                   = Button(self.ContainerUniman)
-		self.botaoUnimanSekurity                    ["text"]       = "Sekurity"
-		self.botaoUnimanSekurity                    ["background"] = Info.Uniman.Sekurity.ModuloCor
-		self.botaoUnimanSekurity                    ["width"]      = 15
-		self.botaoUnimanSekurity                    ["height"]     = 1
-		self.botaoUnimanSekurity.bind                ("<Button-1>",lambda e: popup("Uniman","Sekurity",
-														Info.Uniman.Sekurity.IP, 
-														Info.Uniman.Sekurity.Porta, 
-														Info.Uniman.Sekurity.NumeroRep, 
-														Info.Uniman.Sekurity.Responsavel, 
-														Info.Uniman.Sekurity.Telefone))
-		self.botaoUnimanSekurity.grid               (row=4,column=0,sticky = "N")
-
-		self.botaoUnimanSekurityRelogio                            = Button(self.ContainerUniman)
-		self.botaoUnimanSekurityRelogio             ["text"]       = "R"
-		self.botaoUnimanSekurityRelogio             ["background"] = Info.Uniman.Sekurity.RelogioCor
-		self.botaoUnimanSekurityRelogio             ["width"]      = 1
-		self.botaoUnimanSekurityRelogio             ["height"]     =  1
-		self.botaoUnimanSekurityRelogio.grid        (row=4,column=1,sticky = "N")
-
-		
-
-############################################## GRIDS ###################################################################
-############################################## GRIDS DOS BOTOES#########################################################
-
-
-
-######################################################### GRAVEX #######################################################
-
-		self.msgGravex.grid                         (row=0,column=0,sticky = "N")
-
-		self.botaoGravexADM.grid                    (row=1,column=0,sticky = "N")
-		self.botaoGravexADMRelogio.grid             (row=1,column=1,sticky = "N")
-
-		self.botaoGravexLoja.grid                   (row=2,column=0,sticky = "N")
-		self.botaoGravexLojaRelogio.grid            (row=2,column=1,sticky = "N")
-
-		self.botaoGravexMiMarcos.grid               (row=3,column=0,sticky = "N")
-		self.botaoGravexMiMarcosRelogio.grid        (row=3,column=1,sticky = "N")
-
-		self.botaoGravexDantChini.grid              (row=4,column=0,sticky = "N")
-		self.botaoGravexDantChiniRelogio.grid       (row=4,column=1,sticky = "N")
-
-
-
-########################################################## LASER #######################################################
-
-		self.msgLaser.grid(row=0,column=0,sticky = "N")
-
-		self.botaoAcademia.grid                     (row=1,column=0,sticky = "N")
-		self.botaoRAcademia.grid                    (row=1,column=1,sticky = "N")
-
-		self.botaoInstituto.grid                    (row=2,column=0,sticky = "N")
-		self.botaoRInstituto.grid                   (row=2,column=1,sticky = "N")
-
-
 
 
 	def Create_BestInClass(self):
@@ -3978,7 +3981,7 @@ class MonitorPing(object):
 
 		self.ContainerColuna1.grid                (row=0, column=1,pady=5, padx=5, columnspan=1, sticky="N")
 		self.ContainerLaser.grid                  (row=0, column=0,pady=5, padx=5, columnspan=1, sticky="N")
-		self.ContainerLotten.grid                 (row=1, column=0,pady=5, padx=5, columnspan=1, sticky="N")
+		self.ContainerLotten.grid                 (row=2, column=0,pady=5, padx=5, columnspan=1, sticky="N")
 
 		############################################## COLUMN 2 ########################################################
 
