@@ -14,7 +14,7 @@ class Info(object):
 
 		class Status(object):
 			Contage         = 0
-
+			TotalRelogios   = 3
 
 		class Allianz(object):
 
@@ -61,7 +61,7 @@ class Info(object):
 
 		class Status(object):
 			Contage         = 0
-
+			TotalRelogios   = 5
 
 		class ADM(object):
 
@@ -125,9 +125,10 @@ class Info(object):
 			
 
 	class BestInClass(object):
+
 		class Status(object):
 			Contage         = 0
-
+			TotalRelogios   = 11
 
 		class Recife(object):
 	
@@ -949,6 +950,8 @@ class Controle(object):
 	Status 		      		        = "red"
 	Stop							= False
 	StatusWord                      = "Parado"
+	TotalON							= 0
+	TotalRelogios					= 0
 
 
 class Threadloop0(threading.Thread):
@@ -1981,6 +1984,45 @@ def AtualizaCor(empresa,relogio,result):
 				Info.BestInClass.Linhares.RelogioCor = "pink"
 
 
+		Info.BestInClass.Status.Contage = 0
+
+		if Info.BestInClass.Recife.RelogioCor == "green" : 
+			Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
+
+		if Info.BestInClass.Itaquera.RelogioCor == "green" : 
+			Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
+		
+		if Info.BestInClass.Itapevi.RelogioCor == "green" : 
+			Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
+		
+		if Info.BestInClass.Sorocaba.RelogioCor == "green" : 
+			Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
+		
+		if Info.BestInClass.SeteLagoas.RelogioCor == "green" : 
+			Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
+
+		if Info.BestInClass.Curitiba.RelogioCor == "green" : 
+			Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
+
+		if Info.BestInClass.Fsantana.RelogioCor == "green" : 
+			Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
+		
+		if Info.BestInClass.Itu.RelogioCor == "green" : 
+			Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
+		
+		if Info.BestInClass.Guarulhos.RelogioCor == "green" : 
+			Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
+		
+		if Info.BestInClass.Itaporanga.RelogioCor == "green" : 
+			Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
+
+		if Info.BestInClass.Linhares.RelogioCor == "green" : 
+			Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
+
+	Controle.TotalON = 0		
+	Controle.TotalON = Controle.TotalON + Info.Building.Status.Contage
+	Controle.TotalON = Controle.TotalON + Info.CasaCristo.Status.Contage
+	Controle.TotalON = Controle.TotalON + Info.BestInClass.Status.Contage
 
 
 
@@ -1997,6 +2039,9 @@ class MonitorPing(object):
 
 		self.Create_CasaCristo()
 	
+		self.Create_BestInClass()
+
+
 
 
 
@@ -2029,6 +2074,22 @@ class MonitorPing(object):
 		self.botaoStatus.grid(row=0,column=1)
 
 
+
+		self.msgInformativaON = Label (self.ContainerStatus,text = "On-Line : ")
+		self.msgInformativaON["height"] = 1
+		self.msgInformativaON.grid(row=0,column=2)
+
+		self.msgStatusON = Label (self.ContainerStatus,text = "0")
+		self.msgStatusON["height"] = 1
+		self.msgStatusON.grid(row=0,column=3)
+
+		self.msgInformativaTotal = Label (self.ContainerStatus,text = "Total : ")
+		self.msgInformativaTotal["height"] = 1
+		self.msgInformativaTotal.grid(row=0,column=4)
+
+		self.msgStatusTotal = Label (self.ContainerStatus,text = "0")
+		self.msgStatusTotal["height"] = 1
+		self.msgStatusTotal.grid(row=0,column=5)
 
 
 
@@ -2130,245 +2191,6 @@ class MonitorPing(object):
 ######################################################### BEST IN CLASS ################################################
 
 
-
-
-		self.msgBestInClass = Label (self.ContainerBestInClass,text = "Best In Class")
-
-		self.msgBestInClassResult = Label (self.ContainerBestInClass,text = "5/11")
-
-
-		self.botaoBestInClassRecife                               = Button(self.ContainerBestInClass)
-		self.botaoBestInClassRecife                ["text"]       = "Recife"
-		self.botaoBestInClassRecife                ["background"] = Info.BestInClass.Recife.ModuloCor
-		self.botaoBestInClassRecife                ["width"]      = 15
-		self.botaoBestInClassRecife                ["height"]     = 1
-		self.botaoBestInClassRecife.bind           ("<Button-1>",lambda e: popup("Best In Class","Recife",
-													Info.BestInClass.Recife.IP, 
-													Info.BestInClass.Recife.Porta, 
-													Info.BestInClass.Recife.NumeroRep, 
-													Info.BestInClass.Recife.Responsavel, 
-													Info.BestInClass.Recife.Telefone))
-
-		self.botaoBestInClassRecifeRelogio                        = Button(self.ContainerBestInClass)
-		self.botaoBestInClassRecifeRelogio         ["text"]       = "R"
-		self.botaoBestInClassRecifeRelogio         ["background"] = Info.BestInClass.Recife.RelogioCor
-		self.botaoBestInClassRecifeRelogio         ["width"]      = 1
-		self.botaoBestInClassRecifeRelogio         ["height"]     = 1
-
-
-
-
-		self.botaoBestInClassItaquera                             = Button(self.ContainerBestInClass)
-		self.botaoBestInClassItaquera              ["text"]       = "Itaquera"
-		self.botaoBestInClassItaquera              ["background"] = Info.BestInClass.Itaquera.ModuloCor
-		self.botaoBestInClassItaquera              ["width"]      = 15
-		self.botaoBestInClassItaquera              ["height"]     = 1
-		self.botaoBestInClassItaquera.bind         ("<Button-1>",lambda e: popup("Best In Class","Itaquera",
-													Info.BestInClass.Itaquera.IP, 
-													Info.BestInClass.Itaquera.Porta, 
-													Info.BestInClass.Itaquera.NumeroRep, 
-													Info.BestInClass.Itaquera.Responsavel, 
-													Info.BestInClass.Itaquera.Telefone))
-
-
-		self.botaoBestInClassItaqueraRelogio                      = Button(self.ContainerBestInClass)
-		self.botaoBestInClassItaqueraRelogio       ["text"]       = "R"
-		self.botaoBestInClassItaqueraRelogio       ["background"] = Info.BestInClass.Itaquera.RelogioCor
-		self.botaoBestInClassItaqueraRelogio       ["width"]      = 1
-		self.botaoBestInClassItaqueraRelogio       ["height"]     = 1		
-
-
-
-
-
-		self.botaoBestInClassItapevi                              = Button(self.ContainerBestInClass)
-		self.botaoBestInClassItapevi               ["text"]       = "Itapevi"
-		self.botaoBestInClassItapevi               ["background"] = Info.BestInClass.Itapevi.ModuloCor
-		self.botaoBestInClassItapevi               ["width"]      = 15
-		self.botaoBestInClassItapevi               ["height"]     = 1
-		self.botaoBestInClassItapevi.bind          ("<Button-1>",lambda e: popup("Best In Class","Itapevi",
-													Info.BestInClass.Itapevi.IP, 
-													Info.BestInClass.Itapevi.Porta, 
-													Info.BestInClass.Itapevi.NumeroRep, 
-													Info.BestInClass.Itapevi.Responsavel, 
-													Info.BestInClass.Itapevi.Telefone))
-
-
-		self.botaoBestInClassItapeviRelogio                       = Button(self.ContainerBestInClass)
-		self.botaoBestInClassItapeviRelogio        ["text"]       = "R"
-		self.botaoBestInClassItapeviRelogio        ["background"] = Info.BestInClass.Itapevi.RelogioCor
-		self.botaoBestInClassItapeviRelogio        ["width"]      = 1
-		self.botaoBestInClassItapeviRelogio        ["height"]     = 1		
-
-
-
-
-		self.botaoBestInClassSorocaba                             = Button(self.ContainerBestInClass)
-		self.botaoBestInClassSorocaba              ["text"]       = "Sorocaba"
-		self.botaoBestInClassSorocaba              ["background"] = Info.BestInClass.Sorocaba.ModuloCor
-		self.botaoBestInClassSorocaba              ["width"]      = 15
-		self.botaoBestInClassSorocaba              ["height"]     = 1
-		self.botaoBestInClassSorocaba.bind          ("<Button-1>",lambda e: popup("Best In Class","Sorocaba",
-													Info.BestInClass.Sorocaba.IP, 
-													Info.BestInClass.Sorocaba.Porta, 
-													Info.BestInClass.Sorocaba.NumeroRep, 
-													Info.BestInClass.Sorocaba.Responsavel, 
-													Info.BestInClass.Sorocaba.Telefone))
-
-		self.botaoBestInClassSorocabaRelogio                      = Button(self.ContainerBestInClass)
-		self.botaoBestInClassSorocabaRelogio       ["text"]       = "R"
-		self.botaoBestInClassSorocabaRelogio       ["background"] = Info.BestInClass.Sorocaba.RelogioCor
-		self.botaoBestInClassSorocabaRelogio       ["width"]      = 1
-		self.botaoBestInClassSorocabaRelogio       ["height"]     = 1
-
-
-
-
-		self.botaoBestInClassSeteLagoas                           = Button(self.ContainerBestInClass)
-		self.botaoBestInClassSeteLagoas            ["text"]       = "Sete Lagoas"
-		self.botaoBestInClassSeteLagoas            ["background"] = Info.BestInClass.SeteLagoas.ModuloCor
-		self.botaoBestInClassSeteLagoas            ["width"]      = 15
-		self.botaoBestInClassSeteLagoas            ["height"]     = 1
-		self.botaoBestInClassSeteLagoas.bind          ("<Button-1>",lambda e: popup("Best In Class","Sete Lagoas",
-													Info.BestInClass.SeteLagoas.IP, 
-													Info.BestInClass.SeteLagoas.Porta, 
-													Info.BestInClass.SeteLagoas.NumeroRep, 
-													Info.BestInClass.SeteLagoas.Responsavel, 
-													Info.BestInClass.SeteLagoas.Telefone))
-
-		self.botaoBestInClassSeteLagoasRelogio                    = Button(self.ContainerBestInClass)
-		self.botaoBestInClassSeteLagoasRelogio     ["text"]       = "R"
-		self.botaoBestInClassSeteLagoasRelogio     ["background"] = Info.BestInClass.SeteLagoas.RelogioCor
-		self.botaoBestInClassSeteLagoasRelogio     ["width"]      = 1
-		self.botaoBestInClassSeteLagoasRelogio     ["height"]     = 1		
-
-
-
-
-		self.botaoBestInClassCuritiba                             = Button(self.ContainerBestInClass)
-		self.botaoBestInClassCuritiba              ["text"]       = "Curitiba"
-		self.botaoBestInClassCuritiba              ["background"] = Info.BestInClass.Curitiba.ModuloCor
-		self.botaoBestInClassCuritiba              ["width"]      = 15
-		self.botaoBestInClassCuritiba              ["height"]     = 1
-		self.botaoBestInClassCuritiba.bind          ("<Button-1>",lambda e: popup("Best In Class","Curitiba",
-													Info.BestInClass.Curitiba.IP, 
-													Info.BestInClass.Curitiba.Porta, 
-													Info.BestInClass.Curitiba.NumeroRep, 
-													Info.BestInClass.Curitiba.Responsavel, 
-													Info.BestInClass.Curitiba.Telefone))
-
-
-		self.botaoBestInClassCuritibaRelogio                      = Button(self.ContainerBestInClass)
-		self.botaoBestInClassCuritibaRelogio       ["text"]       = "R"
-		self.botaoBestInClassCuritibaRelogio       ["background"] = Info.BestInClass.Curitiba.RelogioCor
-		self.botaoBestInClassCuritibaRelogio       ["width"]      = 1
-		self.botaoBestInClassCuritibaRelogio       ["height"]     = 1
-
-
-
-
-
-		self.botaoBestInClassSFsat                                = Button(self.ContainerBestInClass)
-		self.botaoBestInClassSFsat                 ["text"]       = "F Santana"
-		self.botaoBestInClassSFsat                 ["background"] = Info.BestInClass.Fsantana.ModuloCor
-		self.botaoBestInClassSFsat                 ["width"]      = 15
-		self.botaoBestInClassSFsat                 ["height"]     = 1
-		self.botaoBestInClassSFsat.bind            ("<Button-1>",lambda e: popup("Best In Class","Feira De Santana",
-													Info.BestInClass.Fsantana.IP, 
-													Info.BestInClass.Fsantana.Porta, 
-													Info.BestInClass.Fsantana.NumeroRep, 
-													Info.BestInClass.Fsantana.Responsavel, 
-													Info.BestInClass.Fsantana.Telefone))
-
-		self.botaoBestInClassSFsatRelogio                         = Button(self.ContainerBestInClass)
-		self.botaoBestInClassSFsatRelogio          ["text"]       = "R"
-		self.botaoBestInClassSFsatRelogio          ["background"] = Info.BestInClass.Fsantana.RelogioCor
-		self.botaoBestInClassSFsatRelogio          ["width"]      = 1
-		self.botaoBestInClassSFsatRelogio          ["height"]     = 1
-
-
-
-
-		self.botaoBestInClassItu                                  = Button(self.ContainerBestInClass)
-		self.botaoBestInClassItu                   ["text"]       = "Itu"
-		self.botaoBestInClassItu                   ["background"] = Info.BestInClass.Itu.ModuloCor
-		self.botaoBestInClassItu                   ["width"]      = 15
-		self.botaoBestInClassItu                   ["height"]     = 1
-		self.botaoBestInClassItu.bind              ("<Button-1>",lambda e: popup("Best In Class","Itu",
-													Info.BestInClass.Itu.IP, 
-													Info.BestInClass.Itu.Porta, 
-													Info.BestInClass.Itu.NumeroRep, 
-													Info.BestInClass.Itu.Responsavel, 
-													Info.BestInClass.Itu.Telefone))
-
-		self.botaoBestInClassItuRelogio                           = Button(self.ContainerBestInClass)
-		self.botaoBestInClassItuRelogio            ["text"]       = "R"
-		self.botaoBestInClassItuRelogio            ["background"] = Info.BestInClass.Itu.RelogioCor
-		self.botaoBestInClassItuRelogio            ["width"]      = 1
-		self.botaoBestInClassItuRelogio            ["height"]     = 1
-
-
-
-
-		self.botaoBestInClassGuarulhos                             = Button(self.ContainerBestInClass)
-		self.botaoBestInClassGuarulhos              ["text"]       = "Guraulhos"
-		self.botaoBestInClassGuarulhos              ["background"] = Info.BestInClass.Guarulhos.ModuloCor
-		self.botaoBestInClassGuarulhos              ["width"]      = 15
-		self.botaoBestInClassGuarulhos              ["height"]     = 1
-		self.botaoBestInClassGuarulhos.bind         ("<Button-1>",lambda e: popup("Best In Class","Guarulhos",
-													Info.BestInClass.Guarulhos.IP, 
-													Info.BestInClass.Guarulhos.Porta, 
-													Info.BestInClass.Guarulhos.NumeroRep, 
-													Info.BestInClass.Guarulhos.Responsavel, 
-													Info.BestInClass.Guarulhos.Telefone))
-
-		self.botaoBestInClassGuarulhosRelogio                      = Button(self.ContainerBestInClass)
-		self.botaoBestInClassGuarulhosRelogio       ["text"]       = "R"
-		self.botaoBestInClassGuarulhosRelogio       ["background"] = Info.BestInClass.Guarulhos.RelogioCor
-		self.botaoBestInClassGuarulhosRelogio       ["width"]      = 1
-		self.botaoBestInClassGuarulhosRelogio       ["height"]     = 1
-
-
-
-
-		self.botaoBestInClassItaporanga                            = Button(self.ContainerBestInClass)
-		self.botaoBestInClassItaporanga             ["text"]       = "Itaporanga"
-		self.botaoBestInClassItaporanga             ["background"] = Info.BestInClass.Itaporanga.ModuloCor
-		self.botaoBestInClassItaporanga             ["width"]      = 15
-		self.botaoBestInClassItaporanga             ["height"]     = 1
-		self.botaoBestInClassItaporanga.bind        ("<Button-1>",lambda e: popup("Best In Class","Itaporanga",
-													Info.BestInClass.Itaporanga.IP, 
-													Info.BestInClass.Itaporanga.Porta, 
-													Info.BestInClass.Itaporanga.NumeroRep, 
-													Info.BestInClass.Itaporanga.Responsavel, 
-													Info.BestInClass.Itaporanga.Telefone))
-
-		self.botaoBestInClassItaporangaRelogio                     = Button(self.ContainerBestInClass)
-		self.botaoBestInClassItaporangaRelogio      ["text"]       = "R"
-		self.botaoBestInClassItaporangaRelogio      ["background"] = Info.BestInClass.Itaporanga.RelogioCor
-		self.botaoBestInClassItaporangaRelogio      ["width"]      = 1
-		self.botaoBestInClassItaporangaRelogio      ["height"]     = 1
-
-
-
-
-		self.botaoBestInClassLinhares                              = Button(self.ContainerBestInClass)
-		self.botaoBestInClassLinhares               ["text"]       = "Linhares"
-		self.botaoBestInClassLinhares               ["background"] = Info.BestInClass.Linhares.ModuloCor
-		self.botaoBestInClassLinhares               ["width"]      = 15
-		self.botaoBestInClassLinhares               ["height"]     = 1
-		self.botaoBestInClassLinhares.bind          ("<Button-1>",lambda e: popup("Best In Class","Linhares",
-													Info.BestInClass.Linhares.IP, 
-													Info.BestInClass.Linhares.Porta, 
-													Info.BestInClass.Linhares.NumeroRep, 
-													Info.BestInClass.Linhares.Responsavel, 
-													Info.BestInClass.Linhares.Telefone))
-
-		self.botaoBestInClassLinharesRelogio                       = Button(self.ContainerBestInClass)
-		self.botaoBestInClassLinharesRelogio        ["text"]       = "R"
-		self.botaoBestInClassLinharesRelogio        ["background"] = Info.BestInClass.Linhares.RelogioCor
-		self.botaoBestInClassLinharesRelogio        ["width"]      = 1
-		self.botaoBestInClassLinharesRelogio        ["height"]     = 1
 
 
 
@@ -3590,43 +3412,7 @@ class MonitorPing(object):
 		self.botaoGravexDantChini.grid              (row=4,column=0,sticky = "N")
 		self.botaoGravexDantChiniRelogio.grid       (row=4,column=1,sticky = "N")
 
-######################################################### BEST IN CLASS ################################################
 
-		self.msgBestInClass.grid                   (row=0,column=0,sticky = "N")
-		self.msgBestInClassResult.grid             (row=0,column=1,sticky = "N")
-
-		self.botaoBestInClassRecife.grid           (row=1,column=0,sticky = "N")
-		self.botaoBestInClassRecifeRelogio.grid    (row=1,column=1,sticky = "N")
-
-		self.botaoBestInClassItaquera.grid         (row=2,column=0,sticky = "N")
-		self.botaoBestInClassItaqueraRelogio.grid  (row=2,column=1,sticky = "N")
-
-		self.botaoBestInClassItapevi.grid          (row=3,column=0,sticky = "N")
-		self.botaoBestInClassItapeviRelogio.grid   (row=3,column=1,sticky = "N")
-
-		self.botaoBestInClassSorocaba.grid         (row=4,column=0,sticky = "N")
-		self.botaoBestInClassSorocabaRelogio.grid  (row=4,column=1,sticky = "N")
-
-		self.botaoBestInClassSeteLagoas.grid       (row=5,column=0,sticky = "N")
-		self.botaoBestInClassSeteLagoasRelogio.grid(row=5,column=1,sticky = "N")
-
-		self.botaoBestInClassCuritiba.grid         (row=6,column=0,sticky = "N")
-		self.botaoBestInClassCuritibaRelogio.grid  (row=6,column=1,sticky = "N")
-
-		self.botaoBestInClassSFsat.grid            (row=7,column=0,sticky = "N")
-		self.botaoBestInClassSFsatRelogio.grid     (row=7,column=1,sticky = "N")
-
-		self.botaoBestInClassItu.grid              (row=8,column=0,sticky = "N")
-		self.botaoBestInClassItuRelogio.grid       (row=8,column=1,sticky = "N")
-
-		self.botaoBestInClassGuarulhos.grid         (row=9,column=0,sticky = "N")
-		self.botaoBestInClassGuarulhosRelogio.grid  (row=9,column=1,sticky = "N")
-
-		self.botaoBestInClassItaporanga.grid        (row=10,column=0,sticky = "N")
-		self.botaoBestInClassItaporangaRelogio.grid (row=10,column=1,sticky = "N")
-
-		self.botaoBestInClassLinhares.grid          (row=11,column=0,sticky = "N")
-		self.botaoBestInClassLinharesRelogio.grid   (row=11,column=1,sticky = "N")
 
 ########################################################## LASER #######################################################
 
@@ -3640,8 +3426,304 @@ class MonitorPing(object):
 
 
 
-######################################################### CASA CRISTO ##################################################
 
+	def Create_BestInClass(self):
+
+		self.msgBestInClass = Label (self.ContainerBestInClass,text = "Best In Class")
+		self.msgBestInClassCont = Label (self.ContainerBestInClass,text = "5/11")
+
+		self.msgBestInClass.grid                   (row=0,column=0,sticky = "N")
+		self.msgBestInClassCont.grid             (row=0,column=1,sticky = "N")
+
+
+
+
+
+
+		self.botaoBestInClassRecife                               = Button(self.ContainerBestInClass)
+		self.botaoBestInClassRecife                ["text"]       = "Recife"
+		self.botaoBestInClassRecife                ["background"] = Info.BestInClass.Recife.ModuloCor
+		self.botaoBestInClassRecife                ["width"]      = 15
+		self.botaoBestInClassRecife                ["height"]     = 1
+		self.botaoBestInClassRecife.bind           ("<Button-1>",lambda e: popup("Best In Class","Recife",
+													Info.BestInClass.Recife.IP, 
+													Info.BestInClass.Recife.Porta, 
+													Info.BestInClass.Recife.NumeroRep, 
+													Info.BestInClass.Recife.Responsavel, 
+													Info.BestInClass.Recife.Telefone))
+
+		self.botaoBestInClassRecifeRelogio                        = Button(self.ContainerBestInClass)
+		self.botaoBestInClassRecifeRelogio         ["text"]       = "R"
+		self.botaoBestInClassRecifeRelogio         ["background"] = Info.BestInClass.Recife.RelogioCor
+		self.botaoBestInClassRecifeRelogio         ["width"]      = 1
+		self.botaoBestInClassRecifeRelogio         ["height"]     = 1
+
+		self.botaoBestInClassRecife.grid           (row=1,column=0,sticky = "N")
+		self.botaoBestInClassRecifeRelogio.grid    (row=1,column=1,sticky = "N")
+
+
+
+
+
+
+		self.botaoBestInClassItaquera                             = Button(self.ContainerBestInClass)
+		self.botaoBestInClassItaquera              ["text"]       = "Itaquera"
+		self.botaoBestInClassItaquera              ["background"] = Info.BestInClass.Itaquera.ModuloCor
+		self.botaoBestInClassItaquera              ["width"]      = 15
+		self.botaoBestInClassItaquera              ["height"]     = 1
+		self.botaoBestInClassItaquera.bind         ("<Button-1>",lambda e: popup("Best In Class","Itaquera",
+													Info.BestInClass.Itaquera.IP, 
+													Info.BestInClass.Itaquera.Porta, 
+													Info.BestInClass.Itaquera.NumeroRep, 
+													Info.BestInClass.Itaquera.Responsavel, 
+													Info.BestInClass.Itaquera.Telefone))
+
+
+		self.botaoBestInClassItaqueraRelogio                      = Button(self.ContainerBestInClass)
+		self.botaoBestInClassItaqueraRelogio       ["text"]       = "R"
+		self.botaoBestInClassItaqueraRelogio       ["background"] = Info.BestInClass.Itaquera.RelogioCor
+		self.botaoBestInClassItaqueraRelogio       ["width"]      = 1
+		self.botaoBestInClassItaqueraRelogio       ["height"]     = 1		
+
+		self.botaoBestInClassItaquera.grid         (row=2,column=0,sticky = "N")
+		self.botaoBestInClassItaqueraRelogio.grid  (row=2,column=1,sticky = "N")
+
+
+
+
+
+
+		self.botaoBestInClassItapevi                              = Button(self.ContainerBestInClass)
+		self.botaoBestInClassItapevi               ["text"]       = "Itapevi"
+		self.botaoBestInClassItapevi               ["background"] = Info.BestInClass.Itapevi.ModuloCor
+		self.botaoBestInClassItapevi               ["width"]      = 15
+		self.botaoBestInClassItapevi               ["height"]     = 1
+		self.botaoBestInClassItapevi.bind          ("<Button-1>",lambda e: popup("Best In Class","Itapevi",
+													Info.BestInClass.Itapevi.IP, 
+													Info.BestInClass.Itapevi.Porta, 
+													Info.BestInClass.Itapevi.NumeroRep, 
+													Info.BestInClass.Itapevi.Responsavel, 
+													Info.BestInClass.Itapevi.Telefone))
+
+
+		self.botaoBestInClassItapeviRelogio                       = Button(self.ContainerBestInClass)
+		self.botaoBestInClassItapeviRelogio        ["text"]       = "R"
+		self.botaoBestInClassItapeviRelogio        ["background"] = Info.BestInClass.Itapevi.RelogioCor
+		self.botaoBestInClassItapeviRelogio        ["width"]      = 1
+		self.botaoBestInClassItapeviRelogio        ["height"]     = 1		
+
+		self.botaoBestInClassItapevi.grid          (row=3,column=0,sticky = "N")
+		self.botaoBestInClassItapeviRelogio.grid   (row=3,column=1,sticky = "N")
+
+
+
+
+
+		self.botaoBestInClassSorocaba                             = Button(self.ContainerBestInClass)
+		self.botaoBestInClassSorocaba              ["text"]       = "Sorocaba"
+		self.botaoBestInClassSorocaba              ["background"] = Info.BestInClass.Sorocaba.ModuloCor
+		self.botaoBestInClassSorocaba              ["width"]      = 15
+		self.botaoBestInClassSorocaba              ["height"]     = 1
+		self.botaoBestInClassSorocaba.bind          ("<Button-1>",lambda e: popup("Best In Class","Sorocaba",
+													Info.BestInClass.Sorocaba.IP, 
+													Info.BestInClass.Sorocaba.Porta, 
+													Info.BestInClass.Sorocaba.NumeroRep, 
+													Info.BestInClass.Sorocaba.Responsavel, 
+													Info.BestInClass.Sorocaba.Telefone))
+
+		self.botaoBestInClassSorocabaRelogio                      = Button(self.ContainerBestInClass)
+		self.botaoBestInClassSorocabaRelogio       ["text"]       = "R"
+		self.botaoBestInClassSorocabaRelogio       ["background"] = Info.BestInClass.Sorocaba.RelogioCor
+		self.botaoBestInClassSorocabaRelogio       ["width"]      = 1
+		self.botaoBestInClassSorocabaRelogio       ["height"]     = 1
+
+		self.botaoBestInClassSorocaba.grid         (row=4,column=0,sticky = "N")
+		self.botaoBestInClassSorocabaRelogio.grid  (row=4,column=1,sticky = "N")
+
+
+
+
+		self.botaoBestInClassSeteLagoas                           = Button(self.ContainerBestInClass)
+		self.botaoBestInClassSeteLagoas            ["text"]       = "Sete Lagoas"
+		self.botaoBestInClassSeteLagoas            ["background"] = Info.BestInClass.SeteLagoas.ModuloCor
+		self.botaoBestInClassSeteLagoas            ["width"]      = 15
+		self.botaoBestInClassSeteLagoas            ["height"]     = 1
+		self.botaoBestInClassSeteLagoas.bind          ("<Button-1>",lambda e: popup("Best In Class","Sete Lagoas",
+													Info.BestInClass.SeteLagoas.IP, 
+													Info.BestInClass.SeteLagoas.Porta, 
+													Info.BestInClass.SeteLagoas.NumeroRep, 
+													Info.BestInClass.SeteLagoas.Responsavel, 
+													Info.BestInClass.SeteLagoas.Telefone))
+
+		self.botaoBestInClassSeteLagoasRelogio                    = Button(self.ContainerBestInClass)
+		self.botaoBestInClassSeteLagoasRelogio     ["text"]       = "R"
+		self.botaoBestInClassSeteLagoasRelogio     ["background"] = Info.BestInClass.SeteLagoas.RelogioCor
+		self.botaoBestInClassSeteLagoasRelogio     ["width"]      = 1
+		self.botaoBestInClassSeteLagoasRelogio     ["height"]     = 1		
+
+		self.botaoBestInClassSeteLagoas.grid       (row=5,column=0,sticky = "N")
+		self.botaoBestInClassSeteLagoasRelogio.grid(row=5,column=1,sticky = "N")
+
+
+
+
+		self.botaoBestInClassCuritiba                             = Button(self.ContainerBestInClass)
+		self.botaoBestInClassCuritiba              ["text"]       = "Curitiba"
+		self.botaoBestInClassCuritiba              ["background"] = Info.BestInClass.Curitiba.ModuloCor
+		self.botaoBestInClassCuritiba              ["width"]      = 15
+		self.botaoBestInClassCuritiba              ["height"]     = 1
+		self.botaoBestInClassCuritiba.bind          ("<Button-1>",lambda e: popup("Best In Class","Curitiba",
+													Info.BestInClass.Curitiba.IP, 
+													Info.BestInClass.Curitiba.Porta, 
+													Info.BestInClass.Curitiba.NumeroRep, 
+													Info.BestInClass.Curitiba.Responsavel, 
+													Info.BestInClass.Curitiba.Telefone))
+
+
+		self.botaoBestInClassCuritibaRelogio                      = Button(self.ContainerBestInClass)
+		self.botaoBestInClassCuritibaRelogio       ["text"]       = "R"
+		self.botaoBestInClassCuritibaRelogio       ["background"] = Info.BestInClass.Curitiba.RelogioCor
+		self.botaoBestInClassCuritibaRelogio       ["width"]      = 1
+		self.botaoBestInClassCuritibaRelogio       ["height"]     = 1
+
+		self.botaoBestInClassCuritiba.grid         (row=6,column=0,sticky = "N")
+		self.botaoBestInClassCuritibaRelogio.grid  (row=6,column=1,sticky = "N")
+
+
+
+
+
+
+		self.botaoBestInClassSFsat                                = Button(self.ContainerBestInClass)
+		self.botaoBestInClassSFsat                 ["text"]       = "F Santana"
+		self.botaoBestInClassSFsat                 ["background"] = Info.BestInClass.Fsantana.ModuloCor
+		self.botaoBestInClassSFsat                 ["width"]      = 15
+		self.botaoBestInClassSFsat                 ["height"]     = 1
+		self.botaoBestInClassSFsat.bind            ("<Button-1>",lambda e: popup("Best In Class","Feira De Santana",
+													Info.BestInClass.Fsantana.IP, 
+													Info.BestInClass.Fsantana.Porta, 
+													Info.BestInClass.Fsantana.NumeroRep, 
+													Info.BestInClass.Fsantana.Responsavel, 
+													Info.BestInClass.Fsantana.Telefone))
+
+		self.botaoBestInClassSFsatRelogio                         = Button(self.ContainerBestInClass)
+		self.botaoBestInClassSFsatRelogio          ["text"]       = "R"
+		self.botaoBestInClassSFsatRelogio          ["background"] = Info.BestInClass.Fsantana.RelogioCor
+		self.botaoBestInClassSFsatRelogio          ["width"]      = 1
+		self.botaoBestInClassSFsatRelogio          ["height"]     = 1
+
+		self.botaoBestInClassSFsat.grid            (row=7,column=0,sticky = "N")
+		self.botaoBestInClassSFsatRelogio.grid     (row=7,column=1,sticky = "N")
+
+
+
+
+
+
+
+		self.botaoBestInClassItu                                  = Button(self.ContainerBestInClass)
+		self.botaoBestInClassItu                   ["text"]       = "Itu"
+		self.botaoBestInClassItu                   ["background"] = Info.BestInClass.Itu.ModuloCor
+		self.botaoBestInClassItu                   ["width"]      = 15
+		self.botaoBestInClassItu                   ["height"]     = 1
+		self.botaoBestInClassItu.bind              ("<Button-1>",lambda e: popup("Best In Class","Itu",
+													Info.BestInClass.Itu.IP, 
+													Info.BestInClass.Itu.Porta, 
+													Info.BestInClass.Itu.NumeroRep, 
+													Info.BestInClass.Itu.Responsavel, 
+													Info.BestInClass.Itu.Telefone))
+
+		self.botaoBestInClassItuRelogio                           = Button(self.ContainerBestInClass)
+		self.botaoBestInClassItuRelogio            ["text"]       = "R"
+		self.botaoBestInClassItuRelogio            ["background"] = Info.BestInClass.Itu.RelogioCor
+		self.botaoBestInClassItuRelogio            ["width"]      = 1
+		self.botaoBestInClassItuRelogio            ["height"]     = 1
+
+
+		self.botaoBestInClassItu.grid              (row=8,column=0,sticky = "N")
+		self.botaoBestInClassItuRelogio.grid       (row=8,column=1,sticky = "N")
+
+
+
+
+
+
+
+		self.botaoBestInClassGuarulhos                             = Button(self.ContainerBestInClass)
+		self.botaoBestInClassGuarulhos              ["text"]       = "Guraulhos"
+		self.botaoBestInClassGuarulhos              ["background"] = Info.BestInClass.Guarulhos.ModuloCor
+		self.botaoBestInClassGuarulhos              ["width"]      = 15
+		self.botaoBestInClassGuarulhos              ["height"]     = 1
+		self.botaoBestInClassGuarulhos.bind         ("<Button-1>",lambda e: popup("Best In Class","Guarulhos",
+													Info.BestInClass.Guarulhos.IP, 
+													Info.BestInClass.Guarulhos.Porta, 
+													Info.BestInClass.Guarulhos.NumeroRep, 
+													Info.BestInClass.Guarulhos.Responsavel, 
+													Info.BestInClass.Guarulhos.Telefone))
+
+		self.botaoBestInClassGuarulhosRelogio                      = Button(self.ContainerBestInClass)
+		self.botaoBestInClassGuarulhosRelogio       ["text"]       = "R"
+		self.botaoBestInClassGuarulhosRelogio       ["background"] = Info.BestInClass.Guarulhos.RelogioCor
+		self.botaoBestInClassGuarulhosRelogio       ["width"]      = 1
+		self.botaoBestInClassGuarulhosRelogio       ["height"]     = 1
+
+
+		self.botaoBestInClassGuarulhos.grid         (row=9,column=0,sticky = "N")
+		self.botaoBestInClassGuarulhosRelogio.grid  (row=9,column=1,sticky = "N")
+
+
+
+
+
+
+
+		self.botaoBestInClassItaporanga                            = Button(self.ContainerBestInClass)
+		self.botaoBestInClassItaporanga             ["text"]       = "Itaporanga"
+		self.botaoBestInClassItaporanga             ["background"] = Info.BestInClass.Itaporanga.ModuloCor
+		self.botaoBestInClassItaporanga             ["width"]      = 15
+		self.botaoBestInClassItaporanga             ["height"]     = 1
+		self.botaoBestInClassItaporanga.bind        ("<Button-1>",lambda e: popup("Best In Class","Itaporanga",
+													Info.BestInClass.Itaporanga.IP, 
+													Info.BestInClass.Itaporanga.Porta, 
+													Info.BestInClass.Itaporanga.NumeroRep, 
+													Info.BestInClass.Itaporanga.Responsavel, 
+													Info.BestInClass.Itaporanga.Telefone))
+
+		self.botaoBestInClassItaporangaRelogio                     = Button(self.ContainerBestInClass)
+		self.botaoBestInClassItaporangaRelogio      ["text"]       = "R"
+		self.botaoBestInClassItaporangaRelogio      ["background"] = Info.BestInClass.Itaporanga.RelogioCor
+		self.botaoBestInClassItaporangaRelogio      ["width"]      = 1
+		self.botaoBestInClassItaporangaRelogio      ["height"]     = 1
+
+
+		self.botaoBestInClassItaporanga.grid        (row=10,column=0,sticky = "N")
+		self.botaoBestInClassItaporangaRelogio.grid (row=10,column=1,sticky = "N")
+
+
+
+
+
+
+		self.botaoBestInClassLinhares                              = Button(self.ContainerBestInClass)
+		self.botaoBestInClassLinhares               ["text"]       = "Linhares"
+		self.botaoBestInClassLinhares               ["background"] = Info.BestInClass.Linhares.ModuloCor
+		self.botaoBestInClassLinhares               ["width"]      = 15
+		self.botaoBestInClassLinhares               ["height"]     = 1
+		self.botaoBestInClassLinhares.bind          ("<Button-1>",lambda e: popup("Best In Class","Linhares",
+													Info.BestInClass.Linhares.IP, 
+													Info.BestInClass.Linhares.Porta, 
+													Info.BestInClass.Linhares.NumeroRep, 
+													Info.BestInClass.Linhares.Responsavel, 
+													Info.BestInClass.Linhares.Telefone))
+
+		self.botaoBestInClassLinharesRelogio                       = Button(self.ContainerBestInClass)
+		self.botaoBestInClassLinharesRelogio        ["text"]       = "R"
+		self.botaoBestInClassLinharesRelogio        ["background"] = Info.BestInClass.Linhares.RelogioCor
+		self.botaoBestInClassLinharesRelogio        ["width"]      = 1
+		self.botaoBestInClassLinharesRelogio        ["height"]     = 1
+
+		self.botaoBestInClassLinhares.grid          (row=11,column=0,sticky = "N")
+		self.botaoBestInClassLinharesRelogio.grid   (row=11,column=1,sticky = "N")
 
 
 	def Create_CasaCristo(self):
@@ -3860,8 +3942,6 @@ class MonitorPing(object):
 		self.botaoBuildingRioJaneiroRelogio.grid    (row=3,column=1,sticky = "N")
 
 
-
-
 	def Create_container(self,root):
 
 
@@ -3965,7 +4045,8 @@ class MonitorPing(object):
 				self.botaoBuildingRioJaneiro.configure               	(bg=Info.Building.RioJaneiro.ModuloCor)
 				self.botaoBuildingRioJaneiroRelogio.configure        	(bg=Info.Building.RioJaneiro.RelogioCor)
 
-			self.msgBuildingCont.configure								(text=str(Info.Building.Status.Contage)+"/3")
+			self.msgBuildingCont.configure								(text=str(Info.Building.Status.Contage)+"/"+
+																		str(Info.Building.Status.TotalRelogios)								)
 
 
 
@@ -4041,10 +4122,9 @@ class MonitorPing(object):
 				self.botaoCasaCristoVMatilde.configure               	(bg=Info.CasaCristo.VovoMatilde.ModuloCor)
 				self.botaoCasaCristoVMatildeRelogio.configure        	(bg=Info.CasaCristo.VovoMatilde.RelogioCor)
 			
-			self.msgCasaCristoContage.configure	  						(text=str(Info.CasaCristo.Status.Contage)+"/5")
+			self.msgCasaCristoContage.configure	  						(text=str(Info.CasaCristo.Status.Contage)+"/"+
+																		str(Info.CasaCristo.Status.TotalRelogios))
  
-
-######################################################### BEST IN CLASS ################################################
 
 
 		elif empresa == "bestinclass":
@@ -4113,6 +4193,18 @@ class MonitorPing(object):
 				self.botaoBestInClassLinhares.configure					(bg=Info.BestInClass.Linhares.ModuloCor)
 				self.botaoBestInClassLinharesRelogio.configure			(bg=Info.BestInClass.Linhares.RelogioCor)
 
+			self.msgBestInClassCont.configure 							(text=str(Info.BestInClass.Status.Contage)+"/"+
+																		str(Info.BestInClass.Status.TotalRelogios))
+
+
+
+
+
+		self.msgStatusON.configure										(text=str(Controle.TotalON))
+		self.msgStatusTotal.configure									(text=str(Controle.TotalRelogios))
+
+
+
 	def Inicia(self,event):
 		if self.botaoStatus["background"]=="red":
 			self.botaoStatus["background"] = "green"
@@ -4134,6 +4226,22 @@ class MonitorPing(object):
 			Controle.StatusWord = "Parado"
 			Controle.Status = "red"
 			Controle.Stop = True
+
+
+
+
+
+def Contagem():
+
+	Controle.TotalRelogios = 0
+
+
+	Controle.TotalRelogios = Controle.TotalRelogios + Info.Building.Status.TotalRelogios
+	Controle.TotalRelogios = Controle.TotalRelogios + Info.CasaCristo.Status.TotalRelogios
+	Controle.TotalRelogios = Controle.TotalRelogios + Info.BestInClass.Status.TotalRelogios
+
+
+
 
 
 def popup(empresa,name,ip,porta,numerorep,responsavel,telefone):
@@ -4167,7 +4275,7 @@ def popup(empresa,name,ip,porta,numerorep,responsavel,telefone):
 	#root.update()
 
 
-
+Contagem()
 leBanco()
 root = Tk()
 root.title("Monitor Ping")
