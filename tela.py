@@ -1660,7 +1660,9 @@ def AtualizaCor(empresa,relogio,result):
 	######################################################### CASA CRISTO ##############################################
 
 	elif empresa == "casacristo":
+	
 		if relogio == "adm":
+	
 			if result == 1:
 				Info.CasaCristo.ADM.ModuloCor  = "red"
 				Info.CasaCristo.ADM.RelogioCor = "red"
@@ -1678,6 +1680,7 @@ def AtualizaCor(empresa,relogio,result):
 				Info.CasaCristo.ADM.RelogioCor = "pink"
 
 		elif relogio == "cei1":
+	
 			if result == 1:
 				Info.CasaCristo.CEI1.ModuloCor  = "red"
 				Info.CasaCristo.CEI1.RelogioCor = "red"
@@ -1695,6 +1698,7 @@ def AtualizaCor(empresa,relogio,result):
 				Info.CasaCristo.CEI1.RelogioCor = "pink"
 
 		elif relogio == "cei2":
+	
 			if result == 1:
 				Info.CasaCristo.CEI2.ModuloCor  = "red"
 				Info.CasaCristo.CEI2.RelogioCor = "red"
@@ -1712,6 +1716,7 @@ def AtualizaCor(empresa,relogio,result):
 				Info.CasaCristo.CEI2.RelogioCor = "pink"
 
 		elif relogio == "cei3":
+	
 			if result == 1:
 				Info.CasaCristo.CEI3.ModuloCor  = "red"
 				Info.CasaCristo.CEI3.RelogioCor = "red"
@@ -1744,6 +1749,24 @@ def AtualizaCor(empresa,relogio,result):
 			else:
 				Info.CasaCristo.VovoMatilde.ModuloCor  = "pink"
 				Info.CasaCristo.VovoMatilde.RelogioCor = "pink"
+
+
+		Info.CasaCristo.Status.Contage = 0
+
+		if Info.CasaCristo.ADM.RelogioCor == "green" : 
+			Info.CasaCristo.Status.Contage = Info.CasaCristo.Status.Contage +1
+
+		if Info.CasaCristo.CEI1.RelogioCor == "green" : 
+			Info.CasaCristo.Status.Contage = Info.CasaCristo.Status.Contage +1
+		
+		if Info.CasaCristo.CEI2.RelogioCor == "green" : 
+			Info.CasaCristo.Status.Contage = Info.CasaCristo.Status.Contage +1
+		
+		if Info.CasaCristo.CEI3.RelogioCor == "green" : 
+			Info.CasaCristo.Status.Contage = Info.CasaCristo.Status.Contage +1
+		
+		if Info.CasaCristo.VovoMatilde.RelogioCor == "green" : 
+			Info.CasaCristo.Status.Contage = Info.CasaCristo.Status.Contage +1
 
 	######################################################### BEST IN CLASS ############################################
 
@@ -1969,7 +1992,10 @@ class MonitorPing(object):
 	def __init__(self,root):
 
 		self.Create_container(root)
+
 		self.Create_Building()
+
+		self.Create_CasaCristo()
 	
 
 
@@ -2400,112 +2426,6 @@ class MonitorPing(object):
 
 
 
-######################################################### CASA CRISTO ##################################################
-
-
-		if Info.CasaCristo.ADM.RelogioCor == "green" : Info.CasaCristo.Status.Contage = Info.CasaCristo.Status.Contage +1
-		if Info.CasaCristo.CEI1.RelogioCor == "green" : Info.CasaCristo.Status.Contage = Info.CasaCristo.Status.Contage +1
-		if Info.CasaCristo.CEI2.RelogioCor == "green" : Info.CasaCristo.Status.Contage = Info.CasaCristo.Status.Contage +1
-		if Info.CasaCristo.CEI3.RelogioCor == "green" : Info.CasaCristo.Status.Contage = Info.CasaCristo.Status.Contage +1
-		if Info.CasaCristo.VovoMatilde.RelogioCor == "green" : Info.CasaCristo.Status.Contage = Info.CasaCristo.Status.Contage +1
-
-		self.msgCasaCristo = Label (self.ContainerCasaCristo,text = "Casa do Cristo")
-
-		self.msgCasaCristoContage = Label (self.ContainerCasaCristo,text = str(Info.CasaCristo.Status.Contage)+"/5")
-
-
-
-		self.botaoCasaCristoADM                                   = Button(self.ContainerCasaCristo)
-		self.botaoCasaCristoADM                    ["text"]       = "ADM"
-		self.botaoCasaCristoADM                    ["background"] = Info.CasaCristo.ADM.ModuloCor
-		self.botaoCasaCristoADM                    ["width"]      = 15
-		self.botaoCasaCristoADM.bind               ("<Button-1>",lambda e: popup("Casa do Cristo","ADM",
-													Info.CasaCristo.ADM.IP, 
-													Info.CasaCristo.ADM.Porta, 
-													Info.CasaCristo.ADM.NumeroRep, 
-													Info.CasaCristo.ADM.Responsavel, 
-													Info.CasaCristo.ADM.Telefone))
-
-		self.botaoCasaCristoADMRelogio                            = Button(self.ContainerCasaCristo)
-		self.botaoCasaCristoADMRelogio             ["text"]       = "R"
-		self.botaoCasaCristoADMRelogio             ["background"] = Info.CasaCristo.ADM.RelogioCor
-		self.botaoCasaCristoADMRelogio             ["width"]      = 1
-
-
-
-
-		self.botaoCasaCristoCEI1                                  = Button(self.ContainerCasaCristo)
-		self.botaoCasaCristoCEI1                   ["text"]       = "CEI1"
-		self.botaoCasaCristoCEI1                   ["background"] = Info.CasaCristo.CEI1.ModuloCor
-		self.botaoCasaCristoCEI1                   ["width"]      = 15
-		self.botaoCasaCristoCEI1.bind               ("<Button-1>",lambda e: popup("Casa do Cristo","CEI1",
-													Info.CasaCristo.CEI1.IP, 
-													Info.CasaCristo.CEI1.Porta, 
-													Info.CasaCristo.CEI1.NumeroRep, 
-													Info.CasaCristo.CEI1.Responsavel, 
-													Info.CasaCristo.CEI1.Telefone))
-
-		self.botaoCasaCristoCEI1Relogio                           = Button(self.ContainerCasaCristo)
-		self.botaoCasaCristoCEI1Relogio            ["text"]       = "R"
-		self.botaoCasaCristoCEI1Relogio            ["background"] = Info.CasaCristo.CEI1.RelogioCor
-		self.botaoCasaCristoCEI1Relogio            ["width"]      = 1
-
-
-
-
-		self.botaoCasaCristoCEI2                                  = Button(self.ContainerCasaCristo)
-		self.botaoCasaCristoCEI2                   ["text"]       = "CEI2"
-		self.botaoCasaCristoCEI2                   ["background"] = Info.CasaCristo.CEI2.ModuloCor
-		self.botaoCasaCristoCEI2                   ["width"]      = 15
-		self.botaoCasaCristoCEI2.bind               ("<Button-1>",lambda e: popup("Casa do Cristo","CEI2",
-													Info.CasaCristo.CEI2.IP, 
-													Info.CasaCristo.CEI2.Porta, 
-													Info.CasaCristo.CEI2.NumeroRep, 
-													Info.CasaCristo.CEI2.Responsavel, 
-													Info.CasaCristo.CEI2.Telefone))
-
-		self.botaoCasaCristoCEI2Relogio                           = Button(self.ContainerCasaCristo)
-		self.botaoCasaCristoCEI2Relogio            ["text"]       = "R"
-		self.botaoCasaCristoCEI2Relogio            ["background"] = Info.CasaCristo.CEI2.RelogioCor
-		self.botaoCasaCristoCEI2Relogio            ["width"]=1
-
-
-
-
-		self.botaoCasaCristoCEI3                                  = Button(self.ContainerCasaCristo)
-		self.botaoCasaCristoCEI3                   ["text"]       = "CEI3"
-		self.botaoCasaCristoCEI3                   ["background"] = Info.CasaCristo.CEI3.ModuloCor
-		self.botaoCasaCristoCEI3                   ["width"]      = 15
-		self.botaoCasaCristoCEI3.bind               ("<Button-1>",lambda e: popup("Casa do Cristo","CEI3",
-													Info.CasaCristo.CEI3.IP, 
-													Info.CasaCristo.CEI3.Porta, 
-													Info.CasaCristo.CEI3.NumeroRep, 
-													Info.CasaCristo.CEI3.Responsavel, 
-													Info.CasaCristo.CEI3.Telefone))
-
-		self.botaoCasaCristoCEI3Relogio                           = Button(self.ContainerCasaCristo)
-		self.botaoCasaCristoCEI3Relogio            ["text"]       = "R"
-		self.botaoCasaCristoCEI3Relogio            ["background"] = Info.CasaCristo.CEI3.RelogioCor
-		self.botaoCasaCristoCEI3Relogio            ["width"]      = 1
-
-
-
-
-		self.botaoCasaCristoVMatilde                              = Button(self.ContainerCasaCristo)
-		self.botaoCasaCristoVMatilde               ["text"]       = "Vovo Matilde"
-		self.botaoCasaCristoVMatilde               ["background"] = Info.CasaCristo.VovoMatilde.ModuloCor
-		self.botaoCasaCristoVMatilde               ["width"]      = 15
-		self.botaoCasaCristoVMatilde.bind          ("<Button-1>",lambda e: popup("Casa do Cristo","Vovo Matilde",
-													Info.CasaCristo.VovoMatilde.IP, 
-													Info.CasaCristo.VovoMatilde.Porta, 
-													Info.CasaCristo.VovoMatilde.NumeroRep, 
-													Info.CasaCristo.VovoMatilde.Responsavel, 
-													Info.CasaCristo.VovoMatilde.Telefone))
-
-		self.botaoCasaCristoVMatildeRelogio                       = Button(self.ContainerCasaCristo)
-		self.botaoCasaCristoVMatildeRelogio        ["text"]       = "R"
-		self.botaoCasaCristoVMatildeRelogio        ["background"] = Info.CasaCristo.VovoMatilde.RelogioCor
-		self.botaoCasaCristoVMatildeRelogio        ["width"]      = 1
 
 
 
@@ -3722,36 +3642,134 @@ class MonitorPing(object):
 
 ######################################################### CASA CRISTO ##################################################
 
+
+
+	def Create_CasaCristo(self):
+
+
+		self.msgCasaCristo = Label (self.ContainerCasaCristo,text = "Casa do Cristo")
+		self.msgCasaCristoContage = Label (self.ContainerCasaCristo,text = str(Info.CasaCristo.Status.Contage)+"/5")
+
 		self.msgCasaCristo.grid(row=0,column=0, sticky = "N")
 		self.msgCasaCristoContage.grid(row=0,column=1, sticky = "N")
+
+
+
+
+		self.botaoCasaCristoADM                                   = Button(self.ContainerCasaCristo)
+		self.botaoCasaCristoADM                    ["text"]       = "ADM"
+		self.botaoCasaCristoADM                    ["background"] = Info.CasaCristo.ADM.ModuloCor
+		self.botaoCasaCristoADM                    ["width"]      = 15
+		self.botaoCasaCristoADM.bind               ("<Button-1>",lambda e: popup("Casa do Cristo","ADM",
+													Info.CasaCristo.ADM.IP, 
+													Info.CasaCristo.ADM.Porta, 
+													Info.CasaCristo.ADM.NumeroRep, 
+													Info.CasaCristo.ADM.Responsavel, 
+													Info.CasaCristo.ADM.Telefone))
+
+		self.botaoCasaCristoADMRelogio                            = Button(self.ContainerCasaCristo)
+		self.botaoCasaCristoADMRelogio             ["text"]       = "R"
+		self.botaoCasaCristoADMRelogio             ["background"] = Info.CasaCristo.ADM.RelogioCor
+		self.botaoCasaCristoADMRelogio             ["width"]      = 1
 
 		self.botaoCasaCristoADM.grid               (row=1,column=0,sticky = "N")
 		self.botaoCasaCristoADMRelogio.grid        (row=1,column=1,sticky = "N")
 
+
+
+
+
+		self.botaoCasaCristoCEI1                                  = Button(self.ContainerCasaCristo)
+		self.botaoCasaCristoCEI1                   ["text"]       = "CEI1"
+		self.botaoCasaCristoCEI1                   ["background"] = Info.CasaCristo.CEI1.ModuloCor
+		self.botaoCasaCristoCEI1                   ["width"]      = 15
+		self.botaoCasaCristoCEI1.bind               ("<Button-1>",lambda e: popup("Casa do Cristo","CEI1",
+													Info.CasaCristo.CEI1.IP, 
+													Info.CasaCristo.CEI1.Porta, 
+													Info.CasaCristo.CEI1.NumeroRep, 
+													Info.CasaCristo.CEI1.Responsavel, 
+													Info.CasaCristo.CEI1.Telefone))
+
+		self.botaoCasaCristoCEI1Relogio                           = Button(self.ContainerCasaCristo)
+		self.botaoCasaCristoCEI1Relogio            ["text"]       = "R"
+		self.botaoCasaCristoCEI1Relogio            ["background"] = Info.CasaCristo.CEI1.RelogioCor
+		self.botaoCasaCristoCEI1Relogio            ["width"]      = 1
+
 		self.botaoCasaCristoCEI1.grid              (row=2,column=0,sticky = "N")
 		self.botaoCasaCristoCEI1Relogio.grid       (row=2,column=1,sticky = "N")
+
+
+
+
+
+		self.botaoCasaCristoCEI2                                  = Button(self.ContainerCasaCristo)
+		self.botaoCasaCristoCEI2                   ["text"]       = "CEI2"
+		self.botaoCasaCristoCEI2                   ["background"] = Info.CasaCristo.CEI2.ModuloCor
+		self.botaoCasaCristoCEI2                   ["width"]      = 15
+		self.botaoCasaCristoCEI2.bind               ("<Button-1>",lambda e: popup("Casa do Cristo","CEI2",
+													Info.CasaCristo.CEI2.IP, 
+													Info.CasaCristo.CEI2.Porta, 
+													Info.CasaCristo.CEI2.NumeroRep, 
+													Info.CasaCristo.CEI2.Responsavel, 
+													Info.CasaCristo.CEI2.Telefone))
+
+		self.botaoCasaCristoCEI2Relogio                           = Button(self.ContainerCasaCristo)
+		self.botaoCasaCristoCEI2Relogio            ["text"]       = "R"
+		self.botaoCasaCristoCEI2Relogio            ["background"] = Info.CasaCristo.CEI2.RelogioCor
+		self.botaoCasaCristoCEI2Relogio            ["width"]=1
 
 		self.botaoCasaCristoCEI2.grid              (row=3,column=0,sticky = "N")
 		self.botaoCasaCristoCEI2Relogio.grid       (row=3,column=1,sticky = "N")
 		
+
+
+
+
+
+		self.botaoCasaCristoCEI3                                  = Button(self.ContainerCasaCristo)
+		self.botaoCasaCristoCEI3                   ["text"]       = "CEI3"
+		self.botaoCasaCristoCEI3                   ["background"] = Info.CasaCristo.CEI3.ModuloCor
+		self.botaoCasaCristoCEI3                   ["width"]      = 15
+		self.botaoCasaCristoCEI3.bind               ("<Button-1>",lambda e: popup("Casa do Cristo","CEI3",
+													Info.CasaCristo.CEI3.IP, 
+													Info.CasaCristo.CEI3.Porta, 
+													Info.CasaCristo.CEI3.NumeroRep, 
+													Info.CasaCristo.CEI3.Responsavel, 
+													Info.CasaCristo.CEI3.Telefone))
+
+		self.botaoCasaCristoCEI3Relogio                           = Button(self.ContainerCasaCristo)
+		self.botaoCasaCristoCEI3Relogio            ["text"]       = "R"
+		self.botaoCasaCristoCEI3Relogio            ["background"] = Info.CasaCristo.CEI3.RelogioCor
+		self.botaoCasaCristoCEI3Relogio            ["width"]      = 1
+
 		self.botaoCasaCristoCEI3.grid              (row=4,column=0,sticky = "N")
 		self.botaoCasaCristoCEI3Relogio.grid       (row=4,column=1,sticky = "N")
+
+
+
+
+
+		self.botaoCasaCristoVMatilde                              = Button(self.ContainerCasaCristo)
+		self.botaoCasaCristoVMatilde               ["text"]       = "Vovo Matilde"
+		self.botaoCasaCristoVMatilde               ["background"] = Info.CasaCristo.VovoMatilde.ModuloCor
+		self.botaoCasaCristoVMatilde               ["width"]      = 15
+		self.botaoCasaCristoVMatilde.bind          ("<Button-1>",lambda e: popup("Casa do Cristo","Vovo Matilde",
+													Info.CasaCristo.VovoMatilde.IP, 
+													Info.CasaCristo.VovoMatilde.Porta, 
+													Info.CasaCristo.VovoMatilde.NumeroRep, 
+													Info.CasaCristo.VovoMatilde.Responsavel, 
+													Info.CasaCristo.VovoMatilde.Telefone))
+
+		self.botaoCasaCristoVMatildeRelogio                       = Button(self.ContainerCasaCristo)
+		self.botaoCasaCristoVMatildeRelogio        ["text"]       = "R"
+		self.botaoCasaCristoVMatildeRelogio        ["background"] = Info.CasaCristo.VovoMatilde.RelogioCor
+		self.botaoCasaCristoVMatildeRelogio        ["width"]      = 1
 
 		self.botaoCasaCristoVMatilde.grid          (row=5,column=0,sticky = "N")
 		self.botaoCasaCristoVMatildeRelogio.grid   (row=5,column=1,sticky = "N")
 
 
-
-
-		Info.CasaCristo.Status.Contage = 0
-
-
 	def Create_Building(self):
-
-
-		if Info.Building.Allianz.RelogioCor == "green" : Info.Building.Status.Contage = Info.Building.Status.Contage +1
-		if Info.Building.WTorre.RelogioCor == "green" : Info.Building.Status.Contage = Info.Building.Status.Contage +1
-		if Info.Building.RioJaneiro.RelogioCor == "green" : Info.Building.Status.Contage = Info.Building.Status.Contage +1
 
 
 		self.msgBuilding                            = Label (self.ContainerBuilding,text = "Building")
@@ -3840,6 +3858,7 @@ class MonitorPing(object):
 
 		self.botaoBuildingRioJaneiro.grid           (row=3,column=0,sticky = "N")
 		self.botaoBuildingRioJaneiroRelogio.grid    (row=3,column=1,sticky = "N")
+
 
 
 
@@ -3978,7 +3997,6 @@ class MonitorPing(object):
 				self.botaoGravexDantChini.configure						(bg=Info.Gravex.DantChini.ModuloCor)
 				self.botaoGravexDantChiniRelogio.configure 				(bg=Info.Gravex.DantChini.RelogioCor)
 
-########################################################## LASER #######################################################
 
 
 		elif empresa == "laser":
@@ -3995,10 +4013,9 @@ class MonitorPing(object):
 				self.botaoRInstituto.configure                   		(bg=Info.Laser.Instituto.RelogioCor)
 
 
-######################################################### CASA CRISTO ##################################################
-
 
 		elif empresa == "casacristo":
+		
 			if relogio == "adm":
 
 				self.botaoCasaCristoADM.configure               		(bg=Info.CasaCristo.ADM.ModuloCor)
@@ -4023,8 +4040,9 @@ class MonitorPing(object):
 
 				self.botaoCasaCristoVMatilde.configure               	(bg=Info.CasaCristo.VovoMatilde.ModuloCor)
 				self.botaoCasaCristoVMatildeRelogio.configure        	(bg=Info.CasaCristo.VovoMatilde.RelogioCor)
-				
-
+			
+			self.msgCasaCristoContage.configure	  						(text=str(Info.CasaCristo.Status.Contage)+"/5")
+ 
 
 ######################################################### BEST IN CLASS ################################################
 
