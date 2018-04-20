@@ -1094,13 +1094,14 @@ def TestaFuncion(empresa2,relogio2,ip2,port2):
 	testa = 4
 
 	AtualizaCor(empresa2,relogio2,int(testa))
-
-	MonitorPing(root)
+	GUI.update(empresa2,relogio2)
+	#MonitorPing(root)
 	#Testesss(root,empresa2,relogio2,int(testa))	
 	#root.update()
 	testa = TestaPorta(ip2,port2) 
 	AtualizaCor(empresa2,relogio2,int(testa))
-	MonitorPing(root)
+	GUI.update(empresa2,relogio2)
+	#MonitorPing(root)
 
 
 
@@ -1506,7 +1507,6 @@ class Threadloop1(threading.Thread):
 	def __init__(self):
 		threading.Thread.__init__(self)
 	def run(self):
-		pass
 		loop1()
 
 
@@ -3869,11 +3869,11 @@ class MonitorPing(object):
 
 		
 
-	############################################## GRIDS ###################################################################
-	############################################## GRIDS DOS BOTOES#########################################################
+############################################## GRIDS ###################################################################
+############################################## GRIDS DOS BOTOES#########################################################
 
 
-	######################################################### BUILDING #####################################################
+######################################################### BUILDING #####################################################
 
 		self.msgBuilding.grid                       (row=0,column=0,sticky = "N")
 		self.msgBuildingCont.grid                   (row=0,column=1,sticky = "N")
@@ -3889,7 +3889,7 @@ class MonitorPing(object):
 
 
 
-	######################################################### GRAVEX #######################################################
+######################################################### GRAVEX #######################################################
 
 		self.msgGravex.grid                         (row=0,column=0,sticky = "N")
 
@@ -4041,7 +4041,169 @@ class MonitorPing(object):
 
 ######################################################### Events #######################################################
 
+	def update(self,empresa,relogio):
 
+		if empresa == "building":
+
+			if relogio == "allianz":	
+				
+				self.botaoBuildingAllianz.configure                  	(bg=Info.Building.Allianz.ModuloCor)
+				self.botaoBuildingAllianzRelogio.configure           	(bg=Info.Building.Allianz.RelogioCor)
+
+			elif relogio == "wtorre":
+				
+				self.botaoBuildingWTorre.configure                   	(bg=Info.Building.WTorre.ModuloCor)
+				self.botaoBuildingWTorreRelogio.configure            	(bg=Info.Building.WTorre.RelogioCor)
+
+			elif relogio == "riojaneiro":
+
+				self.botaoBuildingRioJaneiro.configure               	(bg=Info.Building.RioJaneiro.ModuloCor)
+				self.botaoBuildingRioJaneiroRelogio.configure        	(bg=Info.Building.RioJaneiro.RelogioCor)
+
+
+		elif empresa == "gravex":
+			
+			if relogio == "adm":
+
+
+				self.botaoGravexADM.configure 							(bg=Info.Gravex.ADM.ModuloCor)
+				self.botaoGravexADMRelogio.configure 					(bg=Info.Gravex.ADM.RelogioCor)
+
+
+			elif relogio == "loja":
+
+				self.botaoGravexLoja.configure							(bg=Info.Gravex.Loja1.ModuloCor)
+				self.botaoGravexLojaRelogio.configure 					(bg=Info.Gravex.Loja1.RelogioCor)
+			
+
+			elif relogio == "mimarcos":
+
+				self.botaoGravexMiMarcos.configure						(bg=Info.Gravex.Mimarcos.ModuloCor)
+				self.botaoGravexMiMarcosRelogio.configure 				(bg=Info.Gravex.Mimarcos.RelogioCor)
+
+
+			elif relogio == "dantchini":
+
+
+				self.botaoGravexDantChini.configure						(bg=Info.Gravex.DantChini.ModuloCor)
+				self.botaoGravexDantChiniRelogio.configure 				(bg=Info.Gravex.DantChini.RelogioCor)
+
+########################################################## LASER #######################################################
+
+
+		elif empresa == "laser":
+			
+			if relogio == "instituto":
+			
+				self.botaoAcademia.configure                    		(bg=Info.Laser.Academia.ModuloCor)
+				self.botaoRAcademia.configure                    		(bg=Info.Laser.Academia.RelogioCor)
+
+
+			if relogio == "academia":
+
+				self.botaoInstituto.configure                    		(bg=Info.Laser.Instituto.ModuloCor)
+				self.botaoRInstituto.configure                   		(bg=Info.Laser.Instituto.RelogioCor)
+
+
+######################################################### CASA CRISTO ##################################################
+
+
+		elif empresa == "casacristo":
+			if relogio == "adm":
+
+				self.botaoCasaCristoADM.configure               		(bg=Info.CasaCristo.ADM.ModuloCor)
+				self.botaoCasaCristoADMRelogio.configure        		(bg=Info.CasaCristo.ADM.RelogioCor)
+
+			elif relogio == "cei1":
+
+				self.botaoCasaCristoCEI1.configure               		(bg=Info.CasaCristo.CEI1.ModuloCor)
+				self.botaoCasaCristoCEI1Relogio.configure        		(bg=Info.CasaCristo.CEI1.RelogioCor)
+
+			elif relogio == "cei2":
+
+				self.botaoCasaCristoCEI2.configure               		(bg=Info.CasaCristo.CEI2.ModuloCor)
+				self.botaoCasaCristoCEI2Relogio.configure        		(bg=Info.CasaCristo.CEI2.RelogioCor)
+
+			elif relogio == "cei3":
+
+				self.botaoCasaCristoCEI3.configure               		(bg=Info.CasaCristo.CEI3.ModuloCor)
+				self.botaoCasaCristoCEI3Relogio.configure        		(bg=Info.CasaCristo.CEI3.RelogioCor)
+
+			elif relogio == "vovomatilde":
+
+				self.botaoCasaCristoVMatilde.configure               	(bg=Info.CasaCristo.VovoMatilde.ModuloCor)
+				self.botaoCasaCristoVMatildeRelogio.configure        	(bg=Info.CasaCristo.VovoMatilde.RelogioCor)
+				
+
+
+######################################################### BEST IN CLASS ################################################
+
+
+		elif empresa == "bestinclass":
+			
+			if relogio == "recife":
+
+				self.botaoBestInClassRecife.configure					(bg=Info.BestInClass.Recife.ModuloCor)
+				self.botaoBestInClassRecifeRelogio.configure			(bg=Info.BestInClass.Recife.RelogioCor)
+				
+
+			elif relogio == "itaquera":
+
+				self.botaoBestInClassItaquera.configure					(bg=Info.BestInClass.Itaquera.ModuloCor)
+				self.botaoBestInClassItaqueraRelogio.configure			(bg=Info.BestInClass.Itaquera.RelogioCor)
+
+			elif relogio == "itapevi":
+
+				self.botaoBestInClassItapevi.configure					(bg=Info.BestInClass.Itapevi.ModuloCor)
+				self.botaoBestInClassItapeviRelogio.configure			(bg=Info.BestInClass.Itapevi.RelogioCor)
+
+
+			elif relogio == "sorocaba":
+
+				self.botaoBestInClassSorocaba.configure					(bg=Info.BestInClass.Sorocaba.ModuloCor)
+				self.botaoBestInClassSorocabaRelogio.configure			(bg=Info.BestInClass.Sorocaba.RelogioCor)
+
+
+			elif relogio == "setelagoas":
+
+
+				self.botaoBestInClassSeteLagoas.configure				(bg=Info.BestInClass.SeteLagoas.ModuloCor)
+				self.botaoBestInClassSeteLagoasRelogio.configure		(bg=Info.BestInClass.SeteLagoas.RelogioCor)
+
+
+			elif relogio == "curitiba":
+
+				
+				self.botaoBestInClassCuritiba.configure					(bg=Info.BestInClass.Curitiba.ModuloCor)
+				self.botaoBestInClassCuritibaRelogio.configure			(bg=Info.BestInClass.Curitiba.RelogioCor)
+
+
+			elif relogio == "fsant":
+
+				self.botaoBestInClassSFsat.configure					(bg=Info.BestInClass.Fsantana.ModuloCor)
+				self.botaoBestInClassSFsatRelogio.configure				(bg=Info.BestInClass.Fsantana.RelogioCor)
+
+
+			elif relogio == "itu":
+
+				self.botaoBestInClassItu.configure						(bg=Info.BestInClass.Itu.ModuloCor)
+				self.botaoBestInClassItuRelogio.configure				(bg=Info.BestInClass.Itu.RelogioCor)
+				
+			elif relogio == "guarulhos":
+
+				self.botaoBestInClassGuarulhos.configure				(bg=Info.BestInClass.Guarulhos.ModuloCor)
+				self.botaoBestInClassGuarulhosRelogio.configure			(bg=Info.BestInClass.Guarulhos.RelogioCor)
+
+			elif relogio == "itaporanga":
+
+				self.botaoBestInClassItaporanga.configure				(bg=Info.BestInClass.Itaporanga.ModuloCor)
+				self.botaoBestInClassItaporangaRelogio.configure		(bg=Info.BestInClass.Itaporanga.RelogioCor)
+
+
+			elif relogio == "linhares":
+
+				self.botaoBestInClassLinhares.configure					(bg=Info.BestInClass.Linhares.ModuloCor)
+				self.botaoBestInClassLinharesRelogio.configure			(bg=Info.BestInClass.Linhares.RelogioCor)
 
 	def Inicia(self,event):
 		if self.botaoStatus["background"]=="red":
@@ -4054,6 +4216,8 @@ class MonitorPing(object):
 			#loopthread.doemon = True
 			Threadloop0().start()
 			Threadloop1().start()
+
+
 
 
 		else:
@@ -4099,7 +4263,7 @@ def popup(empresa,name,ip,porta,numerorep,responsavel,telefone):
 leBanco()
 root = Tk()
 root.title("Monitor Ping")
-MonitorPing(root)
+GUI = MonitorPing(root)
 
 root.mainloop()
 
