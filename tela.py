@@ -58,6 +58,7 @@ class Info(object):
 			
 
 	class CasaCristo(object):
+
 		class Status(object):
 			Contage         = 0
 
@@ -943,13 +944,24 @@ class Info(object):
 			Telefone        = "None"
 
 
-
-#Inicia os estados dos relogios e modulos.
 class Controle(object):
 
 	Status 		      		        = "red"
 	Stop							= False
 	StatusWord                      = "Parado"
+
+
+class Threadloop0(threading.Thread):
+	def __init__(self):
+		threading.Thread.__init__(self)
+	def run(self):
+		loop0()
+
+class Threadloop1(threading.Thread):
+	def __init__(self):
+		threading.Thread.__init__(self)
+	def run(self):
+		loop1()
 
 
 
@@ -1003,7 +1015,6 @@ def TestaCasCristo():
 				Info.CasaCristo.VovoMatilde.IP,
 				Info.CasaCristo.VovoMatilde.Porta)
 	if Controle.Stop : return
-
 
 def TestaBestInClass():
 
@@ -1073,6 +1084,21 @@ def TestaBestInClass():
 				Info.BestInClass.Linhares.Porta)
 	if Controle.Stop : return
 
+
+def TestaFuncion(empresa2,relogio2,ip2,port2):
+
+	testa = 4
+
+	AtualizaCor(empresa2,relogio2,int(testa))
+	GUI.update(empresa2,relogio2)
+
+	testa = TestaPorta(ip2,port2) 
+	AtualizaCor(empresa2,relogio2,int(testa))
+	GUI.update(empresa2,relogio2)
+
+
+
+
 def loop0():
 
 	while(1):
@@ -1086,62 +1112,6 @@ def loop1():
 		TestaBestInClass()
 		if Controle.Stop : break 
 
-
-
-
-def TestaFuncion(empresa2,relogio2,ip2,port2):
-
-	testa = 4
-
-	AtualizaCor(empresa2,relogio2,int(testa))
-	GUI.update(empresa2,relogio2)
-	#MonitorPing(root)
-	#Testesss(root,empresa2,relogio2,int(testa))	
-	#root.update()
-	testa = TestaPorta(ip2,port2) 
-	AtualizaCor(empresa2,relogio2,int(testa))
-	GUI.update(empresa2,relogio2)
-	#MonitorPing(root)
-
-
-
-
-#inicia o servico de checar os IPSs
-def loopruim():
-
-	#MonitorPing(root,"Building","Allianz",4)
-	#root.update()
-
-	listaping = open("lista_relogio.csv","r")
-	
-	data = listaping.readlines()[1:]
-
-	listaping.close()
-
-
-
-
-	for line in data:
-
-		word           = line.split(",")
-		empresa_lido   = word[0] 
-		relogio_lido   = word[1]
-		ip_lido   	   = word[2]
-		port_lido      = word[3]
-
-		empresa_lido2 = str(empresa_lido)
-		relogio_lido2 = str(relogio_lido)
-
-		testa = 4
-
-		MonitorPing(root,empresa_lido2,relogio_lido2,int(testa))
-		
-		root.update()
-		testa = TestaPorta(ip_lido,port_lido) 
-
-		MonitorPing(root,empresa_lido2,relogio_lido2,int(testa))
-		root.update()
-	
 
 
 def leBanco():
@@ -1165,7 +1135,7 @@ def leBanco():
 		Telefone_Lido     = word[6]
 
 
-######################################################### BUILDING #####################################################
+	######################################################### BUILDING #################################################
 
 		if empresa_lido == "building":
 
@@ -1205,7 +1175,7 @@ def leBanco():
 				Info.Building.RioJaneiro.Telefone           = Telefone_Lido
 
 
-######################################################### GRAVEX #######################################################
+	######################################################### GRAVEX ###################################################
 
 		elif empresa_lido == "gravex":
 
@@ -1257,7 +1227,7 @@ def leBanco():
 				Info.Gravex.DantChini.Telefone              = Telefone_Lido
 
 
-########################################################## LASER #######################################################
+	########################################################## LASER ###################################################
 
 
 		elif empresa_lido == "laser":
@@ -1283,7 +1253,7 @@ def leBanco():
 				Info.Laser.Academia.Telefone               = Telefone_Lido
 
 
-######################################################### CASA CRISTO ##################################################
+	######################################################### CASA CRISTO ##############################################
 
 
 		elif empresa_lido == "casacristo":
@@ -1341,7 +1311,7 @@ def leBanco():
 				Info.CasaCristo.VovoMatilde.Telefone       = Telefone_Lido
 
 
-######################################################### BEST IN CLASS ################################################
+	######################################################### BEST IN CLASS ############################################
 
 
 		elif empresa_lido == "bestinclass":
@@ -1366,7 +1336,7 @@ def leBanco():
 				Info.BestInClass.Itaquera.Responsavel       = Responsavel_Lido
 				Info.BestInClass.Itaquera.Telefone          = Telefone_Lido
 
-			if relogio_lido == "itapevi":
+			elif relogio_lido == "itapevi":
 
 				Info.BestInClass.Itapevi.Empresa            = empresa_lido
 				Info.BestInClass.Itapevi.Relogio            = relogio_lido
@@ -1387,7 +1357,7 @@ def leBanco():
 				Info.BestInClass.Sorocaba.Responsavel       = Responsavel_Lido
 				Info.BestInClass.Sorocaba.Telefone          = Telefone_Lido
 
-			if relogio_lido == "setelagoas":
+			elif relogio_lido == "setelagoas":
 
 				Info.BestInClass.SeteLagoas.Empresa         = empresa_lido
 				Info.BestInClass.SeteLagoas.Relogio         = relogio_lido
@@ -1408,7 +1378,7 @@ def leBanco():
 				Info.BestInClass.Curitiba.Responsavel       = Responsavel_Lido
 				Info.BestInClass.Curitiba.Telefone          = Telefone_Lido
 
-			if relogio_lido == "fsant":
+			elif relogio_lido == "fsant":
 
 				Info.BestInClass.Fsantana.Empresa               = empresa_lido
 				Info.BestInClass.Fsantana.Relogio               = relogio_lido
@@ -1440,7 +1410,7 @@ def leBanco():
 				Info.BestInClass.Guarulhos.Responsavel      = Responsavel_Lido
 				Info.BestInClass.Guarulhos.Telefone         = Telefone_Lido
 
-			if relogio_lido == "itaporanga":
+			elif relogio_lido == "itaporanga":
 
 				Info.BestInClass.Itaporanga.Empresa         = empresa_lido
 				Info.BestInClass.Itaporanga.Relogio         = relogio_lido
@@ -1460,6 +1430,7 @@ def leBanco():
 				Info.BestInClass.Linhares.NumeroRep         = NumeroReP_Lido
 				Info.BestInClass.Linhares.Responsavel       = Responsavel_Lido
 				Info.BestInClass.Linhares.Telefone          = Telefone_Lido
+
 
 
 def TestaPorta(ip,port):
@@ -1497,29 +1468,17 @@ def TestaPing(ip):
 
 
 
-class Threadloop0(threading.Thread):
-	def __init__(self):
-		threading.Thread.__init__(self)
-	def run(self):
-		loop0()
-
-class Threadloop1(threading.Thread):
-	def __init__(self):
-		threading.Thread.__init__(self)
-	def run(self):
-		loop1()
 
 
+#Atualiza a cor das variaveis. 
 def AtualizaCor(empresa,relogio,result):
 
-######################################################### BUILDING #####################################################
-
+	######################################################### BUILDING #################################################
 
 	if empresa == "building":
 
-		print "AQUI"
 		if relogio == "allianz":
-			print "AQQQQQQQ"
+			
 			if result == 1:
 				Info.Building.Allianz.ModuloCor  = "red"
 				Info.Building.Allianz.RelogioCor = "red"
@@ -1577,15 +1536,10 @@ def AtualizaCor(empresa,relogio,result):
 			else:
 				Info.Building.RioJaneiro.ModuloCor  = "pink"
 				Info.Building.RioJaneiro.RelogioCor = "pink"
+	
+	######################################################### GRAVEX ###################################################
 
-		
-
-		
-
-######################################################### GRAVEX #######################################################
-
-
-	if empresa == "gravex":
+	elif empresa == "gravex":
 		if relogio == "adm":
 
 			if result == 1:
@@ -1657,11 +1611,9 @@ def AtualizaCor(empresa,relogio,result):
 				Info.Gravex.DantChini.ModuloCor  = "pink"
 				Info.Gravex.DantChini.RelogioCor = "pink"
 
+	########################################################## LASER ###################################################
 
-########################################################## LASER #######################################################
-
-
-	if empresa == "laser":
+	elif empresa == "laser":
 		if relogio == "instituto":
 			if result == 1:
 				Info.Laser.Instituto.ModuloCor  = "red"
@@ -1679,7 +1631,7 @@ def AtualizaCor(empresa,relogio,result):
 				Info.Laser.Instituto.ModuloCor  = "pink"
 				Info.Laser.Instituto.RelogioCor = "pink"
 
-		if relogio == "academia":
+		elif relogio == "academia":
 			if result == 1:
 				Info.Laser.Academia.ModuloCor  = "red"
 				Info.Laser.Academia.RelogioCor = "red"
@@ -1696,10 +1648,9 @@ def AtualizaCor(empresa,relogio,result):
 				Info.Laser.Academia.ModuloCor  = "pink"
 				Info.Laser.Academia.RelogioCor = "pink"
 
-######################################################### CASA CRISTO ##################################################
+	######################################################### CASA CRISTO ##############################################
 
-
-	if empresa == "casacristo":
+	elif empresa == "casacristo":
 		if relogio == "adm":
 			if result == 1:
 				Info.CasaCristo.ADM.ModuloCor  = "red"
@@ -1717,7 +1668,7 @@ def AtualizaCor(empresa,relogio,result):
 				Info.CasaCristo.ADM.ModuloCor  = "pink"
 				Info.CasaCristo.ADM.RelogioCor = "pink"
 
-		if relogio == "cei1":
+		elif relogio == "cei1":
 			if result == 1:
 				Info.CasaCristo.CEI1.ModuloCor  = "red"
 				Info.CasaCristo.CEI1.RelogioCor = "red"
@@ -1734,7 +1685,7 @@ def AtualizaCor(empresa,relogio,result):
 				Info.CasaCristo.CEI1.ModuloCor  = "pink"
 				Info.CasaCristo.CEI1.RelogioCor = "pink"
 
-		if relogio == "cei2":
+		elif relogio == "cei2":
 			if result == 1:
 				Info.CasaCristo.CEI2.ModuloCor  = "red"
 				Info.CasaCristo.CEI2.RelogioCor = "red"
@@ -1751,7 +1702,7 @@ def AtualizaCor(empresa,relogio,result):
 				Info.CasaCristo.CEI2.ModuloCor  = "pink"
 				Info.CasaCristo.CEI2.RelogioCor = "pink"
 
-		if relogio == "cei3":
+		elif relogio == "cei3":
 			if result == 1:
 				Info.CasaCristo.CEI3.ModuloCor  = "red"
 				Info.CasaCristo.CEI3.RelogioCor = "red"
@@ -1768,7 +1719,7 @@ def AtualizaCor(empresa,relogio,result):
 				Info.CasaCristo.CEI3.ModuloCor  = "pink"
 				Info.CasaCristo.CEI3.RelogioCor = "pink"
 
-		if relogio == "vovomatilde":
+		elif relogio == "vovomatilde":
 			if result == 1:
 				Info.CasaCristo.VovoMatilde.ModuloCor  = "red"
 				Info.CasaCristo.VovoMatilde.RelogioCor = "red"
@@ -1785,10 +1736,10 @@ def AtualizaCor(empresa,relogio,result):
 				Info.CasaCristo.VovoMatilde.ModuloCor  = "pink"
 				Info.CasaCristo.VovoMatilde.RelogioCor = "pink"
 
-######################################################### BEST IN CLASS ################################################
-	print "teste"
-	if empresa == "bestinclass":
-		print "erro"
+	######################################################### BEST IN CLASS ############################################
+
+	elif empresa == "bestinclass":
+
 		if relogio == "recife":
 
 			if result == 1:
@@ -1808,7 +1759,7 @@ def AtualizaCor(empresa,relogio,result):
 				Info.BestInClass.Recife.RelogioCor = "pink"
 
 
-		if relogio == "itaquera":
+		elif relogio == "itaquera":
 
 			if result == 1:
 				Info.BestInClass.Itaquera.ModuloCor  = "red"
@@ -1827,7 +1778,7 @@ def AtualizaCor(empresa,relogio,result):
 				Info.BestInClass.Itaquera.RelogioCor = "pink"
 
 
-		if relogio == "itapevi":
+		elif relogio == "itapevi":
 
 			if result == 1:
 				Info.BestInClass.Itapevi.ModuloCor  = "red"
@@ -1847,7 +1798,7 @@ def AtualizaCor(empresa,relogio,result):
 
 
 
-		if relogio == "sorocaba":
+		elif relogio == "sorocaba":
 
 			if result == 1:
 				Info.BestInClass.Sorocaba.ModuloCor  = "red"
@@ -1865,7 +1816,7 @@ def AtualizaCor(empresa,relogio,result):
 				Info.BestInClass.Sorocaba.ModuloCor  = "pink"
 				Info.BestInClass.Sorocaba.RelogioCor = "pink"
 
-		if relogio == "setelagoas":
+		elif relogio == "setelagoas":
 
 			if result == 1:
 				Info.BestInClass.SeteLagoas.ModuloCor  = "red"
@@ -1884,7 +1835,7 @@ def AtualizaCor(empresa,relogio,result):
 				Info.BestInClass.SeteLagoas.RelogioCor = "pink"
 
 
-		if relogio == "curitiba":
+		elif relogio == "curitiba":
 
 			if result == 1:
 				Info.BestInClass.Curitiba.ModuloCor  = "red"
@@ -1902,7 +1853,7 @@ def AtualizaCor(empresa,relogio,result):
 				Info.BestInClass.Curitiba.ModuloCor  = "pink"
 				Info.BestInClass.Curitiba.RelogioCor = "pink"
 
-		if relogio == "fsant":
+		elif relogio == "fsant":
 
 			if result == 1:
 				Info.BestInClass.Fsantana.ModuloCor  = "red"
@@ -1922,7 +1873,7 @@ def AtualizaCor(empresa,relogio,result):
 
 
 
-		if relogio == "itu":
+		elif relogio == "itu":
 
 			if result == 1:
 				Info.BestInClass.Itu.ModuloCor  = "red"
@@ -1941,7 +1892,7 @@ def AtualizaCor(empresa,relogio,result):
 				Info.BestInClass.Itu.RelogioCor = "pink"
 
 
-		if relogio == "guarulhos":
+		elif relogio == "guarulhos":
 
 			if result == 1:
 				Info.BestInClass.Guarulhos.ModuloCor  = "red"
@@ -1960,7 +1911,7 @@ def AtualizaCor(empresa,relogio,result):
 				Info.BestInClass.Guarulhos.RelogioCor = "pink"
 
 
-		if relogio == "itaporanga":
+		elif relogio == "itaporanga":
 
 			if result == 1:
 				Info.BestInClass.Itaporanga.ModuloCor  = "red"
@@ -1979,7 +1930,7 @@ def AtualizaCor(empresa,relogio,result):
 				Info.BestInClass.Itaporanga.RelogioCor = "pink"
 
 
-		if relogio == "linhares":
+		elif relogio == "linhares":
 
 			if result == 1:
 				Info.BestInClass.Linhares.ModuloCor  = "red"
@@ -1998,139 +1949,37 @@ def AtualizaCor(empresa,relogio,result):
 				Info.BestInClass.Linhares.RelogioCor = "pink"
 
 
+
+
+
+
+
 class MonitorPing(object):
-
-
-
-
 
 
 	def __init__(self,root):
 
+		self.Create_container(root)
 
+	
 
 
 
 
- #AQUI E DEFINIDO O QUE ESTA EM CADA COLUNA. CADA EMPRESA E UM BLOCO. 
-########################################################################################################################
-############################################## CONTAINERS ##############################################################
-########################################################################################################################
 
+		#AQUI E DEFINIDO O QUE TEM DENTRO DE CADA BLOCO DE CADA EMPRESA. 
 
 
-############################################## BLOCO STATUS E BOTOES ###################################################
+	####################################################################################################################
+	############################################## BOTOES ##############################################################
+	####################################################################################################################
 
 
-		self.ContainerStatus              = Frame (root)
 
 
-		self.ContainerRelogios		      = Frame (root)
-
-
-
-
-############################################## COLUMN 0 ################################################################
-
-		self.ContainerColuna0             = Frame (self.ContainerRelogios)
-
-
-
-		self.ContainerBuilding            = Frame (self.ContainerColuna0)
-
-
-
-		self.ContainerCasaCristo          = Frame (self.ContainerColuna0)
-
-
-
-		self.ContainerBestInClass         = Frame (self.ContainerColuna0)
-
-
-
-
-############################################## COLUMN 1 ################################################################
-
-		self.ContainerColuna1             = Frame (self.ContainerRelogios)
-
-
-
-		self.ContainerLaser               = Frame (self.ContainerColuna1)
-
-
-
-		self.ContainerLotten              = Frame (self.ContainerColuna1)
-
-
-
-
-############################################## COLUMN 2 ################################################################
-
-		self.ContainerColuna2             = Frame (self.ContainerRelogios)
-
-
-
-		self.ContainerGravex              = Frame (self.ContainerColuna2)
-
-
-
-
-############################################## COLUMN 3 ################################################################
-
-		self.ContainerColuna3             = Frame (self.ContainerRelogios)
-
-
-
-		self.ContainerPredman             = Frame (self.ContainerColuna3)
-
-
-
-
-############################################## COLUMN 4 ################################################################
-
-
-		self.ContainerColuna4             = Frame (self.ContainerRelogios)
-
-
-
-		self.ContainerTarek               = Frame (self.ContainerColuna4)
-
-
-
-
-############################################## COLUMN 5 ################################################################
+		############################################## BARRA DE STATUS #################################################
 
 		
-		self.ContainerColuna5             = Frame (self.ContainerRelogios)
-
-
-		self.ContainerMilenioErvas        = Frame (self.ContainerColuna5)
-
-
-
-
-############################################## COLUMN 6 ################################################################
-
-
-		self.ContainerColuna6             = Frame (self.ContainerRelogios)
-
-
-
-		self.ContainerUniman              = Frame (self.ContainerColuna6)
-
-
-
-
-
-#AQUI E DEFINIDO O QUE TEM DENTRO DE CADA BLOCO DE CADA EMPRESA. 
-############################################## BARRA DE STATUS #########################################################
-
-		
-
-
-
-
-
 		self.msgStaus = Label (self.ContainerStatus,text = "Servico")
 		self.msgStaus["height"] = 1
 		self.msgStaus.grid(row=0,column=0)
@@ -3984,60 +3833,90 @@ class MonitorPing(object):
 
 
 
+		Info.Building.Status.Contage = 0
+		Info.CasaCristo.Status.Contage = 0
+
+	def Create_container(self,root):
 
 
-	############################################## COLUMN 0 ################################################################
+		############################################## BLOCO STATUS E BOTOES ###########################################
+
+
+		self.ContainerStatus              = Frame (root)
+		self.ContainerStatus.grid                 (row=0, sticky = "N")
+
+		self.ContainerRelogios		      = Frame (root)
+		self.ContainerRelogios.grid               (row=1, sticky = "N")
+
+
+		############################################## COLUMN 0 ########################################################
+
+		self.ContainerColuna0             = Frame (self.ContainerRelogios)
+		self.ContainerBuilding            = Frame (self.ContainerColuna0)
+		self.ContainerCasaCristo          = Frame (self.ContainerColuna0)
+		self.ContainerBestInClass         = Frame (self.ContainerColuna0)
 
 		self.ContainerColuna0.grid                (row=0, column=0,pady=5, padx=5, columnspan=1, sticky="N")
 		self.ContainerBuilding.grid               (row=0, column=0,pady=5, padx=5, columnspan=1 ,sticky="N")
 		self.ContainerCasaCristo.grid             (row=1, column=0,pady=5, padx=5, columnspan=1, sticky="N")
 		self.ContainerBestInClass.grid            (row=2, column=0,pady=5, padx=5, columnspan=1, sticky="N")
 
-	############################################## COLUMN 1 ################################################################
+
+		############################################## COLUMN 1 ########################################################
+
+		self.ContainerColuna1             = Frame (self.ContainerRelogios)
+		self.ContainerLaser               = Frame (self.ContainerColuna1)
+		self.ContainerLotten              = Frame (self.ContainerColuna1)
 
 		self.ContainerColuna1.grid                (row=0, column=1,pady=5, padx=5, columnspan=1, sticky="N")
 		self.ContainerLaser.grid                  (row=0, column=0,pady=5, padx=5, columnspan=1, sticky="N")
 		self.ContainerLotten.grid                 (row=1, column=0,pady=5, padx=5, columnspan=1, sticky="N")
 
-	############################################## COLUMN 2 ################################################################
+		############################################## COLUMN 2 ########################################################
+
+	
+		self.ContainerColuna2             = Frame (self.ContainerRelogios)
+		self.ContainerGravex              = Frame (self.ContainerColuna2)
 
 		self.ContainerColuna2.grid                (row=0, column=2,pady=5, padx=5, columnspan=1, sticky="N")
 		self.ContainerGravex.grid                 (row=0, column=0,pady=5, padx=5, columnspan=1, sticky="N")
 
-	############################################## COLUMN 3 ################################################################
+
+		############################################## COLUMN 3 ########################################################
+
+		self.ContainerColuna3             = Frame (self.ContainerRelogios)
+		self.ContainerPredman             = Frame (self.ContainerColuna3)
 
 		self.ContainerColuna3.grid                (row=0, column=3,pady=5, padx=5, columnspan=1, sticky="N")
 		self.ContainerPredman.grid                (row=0, column=0,pady=5, padx=5, columnspan=1, sticky="N")
 
-	############################################## COLUMN 4 ################################################################
+		############################################## COLUMN 4 ########################################################
+
+		self.ContainerColuna4             = Frame (self.ContainerRelogios)
+		self.ContainerTarek               = Frame (self.ContainerColuna4)
+
 
 		self.ContainerColuna4.grid                (row=0, column=4,pady=5, padx=5, columnspan=1, sticky="N")
 		self.ContainerTarek.grid                  (row=0, column=0,pady=5, padx=5, columnspan=1, sticky="N")
 
-	############################################## COLUMN 5 ################################################################
+		############################################## COLUMN 5 ########################################################
+
+		self.ContainerColuna5             = Frame (self.ContainerRelogios)
+		self.ContainerMilenioErvas        = Frame (self.ContainerColuna5)
+
 
 		self.ContainerColuna5.grid                (row=0, column=5,pady=5, padx=5, columnspan=1, sticky="N")
 		self.ContainerMilenioErvas.grid           (row=0, column=0,pady=5, padx=5, columnspan=1, sticky="N")
 
-	############################################## COLUMN 6 ################################################################
+		############################################## COLUMN 6 ########################################################
+
+		self.ContainerColuna6             = Frame (self.ContainerRelogios)
+		self.ContainerUniman              = Frame (self.ContainerColuna6)
+
 
 		self.ContainerColuna6.grid                (row=0, column=6,pady=5, padx=5, columnspan=1, sticky="N")
 		self.ContainerUniman.grid                 (row=0, column=0,pady=5, padx=5, columnspan=1, sticky="N")
 
-	############################################## GRIDS DE CONTAINER ######################################################
-
-
-		self.ContainerStatus.grid                 (row=0, sticky = "N")
-		self.ContainerRelogios.grid               (row=1, sticky = "N")
-
-
-
-
-
-		Info.Building.Status.Contage = 0
-		Info.CasaCristo.Status.Contage = 0
-
-	
 
 ######################################################### Events #######################################################
 
