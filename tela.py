@@ -2051,7 +2051,11 @@ class MonitorPing(object):
 
 		self.Create_Uniman()
 
-		
+		self.Create_Laser()
+
+		self.Create_MilenioErvas()
+
+		self.Create_Gravex()
 
 
 
@@ -2105,95 +2109,6 @@ class MonitorPing(object):
 
 
 
-######################################################### GRAVEX #######################################################
-
-
-		self.msgGravex                              = Label (self.ContainerGravex,text = "Gravex")
-		self.msgGravex                              ["height"]     = 1
-
-
-
-
-		self.botaoGravexADM                         = Button(self.ContainerGravex)
-		self.botaoGravexADM                         ["text"]       = "ADM"
-		self.botaoGravexADM                         ["background"] = Info.Gravex.ADM.ModuloCor
-		self.botaoGravexADM                         ["width"]      = 15
-		self.botaoGravexADM                         ["height"]     = 1
-		self.botaoGravexADM.bind                    ("<Button-1>",lambda e: popup("Gravex","ADM",
-													Info.Gravex.ADM.IP, 
-													Info.Gravex.ADM.Porta, 
-													Info.Gravex.ADM.NumeroRep, 
-													Info.Gravex.ADM.Responsavel, 
-													Info.Gravex.ADM.Telefone))
-
-		self.botaoGravexADMRelogio                  = Button(self.ContainerGravex)
-		self.botaoGravexADMRelogio                  ["text"]       = "R"
-		self.botaoGravexADMRelogio                  ["background"] = Info.Gravex.ADM.RelogioCor
-		self.botaoGravexADMRelogio                  ["height"]     = 1
-		self.botaoGravexADMRelogio                  ["width"]      = 1
-
-
-
-
-		self.botaoGravexLoja                        = Button(self.ContainerGravex)
-		self.botaoGravexLoja                        ["text"]       = "Loja"
-		self.botaoGravexLoja                        ["background"] = Info.Gravex.Loja1.ModuloCor
-		self.botaoGravexLoja                        ["height"]     = 1
-		self.botaoGravexLoja                        ["width"]      = 15
-		self.botaoGravexLoja.bind                    ("<Button-1>",lambda e: popup("Gravex","Loja",
-													Info.Gravex.Loja1.IP, 
-													Info.Gravex.Loja1.Porta, 
-													Info.Gravex.Loja1.NumeroRep, 
-													Info.Gravex.Loja1.Responsavel, 
-													Info.Gravex.Loja1.Telefone))
-
-		self.botaoGravexLojaRelogio                 = Button(self.ContainerGravex)
-		self.botaoGravexLojaRelogio                 ["text"]       = "R"
-		self.botaoGravexLojaRelogio                 ["background"] = Info.Gravex.Loja1.RelogioCor
-		self.botaoGravexLojaRelogio                 ["width"]      = 1
-		self.botaoGravexLojaRelogio                 ["height"]     = 1
-
-
-
-
-		self.botaoGravexMiMarcos                    = Button(self.ContainerGravex)
-		self.botaoGravexMiMarcos                    ["text"]       = "Ministro Marcos"
-		self.botaoGravexMiMarcos                    ["background"] = Info.Gravex.MiMarcos.ModuloCor
-		self.botaoGravexMiMarcos                    ["height"]     = 1
-		self.botaoGravexMiMarcos                    ["width"]      = 15
-		self.botaoGravexMiMarcos.bind               ("<Button-1>",lambda e: popup("Gravex","Ministro Marcos",
-													Info.Gravex.MiMarcos.IP, 
-													Info.Gravex.MiMarcos.Porta, 
-													Info.Gravex.MiMarcos.NumeroRep, 
-													Info.Gravex.MiMarcos.Responsavel, 
-													Info.Gravex.MiMarcos.Telefone))
-
-		self.botaoGravexMiMarcosRelogio             = Button(self.ContainerGravex)
-		self.botaoGravexMiMarcosRelogio             ["text"]       = "R"
-		self.botaoGravexMiMarcosRelogio             ["background"] = Info.Gravex.MiMarcos.RelogioCor
-		self.botaoGravexMiMarcosRelogio             ["height"]     = 1
-		self.botaoGravexMiMarcosRelogio             ["width"]      = 1
-
-
-
-
-		self.botaoGravexDantChini                   = Button(self.ContainerGravex)
-		self.botaoGravexDantChini                   ["text"]       = "Danti Chini"
-		self.botaoGravexDantChini                   ["background"] = Info.Gravex.DantChini.ModuloCor
-		self.botaoGravexDantChini                   ["width"]      = 15
-		self.botaoGravexDantChini                   ["height"]     = 1
-		self.botaoGravexDantChini.bind              ("<Button-1>",lambda e: popup("Gravex","Danti Chini",
-													Info.Gravex.DantChini.IP, 
-													Info.Gravex.DantChini.Porta, 
-													Info.Gravex.DantChini.NumeroRep, 
-													Info.Gravex.DantChini.Responsavel, 
-													Info.Gravex.DantChini.Telefone))
-
-		self.botaoGravexDantChiniRelogio            = Button(self.ContainerGravex)
-		self.botaoGravexDantChiniRelogio            ["text"]       = "R"
-		self.botaoGravexDantChiniRelogio            ["background"] = Info.Gravex.DantChini.RelogioCor
-		self.botaoGravexDantChiniRelogio            ["width"]      = 1
-		self.botaoGravexDantChiniRelogio            ["height"]     = 1
 
 
 
@@ -2201,69 +2116,9 @@ class MonitorPing(object):
 
 
 
+	def Create_MilenioErvas(self):
 
 
-########################################################## LASER #######################################################
-
-
-
-
-
-		self.msgLaser = Label (self.ContainerLaser,text = "Laser")
-		self.msgLaser["height"]=1
-
-
-
-
-		self.botaoAcademia                                         = Button(self.ContainerLaser)
-		self.botaoAcademia                          ["text"]       = "Academia"
-		self.botaoAcademia                          ["background"] = Info.Laser.Academia.ModuloCor
-		self.botaoAcademia                          ["height"]     = 1
-		self.botaoAcademia                          ["width"]      = 15
-		self.botaoAcademia.bind                     ("<Button-1>",lambda e: popup("Laser","Academia",
-													Info.Laser.Academia.IP, 
-													Info.Laser.Academia.Porta, 
-													Info.Laser.Academia.NumeroRep, 
-													Info.Laser.Academia.Responsavel, 
-													Info.Laser.Academia.Telefone))
-
-		self.botaoRAcademia                                        = Button(self.ContainerLaser)
-		self.botaoRAcademia                         ["text"]       = "R"
-		self.botaoRAcademia                         ["height"]     = 1
-		self.botaoRAcademia                         ["background"] = Info.Laser.Academia.RelogioCor
-		self.botaoRAcademia                         ["width"]      = 1
-
-
-
-		self.botaoInstituto                                        = Button(self.ContainerLaser)
-		self.botaoInstituto                         ["text"]       = "Instituto"
-		self.botaoInstituto                         ["background"] = Info.Laser.Instituto.ModuloCor
-		self.botaoInstituto                         ["width"]      = 15
-		self.botaoInstituto                         ["height"]     = 1
-		self.botaoInstituto.bind                    ("<Button-1>",lambda e: popup("Laser","Instituto",
-													Info.Laser.Instituto.IP, 
-													Info.Laser.Instituto.Porta, 
-													Info.Laser.Instituto.NumeroRep, 
-													Info.Laser.Instituto.Responsavel, 
-													Info.Laser.Instituto.Telefone))
-
-		self.botaoRInstituto                                       = Button(self.ContainerLaser)
-		self.botaoRInstituto                        ["text"]       = "R"
-		self.botaoRInstituto                        ["background"] = Info.Laser.Instituto.RelogioCor
-		self.botaoRInstituto                        ["width"]      = 1
-		self.botaoRInstituto                        ["height"]     = 1
-
-
-
-
-
-
-
-
-
-######################################################### MILENIO ERVAS ################################################
-
-	
 		self.msgMilenioErvas = Label (self.ContainerMilenioErvas,text = "Milenio Ervas")
 		self.msgMilenioErvas["height"] = 1
 		self.msgMilenioErvas.grid(row=0,column=0,columnspan=2,sticky = "N")
@@ -2362,45 +2217,172 @@ class MonitorPing(object):
 		self.botaoMilenioErvasDiademaRelogio.grid      (row=4,column=1,sticky = "N")
 
 
+	def Create_Gravex(self):
 
 
-
-
-
-		
-
-############################################## GRIDS ###################################################################
-############################################## GRIDS DOS BOTOES#########################################################
-
-
-
-######################################################### GRAVEX #######################################################
-
+		self.msgGravex                              = Label (self.ContainerGravex,text = "Gravex")
+		self.msgGravex                              ["height"]     = 1
 		self.msgGravex.grid                         (row=0,column=0,sticky = "N")
+
+
+
+
+		self.botaoGravexADM                         = Button(self.ContainerGravex)
+		self.botaoGravexADM                         ["text"]       = "ADM"
+		self.botaoGravexADM                         ["background"] = Info.Gravex.ADM.ModuloCor
+		self.botaoGravexADM                         ["width"]      = 15
+		self.botaoGravexADM                         ["height"]     = 1
+		self.botaoGravexADM.bind                    ("<Button-1>",lambda e: popup("Gravex","ADM",
+													Info.Gravex.ADM.IP, 
+													Info.Gravex.ADM.Porta, 
+													Info.Gravex.ADM.NumeroRep, 
+													Info.Gravex.ADM.Responsavel, 
+													Info.Gravex.ADM.Telefone))
+
+		self.botaoGravexADMRelogio                  = Button(self.ContainerGravex)
+		self.botaoGravexADMRelogio                  ["text"]       = "R"
+		self.botaoGravexADMRelogio                  ["background"] = Info.Gravex.ADM.RelogioCor
+		self.botaoGravexADMRelogio                  ["height"]     = 1
+		self.botaoGravexADMRelogio                  ["width"]      = 1
+
 
 		self.botaoGravexADM.grid                    (row=1,column=0,sticky = "N")
 		self.botaoGravexADMRelogio.grid             (row=1,column=1,sticky = "N")
 
+
+
+
+		self.botaoGravexLoja                        = Button(self.ContainerGravex)
+		self.botaoGravexLoja                        ["text"]       = "Loja"
+		self.botaoGravexLoja                        ["background"] = Info.Gravex.Loja1.ModuloCor
+		self.botaoGravexLoja                        ["height"]     = 1
+		self.botaoGravexLoja                        ["width"]      = 15
+		self.botaoGravexLoja.bind                    ("<Button-1>",lambda e: popup("Gravex","Loja",
+													Info.Gravex.Loja1.IP, 
+													Info.Gravex.Loja1.Porta, 
+													Info.Gravex.Loja1.NumeroRep, 
+													Info.Gravex.Loja1.Responsavel, 
+													Info.Gravex.Loja1.Telefone))
+
+		self.botaoGravexLojaRelogio                 = Button(self.ContainerGravex)
+		self.botaoGravexLojaRelogio                 ["text"]       = "R"
+		self.botaoGravexLojaRelogio                 ["background"] = Info.Gravex.Loja1.RelogioCor
+		self.botaoGravexLojaRelogio                 ["width"]      = 1
+		self.botaoGravexLojaRelogio                 ["height"]     = 1
+
 		self.botaoGravexLoja.grid                   (row=2,column=0,sticky = "N")
 		self.botaoGravexLojaRelogio.grid            (row=2,column=1,sticky = "N")
 
+
+
+
+
+
+		self.botaoGravexMiMarcos                    = Button(self.ContainerGravex)
+		self.botaoGravexMiMarcos                    ["text"]       = "Ministro Marcos"
+		self.botaoGravexMiMarcos                    ["background"] = Info.Gravex.MiMarcos.ModuloCor
+		self.botaoGravexMiMarcos                    ["height"]     = 1
+		self.botaoGravexMiMarcos                    ["width"]      = 15
+		self.botaoGravexMiMarcos.bind               ("<Button-1>",lambda e: popup("Gravex","Ministro Marcos",
+													Info.Gravex.MiMarcos.IP, 
+													Info.Gravex.MiMarcos.Porta, 
+													Info.Gravex.MiMarcos.NumeroRep, 
+													Info.Gravex.MiMarcos.Responsavel, 
+													Info.Gravex.MiMarcos.Telefone))
+
+		self.botaoGravexMiMarcosRelogio             = Button(self.ContainerGravex)
+		self.botaoGravexMiMarcosRelogio             ["text"]       = "R"
+		self.botaoGravexMiMarcosRelogio             ["background"] = Info.Gravex.MiMarcos.RelogioCor
+		self.botaoGravexMiMarcosRelogio             ["height"]     = 1
+		self.botaoGravexMiMarcosRelogio             ["width"]      = 1
+
+
 		self.botaoGravexMiMarcos.grid               (row=3,column=0,sticky = "N")
 		self.botaoGravexMiMarcosRelogio.grid        (row=3,column=1,sticky = "N")
+
+
+
+
+		self.botaoGravexDantChini                   = Button(self.ContainerGravex)
+		self.botaoGravexDantChini                   ["text"]       = "Danti Chini"
+		self.botaoGravexDantChini                   ["background"] = Info.Gravex.DantChini.ModuloCor
+		self.botaoGravexDantChini                   ["width"]      = 15
+		self.botaoGravexDantChini                   ["height"]     = 1
+		self.botaoGravexDantChini.bind              ("<Button-1>",lambda e: popup("Gravex","Danti Chini",
+													Info.Gravex.DantChini.IP, 
+													Info.Gravex.DantChini.Porta, 
+													Info.Gravex.DantChini.NumeroRep, 
+													Info.Gravex.DantChini.Responsavel, 
+													Info.Gravex.DantChini.Telefone))
+
+		self.botaoGravexDantChiniRelogio            = Button(self.ContainerGravex)
+		self.botaoGravexDantChiniRelogio            ["text"]       = "R"
+		self.botaoGravexDantChiniRelogio            ["background"] = Info.Gravex.DantChini.RelogioCor
+		self.botaoGravexDantChiniRelogio            ["width"]      = 1
+		self.botaoGravexDantChiniRelogio            ["height"]     = 1
+
 
 		self.botaoGravexDantChini.grid              (row=4,column=0,sticky = "N")
 		self.botaoGravexDantChiniRelogio.grid       (row=4,column=1,sticky = "N")
 
 
+	def Create_Laser(self):
+		
 
-########################################################## LASER #######################################################
 
+		self.msgLaser = Label (self.ContainerLaser,text = "Laser")
+		self.msgLaser["height"]=1
 		self.msgLaser.grid(row=0,column=0,sticky = "N")
+
+
+
+
+		self.botaoAcademia                                         = Button(self.ContainerLaser)
+		self.botaoAcademia                          ["text"]       = "Academia"
+		self.botaoAcademia                          ["background"] = Info.Laser.Academia.ModuloCor
+		self.botaoAcademia                          ["height"]     = 1
+		self.botaoAcademia                          ["width"]      = 15
+		self.botaoAcademia.bind                     ("<Button-1>",lambda e: popup("Laser","Academia",
+													Info.Laser.Academia.IP, 
+													Info.Laser.Academia.Porta, 
+													Info.Laser.Academia.NumeroRep, 
+													Info.Laser.Academia.Responsavel, 
+													Info.Laser.Academia.Telefone))
+
+		self.botaoRAcademia                                        = Button(self.ContainerLaser)
+		self.botaoRAcademia                         ["text"]       = "R"
+		self.botaoRAcademia                         ["height"]     = 1
+		self.botaoRAcademia                         ["background"] = Info.Laser.Academia.RelogioCor
+		self.botaoRAcademia                         ["width"]      = 1
 
 		self.botaoAcademia.grid                     (row=1,column=0,sticky = "N")
 		self.botaoRAcademia.grid                    (row=1,column=1,sticky = "N")
 
+
+
+
+		self.botaoInstituto                                        = Button(self.ContainerLaser)
+		self.botaoInstituto                         ["text"]       = "Instituto"
+		self.botaoInstituto                         ["background"] = Info.Laser.Instituto.ModuloCor
+		self.botaoInstituto                         ["width"]      = 15
+		self.botaoInstituto                         ["height"]     = 1
+		self.botaoInstituto.bind                    ("<Button-1>",lambda e: popup("Laser","Instituto",
+													Info.Laser.Instituto.IP, 
+													Info.Laser.Instituto.Porta, 
+													Info.Laser.Instituto.NumeroRep, 
+													Info.Laser.Instituto.Responsavel, 
+													Info.Laser.Instituto.Telefone))
+
+		self.botaoRInstituto                                       = Button(self.ContainerLaser)
+		self.botaoRInstituto                        ["text"]       = "R"
+		self.botaoRInstituto                        ["background"] = Info.Laser.Instituto.RelogioCor
+		self.botaoRInstituto                        ["width"]      = 1
+		self.botaoRInstituto                        ["height"]     = 1
+
+
 		self.botaoInstituto.grid                    (row=2,column=0,sticky = "N")
 		self.botaoRInstituto.grid                   (row=2,column=1,sticky = "N")
+
 
 	def Create_Predman(self):
 
@@ -4029,8 +4011,6 @@ class MonitorPing(object):
 		self.ContainerUniman.grid                 (row=0, column=0,pady=5, padx=5, columnspan=1, sticky="N")
 
 
-######################################################### Events #######################################################
-
 	def update(self,empresa,relogio):
 
 		if empresa == "building":
@@ -4207,7 +4187,6 @@ class MonitorPing(object):
 
 		self.msgStatusON.configure										(text=str(Controle.TotalON))
 		self.msgStatusTotal.configure									(text=str(Controle.TotalRelogios))
-
 
 
 	def Inicia(self,event):
