@@ -1538,14 +1538,14 @@ def AtualizaCor(empresa,relogio,result):
 				Info.Building.RioJaneiro.ModuloCor  = "pink"
 				Info.Building.RioJaneiro.RelogioCor = "pink"
 		
-
-		Info.Building.Status.Contage = 0
-		if Info.Building.Allianz.RelogioCor == "green" : 
-				Info.Building.Status.Contage = Info.Building.Status.Contage +1
-		if Info.Building.WTorre.RelogioCor == "green" : 
-				Info.Building.Status.Contage = Info.Building.Status.Contage +1
-		if Info.Building.RioJaneiro.RelogioCor == "green" : 
-				Info.Building.Status.Contage = Info.Building.Status.Contage +1
+		if result != 4:
+			Info.Building.Status.Contage = 0
+			if Info.Building.Allianz.RelogioCor == "green" : 
+					Info.Building.Status.Contage = Info.Building.Status.Contage +1
+			if Info.Building.WTorre.RelogioCor == "green" : 
+					Info.Building.Status.Contage = Info.Building.Status.Contage +1
+			if Info.Building.RioJaneiro.RelogioCor == "green" : 
+					Info.Building.Status.Contage = Info.Building.Status.Contage +1
 			
 
 
@@ -1753,23 +1753,23 @@ def AtualizaCor(empresa,relogio,result):
 				Info.CasaCristo.VovoMatilde.ModuloCor  = "pink"
 				Info.CasaCristo.VovoMatilde.RelogioCor = "pink"
 
+		if result != 4:
+			Info.CasaCristo.Status.Contage = 0
 
-		Info.CasaCristo.Status.Contage = 0
+			if Info.CasaCristo.ADM.RelogioCor == "green" : 
+				Info.CasaCristo.Status.Contage = Info.CasaCristo.Status.Contage +1
 
-		if Info.CasaCristo.ADM.RelogioCor == "green" : 
-			Info.CasaCristo.Status.Contage = Info.CasaCristo.Status.Contage +1
-
-		if Info.CasaCristo.CEI1.RelogioCor == "green" : 
-			Info.CasaCristo.Status.Contage = Info.CasaCristo.Status.Contage +1
-		
-		if Info.CasaCristo.CEI2.RelogioCor == "green" : 
-			Info.CasaCristo.Status.Contage = Info.CasaCristo.Status.Contage +1
-		
-		if Info.CasaCristo.CEI3.RelogioCor == "green" : 
-			Info.CasaCristo.Status.Contage = Info.CasaCristo.Status.Contage +1
-		
-		if Info.CasaCristo.VovoMatilde.RelogioCor == "green" : 
-			Info.CasaCristo.Status.Contage = Info.CasaCristo.Status.Contage +1
+			if Info.CasaCristo.CEI1.RelogioCor == "green" : 
+				Info.CasaCristo.Status.Contage = Info.CasaCristo.Status.Contage +1
+			
+			if Info.CasaCristo.CEI2.RelogioCor == "green" : 
+				Info.CasaCristo.Status.Contage = Info.CasaCristo.Status.Contage +1
+			
+			if Info.CasaCristo.CEI3.RelogioCor == "green" : 
+				Info.CasaCristo.Status.Contage = Info.CasaCristo.Status.Contage +1
+			
+			if Info.CasaCristo.VovoMatilde.RelogioCor == "green" : 
+				Info.CasaCristo.Status.Contage = Info.CasaCristo.Status.Contage +1
 
 	######################################################### BEST IN CLASS ############################################
 
@@ -1983,46 +1983,48 @@ def AtualizaCor(empresa,relogio,result):
 				Info.BestInClass.Linhares.ModuloCor  = "pink"
 				Info.BestInClass.Linhares.RelogioCor = "pink"
 
+	if result != 4:			
+			Info.BestInClass.Status.Contage = 0
 
-		Info.BestInClass.Status.Contage = 0
+			if Info.BestInClass.Recife.RelogioCor == "green" : 
+				Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
 
-		if Info.BestInClass.Recife.RelogioCor == "green" : 
-			Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
+			if Info.BestInClass.Itaquera.RelogioCor == "green" : 
+				Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
+			
+			if Info.BestInClass.Itapevi.RelogioCor == "green" : 
+				Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
+			
+			if Info.BestInClass.Sorocaba.RelogioCor == "green" : 
+				Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
+			
+			if Info.BestInClass.SeteLagoas.RelogioCor == "green" : 
+				Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
 
-		if Info.BestInClass.Itaquera.RelogioCor == "green" : 
-			Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
-		
-		if Info.BestInClass.Itapevi.RelogioCor == "green" : 
-			Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
-		
-		if Info.BestInClass.Sorocaba.RelogioCor == "green" : 
-			Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
-		
-		if Info.BestInClass.SeteLagoas.RelogioCor == "green" : 
-			Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
+			if Info.BestInClass.Curitiba.RelogioCor == "green" : 
+				Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
 
-		if Info.BestInClass.Curitiba.RelogioCor == "green" : 
-			Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
+			if Info.BestInClass.Fsantana.RelogioCor == "green" : 
+				Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
+			
+			if Info.BestInClass.Itu.RelogioCor == "green" : 
+				Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
+			
+			if Info.BestInClass.Guarulhos.RelogioCor == "green" : 
+				Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
+			
+			if Info.BestInClass.Itaporanga.RelogioCor == "green" : 
+				Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
 
-		if Info.BestInClass.Fsantana.RelogioCor == "green" : 
-			Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
-		
-		if Info.BestInClass.Itu.RelogioCor == "green" : 
-			Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
-		
-		if Info.BestInClass.Guarulhos.RelogioCor == "green" : 
-			Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
-		
-		if Info.BestInClass.Itaporanga.RelogioCor == "green" : 
-			Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
+			if Info.BestInClass.Linhares.RelogioCor == "green" : 
+				Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
 
-		if Info.BestInClass.Linhares.RelogioCor == "green" : 
-			Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
 
-	Controle.TotalON = 0		
-	Controle.TotalON = Controle.TotalON + Info.Building.Status.Contage
-	Controle.TotalON = Controle.TotalON + Info.CasaCristo.Status.Contage
-	Controle.TotalON = Controle.TotalON + Info.BestInClass.Status.Contage
+	if result != 4:
+		Controle.TotalON = 0		
+		Controle.TotalON = Controle.TotalON + Info.Building.Status.Contage
+		Controle.TotalON = Controle.TotalON + Info.CasaCristo.Status.Contage
+		Controle.TotalON = Controle.TotalON + Info.BestInClass.Status.Contage
 
 
 
