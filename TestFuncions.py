@@ -126,6 +126,76 @@ def TestaBestInClass():
 	if Controle.Stop : return
 
 
+def TestaIsoRadio():
+
+
+
+	TestaFuncion(Info.IsoRadio.Santana.Empresa,
+				Info.IsoRadio.Santana.Relogio,
+				Info.IsoRadio.Santana.IP,
+				Info.IsoRadio.Santana.Porta)
+	if Controle.Stop : return
+
+	TestaFuncion(Info.IsoRadio.SaoMatheus.Empresa,
+				Info.IsoRadio.SaoMatheus.Relogio,
+				Info.IsoRadio.SaoMatheus.IP,
+				Info.IsoRadio.SaoMatheus.Porta)
+	if Controle.Stop : return
+
+	TestaFuncion(Info.IsoRadio.VilaMariana.Empresa,
+				Info.IsoRadio.VilaMariana.Relogio,
+				Info.IsoRadio.VilaMariana.IP,
+				Info.IsoRadio.VilaMariana.Porta)
+	if Controle.Stop : return
+
+
+	TestaFuncion(Info.IsoRadio.Lapa.Empresa,
+				Info.IsoRadio.Lapa.Relogio,
+				Info.IsoRadio.Lapa.IP,
+				Info.IsoRadio.Lapa.Porta)
+	if Controle.Stop : return
+
+	TestaFuncion(Info.IsoRadio.SAmaro.Empresa,
+				Info.IsoRadio.SAmaro.Relogio,
+				Info.IsoRadio.SAmaro.IP,
+				Info.IsoRadio.SAmaro.Porta)
+	if Controle.Stop : return
+
+	TestaFuncion(Info.IsoRadio.CDutra.Empresa,
+				Info.IsoRadio.CDutra.Relogio,
+				Info.IsoRadio.CDutra.IP,
+				Info.IsoRadio.CDutra.Porta)
+	if Controle.Stop : return
+
+
+	TestaFuncion(Info.IsoRadio.Tatuape.Empresa,
+				Info.IsoRadio.Tatuape.Relogio,
+				Info.IsoRadio.Tatuape.IP,
+				Info.IsoRadio.Tatuape.Porta)
+	if Controle.Stop : return
+
+	TestaFuncion(Info.IsoRadio.CLimpo.Empresa,
+				Info.IsoRadio.CLimpo.Relogio,
+				Info.IsoRadio.CLimpo.IP,
+				Info.IsoRadio.CLimpo.Porta)
+	if Controle.Stop : return
+
+	TestaFuncion(Info.IsoRadio.Ipiranga.Empresa,
+				Info.IsoRadio.Ipiranga.Relogio,
+				Info.IsoRadio.Ipiranga.IP,
+				Info.IsoRadio.Ipiranga.Porta)
+	if Controle.Stop : return
+
+	TestaFuncion(Info.IsoRadio.AnaRosa.Empresa,
+				Info.IsoRadio.AnaRosa.Relogio,
+				Info.IsoRadio.AnaRosa.IP,
+				Info.IsoRadio.AnaRosa.Porta)
+	if Controle.Stop : return
+
+	
+
+
+
 def TestaFuncion(empresa2,relogio2,ip2,port2):
 
 	testa = 4
@@ -143,7 +213,7 @@ def loopBuilding():
 	while(1):
 		TestaBuilding()
 		if Controle.Stop : break 
-		time.sleep(120)
+		time.sleep(60)
 		#TestaCasCristo()
 		#if Controle.Stop : break 
 
@@ -158,8 +228,15 @@ def loopCasaCristo():
 		
 		TestaCasCristo()
 		if Controle.Stop : break 
-		time.sleep(60)
+		time.sleep(30)
 
+def loopIsoRadio():
+
+	while(1):
+		
+		TestaIsoRadio()
+		if Controle.Stop : break 
+		
 
 
 
@@ -704,7 +781,7 @@ def AtualizaCor(empresa,relogio,result):
 				Info.BestInClass.Linhares.ModuloCor  = "pink"
 				Info.BestInClass.Linhares.RelogioCor = "pink"
 
-	if result != 4:			
+		if result != 4:			
 			Info.BestInClass.Status.Contage = 0
 
 			if Info.BestInClass.Recife.RelogioCor == "green" : 
@@ -739,6 +816,208 @@ def AtualizaCor(empresa,relogio,result):
 
 			if Info.BestInClass.Linhares.RelogioCor == "green" : 
 				Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
+
+
+
+
+
+	elif empresa == "isoradiologia":
+
+
+
+		if relogio == "santana":
+
+			if result == 1:
+				Info.IsoRadio.Santana.ModuloCor  = "red"
+				Info.IsoRadio.Santana.RelogioCor = "red"
+			elif result == 2:
+				Info.IsoRadio.Santana.ModuloCor  = "green"
+				Info.IsoRadio.Santana.RelogioCor = "red"
+			elif result == 3:
+				Info.IsoRadio.Santana.ModuloCor  = "green"
+				Info.IsoRadio.Santana.RelogioCor = "green"
+			elif result == 4:
+				Info.IsoRadio.Santana.ModuloCor  = "blue"
+				Info.IsoRadio.Santana.RelogioCor = "blue"
+			else:
+				Info.IsoRadio.Santana.ModuloCor  = "pink"
+				Info.IsoRadio.Santana.RelogioCor = "pink"
+
+
+
+		elif relogio == "saomatheus":
+
+			if result == 1:
+				Info.IsoRadio.SaoMatheus.ModuloCor  = "red"
+				Info.IsoRadio.SaoMatheus.RelogioCor = "red"
+			elif result == 2:
+				Info.IsoRadio.SaoMatheus.ModuloCor  = "green"
+				Info.IsoRadio.SaoMatheus.RelogioCor = "red"
+			elif result == 3:
+				Info.IsoRadio.SaoMatheus.ModuloCor  = "green"
+				Info.IsoRadio.SaoMatheus.RelogioCor = "green"
+			elif result == 4:
+				Info.IsoRadio.SaoMatheus.ModuloCor  = "blue"
+				Info.IsoRadio.SaoMatheus.RelogioCor = "blue"
+			else:
+				Info.IsoRadio.SaoMatheus.ModuloCor  = "pink"
+				Info.IsoRadio.SaoMatheus.RelogioCor = "pink"
+
+
+
+		elif relogio == "vilamariana":
+
+			if result == 1:
+				Info.IsoRadio.VilaMariana.ModuloCor  = "red"
+				Info.IsoRadio.VilaMariana.RelogioCor = "red"
+			elif result == 2:
+				Info.IsoRadio.VilaMariana.ModuloCor  = "green"
+				Info.IsoRadio.VilaMariana.RelogioCor = "red"
+			elif result == 3:
+				Info.IsoRadio.VilaMariana.ModuloCor  = "green"
+				Info.IsoRadio.VilaMariana.RelogioCor = "green"
+			elif result == 4:
+				Info.IsoRadio.VilaMariana.ModuloCor  = "blue"
+				Info.IsoRadio.VilaMariana.RelogioCor = "blue"
+			else:
+				Info.IsoRadio.VilaMariana.ModuloCor  = "pink"
+				Info.IsoRadio.VilaMariana.RelogioCor = "pink"
+
+
+		elif relogio == "lapa":
+
+
+			if result == 1:
+				Info.IsoRadio.Lapa.ModuloCor  = "red"
+				Info.IsoRadio.Lapa.RelogioCor = "red"
+			elif result == 2:
+				Info.IsoRadio.Lapa.ModuloCor  = "green"
+				Info.IsoRadio.Lapa.RelogioCor = "red"
+			elif result == 3:
+				Info.IsoRadio.Lapa.ModuloCor  = "green"
+				Info.IsoRadio.Lapa.RelogioCor = "green"
+			elif result == 4:
+				Info.IsoRadio.Lapa.ModuloCor  = "blue"
+				Info.IsoRadio.Lapa.RelogioCor = "blue"
+			else:
+				Info.IsoRadio.Lapa.ModuloCor  = "pink"
+				Info.IsoRadio.Lapa.RelogioCor = "pink"
+
+
+		elif relogio == "santoamaro":
+
+			if result == 1:
+				Info.IsoRadio.SAmaro.ModuloCor  = "red"
+				Info.IsoRadio.SAmaro.RelogioCor = "red"
+			elif result == 2:
+				Info.IsoRadio.SAmaro.ModuloCor  = "green"
+				Info.IsoRadio.SAmaro.RelogioCor = "red"
+			elif result == 3:
+				Info.IsoRadio.SAmaro.ModuloCor  = "green"
+				Info.IsoRadio.SAmaro.RelogioCor = "green"
+			elif result == 4:
+				Info.IsoRadio.SAmaro.ModuloCor  = "blue"
+				Info.IsoRadio.SAmaro.RelogioCor = "blue"
+			else:
+				Info.IsoRadio.SAmaro.ModuloCor  = "pink"
+				Info.IsoRadio.SAmaro.RelogioCor = "pink"
+
+
+		elif relogio == "cidadedutra":
+
+			if result == 1:
+				Info.IsoRadio.CDutra.ModuloCor  = "red"
+				Info.IsoRadio.CDutra.RelogioCor = "red"
+			elif result == 2:
+				Info.IsoRadio.CDutra.ModuloCor  = "green"
+				Info.IsoRadio.CDutra.RelogioCor = "red"
+			elif result == 3:
+				Info.IsoRadio.CDutra.ModuloCor  = "green"
+				Info.IsoRadio.CDutra.RelogioCor = "green"
+			elif result == 4:
+				Info.IsoRadio.CDutra.ModuloCor  = "blue"
+				Info.IsoRadio.CDutra.RelogioCor = "blue"
+			else:
+				Info.IsoRadio.CDutra.ModuloCor  = "pink"
+				Info.IsoRadio.CDutra.RelogioCor = "pink"
+
+
+		elif relogio == "tatuape":
+
+
+			if result == 1:
+				Info.IsoRadio.Tatuape.ModuloCor  = "red"
+				Info.IsoRadio.Tatuape.RelogioCor = "red"
+			elif result == 2:
+				Info.IsoRadio.Tatuape.ModuloCor  = "green"
+				Info.IsoRadio.Tatuape.RelogioCor = "red"
+			elif result == 3:
+				Info.IsoRadio.Tatuape.ModuloCor  = "green"
+				Info.IsoRadio.Tatuape.RelogioCor = "green"
+			elif result == 4:
+				Info.IsoRadio.Tatuape.ModuloCor  = "blue"
+				Info.IsoRadio.Tatuape.RelogioCor = "blue"
+			else:
+				Info.IsoRadio.Tatuape.ModuloCor  = "pink"
+				Info.IsoRadio.Tatuape.RelogioCor = "pink"
+
+		elif relogio == "campolimpo":
+
+
+			if result == 1:
+				Info.IsoRadio.CLimpo.ModuloCor  = "red"
+				Info.IsoRadio.CLimpo.RelogioCor = "red"
+			elif result == 2:
+				Info.IsoRadio.CLimpo.ModuloCor  = "green"
+				Info.IsoRadio.CLimpo.RelogioCor = "red"
+			elif result == 3:
+				Info.IsoRadio.CLimpo.ModuloCor  = "green"
+				Info.IsoRadio.CLimpo.RelogioCor = "green"
+			elif result == 4:
+				Info.IsoRadio.CLimpo.ModuloCor  = "blue"
+				Info.IsoRadio.CLimpo.RelogioCor = "blue"
+			else:
+				Info.IsoRadio.CLimpo.ModuloCor  = "pink"
+				Info.IsoRadio.CLimpo.RelogioCor = "pink"
+
+
+		elif relogio == "ipiranga":
+
+
+			if result == 1:
+				Info.IsoRadio.Ipiranga.ModuloCor  = "red"
+				Info.IsoRadio.Ipiranga.RelogioCor = "red"
+			elif result == 2:
+				Info.IsoRadio.Ipiranga.ModuloCor  = "green"
+				Info.IsoRadio.Ipiranga.RelogioCor = "red"
+			elif result == 3:
+				Info.IsoRadio.Ipiranga.ModuloCor  = "green"
+				Info.IsoRadio.Ipiranga.RelogioCor = "green"
+			elif result == 4:
+				Info.IsoRadio.Ipiranga.ModuloCor  = "blue"
+				Info.IsoRadio.Ipiranga.RelogioCor = "blue"
+			else:
+				Info.IsoRadio.Ipiranga.ModuloCor  = "pink"
+				Info.IsoRadio.Ipiranga.RelogioCor = "pink"
+
+		elif relogio == "anarosa":
+
+			if result == 1:
+				Info.IsoRadio.AnaRosa.ModuloCor  = "red"
+				Info.IsoRadio.AnaRosa.RelogioCor = "red"
+			elif result == 2:
+				Info.IsoRadio.AnaRosa.ModuloCor  = "green"
+				Info.IsoRadio.AnaRosa.RelogioCor = "red"
+			elif result == 3:
+				Info.IsoRadio.AnaRosa.ModuloCor  = "green"
+				Info.IsoRadio.AnaRosa.RelogioCor = "green"
+			elif result == 4:
+				Info.IsoRadio.AnaRosa.ModuloCor  = "blue"
+				Info.IsoRadio.AnaRosa.RelogioCor = "blue"
+			else:
+				Info.IsoRadio.AnaRosa.ModuloCor  = "pink"
+				Info.IsoRadio.AnaRosa.RelogioCor = "pink"
+
 
 
 	if result != 4:

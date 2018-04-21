@@ -93,9 +93,6 @@ class TelaRelogios1(object):
 		self.botaoIsoRadioSaoMatheusRelogio.grid  		(row=2, column=1, sticky = "N")
 
 
-
-
-
 		self.botaoIsoRadioVMariana                    	               = Button(self.ContainerIsoRadio)
 		self.botaoIsoRadioVMariana              		["text"]       = "Vila Mariana"
 		self.botaoIsoRadioVMariana              		["background"] = Info.IsoRadio.SaoMatheus.ModuloCor
@@ -264,6 +261,7 @@ class TelaRelogios1(object):
 		self.botaoIsoRadioIpirangaRelogio       		["width"]      = 1
 		self.botaoIsoRadioIpirangaRelogio       		["height"]     = 1
 		self.botaoIsoRadioIpirangaRelogio.grid  		(row=9, column=1, sticky = "N")
+
 
 
 
@@ -2012,6 +2010,7 @@ class TelaRelogios1(object):
 		self.botaoCasaCristoVMatildeRelogio.grid   (row=5,column=1,sticky = "N")
 
 
+
 	def Create_Building(self):
 
 
@@ -2403,12 +2402,62 @@ class TelaRelogios1(object):
 			self.msgBestInClassCont.configure 							(text=str(Info.BestInClass.Status.Contage)+"/"+
 																		str(Info.BestInClass.Status.TotalRelogios))
 
+		elif empresa == "isoradiologia":
+			
+
+			
+			if relogio == "santana":
+
+				self.botaoIsoRadioSantana.configure						(bg=Info.IsoRadio.Santana.ModuloCor)
+				self.botaoIsoRadioSantanaRelogio.configure				(bg=Info.IsoRadio.Santana.RelogioCor)
+				
+
+			elif relogio == "saomatheus":
+
+				self.botaoIsoRadioSaoMatheus.configure					(bg=Info.IsoRadio.SaoMatheus.ModuloCor)
+				self.botaoIsoRadioSaoMatheusRelogio.configure			(bg=Info.IsoRadio.SaoMatheus.RelogioCor)
+
+			elif relogio == "vilamariana":
+
+				self.botaoIsoRadioVMariana.configure					(bg=Info.IsoRadio.VilaMariana.ModuloCor)
+				self.botaoIsoRadioVMarianaRelogio.configure				(bg=Info.IsoRadio.VilaMariana.RelogioCor)
+
+			elif relogio == "lapa":
+
+				self.botaoIsoRadioLapa.configure						(bg=Info.IsoRadio.Lapa.ModuloCor)
+				self.botaoIsoRadioLapaRelogio.configure					(bg=Info.IsoRadio.Lapa.RelogioCor)
 
 
+			elif relogio == "santoamaro":
+
+				self.botaoIsoRadioSAmaro.configure						(bg=Info.IsoRadio.SAmaro.ModuloCor)
+				self.botaoIsoRadioSAmaroRelogio.configure				(bg=Info.IsoRadio.SAmaro.RelogioCor)
 
 
-		
+			elif relogio == "cidadedutra":
+
+				self.botaoIsoRadioCDutra.configure						(bg=Info.IsoRadio.CDutra.ModuloCor)
+				self.botaoIsoRadioCDutraRelogio.configure				(bg=Info.IsoRadio.CDutra.RelogioCor)
+
+			elif relogio == "tatuape":
+
+				self.botaoIsoRadioTatuape.configure						(bg=Info.IsoRadio.Tatuape.ModuloCor)
+				self.botaoIsoRadioTatuapeRelogio.configure				(bg=Info.IsoRadio.Tatuape.RelogioCor)
+
+			elif relogio == "campolimpo":
+
+				self.botaoIsoRadioCLimpo.configure						(bg=Info.IsoRadio.CLimpo.ModuloCor)
+				self.botaoIsoRadioCLimpoRelogio.configure				(bg=Info.IsoRadio.CLimpo.RelogioCor)
 
 
+			elif relogio == "ipiranga":
+
+				self.botaoIsoRadioIpiranga.configure					(bg=Info.IsoRadio.Ipiranga.ModuloCor)
+				self.botaoIsoRadioIpirangaRelogio.configure				(bg=Info.IsoRadio.Ipiranga.RelogioCor)
+
+			elif relogio == "anarosa":
+
+				self.botaoIsoRadioAnaRosa.configure						(bg=Info.IsoRadio.AnaRosa.ModuloCor)
+				self.botaoIsoRadioAnaRosaRelogio.configure				(bg=Info.IsoRadio.AnaRosa.RelogioCor)
 
 

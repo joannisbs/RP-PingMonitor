@@ -206,13 +206,13 @@ def leBanco():
 		elif empresa_lido == "bestinclass":
 			if relogio_lido == "recife":
 
-				Info.BestInClass.Recife.Empresa            = empresa_lido
-				Info.BestInClass.Recife.Relogio            = relogio_lido
-				Info.BestInClass.Recife.IP                 = ip_lido
-				Info.BestInClass.Recife.Porta              = port_lido
-				Info.BestInClass.Recife.NumeroRep          = NumeroReP_Lido
-				Info.BestInClass.Recife.Responsavel        = Responsavel_Lido
-				Info.BestInClass.Recife.Telefone           = Telefone_Lido
+				Info.BestInClass.Recife.Empresa            	= empresa_lido
+				Info.BestInClass.Recife.Relogio            	= relogio_lido
+				Info.BestInClass.Recife.IP                 	= ip_lido
+				Info.BestInClass.Recife.Porta              	= port_lido
+				Info.BestInClass.Recife.NumeroRep          	= NumeroReP_Lido
+				Info.BestInClass.Recife.Responsavel        	= Responsavel_Lido
+				Info.BestInClass.Recife.Telefone           	= Telefone_Lido
 
 
 			elif relogio_lido == "itaquera":
@@ -269,8 +269,8 @@ def leBanco():
 
 			elif relogio_lido == "fsant":
 
-				Info.BestInClass.Fsantana.Empresa               = empresa_lido
-				Info.BestInClass.Fsantana.Relogio               = relogio_lido
+				Info.BestInClass.Fsantana.Empresa          	= empresa_lido
+				Info.BestInClass.Fsantana.Relogio           	    = relogio_lido
 				Info.BestInClass.Fsantana.IP                    = ip_lido
 				Info.BestInClass.Fsantana.Porta                 = port_lido
 				Info.BestInClass.Fsantana.NumeroRep             = NumeroReP_Lido
@@ -319,3 +319,110 @@ def leBanco():
 				Info.BestInClass.Linhares.NumeroRep         = NumeroReP_Lido
 				Info.BestInClass.Linhares.Responsavel       = Responsavel_Lido
 				Info.BestInClass.Linhares.Telefone          = Telefone_Lido
+
+
+
+		elif empresa_lido == "isoradiologia":
+
+			if relogio_lido == "santana":
+
+				Info.IsoRadio.Santana.Empresa            = empresa_lido
+				Info.IsoRadio.Santana.Relogio            = relogio_lido
+				Info.IsoRadio.Santana.IP                 = ip_lido
+				Info.IsoRadio.Santana.Porta              = port_lido
+				Info.IsoRadio.Santana.NumeroRep          = NumeroReP_Lido
+				Info.IsoRadio.Santana.Responsavel        = Responsavel_Lido
+				Info.IsoRadio.Santana.Telefone           = Telefone_Lido
+
+			elif relogio_lido == "saomatheus":
+
+				Info.IsoRadio.SaoMatheus.Empresa            = empresa_lido
+				Info.IsoRadio.SaoMatheus.Relogio            = relogio_lido
+				Info.IsoRadio.SaoMatheus.IP                 = ip_lido
+				Info.IsoRadio.SaoMatheus.Porta              = port_lido
+				Info.IsoRadio.SaoMatheus.NumeroRep          = NumeroReP_Lido
+				Info.IsoRadio.SaoMatheus.Responsavel        = Responsavel_Lido
+				Info.IsoRadio.SaoMatheus.Telefone           = Telefone_Lido
+
+			elif relogio_lido == "vilamariana":
+
+				Info.IsoRadio.VilaMariana.Empresa            = empresa_lido
+				Info.IsoRadio.VilaMariana.Relogio            = relogio_lido
+				Info.IsoRadio.VilaMariana.IP                 = ip_lido
+				Info.IsoRadio.VilaMariana.Porta              = port_lido
+				Info.IsoRadio.VilaMariana.NumeroRep          = NumeroReP_Lido
+				Info.IsoRadio.VilaMariana.Responsavel        = Responsavel_Lido
+				Info.IsoRadio.VilaMariana.Telefone           = Telefone_Lido
+
+			elif relogio_lido == "lapa":
+
+				Info.IsoRadio.Lapa.Empresa            = empresa_lido
+				Info.IsoRadio.Lapa.Relogio            = relogio_lido
+				Info.IsoRadio.Lapa.IP                 = ip_lido
+				Info.IsoRadio.Lapa.Porta              = port_lido
+				Info.IsoRadio.Lapa.NumeroRep          = NumeroReP_Lido
+				Info.IsoRadio.Lapa.Responsavel        = Responsavel_Lido
+				Info.IsoRadio.Lapa.Telefone           = Telefone_Lido
+
+			elif relogio_lido == "santoamaro":
+
+				Info.IsoRadio.SAmaro.Empresa            = empresa_lido
+				Info.IsoRadio.SAmaro.Relogio            = relogio_lido
+				Info.IsoRadio.SAmaro.IP                 = ip_lido
+				Info.IsoRadio.SAmaro.Porta              = port_lido
+				Info.IsoRadio.SAmaro.NumeroRep          = NumeroReP_Lido
+				Info.IsoRadio.SAmaro.Responsavel        = Responsavel_Lido
+				Info.IsoRadio.SAmaro.Telefone           = Telefone_Lido
+
+
+			elif relogio_lido == "cidadedutra":
+
+				Info.IsoRadio.CDutra.Empresa            = empresa_lido
+				Info.IsoRadio.CDutra.Relogio            = relogio_lido
+				Info.IsoRadio.CDutra.IP                 = ip_lido
+				Info.IsoRadio.CDutra.Porta              = port_lido
+				Info.IsoRadio.CDutra.NumeroRep          = NumeroReP_Lido
+				Info.IsoRadio.CDutra.Responsavel        = Responsavel_Lido
+				Info.IsoRadio.CDutra.Telefone           = Telefone_Lido
+
+			elif relogio_lido == "tatuape":
+
+				Info.IsoRadio.Tatuape.Empresa            = empresa_lido
+				Info.IsoRadio.Tatuape.Relogio            = relogio_lido
+				Info.IsoRadio.Tatuape.IP                 = ip_lido
+				Info.IsoRadio.Tatuape.Porta              = port_lido
+				Info.IsoRadio.Tatuape.NumeroRep          = NumeroReP_Lido
+				Info.IsoRadio.Tatuape.Responsavel        = Responsavel_Lido
+				Info.IsoRadio.Tatuape.Telefone           = Telefone_Lido
+
+			elif relogio_lido == "campolimpo":
+
+				Info.IsoRadio.CLimpo.Empresa            = empresa_lido
+				Info.IsoRadio.CLimpo.Relogio            = relogio_lido
+				Info.IsoRadio.CLimpo.IP                 = ip_lido
+				Info.IsoRadio.CLimpo.Porta              = port_lido
+				Info.IsoRadio.CLimpo.NumeroRep          = NumeroReP_Lido
+				Info.IsoRadio.CLimpo.Responsavel        = Responsavel_Lido
+				Info.IsoRadio.CLimpo.Telefone           = Telefone_Lido
+
+			elif relogio_lido == "ipiranga":
+
+				Info.IsoRadio.Ipiranga.Empresa            = empresa_lido
+				Info.IsoRadio.Ipiranga.Relogio            = relogio_lido
+				Info.IsoRadio.Ipiranga.IP                 = ip_lido
+				Info.IsoRadio.Ipiranga.Porta              = port_lido
+				Info.IsoRadio.Ipiranga.NumeroRep          = NumeroReP_Lido
+				Info.IsoRadio.Ipiranga.Responsavel        = Responsavel_Lido
+				Info.IsoRadio.Ipiranga.Telefone           = Telefone_Lido
+
+
+
+			elif relogio_lido == "anarosa":
+
+				Info.IsoRadio.AnaRosa.Empresa            = empresa_lido
+				Info.IsoRadio.AnaRosa.Relogio            = relogio_lido
+				Info.IsoRadio.AnaRosa.IP                 = ip_lido
+				Info.IsoRadio.AnaRosa.Porta              = port_lido
+				Info.IsoRadio.AnaRosa.NumeroRep          = NumeroReP_Lido
+				Info.IsoRadio.AnaRosa.Responsavel        = Responsavel_Lido
+				Info.IsoRadio.AnaRosa.Telefone           = Telefone_Lido
