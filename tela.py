@@ -6,7 +6,7 @@ from Var import *
 from Thread import *
 from TestFuncions import *
 from TelaMonitoramento import *
-
+from BancoELogs import *
 
 
 
