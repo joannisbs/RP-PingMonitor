@@ -1,7 +1,7 @@
 import socket
 import os
 import shutil
-
+import time
 
 from Var import *
 
@@ -138,20 +138,27 @@ def TestaFuncion(empresa2,relogio2,ip2,port2):
 	Telas.GUI_Tela1 .update(empresa2,relogio2)
 
 
-def loop0():
+def loopBuilding():
 
 	while(1):
 		TestaBuilding()
 		if Controle.Stop : break 
-		TestaCasCristo()
-		if Controle.Stop : break 
+		time.sleep(120)
+		#TestaCasCristo()
+		#if Controle.Stop : break 
 
-def loop1():
+def loopBestInClass():
 	while(1):
 		TestaBestInClass()
 		if Controle.Stop : break 
 
+def loopCasaCristo():
 
+	while(1):
+		
+		TestaCasCristo()
+		if Controle.Stop : break 
+		time.sleep(60)
 
 def leBanco():
 

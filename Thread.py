@@ -3,15 +3,20 @@ import threading
 from TestFuncions import *
 
 
-class Threadloop0(threading.Thread):
+class ThreadloopBuilding(threading.Thread):
 	def __init__(self):
 		threading.Thread.__init__(self)
 	def run(self):
-		loop0()
+		loopBuilding()
 
-class Threadloop1(threading.Thread):
+class ThreadloopBestInClass(threading.Thread):
 	def __init__(self):
 		threading.Thread.__init__(self)
 	def run(self):
-		loop1()
+		loopBestInClass()
 
+class ThreadloopCasaCristo(threading.Thread):
+	def __init__(self):
+		threading.Thread.__init__(self)
+	def run(self):
+		loopCasaCristo()
