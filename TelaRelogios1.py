@@ -5,7 +5,7 @@ from Tkinter import *
 
 from Thread import *
 from Var import *
-
+from Popups import *
 
 
 class TelaRelogios1(object):
