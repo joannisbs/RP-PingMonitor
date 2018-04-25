@@ -1082,3 +1082,6 @@ class Telas(object):
 	GUI_Tela1 							= "null"
 	GUI_Tela2							= "null"
 	GUI_Monitor							= "null"
+
+class MODER:
+	buton = 0

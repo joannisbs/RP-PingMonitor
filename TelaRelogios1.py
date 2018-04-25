@@ -44,7 +44,9 @@ class TelaRelogios1(object):
 		self.msgIsoRad 									["height"] = 1
 		self.msgIsoRad.grid 							(row=0,column=0,sticky = "N")
 
-		self.msgIsoRadCont 								= Label (self.ContainerIsoRadio,text = "0/0")
+
+		self.msgIsoRadCont 								= Label (self.ContainerIsoRadio,text = str(Info.IsoRadio.Status.Contage)+"/"
+																							+str(Info.IsoRadio.Status.TotalRelogios))
 		self.msgIsoRadCont 								["height"] = 1
 		self.msgIsoRadCont.grid 						(row=0,column=1,sticky = "N")
 
@@ -1589,7 +1591,8 @@ class TelaRelogios1(object):
 	def Create_BestInClass(self):
 
 		self.msgBestInClass = Label (self.ContainerBestInClass,text = "Best In Class")
-		self.msgBestInClassCont = Label (self.ContainerBestInClass,text = "5/11")
+		self.msgBestInClassCont = Label (self.ContainerBestInClass,text = str(Info.BestInClass.Status.Contage)+"/"
+															+str(Info.BestInClass.Status.TotalRelogios))
 
 		self.msgBestInClass.grid                   (row=0,column=0,sticky = "N")
 		self.msgBestInClassCont.grid             (row=0,column=1,sticky = "N")
@@ -1889,7 +1892,8 @@ class TelaRelogios1(object):
 
 
 		self.msgCasaCristo = Label (self.ContainerCasaCristo,text = "Casa do Cristo")
-		self.msgCasaCristoContage = Label (self.ContainerCasaCristo,text = str(Info.CasaCristo.Status.Contage)+"/5")
+		self.msgCasaCristoContage = Label (self.ContainerCasaCristo,text = str(Info.CasaCristo.Status.Contage)+"/"+
+																			str(Info.CasaCristo.Status.TotalRelogios))
 
 		self.msgCasaCristo.grid(row=0,column=0, sticky = "N")
 		self.msgCasaCristoContage.grid(row=0,column=1, sticky = "N")
@@ -2460,4 +2464,6 @@ class TelaRelogios1(object):
 				self.botaoIsoRadioAnaRosa.configure						(bg=Info.IsoRadio.AnaRosa.ModuloCor)
 				self.botaoIsoRadioAnaRosaRelogio.configure				(bg=Info.IsoRadio.AnaRosa.RelogioCor)
 
+			self.msgIsoRadCont.configure	  						(text=str(Info.IsoRadio.Status.Contage)+"/"+
+																	str(Info.IsoRadio.Status.TotalRelogios))
 
