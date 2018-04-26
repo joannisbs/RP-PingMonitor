@@ -391,6 +391,7 @@ class TelaRelogios1(object):
 		self.botaoMilenioErvasDiademaRelogio.grid      (row=4,column=1,sticky = "N")
 
 
+
 	def Create_Gravex(self):
 
 
@@ -500,6 +501,7 @@ class TelaRelogios1(object):
 		self.botaoGravexDantChiniRelogio.grid       (row=4,column=1,sticky = "N")
 
 
+
 	def Create_Laser(self):
 		
 
@@ -554,6 +556,7 @@ class TelaRelogios1(object):
 
 		self.botaoInstituto.grid                    (row=2,column=0,sticky = "N")
 		self.botaoRInstituto.grid                   (row=2,column=1,sticky = "N")
+
 
 
 	def Create_Predman(self):
@@ -958,6 +961,7 @@ class TelaRelogios1(object):
 		self.botaoPredmanVilaVelhaRelogio.grid    (row=17,column=1,sticky = "N")
 
 
+
 	def Create_Uniman(self):
 
 
@@ -1060,6 +1064,7 @@ class TelaRelogios1(object):
 		self.botaoUnimanSekurityRelogio.grid        (row=4,column=1,sticky = "N")
 
 
+
 	def Create_Tarek(self):
 
 		self.msgTarek = Label (self.ContainerTarek,text = "Grupo Tarek")
@@ -1157,6 +1162,7 @@ class TelaRelogios1(object):
 		self.botaoTalamiRelogio                  ["width"]      = 1
 		self.botaoTalamiRelogio                  ["height"]     = 1
 		self.botaoTalamiRelogio.grid             (row=4,column=1,sticky = "N")
+
 
 
 	def Create_Lotten(self):
@@ -1586,6 +1592,7 @@ class TelaRelogios1(object):
 		self.botaoLottenGuarulhosRelogio.grid   (row=18,column=1,sticky = "N")
 
 
+
 	def Create_BestInClass(self):
 
 		self.msgBestInClass = Label (self.ContainerBestInClass,text = "Best In Class")
@@ -1884,6 +1891,7 @@ class TelaRelogios1(object):
 
 		self.botaoBestInClassLinhares.grid          (row=11,column=0,sticky = "N")
 		self.botaoBestInClassLinharesRelogio.grid   (row=11,column=1,sticky = "N")
+
 
 
 	def Create_CasaCristo(self):
@@ -2230,6 +2238,19 @@ class TelaRelogios1(object):
 		self.ContainerColuna11.grid                (row=0, column=11,pady=5, padx=1, columnspan=1, sticky="N")
 
 		self.ContainerUniman.grid                 (row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
+
+
+
+	def updateLaser(self):
+
+			
+		self.botaoAcademia.configure                    		(bg=Info.Laser.Academia.ModuloCor)
+		self.botaoRAcademia.configure                    		(bg=Info.Laser.Academia.RelogioCor)
+
+
+		self.botaoInstituto.configure                    		(bg=Info.Laser.Instituto.ModuloCor)
+		self.botaoRInstituto.configure                   		(bg=Info.Laser.Instituto.RelogioCor)
+
 
 
 

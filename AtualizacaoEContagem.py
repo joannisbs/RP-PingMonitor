@@ -82,8 +82,7 @@ def AtualizaCor(empresa,relogio,result):
 		print "porrinha" + str(result)
 
 		if relogio == "academia":
-			print "porrinhaTOTOTOTOTOTOTOTT" + str(result)
-			
+		
 			if result == 1:
 				Info.Laser.Academia.ModuloCor  = "red"
 				Info.Laser.Academia.RelogioCor = "red"
@@ -95,14 +94,13 @@ def AtualizaCor(empresa,relogio,result):
 				Info.Laser.Academia.RelogioCor = "green"
 
 			elif result == 4:
-				print "PORRAAAAAAAAAA"
 				Info.Laser.Academia.ModuloCor  = "blue"
 				Info.Laser.Academia.RelogioCor = "blue"
-				Telas.GUI_Tela1 .update("laser","academia")
+
 			else:
 				Info.Laser.Academia.ModuloCor  = "pink"
 				Info.Laser.Academia.RelogioCor = "pink"
-
+			Telas.GUI_Tela1 .updateLaser()
 
 		elif relogio == "instituto":
 
@@ -119,10 +117,12 @@ def AtualizaCor(empresa,relogio,result):
 			elif result == 4:
 				Info.Laser.Instituto.ModuloCor  = "blue"
 				Info.Laser.Instituto.RelogioCor = "blue"
+
 			else:
 				Info.Laser.Instituto.ModuloCor  = "pink"
 				Info.Laser.Instituto.RelogioCor = "pink"
 
+			Telas.GUI_Tela1 .updateLaser()
 
 		
 
