@@ -1,6 +1,7 @@
 
 from Var import *
 
+
 def AtualizaCor(empresa,relogio,result):
 
 	######################################################### BUILDING #################################################
@@ -76,7 +77,54 @@ def AtualizaCor(empresa,relogio,result):
 			if Info.Building.RioJaneiro.RelogioCor == "green" : 
 					Info.Building.Status.Contage = Info.Building.Status.Contage +1
 			
+	if empresa == "laser":
 
+		print "porrinha" + str(result)
+
+		if relogio == "academia":
+			print "porrinhaTOTOTOTOTOTOTOTT" + str(result)
+			
+			if result == 1:
+				Info.Laser.Academia.ModuloCor  = "red"
+				Info.Laser.Academia.RelogioCor = "red"
+			elif result == 2:
+				Info.Laser.Academia.ModuloCor  = "green"
+				Info.Laser.Academia.RelogioCor = "red"
+			elif result == 3:
+				Info.Laser.Academia.ModuloCor  = "green"
+				Info.Laser.Academia.RelogioCor = "green"
+
+			elif result == 4:
+				print "PORRAAAAAAAAAA"
+				Info.Laser.Academia.ModuloCor  = "blue"
+				Info.Laser.Academia.RelogioCor = "blue"
+				Telas.GUI_Tela1 .update("laser","academia")
+			else:
+				Info.Laser.Academia.ModuloCor  = "pink"
+				Info.Laser.Academia.RelogioCor = "pink"
+
+
+		elif relogio == "instituto":
+
+
+			if result == 1:
+				Info.Laser.Instituto.ModuloCor  = "red"
+				Info.Laser.Instituto.RelogioCor = "red"
+			elif result == 2:
+				Info.Laser.Instituto.ModuloCor  = "green"
+				Info.Laser.Instituto.RelogioCor = "red"
+			elif result == 3:
+				Info.Laser.Instituto.ModuloCor  = "green"
+				Info.Laser.Instituto.RelogioCor = "green"
+			elif result == 4:
+				Info.Laser.Instituto.ModuloCor  = "blue"
+				Info.Laser.Instituto.RelogioCor = "blue"
+			else:
+				Info.Laser.Instituto.ModuloCor  = "pink"
+				Info.Laser.Instituto.RelogioCor = "pink"
+
+
+		
 
 	######################################################### GRAVEX ###################################################
 
@@ -152,42 +200,7 @@ def AtualizaCor(empresa,relogio,result):
 				Info.Gravex.DantChini.ModuloCor  = "pink"
 				Info.Gravex.DantChini.RelogioCor = "pink"
 
-	########################################################## LASER ###################################################
 
-	elif empresa == "laser":
-		if relogio == "instituto":
-			if result == 1:
-				Info.Laser.Instituto.ModuloCor  = "red"
-				Info.Laser.Instituto.RelogioCor = "red"
-			elif result == 2:
-				Info.Laser.Instituto.ModuloCor  = "green"
-				Info.Laser.Instituto.RelogioCor = "red"
-			elif result == 3:
-				Info.Laser.Instituto.ModuloCor  = "green"
-				Info.Laser.Instituto.RelogioCor = "green"
-			elif result == 4:
-				Info.Laser.Instituto.ModuloCor  = "blue"
-				Info.Laser.Instituto.RelogioCor = "blue"
-			else:
-				Info.Laser.Instituto.ModuloCor  = "pink"
-				Info.Laser.Instituto.RelogioCor = "pink"
-
-		elif relogio == "academia":
-			if result == 1:
-				Info.Laser.Academia.ModuloCor  = "red"
-				Info.Laser.Academia.RelogioCor = "red"
-			elif result == 2:
-				Info.Laser.Academia.ModuloCor  = "green"
-				Info.Laser.Academia.RelogioCor = "red"
-			elif result == 3:
-				Info.Laser.Academia.ModuloCor  = "green"
-				Info.Laser.Academia.RelogioCor = "green"
-			elif result == 4:
-				Info.Laser.Academia.ModuloCor  = "blue"
-				Info.Laser.Academia.RelogioCor = "blue"
-			else:
-				Info.Laser.Academia.ModuloCor  = "pink"
-				Info.Laser.Academia.RelogioCor = "pink"
 
 	######################################################### CASA CRISTO ##############################################
 
@@ -549,6 +562,7 @@ def AtualizaCor(empresa,relogio,result):
 				Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
 
 
+			
 
 
 
@@ -784,8 +798,9 @@ def AtualizaCor(empresa,relogio,result):
 
 
 	if result != 4:
-		Controle.TotalON = 0		
-		Controle.TotalON = Controle.TotalON + Info.Building.Status.Contage
+		Controle.TotalON = 0	
+
+		Controle.TotalON =  Info.Building.Status.Contage
 		Controle.TotalON = Controle.TotalON + Info.CasaCristo.Status.Contage
 		Controle.TotalON = Controle.TotalON + Info.BestInClass.Status.Contage
 		Controle.TotalON = Controle.TotalON + Info.IsoRadio.Status.Contage

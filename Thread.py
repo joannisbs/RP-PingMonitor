@@ -29,6 +29,17 @@ class ThreadloopIsoRadio(threading.Thread):
 	def run(self):
 		loopIsoRadio()
 
+class ThreadloopLaser(threading.Thread):
+	def __init__(self):
+		threading.Thread.__init__(self)
+	def run(self):
+		loopLaser()
+
+
+def loopLaser():
+	while(1):
+		TestaLaser()
+		if Controle.Stop : break 
 
 
 def loopBuilding():

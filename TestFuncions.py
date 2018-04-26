@@ -126,6 +126,23 @@ def TestaBestInClass():
 	if Controle.Stop : return
 
 
+
+def TestaLaser():
+
+	TestaFuncion2(Info.Laser.Academia.Empresa,
+				Info.Laser.Academia.Relogio,
+				Info.Laser.Academia.IP,
+				Info.Laser.Academia.Porta)
+	if Controle.Stop : return
+
+	TestaFuncion2(Info.Laser.Instituto.Empresa,
+				Info.Laser.Instituto.Relogio,
+				Info.Laser.Instituto.IP,
+				Info.Laser.Instituto.Porta)
+	if Controle.Stop : return
+
+
+
 def TestaIsoRadio():
 
 
@@ -197,6 +214,26 @@ def TestaIsoRadio():
 
 
 def TestaFuncion(empresa2,relogio2,ip2,port2):
+
+	testa = 4
+
+	AtualizaCor(empresa2,relogio2,int(testa))
+	Telas.GUI_Tela1 .update(empresa2,relogio2)
+	
+	Telas.GUI_Monitor.update()
+
+
+	testa = TestaPorta(ip2,port2) 
+	AtualizaCor(empresa2,relogio2,int(testa))
+	Telas.GUI_Tela1 .update(empresa2,relogio2)
+	
+
+	Telas.GUI_Monitor.update()
+
+
+
+
+def TestaFuncion2(empresa2,relogio2,ip2,port2):
 
 	testa = 4
 

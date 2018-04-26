@@ -20,6 +20,7 @@ leBanco()
 
 def on_closing():
 	if messagebox.askokcancel("Quit","Quer realmente sair?"):
+		Controle.Stop = True
 		Telas.root.destroy()
 
 

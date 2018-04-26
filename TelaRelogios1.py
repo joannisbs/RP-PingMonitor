@@ -533,8 +533,6 @@ class TelaRelogios1(object):
 		self.botaoRAcademia.grid                    (row=1,column=1,sticky = "N")
 
 
-
-
 		self.botaoInstituto                                        = Button(self.ContainerLaser)
 		self.botaoInstituto                         ["text"]       = "Instituto"
 		self.botaoInstituto                         ["background"] = Info.Laser.Instituto.ModuloCor
@@ -2238,6 +2236,21 @@ class TelaRelogios1(object):
 
 	def update(self,empresa,relogio):
 
+
+		if empresa == "laser":
+			
+			if relogio == "instituto":
+			
+				self.botaoAcademia.configure                    		(bg=Info.Laser.Academia.ModuloCor)
+				self.botaoRAcademia.configure                    		(bg=Info.Laser.Academia.RelogioCor)
+
+
+			if relogio == "academia":
+
+				self.botaoInstituto.configure                    		(bg=Info.Laser.Instituto.ModuloCor)
+				self.botaoRInstituto.configure                   		(bg=Info.Laser.Instituto.RelogioCor)
+
+
 		if empresa == "building":
 
 			if relogio == "allianz":	
@@ -2290,18 +2303,6 @@ class TelaRelogios1(object):
 
 
 
-		elif empresa == "laser":
-			
-			if relogio == "instituto":
-			
-				self.botaoAcademia.configure                    		(bg=Info.Laser.Academia.ModuloCor)
-				self.botaoRAcademia.configure                    		(bg=Info.Laser.Academia.RelogioCor)
-
-
-			if relogio == "academia":
-
-				self.botaoInstituto.configure                    		(bg=Info.Laser.Instituto.ModuloCor)
-				self.botaoRInstituto.configure                   		(bg=Info.Laser.Instituto.RelogioCor)
 
 
 
@@ -2466,4 +2467,3 @@ class TelaRelogios1(object):
 
 			self.msgIsoRadCont.configure	  						(text=str(Info.IsoRadio.Status.Contage)+"/"+
 																	str(Info.IsoRadio.Status.TotalRelogios))
-

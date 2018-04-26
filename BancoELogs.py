@@ -426,3 +426,6 @@ def leBanco():
 				Info.IsoRadio.AnaRosa.NumeroRep          = NumeroReP_Lido
 				Info.IsoRadio.AnaRosa.Responsavel        = Responsavel_Lido
 				Info.IsoRadio.AnaRosa.Telefone           = Telefone_Lido
+
+
+
