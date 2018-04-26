@@ -8,24 +8,39 @@ from TestFuncions import *
 from TelaMonitoramento import *
 from BancoELogs import *
 from AtualizacaoEContagem import *
-
+import time
 
 
 
 Contagem()
 leBanco()
 
-Relo1 = Tk()
-Relo1.title("Monitor Relogios 1")
-Telas.GUI_Tela1 = TelaRelogios1(Relo1)
 
-Monitor = Tk()
-Monitor.title("Monitoramento e Controle")
+class Iniciooo:
+	def __init__(self,root):
+		lable1 = Label(teste, text = "Real Ponto" )
+		lable1.grid(row=0,pady=5,padx=20)
+		Relo1 = Toplevel(master=None)
+		Relo1.title("Monitor Relogios 1")
+		Telas.GUI_Tela1 = TelaRelogios1(Relo1)
 
-Telas.GUI_Monitor = TelaMonitor(Monitor)
+		Monitor = Toplevel(master=None)
+		Monitor.title("Monitoramento e Controle")
 
-Relo1.mainloop()
-Monitor.mainloop()
+		Telas.GUI_Monitor = TelaMonitor(Monitor)
+
+		#self.destroy()
+
+teste = Tk()
+
+Iniciooo(teste)
+
+
+
+
+
+#Relo1.mainloop()
+teste.mainloop()
 
 
 
