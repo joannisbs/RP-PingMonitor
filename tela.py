@@ -1,6 +1,7 @@
 from Tkinter import *
 
 
+
 from TelaRelogios1 import*
 from Var import *
 from Thread import *
@@ -18,6 +19,10 @@ leBanco()
 
 class Iniciooo:
 	def __init__(self,root):
+
+
+
+
 		lable1 = Label(teste, text = "Real Ponto" )
 		lable1.grid(row=0,pady=5,padx=20)
 		Relo1 = Toplevel(master=None)
@@ -28,6 +33,7 @@ class Iniciooo:
 		Monitor.title("Monitoramento e Controle")
 
 		Telas.GUI_Monitor = TelaMonitor(Monitor)
+	
 
 		#self.destroy()
 
@@ -35,7 +41,7 @@ teste = Tk()
 
 Iniciooo(teste)
 
-
+teste.wm_withdraw()
 
 
 
