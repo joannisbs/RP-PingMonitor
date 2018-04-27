@@ -2,80 +2,88 @@
 from Var import *
 
 
+
+def AtualizaBuilding(relogio,result):
+
+	if relogio == "allianz":
+			
+		if result == 1:
+			Info.Building.Allianz.ModuloCor  = "red"
+			Info.Building.Allianz.RelogioCor = "red"
+		elif result == 2:
+			Info.Building.Allianz.ModuloCor  = "green"
+			Info.Building.Allianz.RelogioCor = "red"
+		elif result == 3:
+			Info.Building.Allianz.ModuloCor  = "green"
+			Info.Building.Allianz.RelogioCor = "green"
+		elif result == 4:
+			Info.Building.Allianz.ModuloCor  = "blue"
+			Info.Building.Allianz.RelogioCor = "blue"
+		else:
+			Info.Building.Allianz.ModuloCor  = "pink"
+			Info.Building.Allianz.RelogioCor = "pink"
+
+
+
+
+	elif relogio == "wtorre":
+
+
+		if result == 1:
+			Info.Building.WTorre.ModuloCor  = "red"
+			Info.Building.WTorre.RelogioCor = "red"
+		elif result == 2:
+			Info.Building.WTorre.ModuloCor  = "green"
+			Info.Building.WTorre.RelogioCor = "red"
+		elif result == 3:
+			Info.Building.WTorre.ModuloCor  = "green"
+			Info.Building.WTorre.RelogioCor = "green"
+		elif result == 4:
+			Info.Building.WTorre.ModuloCor  = "blue"
+			Info.Building.WTorre.RelogioCor = "blue"
+		else:
+			Info.Building.WTorre.ModuloCor  = "pink"
+			Info.Building.WTorre.RelogioCor = "pink"
+
+
+
+	elif relogio == "riojaneiro":
+
+		if result == 1:
+			Info.Building.RioJaneiro.ModuloCor  = "red"
+			Info.Building.RioJaneiro.RelogioCor = "red"
+		elif result == 2:
+			Info.Building.RioJaneiro.ModuloCor  = "green"
+			Info.Building.RioJaneiro.RelogioCor = "red"
+		elif result == 3:
+			Info.Building.RioJaneiro.ModuloCor  = "green"
+			Info.Building.RioJaneiro.RelogioCor = "green"
+		elif result == 4:
+			Info.Building.RioJaneiro.ModuloCor  = "blue"
+			Info.Building.RioJaneiro.RelogioCor = "blue"
+		else:
+			Info.Building.RioJaneiro.ModuloCor  = "pink"
+			Info.Building.RioJaneiro.RelogioCor = "pink"
+	
+	if result != 4:
+		Info.Building.Status.Contage = 0
+		if Info.Building.Allianz.RelogioCor == "green" : 
+				Info.Building.Status.Contage = Info.Building.Status.Contage +1
+		if Info.Building.WTorre.RelogioCor == "green" : 
+				Info.Building.Status.Contage = Info.Building.Status.Contage +1
+		if Info.Building.RioJaneiro.RelogioCor == "green" : 
+				Info.Building.Status.Contage = Info.Building.Status.Contage +1
+
+
+
+
 def AtualizaCor(empresa,relogio,result):
 
 	######################################################### BUILDING #################################################
 
 	if empresa == "building":
 
-		if relogio == "allianz":
-			
-			if result == 1:
-				Info.Building.Allianz.ModuloCor  = "red"
-				Info.Building.Allianz.RelogioCor = "red"
-			elif result == 2:
-				Info.Building.Allianz.ModuloCor  = "green"
-				Info.Building.Allianz.RelogioCor = "red"
-			elif result == 3:
-				Info.Building.Allianz.ModuloCor  = "green"
-				Info.Building.Allianz.RelogioCor = "green"
-			elif result == 4:
-				Info.Building.Allianz.ModuloCor  = "blue"
-				Info.Building.Allianz.RelogioCor = "blue"
-			else:
-				Info.Building.Allianz.ModuloCor  = "pink"
-				Info.Building.Allianz.RelogioCor = "pink"
-
-
-
-
-		elif relogio == "wtorre":
-
-
-			if result == 1:
-				Info.Building.WTorre.ModuloCor  = "red"
-				Info.Building.WTorre.RelogioCor = "red"
-			elif result == 2:
-				Info.Building.WTorre.ModuloCor  = "green"
-				Info.Building.WTorre.RelogioCor = "red"
-			elif result == 3:
-				Info.Building.WTorre.ModuloCor  = "green"
-				Info.Building.WTorre.RelogioCor = "green"
-			elif result == 4:
-				Info.Building.WTorre.ModuloCor  = "blue"
-				Info.Building.WTorre.RelogioCor = "blue"
-			else:
-				Info.Building.WTorre.ModuloCor  = "pink"
-				Info.Building.WTorre.RelogioCor = "pink"
-
-
-
-		elif relogio == "riojaneiro":
-
-			if result == 1:
-				Info.Building.RioJaneiro.ModuloCor  = "red"
-				Info.Building.RioJaneiro.RelogioCor = "red"
-			elif result == 2:
-				Info.Building.RioJaneiro.ModuloCor  = "green"
-				Info.Building.RioJaneiro.RelogioCor = "red"
-			elif result == 3:
-				Info.Building.RioJaneiro.ModuloCor  = "green"
-				Info.Building.RioJaneiro.RelogioCor = "green"
-			elif result == 4:
-				Info.Building.RioJaneiro.ModuloCor  = "blue"
-				Info.Building.RioJaneiro.RelogioCor = "blue"
-			else:
-				Info.Building.RioJaneiro.ModuloCor  = "pink"
-				Info.Building.RioJaneiro.RelogioCor = "pink"
-		
-		if result != 4:
-			Info.Building.Status.Contage = 0
-			if Info.Building.Allianz.RelogioCor == "green" : 
-					Info.Building.Status.Contage = Info.Building.Status.Contage +1
-			if Info.Building.WTorre.RelogioCor == "green" : 
-					Info.Building.Status.Contage = Info.Building.Status.Contage +1
-			if Info.Building.RioJaneiro.RelogioCor == "green" : 
-					Info.Building.Status.Contage = Info.Building.Status.Contage +1
+		AtualizaBuilding(relogio,result)
 			
 	if empresa == "laser":
 

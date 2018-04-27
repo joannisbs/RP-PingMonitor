@@ -126,16 +126,50 @@ def TestaBestInClass():
 	if Controle.Stop : return
 
 
+def TestaGravex():
+
+	TestaFuncion(Info.Gravex.ADM.Empresa,
+				Info.Gravex.ADM.Relogio,
+				Info.Gravex.ADM.IP,
+				Info.Gravex.ADM.Porta)
+	if Controle.Stop : return
+
+	TestaFuncion(Info.Gravex.Loja1.Empresa,
+				Info.Gravex.Loja1.Relogio,
+				Info.Gravex.Loja1.IP,
+				Info.Gravex.Loja1.Porta)
+	if Controle.Stop : return
+
+
+	TestaFuncion(Info.Gravex.MiMarcos.Empresa,
+				Info.Gravex.MiMarcos.Relogio,
+				Info.Gravex.MiMarcos.IP,
+				Info.Gravex.MiMarcos.Porta)
+	if Controle.Stop : return
+
+	TestaFuncion(Info.Gravex.DantChini.Empresa,
+				Info.Gravex.DantChini.Relogio,
+				Info.Gravex.DantChini.IP,
+				Info.Gravex.DantChini.Porta)
+	if Controle.Stop : return
+
+
+
+
+
+
+
+
 
 def TestaLaser():
 
-	TestaFuncion2(Info.Laser.Academia.Empresa,
+	TestaFuncion(Info.Laser.Academia.Empresa,
 				Info.Laser.Academia.Relogio,
 				Info.Laser.Academia.IP,
 				Info.Laser.Academia.Porta)
 	if Controle.Stop : return
 
-	TestaFuncion2(Info.Laser.Instituto.Empresa,
+	TestaFuncion(Info.Laser.Instituto.Empresa,
 				Info.Laser.Instituto.Relogio,
 				Info.Laser.Instituto.IP,
 				Info.Laser.Instituto.Porta)

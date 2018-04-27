@@ -35,6 +35,19 @@ class ThreadloopLaser(threading.Thread):
 	def run(self):
 		loopLaser()
 
+class ThreadloopGravex(threading.Thread):
+	def __init__(self):
+		threading.Thread.__init__(self)
+	def run(self):
+		loopGravex()
+
+
+def loopGravex():
+	while(1):
+		TestaGravex()
+		if Controle.Stop : break 
+
+
 
 def loopLaser():
 	while(1):

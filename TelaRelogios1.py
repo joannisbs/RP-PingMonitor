@@ -2117,7 +2117,7 @@ class TelaRelogios1(object):
 
 		############################################## BLOCO STATUS E BOTOES ###########################################
 		self.ContainerRelogios		      = Frame (root)
-		self.ContainerRelogios.grid               (row=0, sticky = "N")
+		self.ContainerRelogios.grid               (row=0, sticky = N + S + E + W)
 
 
 		############################################## COLUMN 0 ########################################################

@@ -21,6 +21,10 @@ leBanco()
 def on_closing():
 	if messagebox.askokcancel("Quit","Quer realmente sair?"):
 		Controle.Stop = True
+		Telas.root.deiconify()
+		lable1 = Label(Telas.root, text = "Empresa: "  + empresa)
+		lable1.grid(row=0,pady=5,padx=20)
+
 		Telas.root.destroy()
 
 
