@@ -155,8 +155,139 @@ def TestaGravex():
 
 
 
+def TestaLotten():
+
+	TestaFuncion(Info.Lotten.Jardins.Empresa,
+				Info.Lotten.Jardins.Relogio,
+				Info.Lotten.Jardins.IP,
+				Info.Lotten.Jardins.Porta)
+	if Controle.Stop : return
+
+	TestaFuncion(Info.Lotten.Alphaville.Empresa,
+				Info.Lotten.Alphaville.Relogio,
+				Info.Lotten.Alphaville.IP,
+				Info.Lotten.Alphaville.Porta)
+	if Controle.Stop : return
 
 
+	TestaFuncion(Info.Lotten.Osasco.Empresa,
+				Info.Lotten.Osasco.Relogio,
+				Info.Lotten.Osasco.IP,
+				Info.Lotten.Osasco.Porta)
+	if Controle.Stop : return
+
+
+	TestaFuncion(Info.Lotten.Santana.Empresa,
+				Info.Lotten.Santana.Relogio,
+				Info.Lotten.Santana.IP,
+				Info.Lotten.Santana.Porta)
+	if Controle.Stop : return
+
+
+	TestaFuncion(Info.Lotten.Santana.Empresa,
+				Info.Lotten.Santana.Relogio,
+				Info.Lotten.Santana.IP,
+				Info.Lotten.Santana.Porta)
+	if Controle.Stop : return
+
+
+	TestaFuncion(Info.Lotten.Tatuape.Empresa,
+				Info.Lotten.Tatuape.Relogio,
+				Info.Lotten.Tatuape.IP,
+				Info.Lotten.Tatuape.Porta)
+	if Controle.Stop : return
+
+
+	TestaFuncion(Info.Lotten.Moema.Empresa,
+				Info.Lotten.Moema.Relogio,
+				Info.Lotten.Moema.IP,
+				Info.Lotten.Moema.Porta)
+	if Controle.Stop : return
+
+
+	TestaFuncion(Info.Lotten.JardimSul.Empresa,
+				Info.Lotten.JardimSul.Relogio,
+				Info.Lotten.JardimSul.IP,
+				Info.Lotten.JardimSul.Porta)
+	if Controle.Stop : return
+
+
+	TestaFuncion(Info.Lotten.Conceicao.Empresa,
+				Info.Lotten.Conceicao.Relogio,
+				Info.Lotten.Conceicao.IP,
+				Info.Lotten.Conceicao.Porta)
+	if Controle.Stop : return
+
+
+	TestaFuncion(Info.Lotten.Lapa.Empresa,
+				Info.Lotten.Lapa.Relogio,
+				Info.Lotten.Lapa.IP,
+				Info.Lotten.Lapa.Porta)
+	if Controle.Stop : return
+
+
+	TestaFuncion(Info.Lotten.Perdizes.Empresa,
+				Info.Lotten.Perdizes.Relogio,
+				Info.Lotten.Perdizes.IP,
+				Info.Lotten.Perdizes.Porta)
+	if Controle.Stop : return
+
+
+	TestaFuncion(Info.Lotten.SaoCaetano.Empresa,
+				Info.Lotten.SaoCaetano.Relogio,
+				Info.Lotten.SaoCaetano.IP,
+				Info.Lotten.SaoCaetano.Porta)
+	if Controle.Stop : return
+
+
+	TestaFuncion(Info.Lotten.Pinheiros.Empresa,
+				Info.Lotten.Pinheiros.Relogio,
+				Info.Lotten.Pinheiros.IP,
+				Info.Lotten.Pinheiros.Porta)
+	if Controle.Stop : return
+
+
+	TestaFuncion(Info.Lotten.Morumbi.Empresa,
+				Info.Lotten.Morumbi.Relogio,
+				Info.Lotten.Morumbi.IP,
+				Info.Lotten.Morumbi.Porta)
+	if Controle.Stop : return
+
+
+	TestaFuncion(Info.Lotten.Berrini.Empresa,
+				Info.Lotten.Berrini.Relogio,
+				Info.Lotten.Berrini.IP,
+				Info.Lotten.Berrini.Porta)
+	if Controle.Stop : return
+
+
+	TestaFuncion(Info.Lotten.VilaMariana.Empresa,
+				Info.Lotten.VilaMariana.Relogio,
+				Info.Lotten.VilaMariana.IP,
+				Info.Lotten.VilaMariana.Porta)
+	if Controle.Stop : return
+
+
+	TestaFuncion(Info.Lotten.VilaOlimpia.Empresa,
+				Info.Lotten.VilaOlimpia.Relogio,
+				Info.Lotten.VilaOlimpia.IP,
+				Info.Lotten.VilaOlimpia.Porta)
+	if Controle.Stop : return
+
+
+	TestaFuncion(Info.Lotten.Itaim.Empresa,
+				Info.Lotten.Itaim.Relogio,
+				Info.Lotten.Itaim.IP,
+				Info.Lotten.Itaim.Porta)
+	if Controle.Stop : return
+
+
+
+	TestaFuncion(Info.Lotten.Guarulhos.Empresa,
+				Info.Lotten.Guarulhos.Relogio,
+				Info.Lotten.Guarulhos.IP,
+				Info.Lotten.Guarulhos.Porta)
+	if Controle.Stop : return
 
 
 

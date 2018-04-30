@@ -47,6 +47,23 @@ class ThreadloopGrupoNk(threading.Thread):
 	def run(self):
 		loopGrupoNk()
 
+
+class ThreadloopLotten(threading.Thread):
+	def __init__(self):
+		threading.Thread.__init__(self)
+	def run(self):
+		loopLotten()
+
+def loopLotten():
+	while(1):
+		TestaLotten()
+		if Controle.Stop : break 
+	Flag.quit = True
+
+
+
+
+
 def loopGrupoNk():
 	while(1):
 		TestaGrupoNk()
