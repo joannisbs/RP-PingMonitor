@@ -1083,5 +1083,7 @@ class Telas(object):
 	GUI_Tela2							= "null"
 	GUI_Monitor							= "null"
 	root 								= "null"
-class MODER:
-	buton = 0
+
+class Flag(object):
+
+	quit = False

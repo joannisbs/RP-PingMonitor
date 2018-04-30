@@ -46,13 +46,16 @@ def loopGravex():
 	while(1):
 		TestaGravex()
 		if Controle.Stop : break 
-
+		time.sleep(60)
+	Flag.quit = True
 
 
 def loopLaser():
 	while(1):
 		TestaLaser()
 		if Controle.Stop : break 
+		time.sleep(100)
+	Flag.quit = True
 
 
 def loopBuilding():
@@ -63,24 +66,26 @@ def loopBuilding():
 		time.sleep(100)
 		#TestaCasCristo()
 		#if Controle.Stop : break 
+	Flag.quit = True
+
 
 def loopBestInClass():
 	while(1):
 		TestaBestInClass()
 		if Controle.Stop : break 
+	Flag.quit = True
+
 
 def loopCasaCristo():
-
 	while(1):
-		
 		TestaCasCristo()
 		if Controle.Stop : break 
 		time.sleep(60)
+	Flag.quit = True
+
 
 def loopIsoRadio():
-
 	while(1):
-		
 		TestaIsoRadio()
 		if Controle.Stop : break 
-		
+	Flag.quit = True
