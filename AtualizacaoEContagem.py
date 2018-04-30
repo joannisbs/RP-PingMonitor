@@ -3,7 +3,7 @@ from Var import *
 
 
 
-def AtualizaBuilding(relogio,result):
+def AtualizaCorBuilding(relogio,result):
 
 	if relogio == "allianz":
 			
@@ -74,7 +74,7 @@ def AtualizaBuilding(relogio,result):
 		if Info.Building.RioJaneiro.RelogioCor == "green" : 
 				Info.Building.Status.Contage = Info.Building.Status.Contage +1
 
-def AtualizaLaser(relogio,result):
+def AtualizaCorLaser(relogio,result):
 	if relogio == "academia":
 	
 		if result == 1:
@@ -118,7 +118,7 @@ def AtualizaLaser(relogio,result):
 
 		Telas.GUI_Tela1 .updateLaser()
 
-def AtualizaGravex(relogio,result):
+def AtualizaCorGravex(relogio,result):
 
 	if relogio == "adm":
 
@@ -191,7 +191,7 @@ def AtualizaGravex(relogio,result):
 			Info.Gravex.DantChini.ModuloCor  = "pink"
 			Info.Gravex.DantChini.RelogioCor = "pink"
 
-def AtualizaCasaCristo(relogio,result):
+def AtualizaCorCasaCristo(relogio,result):
 
 	if relogio == "adm":
 
@@ -300,7 +300,7 @@ def AtualizaCasaCristo(relogio,result):
 		if Info.CasaCristo.VovoMatilde.RelogioCor == "green" : 
 			Info.CasaCristo.Status.Contage = Info.CasaCristo.Status.Contage +1
 
-def AtualizaBestInCLass(relogio,result):
+def AtualizaCorBestInCLass(relogio,result):
 	if relogio == "recife":
 
 		if result == 1:
@@ -545,7 +545,7 @@ def AtualizaBestInCLass(relogio,result):
 		if Info.BestInClass.Linhares.RelogioCor == "green" : 
 			Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
 
-def AtualizaIsoRadio(relogio,result):
+def AtualizaCorIsoRadio(relogio,result):
 
 
 	if relogio == "santana":
@@ -775,6 +775,177 @@ def AtualizaIsoRadio(relogio,result):
 		if Info.IsoRadio.AnaRosa.ModuloCor == "green" :
 			Info.IsoRadio.Status.Contage = Info.IsoRadio.Status.Contage + 1
 
+def AtualizaCorGrupoNk(relogio,result):
+
+	if relogio == "nelson":
+
+		if result == 1:
+			Info.GrupoNk.NelsonKioshi.ModuloCor  = "red"
+			Info.GrupoNk.NelsonKioshi.RelogioCor = "red"
+		elif result == 2:
+			Info.GrupoNk.NelsonKioshi.ModuloCor  = "green"
+			Info.GrupoNk.NelsonKioshi.RelogioCor = "red"
+		elif result == 3:
+			Info.GrupoNk.NelsonKioshi.ModuloCor  = "green"
+			Info.GrupoNk.NelsonKioshi.RelogioCor = "green"
+		elif result == 4:
+			Info.GrupoNk.NelsonKioshi.ModuloCor  = "blue"
+			Info.GrupoNk.NelsonKioshi.RelogioCor = "blue"
+		else:
+			Info.GrupoNk.NelsonKioshi.ModuloCor  = "pink"
+			Info.GrupoNk.NelsonKioshi.RelogioCor = "pink"
+
+
+	elif relogio == "furukawa":
+
+		if result == 1:
+			Info.GrupoNk.RDFurukawa.ModuloCor  = "red"
+			Info.GrupoNk.RDFurukawa.RelogioCor = "red"
+		elif result == 2:
+			Info.GrupoNk.RDFurukawa.ModuloCor  = "green"
+			Info.GrupoNk.RDFurukawa.RelogioCor = "red"
+		elif result == 3:
+			Info.GrupoNk.RDFurukawa.ModuloCor  = "green"
+			Info.GrupoNk.RDFurukawa.RelogioCor = "green"
+		elif result == 4:
+			Info.GrupoNk.RDFurukawa.ModuloCor  = "blue"
+			Info.GrupoNk.RDFurukawa.RelogioCor = "blue"
+		else:
+			Info.GrupoNk.RDFurukawa.ModuloCor  = "pink"
+			Info.GrupoNk.RDFurukawa.RelogioCor = "pink"
+
+
+	elif relogio == "kio1":
+
+		if result == 1:
+			Info.GrupoNk.Kio1.ModuloCor  = "red"
+			Info.GrupoNk.Kio1.RelogioCor = "red"
+		elif result == 2:
+			Info.GrupoNk.Kio1.ModuloCor  = "green"
+			Info.GrupoNk.Kio1.RelogioCor = "red"
+		elif result == 3:
+			Info.GrupoNk.Kio1.ModuloCor  = "green"
+			Info.GrupoNk.Kio1.RelogioCor = "green"
+		elif result == 4:
+			Info.GrupoNk.Kio1.ModuloCor  = "blue"
+			Info.GrupoNk.Kio1.RelogioCor = "blue"
+		else:
+			Info.GrupoNk.Kio1.ModuloCor  = "pink"
+			Info.GrupoNk.Kio1.RelogioCor = "pink"
+
+
+
+	elif relogio == "kio2":
+
+		if result == 1:
+			Info.GrupoNk.Kio2.ModuloCor  = "red"
+			Info.GrupoNk.Kio2.RelogioCor = "red"
+		elif result == 2:
+			Info.GrupoNk.Kio2.ModuloCor  = "green"
+			Info.GrupoNk.Kio2.RelogioCor = "red"
+		elif result == 3:
+			Info.GrupoNk.Kio2.ModuloCor  = "green"
+			Info.GrupoNk.Kio2.RelogioCor = "green"
+		elif result == 4:
+			Info.GrupoNk.Kio2.ModuloCor  = "blue"
+			Info.GrupoNk.Kio2.RelogioCor = "blue"
+		else:
+			Info.GrupoNk.Kio2.ModuloCor  = "pink"
+			Info.GrupoNk.Kio2.RelogioCor = "pink"
+
+
+	elif relogio == "granjaviana":
+
+		if result == 1:
+			Info.GrupoNk.GranjaViana.ModuloCor  = "red"
+			Info.GrupoNk.GranjaViana.RelogioCor = "red"
+		elif result == 2:
+			Info.GrupoNk.GranjaViana.ModuloCor  = "green"
+			Info.GrupoNk.GranjaViana.RelogioCor = "red"
+		elif result == 3:
+			Info.GrupoNk.GranjaViana.ModuloCor  = "green"
+			Info.GrupoNk.GranjaViana.RelogioCor = "green"
+		elif result == 4:
+			Info.GrupoNk.GranjaViana.ModuloCor  = "blue"
+			Info.GrupoNk.GranjaViana.RelogioCor = "blue"
+		else:
+			Info.GrupoNk.GranjaViana.ModuloCor  = "pink"
+			Info.GrupoNk.GranjaViana.RelogioCor = "pink"
+
+
+	elif relogio == "santacecilia":
+
+		if result == 1:
+			Info.GrupoNk.SantaCecilia.ModuloCor  = "red"
+			Info.GrupoNk.SantaCecilia.RelogioCor = "red"
+		elif result == 2:
+			Info.GrupoNk.SantaCecilia.ModuloCor  = "green"
+			Info.GrupoNk.SantaCecilia.RelogioCor = "red"
+		elif result == 3:
+			Info.GrupoNk.SantaCecilia.ModuloCor  = "green"
+			Info.GrupoNk.SantaCecilia.RelogioCor = "green"
+		elif result == 4:
+			Info.GrupoNk.SantaCecilia.ModuloCor  = "blue"
+			Info.GrupoNk.SantaCecilia.RelogioCor = "blue"
+		else:
+			Info.GrupoNk.SantaCecilia.ModuloCor  = "pink"
+			Info.GrupoNk.SantaCecilia.RelogioCor = "pink"
+
+
+	elif relogio == "transfruit":
+
+		if result == 1:
+			Info.GrupoNk.Transfruit.ModuloCor  = "red"
+			Info.GrupoNk.Transfruit.RelogioCor = "red"
+		elif result == 2:
+			Info.GrupoNk.Transfruit.ModuloCor  = "green"
+			Info.GrupoNk.Transfruit.RelogioCor = "red"
+		elif result == 3:
+			Info.GrupoNk.Transfruit.ModuloCor  = "green"
+			Info.GrupoNk.Transfruit.RelogioCor = "green"
+		elif result == 4:
+			Info.GrupoNk.Transfruit.ModuloCor  = "blue"
+			Info.GrupoNk.Transfruit.RelogioCor = "blue"
+		else:
+			Info.GrupoNk.Transfruit.ModuloCor  = "pink"
+			Info.GrupoNk.Transfruit.RelogioCor = "pink"
+
+	elif relogio == "distrdefrutas":
+
+		if result == 1:
+			Info.GrupoNk.Distribuidora.ModuloCor  = "red"
+			Info.GrupoNk.Distribuidora.RelogioCor = "red"
+		elif result == 2:
+			Info.GrupoNk.Distribuidora.ModuloCor  = "green"
+			Info.GrupoNk.Distribuidora.RelogioCor = "red"
+		elif result == 3:
+			Info.GrupoNk.Distribuidora.ModuloCor  = "green"
+			Info.GrupoNk.Distribuidora.RelogioCor = "green"
+		elif result == 4:
+			Info.GrupoNk.Distribuidora.ModuloCor  = "blue"
+			Info.GrupoNk.Distribuidora.RelogioCor = "blue"
+		else:
+			Info.GrupoNk.Distribuidora.ModuloCor  = "pink"
+			Info.GrupoNk.Distribuidora.RelogioCor = "pink"
+
+
+	elif relogio == "nkhortifruit":
+
+		if result == 1:
+			Info.GrupoNk.NKFilial.ModuloCor  = "red"
+			Info.GrupoNk.NKFilial.RelogioCor = "red"
+		elif result == 2:
+			Info.GrupoNk.NKFilial.ModuloCor  = "green"
+			Info.GrupoNk.NKFilial.RelogioCor = "red"
+		elif result == 3:
+			Info.GrupoNk.NKFilial.ModuloCor  = "green"
+			Info.GrupoNk.NKFilial.RelogioCor = "green"
+		elif result == 4:
+			Info.GrupoNk.NKFilial.ModuloCor  = "blue"
+			Info.GrupoNk.NKFilial.RelogioCor = "blue"
+		else:
+			Info.GrupoNk.NKFilial.ModuloCor  = "pink"
+			Info.GrupoNk.NKFilial.RelogioCor = "pink"
 
 
 
@@ -782,27 +953,31 @@ def AtualizaCor(empresa,relogio,result):
 
 
 	if empresa == "building":
-		AtualizaBuilding(relogio,result)
+		AtualizaCorBuilding(relogio,result)
 	
 
 	elif empresa == "laser":
-		AtualizaLaser(relogio,result)		
+		AtualizaCorLaser(relogio,result)		
 
 
 	elif empresa == "gravex":
-		AtualizaGravex(relogio,result)
+		AtualizaCorGravex(relogio,result)
 
 
 	elif empresa == "casacristo":
-		AtualizaCasaCristo(relogio,result)	
+		AtualizaCorCasaCristo(relogio,result)	
 
 
 	elif empresa == "bestinclass":
-		AtualizaBestInCLass(relogio,result)
+		AtualizaCorBestInCLass(relogio,result)
 
 
 	elif empresa == "isoradiologia":
-		AtualizaIsoRadio(relogio,result)
+		AtualizaCorIsoRadio(relogio,result)
+
+
+	elif empresa == "gruponk":
+		AtualizaCorGrupoNk(relogio,result)
 
 
 

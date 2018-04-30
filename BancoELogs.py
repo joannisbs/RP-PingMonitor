@@ -428,3 +428,112 @@ def leBanco():
 
 
 
+		elif empresa_lido == "gruponk":
+
+
+			if relogio_lido == "nelson":
+				
+				Info.GrupoNk.NelsonKioshi.Empresa               = empresa_lido
+				Info.GrupoNk.NelsonKioshi.Relogio               = relogio_lido
+				Info.GrupoNk.NelsonKioshi.IP                    = ip_lido
+				Info.GrupoNk.NelsonKioshi.Porta                 = port_lido
+				Info.GrupoNk.NelsonKioshi.NumeroRep             = NumeroReP_Lido
+				Info.GrupoNk.NelsonKioshi.Responsavel           = Responsavel_Lido
+				Info.GrupoNk.NelsonKioshi.Telefone              = Telefone_Lido
+
+
+			elif relogio_lido == "furukawa":
+
+				Info.GrupoNk.RDFurukawa.Empresa                	= empresa_lido
+				Info.GrupoNk.RDFurukawa.Relogio                	= relogio_lido
+				Info.GrupoNk.RDFurukawa.IP                     	= ip_lido
+				Info.GrupoNk.RDFurukawa.Porta                  	= port_lido
+				Info.GrupoNk.RDFurukawa.NumeroRep              	= NumeroReP_Lido
+				Info.GrupoNk.RDFurukawa.Responsavel            	= Responsavel_Lido
+				Info.GrupoNk.RDFurukawa.Telefone               	= Telefone_Lido
+				
+
+
+			elif relogio_lido == "kio1":
+
+
+				Info.GrupoNk.Kio1.Empresa            			= empresa_lido
+				Info.GrupoNk.Kio1.Relogio           			= relogio_lido
+				Info.GrupoNk.Kio1.IP                		 	= ip_lido
+				Info.GrupoNk.Kio1.Porta              			= port_lido
+				Info.GrupoNk.Kio1.NumeroRep          			= NumeroReP_Lido
+				Info.GrupoNk.Kio1.Responsavel        			= Responsavel_Lido
+				Info.GrupoNk.Kio1.Telefone           			= Telefone_Lido
+
+
+			if relogio_lido == "kio2":
+				
+				Info.GrupoNk.Kio2.Empresa               = empresa_lido
+				Info.GrupoNk.Kio2.Relogio               = relogio_lido
+				Info.GrupoNk.Kio2.IP                    = ip_lido
+				Info.GrupoNk.Kio2.Porta                 = port_lido
+				Info.GrupoNk.Kio2.NumeroRep             = NumeroReP_Lido
+				Info.GrupoNk.Kio2.Responsavel           = Responsavel_Lido
+				Info.GrupoNk.Kio2.Telefone              = Telefone_Lido
+
+
+			elif relogio_lido == "granjaviana":
+
+				Info.GrupoNk.GranjaViana.Empresa                = empresa_lido
+				Info.GrupoNk.GranjaViana.Relogio                = relogio_lido
+				Info.GrupoNk.GranjaViana.IP                     = ip_lido
+				Info.GrupoNk.GranjaViana.Porta                  = port_lido
+				Info.GrupoNk.GranjaViana.NumeroRep              = NumeroReP_Lido
+				Info.GrupoNk.GranjaViana.Responsavel            = Responsavel_Lido
+				Info.GrupoNk.GranjaViana.Telefone               = Telefone_Lido
+				
+
+
+			elif relogio_lido == "santacecilia":
+
+
+				Info.GrupoNk.SantaCecilia.Empresa            = empresa_lido
+				Info.GrupoNk.SantaCecilia.Relogio            = relogio_lido
+				Info.GrupoNk.SantaCecilia.IP                 = ip_lido
+				Info.GrupoNk.SantaCecilia.Porta              = port_lido
+				Info.GrupoNk.SantaCecilia.NumeroRep          = NumeroReP_Lido
+				Info.GrupoNk.SantaCecilia.Responsavel        = Responsavel_Lido
+				Info.GrupoNk.SantaCecilia.Telefone           = Telefone_Lido
+
+
+
+			if relogio_lido == "transfruit":
+				
+				Info.GrupoNk.Transfruit.Empresa               = empresa_lido
+				Info.GrupoNk.Transfruit.Relogio               = relogio_lido
+				Info.GrupoNk.Transfruit.IP                    = ip_lido
+				Info.GrupoNk.Transfruit.Porta                 = port_lido
+				Info.GrupoNk.Transfruit.NumeroRep             = NumeroReP_Lido
+				Info.GrupoNk.Transfruit.Responsavel           = Responsavel_Lido
+				Info.GrupoNk.Transfruit.Telefone              = Telefone_Lido
+
+
+			elif relogio_lido == "distrdefrutas":
+
+				Info.GrupoNk.Distribuidora.Empresa                = empresa_lido
+				Info.GrupoNk.Distribuidora.Relogio                = relogio_lido
+				Info.GrupoNk.Distribuidora.IP                     = ip_lido
+				Info.GrupoNk.Distribuidora.Porta                  = port_lido
+				Info.GrupoNk.Distribuidora.NumeroRep              = NumeroReP_Lido
+				Info.GrupoNk.Distribuidora.Responsavel            = Responsavel_Lido
+				Info.GrupoNk.Distribuidora.Telefone               = Telefone_Lido
+				
+
+
+			elif relogio_lido == "nkhortifruit":
+
+
+				Info.GrupoNk.NKFilial.Empresa            = empresa_lido
+				Info.GrupoNk.NKFilial.Relogio            = relogio_lido
+				Info.GrupoNk.NKFilial.IP                 = ip_lido
+				Info.GrupoNk.NKFilial.Porta              = port_lido
+				Info.GrupoNk.NKFilial.NumeroRep          = NumeroReP_Lido
+				Info.GrupoNk.NKFilial.Responsavel        = Responsavel_Lido
+				Info.GrupoNk.NKFilial.Telefone           = Telefone_Lido
+
+

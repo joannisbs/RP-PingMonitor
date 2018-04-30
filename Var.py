@@ -1068,6 +1068,135 @@ class Info(object):
 			Telefone        = "None"
 
 
+	class GrupoNk(object):
+
+		class Status(object):
+			Contage         = 0
+			TotalRelogios   = 3
+
+		class NelsonKioshi(object):
+
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "orange"
+			RelogioCor		= "orange"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+
+		class RDFurukawa(object):
+
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "orange"
+			RelogioCor		= "orange"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+			
+
+		class Kio1(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "orange"
+			RelogioCor		= "orange"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+
+		class Kio2(object):
+
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "orange"
+			RelogioCor		= "orange"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+
+		class GranjaViana(object):
+
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "orange"
+			RelogioCor		= "orange"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+			
+
+		class SantaCecilia(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "orange"
+			RelogioCor		= "orange"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+		class Transfruit(object):
+
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "orange"
+			RelogioCor		= "orange"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+
+		class Distribuidora(object):
+
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "orange"
+			RelogioCor		= "orange"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+			
+
+		class NKFilial(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "orange"
+			RelogioCor		= "orange"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+			
+
+
 class Controle(object):
 
 	Status 		      		        = "red"

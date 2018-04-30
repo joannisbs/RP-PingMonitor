@@ -244,6 +244,75 @@ def TestaIsoRadio():
 	if Controle.Stop : return
 
 	
+def TestaGrupoNk():
+
+
+
+	TestaFuncion(Info.GrupoNk.NelsonKioshi.Empresa,
+				Info.GrupoNk.NelsonKioshi.Relogio,
+				Info.GrupoNk.NelsonKioshi.IP,
+				Info.GrupoNk.NelsonKioshi.Porta)
+	if Controle.Stop : return
+
+	TestaFuncion(Info.GrupoNk.RDFurukawa.Empresa,
+				Info.GrupoNk.RDFurukawa.Relogio,
+				Info.GrupoNk.RDFurukawa.IP,
+				Info.GrupoNk.RDFurukawa.Porta)
+	if Controle.Stop : return
+
+
+	TestaFuncion(Info.GrupoNk.Kio1.Empresa,
+				Info.GrupoNk.Kio1.Relogio,
+				Info.GrupoNk.Kio1.IP,
+				Info.GrupoNk.Kio1.Porta)
+	if Controle.Stop : return
+
+	TestaFuncion(Info.GrupoNk.Kio2.Empresa,
+				Info.GrupoNk.Kio2.Relogio,
+				Info.GrupoNk.Kio2.IP,
+				Info.GrupoNk.Kio2.Porta)
+	if Controle.Stop : return
+
+
+	TestaFuncion(Info.GrupoNk.GranjaViana.Empresa,
+				Info.GrupoNk.GranjaViana.Relogio,
+				Info.GrupoNk.GranjaViana.IP,
+				Info.GrupoNk.GranjaViana.Porta)
+	if Controle.Stop : return
+
+	TestaFuncion(Info.GrupoNk.SantaCecilia.Empresa,
+				Info.GrupoNk.SantaCecilia.Relogio,
+				Info.GrupoNk.SantaCecilia.IP,
+				Info.GrupoNk.SantaCecilia.Porta)
+	if Controle.Stop : return
+
+
+
+	TestaFuncion(Info.GrupoNk.Transfruit.Empresa,
+				Info.GrupoNk.Transfruit.Relogio,
+				Info.GrupoNk.Transfruit.IP,
+				Info.GrupoNk.Transfruit.Porta)
+	if Controle.Stop : return
+
+	TestaFuncion(Info.GrupoNk.Distribuidora.Empresa,
+				Info.GrupoNk.Distribuidora.Relogio,
+				Info.GrupoNk.Distribuidora.IP,
+				Info.GrupoNk.Distribuidora.Porta)
+	if Controle.Stop : return
+
+
+
+	TestaFuncion(Info.GrupoNk.NKFilial.Empresa,
+				Info.GrupoNk.NKFilial.Relogio,
+				Info.GrupoNk.NKFilial.IP,
+				Info.GrupoNk.NKFilial.Porta)
+	if Controle.Stop : return
+
+
+
+
+
+
 
 
 

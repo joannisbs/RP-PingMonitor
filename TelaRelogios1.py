@@ -37,6 +37,8 @@ class TelaRelogios1(object):
 
 		self.Create_IsoRadio()
 
+		self.Create_GrupoNK()
+
 
 	def Create_IsoRadio(self):
 
@@ -2113,42 +2115,282 @@ class TelaRelogios1(object):
 
 
 
-	def Create_container(self,root):
+	def Create_GrupoNK(self):
 
 
-		############################################## BLOCO STATUS E BOTOES ###########################################
+		self.msgGrupoNk                            		= Label (self.ContainerGrupoNk,text = "Grupo Nk")
+		self.msgGrupoNk                            		["height"]     = 1
+		self.msgGrupoNk.grid                       		(row=0,column=0,sticky = "N")
+
+		self.msgGrupoNkCont                        		= Label (self.ContainerGrupoNk,text = str(Info.GrupoNk.Status.Contage)+"/3")
+		self.msgGrupoNkCont                        		["height"]     = 1
+		self.msgGrupoNkCont.grid                   		(row=0,column=1,sticky = "N")
+
+
+
+
+
+
+		self.botaoGrupoNkNelsonKioshi                                  = Button(self.ContainerGrupoNk)
+		self.botaoGrupoNkNelsonKioshi                  	["text"]       = "Nelson Kioshi"
+		self.botaoGrupoNkNelsonKioshi                   ["background"] = Info.GrupoNk.NelsonKioshi.ModuloCor
+		self.botaoGrupoNkNelsonKioshi                   ["width"]      = 13
+		self.botaoGrupoNkNelsonKioshi                   ["height"]     = 1
+		self.botaoGrupoNkNelsonKioshi.bind              ("<Button-1>",lambda e: popup("GrupoNk","Nelson Kioshi",
+														Info.GrupoNk.NelsonKioshi.IP, 
+														Info.GrupoNk.NelsonKioshi.Porta, 
+														Info.GrupoNk.NelsonKioshi.NumeroRep, 
+														Info.GrupoNk.NelsonKioshi.Responsavel, 
+														Info.GrupoNk.NelsonKioshi.Telefone))
+
+		self.botaoGrupoNkNelsonKioshiRelogio                           = Button(self.ContainerGrupoNk)
+		self.botaoGrupoNkNelsonKioshiRelogio            ["text"]       = "R"
+		self.botaoGrupoNkNelsonKioshiRelogio            ["background"] = Info.GrupoNk.NelsonKioshi.RelogioCor
+		self.botaoGrupoNkNelsonKioshiRelogio            ["width"]      = 1
+		self.botaoGrupoNkNelsonKioshiRelogio            ["height"]     = 1
+
+		self.botaoGrupoNkNelsonKioshi.grid       		(row=1, column=0, sticky = "N")
+		self.botaoGrupoNkNelsonKioshiRelogio.grid       (row=1, column=1, sticky = "N")
+
+
+
+
+
+
+		self.botaoGrupoNkRDFurukawa                                   	= Button(self.ContainerGrupoNk)
+		self.botaoGrupoNkRDFurukawa                    	["text"]        = "RD Furukawa"
+		self.botaoGrupoNkRDFurukawa                    	["background"]  = Info.GrupoNk.RDFurukawa.ModuloCor
+		self.botaoGrupoNkRDFurukawa                    	["width"]       = 13
+		self.botaoGrupoNkRDFurukawa                   	["height"]      = 1
+		self.botaoGrupoNkRDFurukawa.bind              	("<Button-1>",lambda e: popup("GrupoNk","RD Furukawa",
+														Info.GrupoNk.RDFurukawa.IP, 
+														Info.GrupoNk.RDFurukawa.Porta, 
+														Info.GrupoNk.RDFurukawa.NumeroRep, 
+														Info.GrupoNk.RDFurukawa.Responsavel, 
+														Info.GrupoNk.RDFurukawa.Telefone))
+
+		self.botaoGrupoNkRDFurukawaRelogio                            	= Button(self.ContainerGrupoNk)
+		self.botaoGrupoNkRDFurukawaRelogio              ["text"]        = "R"
+		self.botaoGrupoNkRDFurukawaRelogio              ["background"]  = Info.GrupoNk.RDFurukawa.RelogioCor
+		self.botaoGrupoNkRDFurukawaRelogio              ["width"]       = 1
+		self.botaoGrupoNkRDFurukawaRelogio              ["height"]      = 1
+
+		self.botaoGrupoNkRDFurukawa.grid                (row=2,column=0,sticky = "N")
+		self.botaoGrupoNkRDFurukawaRelogio.grid         (row=2,column=1,sticky = "N")
+
+
+
+
+
+
+		self.botaoGrupoNkKio1                               			= Button(self.ContainerGrupoNk)
+		self.botaoGrupoNkKio1                			["text"]        = "Kio 1"
+		self.botaoGrupoNkKio1                			["background"]  = Info.GrupoNk.Kio1.ModuloCor
+		self.botaoGrupoNkKio1                			["width"]       = 13
+		self.botaoGrupoNkKio1                			["height"]      = 1
+		self.botaoGrupoNkKio1.bind           			("<Button-1>",lambda e: popup("GrupoNk","Kio 1",
+														Info.GrupoNk.Kio1.IP, 
+														Info.GrupoNk.Kio1.Porta, 
+														Info.GrupoNk.Kio1.NumeroRep, 
+														Info.GrupoNk.Kio1.Responsavel, 
+														Info.GrupoNk.Kio1.Telefone))
+
+		self.botaoGrupoNkKio1Relogio         		               		= Button(self.ContainerGrupoNk)
+		self.botaoGrupoNkKio1Relogio         			["text"]        = "R"
+		self.botaoGrupoNkKio1Relogio         			["background"]  = Info.GrupoNk.Kio1.RelogioCor
+		self.botaoGrupoNkKio1Relogio         			["width"]       = 1
+		self.botaoGrupoNkKio1Relogio         			["height"]      = 1
+
+
+		self.botaoGrupoNkKio1.grid           			(row=3,column=0,sticky = "N")
+		self.botaoGrupoNkKio1Relogio.grid    			(row=3,column=1,sticky = "N")
+
+
+
+
+
+		self.botaoGrupoNkKio2                               			= Button(self.ContainerGrupoNk)
+		self.botaoGrupoNkKio2                			["text"]        = "Kio 2"
+		self.botaoGrupoNkKio2                			["background"]  = Info.GrupoNk.Kio2.ModuloCor
+		self.botaoGrupoNkKio2                			["width"]       = 13
+		self.botaoGrupoNkKio2                			["height"]      = 1
+		self.botaoGrupoNkKio2.bind           			("<Button-1>",lambda e: popup("GrupoNk","Kio 2",
+														Info.GrupoNk.Kio2.IP, 
+														Info.GrupoNk.Kio2.Porta, 
+														Info.GrupoNk.Kio2.NumeroRep, 
+														Info.GrupoNk.Kio2.Responsavel, 
+														Info.GrupoNk.Kio2.Telefone))
+
+		self.botaoGrupoNkKio2Relogio         		               		= Button(self.ContainerGrupoNk)
+		self.botaoGrupoNkKio2Relogio         			["text"]        = "R"
+		self.botaoGrupoNkKio2Relogio         			["background"]  = Info.GrupoNk.Kio2.RelogioCor
+		self.botaoGrupoNkKio2Relogio         			["width"]       = 1
+		self.botaoGrupoNkKio2Relogio         			["height"]      = 1
+
+
+		self.botaoGrupoNkKio2.grid           			(row=4,column=0,sticky = "N")
+		self.botaoGrupoNkKio2Relogio.grid    			(row=4,column=1,sticky = "N")
+
+
+		self.botaoGrupoNkGranjaViana                          			= Button(self.ContainerGrupoNk)
+		self.botaoGrupoNkGranjaViana                	["text"]        = "Granja Viana"
+		self.botaoGrupoNkGranjaViana                	["background"]  = Info.GrupoNk.GranjaViana.ModuloCor
+		self.botaoGrupoNkGranjaViana                	["width"]       = 13
+		self.botaoGrupoNkGranjaViana                	["height"]      = 1
+		self.botaoGrupoNkGranjaViana.bind           	("<Button-1>",lambda e: popup("GrupoNk","Granja Viana",
+														Info.GrupoNk.GranjaViana.IP, 
+														Info.GrupoNk.GranjaViana.Porta, 
+														Info.GrupoNk.GranjaViana.NumeroRep, 
+														Info.GrupoNk.GranjaViana.Responsavel, 
+														Info.GrupoNk.GranjaViana.Telefone))
+
+		self.botaoGrupoNkGranjaVianaRelogio         		            = Button(self.ContainerGrupoNk)
+		self.botaoGrupoNkGranjaVianaRelogio         	["text"]        = "R"
+		self.botaoGrupoNkGranjaVianaRelogio         	["background"]  = Info.GrupoNk.GranjaViana.RelogioCor
+		self.botaoGrupoNkGranjaVianaRelogio         	["width"]       = 1
+		self.botaoGrupoNkGranjaVianaRelogio         	["height"]      = 1
+
+
+		self.botaoGrupoNkGranjaViana.grid           	(row=5,column=0,sticky = "N")
+		self.botaoGrupoNkGranjaVianaRelogio.grid    	(row=5,column=1,sticky = "N")
+
+
+
+		self.botaoGrupoNkSantaCecilia                               	= Button(self.ContainerGrupoNk)
+		self.botaoGrupoNkSantaCecilia                	["text"]        = "Santa Cecilia"
+		self.botaoGrupoNkSantaCecilia                	["background"]  = Info.GrupoNk.SantaCecilia.ModuloCor
+		self.botaoGrupoNkSantaCecilia                	["width"]       = 13
+		self.botaoGrupoNkSantaCecilia                	["height"]      = 1
+		self.botaoGrupoNkSantaCecilia.bind           	("<Button-1>",lambda e: popup("GrupoNk","Santa Cecilia",
+														Info.GrupoNk.SantaCecilia.IP, 
+														Info.GrupoNk.SantaCecilia.Porta, 
+														Info.GrupoNk.SantaCecilia.NumeroRep, 
+														Info.GrupoNk.SantaCecilia.Responsavel, 
+														Info.GrupoNk.SantaCecilia.Telefone))
+
+		self.botaoGrupoNkSantaCeciliaRelogio         	           		= Button(self.ContainerGrupoNk)
+		self.botaoGrupoNkSantaCeciliaRelogio         	["text"]        = "R"
+		self.botaoGrupoNkSantaCeciliaRelogio         	["background"]  = Info.GrupoNk.SantaCecilia.RelogioCor
+		self.botaoGrupoNkSantaCeciliaRelogio         	["width"]       = 1
+		self.botaoGrupoNkSantaCeciliaRelogio         	["height"]      = 1
+
+
+		self.botaoGrupoNkSantaCecilia.grid           	(row=6,column=0,sticky = "N")
+		self.botaoGrupoNkSantaCeciliaRelogio.grid    	(row=6,column=1,sticky = "N")
+
+
+		self.botaoGrupoNkTransfruit                            			= Button(self.ContainerGrupoNk)
+		self.botaoGrupoNkTransfruit                		["text"]        = "Transfruit"
+		self.botaoGrupoNkTransfruit                		["background"]  = Info.GrupoNk.Transfruit.ModuloCor
+		self.botaoGrupoNkTransfruit                		["width"]       = 13
+		self.botaoGrupoNkTransfruit                		["height"]      = 1
+		self.botaoGrupoNkTransfruit.bind           		("<Button-1>",lambda e: popup("GrupoNk","Transfruit",
+														Info.GrupoNk.Transfruit.IP, 
+														Info.GrupoNk.Transfruit.Porta, 
+														Info.GrupoNk.Transfruit.NumeroRep, 
+														Info.GrupoNk.Transfruit.Responsavel, 
+														Info.GrupoNk.Transfruit.Telefone))
+
+		self.botaoGrupoNkTransfruitRelogio         		           		= Button(self.ContainerGrupoNk)
+		self.botaoGrupoNkTransfruitRelogio         		["text"]        = "R"
+		self.botaoGrupoNkTransfruitRelogio         		["background"]  = Info.GrupoNk.Transfruit.RelogioCor
+		self.botaoGrupoNkTransfruitRelogio         		["width"]       = 1
+		self.botaoGrupoNkTransfruitRelogio         		["height"]      = 1
+
+		self.botaoGrupoNkTransfruit.grid           		(row=7,column=0,sticky = "N")
+		self.botaoGrupoNkTransfruitRelogio.grid    		(row=7,column=1,sticky = "N")
+
+
+		self.botaoGrupoNkDistribuidora                         			= Button(self.ContainerGrupoNk)
+		self.botaoGrupoNkDistribuidora                	["text"]        = "Distribuidora"
+		self.botaoGrupoNkDistribuidora                	["background"]  = Info.GrupoNk.Distribuidora.ModuloCor
+		self.botaoGrupoNkDistribuidora                	["width"]       = 13
+		self.botaoGrupoNkDistribuidora                	["height"]      = 1
+		self.botaoGrupoNkDistribuidora.bind           	("<Button-1>",lambda e: popup("GrupoNk","Distribuidora",
+														Info.GrupoNk.Distribuidora.IP, 
+														Info.GrupoNk.Distribuidora.Porta, 
+														Info.GrupoNk.Distribuidora.NumeroRep, 
+														Info.GrupoNk.Distribuidora.Responsavel, 
+														Info.GrupoNk.Distribuidora.Telefone))
+
+		self.botaoGrupoNkDistribuidoraRelogio         	           		= Button(self.ContainerGrupoNk)
+		self.botaoGrupoNkDistribuidoraRelogio         	["text"]        = "R"
+		self.botaoGrupoNkDistribuidoraRelogio         	["background"]  = Info.GrupoNk.Distribuidora.RelogioCor
+		self.botaoGrupoNkDistribuidoraRelogio         	["width"]       = 1
+		self.botaoGrupoNkDistribuidoraRelogio         	["height"]      = 1
+
+		self.botaoGrupoNkDistribuidora.grid           	(row=8,column=0,sticky = "N")
+		self.botaoGrupoNkDistribuidoraRelogio.grid    	(row=8,column=1,sticky = "N")
+
+
+
+		self.botaoGrupoNkNKFilial                             			= Button(self.ContainerGrupoNk)
+		self.botaoGrupoNkNKFilial                		["text"]        = "NK Filial"
+		self.botaoGrupoNkNKFilial                		["background"]  = Info.GrupoNk.NKFilial.ModuloCor
+		self.botaoGrupoNkNKFilial                		["width"]       = 13
+		self.botaoGrupoNkNKFilial                		["height"]      = 1
+		self.botaoGrupoNkNKFilial.bind           		("<Button-1>",lambda e: popup("GrupoNk","NK Filial",
+														Info.GrupoNk.NKFilial.IP,  
+														Info.GrupoNk.NKFilial.Porta, 
+														Info.GrupoNk.NKFilial.NumeroRep, 
+														Info.GrupoNk.NKFilial.Responsavel, 
+														Info.GrupoNk.NKFilial.Telefone))
+
+		self.botaoGrupoNkNKFilialRelogio         		           		= Button(self.ContainerGrupoNk)
+		self.botaoGrupoNkNKFilialRelogio         		["text"]        = "R"
+		self.botaoGrupoNkNKFilialRelogio         		["background"]  = Info.GrupoNk.NKFilial.RelogioCor
+		self.botaoGrupoNkNKFilialRelogio         		["width"]       = 1
+		self.botaoGrupoNkNKFilialRelogio         		["height"]      = 1
+
+		self.botaoGrupoNkNKFilial.grid           		(row=9,column=0,sticky = "N")
+		self.botaoGrupoNkNKFilialRelogio.grid    		(row=9,column=1,sticky = "N")
+
+
+
+	def Create_ContainerGeral(self,root):
+
 		self.ContainerRelogios		      = Frame (root)
 		self.ContainerRelogios.grid               (row=0, sticky = N + S + E + W)
 
 
-		############################################## COLUMN 0 ########################################################
 
-		self.ContainerColuna0             = Frame (self.ContainerRelogios)
-		self.ContainerBuilding            = Frame (self.ContainerColuna0)
-		self.ContainerCasaCristo          = Frame (self.ContainerColuna0)
-		self.ContainerBestInClass         = Frame (self.ContainerColuna0)
-		self.ContainerIsoRadio			  = Frame (self.ContainerColuna0)
+	def Create_ContainerColuna0(self,root):
 
 
-		self.ContainerColuna0.grid                (row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
-		self.ContainerBuilding.grid               (row=0, column=0,pady=5, padx=1, columnspan=1 ,sticky="N")
-		self.ContainerCasaCristo.grid             (row=1, column=0,pady=5, padx=1, columnspan=1, sticky="N")
-		self.ContainerBestInClass.grid            (row=2, column=0,pady=5, padx=1, columnspan=1, sticky="N")
-		self.ContainerIsoRadio.grid               (row=3, column=0,pady=5, padx=1, columnspan=1, sticky="N")
+		self.ContainerColuna0             			= Frame (self.ContainerRelogios)
+		self.ContainerBuilding           			= Frame (self.ContainerColuna0)
+		self.ContainerCasaCristo          			= Frame (self.ContainerColuna0)
+		self.ContainerBestInClass         			= Frame (self.ContainerColuna0)
+		self.ContainerIsoRadio			  			= Frame (self.ContainerColuna0)
 
-		############################################## COLUMN 1 ########################################################
 
-		self.ContainerColuna1             = Frame (self.ContainerRelogios)
-		self.ContainerLaser               = Frame (self.ContainerColuna1)
-		self.ContainerLotten              = Frame (self.ContainerColuna1)
+		self.ContainerColuna0.grid                	(row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
+		self.ContainerBuilding.grid               	(row=0, column=0,pady=5, padx=1, columnspan=1 ,sticky="N")
+		self.ContainerCasaCristo.grid             	(row=1, column=0,pady=5, padx=1, columnspan=1, sticky="N")
+		self.ContainerBestInClass.grid            	(row=2, column=0,pady=5, padx=1, columnspan=1, sticky="N")
+		self.ContainerIsoRadio.grid               	(row=3, column=0,pady=5, padx=1, columnspan=1, sticky="N")
 
-		self.ContainerColuna1.grid                (row=0, column=1,pady=5, padx=1, columnspan=1, sticky="N")
-		self.ContainerLaser.grid                  (row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
-		self.ContainerLotten.grid                 (row=2, column=0,pady=5, padx=1, columnspan=1, sticky="N")
 
-		############################################## COLUMN 2 ########################################################
 
-	
+	def Create_ContainerColuna1(self,root):
+
+
+		self.ContainerColuna1             			= Frame (self.ContainerRelogios)
+		self.ContainerLaser               			= Frame (self.ContainerColuna1)
+		self.ContainerLotten              			= Frame (self.ContainerColuna1)
+		self.ContainerGrupoNk             			= Frame (self.ContainerColuna1)
+
+
+		self.ContainerColuna1.grid                	(row=0, column=1,pady=5, padx=1, columnspan=1, sticky="N")
+		self.ContainerLaser.grid                  	(row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
+		self.ContainerLotten.grid                 	(row=2, column=0,pady=5, padx=1, columnspan=1, sticky="N")
+		self.ContainerGrupoNk.grid                 	(row=3, column=0,pady=5, padx=1, columnspan=1, sticky="N")
+
+
+
+	def Create_ContainerColuna2(self,root):
+
+
 		self.ContainerColuna2             = Frame (self.ContainerRelogios)
 		self.ContainerGravex              = Frame (self.ContainerColuna2)
 
@@ -2156,7 +2398,9 @@ class TelaRelogios1(object):
 		self.ContainerGravex.grid                 (row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
 
 
-		############################################## COLUMN 3 ########################################################
+
+	def Create_ContainerColuna3(self,root):
+
 
 		self.ContainerColuna3             = Frame (self.ContainerRelogios)
 		self.ContainerPredman             = Frame (self.ContainerColuna3)
@@ -2164,7 +2408,10 @@ class TelaRelogios1(object):
 		self.ContainerColuna3.grid                (row=0, column=3,pady=5, padx=1, columnspan=1, sticky="N")
 		self.ContainerPredman.grid                (row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
 
-		############################################## COLUMN 4 ########################################################
+
+
+	def Create_ContainerColuna4(self,root):
+
 
 		self.ContainerColuna4             = Frame (self.ContainerRelogios)
 		self.ContainerTarek               = Frame (self.ContainerColuna4)
@@ -2173,7 +2420,10 @@ class TelaRelogios1(object):
 		self.ContainerColuna4.grid                (row=0, column=4,pady=5, padx=1, columnspan=1, sticky="N")
 		self.ContainerTarek.grid                  (row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
 
-		############################################## COLUMN 5 ########################################################
+
+
+	def Create_ContainerColuna5(self,root):
+
 
 		self.ContainerColuna5             = Frame (self.ContainerRelogios)
 		self.ContainerMilenioErvas        = Frame (self.ContainerColuna5)
@@ -2182,7 +2432,10 @@ class TelaRelogios1(object):
 		self.ContainerColuna5.grid                (row=0, column=5,pady=5, padx=1, columnspan=1, sticky="N")
 		self.ContainerMilenioErvas.grid           (row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
 
-		############################################## COLUMN 6 ########################################################
+
+
+	def Create_ContainerColuna6(self,root):
+
 
 		self.ContainerColuna6             = Frame (self.ContainerRelogios)
 		self.ContainerUniman              = Frame (self.ContainerColuna6)
@@ -2191,7 +2444,9 @@ class TelaRelogios1(object):
 		self.ContainerColuna6.grid                (row=0, column=6,pady=5, padx=1, columnspan=1, sticky="N")
 		self.ContainerUniman.grid                 (row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
 
-		############################################## COLUMN 7 ########################################################
+
+
+	def Create_ContainerColuna7(self,root):
 
 		self.ContainerColuna7             = Frame (self.ContainerRelogios)
 		self.ContainerUniman              = Frame (self.ContainerColuna7)
@@ -2199,7 +2454,10 @@ class TelaRelogios1(object):
 		self.ContainerColuna7.grid                (row=0, column=7,pady=5, padx=1, columnspan=1, sticky="N")
 		self.ContainerUniman.grid                 (row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
 
-		############################################## COLUMN 8 ########################################################
+
+
+	def Create_ContainerColuna8(self,root):
+
 
 		self.ContainerColuna8             = Frame (self.ContainerRelogios)
 		self.ContainerUniman              = Frame (self.ContainerColuna8)
@@ -2209,7 +2467,8 @@ class TelaRelogios1(object):
 		self.ContainerUniman.grid                 (row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
 
 
-		############################################## COLUMN 9 ########################################################
+
+	def Create_ContainerColuna9(self,root):
 
 		self.ContainerColuna9             = Frame (self.ContainerRelogios)
 		self.ContainerUniman              = Frame (self.ContainerColuna9)
@@ -2220,8 +2479,10 @@ class TelaRelogios1(object):
 		self.ContainerUniman.grid                 (row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
 
 
-		############################################## COLUMN 10 #######################################################
 
+	def Create_ContainerColuna10(self,root):
+
+	
 		self.ContainerColuna10             = Frame (self.ContainerRelogios)
 		
 		self.ContainerUniman              = Frame (self.ContainerColuna10)
@@ -2230,7 +2491,9 @@ class TelaRelogios1(object):
 		self.ContainerUniman.grid                 (row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
 
 
-		############################################## COLUMN 11 #######################################################
+
+	def Create_ContainerColuna11(self,root):
+
 
 		self.ContainerColuna11             = Frame (self.ContainerRelogios)
 		self.ContainerUniman              = Frame (self.ContainerColuna11)
@@ -2239,6 +2502,46 @@ class TelaRelogios1(object):
 		self.ContainerColuna11.grid                (row=0, column=11,pady=5, padx=1, columnspan=1, sticky="N")
 
 		self.ContainerUniman.grid                 (row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
+
+
+
+	def Create_container(self,root):
+
+
+		self.Create_ContainerGeral(root)
+
+		self.Create_ContainerColuna0(root)
+
+		self.Create_ContainerColuna1(root)
+
+		self.Create_ContainerColuna2(root)
+
+		self.Create_ContainerColuna3(root)
+
+		self.Create_ContainerColuna4(root)
+
+		self.Create_ContainerColuna5(root)
+
+		self.Create_ContainerColuna6(root)
+
+		self.Create_ContainerColuna7(root)
+
+		self.Create_ContainerColuna8(root)
+
+		self.Create_ContainerColuna9(root)
+
+		self.Create_ContainerColuna10(root)
+
+		self.Create_ContainerColuna11(root)
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2328,6 +2631,58 @@ class TelaRelogios1(object):
 
 
 
+		elif empresa == "gruponk":
+		
+
+
+			if relogio == "nelson":
+
+				self.botaoGrupoNkNelsonKioshi.configure               		(bg=Info.GrupoNk.NelsonKioshi.ModuloCor)
+				self.botaoGrupoNkNelsonKioshiRelogio.configure        		(bg=Info.GrupoNk.NelsonKioshi.RelogioCor)
+
+			elif relogio == "furukawa":
+
+				self.botaoGrupoNkRDFurukawa.configure               		(bg=Info.GrupoNk.RDFurukawa.ModuloCor)
+				self.botaoGrupoNkRDFurukawaRelogio.configure        		(bg=Info.GrupoNk.RDFurukawa.RelogioCor)
+
+			elif relogio == "kio1":
+
+				self.botaoGrupoNkKio1.configure               		(bg=Info.GrupoNk.Kio1.ModuloCor)
+				self.botaoGrupoNkKio1Relogio.configure        		(bg=Info.GrupoNk.Kio1.RelogioCor)
+
+			elif relogio == "kio2":
+
+				self.botaoGrupoNkKio2.configure               	(bg=Info.GrupoNk.Kio2.ModuloCor)
+				self.botaoGrupoNkKio2Relogio.configure        	(bg=Info.GrupoNk.Kio2.RelogioCor)
+
+
+			elif relogio == "granjaviana":
+
+				self.botaoGrupoNkGranjaViana.configure               		(bg=Info.GrupoNk.GranjaViana.ModuloCor)
+				self.botaoGrupoNkGranjaVianaRelogio.configure        		(bg=Info.GrupoNk.GranjaViana.RelogioCor)
+
+			elif relogio == "santacecilia":
+
+				self.botaoGrupoNkSantaCecilia.configure               		(bg=Info.GrupoNk.SantaCecilia.ModuloCor)
+				self.botaoGrupoNkSantaCeciliaRelogio.configure        		(bg=Info.GrupoNk.SantaCecilia.RelogioCor)
+
+			elif relogio == "transfruit":
+
+				self.botaoGrupoNkTransfruit.configure               		(bg=Info.GrupoNk.Transfruit.ModuloCor)
+				self.botaoGrupoNkTransfruitRelogio.configure        		(bg=Info.GrupoNk.Transfruit.RelogioCor)
+
+			elif relogio == "distrdefrutas":
+
+				self.botaoGrupoNkDistribuidora.configure               	(bg=Info.GrupoNk.Distribuidora.ModuloCor)
+				self.botaoGrupoNkDistribuidoraRelogio.configure        	(bg=Info.GrupoNk.Distribuidora.RelogioCor)
+
+			elif relogio == "nkhortifruit":
+
+				self.botaoGrupoNkNKFilial.configure               	(bg=Info.GrupoNk.NKFilial.ModuloCor)
+				self.botaoGrupoNkNKFilialRelogio.configure        	(bg=Info.GrupoNk.NKFilial.RelogioCor)
+			
+			
+ 
 		elif empresa == "casacristo":
 		
 			if relogio == "adm":
@@ -2354,10 +2709,7 @@ class TelaRelogios1(object):
 
 				self.botaoCasaCristoVMatilde.configure               	(bg=Info.CasaCristo.VovoMatilde.ModuloCor)
 				self.botaoCasaCristoVMatildeRelogio.configure        	(bg=Info.CasaCristo.VovoMatilde.RelogioCor)
-			
-			self.msgCasaCristoContage.configure	  						(text=str(Info.CasaCristo.Status.Contage)+"/"+
-																		str(Info.CasaCristo.Status.TotalRelogios))
- 
+
 
 
 		elif empresa == "bestinclass":

@@ -41,6 +41,18 @@ class ThreadloopGravex(threading.Thread):
 	def run(self):
 		loopGravex()
 
+class ThreadloopGrupoNk(threading.Thread):
+	def __init__(self):
+		threading.Thread.__init__(self)
+	def run(self):
+		loopGrupoNk()
+
+def loopGrupoNk():
+	while(1):
+		TestaGrupoNk()
+		if Controle.Stop : break 
+	Flag.quit = True
+
 
 def loopGravex():
 	while(1):
