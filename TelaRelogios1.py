@@ -2112,6 +2112,7 @@ class TelaRelogios1(object):
 		self.botaoBuildingRioJaneiroRelogio.grid    (row=3,column=1,sticky = "N")
 
 
+
 	def Create_container(self,root):
 
 
@@ -2272,7 +2273,7 @@ class TelaRelogios1(object):
 				self.botaoRInstituto.configure                   		(bg=Info.Laser.Instituto.RelogioCor)
 
 
-		if empresa == "building":
+		elif empresa == "building":
 
 			if relogio == "allianz":	
 				
@@ -2312,8 +2313,8 @@ class TelaRelogios1(object):
 
 			elif relogio == "mimarcos":
 
-				self.botaoGravexMiMarcos.configure						(bg=Info.Gravex.Mimarcos.ModuloCor)
-				self.botaoGravexMiMarcosRelogio.configure 				(bg=Info.Gravex.Mimarcos.RelogioCor)
+				self.botaoGravexMiMarcos.configure						(bg=Info.Gravex.MiMarcos.ModuloCor)
+				self.botaoGravexMiMarcosRelogio.configure 				(bg=Info.Gravex.MiMarcos.RelogioCor)
 
 
 			elif relogio == "dantchini":

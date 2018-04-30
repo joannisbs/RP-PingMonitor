@@ -160,19 +160,19 @@ def AtualizaGravex(relogio,result):
 
 		if result == 1:
 			Info.Gravex.MiMarcos.ModuloCor  = "red"
-			Info.Gravex.Mimarcos.RelogioCor = "red"
+			Info.Gravex.MiMarcos.RelogioCor = "red"
 		elif result == 2:
-			Info.Gravex.Mimarcos.ModuloCor  = "green"
-			Info.Gravex.Mimarcos.RelogioCor = "red"
+			Info.Gravex.MiMarcos.ModuloCor  = "green"
+			Info.Gravex.MiMarcos.RelogioCor = "red"
 		elif result == 3:
-			Info.Gravex.Mimarcos.ModuloCor  = "green"
-			Info.Gravex.Mimarcos.RelogioCor = "green"
+			Info.Gravex.MiMarcos.ModuloCor  = "green"
+			Info.Gravex.MiMarcos.RelogioCor = "green"
 		elif result == 4:
-			Info.Gravex.Mimarcos.ModuloCor  = "blue"
-			Info.Gravex.Mimarcos.RelogioCor = "blue"
+			Info.Gravex.MiMarcos.ModuloCor  = "blue"
+			Info.Gravex.MiMarcos.RelogioCor = "blue"
 		else:
-			Info.Gravex.Mimarcos.ModuloCor  = "pink"
-			Info.Gravex.Mimarcos.RelogioCor = "pink"
+			Info.Gravex.MiMarcos.ModuloCor  = "pink"
+			Info.Gravex.MiMarcos.RelogioCor = "pink"
 
 	elif relogio == "dantchini":
 		if result == 1:
