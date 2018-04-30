@@ -947,6 +947,343 @@ def AtualizaCorGrupoNk(relogio,result):
 			Info.GrupoNk.NKFilial.ModuloCor  = "pink"
 			Info.GrupoNk.NKFilial.RelogioCor = "pink"
 
+def AtualizaLotten(relogio,result):
+
+	if relogio == "sfjardins":
+
+		if result == 1:
+			Info.Lotten.Jardins.ModuloCor  = "red"
+			Info.Lotten.Jardins.RelogioCor = "red"
+		elif result == 2:
+			Info.Lotten.Jardins.ModuloCor  = "green"
+			Info.Lotten.Jardins.RelogioCor = "red"
+		elif result == 3:
+			Info.Lotten.Jardins.ModuloCor  = "green"
+			Info.Lotten.Jardins.RelogioCor = "green"
+		elif result == 4:
+			Info.Lotten.Jardins.ModuloCor  = "blue"
+			Info.Lotten.Jardins.RelogioCor = "blue"
+		else:
+			Info.Lotten.Jardins.ModuloCor  = "pink"
+			Info.Lotten.Jardins.RelogioCor = "pink"
+
+	if relogio == "alphaville":
+
+		if result == 1:
+			Info.Lotten.Alphaville.ModuloCor  = "red"
+			Info.Lotten.Alphaville.RelogioCor = "red"
+		elif result == 2:
+			Info.Lotten.Alphaville.ModuloCor  = "green"
+			Info.Lotten.Alphaville.RelogioCor = "red"
+		elif result == 3:
+			Info.Lotten.Alphaville.ModuloCor  = "green"
+			Info.Lotten.Alphaville.RelogioCor = "green"
+		elif result == 4:
+			Info.Lotten.Alphaville.ModuloCor  = "blue"
+			Info.Lotten.Alphaville.RelogioCor = "blue"
+		else:
+			Info.Lotten.Alphaville.ModuloCor  = "pink"
+			Info.Lotten.Alphaville.RelogioCor = "pink"
+
+	if relogio == "osasco":
+
+		if result == 1:
+			Info.Lotten.Osasco.ModuloCor  = "red"
+			Info.Lotten.Osasco.RelogioCor = "red"
+		elif result == 2:
+			Info.Lotten.Osasco.ModuloCor  = "green"
+			Info.Lotten.Osasco.RelogioCor = "red"
+		elif result == 3:
+			Info.Lotten.Osasco.ModuloCor  = "green"
+			Info.Lotten.Osasco.RelogioCor = "green"
+		elif result == 4:
+			Info.Lotten.Osasco.ModuloCor  = "blue"
+			Info.Lotten.Osasco.RelogioCor = "blue"
+		else:
+			Info.Lotten.Osasco.ModuloCor  = "pink"
+			Info.Lotten.Osasco.RelogioCor = "pink"
+
+	if relogio == "santana":
+
+		if result == 1:
+			Info.Lotten.Santana.ModuloCor  = "red"
+			Info.Lotten.Santana.RelogioCor = "red"
+		elif result == 2:
+			Info.Lotten.Santana.ModuloCor  = "green"
+			Info.Lotten.Santana.RelogioCor = "red"
+		elif result == 3:
+			Info.Lotten.Santana.ModuloCor  = "green"
+			Info.Lotten.Santana.RelogioCor = "green"
+		elif result == 4:
+			Info.Lotten.Santana.ModuloCor  = "blue"
+			Info.Lotten.Santana.RelogioCor = "blue"
+		else:
+			Info.Lotten.Santana.ModuloCor  = "pink"
+			Info.Lotten.Santana.RelogioCor = "pink"
+
+	if relogio == "tatuape":
+
+		if result == 1:
+			Info.Lotten.Tatuape.ModuloCor  = "red"
+			Info.Lotten.Tatuape.RelogioCor = "red"
+		elif result == 2:
+			Info.Lotten.Tatuape.ModuloCor  = "green"
+			Info.Lotten.Tatuape.RelogioCor = "red"
+		elif result == 3:
+			Info.Lotten.Tatuape.ModuloCor  = "green"
+			Info.Lotten.Tatuape.RelogioCor = "green"
+		elif result == 4:
+			Info.Lotten.Tatuape.ModuloCor  = "blue"
+			Info.Lotten.Tatuape.RelogioCor = "blue"
+		else:
+			Info.Lotten.Tatuape.ModuloCor  = "pink"
+			Info.Lotten.Tatuape.RelogioCor = "pink"
+
+	if relogio == "moema":
+
+		if result == 1:
+			Info.Lotten.Moema.ModuloCor  = "red"
+			Info.Lotten.Moema.RelogioCor = "red"
+		elif result == 2:
+			Info.Lotten.Moema.ModuloCor  = "green"
+			Info.Lotten.Moema.RelogioCor = "red"
+		elif result == 3:
+			Info.Lotten.Moema.ModuloCor  = "green"
+			Info.Lotten.Moema.RelogioCor = "green"
+		elif result == 4:
+			Info.Lotten.Moema.ModuloCor  = "blue"
+			Info.Lotten.Moema.RelogioCor = "blue"
+		else:
+			Info.Lotten.Moema.ModuloCor  = "pink"
+			Info.Lotten.Moema.RelogioCor = "pink"
+
+	if relogio == "jardimsul":
+
+		if result == 1:
+			Info.Lotten.JardimSul.ModuloCor  = "red"
+			Info.Lotten.JardimSul.RelogioCor = "red"
+		elif result == 2:
+			Info.Lotten.JardimSul.ModuloCor  = "green"
+			Info.Lotten.JardimSul.RelogioCor = "red"
+		elif result == 3:
+			Info.Lotten.JardimSul.ModuloCor  = "green"
+			Info.Lotten.JardimSul.RelogioCor = "green"
+		elif result == 4:
+			Info.Lotten.JardimSul.ModuloCor  = "blue"
+			Info.Lotten.JardimSul.RelogioCor = "blue"
+		else:
+			Info.Lotten.JardimSul.ModuloCor  = "pink"
+			Info.Lotten.JardimSul.RelogioCor = "pink"
+
+	if relogio == "conceicao":
+
+		if result == 1:
+			Info.Lotten.Conceicao.ModuloCor  = "red"
+			Info.Lotten.Conceicao.RelogioCor = "red"
+		elif result == 2:
+			Info.Lotten.Conceicao.ModuloCor  = "green"
+			Info.Lotten.Conceicao.RelogioCor = "red"
+		elif result == 3:
+			Info.Lotten.Conceicao.ModuloCor  = "green"
+			Info.Lotten.Conceicao.RelogioCor = "green"
+		elif result == 4:
+			Info.Lotten.Conceicao.ModuloCor  = "blue"
+			Info.Lotten.Conceicao.RelogioCor = "blue"
+		else:
+			Info.Lotten.Conceicao.ModuloCor  = "pink"
+			Info.Lotten.Conceicao.RelogioCor = "pink"
+
+	if relogio == "lapa":
+
+		if result == 1:
+			Info.Lotten.Lapa.ModuloCor  = "red"
+			Info.Lotten.Lapa.RelogioCor = "red"
+		elif result == 2:
+			Info.Lotten.Lapa.ModuloCor  = "green"
+			Info.Lotten.Lapa.RelogioCor = "red"
+		elif result == 3:
+			Info.Lotten.Lapa.ModuloCor  = "green"
+			Info.Lotten.Lapa.RelogioCor = "green"
+		elif result == 4:
+			Info.Lotten.Lapa.ModuloCor  = "blue"
+			Info.Lotten.Lapa.RelogioCor = "blue"
+		else:
+			Info.Lotten.Lapa.ModuloCor  = "pink"
+			Info.Lotten.Lapa.RelogioCor = "pink"
+
+	if relogio == "perdizes":
+
+		if result == 1:
+			Info.Lotten.Perdizes.ModuloCor  = "red"
+			Info.Lotten.Perdizes.RelogioCor = "red"
+		elif result == 2:
+			Info.Lotten.Perdizes.ModuloCor  = "green"
+			Info.Lotten.Perdizes.RelogioCor = "red"
+		elif result == 3:
+			Info.Lotten.Perdizes.ModuloCor  = "green"
+			Info.Lotten.Perdizes.RelogioCor = "green"
+		elif result == 4:
+			Info.Lotten.Perdizes.ModuloCor  = "blue"
+			Info.Lotten.Perdizes.RelogioCor = "blue"
+		else:
+			Info.Lotten.Perdizes.ModuloCor  = "pink"
+			Info.Lotten.Perdizes.RelogioCor = "pink"
+
+	if relogio == "saocaetano":
+
+		if result == 1:
+			Info.Lotten.SaoCaetano.ModuloCor  = "red"
+			Info.Lotten.SaoCaetano.RelogioCor = "red"
+		elif result == 2:
+			Info.Lotten.SaoCaetano.ModuloCor  = "green"
+			Info.Lotten.SaoCaetano.RelogioCor = "red"
+		elif result == 3:
+			Info.Lotten.SaoCaetano.ModuloCor  = "green"
+			Info.Lotten.SaoCaetano.RelogioCor = "green"
+		elif result == 4:
+			Info.Lotten.SaoCaetano.ModuloCor  = "blue"
+			Info.Lotten.SaoCaetano.RelogioCor = "blue"
+		else:
+			Info.Lotten.SaoCaetano.ModuloCor  = "pink"
+			Info.Lotten.SaoCaetano.RelogioCor = "pink"
+
+	if relogio == "pinheiros":
+
+		if result == 1:
+			Info.Lotten.Pinheiros.ModuloCor  = "red"
+			Info.Lotten.Pinheiros.RelogioCor = "red"
+		elif result == 2:
+			Info.Lotten.Pinheiros.ModuloCor  = "green"
+			Info.Lotten.Pinheiros.RelogioCor = "red"
+		elif result == 3:
+			Info.Lotten.Pinheiros.ModuloCor  = "green"
+			Info.Lotten.Pinheiros.RelogioCor = "green"
+		elif result == 4:
+			Info.Lotten.Pinheiros.ModuloCor  = "blue"
+			Info.Lotten.Pinheiros.RelogioCor = "blue"
+		else:
+			Info.Lotten.Pinheiros.ModuloCor  = "pink"
+			Info.Lotten.Pinheiros.RelogioCor = "pink"
+
+
+	if relogio == "morumbi":
+
+		if result == 1:
+			Info.Lotten.Morumbi.ModuloCor  = "red"
+			Info.Lotten.Morumbi.RelogioCor = "red"
+		elif result == 2:
+			Info.Lotten.Morumbi.ModuloCor  = "green"
+			Info.Lotten.Morumbi.RelogioCor = "red"
+		elif result == 3:
+			Info.Lotten.Morumbi.ModuloCor  = "green"
+			Info.Lotten.Morumbi.RelogioCor = "green"
+		elif result == 4:
+			Info.Lotten.Morumbi.ModuloCor  = "blue"
+			Info.Lotten.Morumbi.RelogioCor = "blue"
+		else:
+			Info.Lotten.Morumbi.ModuloCor  = "pink"
+			Info.Lotten.Morumbi.RelogioCor = "pink"
+
+	if relogio == "berrini":
+
+		if result == 1:
+			Info.Lotten.Berrini.ModuloCor  = "red"
+			Info.Lotten.Berrini.RelogioCor = "red"
+		elif result == 2:
+			Info.Lotten.Berrini.ModuloCor  = "green"
+			Info.Lotten.Berrini.RelogioCor = "red"
+		elif result == 3:
+			Info.Lotten.Berrini.ModuloCor  = "green"
+			Info.Lotten.Berrini.RelogioCor = "green"
+		elif result == 4:
+			Info.Lotten.Berrini.ModuloCor  = "blue"
+			Info.Lotten.Berrini.RelogioCor = "blue"
+		else:
+			Info.Lotten.Berrini.ModuloCor  = "pink"
+			Info.Lotten.Berrini.RelogioCor = "pink"
+
+
+	if relogio == "vilamariana":
+
+		if result == 1:
+			Info.Lotten.VilaMariana.ModuloCor  = "red"
+			Info.Lotten.VilaMariana.RelogioCor = "red"
+		elif result == 2:
+			Info.Lotten.VilaMariana.ModuloCor  = "green"
+			Info.Lotten.VilaMariana.RelogioCor = "red"
+		elif result == 3:
+			Info.Lotten.VilaMariana.ModuloCor  = "green"
+			Info.Lotten.VilaMariana.RelogioCor = "green"
+		elif result == 4:
+			Info.Lotten.VilaMariana.ModuloCor  = "blue"
+			Info.Lotten.VilaMariana.RelogioCor = "blue"
+		else:
+			Info.Lotten.VilaMariana.ModuloCor  = "pink"
+			Info.Lotten.VilaMariana.RelogioCor = "pink"
+
+
+	if relogio == "vilaolimpia":
+
+		if result == 1:
+			Info.Lotten.VilaOlimpia.ModuloCor  = "red"
+			Info.Lotten.VilaOlimpia.RelogioCor = "red"
+		elif result == 2:
+			Info.Lotten.VilaOlimpia.ModuloCor  = "green"
+			Info.Lotten.VilaOlimpia.RelogioCor = "red"
+		elif result == 3:
+			Info.Lotten.VilaOlimpia.ModuloCor  = "green"
+			Info.Lotten.VilaOlimpia.RelogioCor = "green"
+		elif result == 4:
+			Info.Lotten.VilaOlimpia.ModuloCor  = "blue"
+			Info.Lotten.VilaOlimpia.RelogioCor = "blue"
+		else:
+			Info.Lotten.VilaOlimpia.ModuloCor  = "pink"
+			Info.Lotten.VilaOlimpia.RelogioCor = "pink"
+
+
+	if relogio == "itaim":
+
+		if result == 1:
+			Info.Lotten.Itaim.ModuloCor  = "red"
+			Info.Lotten.Itaim.RelogioCor = "red"
+		elif result == 2:
+			Info.Lotten.Itaim.ModuloCor  = "green"
+			Info.Lotten.Itaim.RelogioCor = "red"
+		elif result == 3:
+			Info.Lotten.Itaim.ModuloCor  = "green"
+			Info.Lotten.Itaim.RelogioCor = "green"
+		elif result == 4:
+			Info.Lotten.Itaim.ModuloCor  = "blue"
+			Info.Lotten.Itaim.RelogioCor = "blue"
+		else:
+			Info.Lotten.Itaim.ModuloCor  = "pink"
+			Info.Lotten.Itaim.RelogioCor = "pink"
+
+
+	if relogio == "garulhos":
+
+		if result == 1:
+			Info.Lotten.Guarulhos.ModuloCor  = "red"
+			Info.Lotten.Guarulhos.RelogioCor = "red"
+		elif result == 2:
+			Info.Lotten.Guarulhos.ModuloCor  = "green"
+			Info.Lotten.Guarulhos.RelogioCor = "red"
+		elif result == 3:
+			Info.Lotten.Guarulhos.ModuloCor  = "green"
+			Info.Lotten.Guarulhos.RelogioCor = "green"
+		elif result == 4:
+			Info.Lotten.Guarulhos.ModuloCor  = "blue"
+			Info.Lotten.Guarulhos.RelogioCor = "blue"
+		else:
+			Info.Lotten.Guarulhos.ModuloCor  = "pink"
+			Info.Lotten.Guarulhos.RelogioCor = "pink"
+
+
+
+
+
+
+
 
 
 def AtualizaCor(empresa,relogio,result):
@@ -978,6 +1315,10 @@ def AtualizaCor(empresa,relogio,result):
 
 	elif empresa == "gruponk":
 		AtualizaCorGrupoNk(relogio,result)
+
+
+	elif empresa == "lotten":
+		AtualizaLotten(relogio,result)
 
 
 

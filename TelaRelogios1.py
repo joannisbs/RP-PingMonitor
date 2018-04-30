@@ -2647,13 +2647,13 @@ class TelaRelogios1(object):
 
 			elif relogio == "kio1":
 
-				self.botaoGrupoNkKio1.configure               		(bg=Info.GrupoNk.Kio1.ModuloCor)
-				self.botaoGrupoNkKio1Relogio.configure        		(bg=Info.GrupoNk.Kio1.RelogioCor)
+				self.botaoGrupoNkKio1.configure               				(bg=Info.GrupoNk.Kio1.ModuloCor)
+				self.botaoGrupoNkKio1Relogio.configure        				(bg=Info.GrupoNk.Kio1.RelogioCor)
 
 			elif relogio == "kio2":
 
-				self.botaoGrupoNkKio2.configure               	(bg=Info.GrupoNk.Kio2.ModuloCor)
-				self.botaoGrupoNkKio2Relogio.configure        	(bg=Info.GrupoNk.Kio2.RelogioCor)
+				self.botaoGrupoNkKio2.configure               				(bg=Info.GrupoNk.Kio2.ModuloCor)
+				self.botaoGrupoNkKio2Relogio.configure        				(bg=Info.GrupoNk.Kio2.RelogioCor)
 
 
 			elif relogio == "granjaviana":
@@ -2673,13 +2673,13 @@ class TelaRelogios1(object):
 
 			elif relogio == "distrdefrutas":
 
-				self.botaoGrupoNkDistribuidora.configure               	(bg=Info.GrupoNk.Distribuidora.ModuloCor)
-				self.botaoGrupoNkDistribuidoraRelogio.configure        	(bg=Info.GrupoNk.Distribuidora.RelogioCor)
+				self.botaoGrupoNkDistribuidora.configure               		(bg=Info.GrupoNk.Distribuidora.ModuloCor)
+				self.botaoGrupoNkDistribuidoraRelogio.configure        		(bg=Info.GrupoNk.Distribuidora.RelogioCor)
 
 			elif relogio == "nkhortifruit":
 
-				self.botaoGrupoNkNKFilial.configure               	(bg=Info.GrupoNk.NKFilial.ModuloCor)
-				self.botaoGrupoNkNKFilialRelogio.configure        	(bg=Info.GrupoNk.NKFilial.RelogioCor)
+				self.botaoGrupoNkNKFilial.configure               			(bg=Info.GrupoNk.NKFilial.ModuloCor)
+				self.botaoGrupoNkNKFilialRelogio.configure        			(bg=Info.GrupoNk.NKFilial.RelogioCor)
 			
 			
  

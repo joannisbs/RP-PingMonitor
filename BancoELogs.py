@@ -537,3 +537,185 @@ def leBanco():
 				Info.GrupoNk.NKFilial.Telefone           = Telefone_Lido
 
 
+		elif empresa_lido == "lotten":
+
+
+			if relogio_lido == "sfjardins":
+				
+				Info.Lotten.Jardins.Empresa               = empresa_lido
+				Info.Lotten.Jardins.Relogio               = relogio_lido
+				Info.Lotten.Jardins.IP                    = ip_lido
+				Info.Lotten.Jardins.Porta                 = port_lido
+				Info.Lotten.Jardins.NumeroRep             = NumeroReP_Lido
+				Info.Lotten.Jardins.Responsavel           = Responsavel_Lido
+				Info.Lotten.Jardins.Telefone              = Telefone_Lido
+
+			if relogio_lido == "alphaville":
+				
+				Info.Lotten.Alphaville.Empresa               = empresa_lido
+				Info.Lotten.Alphaville.Relogio               = relogio_lido
+				Info.Lotten.Alphaville.IP                    = ip_lido
+				Info.Lotten.Alphaville.Porta                 = port_lido
+				Info.Lotten.Alphaville.NumeroRep             = NumeroReP_Lido
+				Info.Lotten.Alphaville.Responsavel           = Responsavel_Lido
+				Info.Lotten.Alphaville.Telefone              = Telefone_Lido
+
+			if relogio_lido == "osasco":
+				
+				Info.Lotten.Osasco.Empresa               = empresa_lido
+				Info.Lotten.Osasco.Relogio               = relogio_lido
+				Info.Lotten.Osasco.IP                    = ip_lido
+				Info.Lotten.Osasco.Porta                 = port_lido
+				Info.Lotten.Osasco.NumeroRep             = NumeroReP_Lido
+				Info.Lotten.Osasco.Responsavel           = Responsavel_Lido
+				Info.Lotten.Osasco.Telefone              = Telefone_Lido
+
+			if relogio_lido == "santana":
+				
+				Info.Lotten.Santana.Empresa               = empresa_lido
+				Info.Lotten.Santana.Relogio               = relogio_lido
+				Info.Lotten.Santana.IP                    = ip_lido
+				Info.Lotten.Santana.Porta                 = port_lido
+				Info.Lotten.Santana.NumeroRep             = NumeroReP_Lido
+				Info.Lotten.Santana.Responsavel           = Responsavel_Lido
+				Info.Lotten.Santana.Telefone              = Telefone_Lido
+
+			if relogio_lido == "tatuape":
+				
+				Info.Lotten.Tatuape.Empresa               = empresa_lido
+				Info.Lotten.Tatuape.Relogio               = relogio_lido
+				Info.Lotten.Tatuape.IP                    = ip_lido
+				Info.Lotten.Tatuape.Porta                 = port_lido
+				Info.Lotten.Tatuape.NumeroRep             = NumeroReP_Lido
+				Info.Lotten.Tatuape.Responsavel           = Responsavel_Lido
+				Info.Lotten.Tatuape.Telefone              = Telefone_Lido
+
+			if relogio_lido == "moema":
+				
+				Info.Lotten.Moema.Empresa               = empresa_lido
+				Info.Lotten.Moema.Relogio               = relogio_lido
+				Info.Lotten.Moema.IP                    = ip_lido
+				Info.Lotten.Moema.Porta                 = port_lido
+				Info.Lotten.Moema.NumeroRep             = NumeroReP_Lido
+				Info.Lotten.Moema.Responsavel           = Responsavel_Lido
+				Info.Lotten.Moema.Telefone              = Telefone_Lido
+
+			if relogio_lido == "jardimsul":
+				
+				Info.Lotten.JardimSul.Empresa               = empresa_lido
+				Info.Lotten.JardimSul.Relogio               = relogio_lido
+				Info.Lotten.JardimSul.IP                    = ip_lido
+				Info.Lotten.JardimSul.Porta                 = port_lido
+				Info.Lotten.JardimSul.NumeroRep             = NumeroReP_Lido
+				Info.Lotten.JardimSul.Responsavel           = Responsavel_Lido
+				Info.Lotten.JardimSul.Telefone              = Telefone_Lido
+
+			if relogio_lido == "conceicao":
+				
+				Info.Lotten.Conceicao.Empresa               = empresa_lido
+				Info.Lotten.Conceicao.Relogio               = relogio_lido
+				Info.Lotten.Conceicao.IP                    = ip_lido
+				Info.Lotten.Conceicao.Porta                 = port_lido
+				Info.Lotten.Conceicao.NumeroRep             = NumeroReP_Lido
+				Info.Lotten.Conceicao.Responsavel           = Responsavel_Lido
+				Info.Lotten.Conceicao.Telefone              = Telefone_Lido
+
+			if relogio_lido == "lapa":
+				
+				Info.Lotten.Lapa.Empresa               = empresa_lido
+				Info.Lotten.Lapa.Relogio               = relogio_lido
+				Info.Lotten.Lapa.IP                    = ip_lido
+				Info.Lotten.Lapa.Porta                 = port_lido
+				Info.Lotten.Lapa.NumeroRep             = NumeroReP_Lido
+				Info.Lotten.Lapa.Responsavel           = Responsavel_Lido
+				Info.Lotten.Lapa.Telefone              = Telefone_Lido
+
+			if relogio_lido == "perdizes":
+				
+				Info.Lotten.Perdizes.Empresa               = empresa_lido
+				Info.Lotten.Perdizes.Relogio               = relogio_lido
+				Info.Lotten.Perdizes.IP                    = ip_lido
+				Info.Lotten.Perdizes.Porta                 = port_lido
+				Info.Lotten.Perdizes.NumeroRep             = NumeroReP_Lido
+				Info.Lotten.Perdizes.Responsavel           = Responsavel_Lido
+				Info.Lotten.Perdizes.Telefone              = Telefone_Lido
+
+			if relogio_lido == "saocaetano":
+				
+				Info.Lotten.SaoCaetano.Empresa               = empresa_lido
+				Info.Lotten.SaoCaetano.Relogio               = relogio_lido
+				Info.Lotten.SaoCaetano.IP                    = ip_lido
+				Info.Lotten.SaoCaetano.Porta                 = port_lido
+				Info.Lotten.SaoCaetano.NumeroRep             = NumeroReP_Lido
+				Info.Lotten.SaoCaetano.Responsavel           = Responsavel_Lido
+				Info.Lotten.SaoCaetano.Telefone              = Telefone_Lido
+
+			if relogio_lido == "pinheiros":
+				
+				Info.Lotten.Pinheiros.Empresa               = empresa_lido
+				Info.Lotten.Pinheiros.Relogio               = relogio_lido
+				Info.Lotten.Pinheiros.IP                    = ip_lido
+				Info.Lotten.Pinheiros.Porta                 = port_lido
+				Info.Lotten.Pinheiros.NumeroRep             = NumeroReP_Lido
+				Info.Lotten.Pinheiros.Responsavel           = Responsavel_Lido
+				Info.Lotten.Pinheiros.Telefone              = Telefone_Lido
+
+			if relogio_lido == "morumbi":
+				
+				Info.Lotten.Morumbi.Empresa               = empresa_lido
+				Info.Lotten.Morumbi.Relogio               = relogio_lido
+				Info.Lotten.Morumbi.IP                    = ip_lido
+				Info.Lotten.Morumbi.Porta                 = port_lido
+				Info.Lotten.Morumbi.NumeroRep             = NumeroReP_Lido
+				Info.Lotten.Morumbi.Responsavel           = Responsavel_Lido
+				Info.Lotten.Morumbi.Telefone              = Telefone_Lido
+
+			if relogio_lido == "berrini":
+				
+				Info.Lotten.Berrini.Empresa               = empresa_lido
+				Info.Lotten.Berrini.Relogio               = relogio_lido
+				Info.Lotten.Berrini.IP                    = ip_lido
+				Info.Lotten.Berrini.Porta                 = port_lido
+				Info.Lotten.Berrini.NumeroRep             = NumeroReP_Lido
+				Info.Lotten.Berrini.Responsavel           = Responsavel_Lido
+				Info.Lotten.Berrini.Telefone              = Telefone_Lido
+
+			if relogio_lido == "vilamariana":
+				
+				Info.Lotten.VilaMariana.Empresa               = empresa_lido
+				Info.Lotten.VilaMariana.Relogio               = relogio_lido
+				Info.Lotten.VilaMariana.IP                    = ip_lido
+				Info.Lotten.VilaMariana.Porta                 = port_lido
+				Info.Lotten.VilaMariana.NumeroRep             = NumeroReP_Lido
+				Info.Lotten.VilaMariana.Responsavel           = Responsavel_Lido
+				Info.Lotten.VilaMariana.Telefone              = Telefone_Lido
+
+			if relogio_lido == "vilaolimpia":
+				
+				Info.Lotten.VilaOlimpia.Empresa               = empresa_lido
+				Info.Lotten.VilaOlimpia.Relogio               = relogio_lido
+				Info.Lotten.VilaOlimpia.IP                    = ip_lido
+				Info.Lotten.VilaOlimpia.Porta                 = port_lido
+				Info.Lotten.VilaOlimpia.NumeroRep             = NumeroReP_Lido
+				Info.Lotten.VilaOlimpia.Responsavel           = Responsavel_Lido
+				Info.Lotten.VilaOlimpia.Telefone              = Telefone_Lido
+				
+			if relogio_lido == "itaim":
+				
+				Info.Lotten.Itaim.Empresa               = empresa_lido
+				Info.Lotten.Itaim.Relogio               = relogio_lido
+				Info.Lotten.Itaim.IP                    = ip_lido
+				Info.Lotten.Itaim.Porta                 = port_lido
+				Info.Lotten.Itaim.NumeroRep             = NumeroReP_Lido
+				Info.Lotten.Itaim.Responsavel           = Responsavel_Lido
+				Info.Lotten.Itaim.Telefone              = Telefone_Lido
+
+			if relogio_lido == "garulhos":
+				
+				Info.Lotten.Guarulhos.Empresa               = empresa_lido
+				Info.Lotten.Guarulhos.Relogio               = relogio_lido
+				Info.Lotten.Guarulhos.IP                    = ip_lido
+				Info.Lotten.Guarulhos.Porta                 = port_lido
+				Info.Lotten.Guarulhos.NumeroRep             = NumeroReP_Lido
+				Info.Lotten.Guarulhos.Responsavel           = Responsavel_Lido
+				Info.Lotten.Guarulhos.Telefone              = Telefone_Lido
