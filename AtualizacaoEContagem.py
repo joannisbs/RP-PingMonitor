@@ -11,14 +11,14 @@ def AtualizaCorBuilding(relogio,result):
 			Info.Building.Allianz.ModuloCor  = "red"
 			Info.Building.Allianz.RelogioCor = "red"
 		elif result == 2:
-			Info.Building.Allianz.ModuloCor  = "green"
-			Info.Building.Allianz.RelogioCor = "red"
+			Info.Building.Allianz.ModuloCor  = "green3"
+			Info.Building.Allianz.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.Building.Allianz.ModuloCor  = "green"
-			Info.Building.Allianz.RelogioCor = "green"
+			Info.Building.Allianz.ModuloCor  = "green3"
+			Info.Building.Allianz.RelogioCor = "green3"
 		elif result == 4:
-			Info.Building.Allianz.ModuloCor  = "blue"
-			Info.Building.Allianz.RelogioCor = "blue"
+			Info.Building.Allianz.ModuloCor  = "cyan"
+			#Info.Building.Allianz.RelogioCor = "cyan"
 		else:
 			Info.Building.Allianz.ModuloCor  = "pink"
 			Info.Building.Allianz.RelogioCor = "pink"
@@ -33,14 +33,14 @@ def AtualizaCorBuilding(relogio,result):
 			Info.Building.WTorre.ModuloCor  = "red"
 			Info.Building.WTorre.RelogioCor = "red"
 		elif result == 2:
-			Info.Building.WTorre.ModuloCor  = "green"
-			Info.Building.WTorre.RelogioCor = "red"
+			Info.Building.WTorre.ModuloCor  = "green3"
+			Info.Building.WTorre.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.Building.WTorre.ModuloCor  = "green"
-			Info.Building.WTorre.RelogioCor = "green"
+			Info.Building.WTorre.ModuloCor  = "green3"
+			Info.Building.WTorre.RelogioCor = "green3"
 		elif result == 4:
-			Info.Building.WTorre.ModuloCor  = "blue"
-			Info.Building.WTorre.RelogioCor = "blue"
+			Info.Building.WTorre.ModuloCor  = "cyan"
+			#Info.Building.WTorre.RelogioCor = "cyan"
 		else:
 			Info.Building.WTorre.ModuloCor  = "pink"
 			Info.Building.WTorre.RelogioCor = "pink"
@@ -53,25 +53,25 @@ def AtualizaCorBuilding(relogio,result):
 			Info.Building.RioJaneiro.ModuloCor  = "red"
 			Info.Building.RioJaneiro.RelogioCor = "red"
 		elif result == 2:
-			Info.Building.RioJaneiro.ModuloCor  = "green"
-			Info.Building.RioJaneiro.RelogioCor = "red"
+			Info.Building.RioJaneiro.ModuloCor  = "green3"
+			Info.Building.RioJaneiro.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.Building.RioJaneiro.ModuloCor  = "green"
-			Info.Building.RioJaneiro.RelogioCor = "green"
+			Info.Building.RioJaneiro.ModuloCor  = "green3"
+			Info.Building.RioJaneiro.RelogioCor = "green3"
 		elif result == 4:
-			Info.Building.RioJaneiro.ModuloCor  = "blue"
-			Info.Building.RioJaneiro.RelogioCor = "blue"
+			Info.Building.RioJaneiro.ModuloCor  = "cyan"
+			#Info.Building.RioJaneiro.RelogioCor = "cyan"
 		else:
 			Info.Building.RioJaneiro.ModuloCor  = "pink"
 			Info.Building.RioJaneiro.RelogioCor = "pink"
 	
 	if result != 4:
 		Info.Building.Status.Contage = 0
-		if Info.Building.Allianz.RelogioCor == "green" : 
+		if Info.Building.Allianz.RelogioCor == "green3" : 
 				Info.Building.Status.Contage = Info.Building.Status.Contage +1
-		if Info.Building.WTorre.RelogioCor == "green" : 
+		if Info.Building.WTorre.RelogioCor == "green3" : 
 				Info.Building.Status.Contage = Info.Building.Status.Contage +1
-		if Info.Building.RioJaneiro.RelogioCor == "green" : 
+		if Info.Building.RioJaneiro.RelogioCor == "green3" : 
 				Info.Building.Status.Contage = Info.Building.Status.Contage +1
 
 def AtualizaCorLaser(relogio,result):
@@ -81,15 +81,15 @@ def AtualizaCorLaser(relogio,result):
 			Info.Laser.Academia.ModuloCor  = "red"
 			Info.Laser.Academia.RelogioCor = "red"
 		elif result == 2:
-			Info.Laser.Academia.ModuloCor  = "green"
-			Info.Laser.Academia.RelogioCor = "red"
+			Info.Laser.Academia.ModuloCor  = "green3"
+			Info.Laser.Academia.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.Laser.Academia.ModuloCor  = "green"
-			Info.Laser.Academia.RelogioCor = "green"
+			Info.Laser.Academia.ModuloCor  = "green3"
+			Info.Laser.Academia.RelogioCor = "green3"
 
 		elif result == 4:
-			Info.Laser.Academia.ModuloCor  = "blue"
-			Info.Laser.Academia.RelogioCor = "blue"
+			Info.Laser.Academia.ModuloCor  = "cyan"
+			#Info.Laser.Academia.RelogioCor = "cyan"
 
 		else:
 			Info.Laser.Academia.ModuloCor  = "pink"
@@ -103,14 +103,14 @@ def AtualizaCorLaser(relogio,result):
 			Info.Laser.Instituto.ModuloCor  = "red"
 			Info.Laser.Instituto.RelogioCor = "red"
 		elif result == 2:
-			Info.Laser.Instituto.ModuloCor  = "green"
-			Info.Laser.Instituto.RelogioCor = "red"
+			Info.Laser.Instituto.ModuloCor  = "green3"
+			Info.Laser.Instituto.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.Laser.Instituto.ModuloCor  = "green"
-			Info.Laser.Instituto.RelogioCor = "green"
+			Info.Laser.Instituto.ModuloCor  = "green3"
+			Info.Laser.Instituto.RelogioCor = "green3"
 		elif result == 4:
-			Info.Laser.Instituto.ModuloCor  = "blue"
-			Info.Laser.Instituto.RelogioCor = "blue"
+			Info.Laser.Instituto.ModuloCor  = "cyan"
+			#Info.Laser.Instituto.RelogioCor = "cyan"
 
 		else:
 			Info.Laser.Instituto.ModuloCor  = "pink"
@@ -126,14 +126,14 @@ def AtualizaCorGravex(relogio,result):
 			Info.Gravex.ADM.ModuloCor  = "red"
 			Info.Gravex.ADM.RelogioCor = "red"
 		elif result == 2:
-			Info.Gravex.ADM.ModuloCor  = "green"
-			Info.Gravex.ADM.RelogioCor = "red"
+			Info.Gravex.ADM.ModuloCor  = "green3"
+			Info.Gravex.ADM.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.Gravex.ADM.ModuloCor  = "green"
-			Info.Gravex.ADM.RelogioCor = "green"
+			Info.Gravex.ADM.ModuloCor  = "green3"
+			Info.Gravex.ADM.RelogioCor = "green3"
 		elif result == 4:
-			Info.Gravex.ADM.ModuloCor  = "blue"
-			Info.Gravex.ADM.RelogioCor = "blue"
+			Info.Gravex.ADM.ModuloCor  = "cyan"
+			#Info.Gravex.ADM.RelogioCor = "cyan"
 		else:
 			Info.Gravex.ADM.ModuloCor  = "pink"
 			Info.Gravex.ADM.RelogioCor = "pink"
@@ -144,14 +144,14 @@ def AtualizaCorGravex(relogio,result):
 			Info.Gravex.Loja1.ModuloCor  = "red"
 			Info.Gravex.Loja1.RelogioCor = "red"
 		elif result == 2:
-			Info.Gravex.Loja1.ModuloCor  = "green"
-			Info.Gravex.Loja1.RelogioCor = "red"
+			Info.Gravex.Loja1.ModuloCor  = "green3"
+			Info.Gravex.Loja1.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.Gravex.Loja1.ModuloCor  = "green"
-			Info.Gravex.Loja1.RelogioCor = "green"
+			Info.Gravex.Loja1.ModuloCor  = "green3"
+			Info.Gravex.Loja1.RelogioCor = "green3"
 		elif result == 4:
-			Info.Gravex.Loja1.ModuloCor  = "blue"
-			Info.Gravex.Loja1.RelogioCor = "blue"
+			Info.Gravex.Loja1.ModuloCor  = "cyan"
+			#Info.Gravex.Loja1.RelogioCor = "cyan"
 		else:
 			Info.Gravex.Loja1.ModuloCor  = "pink"
 			Info.Gravex.Loja1.RelogioCor = "pink"
@@ -162,14 +162,14 @@ def AtualizaCorGravex(relogio,result):
 			Info.Gravex.MiMarcos.ModuloCor  = "red"
 			Info.Gravex.MiMarcos.RelogioCor = "red"
 		elif result == 2:
-			Info.Gravex.MiMarcos.ModuloCor  = "green"
-			Info.Gravex.MiMarcos.RelogioCor = "red"
+			Info.Gravex.MiMarcos.ModuloCor  = "green3"
+			Info.Gravex.MiMarcos.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.Gravex.MiMarcos.ModuloCor  = "green"
-			Info.Gravex.MiMarcos.RelogioCor = "green"
+			Info.Gravex.MiMarcos.ModuloCor  = "green3"
+			Info.Gravex.MiMarcos.RelogioCor = "green3"
 		elif result == 4:
-			Info.Gravex.MiMarcos.ModuloCor  = "blue"
-			Info.Gravex.MiMarcos.RelogioCor = "blue"
+			Info.Gravex.MiMarcos.ModuloCor  = "cyan"
+			#Info.Gravex.MiMarcos.RelogioCor = "cyan"
 		else:
 			Info.Gravex.MiMarcos.ModuloCor  = "pink"
 			Info.Gravex.MiMarcos.RelogioCor = "pink"
@@ -179,14 +179,14 @@ def AtualizaCorGravex(relogio,result):
 			Info.Gravex.DantChini.ModuloCor  = "red"
 			Info.Gravex.DantChini.RelogioCor = "red"
 		elif result == 2:
-			Info.Gravex.DantChini.ModuloCor  = "green"
-			Info.Gravex.DantChini.RelogioCor = "red"
+			Info.Gravex.DantChini.ModuloCor  = "green3"
+			Info.Gravex.DantChini.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.Gravex.DantChini.ModuloCor  = "green"
-			Info.Gravex.DantChini.RelogioCor = "green"
+			Info.Gravex.DantChini.ModuloCor  = "green3"
+			Info.Gravex.DantChini.RelogioCor = "green3"
 		elif result == 4:
-			Info.Gravex.DantChini.ModuloCor  = "blue"
-			Info.Gravex.DantChini.RelogioCor = "blue"
+			Info.Gravex.DantChini.ModuloCor  = "cyan"
+			#Info.Gravex.DantChini.RelogioCor = "cyan"
 		else:
 			Info.Gravex.DantChini.ModuloCor  = "pink"
 			Info.Gravex.DantChini.RelogioCor = "pink"
@@ -199,14 +199,14 @@ def AtualizaCorCasaCristo(relogio,result):
 			Info.CasaCristo.ADM.ModuloCor  = "red"
 			Info.CasaCristo.ADM.RelogioCor = "red"
 		elif result == 2:
-			Info.CasaCristo.ADM.ModuloCor  = "green"
-			Info.CasaCristo.ADM.RelogioCor = "red"
+			Info.CasaCristo.ADM.ModuloCor  = "green3"
+			Info.CasaCristo.ADM.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.CasaCristo.ADM.ModuloCor  = "green"
-			Info.CasaCristo.ADM.RelogioCor = "green"
+			Info.CasaCristo.ADM.ModuloCor  = "green3"
+			Info.CasaCristo.ADM.RelogioCor = "green3"
 		elif result == 4:
-			Info.CasaCristo.ADM.ModuloCor  = "blue"
-			Info.CasaCristo.ADM.RelogioCor = "blue"
+			Info.CasaCristo.ADM.ModuloCor  = "cyan"
+			#Info.CasaCristo.ADM.RelogioCor = "cyan"
 		else:
 			Info.CasaCristo.ADM.ModuloCor  = "pink"
 			Info.CasaCristo.ADM.RelogioCor = "pink"
@@ -217,14 +217,14 @@ def AtualizaCorCasaCristo(relogio,result):
 			Info.CasaCristo.CEI1.ModuloCor  = "red"
 			Info.CasaCristo.CEI1.RelogioCor = "red"
 		elif result == 2:
-			Info.CasaCristo.CEI1.ModuloCor  = "green"
-			Info.CasaCristo.CEI1.RelogioCor = "red"
+			Info.CasaCristo.CEI1.ModuloCor  = "green3"
+			Info.CasaCristo.CEI1.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.CasaCristo.CEI1.ModuloCor  = "green"
-			Info.CasaCristo.CEI1.RelogioCor = "green"
+			Info.CasaCristo.CEI1.ModuloCor  = "green3"
+			Info.CasaCristo.CEI1.RelogioCor = "green3"
 		elif result == 4:
-			Info.CasaCristo.CEI1.ModuloCor  = "blue"
-			Info.CasaCristo.CEI1.RelogioCor = "blue"
+			Info.CasaCristo.CEI1.ModuloCor  = "cyan"
+			#Info.CasaCristo.CEI1.RelogioCor = "cyan"
 		else:
 			Info.CasaCristo.CEI1.ModuloCor  = "pink"
 			Info.CasaCristo.CEI1.RelogioCor = "pink"
@@ -235,14 +235,14 @@ def AtualizaCorCasaCristo(relogio,result):
 			Info.CasaCristo.CEI2.ModuloCor  = "red"
 			Info.CasaCristo.CEI2.RelogioCor = "red"
 		elif result == 2:
-			Info.CasaCristo.CEI2.ModuloCor  = "green"
-			Info.CasaCristo.CEI2.RelogioCor = "red"
+			Info.CasaCristo.CEI2.ModuloCor  = "green3"
+			Info.CasaCristo.CEI2.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.CasaCristo.CEI2.ModuloCor  = "green"
-			Info.CasaCristo.CEI2.RelogioCor = "green"
+			Info.CasaCristo.CEI2.ModuloCor  = "green3"
+			Info.CasaCristo.CEI2.RelogioCor = "green3"
 		elif result == 4:
-			Info.CasaCristo.CEI2.ModuloCor  = "blue"
-			Info.CasaCristo.CEI2.RelogioCor = "blue"
+			Info.CasaCristo.CEI2.ModuloCor  = "cyan"
+			#Info.CasaCristo.CEI2.RelogioCor = "cyan"
 		else:
 			Info.CasaCristo.CEI2.ModuloCor  = "pink"
 			Info.CasaCristo.CEI2.RelogioCor = "pink"
@@ -253,14 +253,14 @@ def AtualizaCorCasaCristo(relogio,result):
 			Info.CasaCristo.CEI3.ModuloCor  = "red"
 			Info.CasaCristo.CEI3.RelogioCor = "red"
 		elif result == 2:
-			Info.CasaCristo.CEI3.ModuloCor  = "green"
-			Info.CasaCristo.CEI3.RelogioCor = "red"
+			Info.CasaCristo.CEI3.ModuloCor  = "green3"
+			Info.CasaCristo.CEI3.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.CasaCristo.CEI3.ModuloCor  = "green"
-			Info.CasaCristo.CEI3.RelogioCor = "green"
+			Info.CasaCristo.CEI3.ModuloCor  = "green3"
+			Info.CasaCristo.CEI3.RelogioCor = "green3"
 		elif result == 4:
-			Info.CasaCristo.CEI3.ModuloCor  = "blue"
-			Info.CasaCristo.CEI3.RelogioCor = "blue"
+			Info.CasaCristo.CEI3.ModuloCor  = "cyan"
+			#Info.CasaCristo.CEI3.RelogioCor = "cyan"
 		else:
 			Info.CasaCristo.CEI3.ModuloCor  = "pink"
 			Info.CasaCristo.CEI3.RelogioCor = "pink"
@@ -270,14 +270,14 @@ def AtualizaCorCasaCristo(relogio,result):
 			Info.CasaCristo.VovoMatilde.ModuloCor  = "red"
 			Info.CasaCristo.VovoMatilde.RelogioCor = "red"
 		elif result == 2:
-			Info.CasaCristo.VovoMatilde.ModuloCor  = "green"
-			Info.CasaCristo.VovoMatilde.RelogioCor = "red"
+			Info.CasaCristo.VovoMatilde.ModuloCor  = "green3"
+			Info.CasaCristo.VovoMatilde.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.CasaCristo.VovoMatilde.ModuloCor  = "green"
-			Info.CasaCristo.VovoMatilde.RelogioCor = "green"
+			Info.CasaCristo.VovoMatilde.ModuloCor  = "green3"
+			Info.CasaCristo.VovoMatilde.RelogioCor = "green3"
 		elif result == 4:
-			Info.CasaCristo.VovoMatilde.ModuloCor  = "blue"
-			Info.CasaCristo.VovoMatilde.RelogioCor = "blue"
+			Info.CasaCristo.VovoMatilde.ModuloCor  = "cyan"
+			#Info.CasaCristo.VovoMatilde.RelogioCor = "cyan"
 		else:
 			Info.CasaCristo.VovoMatilde.ModuloCor  = "pink"
 			Info.CasaCristo.VovoMatilde.RelogioCor = "pink"
@@ -285,19 +285,19 @@ def AtualizaCorCasaCristo(relogio,result):
 	if result != 4:
 		Info.CasaCristo.Status.Contage = 0
 
-		if Info.CasaCristo.ADM.RelogioCor == "green" : 
+		if Info.CasaCristo.ADM.RelogioCor == "green3" : 
 			Info.CasaCristo.Status.Contage = Info.CasaCristo.Status.Contage +1
 
-		if Info.CasaCristo.CEI1.RelogioCor == "green" : 
+		if Info.CasaCristo.CEI1.RelogioCor == "green3" : 
 			Info.CasaCristo.Status.Contage = Info.CasaCristo.Status.Contage +1
 		
-		if Info.CasaCristo.CEI2.RelogioCor == "green" : 
+		if Info.CasaCristo.CEI2.RelogioCor == "green3" : 
 			Info.CasaCristo.Status.Contage = Info.CasaCristo.Status.Contage +1
 		
-		if Info.CasaCristo.CEI3.RelogioCor == "green" : 
+		if Info.CasaCristo.CEI3.RelogioCor == "green3" : 
 			Info.CasaCristo.Status.Contage = Info.CasaCristo.Status.Contage +1
 		
-		if Info.CasaCristo.VovoMatilde.RelogioCor == "green" : 
+		if Info.CasaCristo.VovoMatilde.RelogioCor == "green3" : 
 			Info.CasaCristo.Status.Contage = Info.CasaCristo.Status.Contage +1
 
 def AtualizaCorBestInCLass(relogio,result):
@@ -307,14 +307,14 @@ def AtualizaCorBestInCLass(relogio,result):
 			Info.BestInClass.Recife.ModuloCor  = "red"
 			Info.BestInClass.Recife.RelogioCor = "red"
 		elif result == 2:
-			Info.BestInClass.Recife.ModuloCor  = "green"
-			Info.BestInClass.Recife.RelogioCor = "red"
+			Info.BestInClass.Recife.ModuloCor  = "green3"
+			Info.BestInClass.Recife.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.BestInClass.Recife.ModuloCor  = "green"
-			Info.BestInClass.Recife.RelogioCor = "green"
+			Info.BestInClass.Recife.ModuloCor  = "green3"
+			Info.BestInClass.Recife.RelogioCor = "green3"
 		elif result == 4:
-			Info.BestInClass.Recife.ModuloCor  = "blue"
-			Info.BestInClass.Recife.RelogioCor = "blue"
+			Info.BestInClass.Recife.ModuloCor  = "cyan"
+			#Info.BestInClass.Recife.RelogioCor = "cyan"
 		else:
 			Info.BestInClass.Recife.ModuloCor  = "pink"
 			Info.BestInClass.Recife.RelogioCor = "pink"
@@ -326,14 +326,14 @@ def AtualizaCorBestInCLass(relogio,result):
 			Info.BestInClass.Itaquera.ModuloCor  = "red"
 			Info.BestInClass.Itaquera.RelogioCor = "red"
 		elif result == 2:
-			Info.BestInClass.Itaquera.ModuloCor  = "green"
-			Info.BestInClass.Itaquera.RelogioCor = "red"
+			Info.BestInClass.Itaquera.ModuloCor  = "green3"
+			Info.BestInClass.Itaquera.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.BestInClass.Itaquera.ModuloCor  = "green"
-			Info.BestInClass.Itaquera.RelogioCor = "green"
+			Info.BestInClass.Itaquera.ModuloCor  = "green3"
+			Info.BestInClass.Itaquera.RelogioCor = "green3"
 		elif result == 4:
-			Info.BestInClass.Itaquera.ModuloCor  = "blue"
-			Info.BestInClass.Itaquera.RelogioCor = "blue"
+			Info.BestInClass.Itaquera.ModuloCor  = "cyan"
+			#Info.BestInClass.Itaquera.RelogioCor = "cyan"
 		else:
 			Info.BestInClass.Itaquera.ModuloCor  = "pink"
 			Info.BestInClass.Itaquera.RelogioCor = "pink"
@@ -345,14 +345,14 @@ def AtualizaCorBestInCLass(relogio,result):
 			Info.BestInClass.Itapevi.ModuloCor  = "red"
 			Info.BestInClass.Itapevi.RelogioCor = "red"
 		elif result == 2:
-			Info.BestInClass.Itapevi.ModuloCor  = "green"
-			Info.BestInClass.Itapevi.RelogioCor = "red"
+			Info.BestInClass.Itapevi.ModuloCor  = "green3"
+			Info.BestInClass.Itapevi.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.BestInClass.Itapevi.ModuloCor  = "green"
-			Info.BestInClass.Itapevi.RelogioCor = "green"
+			Info.BestInClass.Itapevi.ModuloCor  = "green3"
+			Info.BestInClass.Itapevi.RelogioCor = "green3"
 		elif result == 4:
-			Info.BestInClass.Itapevi.ModuloCor  = "blue"
-			Info.BestInClass.Itapevi.RelogioCor = "blue"
+			Info.BestInClass.Itapevi.ModuloCor  = "cyan"
+			#Info.BestInClass.Itapevi.RelogioCor = "cyan"
 		else:
 			Info.BestInClass.Itapevi.ModuloCor  = "pink"
 			Info.BestInClass.Itapevi.RelogioCor = "pink"
@@ -365,14 +365,14 @@ def AtualizaCorBestInCLass(relogio,result):
 			Info.BestInClass.Sorocaba.ModuloCor  = "red"
 			Info.BestInClass.Sorocaba.RelogioCor = "red"
 		elif result == 2:
-			Info.BestInClass.Sorocaba.ModuloCor  = "green"
-			Info.BestInClass.Sorocaba.RelogioCor = "red"
+			Info.BestInClass.Sorocaba.ModuloCor  = "green3"
+			Info.BestInClass.Sorocaba.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.BestInClass.Sorocaba.ModuloCor  = "green"
-			Info.BestInClass.Sorocaba.RelogioCor = "green"
+			Info.BestInClass.Sorocaba.ModuloCor  = "green3"
+			Info.BestInClass.Sorocaba.RelogioCor = "green3"
 		elif result == 4:
-			Info.BestInClass.Sorocaba.ModuloCor  = "blue"
-			Info.BestInClass.Sorocaba.RelogioCor = "blue"
+			Info.BestInClass.Sorocaba.ModuloCor  = "cyan"
+			#Info.BestInClass.Sorocaba.RelogioCor = "cyan"
 		else:
 			Info.BestInClass.Sorocaba.ModuloCor  = "pink"
 			Info.BestInClass.Sorocaba.RelogioCor = "pink"
@@ -383,14 +383,14 @@ def AtualizaCorBestInCLass(relogio,result):
 			Info.BestInClass.SeteLagoas.ModuloCor  = "red"
 			Info.BestInClass.SeteLagoas.RelogioCor = "red"
 		elif result == 2:
-			Info.BestInClass.SeteLagoas.ModuloCor  = "green"
-			Info.BestInClass.SeteLagoas.RelogioCor = "red"
+			Info.BestInClass.SeteLagoas.ModuloCor  = "green3"
+			Info.BestInClass.SeteLagoas.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.BestInClass.SeteLagoas.ModuloCor  = "green"
-			Info.BestInClass.SeteLagoas.RelogioCor = "green"
+			Info.BestInClass.SeteLagoas.ModuloCor  = "green3"
+			Info.BestInClass.SeteLagoas.RelogioCor = "green3"
 		elif result == 4:
-			Info.BestInClass.SeteLagoas.ModuloCor  = "blue"
-			Info.BestInClass.SeteLagoas.RelogioCor = "blue"
+			Info.BestInClass.SeteLagoas.ModuloCor  = "cyan"
+			#Info.BestInClass.SeteLagoas.RelogioCor = "cyan"
 		else:
 			Info.BestInClass.SeteLagoas.ModuloCor  = "pink"
 			Info.BestInClass.SeteLagoas.RelogioCor = "pink"
@@ -402,14 +402,14 @@ def AtualizaCorBestInCLass(relogio,result):
 			Info.BestInClass.Curitiba.ModuloCor  = "red"
 			Info.BestInClass.Curitiba.RelogioCor = "red"
 		elif result == 2:
-			Info.BestInClass.Curitiba.ModuloCor  = "green"
-			Info.BestInClass.Curitiba.RelogioCor = "red"
+			Info.BestInClass.Curitiba.ModuloCor  = "green3"
+			Info.BestInClass.Curitiba.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.BestInClass.Curitiba.ModuloCor  = "green"
-			Info.BestInClass.Curitiba.RelogioCor = "green"
+			Info.BestInClass.Curitiba.ModuloCor  = "green3"
+			Info.BestInClass.Curitiba.RelogioCor = "green3"
 		elif result == 4:
-			Info.BestInClass.Curitiba.ModuloCor  = "blue"
-			Info.BestInClass.Curitiba.RelogioCor = "blue"
+			Info.BestInClass.Curitiba.ModuloCor  = "cyan"
+			#Info.BestInClass.Curitiba.RelogioCor = "cyan"
 		else:
 			Info.BestInClass.Curitiba.ModuloCor  = "pink"
 			Info.BestInClass.Curitiba.RelogioCor = "pink"
@@ -420,14 +420,14 @@ def AtualizaCorBestInCLass(relogio,result):
 			Info.BestInClass.Fsantana.ModuloCor  = "red"
 			Info.BestInClass.Fsantana.RelogioCor = "red"
 		elif result == 2:
-			Info.BestInClass.Fsantana.ModuloCor  = "green"
-			Info.BestInClass.Fsantana.RelogioCor = "red"
+			Info.BestInClass.Fsantana.ModuloCor  = "green3"
+			Info.BestInClass.Fsantana.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.BestInClass.Fsantana.ModuloCor  = "green"
-			Info.BestInClass.Fsantana.RelogioCor = "green"
+			Info.BestInClass.Fsantana.ModuloCor  = "green3"
+			Info.BestInClass.Fsantana.RelogioCor = "green3"
 		elif result == 4:
-			Info.BestInClass.Fsantana.ModuloCor  = "blue"
-			Info.BestInClass.Fsantana.RelogioCor = "blue"
+			Info.BestInClass.Fsantana.ModuloCor  = "cyan"
+			#Info.BestInClass.Fsantana.RelogioCor = "cyan"
 		else:
 			Info.BestInClass.Fsantana.ModuloCor  = "pink"
 			Info.BestInClass.Fsantana.RelogioCor = "pink"					
@@ -440,14 +440,14 @@ def AtualizaCorBestInCLass(relogio,result):
 			Info.BestInClass.Itu.ModuloCor  = "red"
 			Info.BestInClass.Itu.RelogioCor = "red"
 		elif result == 2:
-			Info.BestInClass.Itu.ModuloCor  = "green"
-			Info.BestInClass.Itu.RelogioCor = "red"
+			Info.BestInClass.Itu.ModuloCor  = "green3"
+			Info.BestInClass.Itu.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.BestInClass.Itu.ModuloCor  = "green"
-			Info.BestInClass.Itu.RelogioCor = "green"
+			Info.BestInClass.Itu.ModuloCor  = "green3"
+			Info.BestInClass.Itu.RelogioCor = "green3"
 		elif result == 4:
-			Info.BestInClass.Itu.ModuloCor  = "blue"
-			Info.BestInClass.Itu.RelogioCor = "blue"
+			Info.BestInClass.Itu.ModuloCor  = "cyan"
+			#Info.BestInClass.Itu.RelogioCor = "cyan"
 		else:
 			Info.BestInClass.Itu.ModuloCor  = "pink"
 			Info.BestInClass.Itu.RelogioCor = "pink"
@@ -459,14 +459,14 @@ def AtualizaCorBestInCLass(relogio,result):
 			Info.BestInClass.Guarulhos.ModuloCor  = "red"
 			Info.BestInClass.Guarulhos.RelogioCor = "red"
 		elif result == 2:
-			Info.BestInClass.Guarulhos.ModuloCor  = "green"
-			Info.BestInClass.Guarulhos.RelogioCor = "red"
+			Info.BestInClass.Guarulhos.ModuloCor  = "green3"
+			Info.BestInClass.Guarulhos.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.BestInClass.Guarulhos.ModuloCor  = "green"
-			Info.BestInClass.Guarulhos.RelogioCor = "green"
+			Info.BestInClass.Guarulhos.ModuloCor  = "green3"
+			Info.BestInClass.Guarulhos.RelogioCor = "green3"
 		elif result == 4:
-			Info.BestInClass.Guarulhos.ModuloCor  = "blue"
-			Info.BestInClass.Guarulhos.RelogioCor = "blue"
+			Info.BestInClass.Guarulhos.ModuloCor  = "cyan"
+			#Info.BestInClass.Guarulhos.RelogioCor = "cyan"
 		else:
 			Info.BestInClass.Guarulhos.ModuloCor  = "pink"
 			Info.BestInClass.Guarulhos.RelogioCor = "pink"
@@ -478,14 +478,14 @@ def AtualizaCorBestInCLass(relogio,result):
 			Info.BestInClass.Itaporanga.ModuloCor  = "red"
 			Info.BestInClass.Itaporanga.RelogioCor = "red"
 		elif result == 2:
-			Info.BestInClass.Itaporanga.ModuloCor  = "green"
-			Info.BestInClass.Itaporanga.RelogioCor = "red"
+			Info.BestInClass.Itaporanga.ModuloCor  = "green3"
+			Info.BestInClass.Itaporanga.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.BestInClass.Itaporanga.ModuloCor  = "green"
-			Info.BestInClass.Itaporanga.RelogioCor = "green"
+			Info.BestInClass.Itaporanga.ModuloCor  = "green3"
+			Info.BestInClass.Itaporanga.RelogioCor = "green3"
 		elif result == 4:
-			Info.BestInClass.Itaporanga.ModuloCor  = "blue"
-			Info.BestInClass.Itaporanga.RelogioCor = "blue"
+			Info.BestInClass.Itaporanga.ModuloCor  = "cyan"
+			#Info.BestInClass.Itaporanga.RelogioCor = "cyan"
 		else:
 			Info.BestInClass.Itaporanga.ModuloCor  = "pink"
 			Info.BestInClass.Itaporanga.RelogioCor = "pink"
@@ -497,14 +497,14 @@ def AtualizaCorBestInCLass(relogio,result):
 			Info.BestInClass.Linhares.ModuloCor  = "red"
 			Info.BestInClass.Linhares.RelogioCor = "red"
 		elif result == 2:
-			Info.BestInClass.Linhares.ModuloCor  = "green"
-			Info.BestInClass.Linhares.RelogioCor = "red"
+			Info.BestInClass.Linhares.ModuloCor  = "green3"
+			Info.BestInClass.Linhares.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.BestInClass.Linhares.ModuloCor  = "green"
-			Info.BestInClass.Linhares.RelogioCor = "green"
+			Info.BestInClass.Linhares.ModuloCor  = "green3"
+			Info.BestInClass.Linhares.RelogioCor = "green3"
 		elif result == 4:
-			Info.BestInClass.Linhares.ModuloCor  = "blue"
-			Info.BestInClass.Linhares.RelogioCor = "blue"
+			Info.BestInClass.Linhares.ModuloCor  = "cyan"
+			#Info.BestInClass.Linhares.RelogioCor = "cyan"
 		else:
 			Info.BestInClass.Linhares.ModuloCor  = "pink"
 			Info.BestInClass.Linhares.RelogioCor = "pink"
@@ -512,37 +512,37 @@ def AtualizaCorBestInCLass(relogio,result):
 	if result != 4:			
 		Info.BestInClass.Status.Contage = 0
 
-		if Info.BestInClass.Recife.RelogioCor == "green" : 
+		if Info.BestInClass.Recife.RelogioCor == "green3" : 
 			Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
 
-		if Info.BestInClass.Itaquera.RelogioCor == "green" : 
+		if Info.BestInClass.Itaquera.RelogioCor == "green3" : 
 			Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
 		
-		if Info.BestInClass.Itapevi.RelogioCor == "green" : 
+		if Info.BestInClass.Itapevi.RelogioCor == "green3" : 
 			Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
 		
-		if Info.BestInClass.Sorocaba.RelogioCor == "green" : 
+		if Info.BestInClass.Sorocaba.RelogioCor == "green3" : 
 			Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
 		
-		if Info.BestInClass.SeteLagoas.RelogioCor == "green" : 
+		if Info.BestInClass.SeteLagoas.RelogioCor == "green3" : 
 			Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
 
-		if Info.BestInClass.Curitiba.RelogioCor == "green" : 
+		if Info.BestInClass.Curitiba.RelogioCor == "green3" : 
 			Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
 
-		if Info.BestInClass.Fsantana.RelogioCor == "green" : 
+		if Info.BestInClass.Fsantana.RelogioCor == "green3" : 
 			Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
 		
-		if Info.BestInClass.Itu.RelogioCor == "green" : 
+		if Info.BestInClass.Itu.RelogioCor == "green3" : 
 			Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
 		
-		if Info.BestInClass.Guarulhos.RelogioCor == "green" : 
+		if Info.BestInClass.Guarulhos.RelogioCor == "green3" : 
 			Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
 		
-		if Info.BestInClass.Itaporanga.RelogioCor == "green" : 
+		if Info.BestInClass.Itaporanga.RelogioCor == "green3" : 
 			Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
 
-		if Info.BestInClass.Linhares.RelogioCor == "green" : 
+		if Info.BestInClass.Linhares.RelogioCor == "green3" : 
 			Info.BestInClass.Status.Contage = Info.BestInClass.Status.Contage +1
 
 def AtualizaCorIsoRadio(relogio,result):
@@ -554,14 +554,14 @@ def AtualizaCorIsoRadio(relogio,result):
 			Info.IsoRadio.Santana.ModuloCor  = "red"
 			Info.IsoRadio.Santana.RelogioCor = "red"
 		elif result == 2:
-			Info.IsoRadio.Santana.ModuloCor  = "green"
-			Info.IsoRadio.Santana.RelogioCor = "red"
+			Info.IsoRadio.Santana.ModuloCor  = "green3"
+			Info.IsoRadio.Santana.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.IsoRadio.Santana.ModuloCor  = "green"
-			Info.IsoRadio.Santana.RelogioCor = "green"
+			Info.IsoRadio.Santana.ModuloCor  = "green3"
+			Info.IsoRadio.Santana.RelogioCor = "green3"
 		elif result == 4:
-			Info.IsoRadio.Santana.ModuloCor  = "blue"
-			Info.IsoRadio.Santana.RelogioCor = "blue"
+			Info.IsoRadio.Santana.ModuloCor  = "cyan"
+			##Info.IsoRadio.Santana.RelogioCor = "cyan"
 		else:
 			Info.IsoRadio.Santana.ModuloCor  = "pink"
 			Info.IsoRadio.Santana.RelogioCor = "pink"
@@ -574,14 +574,14 @@ def AtualizaCorIsoRadio(relogio,result):
 			Info.IsoRadio.SaoMatheus.ModuloCor  = "red"
 			Info.IsoRadio.SaoMatheus.RelogioCor = "red"
 		elif result == 2:
-			Info.IsoRadio.SaoMatheus.ModuloCor  = "green"
-			Info.IsoRadio.SaoMatheus.RelogioCor = "red"
+			Info.IsoRadio.SaoMatheus.ModuloCor  = "green3"
+			Info.IsoRadio.SaoMatheus.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.IsoRadio.SaoMatheus.ModuloCor  = "green"
-			Info.IsoRadio.SaoMatheus.RelogioCor = "green"
+			Info.IsoRadio.SaoMatheus.ModuloCor  = "green3"
+			Info.IsoRadio.SaoMatheus.RelogioCor = "green3"
 		elif result == 4:
-			Info.IsoRadio.SaoMatheus.ModuloCor  = "blue"
-			Info.IsoRadio.SaoMatheus.RelogioCor = "blue"
+			Info.IsoRadio.SaoMatheus.ModuloCor  = "cyan"
+			#Info.IsoRadio.SaoMatheus.RelogioCor = "cyan"
 		else:
 			Info.IsoRadio.SaoMatheus.ModuloCor  = "pink"
 			Info.IsoRadio.SaoMatheus.RelogioCor = "pink"
@@ -594,14 +594,14 @@ def AtualizaCorIsoRadio(relogio,result):
 			Info.IsoRadio.VilaMariana.ModuloCor  = "red"
 			Info.IsoRadio.VilaMariana.RelogioCor = "red"
 		elif result == 2:
-			Info.IsoRadio.VilaMariana.ModuloCor  = "green"
-			Info.IsoRadio.VilaMariana.RelogioCor = "red"
+			Info.IsoRadio.VilaMariana.ModuloCor  = "green3"
+			Info.IsoRadio.VilaMariana.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.IsoRadio.VilaMariana.ModuloCor  = "green"
-			Info.IsoRadio.VilaMariana.RelogioCor = "green"
+			Info.IsoRadio.VilaMariana.ModuloCor  = "green3"
+			Info.IsoRadio.VilaMariana.RelogioCor = "green3"
 		elif result == 4:
-			Info.IsoRadio.VilaMariana.ModuloCor  = "blue"
-			Info.IsoRadio.VilaMariana.RelogioCor = "blue"
+			Info.IsoRadio.VilaMariana.ModuloCor  = "cyan"
+			#Info.IsoRadio.VilaMariana.RelogioCor = "cyan"
 		else:
 			Info.IsoRadio.VilaMariana.ModuloCor  = "pink"
 			Info.IsoRadio.VilaMariana.RelogioCor = "pink"
@@ -614,14 +614,14 @@ def AtualizaCorIsoRadio(relogio,result):
 			Info.IsoRadio.Lapa.ModuloCor  = "red"
 			Info.IsoRadio.Lapa.RelogioCor = "red"
 		elif result == 2:
-			Info.IsoRadio.Lapa.ModuloCor  = "green"
-			Info.IsoRadio.Lapa.RelogioCor = "red"
+			Info.IsoRadio.Lapa.ModuloCor  = "green3"
+			Info.IsoRadio.Lapa.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.IsoRadio.Lapa.ModuloCor  = "green"
-			Info.IsoRadio.Lapa.RelogioCor = "green"
+			Info.IsoRadio.Lapa.ModuloCor  = "green3"
+			Info.IsoRadio.Lapa.RelogioCor = "green3"
 		elif result == 4:
-			Info.IsoRadio.Lapa.ModuloCor  = "blue"
-			Info.IsoRadio.Lapa.RelogioCor = "blue"
+			Info.IsoRadio.Lapa.ModuloCor  = "cyan"
+			#Info.IsoRadio.Lapa.RelogioCor = "cyan"
 		else:
 			Info.IsoRadio.Lapa.ModuloCor  = "pink"
 			Info.IsoRadio.Lapa.RelogioCor = "pink"
@@ -633,14 +633,14 @@ def AtualizaCorIsoRadio(relogio,result):
 			Info.IsoRadio.SAmaro.ModuloCor  = "red"
 			Info.IsoRadio.SAmaro.RelogioCor = "red"
 		elif result == 2:
-			Info.IsoRadio.SAmaro.ModuloCor  = "green"
-			Info.IsoRadio.SAmaro.RelogioCor = "red"
+			Info.IsoRadio.SAmaro.ModuloCor  = "green3"
+			Info.IsoRadio.SAmaro.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.IsoRadio.SAmaro.ModuloCor  = "green"
-			Info.IsoRadio.SAmaro.RelogioCor = "green"
+			Info.IsoRadio.SAmaro.ModuloCor  = "green3"
+			Info.IsoRadio.SAmaro.RelogioCor = "green3"
 		elif result == 4:
-			Info.IsoRadio.SAmaro.ModuloCor  = "blue"
-			Info.IsoRadio.SAmaro.RelogioCor = "blue"
+			Info.IsoRadio.SAmaro.ModuloCor  = "cyan"
+			#Info.IsoRadio.SAmaro.RelogioCor = "cyan"
 		else:
 			Info.IsoRadio.SAmaro.ModuloCor  = "pink"
 			Info.IsoRadio.SAmaro.RelogioCor = "pink"
@@ -652,14 +652,14 @@ def AtualizaCorIsoRadio(relogio,result):
 			Info.IsoRadio.CDutra.ModuloCor  = "red"
 			Info.IsoRadio.CDutra.RelogioCor = "red"
 		elif result == 2:
-			Info.IsoRadio.CDutra.ModuloCor  = "green"
-			Info.IsoRadio.CDutra.RelogioCor = "red"
+			Info.IsoRadio.CDutra.ModuloCor  = "green3"
+			Info.IsoRadio.CDutra.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.IsoRadio.CDutra.ModuloCor  = "green"
-			Info.IsoRadio.CDutra.RelogioCor = "green"
+			Info.IsoRadio.CDutra.ModuloCor  = "green3"
+			Info.IsoRadio.CDutra.RelogioCor = "green3"
 		elif result == 4:
-			Info.IsoRadio.CDutra.ModuloCor  = "blue"
-			Info.IsoRadio.CDutra.RelogioCor = "blue"
+			Info.IsoRadio.CDutra.ModuloCor  = "cyan"
+			#Info.IsoRadio.CDutra.RelogioCor = "cyan"
 		else:
 			Info.IsoRadio.CDutra.ModuloCor  = "pink"
 			Info.IsoRadio.CDutra.RelogioCor = "pink"
@@ -672,14 +672,14 @@ def AtualizaCorIsoRadio(relogio,result):
 			Info.IsoRadio.Tatuape.ModuloCor  = "red"
 			Info.IsoRadio.Tatuape.RelogioCor = "red"
 		elif result == 2:
-			Info.IsoRadio.Tatuape.ModuloCor  = "green"
-			Info.IsoRadio.Tatuape.RelogioCor = "red"
+			Info.IsoRadio.Tatuape.ModuloCor  = "green3"
+			Info.IsoRadio.Tatuape.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.IsoRadio.Tatuape.ModuloCor  = "green"
-			Info.IsoRadio.Tatuape.RelogioCor = "green"
+			Info.IsoRadio.Tatuape.ModuloCor  = "green3"
+			Info.IsoRadio.Tatuape.RelogioCor = "green3"
 		elif result == 4:
-			Info.IsoRadio.Tatuape.ModuloCor  = "blue"
-			Info.IsoRadio.Tatuape.RelogioCor = "blue"
+			Info.IsoRadio.Tatuape.ModuloCor  = "cyan"
+			#Info.IsoRadio.Tatuape.RelogioCor = "cyan"
 		else:
 			Info.IsoRadio.Tatuape.ModuloCor  = "pink"
 			Info.IsoRadio.Tatuape.RelogioCor = "pink"
@@ -691,14 +691,14 @@ def AtualizaCorIsoRadio(relogio,result):
 			Info.IsoRadio.CLimpo.ModuloCor  = "red"
 			Info.IsoRadio.CLimpo.RelogioCor = "red"
 		elif result == 2:
-			Info.IsoRadio.CLimpo.ModuloCor  = "green"
-			Info.IsoRadio.CLimpo.RelogioCor = "red"
+			Info.IsoRadio.CLimpo.ModuloCor  = "green3"
+			Info.IsoRadio.CLimpo.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.IsoRadio.CLimpo.ModuloCor  = "green"
-			Info.IsoRadio.CLimpo.RelogioCor = "green"
+			Info.IsoRadio.CLimpo.ModuloCor  = "green3"
+			Info.IsoRadio.CLimpo.RelogioCor = "green3"
 		elif result == 4:
-			Info.IsoRadio.CLimpo.ModuloCor  = "blue"
-			Info.IsoRadio.CLimpo.RelogioCor = "blue"
+			Info.IsoRadio.CLimpo.ModuloCor  = "cyan"
+			#Info.IsoRadio.CLimpo.RelogioCor = "cyan"
 		else:
 			Info.IsoRadio.CLimpo.ModuloCor  = "pink"
 			Info.IsoRadio.CLimpo.RelogioCor = "pink"
@@ -711,14 +711,14 @@ def AtualizaCorIsoRadio(relogio,result):
 			Info.IsoRadio.Ipiranga.ModuloCor  = "red"
 			Info.IsoRadio.Ipiranga.RelogioCor = "red"
 		elif result == 2:
-			Info.IsoRadio.Ipiranga.ModuloCor  = "green"
-			Info.IsoRadio.Ipiranga.RelogioCor = "red"
+			Info.IsoRadio.Ipiranga.ModuloCor  = "green3"
+			Info.IsoRadio.Ipiranga.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.IsoRadio.Ipiranga.ModuloCor  = "green"
-			Info.IsoRadio.Ipiranga.RelogioCor = "green"
+			Info.IsoRadio.Ipiranga.ModuloCor  = "green3"
+			Info.IsoRadio.Ipiranga.RelogioCor = "green3"
 		elif result == 4:
-			Info.IsoRadio.Ipiranga.ModuloCor  = "blue"
-			Info.IsoRadio.Ipiranga.RelogioCor = "blue"
+			Info.IsoRadio.Ipiranga.ModuloCor  = "cyan"
+			#Info.IsoRadio.Ipiranga.RelogioCor = "cyan"
 		else:
 			Info.IsoRadio.Ipiranga.ModuloCor  = "pink"
 			Info.IsoRadio.Ipiranga.RelogioCor = "pink"
@@ -729,14 +729,14 @@ def AtualizaCorIsoRadio(relogio,result):
 			Info.IsoRadio.AnaRosa.ModuloCor  = "red"
 			Info.IsoRadio.AnaRosa.RelogioCor = "red"
 		elif result == 2:
-			Info.IsoRadio.AnaRosa.ModuloCor  = "green"
-			Info.IsoRadio.AnaRosa.RelogioCor = "red"
+			Info.IsoRadio.AnaRosa.ModuloCor  = "green3"
+			Info.IsoRadio.AnaRosa.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.IsoRadio.AnaRosa.ModuloCor  = "green"
-			Info.IsoRadio.AnaRosa.RelogioCor = "green"
+			Info.IsoRadio.AnaRosa.ModuloCor  = "green3"
+			Info.IsoRadio.AnaRosa.RelogioCor = "green3"
 		elif result == 4:
-			Info.IsoRadio.AnaRosa.ModuloCor  = "blue"
-			Info.IsoRadio.AnaRosa.RelogioCor = "blue"
+			Info.IsoRadio.AnaRosa.ModuloCor  = "cyan"
+			#Info.IsoRadio.AnaRosa.RelogioCor = "cyan"
 		else:
 			Info.IsoRadio.AnaRosa.ModuloCor  = "pink"
 			Info.IsoRadio.AnaRosa.RelogioCor = "pink"
@@ -745,34 +745,34 @@ def AtualizaCorIsoRadio(relogio,result):
 	if result != 4:
 		Info.IsoRadio.Status.Contage = 0
 
-		if Info.IsoRadio.Santana.ModuloCor == "green" :
+		if Info.IsoRadio.Santana.ModuloCor == "green3" :
 			Info.IsoRadio.Status.Contage = Info.IsoRadio.Status.Contage + 1
 
-		if Info.IsoRadio.SaoMatheus.ModuloCor == "green" :
+		if Info.IsoRadio.SaoMatheus.ModuloCor == "green3" :
 			Info.IsoRadio.Status.Contage = Info.IsoRadio.Status.Contage + 1
 
-		if Info.IsoRadio.VilaMariana.ModuloCor == "green" :
+		if Info.IsoRadio.VilaMariana.ModuloCor == "green3" :
 			Info.IsoRadio.Status.Contage = Info.IsoRadio.Status.Contage + 1
 
-		if Info.IsoRadio.Lapa.ModuloCor == "green" :
+		if Info.IsoRadio.Lapa.ModuloCor == "green3" :
 			Info.IsoRadio.Status.Contage = Info.IsoRadio.Status.Contage + 1
 
-		if Info.IsoRadio.SAmaro.ModuloCor == "green" :
+		if Info.IsoRadio.SAmaro.ModuloCor == "green3" :
 			Info.IsoRadio.Status.Contage = Info.IsoRadio.Status.Contage + 1
 
-		if Info.IsoRadio.CDutra.ModuloCor == "green" :
+		if Info.IsoRadio.CDutra.ModuloCor == "green3" :
 			Info.IsoRadio.Status.Contage = Info.IsoRadio.Status.Contage + 1
 
-		if Info.IsoRadio.Tatuape.ModuloCor == "green" :
+		if Info.IsoRadio.Tatuape.ModuloCor == "green3" :
 			Info.IsoRadio.Status.Contage = Info.IsoRadio.Status.Contage + 1
 
-		if Info.IsoRadio.CLimpo.ModuloCor == "green" :
+		if Info.IsoRadio.CLimpo.ModuloCor == "green3" :
 			Info.IsoRadio.Status.Contage = Info.IsoRadio.Status.Contage + 1
 
-		if Info.IsoRadio.Ipiranga.ModuloCor == "green" :
+		if Info.IsoRadio.Ipiranga.ModuloCor == "green3" :
 			Info.IsoRadio.Status.Contage = Info.IsoRadio.Status.Contage + 1
 
-		if Info.IsoRadio.AnaRosa.ModuloCor == "green" :
+		if Info.IsoRadio.AnaRosa.ModuloCor == "green3" :
 			Info.IsoRadio.Status.Contage = Info.IsoRadio.Status.Contage + 1
 
 def AtualizaCorGrupoNk(relogio,result):
@@ -783,14 +783,14 @@ def AtualizaCorGrupoNk(relogio,result):
 			Info.GrupoNk.NelsonKioshi.ModuloCor  = "red"
 			Info.GrupoNk.NelsonKioshi.RelogioCor = "red"
 		elif result == 2:
-			Info.GrupoNk.NelsonKioshi.ModuloCor  = "green"
-			Info.GrupoNk.NelsonKioshi.RelogioCor = "red"
+			Info.GrupoNk.NelsonKioshi.ModuloCor  = "green3"
+			Info.GrupoNk.NelsonKioshi.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.GrupoNk.NelsonKioshi.ModuloCor  = "green"
-			Info.GrupoNk.NelsonKioshi.RelogioCor = "green"
+			Info.GrupoNk.NelsonKioshi.ModuloCor  = "green3"
+			Info.GrupoNk.NelsonKioshi.RelogioCor = "green3"
 		elif result == 4:
-			Info.GrupoNk.NelsonKioshi.ModuloCor  = "blue"
-			Info.GrupoNk.NelsonKioshi.RelogioCor = "blue"
+			Info.GrupoNk.NelsonKioshi.ModuloCor  = "cyan"
+			#Info.GrupoNk.NelsonKioshi.RelogioCor = "cyan"
 		else:
 			Info.GrupoNk.NelsonKioshi.ModuloCor  = "pink"
 			Info.GrupoNk.NelsonKioshi.RelogioCor = "pink"
@@ -802,14 +802,14 @@ def AtualizaCorGrupoNk(relogio,result):
 			Info.GrupoNk.RDFurukawa.ModuloCor  = "red"
 			Info.GrupoNk.RDFurukawa.RelogioCor = "red"
 		elif result == 2:
-			Info.GrupoNk.RDFurukawa.ModuloCor  = "green"
-			Info.GrupoNk.RDFurukawa.RelogioCor = "red"
+			Info.GrupoNk.RDFurukawa.ModuloCor  = "green3"
+			Info.GrupoNk.RDFurukawa.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.GrupoNk.RDFurukawa.ModuloCor  = "green"
-			Info.GrupoNk.RDFurukawa.RelogioCor = "green"
+			Info.GrupoNk.RDFurukawa.ModuloCor  = "green3"
+			Info.GrupoNk.RDFurukawa.RelogioCor = "green3"
 		elif result == 4:
-			Info.GrupoNk.RDFurukawa.ModuloCor  = "blue"
-			Info.GrupoNk.RDFurukawa.RelogioCor = "blue"
+			Info.GrupoNk.RDFurukawa.ModuloCor  = "cyan"
+			#Info.GrupoNk.RDFurukawa.RelogioCor = "cyan"
 		else:
 			Info.GrupoNk.RDFurukawa.ModuloCor  = "pink"
 			Info.GrupoNk.RDFurukawa.RelogioCor = "pink"
@@ -821,14 +821,14 @@ def AtualizaCorGrupoNk(relogio,result):
 			Info.GrupoNk.Kio1.ModuloCor  = "red"
 			Info.GrupoNk.Kio1.RelogioCor = "red"
 		elif result == 2:
-			Info.GrupoNk.Kio1.ModuloCor  = "green"
-			Info.GrupoNk.Kio1.RelogioCor = "red"
+			Info.GrupoNk.Kio1.ModuloCor  = "green3"
+			Info.GrupoNk.Kio1.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.GrupoNk.Kio1.ModuloCor  = "green"
-			Info.GrupoNk.Kio1.RelogioCor = "green"
+			Info.GrupoNk.Kio1.ModuloCor  = "green3"
+			Info.GrupoNk.Kio1.RelogioCor = "green3"
 		elif result == 4:
-			Info.GrupoNk.Kio1.ModuloCor  = "blue"
-			Info.GrupoNk.Kio1.RelogioCor = "blue"
+			Info.GrupoNk.Kio1.ModuloCor  = "cyan"
+			#Info.GrupoNk.Kio1.RelogioCor = "cyan"
 		else:
 			Info.GrupoNk.Kio1.ModuloCor  = "pink"
 			Info.GrupoNk.Kio1.RelogioCor = "pink"
@@ -841,14 +841,14 @@ def AtualizaCorGrupoNk(relogio,result):
 			Info.GrupoNk.Kio2.ModuloCor  = "red"
 			Info.GrupoNk.Kio2.RelogioCor = "red"
 		elif result == 2:
-			Info.GrupoNk.Kio2.ModuloCor  = "green"
-			Info.GrupoNk.Kio2.RelogioCor = "red"
+			Info.GrupoNk.Kio2.ModuloCor  = "green3"
+			Info.GrupoNk.Kio2.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.GrupoNk.Kio2.ModuloCor  = "green"
-			Info.GrupoNk.Kio2.RelogioCor = "green"
+			Info.GrupoNk.Kio2.ModuloCor  = "green3"
+			Info.GrupoNk.Kio2.RelogioCor = "green3"
 		elif result == 4:
-			Info.GrupoNk.Kio2.ModuloCor  = "blue"
-			Info.GrupoNk.Kio2.RelogioCor = "blue"
+			Info.GrupoNk.Kio2.ModuloCor  = "cyan"
+			#Info.GrupoNk.Kio2.RelogioCor = "cyan"
 		else:
 			Info.GrupoNk.Kio2.ModuloCor  = "pink"
 			Info.GrupoNk.Kio2.RelogioCor = "pink"
@@ -860,14 +860,14 @@ def AtualizaCorGrupoNk(relogio,result):
 			Info.GrupoNk.GranjaViana.ModuloCor  = "red"
 			Info.GrupoNk.GranjaViana.RelogioCor = "red"
 		elif result == 2:
-			Info.GrupoNk.GranjaViana.ModuloCor  = "green"
-			Info.GrupoNk.GranjaViana.RelogioCor = "red"
+			Info.GrupoNk.GranjaViana.ModuloCor  = "green3"
+			Info.GrupoNk.GranjaViana.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.GrupoNk.GranjaViana.ModuloCor  = "green"
-			Info.GrupoNk.GranjaViana.RelogioCor = "green"
+			Info.GrupoNk.GranjaViana.ModuloCor  = "green3"
+			Info.GrupoNk.GranjaViana.RelogioCor = "green3"
 		elif result == 4:
-			Info.GrupoNk.GranjaViana.ModuloCor  = "blue"
-			Info.GrupoNk.GranjaViana.RelogioCor = "blue"
+			Info.GrupoNk.GranjaViana.ModuloCor  = "cyan"
+			#Info.GrupoNk.GranjaViana.RelogioCor = "cyan"
 		else:
 			Info.GrupoNk.GranjaViana.ModuloCor  = "pink"
 			Info.GrupoNk.GranjaViana.RelogioCor = "pink"
@@ -879,14 +879,14 @@ def AtualizaCorGrupoNk(relogio,result):
 			Info.GrupoNk.SantaCecilia.ModuloCor  = "red"
 			Info.GrupoNk.SantaCecilia.RelogioCor = "red"
 		elif result == 2:
-			Info.GrupoNk.SantaCecilia.ModuloCor  = "green"
-			Info.GrupoNk.SantaCecilia.RelogioCor = "red"
+			Info.GrupoNk.SantaCecilia.ModuloCor  = "green3"
+			Info.GrupoNk.SantaCecilia.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.GrupoNk.SantaCecilia.ModuloCor  = "green"
-			Info.GrupoNk.SantaCecilia.RelogioCor = "green"
+			Info.GrupoNk.SantaCecilia.ModuloCor  = "green3"
+			Info.GrupoNk.SantaCecilia.RelogioCor = "green3"
 		elif result == 4:
-			Info.GrupoNk.SantaCecilia.ModuloCor  = "blue"
-			Info.GrupoNk.SantaCecilia.RelogioCor = "blue"
+			Info.GrupoNk.SantaCecilia.ModuloCor  = "cyan"
+			#Info.GrupoNk.SantaCecilia.RelogioCor = "cyan"
 		else:
 			Info.GrupoNk.SantaCecilia.ModuloCor  = "pink"
 			Info.GrupoNk.SantaCecilia.RelogioCor = "pink"
@@ -898,14 +898,14 @@ def AtualizaCorGrupoNk(relogio,result):
 			Info.GrupoNk.Transfruit.ModuloCor  = "red"
 			Info.GrupoNk.Transfruit.RelogioCor = "red"
 		elif result == 2:
-			Info.GrupoNk.Transfruit.ModuloCor  = "green"
-			Info.GrupoNk.Transfruit.RelogioCor = "red"
+			Info.GrupoNk.Transfruit.ModuloCor  = "green3"
+			Info.GrupoNk.Transfruit.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.GrupoNk.Transfruit.ModuloCor  = "green"
-			Info.GrupoNk.Transfruit.RelogioCor = "green"
+			Info.GrupoNk.Transfruit.ModuloCor  = "green3"
+			Info.GrupoNk.Transfruit.RelogioCor = "green3"
 		elif result == 4:
-			Info.GrupoNk.Transfruit.ModuloCor  = "blue"
-			Info.GrupoNk.Transfruit.RelogioCor = "blue"
+			Info.GrupoNk.Transfruit.ModuloCor  = "cyan"
+			#Info.GrupoNk.Transfruit.RelogioCor = "cyan"
 		else:
 			Info.GrupoNk.Transfruit.ModuloCor  = "pink"
 			Info.GrupoNk.Transfruit.RelogioCor = "pink"
@@ -916,14 +916,14 @@ def AtualizaCorGrupoNk(relogio,result):
 			Info.GrupoNk.Distribuidora.ModuloCor  = "red"
 			Info.GrupoNk.Distribuidora.RelogioCor = "red"
 		elif result == 2:
-			Info.GrupoNk.Distribuidora.ModuloCor  = "green"
-			Info.GrupoNk.Distribuidora.RelogioCor = "red"
+			Info.GrupoNk.Distribuidora.ModuloCor  = "green3"
+			Info.GrupoNk.Distribuidora.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.GrupoNk.Distribuidora.ModuloCor  = "green"
-			Info.GrupoNk.Distribuidora.RelogioCor = "green"
+			Info.GrupoNk.Distribuidora.ModuloCor  = "green3"
+			Info.GrupoNk.Distribuidora.RelogioCor = "green3"
 		elif result == 4:
-			Info.GrupoNk.Distribuidora.ModuloCor  = "blue"
-			Info.GrupoNk.Distribuidora.RelogioCor = "blue"
+			Info.GrupoNk.Distribuidora.ModuloCor  = "cyan"
+			#Info.GrupoNk.Distribuidora.RelogioCor = "cyan"
 		else:
 			Info.GrupoNk.Distribuidora.ModuloCor  = "pink"
 			Info.GrupoNk.Distribuidora.RelogioCor = "pink"
@@ -935,14 +935,14 @@ def AtualizaCorGrupoNk(relogio,result):
 			Info.GrupoNk.NKFilial.ModuloCor  = "red"
 			Info.GrupoNk.NKFilial.RelogioCor = "red"
 		elif result == 2:
-			Info.GrupoNk.NKFilial.ModuloCor  = "green"
-			Info.GrupoNk.NKFilial.RelogioCor = "red"
+			Info.GrupoNk.NKFilial.ModuloCor  = "green3"
+			Info.GrupoNk.NKFilial.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.GrupoNk.NKFilial.ModuloCor  = "green"
-			Info.GrupoNk.NKFilial.RelogioCor = "green"
+			Info.GrupoNk.NKFilial.ModuloCor  = "green3"
+			Info.GrupoNk.NKFilial.RelogioCor = "green3"
 		elif result == 4:
-			Info.GrupoNk.NKFilial.ModuloCor  = "blue"
-			Info.GrupoNk.NKFilial.RelogioCor = "blue"
+			Info.GrupoNk.NKFilial.ModuloCor  = "cyan"
+			#Info.GrupoNk.NKFilial.RelogioCor = "cyan"
 		else:
 			Info.GrupoNk.NKFilial.ModuloCor  = "pink"
 			Info.GrupoNk.NKFilial.RelogioCor = "pink"
@@ -955,14 +955,14 @@ def AtualizaLotten(relogio,result):
 			Info.Lotten.Jardins.ModuloCor  = "red"
 			Info.Lotten.Jardins.RelogioCor = "red"
 		elif result == 2:
-			Info.Lotten.Jardins.ModuloCor  = "green"
-			Info.Lotten.Jardins.RelogioCor = "red"
+			Info.Lotten.Jardins.ModuloCor  = "green3"
+			Info.Lotten.Jardins.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.Lotten.Jardins.ModuloCor  = "green"
-			Info.Lotten.Jardins.RelogioCor = "green"
+			Info.Lotten.Jardins.ModuloCor  = "green3"
+			Info.Lotten.Jardins.RelogioCor = "green3"
 		elif result == 4:
-			Info.Lotten.Jardins.ModuloCor  = "blue"
-			Info.Lotten.Jardins.RelogioCor = "blue"
+			Info.Lotten.Jardins.ModuloCor  = "cyan"
+			#Info.Lotten.Jardins.RelogioCor = "cyan"
 		else:
 			Info.Lotten.Jardins.ModuloCor  = "pink"
 			Info.Lotten.Jardins.RelogioCor = "pink"
@@ -973,14 +973,14 @@ def AtualizaLotten(relogio,result):
 			Info.Lotten.Alphaville.ModuloCor  = "red"
 			Info.Lotten.Alphaville.RelogioCor = "red"
 		elif result == 2:
-			Info.Lotten.Alphaville.ModuloCor  = "green"
-			Info.Lotten.Alphaville.RelogioCor = "red"
+			Info.Lotten.Alphaville.ModuloCor  = "green3"
+			Info.Lotten.Alphaville.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.Lotten.Alphaville.ModuloCor  = "green"
-			Info.Lotten.Alphaville.RelogioCor = "green"
+			Info.Lotten.Alphaville.ModuloCor  = "green3"
+			Info.Lotten.Alphaville.RelogioCor = "green3"
 		elif result == 4:
-			Info.Lotten.Alphaville.ModuloCor  = "blue"
-			Info.Lotten.Alphaville.RelogioCor = "blue"
+			Info.Lotten.Alphaville.ModuloCor  = "cyan"
+			#Info.Lotten.Alphaville.RelogioCor = "cyan"
 		else:
 			Info.Lotten.Alphaville.ModuloCor  = "pink"
 			Info.Lotten.Alphaville.RelogioCor = "pink"
@@ -991,14 +991,14 @@ def AtualizaLotten(relogio,result):
 			Info.Lotten.Osasco.ModuloCor  = "red"
 			Info.Lotten.Osasco.RelogioCor = "red"
 		elif result == 2:
-			Info.Lotten.Osasco.ModuloCor  = "green"
-			Info.Lotten.Osasco.RelogioCor = "red"
+			Info.Lotten.Osasco.ModuloCor  = "green3"
+			Info.Lotten.Osasco.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.Lotten.Osasco.ModuloCor  = "green"
-			Info.Lotten.Osasco.RelogioCor = "green"
+			Info.Lotten.Osasco.ModuloCor  = "green3"
+			Info.Lotten.Osasco.RelogioCor = "green3"
 		elif result == 4:
-			Info.Lotten.Osasco.ModuloCor  = "blue"
-			Info.Lotten.Osasco.RelogioCor = "blue"
+			Info.Lotten.Osasco.ModuloCor  = "cyan"
+			#Info.Lotten.Osasco.RelogioCor = "cyan"
 		else:
 			Info.Lotten.Osasco.ModuloCor  = "pink"
 			Info.Lotten.Osasco.RelogioCor = "pink"
@@ -1009,14 +1009,14 @@ def AtualizaLotten(relogio,result):
 			Info.Lotten.Santana.ModuloCor  = "red"
 			Info.Lotten.Santana.RelogioCor = "red"
 		elif result == 2:
-			Info.Lotten.Santana.ModuloCor  = "green"
-			Info.Lotten.Santana.RelogioCor = "red"
+			Info.Lotten.Santana.ModuloCor  = "green3"
+			Info.Lotten.Santana.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.Lotten.Santana.ModuloCor  = "green"
-			Info.Lotten.Santana.RelogioCor = "green"
+			Info.Lotten.Santana.ModuloCor  = "green3"
+			Info.Lotten.Santana.RelogioCor = "green3"
 		elif result == 4:
-			Info.Lotten.Santana.ModuloCor  = "blue"
-			Info.Lotten.Santana.RelogioCor = "blue"
+			Info.Lotten.Santana.ModuloCor  = "cyan"
+			#Info.Lotten.Santana.RelogioCor = "cyan"
 		else:
 			Info.Lotten.Santana.ModuloCor  = "pink"
 			Info.Lotten.Santana.RelogioCor = "pink"
@@ -1027,14 +1027,14 @@ def AtualizaLotten(relogio,result):
 			Info.Lotten.Tatuape.ModuloCor  = "red"
 			Info.Lotten.Tatuape.RelogioCor = "red"
 		elif result == 2:
-			Info.Lotten.Tatuape.ModuloCor  = "green"
-			Info.Lotten.Tatuape.RelogioCor = "red"
+			Info.Lotten.Tatuape.ModuloCor  = "green3"
+			Info.Lotten.Tatuape.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.Lotten.Tatuape.ModuloCor  = "green"
-			Info.Lotten.Tatuape.RelogioCor = "green"
+			Info.Lotten.Tatuape.ModuloCor  = "green3"
+			Info.Lotten.Tatuape.RelogioCor = "green3"
 		elif result == 4:
-			Info.Lotten.Tatuape.ModuloCor  = "blue"
-			Info.Lotten.Tatuape.RelogioCor = "blue"
+			Info.Lotten.Tatuape.ModuloCor  = "cyan"
+			#Info.Lotten.Tatuape.RelogioCor = "cyan"
 		else:
 			Info.Lotten.Tatuape.ModuloCor  = "pink"
 			Info.Lotten.Tatuape.RelogioCor = "pink"
@@ -1045,14 +1045,14 @@ def AtualizaLotten(relogio,result):
 			Info.Lotten.Moema.ModuloCor  = "red"
 			Info.Lotten.Moema.RelogioCor = "red"
 		elif result == 2:
-			Info.Lotten.Moema.ModuloCor  = "green"
-			Info.Lotten.Moema.RelogioCor = "red"
+			Info.Lotten.Moema.ModuloCor  = "green3"
+			Info.Lotten.Moema.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.Lotten.Moema.ModuloCor  = "green"
-			Info.Lotten.Moema.RelogioCor = "green"
+			Info.Lotten.Moema.ModuloCor  = "green3"
+			Info.Lotten.Moema.RelogioCor = "green3"
 		elif result == 4:
-			Info.Lotten.Moema.ModuloCor  = "blue"
-			Info.Lotten.Moema.RelogioCor = "blue"
+			Info.Lotten.Moema.ModuloCor  = "cyan"
+			#Info.Lotten.Moema.RelogioCor = "cyan"
 		else:
 			Info.Lotten.Moema.ModuloCor  = "pink"
 			Info.Lotten.Moema.RelogioCor = "pink"
@@ -1063,14 +1063,14 @@ def AtualizaLotten(relogio,result):
 			Info.Lotten.JardimSul.ModuloCor  = "red"
 			Info.Lotten.JardimSul.RelogioCor = "red"
 		elif result == 2:
-			Info.Lotten.JardimSul.ModuloCor  = "green"
-			Info.Lotten.JardimSul.RelogioCor = "red"
+			Info.Lotten.JardimSul.ModuloCor  = "green3"
+			Info.Lotten.JardimSul.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.Lotten.JardimSul.ModuloCor  = "green"
-			Info.Lotten.JardimSul.RelogioCor = "green"
+			Info.Lotten.JardimSul.ModuloCor  = "green3"
+			Info.Lotten.JardimSul.RelogioCor = "green3"
 		elif result == 4:
-			Info.Lotten.JardimSul.ModuloCor  = "blue"
-			Info.Lotten.JardimSul.RelogioCor = "blue"
+			Info.Lotten.JardimSul.ModuloCor  = "cyan"
+			#Info.Lotten.JardimSul.RelogioCor = "cyan"
 		else:
 			Info.Lotten.JardimSul.ModuloCor  = "pink"
 			Info.Lotten.JardimSul.RelogioCor = "pink"
@@ -1081,14 +1081,14 @@ def AtualizaLotten(relogio,result):
 			Info.Lotten.Conceicao.ModuloCor  = "red"
 			Info.Lotten.Conceicao.RelogioCor = "red"
 		elif result == 2:
-			Info.Lotten.Conceicao.ModuloCor  = "green"
-			Info.Lotten.Conceicao.RelogioCor = "red"
+			Info.Lotten.Conceicao.ModuloCor  = "green3"
+			Info.Lotten.Conceicao.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.Lotten.Conceicao.ModuloCor  = "green"
-			Info.Lotten.Conceicao.RelogioCor = "green"
+			Info.Lotten.Conceicao.ModuloCor  = "green3"
+			Info.Lotten.Conceicao.RelogioCor = "green3"
 		elif result == 4:
-			Info.Lotten.Conceicao.ModuloCor  = "blue"
-			Info.Lotten.Conceicao.RelogioCor = "blue"
+			Info.Lotten.Conceicao.ModuloCor  = "cyan"
+			#Info.Lotten.Conceicao.RelogioCor = "cyan"
 		else:
 			Info.Lotten.Conceicao.ModuloCor  = "pink"
 			Info.Lotten.Conceicao.RelogioCor = "pink"
@@ -1099,14 +1099,14 @@ def AtualizaLotten(relogio,result):
 			Info.Lotten.Lapa.ModuloCor  = "red"
 			Info.Lotten.Lapa.RelogioCor = "red"
 		elif result == 2:
-			Info.Lotten.Lapa.ModuloCor  = "green"
-			Info.Lotten.Lapa.RelogioCor = "red"
+			Info.Lotten.Lapa.ModuloCor  = "green3"
+			Info.Lotten.Lapa.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.Lotten.Lapa.ModuloCor  = "green"
-			Info.Lotten.Lapa.RelogioCor = "green"
+			Info.Lotten.Lapa.ModuloCor  = "green3"
+			Info.Lotten.Lapa.RelogioCor = "green3"
 		elif result == 4:
-			Info.Lotten.Lapa.ModuloCor  = "blue"
-			Info.Lotten.Lapa.RelogioCor = "blue"
+			Info.Lotten.Lapa.ModuloCor  = "cyan"
+			#Info.Lotten.Lapa.RelogioCor = "cyan"
 		else:
 			Info.Lotten.Lapa.ModuloCor  = "pink"
 			Info.Lotten.Lapa.RelogioCor = "pink"
@@ -1117,14 +1117,14 @@ def AtualizaLotten(relogio,result):
 			Info.Lotten.Perdizes.ModuloCor  = "red"
 			Info.Lotten.Perdizes.RelogioCor = "red"
 		elif result == 2:
-			Info.Lotten.Perdizes.ModuloCor  = "green"
-			Info.Lotten.Perdizes.RelogioCor = "red"
+			Info.Lotten.Perdizes.ModuloCor  = "green3"
+			Info.Lotten.Perdizes.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.Lotten.Perdizes.ModuloCor  = "green"
-			Info.Lotten.Perdizes.RelogioCor = "green"
+			Info.Lotten.Perdizes.ModuloCor  = "green3"
+			Info.Lotten.Perdizes.RelogioCor = "green3"
 		elif result == 4:
-			Info.Lotten.Perdizes.ModuloCor  = "blue"
-			Info.Lotten.Perdizes.RelogioCor = "blue"
+			Info.Lotten.Perdizes.ModuloCor  = "cyan"
+			#Info.Lotten.Perdizes.RelogioCor = "cyan"
 		else:
 			Info.Lotten.Perdizes.ModuloCor  = "pink"
 			Info.Lotten.Perdizes.RelogioCor = "pink"
@@ -1135,14 +1135,14 @@ def AtualizaLotten(relogio,result):
 			Info.Lotten.SaoCaetano.ModuloCor  = "red"
 			Info.Lotten.SaoCaetano.RelogioCor = "red"
 		elif result == 2:
-			Info.Lotten.SaoCaetano.ModuloCor  = "green"
-			Info.Lotten.SaoCaetano.RelogioCor = "red"
+			Info.Lotten.SaoCaetano.ModuloCor  = "green3"
+			Info.Lotten.SaoCaetano.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.Lotten.SaoCaetano.ModuloCor  = "green"
-			Info.Lotten.SaoCaetano.RelogioCor = "green"
+			Info.Lotten.SaoCaetano.ModuloCor  = "green3"
+			Info.Lotten.SaoCaetano.RelogioCor = "green3"
 		elif result == 4:
-			Info.Lotten.SaoCaetano.ModuloCor  = "blue"
-			Info.Lotten.SaoCaetano.RelogioCor = "blue"
+			Info.Lotten.SaoCaetano.ModuloCor  = "cyan"
+			#Info.Lotten.SaoCaetano.RelogioCor = "cyan"
 		else:
 			Info.Lotten.SaoCaetano.ModuloCor  = "pink"
 			Info.Lotten.SaoCaetano.RelogioCor = "pink"
@@ -1153,14 +1153,14 @@ def AtualizaLotten(relogio,result):
 			Info.Lotten.Pinheiros.ModuloCor  = "red"
 			Info.Lotten.Pinheiros.RelogioCor = "red"
 		elif result == 2:
-			Info.Lotten.Pinheiros.ModuloCor  = "green"
-			Info.Lotten.Pinheiros.RelogioCor = "red"
+			Info.Lotten.Pinheiros.ModuloCor  = "green3"
+			Info.Lotten.Pinheiros.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.Lotten.Pinheiros.ModuloCor  = "green"
-			Info.Lotten.Pinheiros.RelogioCor = "green"
+			Info.Lotten.Pinheiros.ModuloCor  = "green3"
+			Info.Lotten.Pinheiros.RelogioCor = "green3"
 		elif result == 4:
-			Info.Lotten.Pinheiros.ModuloCor  = "blue"
-			Info.Lotten.Pinheiros.RelogioCor = "blue"
+			Info.Lotten.Pinheiros.ModuloCor  = "cyan"
+			#Info.Lotten.Pinheiros.RelogioCor = "cyan"
 		else:
 			Info.Lotten.Pinheiros.ModuloCor  = "pink"
 			Info.Lotten.Pinheiros.RelogioCor = "pink"
@@ -1172,14 +1172,14 @@ def AtualizaLotten(relogio,result):
 			Info.Lotten.Morumbi.ModuloCor  = "red"
 			Info.Lotten.Morumbi.RelogioCor = "red"
 		elif result == 2:
-			Info.Lotten.Morumbi.ModuloCor  = "green"
-			Info.Lotten.Morumbi.RelogioCor = "red"
+			Info.Lotten.Morumbi.ModuloCor  = "green3"
+			Info.Lotten.Morumbi.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.Lotten.Morumbi.ModuloCor  = "green"
-			Info.Lotten.Morumbi.RelogioCor = "green"
+			Info.Lotten.Morumbi.ModuloCor  = "green3"
+			Info.Lotten.Morumbi.RelogioCor = "green3"
 		elif result == 4:
-			Info.Lotten.Morumbi.ModuloCor  = "blue"
-			Info.Lotten.Morumbi.RelogioCor = "blue"
+			Info.Lotten.Morumbi.ModuloCor  = "cyan"
+			#Info.Lotten.Morumbi.RelogioCor = "cyan"
 		else:
 			Info.Lotten.Morumbi.ModuloCor  = "pink"
 			Info.Lotten.Morumbi.RelogioCor = "pink"
@@ -1190,14 +1190,14 @@ def AtualizaLotten(relogio,result):
 			Info.Lotten.Berrini.ModuloCor  = "red"
 			Info.Lotten.Berrini.RelogioCor = "red"
 		elif result == 2:
-			Info.Lotten.Berrini.ModuloCor  = "green"
-			Info.Lotten.Berrini.RelogioCor = "red"
+			Info.Lotten.Berrini.ModuloCor  = "green3"
+			Info.Lotten.Berrini.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.Lotten.Berrini.ModuloCor  = "green"
-			Info.Lotten.Berrini.RelogioCor = "green"
+			Info.Lotten.Berrini.ModuloCor  = "green3"
+			Info.Lotten.Berrini.RelogioCor = "green3"
 		elif result == 4:
-			Info.Lotten.Berrini.ModuloCor  = "blue"
-			Info.Lotten.Berrini.RelogioCor = "blue"
+			Info.Lotten.Berrini.ModuloCor  = "cyan"
+			#Info.Lotten.Berrini.RelogioCor = "cyan"
 		else:
 			Info.Lotten.Berrini.ModuloCor  = "pink"
 			Info.Lotten.Berrini.RelogioCor = "pink"
@@ -1209,14 +1209,14 @@ def AtualizaLotten(relogio,result):
 			Info.Lotten.VilaMariana.ModuloCor  = "red"
 			Info.Lotten.VilaMariana.RelogioCor = "red"
 		elif result == 2:
-			Info.Lotten.VilaMariana.ModuloCor  = "green"
-			Info.Lotten.VilaMariana.RelogioCor = "red"
+			Info.Lotten.VilaMariana.ModuloCor  = "green3"
+			Info.Lotten.VilaMariana.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.Lotten.VilaMariana.ModuloCor  = "green"
-			Info.Lotten.VilaMariana.RelogioCor = "green"
+			Info.Lotten.VilaMariana.ModuloCor  = "green3"
+			Info.Lotten.VilaMariana.RelogioCor = "green3"
 		elif result == 4:
-			Info.Lotten.VilaMariana.ModuloCor  = "blue"
-			Info.Lotten.VilaMariana.RelogioCor = "blue"
+			Info.Lotten.VilaMariana.ModuloCor  = "cyan"
+			#Info.Lotten.VilaMariana.RelogioCor = "cyan"
 		else:
 			Info.Lotten.VilaMariana.ModuloCor  = "pink"
 			Info.Lotten.VilaMariana.RelogioCor = "pink"
@@ -1228,14 +1228,14 @@ def AtualizaLotten(relogio,result):
 			Info.Lotten.VilaOlimpia.ModuloCor  = "red"
 			Info.Lotten.VilaOlimpia.RelogioCor = "red"
 		elif result == 2:
-			Info.Lotten.VilaOlimpia.ModuloCor  = "green"
-			Info.Lotten.VilaOlimpia.RelogioCor = "red"
+			Info.Lotten.VilaOlimpia.ModuloCor  = "green3"
+			Info.Lotten.VilaOlimpia.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.Lotten.VilaOlimpia.ModuloCor  = "green"
-			Info.Lotten.VilaOlimpia.RelogioCor = "green"
+			Info.Lotten.VilaOlimpia.ModuloCor  = "green3"
+			Info.Lotten.VilaOlimpia.RelogioCor = "green3"
 		elif result == 4:
-			Info.Lotten.VilaOlimpia.ModuloCor  = "blue"
-			Info.Lotten.VilaOlimpia.RelogioCor = "blue"
+			Info.Lotten.VilaOlimpia.ModuloCor  = "cyan"
+			#Info.Lotten.VilaOlimpia.RelogioCor = "cyan"
 		else:
 			Info.Lotten.VilaOlimpia.ModuloCor  = "pink"
 			Info.Lotten.VilaOlimpia.RelogioCor = "pink"
@@ -1247,14 +1247,14 @@ def AtualizaLotten(relogio,result):
 			Info.Lotten.Itaim.ModuloCor  = "red"
 			Info.Lotten.Itaim.RelogioCor = "red"
 		elif result == 2:
-			Info.Lotten.Itaim.ModuloCor  = "green"
-			Info.Lotten.Itaim.RelogioCor = "red"
+			Info.Lotten.Itaim.ModuloCor  = "green3"
+			Info.Lotten.Itaim.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.Lotten.Itaim.ModuloCor  = "green"
-			Info.Lotten.Itaim.RelogioCor = "green"
+			Info.Lotten.Itaim.ModuloCor  = "green3"
+			Info.Lotten.Itaim.RelogioCor = "green3"
 		elif result == 4:
-			Info.Lotten.Itaim.ModuloCor  = "blue"
-			Info.Lotten.Itaim.RelogioCor = "blue"
+			Info.Lotten.Itaim.ModuloCor  = "cyan"
+			#Info.Lotten.Itaim.RelogioCor = "cyan"
 		else:
 			Info.Lotten.Itaim.ModuloCor  = "pink"
 			Info.Lotten.Itaim.RelogioCor = "pink"
@@ -1266,14 +1266,14 @@ def AtualizaLotten(relogio,result):
 			Info.Lotten.Guarulhos.ModuloCor  = "red"
 			Info.Lotten.Guarulhos.RelogioCor = "red"
 		elif result == 2:
-			Info.Lotten.Guarulhos.ModuloCor  = "green"
-			Info.Lotten.Guarulhos.RelogioCor = "red"
+			Info.Lotten.Guarulhos.ModuloCor  = "green3"
+			Info.Lotten.Guarulhos.RelogioCor = "DarkOrange1"
 		elif result == 3:
-			Info.Lotten.Guarulhos.ModuloCor  = "green"
-			Info.Lotten.Guarulhos.RelogioCor = "green"
+			Info.Lotten.Guarulhos.ModuloCor  = "green3"
+			Info.Lotten.Guarulhos.RelogioCor = "green3"
 		elif result == 4:
-			Info.Lotten.Guarulhos.ModuloCor  = "blue"
-			Info.Lotten.Guarulhos.RelogioCor = "blue"
+			Info.Lotten.Guarulhos.ModuloCor  = "cyan"
+			#Info.Lotten.Guarulhos.RelogioCor = "cyan"
 		else:
 			Info.Lotten.Guarulhos.ModuloCor  = "pink"
 			Info.Lotten.Guarulhos.RelogioCor = "pink"
