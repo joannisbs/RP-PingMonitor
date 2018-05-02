@@ -258,6 +258,12 @@ class Info(object):
 
 	class Lotten(object):
 
+
+		class Status(object):
+			Contage         = 0
+			TotalRelogios   = 18
+
+
 		class Jardins(object):
 
 			Empresa         = "None"
@@ -478,6 +484,11 @@ class Info(object):
 
 	class Laser(object):
 
+		class Status(object):
+			Contage         = 0
+			TotalRelogios   = 2
+
+
 		class Academia(object):
 
 			Empresa         = "None"
@@ -506,9 +517,8 @@ class Info(object):
 	class Gravex(object):
 
 		class Status(object):
-
-			QuantoOn		= 0
-			QuantoTotal		= 4
+			Contage         = 0
+			TotalRelogios   = 4
 
 
 		class ADM(object):
@@ -1072,7 +1082,7 @@ class Info(object):
 
 		class Status(object):
 			Contage         = 0
-			TotalRelogios   = 3
+			TotalRelogios   = 9
 
 		class NelsonKioshi(object):
 

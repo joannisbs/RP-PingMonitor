@@ -513,6 +513,11 @@ class TelaRelogios1(object):
 		self.msgLaser.grid(row=0,column=0,sticky = "N")
 
 
+		self.msgLaserContage = Label (self.ContainerLaser,text = str(Info.Laser.Status.Contage)+"/"+
+																	str(Info.Laser.Status.TotalRelogios))
+		self.msgLaserContage["height"]=1
+		self.msgLaserContage.grid(row=0,column=1,sticky = "N")
+
 
 
 		self.botaoAcademia                                         = Button(self.ContainerLaser)
@@ -1172,7 +1177,14 @@ class TelaRelogios1(object):
 		self.msgLotten = Label (self.ContainerLotten,text = "Lotten")
 		self.msgLotten.grid(row=0,column=0,sticky = "N")
 
+		self.msgLottenContage = Label (self.ContainerLotten,text=str(Info.Lotten.Status.Contage)+"/"+
+														  str(Info.Lotten.Status.TotalRelogios))
 
+		self.msgLottenContage.grid(row=0,column=1,sticky = "N")
+
+
+
+		
 
 
 		self.botaoLottenJardins                                  = Button(self.ContainerLotten)
@@ -2122,12 +2134,10 @@ class TelaRelogios1(object):
 		self.msgGrupoNk                            		["height"]     = 1
 		self.msgGrupoNk.grid                       		(row=0,column=0,sticky = "N")
 
-		self.msgGrupoNkCont                        		= Label (self.ContainerGrupoNk,text = str(Info.GrupoNk.Status.Contage)+"/3")
-		self.msgGrupoNkCont                        		["height"]     = 1
-		self.msgGrupoNkCont.grid                   		(row=0,column=1,sticky = "N")
-
-
-
+		self.msgGrupoNkContage                        	= Label (self.ContainerGrupoNk,text=str(Info.GrupoNk.Status.Contage)+"/"+
+																								str(Info.GrupoNk.Status.TotalRelogios))	
+		self.msgGrupoNkContage                        	["height"]     = 1
+		self.msgGrupoNkContage.grid                   	(row=0,column=1,sticky = "N")
 
 
 
@@ -2541,7 +2551,21 @@ class TelaRelogios1(object):
 
 
 
+	def updateLaser2(self, relogio):
 
+		if relogio == "instituto":
+		
+			self.botaoAcademia.configure                    		(bg=Info.Laser.Academia.ModuloCor)
+			self.botaoRAcademia.configure                    		(bg=Info.Laser.Academia.RelogioCor)
+
+
+		if relogio == "academia":
+
+			self.botaoInstituto.configure                    		(bg=Info.Laser.Instituto.ModuloCor)
+			self.botaoRInstituto.configure                   		(bg=Info.Laser.Instituto.RelogioCor)
+
+		self.msgLaserContage.configure								(text=str(Info.Laser.Status.Contage)+"/"+
+																	str(Info.Laser.Status.TotalRelogios)								)
 
 
 
@@ -2605,6 +2629,7 @@ class TelaRelogios1(object):
 			self.botaoGravexDantChiniRelogio.configure 				(bg=Info.Gravex.DantChini.RelogioCor)
 
 
+
 	def updateGrupoNk(self, relogio):
 		if relogio == "nelson":
 
@@ -2652,23 +2677,284 @@ class TelaRelogios1(object):
 			self.botaoGrupoNkNKFilial.configure               			(bg=Info.GrupoNk.NKFilial.ModuloCor)
 			self.botaoGrupoNkNKFilialRelogio.configure        			(bg=Info.GrupoNk.NKFilial.RelogioCor)
 
+		self.msgGrupoNkContage.configure								(text=str(Info.GrupoNk.Status.Contage)+"/"+
+																	str(Info.GrupoNk.Status.TotalRelogios)								)
+
+
+
+	def updateLotten(self, relogio):
+
+		if relogio == "sfjardins":
+
+			self.botaoLottenJardins.configure               		(bg=Info.Lotten.Jardins.ModuloCor)
+			self.botaoLottenJardinsRelogio.configure        		(bg=Info.Lotten.Jardins.RelogioCor)	
+
+		elif relogio == "alphaville":
+
+			self.botaoLottenAlphaville.configure               		(bg=Info.Lotten.Alphaville.ModuloCor)
+			self.botaoLottenAlphavilleRelogio.configure        		(bg=Info.Lotten.Alphaville.RelogioCor)	
+
+		elif relogio == "osasco":
+
+			self.botaoLottenOsasco.configure               			(bg=Info.Lotten.Osasco.ModuloCor)
+			self.botaoLottenOsascoRelogio.configure        			(bg=Info.Lotten.Osasco.RelogioCor)	
+
+		elif relogio == "santana":
+
+			self.botaoLottenSantana.configure               		(bg=Info.Lotten.Santana.ModuloCor)
+			self.botaoLottenSantanaRelogio.configure        		(bg=Info.Lotten.Santana.RelogioCor)	
+
+		elif relogio == "tatuape":
+
+			self.botaoLottenTatuape.configure               		(bg=Info.Lotten.Tatuape.ModuloCor)
+			self.botaoLottenTatuapeRelogio.configure        		(bg=Info.Lotten.Tatuape.RelogioCor)	
+
+		elif relogio == "moema":
+
+			self.botaoLottenMoema.configure               			(bg=Info.Lotten.Moema.ModuloCor)
+			self.botaoLottenMoemaRelogio.configure        			(bg=Info.Lotten.Moema.RelogioCor)	
+
+		elif relogio == "jardimsul":
+
+			self.botaoLottenJardimSul.configure               		(bg=Info.Lotten.JardimSul.ModuloCor)
+			self.botaoLottenJardimSulRelogio.configure        		(bg=Info.Lotten.JardimSul.RelogioCor)	
+
+		elif relogio == "conceicao":
+
+			self.botaoLottenConceicao.configure               		(bg=Info.Lotten.Conceicao.ModuloCor)
+			self.botaoLottenConceicaoRelogio.configure        		(bg=Info.Lotten.Conceicao.RelogioCor)	
+
+
+		elif relogio == "lapa":
+
+			self.botaoLottenLapa.configure               			(bg=Info.Lotten.Lapa.ModuloCor)
+			self.botaoLottenLapaRelogio.configure        			(bg=Info.Lotten.Lapa.RelogioCor)	
+
+
+		elif relogio == "perdizes":
+
+			self.botaoLottenPerdizes.configure               		(bg=Info.Lotten.Perdizes.ModuloCor)
+			self.botaoLottenPerdizesRelogio.configure        		(bg=Info.Lotten.Perdizes.RelogioCor)
+
+
+		elif relogio == "saocaetano":
+
+			self.botaoLottenSaoCaetano.configure               		(bg=Info.Lotten.SaoCaetano.ModuloCor)
+			self.botaoLottenSaoCaetanoRelogio.configure        		(bg=Info.Lotten.SaoCaetano.RelogioCor)	
+
+		elif relogio == "pinheiros":
+
+			self.botaoLottenPinheiros.configure               		(bg=Info.Lotten.Pinheiros.ModuloCor)
+			self.botaoLottenPinheirosRelogio.configure        		(bg=Info.Lotten.Pinheiros.RelogioCor)	
+
+		elif relogio == "morumbi":
+
+			self.botaoLottenMorumbi.configure               		(bg=Info.Lotten.Morumbi.ModuloCor)
+			self.botaoLottenMorumbiRelogio.configure        		(bg=Info.Lotten.Morumbi.RelogioCor)	
+
+		elif relogio == "berrini":
+
+			self.botaoLottenBerrini.configure               		(bg=Info.Lotten.Berrini.ModuloCor)
+			self.botaoLottenBerriniRelogio.configure        		(bg=Info.Lotten.Berrini.RelogioCor)	
+
+		elif relogio == "vilamariana":
+
+			self.botaoLottenVilaMariana.configure               	(bg=Info.Lotten.VilaMariana.ModuloCor)
+			self.botaoLottenVilaMarianaRelogio.configure        	(bg=Info.Lotten.VilaMariana.RelogioCor)	
+
+		elif relogio == "vilaolimpia":
+
+			self.botaoLottenVilaOlimpia.configure               	(bg=Info.Lotten.VilaOlimpia.ModuloCor)
+			self.botaoLottenVilaOlimpiaRelogio.configure        	(bg=Info.Lotten.VilaOlimpia.RelogioCor)	
+
+
+		elif relogio == "itaim":
+
+			self.botaoLottenItaim.configure               			(bg=Info.Lotten.Itaim.ModuloCor)
+			self.botaoLottenItaimRelogio.configure        			(bg=Info.Lotten.Itaim.RelogioCor)	
+
+
+		elif relogio == "garulhos":
+
+			self.botaoLottenGuarulhos.configure               		(bg=Info.Lotten.Guarulhos.ModuloCor)
+			self.botaoLottenGuarulhosRelogio.configure        		(bg=Info.Lotten.Guarulhos.RelogioCor)	
+
+		self.msgLottenContage.configure								(text=str(Info.Lotten.Status.Contage)+"/"+
+																	str(Info.Lotten.Status.TotalRelogios))
+
+
+
+	def updateCasaCristo(self, relogio):
+
+		if relogio == "adm":
+
+			self.botaoCasaCristoADM.configure               		(bg=Info.CasaCristo.ADM.ModuloCor)
+			self.botaoCasaCristoADMRelogio.configure        		(bg=Info.CasaCristo.ADM.RelogioCor)
+
+		elif relogio == "cei1":
+
+			self.botaoCasaCristoCEI1.configure               		(bg=Info.CasaCristo.CEI1.ModuloCor)
+			self.botaoCasaCristoCEI1Relogio.configure        		(bg=Info.CasaCristo.CEI1.RelogioCor)
+
+		elif relogio == "cei2":
+
+			self.botaoCasaCristoCEI2.configure               		(bg=Info.CasaCristo.CEI2.ModuloCor)
+			self.botaoCasaCristoCEI2Relogio.configure        		(bg=Info.CasaCristo.CEI2.RelogioCor)
+
+		elif relogio == "cei3":
+
+			self.botaoCasaCristoCEI3.configure               		(bg=Info.CasaCristo.CEI3.ModuloCor)
+			self.botaoCasaCristoCEI3Relogio.configure        		(bg=Info.CasaCristo.CEI3.RelogioCor)
+
+		elif relogio == "vovomatilde":
+
+			self.botaoCasaCristoVMatilde.configure               	(bg=Info.CasaCristo.VovoMatilde.ModuloCor)
+			self.botaoCasaCristoVMatildeRelogio.configure        	(bg=Info.CasaCristo.VovoMatilde.RelogioCor)
+
+		self.msgCasaCristoContage.configure							(text=str(Info.CasaCristo.Status.Contage)+"/"+
+																	str(Info.CasaCristo.Status.TotalRelogios))	
+
+
+
+	def updateBestInClass(self, relogio):
+
+		if relogio == "recife":
+
+			self.botaoBestInClassRecife.configure					(bg=Info.BestInClass.Recife.ModuloCor)
+			self.botaoBestInClassRecifeRelogio.configure			(bg=Info.BestInClass.Recife.RelogioCor)
+			
+
+		elif relogio == "itaquera":
+
+			self.botaoBestInClassItaquera.configure					(bg=Info.BestInClass.Itaquera.ModuloCor)
+			self.botaoBestInClassItaqueraRelogio.configure			(bg=Info.BestInClass.Itaquera.RelogioCor)
+
+		elif relogio == "itapevi":
+
+			self.botaoBestInClassItapevi.configure					(bg=Info.BestInClass.Itapevi.ModuloCor)
+			self.botaoBestInClassItapeviRelogio.configure			(bg=Info.BestInClass.Itapevi.RelogioCor)
+
+
+		elif relogio == "sorocaba":
+
+			self.botaoBestInClassSorocaba.configure					(bg=Info.BestInClass.Sorocaba.ModuloCor)
+			self.botaoBestInClassSorocabaRelogio.configure			(bg=Info.BestInClass.Sorocaba.RelogioCor)
+
+
+		elif relogio == "setelagoas":
+
+
+			self.botaoBestInClassSeteLagoas.configure				(bg=Info.BestInClass.SeteLagoas.ModuloCor)
+			self.botaoBestInClassSeteLagoasRelogio.configure		(bg=Info.BestInClass.SeteLagoas.RelogioCor)
+
+
+		elif relogio == "curitiba":
+
+			
+			self.botaoBestInClassCuritiba.configure					(bg=Info.BestInClass.Curitiba.ModuloCor)
+			self.botaoBestInClassCuritibaRelogio.configure			(bg=Info.BestInClass.Curitiba.RelogioCor)
+
+
+		elif relogio == "fsant":
+
+			self.botaoBestInClassSFsat.configure					(bg=Info.BestInClass.Fsantana.ModuloCor)
+			self.botaoBestInClassSFsatRelogio.configure				(bg=Info.BestInClass.Fsantana.RelogioCor)
+
+
+		elif relogio == "itu":
+
+			self.botaoBestInClassItu.configure						(bg=Info.BestInClass.Itu.ModuloCor)
+			self.botaoBestInClassItuRelogio.configure				(bg=Info.BestInClass.Itu.RelogioCor)
+			
+		elif relogio == "guarulhos":
+
+			self.botaoBestInClassGuarulhos.configure				(bg=Info.BestInClass.Guarulhos.ModuloCor)
+			self.botaoBestInClassGuarulhosRelogio.configure			(bg=Info.BestInClass.Guarulhos.RelogioCor)
+
+		elif relogio == "itaporanga":
+
+			self.botaoBestInClassItaporanga.configure				(bg=Info.BestInClass.Itaporanga.ModuloCor)
+			self.botaoBestInClassItaporangaRelogio.configure		(bg=Info.BestInClass.Itaporanga.RelogioCor)
+
+
+		elif relogio == "linhares":
+
+			self.botaoBestInClassLinhares.configure					(bg=Info.BestInClass.Linhares.ModuloCor)
+			self.botaoBestInClassLinharesRelogio.configure			(bg=Info.BestInClass.Linhares.RelogioCor)
+
+		self.msgBestInClassCont.configure 							(text=str(Info.BestInClass.Status.Contage)+"/"+
+																	str(Info.BestInClass.Status.TotalRelogios))
+
+
+
+	def updateIsoRadio(self, relogio):
+
+		if relogio == "santana":
+
+			self.botaoIsoRadioSantana.configure						(bg=Info.IsoRadio.Santana.ModuloCor)
+			self.botaoIsoRadioSantanaRelogio.configure				(bg=Info.IsoRadio.Santana.RelogioCor)
+			
+
+		elif relogio == "saomatheus":
+
+			self.botaoIsoRadioSaoMatheus.configure					(bg=Info.IsoRadio.SaoMatheus.ModuloCor)
+			self.botaoIsoRadioSaoMatheusRelogio.configure			(bg=Info.IsoRadio.SaoMatheus.RelogioCor)
+
+		elif relogio == "vilamariana":
+
+			self.botaoIsoRadioVMariana.configure					(bg=Info.IsoRadio.VilaMariana.ModuloCor)
+			self.botaoIsoRadioVMarianaRelogio.configure				(bg=Info.IsoRadio.VilaMariana.RelogioCor)
+
+		elif relogio == "lapa":
+
+			self.botaoIsoRadioLapa.configure						(bg=Info.IsoRadio.Lapa.ModuloCor)
+			self.botaoIsoRadioLapaRelogio.configure					(bg=Info.IsoRadio.Lapa.RelogioCor)
+
+
+		elif relogio == "santoamaro":
+
+			self.botaoIsoRadioSAmaro.configure						(bg=Info.IsoRadio.SAmaro.ModuloCor)
+			self.botaoIsoRadioSAmaroRelogio.configure				(bg=Info.IsoRadio.SAmaro.RelogioCor)
+
+
+		elif relogio == "cidadedutra":
+
+			self.botaoIsoRadioCDutra.configure						(bg=Info.IsoRadio.CDutra.ModuloCor)
+			self.botaoIsoRadioCDutraRelogio.configure				(bg=Info.IsoRadio.CDutra.RelogioCor)
+
+		elif relogio == "tatuape":
+
+			self.botaoIsoRadioTatuape.configure						(bg=Info.IsoRadio.Tatuape.ModuloCor)
+			self.botaoIsoRadioTatuapeRelogio.configure				(bg=Info.IsoRadio.Tatuape.RelogioCor)
+
+		elif relogio == "campolimpo":
+
+			self.botaoIsoRadioCLimpo.configure						(bg=Info.IsoRadio.CLimpo.ModuloCor)
+			self.botaoIsoRadioCLimpoRelogio.configure				(bg=Info.IsoRadio.CLimpo.RelogioCor)
+
+
+		elif relogio == "ipiranga":
+
+			self.botaoIsoRadioIpiranga.configure					(bg=Info.IsoRadio.Ipiranga.ModuloCor)
+			self.botaoIsoRadioIpirangaRelogio.configure				(bg=Info.IsoRadio.Ipiranga.RelogioCor)
+
+		elif relogio == "anarosa":
+
+			self.botaoIsoRadioAnaRosa.configure						(bg=Info.IsoRadio.AnaRosa.ModuloCor)
+			self.botaoIsoRadioAnaRosaRelogio.configure				(bg=Info.IsoRadio.AnaRosa.RelogioCor)
+
+		self.msgIsoRadCont.configure	  						(text=str(Info.IsoRadio.Status.Contage)+"/"+
+																str(Info.IsoRadio.Status.TotalRelogios))
+
+
 
 
 	def update(self,empresa,relogio):
 
 
 		if empresa == "laser":
-			
-			if relogio == "instituto":
-			
-				self.botaoAcademia.configure                    		(bg=Info.Laser.Academia.ModuloCor)
-				self.botaoRAcademia.configure                    		(bg=Info.Laser.Academia.RelogioCor)
+			self.updateLaser2(relogio)
 
-
-			if relogio == "academia":
-
-				self.botaoInstituto.configure                    		(bg=Info.Laser.Instituto.ModuloCor)
-				self.botaoRInstituto.configure                   		(bg=Info.Laser.Instituto.RelogioCor)
 
 
 		elif empresa == "building":
@@ -2687,268 +2973,22 @@ class TelaRelogios1(object):
 			
 			
 		elif empresa == "lotten":
-		
-
-
-			if relogio == "sfjardins":
-
-				self.botaoLottenJardins.configure               		(bg=Info.Lotten.Jardins.ModuloCor)
-				self.botaoLottenJardinsRelogio.configure        		(bg=Info.Lotten.Jardins.RelogioCor)	
-
-			elif relogio == "alphaville":
-
-				self.botaoLottenAlphaville.configure               		(bg=Info.Lotten.Alphaville.ModuloCor)
-				self.botaoLottenAlphavilleRelogio.configure        		(bg=Info.Lotten.Alphaville.RelogioCor)	
-
-			elif relogio == "osasco":
-
-				self.botaoLottenOsasco.configure               			(bg=Info.Lotten.Osasco.ModuloCor)
-				self.botaoLottenOsascoRelogio.configure        			(bg=Info.Lotten.Osasco.RelogioCor)	
-
-			elif relogio == "santana":
-
-				self.botaoLottenSantana.configure               		(bg=Info.Lotten.Santana.ModuloCor)
-				self.botaoLottenSantanaRelogio.configure        		(bg=Info.Lotten.Santana.RelogioCor)	
-
-			elif relogio == "tatuape":
-
-				self.botaoLottenTatuape.configure               		(bg=Info.Lotten.Tatuape.ModuloCor)
-				self.botaoLottenTatuapeRelogio.configure        		(bg=Info.Lotten.Tatuape.RelogioCor)	
-
-			elif relogio == "moema":
-
-				self.botaoLottenMoema.configure               			(bg=Info.Lotten.Moema.ModuloCor)
-				self.botaoLottenMoemaRelogio.configure        			(bg=Info.Lotten.Moema.RelogioCor)	
-
-			elif relogio == "jardimsul":
-
-				self.botaoLottenJardimSul.configure               		(bg=Info.Lotten.JardimSul.ModuloCor)
-				self.botaoLottenJardimSulRelogio.configure        		(bg=Info.Lotten.JardimSul.RelogioCor)	
-
-			elif relogio == "conceicao":
-
-				self.botaoLottenConceicao.configure               		(bg=Info.Lotten.Conceicao.ModuloCor)
-				self.botaoLottenConceicaoRelogio.configure        		(bg=Info.Lotten.Conceicao.RelogioCor)	
-
-
-			elif relogio == "lapa":
-
-				self.botaoLottenLapa.configure               			(bg=Info.Lotten.Lapa.ModuloCor)
-				self.botaoLottenLapaRelogio.configure        			(bg=Info.Lotten.Lapa.RelogioCor)	
-
-
-			elif relogio == "perdizes":
-
-				self.botaoLottenPerdizes.configure               		(bg=Info.Lotten.Perdizes.ModuloCor)
-				self.botaoLottenPerdizesRelogio.configure        		(bg=Info.Lotten.Perdizes.RelogioCor)
-
-
-			elif relogio == "saocaetano":
-
-				self.botaoLottenSaoCaetano.configure               		(bg=Info.Lotten.SaoCaetano.ModuloCor)
-				self.botaoLottenSaoCaetanoRelogio.configure        		(bg=Info.Lotten.SaoCaetano.RelogioCor)	
-
-			elif relogio == "pinheiros":
-
-				self.botaoLottenPinheiros.configure               		(bg=Info.Lotten.Pinheiros.ModuloCor)
-				self.botaoLottenPinheirosRelogio.configure        		(bg=Info.Lotten.Pinheiros.RelogioCor)	
-
-			elif relogio == "morumbi":
-
-				self.botaoLottenMorumbi.configure               		(bg=Info.Lotten.Morumbi.ModuloCor)
-				self.botaoLottenMorumbiRelogio.configure        		(bg=Info.Lotten.Morumbi.RelogioCor)	
-
-			elif relogio == "berrini":
-
-				self.botaoLottenBerrini.configure               		(bg=Info.Lotten.Berrini.ModuloCor)
-				self.botaoLottenBerriniRelogio.configure        		(bg=Info.Lotten.Berrini.RelogioCor)	
-
-			elif relogio == "vilamariana":
-
-				self.botaoLottenVilaMariana.configure               	(bg=Info.Lotten.VilaMariana.ModuloCor)
-				self.botaoLottenVilaMarianaRelogio.configure        	(bg=Info.Lotten.VilaMariana.RelogioCor)	
-
-			elif relogio == "vilaolimpia":
-
-				self.botaoLottenVilaOlimpia.configure               	(bg=Info.Lotten.VilaOlimpia.ModuloCor)
-				self.botaoLottenVilaOlimpiaRelogio.configure        	(bg=Info.Lotten.VilaOlimpia.RelogioCor)	
-	
-
-			elif relogio == "itaim":
-
-				self.botaoLottenItaim.configure               			(bg=Info.Lotten.Itaim.ModuloCor)
-				self.botaoLottenItaimRelogio.configure        			(bg=Info.Lotten.Itaim.RelogioCor)	
-
-
-			elif relogio == "garulhos":
-
-				self.botaoLottenGuarulhos.configure               		(bg=Info.Lotten.Guarulhos.ModuloCor)
-				self.botaoLottenGuarulhosRelogio.configure        		(bg=Info.Lotten.Guarulhos.RelogioCor)	
+			self.updateLotten(relogio)
 
 
 
-
-
-
-
-
-
- 
 		elif empresa == "casacristo":
-		
-			if relogio == "adm":
-
-				self.botaoCasaCristoADM.configure               		(bg=Info.CasaCristo.ADM.ModuloCor)
-				self.botaoCasaCristoADMRelogio.configure        		(bg=Info.CasaCristo.ADM.RelogioCor)
-
-			elif relogio == "cei1":
-
-				self.botaoCasaCristoCEI1.configure               		(bg=Info.CasaCristo.CEI1.ModuloCor)
-				self.botaoCasaCristoCEI1Relogio.configure        		(bg=Info.CasaCristo.CEI1.RelogioCor)
-
-			elif relogio == "cei2":
-
-				self.botaoCasaCristoCEI2.configure               		(bg=Info.CasaCristo.CEI2.ModuloCor)
-				self.botaoCasaCristoCEI2Relogio.configure        		(bg=Info.CasaCristo.CEI2.RelogioCor)
-
-			elif relogio == "cei3":
-
-				self.botaoCasaCristoCEI3.configure               		(bg=Info.CasaCristo.CEI3.ModuloCor)
-				self.botaoCasaCristoCEI3Relogio.configure        		(bg=Info.CasaCristo.CEI3.RelogioCor)
-
-			elif relogio == "vovomatilde":
-
-				self.botaoCasaCristoVMatilde.configure               	(bg=Info.CasaCristo.VovoMatilde.ModuloCor)
-				self.botaoCasaCristoVMatildeRelogio.configure        	(bg=Info.CasaCristo.VovoMatilde.RelogioCor)
-
+			self.updateCasaCristo(relogio)
+			
 
 
 		elif empresa == "bestinclass":
-			
-			if relogio == "recife":
-
-				self.botaoBestInClassRecife.configure					(bg=Info.BestInClass.Recife.ModuloCor)
-				self.botaoBestInClassRecifeRelogio.configure			(bg=Info.BestInClass.Recife.RelogioCor)
-				
-
-			elif relogio == "itaquera":
-
-				self.botaoBestInClassItaquera.configure					(bg=Info.BestInClass.Itaquera.ModuloCor)
-				self.botaoBestInClassItaqueraRelogio.configure			(bg=Info.BestInClass.Itaquera.RelogioCor)
-
-			elif relogio == "itapevi":
-
-				self.botaoBestInClassItapevi.configure					(bg=Info.BestInClass.Itapevi.ModuloCor)
-				self.botaoBestInClassItapeviRelogio.configure			(bg=Info.BestInClass.Itapevi.RelogioCor)
+			self.updateBestInClass(relogio)			
 
 
-			elif relogio == "sorocaba":
-
-				self.botaoBestInClassSorocaba.configure					(bg=Info.BestInClass.Sorocaba.ModuloCor)
-				self.botaoBestInClassSorocabaRelogio.configure			(bg=Info.BestInClass.Sorocaba.RelogioCor)
-
-
-			elif relogio == "setelagoas":
-
-
-				self.botaoBestInClassSeteLagoas.configure				(bg=Info.BestInClass.SeteLagoas.ModuloCor)
-				self.botaoBestInClassSeteLagoasRelogio.configure		(bg=Info.BestInClass.SeteLagoas.RelogioCor)
-
-
-			elif relogio == "curitiba":
-
-				
-				self.botaoBestInClassCuritiba.configure					(bg=Info.BestInClass.Curitiba.ModuloCor)
-				self.botaoBestInClassCuritibaRelogio.configure			(bg=Info.BestInClass.Curitiba.RelogioCor)
-
-
-			elif relogio == "fsant":
-
-				self.botaoBestInClassSFsat.configure					(bg=Info.BestInClass.Fsantana.ModuloCor)
-				self.botaoBestInClassSFsatRelogio.configure				(bg=Info.BestInClass.Fsantana.RelogioCor)
-
-
-			elif relogio == "itu":
-
-				self.botaoBestInClassItu.configure						(bg=Info.BestInClass.Itu.ModuloCor)
-				self.botaoBestInClassItuRelogio.configure				(bg=Info.BestInClass.Itu.RelogioCor)
-				
-			elif relogio == "guarulhos":
-
-				self.botaoBestInClassGuarulhos.configure				(bg=Info.BestInClass.Guarulhos.ModuloCor)
-				self.botaoBestInClassGuarulhosRelogio.configure			(bg=Info.BestInClass.Guarulhos.RelogioCor)
-
-			elif relogio == "itaporanga":
-
-				self.botaoBestInClassItaporanga.configure				(bg=Info.BestInClass.Itaporanga.ModuloCor)
-				self.botaoBestInClassItaporangaRelogio.configure		(bg=Info.BestInClass.Itaporanga.RelogioCor)
-
-
-			elif relogio == "linhares":
-
-				self.botaoBestInClassLinhares.configure					(bg=Info.BestInClass.Linhares.ModuloCor)
-				self.botaoBestInClassLinharesRelogio.configure			(bg=Info.BestInClass.Linhares.RelogioCor)
-
-			self.msgBestInClassCont.configure 							(text=str(Info.BestInClass.Status.Contage)+"/"+
-																		str(Info.BestInClass.Status.TotalRelogios))
 
 		elif empresa == "isoradiologia":
+			self.updateIsoRadio(relogio)
+
+
 			
-
-			
-			if relogio == "santana":
-
-				self.botaoIsoRadioSantana.configure						(bg=Info.IsoRadio.Santana.ModuloCor)
-				self.botaoIsoRadioSantanaRelogio.configure				(bg=Info.IsoRadio.Santana.RelogioCor)
-				
-
-			elif relogio == "saomatheus":
-
-				self.botaoIsoRadioSaoMatheus.configure					(bg=Info.IsoRadio.SaoMatheus.ModuloCor)
-				self.botaoIsoRadioSaoMatheusRelogio.configure			(bg=Info.IsoRadio.SaoMatheus.RelogioCor)
-
-			elif relogio == "vilamariana":
-
-				self.botaoIsoRadioVMariana.configure					(bg=Info.IsoRadio.VilaMariana.ModuloCor)
-				self.botaoIsoRadioVMarianaRelogio.configure				(bg=Info.IsoRadio.VilaMariana.RelogioCor)
-
-			elif relogio == "lapa":
-
-				self.botaoIsoRadioLapa.configure						(bg=Info.IsoRadio.Lapa.ModuloCor)
-				self.botaoIsoRadioLapaRelogio.configure					(bg=Info.IsoRadio.Lapa.RelogioCor)
-
-
-			elif relogio == "santoamaro":
-
-				self.botaoIsoRadioSAmaro.configure						(bg=Info.IsoRadio.SAmaro.ModuloCor)
-				self.botaoIsoRadioSAmaroRelogio.configure				(bg=Info.IsoRadio.SAmaro.RelogioCor)
-
-
-			elif relogio == "cidadedutra":
-
-				self.botaoIsoRadioCDutra.configure						(bg=Info.IsoRadio.CDutra.ModuloCor)
-				self.botaoIsoRadioCDutraRelogio.configure				(bg=Info.IsoRadio.CDutra.RelogioCor)
-
-			elif relogio == "tatuape":
-
-				self.botaoIsoRadioTatuape.configure						(bg=Info.IsoRadio.Tatuape.ModuloCor)
-				self.botaoIsoRadioTatuapeRelogio.configure				(bg=Info.IsoRadio.Tatuape.RelogioCor)
-
-			elif relogio == "campolimpo":
-
-				self.botaoIsoRadioCLimpo.configure						(bg=Info.IsoRadio.CLimpo.ModuloCor)
-				self.botaoIsoRadioCLimpoRelogio.configure				(bg=Info.IsoRadio.CLimpo.RelogioCor)
-
-
-			elif relogio == "ipiranga":
-
-				self.botaoIsoRadioIpiranga.configure					(bg=Info.IsoRadio.Ipiranga.ModuloCor)
-				self.botaoIsoRadioIpirangaRelogio.configure				(bg=Info.IsoRadio.Ipiranga.RelogioCor)
-
-			elif relogio == "anarosa":
-
-				self.botaoIsoRadioAnaRosa.configure						(bg=Info.IsoRadio.AnaRosa.ModuloCor)
-				self.botaoIsoRadioAnaRosaRelogio.configure				(bg=Info.IsoRadio.AnaRosa.RelogioCor)
-
-			self.msgIsoRadCont.configure	  						(text=str(Info.IsoRadio.Status.Contage)+"/"+
-																	str(Info.IsoRadio.Status.TotalRelogios))
