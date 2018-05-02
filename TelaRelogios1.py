@@ -2557,6 +2557,101 @@ class TelaRelogios1(object):
 
 
 
+	def updateBuilding(self, relogio):
+		if relogio == "allianz":	
+			
+			self.botaoBuildingAllianz.configure                  	(bg=Info.Building.Allianz.ModuloCor)
+			self.botaoBuildingAllianzRelogio.configure           	(bg=Info.Building.Allianz.RelogioCor)
+
+		elif relogio == "wtorre":
+			
+			self.botaoBuildingWTorre.configure                   	(bg=Info.Building.WTorre.ModuloCor)
+			self.botaoBuildingWTorreRelogio.configure            	(bg=Info.Building.WTorre.RelogioCor)
+
+		elif relogio == "riojaneiro":
+
+			self.botaoBuildingRioJaneiro.configure               	(bg=Info.Building.RioJaneiro.ModuloCor)
+			self.botaoBuildingRioJaneiroRelogio.configure        	(bg=Info.Building.RioJaneiro.RelogioCor)
+
+		self.msgBuildingCont.configure								(text=str(Info.Building.Status.Contage)+"/"+
+																	str(Info.Building.Status.TotalRelogios)								)
+
+
+
+	def updateGravex(self, relogio):
+		if relogio == "adm":
+
+
+			self.botaoGravexADM.configure 							(bg=Info.Gravex.ADM.ModuloCor)
+			self.botaoGravexADMRelogio.configure 					(bg=Info.Gravex.ADM.RelogioCor)
+
+
+		elif relogio == "loja":
+
+			self.botaoGravexLoja.configure							(bg=Info.Gravex.Loja1.ModuloCor)
+			self.botaoGravexLojaRelogio.configure 					(bg=Info.Gravex.Loja1.RelogioCor)
+		
+
+		elif relogio == "mimarcos":
+
+			self.botaoGravexMiMarcos.configure						(bg=Info.Gravex.MiMarcos.ModuloCor)
+			self.botaoGravexMiMarcosRelogio.configure 				(bg=Info.Gravex.MiMarcos.RelogioCor)
+
+
+		elif relogio == "dantchini":
+
+
+			self.botaoGravexDantChini.configure						(bg=Info.Gravex.DantChini.ModuloCor)
+			self.botaoGravexDantChiniRelogio.configure 				(bg=Info.Gravex.DantChini.RelogioCor)
+
+
+	def updateGrupoNk(self, relogio):
+		if relogio == "nelson":
+
+			self.botaoGrupoNkNelsonKioshi.configure               		(bg=Info.GrupoNk.NelsonKioshi.ModuloCor)
+			self.botaoGrupoNkNelsonKioshiRelogio.configure        		(bg=Info.GrupoNk.NelsonKioshi.RelogioCor)
+
+		elif relogio == "furukawa":
+
+			self.botaoGrupoNkRDFurukawa.configure               		(bg=Info.GrupoNk.RDFurukawa.ModuloCor)
+			self.botaoGrupoNkRDFurukawaRelogio.configure        		(bg=Info.GrupoNk.RDFurukawa.RelogioCor)
+
+		elif relogio == "kio1":
+
+			self.botaoGrupoNkKio1.configure               				(bg=Info.GrupoNk.Kio1.ModuloCor)
+			self.botaoGrupoNkKio1Relogio.configure        				(bg=Info.GrupoNk.Kio1.RelogioCor)
+
+		elif relogio == "kio2":
+
+			self.botaoGrupoNkKio2.configure               				(bg=Info.GrupoNk.Kio2.ModuloCor)
+			self.botaoGrupoNkKio2Relogio.configure        				(bg=Info.GrupoNk.Kio2.RelogioCor)
+
+
+		elif relogio == "granjaviana":
+
+			self.botaoGrupoNkGranjaViana.configure               		(bg=Info.GrupoNk.GranjaViana.ModuloCor)
+			self.botaoGrupoNkGranjaVianaRelogio.configure        		(bg=Info.GrupoNk.GranjaViana.RelogioCor)
+
+		elif relogio == "santacecilia":
+
+			self.botaoGrupoNkSantaCecilia.configure               		(bg=Info.GrupoNk.SantaCecilia.ModuloCor)
+			self.botaoGrupoNkSantaCeciliaRelogio.configure        		(bg=Info.GrupoNk.SantaCecilia.RelogioCor)
+
+		elif relogio == "transfruit":
+
+			self.botaoGrupoNkTransfruit.configure               		(bg=Info.GrupoNk.Transfruit.ModuloCor)
+			self.botaoGrupoNkTransfruitRelogio.configure        		(bg=Info.GrupoNk.Transfruit.RelogioCor)
+
+		elif relogio == "distrdefrutas":
+
+			self.botaoGrupoNkDistribuidora.configure               		(bg=Info.GrupoNk.Distribuidora.ModuloCor)
+			self.botaoGrupoNkDistribuidoraRelogio.configure        		(bg=Info.GrupoNk.Distribuidora.RelogioCor)
+
+		elif relogio == "nkhortifruit":
+
+			self.botaoGrupoNkNKFilial.configure               			(bg=Info.GrupoNk.NKFilial.ModuloCor)
+			self.botaoGrupoNkNKFilialRelogio.configure        			(bg=Info.GrupoNk.NKFilial.RelogioCor)
+
 
 
 	def update(self,empresa,relogio):
@@ -2577,109 +2672,19 @@ class TelaRelogios1(object):
 
 
 		elif empresa == "building":
-
-			if relogio == "allianz":	
-				
-				self.botaoBuildingAllianz.configure                  	(bg=Info.Building.Allianz.ModuloCor)
-				self.botaoBuildingAllianzRelogio.configure           	(bg=Info.Building.Allianz.RelogioCor)
-
-			elif relogio == "wtorre":
-				
-				self.botaoBuildingWTorre.configure                   	(bg=Info.Building.WTorre.ModuloCor)
-				self.botaoBuildingWTorreRelogio.configure            	(bg=Info.Building.WTorre.RelogioCor)
-
-			elif relogio == "riojaneiro":
-
-				self.botaoBuildingRioJaneiro.configure               	(bg=Info.Building.RioJaneiro.ModuloCor)
-				self.botaoBuildingRioJaneiroRelogio.configure        	(bg=Info.Building.RioJaneiro.RelogioCor)
-
-			self.msgBuildingCont.configure								(text=str(Info.Building.Status.Contage)+"/"+
-																		str(Info.Building.Status.TotalRelogios)								)
-
-
-
-
-		elif empresa == "gravex":
-			
-			if relogio == "adm":
-
-
-				self.botaoGravexADM.configure 							(bg=Info.Gravex.ADM.ModuloCor)
-				self.botaoGravexADMRelogio.configure 					(bg=Info.Gravex.ADM.RelogioCor)
-
-
-			elif relogio == "loja":
-
-				self.botaoGravexLoja.configure							(bg=Info.Gravex.Loja1.ModuloCor)
-				self.botaoGravexLojaRelogio.configure 					(bg=Info.Gravex.Loja1.RelogioCor)
-			
-
-			elif relogio == "mimarcos":
-
-				self.botaoGravexMiMarcos.configure						(bg=Info.Gravex.MiMarcos.ModuloCor)
-				self.botaoGravexMiMarcosRelogio.configure 				(bg=Info.Gravex.MiMarcos.RelogioCor)
-
-
-			elif relogio == "dantchini":
-
-
-				self.botaoGravexDantChini.configure						(bg=Info.Gravex.DantChini.ModuloCor)
-				self.botaoGravexDantChiniRelogio.configure 				(bg=Info.Gravex.DantChini.RelogioCor)
-
-
-
-
-
-
-		elif empresa == "gruponk":
+			self.updateBuilding(relogio)
 		
 
 
-			if relogio == "nelson":
-
-				self.botaoGrupoNkNelsonKioshi.configure               		(bg=Info.GrupoNk.NelsonKioshi.ModuloCor)
-				self.botaoGrupoNkNelsonKioshiRelogio.configure        		(bg=Info.GrupoNk.NelsonKioshi.RelogioCor)
-
-			elif relogio == "furukawa":
-
-				self.botaoGrupoNkRDFurukawa.configure               		(bg=Info.GrupoNk.RDFurukawa.ModuloCor)
-				self.botaoGrupoNkRDFurukawaRelogio.configure        		(bg=Info.GrupoNk.RDFurukawa.RelogioCor)
-
-			elif relogio == "kio1":
-
-				self.botaoGrupoNkKio1.configure               				(bg=Info.GrupoNk.Kio1.ModuloCor)
-				self.botaoGrupoNkKio1Relogio.configure        				(bg=Info.GrupoNk.Kio1.RelogioCor)
-
-			elif relogio == "kio2":
-
-				self.botaoGrupoNkKio2.configure               				(bg=Info.GrupoNk.Kio2.ModuloCor)
-				self.botaoGrupoNkKio2Relogio.configure        				(bg=Info.GrupoNk.Kio2.RelogioCor)
+		elif empresa == "gravex":
+			self.updateBuilding(relogio)
+			
 
 
-			elif relogio == "granjaviana":
+		elif empresa == "gruponk":
+			self.updateGrupoNk(relogio)
 
-				self.botaoGrupoNkGranjaViana.configure               		(bg=Info.GrupoNk.GranjaViana.ModuloCor)
-				self.botaoGrupoNkGranjaVianaRelogio.configure        		(bg=Info.GrupoNk.GranjaViana.RelogioCor)
-
-			elif relogio == "santacecilia":
-
-				self.botaoGrupoNkSantaCecilia.configure               		(bg=Info.GrupoNk.SantaCecilia.ModuloCor)
-				self.botaoGrupoNkSantaCeciliaRelogio.configure        		(bg=Info.GrupoNk.SantaCecilia.RelogioCor)
-
-			elif relogio == "transfruit":
-
-				self.botaoGrupoNkTransfruit.configure               		(bg=Info.GrupoNk.Transfruit.ModuloCor)
-				self.botaoGrupoNkTransfruitRelogio.configure        		(bg=Info.GrupoNk.Transfruit.RelogioCor)
-
-			elif relogio == "distrdefrutas":
-
-				self.botaoGrupoNkDistribuidora.configure               		(bg=Info.GrupoNk.Distribuidora.ModuloCor)
-				self.botaoGrupoNkDistribuidoraRelogio.configure        		(bg=Info.GrupoNk.Distribuidora.RelogioCor)
-
-			elif relogio == "nkhortifruit":
-
-				self.botaoGrupoNkNKFilial.configure               			(bg=Info.GrupoNk.NKFilial.ModuloCor)
-				self.botaoGrupoNkNKFilialRelogio.configure        			(bg=Info.GrupoNk.NKFilial.RelogioCor)
+			
 			
 		elif empresa == "lotten":
 		
