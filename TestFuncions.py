@@ -546,6 +546,123 @@ def TestaElRio():
 	if Controle.Stop : return
 
 
+def TestaSBCP():
+
+
+
+	TestaFuncion(Info.SBCP.Nacional.Empresa,
+				Info.SBCP.Nacional.Relogio,
+				Info.SBCP.Nacional.IP,
+				Info.SBCP.Nacional.Porta)
+	if Controle.Stop : return
+
+
+
+
+	TestaFuncion(Info.SBCP.ES.Empresa,
+				Info.SBCP.ES.Relogio,
+				Info.SBCP.ES.IP,
+				Info.SBCP.ES.Porta)
+	if Controle.Stop : return
+
+
+
+
+	TestaFuncion(Info.SBCP.DF.Empresa,
+				Info.SBCP.DF.Relogio,
+				Info.SBCP.DF.IP,
+				Info.SBCP.DF.Porta)
+	if Controle.Stop : return
+
+
+
+
+	TestaFuncion(Info.SBCP.CE.Empresa,
+				Info.SBCP.CE.Relogio,
+				Info.SBCP.CE.IP,
+				Info.SBCP.CE.Porta)
+	if Controle.Stop : return
+
+
+
+
+	TestaFuncion(Info.SBCP.BA.Empresa,
+				Info.SBCP.BA.Relogio,
+				Info.SBCP.BA.IP,
+				Info.SBCP.BA.Porta)
+	if Controle.Stop : return
+
+
+
+
+	TestaFuncion(Info.SBCP.SP.Empresa,
+				Info.SBCP.SP.Relogio,
+				Info.SBCP.SP.IP,
+				Info.SBCP.SP.Porta)
+	if Controle.Stop : return
+
+
+
+
+	TestaFuncion(Info.SBCP.SC.Empresa,
+				Info.SBCP.SC.Relogio,
+				Info.SBCP.SC.IP,
+				Info.SBCP.SC.Porta)
+	if Controle.Stop : return
+
+
+
+
+	TestaFuncion(Info.SBCP.RS.Empresa,
+				Info.SBCP.RS.Relogio,
+				Info.SBCP.RS.IP,
+				Info.SBCP.RS.Porta)
+	if Controle.Stop : return
+
+
+
+
+	TestaFuncion(Info.SBCP.RJ.Empresa,
+				Info.SBCP.RJ.Relogio,
+				Info.SBCP.RJ.IP,
+				Info.SBCP.RJ.Porta)
+	if Controle.Stop : return
+
+
+
+
+	TestaFuncion(Info.SBCP.PR.Empresa,
+				Info.SBCP.PR.Relogio,
+				Info.SBCP.PR.IP,
+				Info.SBCP.PR.Porta)
+	if Controle.Stop : return
+
+
+
+
+	TestaFuncion(Info.SBCP.PE.Empresa,
+				Info.SBCP.PE.Relogio,
+				Info.SBCP.PE.IP,
+				Info.SBCP.PE.Porta)
+	if Controle.Stop : return
+
+
+
+
+	TestaFuncion(Info.SBCP.MG.Empresa,
+				Info.SBCP.MG.Relogio,
+				Info.SBCP.MG.IP,
+				Info.SBCP.MG.Porta)
+	if Controle.Stop : return
+
+
+
+
+	TestaFuncion(Info.SBCP.GO.Empresa,
+				Info.SBCP.GO.Relogio,
+				Info.SBCP.GO.IP,
+				Info.SBCP.GO.Porta)
+	if Controle.Stop : return
 
 
 

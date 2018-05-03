@@ -942,3 +942,211 @@ def leBanco():
 				Info.ElRio.Backup2.NumeroRep             = NumeroReP_Lido
 				Info.ElRio.Backup2.Responsavel           = Responsavel_Lido
 				Info.ElRio.Backup2.Telefone              = Telefone_Lido
+
+
+
+		elif empresa_lido == "sbcp":
+
+
+
+			if relogio_lido == "nacional":
+				
+				Info.SBCP.Nacional.Empresa               = empresa_lido
+				Info.SBCP.Nacional.Relogio               = relogio_lido
+				Info.SBCP.Nacional.IP                    = ip_lido
+				Info.SBCP.Nacional.Porta                 = port_lido
+				Info.SBCP.Nacional.NumeroRep             = NumeroReP_Lido
+				Info.SBCP.Nacional.Responsavel           = Responsavel_Lido
+				Info.SBCP.Nacional.Telefone              = Telefone_Lido
+
+
+
+
+
+
+
+			elif relogio_lido == "es":
+				
+				Info.SBCP.ES.Empresa               = empresa_lido
+				Info.SBCP.ES.Relogio               = relogio_lido
+				Info.SBCP.ES.IP                    = ip_lido
+				Info.SBCP.ES.Porta                 = port_lido
+				Info.SBCP.ES.NumeroRep             = NumeroReP_Lido
+				Info.SBCP.ES.Responsavel           = Responsavel_Lido
+				Info.SBCP.ES.Telefone              = Telefone_Lido
+
+
+
+
+
+
+
+			elif relogio_lido == "df":
+				
+				Info.SBCP.DF.Empresa               = empresa_lido
+				Info.SBCP.DF.Relogio               = relogio_lido
+				Info.SBCP.DF.IP                    = ip_lido
+				Info.SBCP.DF.Porta                 = port_lido
+				Info.SBCP.DF.NumeroRep             = NumeroReP_Lido
+				Info.SBCP.DF.Responsavel           = Responsavel_Lido
+				Info.SBCP.DF.Telefone              = Telefone_Lido
+
+
+
+
+
+
+
+			elif relogio_lido == "ce":
+				
+				Info.SBCP.CE.Empresa               = empresa_lido
+				Info.SBCP.CE.Relogio               = relogio_lido
+				Info.SBCP.CE.IP                    = ip_lido
+				Info.SBCP.CE.Porta                 = port_lido
+				Info.SBCP.CE.NumeroRep             = NumeroReP_Lido
+				Info.SBCP.CE.Responsavel           = Responsavel_Lido
+				Info.SBCP.CE.Telefone              = Telefone_Lido
+
+
+
+
+
+
+
+			elif relogio_lido == "ba":
+				
+				Info.SBCP.BA.Empresa               = empresa_lido
+				Info.SBCP.BA.Relogio               = relogio_lido
+				Info.SBCP.BA.IP                    = ip_lido
+				Info.SBCP.BA.Porta                 = port_lido
+				Info.SBCP.BA.NumeroRep             = NumeroReP_Lido
+				Info.SBCP.BA.Responsavel           = Responsavel_Lido
+				Info.SBCP.BA.Telefone              = Telefone_Lido
+
+
+
+
+
+
+
+			elif relogio_lido == "sp":
+				
+				Info.SBCP.SP.Empresa               = empresa_lido
+				Info.SBCP.SP.Relogio               = relogio_lido
+				Info.SBCP.SP.IP                    = ip_lido
+				Info.SBCP.SP.Porta                 = port_lido
+				Info.SBCP.SP.NumeroRep             = NumeroReP_Lido
+				Info.SBCP.SP.Responsavel           = Responsavel_Lido
+				Info.SBCP.SP.Telefone              = Telefone_Lido
+
+
+
+
+
+
+
+			elif relogio_lido == "sc":
+				
+				Info.SBCP.SC.Empresa               = empresa_lido
+				Info.SBCP.SC.Relogio               = relogio_lido
+				Info.SBCP.SC.IP                    = ip_lido
+				Info.SBCP.SC.Porta                 = port_lido
+				Info.SBCP.SC.NumeroRep             = NumeroReP_Lido
+				Info.SBCP.SC.Responsavel           = Responsavel_Lido
+				Info.SBCP.SC.Telefone              = Telefone_Lido
+
+
+
+
+
+
+
+			elif relogio_lido == "rs":
+				
+				Info.SBCP.RS.Empresa               = empresa_lido
+				Info.SBCP.RS.Relogio               = relogio_lido
+				Info.SBCP.RS.IP                    = ip_lido
+				Info.SBCP.RS.Porta                 = port_lido
+				Info.SBCP.RS.NumeroRep             = NumeroReP_Lido
+				Info.SBCP.RS.Responsavel           = Responsavel_Lido
+				Info.SBCP.RS.Telefone              = Telefone_Lido
+
+
+
+
+
+
+
+			elif relogio_lido == "rj":
+				
+				Info.SBCP.RJ.Empresa               = empresa_lido
+				Info.SBCP.RJ.Relogio               = relogio_lido
+				Info.SBCP.RJ.IP                    = ip_lido
+				Info.SBCP.RJ.Porta                 = port_lido
+				Info.SBCP.RJ.NumeroRep             = NumeroReP_Lido
+				Info.SBCP.RJ.Responsavel           = Responsavel_Lido
+				Info.SBCP.RJ.Telefone              = Telefone_Lido
+
+
+
+
+
+
+
+			elif relogio_lido == "pr":
+				
+				Info.SBCP.PR.Empresa               = empresa_lido
+				Info.SBCP.PR.Relogio               = relogio_lido
+				Info.SBCP.PR.IP                    = ip_lido
+				Info.SBCP.PR.Porta                 = port_lido
+				Info.SBCP.PR.NumeroRep             = NumeroReP_Lido
+				Info.SBCP.PR.Responsavel           = Responsavel_Lido
+				Info.SBCP.PR.Telefone              = Telefone_Lido
+
+
+
+
+
+
+
+			elif relogio_lido == "pe":
+				
+				Info.SBCP.PE.Empresa               = empresa_lido
+				Info.SBCP.PE.Relogio               = relogio_lido
+				Info.SBCP.PE.IP                    = ip_lido
+				Info.SBCP.PE.Porta                 = port_lido
+				Info.SBCP.PE.NumeroRep             = NumeroReP_Lido
+				Info.SBCP.PE.Responsavel           = Responsavel_Lido
+				Info.SBCP.PE.Telefone              = Telefone_Lido
+
+
+
+
+
+
+
+			elif relogio_lido == "mg":
+				
+				Info.SBCP.MG.Empresa               = empresa_lido
+				Info.SBCP.MG.Relogio               = relogio_lido
+				Info.SBCP.MG.IP                    = ip_lido
+				Info.SBCP.MG.Porta                 = port_lido
+				Info.SBCP.MG.NumeroRep             = NumeroReP_Lido
+				Info.SBCP.MG.Responsavel           = Responsavel_Lido
+				Info.SBCP.MG.Telefone              = Telefone_Lido
+
+
+
+
+
+
+
+			elif relogio_lido == "go":
+				
+				Info.SBCP.GO.Empresa               = empresa_lido
+				Info.SBCP.GO.Relogio               = relogio_lido
+				Info.SBCP.GO.IP                    = ip_lido
+				Info.SBCP.GO.Porta                 = port_lido
+				Info.SBCP.GO.NumeroRep             = NumeroReP_Lido
+				Info.SBCP.GO.Responsavel           = Responsavel_Lido
+				Info.SBCP.GO.Telefone              = Telefone_Lido

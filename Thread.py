@@ -67,12 +67,36 @@ class ThreadloopElRio(threading.Thread):
 
 
 
+class ThreadloopSBCP(threading.Thread):
+	def __init__(self):
+		threading.Thread.__init__(self)
+	def run(self):
+		loopSBCP()
+
+
+
+
+def loopSBCP():
+	print "Inicio do Servico da SBCP"
+	while(1):
+		TestaSBCP()
+		if Controle.Stop : break 
+	Flag.quit = True
+
+
+
+
+
+
 def loopElRio():
 	print "Inicio do Servico da El Rio"
 	while(1):
 		TestaElRio()
 		if Controle.Stop : break 
 	Flag.quit = True
+
+
+
 
 
 

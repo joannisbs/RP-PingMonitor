@@ -407,6 +407,15 @@ class TelaRelogios1(object):
 
 
 
+		self.msgGravexCount                              = Label (self.ContainerGravex,text = str(Info.Gravex.Status.Contage)+"/"+
+																						 str(Info.Gravex.Status.TotalRelogios))	
+
+
+		self.msgGravexCount                              ["height"]     = 1
+		self.msgGravexCount.grid                         (row=0,column=1,sticky = "N")
+
+
+
 
 		self.botaoGravexADM                         = Button(self.ContainerGravex)
 		self.botaoGravexADM                         ["text"]       = "ADM"
@@ -3477,6 +3486,8 @@ class TelaRelogios1(object):
 			self.botaoGravexDantChini.configure						(bg=Info.Gravex.DantChini.ModuloCor)
 			self.botaoGravexDantChiniRelogio.configure 				(bg=Info.Gravex.DantChini.RelogioCor)
 
+		self.msgGravexCount.configure								(text=str(Info.Gravex.Status.Contage)+"/"+
+																	str(Info.Gravex.Status.TotalRelogios)								)
 
 
 	def updateGrupoNk(self, relogio):
@@ -3910,7 +3921,7 @@ class TelaRelogios1(object):
 
 
 		if relogio == "boulevard":
-			
+
 
 			self.botaoElRioBoulevard.configure						(bg=Info.ElRio.Boulevard.ModuloCor)
 			self.botaoElRioBoulevardRelogio.configure				(bg=Info.ElRio.Boulevard.RelogioCor)
@@ -4014,7 +4025,7 @@ class TelaRelogios1(object):
 
 
 		elif empresa == "gravex":
-			self.updateBuilding(relogio)
+			self.updateGravex(relogio)
 			
 
 

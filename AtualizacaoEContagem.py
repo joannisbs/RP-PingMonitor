@@ -200,6 +200,21 @@ def AtualizaCorGravex(relogio,result):
 			Info.Gravex.DantChini.ModuloCor  = "pink"
 			Info.Gravex.DantChini.RelogioCor = "pink"
 
+	if result != 4:
+		Info.Gravex.Status.Contage = 0
+
+		if Info.Gravex.ADM.RelogioCor == "green3" : 
+			Info.Gravex.Status.Contage = Info.Gravex.Status.Contage +1
+
+		if Info.Gravex.Loja1.RelogioCor == "green3" : 
+			Info.Gravex.Status.Contage = Info.Gravex.Status.Contage +1
+
+		if Info.Gravex.MiMarcos.RelogioCor == "green3" : 
+			Info.Gravex.Status.Contage = Info.Gravex.Status.Contage +1
+
+		if Info.Gravex.DantChini.RelogioCor == "green3" : 
+			Info.Gravex.Status.Contage = Info.Gravex.Status.Contage +1
+
 
 def AtualizaCorCasaCristo(relogio,result):
 
@@ -1716,7 +1731,6 @@ def AtualizaElRio(relogio, result):
 				Info.ElRio.Status.Contage = Info.ElRio.Status.Contage +1
 	
 
-
 def AtualizaSBCP(relogio, result):
 
 	if relogio == "nacional":
@@ -2110,6 +2124,10 @@ def AtualizaCor(empresa,relogio,result):
 		AtualizaElRio(relogio, result)
 
 
+	elif empresa == "sbcp":
+		AtualizaSBCP(relogio, result)
+
+
 
 	if result != 4:
 		Controle.TotalON = 0	
@@ -2122,6 +2140,8 @@ def AtualizaCor(empresa,relogio,result):
 		Controle.TotalON = Controle.TotalON + Info.Lotten.Status.Contage
 		Controle.TotalON = Controle.TotalON + Info.GrupoNk.Status.Contage
 		Controle.TotalON = Controle.TotalON + Info.ElRio.Status.Contage
+		Controle.TotalON = Controle.TotalON + Info.SBCP.Status.Contage
+		Controle.TotalON = Controle.TotalON + Info.Gravex.Status.Contage
 
 
 
@@ -2138,3 +2158,5 @@ def Contagem():
 	Controle.TotalRelogios = Controle.TotalRelogios + Info.GrupoNk.Status.TotalRelogios
 	Controle.TotalRelogios = Controle.TotalRelogios + Info.IsoRadio.Status.TotalRelogios
 	Controle.TotalRelogios = Controle.TotalRelogios + Info.ElRio.Status.TotalRelogios
+	Controle.TotalRelogios = Controle.TotalRelogios + Info.SBCP.Status.TotalRelogios
+	Controle.TotalRelogios = Controle.TotalRelogios + Info.Gravex.Status.TotalRelogios
