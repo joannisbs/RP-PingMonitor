@@ -152,6 +152,43 @@ def LeBancoPredman(relogio_lido,word):
 		BancoAtribui(EstRelogio, word)
 
 
+def LeBancoOlimpark(relogio_lido,word):
+
+	if relogio_lido == "jdpaulista" :
+
+		EstRelogio = Info.Olimpark.JdPaulista
+		BancoAtribui(EstRelogio, word)
+
+	elif relogio_lido == "santacecilia":
+
+
+		EstRelogio = Info.Olimpark.SantaCecilia
+		BancoAtribui(EstRelogio, word)
+
+	elif relogio_lido == "vilaolimpia":
+
+
+		EstRelogio = Info.Olimpark.VilaOlimpia
+		BancoAtribui(EstRelogio, word)
+
+	elif relogio_lido == "previdencia":
+
+
+		EstRelogio = Info.Olimpark.Previdencia
+		BancoAtribui(EstRelogio, word)
+
+	elif relogio_lido == "belenzinho":
+
+
+		EstRelogio = Info.Olimpark.Belezinho
+		BancoAtribui(EstRelogio, word)
+
+	elif relogio_lido == "santana":
+
+
+		EstRelogio = Info.Olimpark.Santana
+		BancoAtribui(EstRelogio, word)
+
 def leBanco():
 
 
@@ -183,6 +220,9 @@ def leBanco():
 
 			LeBancoPredman(relogio_lido,word)
 
+		elif empresa_lido == "olimpark":
+
+			LeBancoOlimpark(relogio_lido,word)
 	######################################################### GRAVEX ###################################################
 
 		elif empresa_lido == "gravex":

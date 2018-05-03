@@ -43,6 +43,8 @@ class TelaRelogios1(object):
 
 		self.Create_ElRio()
 
+		self.Create_Olimpark()
+
 
 	def Create_IsoRadio(self):
 
@@ -3209,6 +3211,183 @@ class TelaRelogios1(object):
 
 
 
+	def Create_Olimpark(self):
+
+		self.msgOlimpark                              	= Label (self.ContainerOlimpark,text = "Olimpark")
+		self.msgOlimpark                              	["height"]     = 1
+		self.msgOlimpark.grid                         	(row=0,column=0,sticky = "N")
+
+
+		self.msgOlimparkCount                           = Label (self.ContainerOlimpark,
+																text= str(Info.Olimpark.Status.Contage)+"/"+
+																	str(Info.Olimpark.Status.TotalRelogios))	
+
+		self.msgOlimparkCount                           ["height"]     = 1
+		self.msgOlimparkCount.grid                      (row=0,column=1,sticky = "N")
+
+
+
+
+		relo=Info.Olimpark.JdPaulista
+		self.botaoOlimparkPaulista                         	= Button(self.ContainerOlimpark)
+		self.botaoOlimparkPaulista                         	["text"]       = "JdPaulista"
+		self.botaoOlimparkPaulista                         	["background"] = relo.ModuloCor
+		self.botaoOlimparkPaulista                         	["width"]      = 13
+		self.botaoOlimparkPaulista                         	["height"]     = 1
+		self.botaoOlimparkPaulista.bind                    	("<Button-1>",lambda e: popup("Olimpark","JdPaulista",
+															relo.IP, 
+															relo.Porta, 
+															relo.NumeroRep, 
+															relo.Responsavel, 
+															relo.Telefone))
+
+		self.botaoOlimparkPaulistaRelogio                  	= Button(self.ContainerOlimpark)
+		self.botaoOlimparkPaulistaRelogio                  	["text"]       = "R"
+		self.botaoOlimparkPaulistaRelogio                  	["background"] = relo.RelogioCor
+		self.botaoOlimparkPaulistaRelogio                  	["height"]     = 1
+		self.botaoOlimparkPaulistaRelogio                  	["width"]      = 1
+
+
+		self.botaoOlimparkPaulista.grid                    	(row=1,column=0,sticky = "N")
+		self.botaoOlimparkPaulistaRelogio.grid             	(row=1,column=1,sticky = "N")
+
+
+
+
+
+		relo=Info.Olimpark.SantaCecilia
+		self.botaoOlimparkSantaCecilia                      = Button(self.ContainerOlimpark)
+		self.botaoOlimparkSantaCecilia                      ["text"]       = "Santa Cecilia"
+		self.botaoOlimparkSantaCecilia                      ["background"] = relo.ModuloCor
+		self.botaoOlimparkSantaCecilia                      ["width"]      = 13
+		self.botaoOlimparkSantaCecilia                      ["height"]     = 1
+		self.botaoOlimparkSantaCecilia.bind                 ("<Button-1>",lambda e: popup("Olimpark","Santa Cecilia",
+															relo.IP, 
+															relo.Porta, 
+															relo.NumeroRep, 
+															relo.Responsavel, 
+															relo.Telefone))
+
+		self.botaoOlimparkSantaCeciliaRelogio               = Button(self.ContainerOlimpark)
+		self.botaoOlimparkSantaCeciliaRelogio               ["text"]       = "R"
+		self.botaoOlimparkSantaCeciliaRelogio               ["background"] = relo.RelogioCor
+		self.botaoOlimparkSantaCeciliaRelogio               ["height"]     = 1
+		self.botaoOlimparkSantaCeciliaRelogio               ["width"]      = 1
+
+
+		self.botaoOlimparkSantaCecilia.grid                 (row=2,column=0,sticky = "N")
+		self.botaoOlimparkSantaCeciliaRelogio.grid          (row=2,column=1,sticky = "N")
+
+
+
+
+
+		relo=Info.Olimpark.VilaOlimpia
+		self.botaoOlimparkVilaOlimpia                       = Button(self.ContainerOlimpark)
+		self.botaoOlimparkVilaOlimpia                       ["text"]       = "Vila Olimpia"
+		self.botaoOlimparkVilaOlimpia                       ["background"] = relo.ModuloCor
+		self.botaoOlimparkVilaOlimpia                       ["width"]      = 13
+		self.botaoOlimparkVilaOlimpia                       ["height"]     = 1
+		self.botaoOlimparkVilaOlimpia.bind                  ("<Button-1>",lambda e: popup("Olimpark","Vila Olimpia",
+															relo.IP, 
+															relo.Porta, 
+															relo.NumeroRep, 
+															relo.Responsavel, 
+															relo.Telefone))
+
+		self.botaoOlimparkVilaOlimpiaRelogio            	= Button(self.ContainerOlimpark)
+		self.botaoOlimparkVilaOlimpiaRelogio                ["text"]       = "R"
+		self.botaoOlimparkVilaOlimpiaRelogio                ["background"] = relo.RelogioCor
+		self.botaoOlimparkVilaOlimpiaRelogio                ["height"]     = 1
+		self.botaoOlimparkVilaOlimpiaRelogio                ["width"]      = 1
+
+
+		self.botaoOlimparkVilaOlimpia.grid                  (row=3,column=0,sticky = "N")
+		self.botaoOlimparkVilaOlimpiaRelogio.grid           (row=3,column=1,sticky = "N")
+
+
+
+
+
+		relo=Info.Olimpark.Previdencia
+		self.botaoOlimparkPrevidencia                       = Button(self.ContainerOlimpark)
+		self.botaoOlimparkPrevidencia                       ["text"]       = "Previdencia"
+		self.botaoOlimparkPrevidencia                       ["background"] = relo.ModuloCor
+		self.botaoOlimparkPrevidencia                       ["width"]      = 13
+		self.botaoOlimparkPrevidencia                       ["height"]     = 1
+		self.botaoOlimparkPrevidencia.bind                  ("<Button-1>",lambda e: popup("Olimpark","Previdencia",
+															relo.IP, 
+															relo.Porta, 
+															relo.NumeroRep, 
+															relo.Responsavel, 
+															relo.Telefone))
+
+		self.botaoOlimparkPrevidenciaRelogio                = Button(self.ContainerOlimpark)
+		self.botaoOlimparkPrevidenciaRelogio                ["text"]       = "R"
+		self.botaoOlimparkPrevidenciaRelogio                ["background"] = relo.RelogioCor
+		self.botaoOlimparkPrevidenciaRelogio                ["height"]     = 1
+		self.botaoOlimparkPrevidenciaRelogio                ["width"]      = 1
+
+
+		self.botaoOlimparkPrevidencia.grid                  (row=4,column=0,sticky = "N")
+		self.botaoOlimparkPrevidenciaRelogio.grid           (row=4,column=1,sticky = "N")
+
+
+
+
+
+		relo=Info.Olimpark.Belezinho
+		self.botaoOlimparkBelezinho                         = Button(self.ContainerOlimpark)
+		self.botaoOlimparkBelezinho                         ["text"]       = "Belezinho"
+		self.botaoOlimparkBelezinho                         ["background"] = relo.ModuloCor
+		self.botaoOlimparkBelezinho                         ["width"]      = 13
+		self.botaoOlimparkBelezinho                         ["height"]     = 1
+		self.botaoOlimparkBelezinho.bind                    ("<Button-1>",lambda e: popup("Olimpark","Belezinho",
+															relo.IP, 
+															relo.Porta, 
+															relo.NumeroRep, 
+															relo.Responsavel, 
+															relo.Telefone))
+
+		self.botaoOlimparkBelezinhoRelogio                  = Button(self.ContainerOlimpark)
+		self.botaoOlimparkBelezinhoRelogio                  ["text"]       = "R"
+		self.botaoOlimparkBelezinhoRelogio                  ["background"] = relo.RelogioCor
+		self.botaoOlimparkBelezinhoRelogio                  ["height"]     = 1
+		self.botaoOlimparkBelezinhoRelogio                  ["width"]      = 1
+
+
+		self.botaoOlimparkBelezinho.grid                    (row=5,column=0,sticky = "N")
+		self.botaoOlimparkBelezinhoRelogio.grid             (row=5,column=1,sticky = "N")
+
+
+
+
+
+		relo=Info.Olimpark.Santana
+		self.botaoOlimparkSantana                         	= Button(self.ContainerOlimpark)
+		self.botaoOlimparkSantana                         	["text"]       = "Santana"
+		self.botaoOlimparkSantana                         	["background"] = relo.ModuloCor
+		self.botaoOlimparkSantana                         	["width"]      = 13
+		self.botaoOlimparkSantana                         	["height"]     = 1
+		self.botaoOlimparkSantana.bind                    	("<Button-1>",lambda e: popup("Olimpark","Santana",
+															relo.IP, 
+															relo.Porta, 
+															relo.NumeroRep, 
+															relo.Responsavel, 
+															relo.Telefone))
+
+		self.botaoOlimparkSantanaRelogio                  	= Button(self.ContainerOlimpark)
+		self.botaoOlimparkSantanaRelogio                  	["text"]       = "R"
+		self.botaoOlimparkSantanaRelogio                  	["background"] = relo.RelogioCor
+		self.botaoOlimparkSantanaRelogio                  	["height"]     = 1
+		self.botaoOlimparkSantanaRelogio                  	["width"]      = 1
+
+
+		self.botaoOlimparkSantana.grid                    	(row=6,column=0,sticky = "N")
+		self.botaoOlimparkSantanaRelogio.grid             	(row=6,column=1,sticky = "N")
+
+
+
 
 
 
@@ -3262,12 +3441,13 @@ class TelaRelogios1(object):
 		self.ContainerColuna2             			= Frame (self.ContainerRelogios)
 		self.ContainerGravex              			= Frame (self.ContainerColuna2)
 		self.ContainerElRio							= Frame (self.ContainerColuna2)
+		self.ContainerOlimpark						= Frame (self.ContainerColuna2)
 
 
 		self.ContainerColuna2.grid                	(row=0, column=2,pady=5, padx=1, columnspan=1, sticky="N")
 		self.ContainerGravex.grid                 	(row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
 		self.ContainerElRio.grid 					(row=1, column=0,pady=5, padx=1, columnspan=1, sticky="N")
-
+		self.ContainerOlimpark.grid 				(row=2, column=0,pady=5, padx=1, columnspan=1, sticky="N")
 
 
 	def Create_ContainerColuna3(self,root):
@@ -4123,6 +4303,47 @@ class TelaRelogios1(object):
 																	str(Info.Predman.Status.TotalRelogios))
 
 
+
+	def updateOlimpark(self, relogio):
+
+		if relogio == "jdpaulista":
+
+			self.botaoOlimparkPaulista.configure               			(bg=Info.Olimpark.JdPaulista.ModuloCor)
+			self.botaoOlimparkPaulistaRelogio.configure        			(bg=Info.Olimpark.JdPaulista.RelogioCor)
+
+		elif relogio == "santacecilia":
+
+			self.botaoOlimparkSantaCecilia.configure               		(bg=Info.Olimpark.SantaCecilia.ModuloCor)
+			self.botaoOlimparkSantaCeciliaRelogio.configure        		(bg=Info.Olimpark.SantaCecilia.RelogioCor)
+
+		elif relogio == "vilaolimpia":
+
+			self.botaoOlimparkVilaOlimpia.configure               		(bg=Info.Olimpark.VilaOlimpia.ModuloCor)
+			self.botaoOlimparkVilaOlimpiaRelogio.configure        		(bg=Info.Olimpark.VilaOlimpia.RelogioCor)
+
+		elif relogio == "previdencia":
+
+			self.botaoOlimparkPrevidencia.configure               		(bg=Info.Olimpark.Previdencia.ModuloCor)
+			self.botaoOlimparkPrevidenciaRelogio.configure        		(bg=Info.Olimpark.Previdencia.RelogioCor)
+
+		elif relogio == "belenzinho":
+
+			self.botaoOlimparkBelezinho.configure               		(bg=Info.Olimpark.Belezinho.ModuloCor)
+			self.botaoOlimparkBelezinhoRelogio.configure        		(bg=Info.Olimpark.Belezinho.RelogioCor)
+
+		elif relogio == "santana":
+
+			self.botaoOlimparkSantana.configure               			(bg=Info.Olimpark.Santana.ModuloCor)
+			self.botaoOlimparkSantanaRelogio.configure        			(bg=Info.Olimpark.Santana.RelogioCor)
+
+
+		self.msgOlimparkCount.configure									(text=str(Info.Olimpark.Status.Contage)+"/"+
+																		str(Info.Olimpark.Status.TotalRelogios))	
+
+
+
+
+
 	def update(self,empresa,relogio):
 
 
@@ -4179,6 +4400,10 @@ class TelaRelogios1(object):
 		elif empresa == "predman":
 			self.updatePredman(relogio)
 
+
+
+		elif empresa == "olimpark":
+			self.updateOlimpark(relogio)
 
 
 

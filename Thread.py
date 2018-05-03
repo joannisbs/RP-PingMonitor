@@ -74,6 +74,21 @@ class ThreadloopPredman(threading.Thread):
 	def run(self):
 		loopPredman()
 
+class ThreadloopOlimpark(threading.Thread):
+	def __init__(self):
+		threading.Thread.__init__(self)
+	def run(self):
+		loopOlimpark()
+
+
+
+
+def loopOlimpark():
+	print "Inicio do Servico da Olimpark"
+	while(1):
+		TestaOlimpark()
+		if Controle.Stop : break 
+	Flag.quit = True
 
 
 

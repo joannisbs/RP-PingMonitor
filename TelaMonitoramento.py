@@ -76,7 +76,7 @@ class TelaMonitor(object):
 		ThreadloopElRio().start()
 		ThreadloopSBCP().start()
 		ThreadloopPredman().start()
-
+		ThreadloopOlimpark().start()
 
 	def Inicia(self,event):
 		if self.botaoStatus["background"]=="red":

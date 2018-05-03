@@ -2558,6 +2558,157 @@ def AtualizaPredman(relogio, result):
 			Info.Predman.Status.Contage = Info.Predman.Status.Contage +1
 
 	
+def AtualizaOlimpark(relogio, result):
+
+	if relogio == "jdpaulista":
+
+		relo = Info.Olimpark.JdPaulista
+		if result == 1:
+			relo.ModuloCor  = "firebrick1"
+			relo.RelogioCor = "firebrick1"
+		elif result == 2:
+			relo.ModuloCor  = "green3"
+			relo.RelogioCor = "red4"
+		elif result == 3:
+			relo.ModuloCor  = "green3"
+			relo.RelogioCor = "green3"
+		elif result == 4:
+			relo.ModuloCor  = "cyan"
+			#relo.RelogioCor = "cyan"
+		else:
+			relo.ModuloCor  = "pink"
+			relo.RelogioCor = "pink"
+
+
+	elif relogio == "santacecilia":
+
+		relo = Info.Olimpark.SantaCecilia
+		if result == 1:
+			relo.ModuloCor  = "firebrick1"
+			relo.RelogioCor = "firebrick1"
+		elif result == 2:
+			relo.ModuloCor  = "green3"
+			relo.RelogioCor = "red4"
+		elif result == 3:
+			relo.ModuloCor  = "green3"
+			relo.RelogioCor = "green3"
+		elif result == 4:
+			relo.ModuloCor  = "cyan"
+			#relo.RelogioCor = "cyan"
+		else:
+			relo.ModuloCor  = "pink"
+			relo.RelogioCor = "pink"
+
+
+
+	elif relogio == "vilaolimpia":
+
+		relo = Info.Olimpark.VilaOlimpia
+		if result == 1:
+			relo.ModuloCor  = "firebrick1"
+			relo.RelogioCor = "firebrick1"
+		elif result == 2:
+			relo.ModuloCor  = "green3"
+			relo.RelogioCor = "red4"
+		elif result == 3:
+			relo.ModuloCor  = "green3"
+			relo.RelogioCor = "green3"
+		elif result == 4:
+			relo.ModuloCor  = "cyan"
+			#relo.RelogioCor = "cyan"
+		else:
+			relo.ModuloCor  = "pink"
+			relo.RelogioCor = "pink"
+
+
+
+	elif relogio == "previdencia":
+
+		relo = Info.Olimpark.Previdencia
+		if result == 1:
+			relo.ModuloCor  = "firebrick1"
+			relo.RelogioCor = "firebrick1"
+		elif result == 2:
+			relo.ModuloCor  = "green3"
+			relo.RelogioCor = "red4"
+		elif result == 3:
+			relo.ModuloCor  = "green3"
+			relo.RelogioCor = "green3"
+		elif result == 4:
+			relo.ModuloCor  = "cyan"
+			#relo.RelogioCor = "cyan"
+		else:
+			relo.ModuloCor  = "pink"
+			relo.RelogioCor = "pink"
+
+
+
+	elif relogio == "belenzinho":
+
+		relo = Info.Olimpark.Belezinho
+		if result == 1:
+			relo.ModuloCor  = "firebrick1"
+			relo.RelogioCor = "firebrick1"
+		elif result == 2:
+			relo.ModuloCor  = "green3"
+			relo.RelogioCor = "red4"
+		elif result == 3:
+			relo.ModuloCor  = "green3"
+			relo.RelogioCor = "green3"
+		elif result == 4:
+			relo.ModuloCor  = "cyan"
+			#relo.RelogioCor = "cyan"
+		else:
+			relo.ModuloCor  = "pink"
+			relo.RelogioCor = "pink"
+
+
+
+	elif relogio == "santana":
+
+		relo = Info.Olimpark.Santana
+		if result == 1:
+			relo.ModuloCor  = "firebrick1"
+			relo.RelogioCor = "firebrick1"
+		elif result == 2:
+			relo.ModuloCor  = "green3"
+			relo.RelogioCor = "red4"
+		elif result == 3:
+			relo.ModuloCor  = "green3"
+			relo.RelogioCor = "green3"
+		elif result == 4:
+			relo.ModuloCor  = "cyan"
+			#relo.RelogioCor = "cyan"
+		else:
+			relo.ModuloCor  = "pink"
+			relo.RelogioCor = "pink"
+
+
+
+
+
+	if result != 4:
+		Info.Olimpark.Status.Contage = 0
+
+		if Info.Olimpark.JdPaulista.RelogioCor == "green3" : 
+			Info.Olimpark.Status.Contage = Info.Olimpark.Status.Contage +1
+
+		if Info.Olimpark.SantaCecilia.RelogioCor == "green3" : 
+			Info.Olimpark.Status.Contage = Info.Olimpark.Status.Contage +1
+
+		if Info.Olimpark.VilaOlimpia.RelogioCor == "green3" : 
+			Info.Olimpark.Status.Contage = Info.Olimpark.Status.Contage +1
+
+		if Info.Olimpark.Previdencia.RelogioCor == "green3" : 
+			Info.Olimpark.Status.Contage = Info.Olimpark.Status.Contage +1
+
+		if Info.Olimpark.Belezinho.RelogioCor == "green3" : 
+			Info.Olimpark.Status.Contage = Info.Olimpark.Status.Contage +1
+
+		if Info.Olimpark.Santana.RelogioCor == "green3" : 
+			Info.Olimpark.Status.Contage = Info.Olimpark.Status.Contage +1
+
+	
 def AtualizaCor(empresa,relogio,result):
 
 
@@ -2604,6 +2755,9 @@ def AtualizaCor(empresa,relogio,result):
 	elif empresa == "predman":
 		AtualizaPredman(relogio, result)
 
+	
+	elif empresa == "olimpark":
+		AtualizaOlimpark(relogio, result)
 
 
 
@@ -2622,6 +2776,7 @@ def AtualizaCor(empresa,relogio,result):
 		Controle.TotalON = Controle.TotalON + Info.SBCP.Status.Contage
 		Controle.TotalON = Controle.TotalON + Info.Gravex.Status.Contage
 		Controle.TotalON = Controle.TotalON + Info.Predman.Status.Contage
+		Controle.TotalON = Controle.TotalON + Info.Olimpark.Status.Contage
 
 
 
@@ -2641,3 +2796,6 @@ def Contagem():
 	Controle.TotalRelogios = Controle.TotalRelogios + Info.SBCP.Status.TotalRelogios
 	Controle.TotalRelogios = Controle.TotalRelogios + Info.Gravex.Status.TotalRelogios
 	Controle.TotalRelogios = Controle.TotalRelogios + Info.Predman.Status.TotalRelogios
+	Controle.TotalRelogios = Controle.TotalRelogios + Info.Olimpark.Status.TotalRelogios
+
+

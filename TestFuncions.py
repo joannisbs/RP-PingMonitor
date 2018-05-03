@@ -803,6 +803,52 @@ def TestaPredman():
 	if Controle.Stop : return
 
 
+
+def TestaOlimpark():
+	relo = Info.Olimpark.JdPaulista
+	TestaFuncion(relo.Empresa,
+				relo.Relogio,
+				relo.IP,
+				relo.Porta)
+	if Controle.Stop : return
+
+	relo = Info.Olimpark.SantaCecilia
+	TestaFuncion(relo.Empresa,
+				relo.Relogio,
+				relo.IP,
+				relo.Porta)
+	if Controle.Stop : return
+
+	relo = Info.Olimpark.VilaOlimpia
+	TestaFuncion(relo.Empresa,
+				relo.Relogio,
+				relo.IP,
+				relo.Porta)
+	if Controle.Stop : return
+
+	relo = Info.Olimpark.Previdencia
+	TestaFuncion(relo.Empresa,
+				relo.Relogio,
+				relo.IP,
+				relo.Porta)
+	if Controle.Stop : return
+
+	relo = Info.Olimpark.Belezinho
+	TestaFuncion(relo.Empresa,
+				relo.Relogio,
+				relo.IP,
+				relo.Porta)
+	if Controle.Stop : return
+
+	relo = Info.Olimpark.Santana
+	TestaFuncion(relo.Empresa,
+				relo.Relogio,
+				relo.IP,
+				relo.Porta)
+	if Controle.Stop : return
+
+
+
 def TestaFuncion(empresa2,relogio2,ip2,port2):
 
 	testa = 4

@@ -1617,6 +1617,88 @@ class Info(object):
 			Telefone        = "None"
 
 
+	class Olimpark(object):
+
+		class Status(object):
+			Contage         = 0
+			TotalRelogios   = 6
+
+		class JdPaulista(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+
+		class SantaCecilia(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+
+		class VilaOlimpia(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+
+		class Previdencia(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+
+		class Belezinho(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+
+		class Santana(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
 
 
 class Controle(object):
