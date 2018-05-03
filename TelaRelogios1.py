@@ -2368,7 +2368,7 @@ class TelaRelogios1(object):
 		self.msgSBCP.grid                         		(row=0,column=0,sticky = "N")
 
 
-		self.msgSBCPCount                              	= Label (self.ContainerSBCP,text str(Info.SBCP.Status.Contage)+"/"+
+		self.msgSBCPCount                              	= Label (self.ContainerSBCP,text= str(Info.SBCP.Status.Contage)+"/"+
 																						 str(Info.SBCP.Status.TotalRelogios))	
 
 		self.msgSBCPCount                              	["height"]     = 1
@@ -3342,6 +3342,7 @@ class TelaRelogios1(object):
 																str(Info.IsoRadio.Status.TotalRelogios))
 
 
+
 	def updateSBCP(self, relogio):
 
 
@@ -3386,55 +3387,56 @@ class TelaRelogios1(object):
 
 
 
-		elif relogio == "nacional":
+		elif relogio == "sc":
 
 			self.botaoSBCPSC.configure								(bg=Info.SBCP.SC.ModuloCor)
 			self.botaoSBCPSCRelogio.configure						(bg=Info.SBCP.SC.RelogioCor)
 
 
 
-		elif relogio == "nacional":
+		elif relogio == "rs":
 
 			self.botaoSBCPRS.configure								(bg=Info.SBCP.RS.ModuloCor)
 			self.botaoSBCPRSRelogio.configure						(bg=Info.SBCP.RS.RelogioCor)
 
 
 
-		elif relogio == "nacional":
+		elif relogio == "rj":
 
 			self.botaoSBCPRJ.configure								(bg=Info.SBCP.RJ.ModuloCor)
 			self.botaoSBCPRJRelogio.configure						(bg=Info.SBCP.RJ.RelogioCor)
 
 
 
-		elif relogio == "nacional":
+		elif relogio == "pr":
 
 			self.botaoSBCPPR.configure								(bg=Info.SBCP.PR.ModuloCor)
 			self.botaoSBCPPRRelogio.configure						(bg=Info.SBCP.PR.RelogioCor)
 
 
 
-		elif relogio == "nacional":
+		elif relogio == "pe":
 
 			self.botaoSBCPPE.configure								(bg=Info.SBCP.PE.ModuloCor)
 			self.botaoSBCPPERelogio.configure						(bg=Info.SBCP.PE.RelogioCor)
 
 
 
-		elif relogio == "nacional":
+		elif relogio == "mg":
 
 			self.botaoSBCPMG.configure								(bg=Info.SBCP.MG.ModuloCor)
 			self.botaoSBCPMGRelogio.configure						(bg=Info.SBCP.MG.RelogioCor)
 
 
 
-		elif relogio == "nacional":
+		elif relogio == "go":
 
 			self.botaoSBCPGO.configure								(bg=Info.SBCP.GO.ModuloCor)
 			self.botaoSBCPGORelogio.configure						(bg=Info.SBCP.GO.RelogioCor)
 
 
-
+		self.msgSBCPCount.configure	  						(text=str(Info.SBCP.Status.Contage)+"/"+
+																str(Info.SBCP.Status.TotalRelogios))
 
 		
 
