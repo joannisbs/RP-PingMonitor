@@ -3388,27 +3388,56 @@ class TelaRelogios1(object):
 
 
 
+	def resize(self,event):
+		self.ContainerPai.config(width=event.width,height=event.height)
+
+
 
 	def on_configure(self,event):
-
-		canvas.configure(scrollregion=canvas.bbox('all'))
+		#canvas_width = event.width
+		#self.canvas.itemconfig(self.frame_ID, width = event.width, height=event.height)
+		self.cavatura.configure(scrollregion=self.cavatura.bbox('all'))
 
 
 
 	def Create_ContainerGeral(self,root):
 
 
-		self.canvas = Canvas(root)
-		self.canvas.pack(side=LEFT)
 
-		self.ScrollBar					  = Scrollbar(root,command=self.canvas.yview)
-		self.ScrollBar.pack(side=LEFT,fill=Y)
-		self.canvas.config(yscrollcommand = self.ScrollBar.set)
+		self.ContainerPai = Canvas (root)
+		self.ContainerPai.grid               (row=0, column= 0 ,sticky = N + S + E + W)
+		self.ContainerPai.bind('<Configure>', self.resize)
 
-		self.canvas.bind('<Configure>', self.on_configure)
+		self.cavatura = Canvas(self.ContainerPai)
+		self.cavatura.configure(width=1400,height=700)
+		self.cavatura.grid               (row=0, column= 0 ,sticky = N + S + E + W)	
+		self.ContainerRelogios		      = Canvas (self.cavatura)
+	
+		self.ScrollBar					  = Scrollbar(self.ContainerPai,command=self.cavatura.yview)
+		self.ScrollBar.grid(row=0, column= 1 ,sticky = N + E)
+		self.cavatura.config(yscrollcommand = self.ScrollBar.set)
+		self.cavatura.bind('<Configure>', self.on_configure)
+		
+		self.frame_ID =self.cavatura.create_window((-1000,0), window = self.ContainerRelogios, anchor='nw')
+		#self.ContainerRelogios.grid               (row=0, column= 0 ,sticky = N + S + E + W)
 
-		self.ContainerRelogios		      = Frame (self.canvas)
-		self.canvas.create_window((0,0), window = self.ContainerRelogios, anchor='nw')
+		#self.ContainerPai		      = Frame (root)
+		#self.ContainerPai.grid               (row=0, column= 0 ,sticky = N + S + E + W)
+		#self.canvas = Canvas(self.ContainerPai)
+		#self.canvas.config(height=900,width=1950)
+		#self.canvas.pack(side=LEFT,expand = True)
+
+
+		#self.ScrollBar					  = Scrollbar(self.ContainerPai,command=self.canvas.yview)
+		#self.ScrollBar.pack(side=LEFT,fill=Y,expand = True)
+		#self.canvas.config(yscrollcommand = self.ScrollBar.set)#,height=800,width=1900)
+
+		#self.canvas.bind('<Configure>', self.on_configure)
+
+		#self.ContainerRelogios		      = Frame (self.canvas)#height=800,width=1900 )
+		#self.ContainerRelogios.pack(expand = YES)
+		#self.canvas.configure(scrollregion=self.canvas.bbox('all'))
+		#self.frame_ID =self.canvas.create_window((0,0), window = self.ContainerRelogios, anchor='nw')
 		#self.ContainerRelogios.grid               (row=0, column= 0 ,sticky = N + S + E + W)
 
 	def Create_ContainerColuna0(self,root):
