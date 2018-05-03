@@ -39,6 +39,10 @@ class TelaRelogios1(object):
 
 		self.Create_GrupoNK()
 
+		self.Create_SBCP()
+
+
+
 
 	def Create_IsoRadio(self):
 
@@ -2357,6 +2361,395 @@ class TelaRelogios1(object):
 
 
 
+	def Create_SBCP(self):
+
+		self.msgSBCP                              		= Label (self.ContainerSBCP,text = "SBCP")
+		self.msgSBCP                              		["height"]     = 1
+		self.msgSBCP.grid                         		(row=0,column=0,sticky = "N")
+
+
+		self.msgSBCPCount                              	= Label (self.ContainerSBCP,text str(Info.SBCP.Status.Contage)+"/"+
+																						 str(Info.SBCP.Status.TotalRelogios))	
+
+		self.msgSBCPCount                              	["height"]     = 1
+		self.msgSBCPCount.grid                         	(row=0,column=1,sticky = "N")
+
+
+
+
+		self.botaoSBCPNacional                         	= Button(self.ContainerSBCP)
+		self.botaoSBCPNacional                         	["text"]       = "Nacional"
+		self.botaoSBCPNacional                         	["background"] = Info.SBCP.Nacional.ModuloCor
+		self.botaoSBCPNacional                         	["width"]      = 13
+		self.botaoSBCPNacional                         	["height"]     = 1
+		self.botaoSBCPNacional.bind                    	("<Button-1>",lambda e: popup("SBCP","Nacional",
+														Info.SBCP.Nacional.IP, 
+														Info.SBCP.Nacional.Porta, 
+														Info.SBCP.Nacional.NumeroRep, 
+														Info.SBCP.Nacional.Responsavel, 
+														Info.SBCP.Nacional.Telefone))
+
+		self.botaoSBCPNacionalRelogio                  	= Button(self.ContainerSBCP)
+		self.botaoSBCPNacionalRelogio                  	["text"]       = "R"
+		self.botaoSBCPNacionalRelogio                  	["background"] = Info.SBCP.Nacional.RelogioCor
+		self.botaoSBCPNacionalRelogio                  	["height"]     = 1
+		self.botaoSBCPNacionalRelogio                  	["width"]      = 1
+
+
+		self.botaoSBCPNacional.grid                    	(row=1,column=0,sticky = "N")
+		self.botaoSBCPNacionalRelogio.grid             	(row=1,column=1,sticky = "N")
+
+
+
+
+
+
+
+
+		self.botaoSBCPES                         		= Button(self.ContainerSBCP)
+		self.botaoSBCPES                         		["text"]       = "ES"
+		self.botaoSBCPES                         		["background"] = Info.SBCP.ES.ModuloCor
+		self.botaoSBCPES                         		["width"]      = 13
+		self.botaoSBCPES                         		["height"]     = 1
+		self.botaoSBCPES.bind                    		("<Button-1>",lambda e: popup("SBCP","ES",
+														Info.SBCP.ES.IP, 
+														Info.SBCP.ES.Porta, 
+														Info.SBCP.ES.NumeroRep, 
+														Info.SBCP.ES.Responsavel, 
+														Info.SBCP.ES.Telefone))
+
+		self.botaoSBCPESRelogio                  		= Button(self.ContainerSBCP)
+		self.botaoSBCPESRelogio                  		["text"]       = "R"
+		self.botaoSBCPESRelogio                  		["background"] = Info.SBCP.ES.RelogioCor
+		self.botaoSBCPESRelogio                  		["height"]     = 1
+		self.botaoSBCPESRelogio                  		["width"]      = 1
+
+
+		self.botaoSBCPES.grid                    		(row=2,column=0,sticky = "N")
+		self.botaoSBCPESRelogio.grid             		(row=2,column=1,sticky = "N")
+
+
+
+
+
+
+
+
+		self.botaoSBCPDF                         		= Button(self.ContainerSBCP)
+		self.botaoSBCPDF                         		["text"]       = "DF"
+		self.botaoSBCPDF                         		["background"] = Info.SBCP.DF.ModuloCor
+		self.botaoSBCPDF                         		["width"]      = 13
+		self.botaoSBCPDF                         		["height"]     = 1
+		self.botaoSBCPDF.bind                    		("<Button-1>",lambda e: popup("SBCP","DF",
+														Info.SBCP.DF.IP, 
+														Info.SBCP.DF.Porta, 
+														Info.SBCP.DF.NumeroRep, 
+														Info.SBCP.DF.Responsavel, 
+														Info.SBCP.DF.Telefone))
+
+		self.botaoSBCPDFRelogio                  		= Button(self.ContainerSBCP)
+		self.botaoSBCPDFRelogio                  		["text"]       = "R"
+		self.botaoSBCPDFRelogio                  		["background"] = Info.SBCP.DF.RelogioCor
+		self.botaoSBCPDFRelogio                  		["height"]     = 1
+		self.botaoSBCPDFRelogio                  		["width"]      = 1
+
+
+		self.botaoSBCPDF.grid                    		(row=3,column=0,sticky = "N")
+		self.botaoSBCPDFRelogio.grid             		(row=3,column=1,sticky = "N")
+
+
+
+
+
+
+
+
+		self.botaoSBCPCE                         		= Button(self.ContainerSBCP)
+		self.botaoSBCPCE                         		["text"]       = "CE"
+		self.botaoSBCPCE                         		["background"] = Info.SBCP.CE.ModuloCor
+		self.botaoSBCPCE                         		["width"]      = 13
+		self.botaoSBCPCE                         		["height"]     = 1
+		self.botaoSBCPCE.bind                    		("<Button-1>",lambda e: popup("SBCP","CE",
+														Info.SBCP.CE.IP, 
+														Info.SBCP.CE.Porta, 
+														Info.SBCP.CE.NumeroRep, 
+														Info.SBCP.CE.Responsavel, 
+														Info.SBCP.CE.Telefone))
+
+		self.botaoSBCPCERelogio                  		= Button(self.ContainerSBCP)
+		self.botaoSBCPCERelogio                  		["text"]       = "R"
+		self.botaoSBCPCERelogio                  		["background"] = Info.SBCP.CE.RelogioCor
+		self.botaoSBCPCERelogio                  		["height"]     = 1
+		self.botaoSBCPCERelogio                  		["width"]      = 1
+
+
+		self.botaoSBCPCE.grid                    		(row=4,column=0,sticky = "N")
+		self.botaoSBCPCERelogio.grid             		(row=4,column=1,sticky = "N")
+
+
+
+
+
+
+
+
+		self.botaoSBCPBA                         		= Button(self.ContainerSBCP)
+		self.botaoSBCPBA                         		["text"]       = "BA"
+		self.botaoSBCPBA                         		["background"] = Info.SBCP.BA.ModuloCor
+		self.botaoSBCPBA                         		["width"]      = 13
+		self.botaoSBCPBA                         		["height"]     = 1
+		self.botaoSBCPBA.bind                    		("<Button-1>",lambda e: popup("SBCP","BA",
+														Info.SBCP.BA.IP, 
+														Info.SBCP.BA.Porta, 
+														Info.SBCP.BA.NumeroRep, 
+														Info.SBCP.BA.Responsavel, 
+														Info.SBCP.BA.Telefone))
+
+		self.botaoSBCPBARelogio                  		= Button(self.ContainerSBCP)
+		self.botaoSBCPBARelogio                  		["text"]       = "R"
+		self.botaoSBCPBARelogio                  		["background"] = Info.SBCP.BA.RelogioCor
+		self.botaoSBCPBARelogio                  		["height"]     = 1
+		self.botaoSBCPBARelogio                  		["width"]      = 1
+
+
+		self.botaoSBCPBA.grid                    		(row=5,column=0,sticky = "N")
+		self.botaoSBCPBARelogio.grid             		(row=5,column=1,sticky = "N")
+
+
+
+
+
+
+
+
+		self.botaoSBCPSP                         		= Button(self.ContainerSBCP)
+		self.botaoSBCPSP                         		["text"]       = "SP"
+		self.botaoSBCPSP                         		["background"] = Info.SBCP.SP.ModuloCor
+		self.botaoSBCPSP                         		["width"]      = 13
+		self.botaoSBCPSP                         		["height"]     = 1
+		self.botaoSBCPSP.bind                    		("<Button-1>",lambda e: popup("SBCP","SP",
+														Info.SBCP.SP.IP, 
+														Info.SBCP.SP.Porta, 
+														Info.SBCP.SP.NumeroRep, 
+														Info.SBCP.SP.Responsavel, 
+														Info.SBCP.SP.Telefone))
+
+		self.botaoSBCPSPRelogio                  		= Button(self.ContainerSBCP)
+		self.botaoSBCPSPRelogio                  		["text"]       = "R"
+		self.botaoSBCPSPRelogio                  		["background"] = Info.SBCP.SP.RelogioCor
+		self.botaoSBCPSPRelogio                  		["height"]     = 1
+		self.botaoSBCPSPRelogio                  		["width"]      = 1
+
+
+		self.botaoSBCPSP.grid                    		(row=6,column=0,sticky = "N")
+		self.botaoSBCPSPRelogio.grid             		(row=6,column=1,sticky = "N")
+
+
+
+
+
+
+
+
+		self.botaoSBCPSC                         		= Button(self.ContainerSBCP)
+		self.botaoSBCPSC                         		["text"]       = "SC"
+		self.botaoSBCPSC                         		["background"] = Info.SBCP.SC.ModuloCor
+		self.botaoSBCPSC                         		["width"]      = 13
+		self.botaoSBCPSC                         		["height"]     = 1
+		self.botaoSBCPSC.bind                    		("<Button-1>",lambda e: popup("SBCP","SC",
+														Info.SBCP.SC.IP, 
+														Info.SBCP.SC.Porta, 
+														Info.SBCP.SC.NumeroRep, 
+														Info.SBCP.SC.Responsavel, 
+														Info.SBCP.SC.Telefone))
+
+		self.botaoSBCPSCRelogio                  		= Button(self.ContainerSBCP)
+		self.botaoSBCPSCRelogio                  		["text"]       = "R"
+		self.botaoSBCPSCRelogio                  		["background"] = Info.SBCP.SC.RelogioCor
+		self.botaoSBCPSCRelogio                  		["height"]     = 1
+		self.botaoSBCPSCRelogio                  		["width"]      = 1
+
+
+		self.botaoSBCPSC.grid                    		(row=7,column=0,sticky = "N")
+		self.botaoSBCPSCRelogio.grid             		(row=7,column=1,sticky = "N")
+
+
+
+
+
+
+
+
+		self.botaoSBCPRS                         		= Button(self.ContainerSBCP)
+		self.botaoSBCPRS                         		["text"]       = "RS"
+		self.botaoSBCPRS                         		["background"] = Info.SBCP.RS.ModuloCor
+		self.botaoSBCPRS                         		["width"]      = 13
+		self.botaoSBCPRS                         		["height"]     = 1
+		self.botaoSBCPRS.bind                    		("<Button-1>",lambda e: popup("SBCP","RS",
+														Info.SBCP.RS.IP, 
+														Info.SBCP.RS.Porta, 
+														Info.SBCP.RS.NumeroRep, 
+														Info.SBCP.RS.Responsavel, 
+														Info.SBCP.RS.Telefone))
+
+		self.botaoSBCPRSRelogio                  		= Button(self.ContainerSBCP)
+		self.botaoSBCPRSRelogio                  		["text"]       = "R"
+		self.botaoSBCPRSRelogio                  		["background"] = Info.SBCP.RS.RelogioCor
+		self.botaoSBCPRSRelogio                  		["height"]     = 1
+		self.botaoSBCPRSRelogio                  		["width"]      = 1
+
+
+		self.botaoSBCPRS.grid                    		(row=8,column=0,sticky = "N")
+		self.botaoSBCPRSRelogio.grid             		(row=8,column=1,sticky = "N")
+
+
+
+
+
+
+
+
+		self.botaoSBCPRJ                         		= Button(self.ContainerSBCP)
+		self.botaoSBCPRJ                         		["text"]       = "RJ"
+		self.botaoSBCPRJ                         		["background"] = Info.SBCP.RJ.ModuloCor
+		self.botaoSBCPRJ                         		["width"]      = 13
+		self.botaoSBCPRJ                         		["height"]     = 1
+		self.botaoSBCPRJ.bind                    		("<Button-1>",lambda e: popup("SBCP","RJ",
+														Info.SBCP.RJ.IP, 
+														Info.SBCP.RJ.Porta, 
+														Info.SBCP.RJ.NumeroRep, 
+														Info.SBCP.RJ.Responsavel, 
+														Info.SBCP.RJ.Telefone))
+
+		self.botaoSBCPRJRelogio                  		= Button(self.ContainerSBCP)
+		self.botaoSBCPRJRelogio                  		["text"]       = "R"
+		self.botaoSBCPRJRelogio                  		["background"] = Info.SBCP.RJ.RelogioCor
+		self.botaoSBCPRJRelogio                  		["height"]     = 1
+		self.botaoSBCPRJRelogio                  		["width"]      = 1
+
+
+		self.botaoSBCPRJ.grid                    		(row=9,column=0,sticky = "N")
+		self.botaoSBCPRJRelogio.grid             		(row=9,column=1,sticky = "N")
+
+
+
+
+
+
+
+
+		self.botaoSBCPPR                         		= Button(self.ContainerSBCP)
+		self.botaoSBCPPR                         		["text"]       = "PR"
+		self.botaoSBCPPR                         		["background"] = Info.SBCP.PR.ModuloCor
+		self.botaoSBCPPR                         		["width"]      = 13
+		self.botaoSBCPPR                         		["height"]     = 1
+		self.botaoSBCPPR.bind                    		("<Button-1>",lambda e: popup("SBCP","PR",
+														Info.SBCP.PR.IP, 
+														Info.SBCP.PR.Porta, 
+														Info.SBCP.PR.NumeroRep, 
+														Info.SBCP.PR.Responsavel, 
+														Info.SBCP.PR.Telefone))
+
+		self.botaoSBCPPRRelogio                  		= Button(self.ContainerSBCP)
+		self.botaoSBCPPRRelogio                  		["text"]       = "R"
+		self.botaoSBCPPRRelogio                  		["background"] = Info.SBCP.PR.RelogioCor
+		self.botaoSBCPPRRelogio                  		["height"]     = 1
+		self.botaoSBCPPRRelogio                  		["width"]      = 1
+
+
+		self.botaoSBCPPR.grid                    		(row=10,column=0,sticky = "N")
+		self.botaoSBCPPRRelogio.grid             		(row=10,column=1,sticky = "N")
+
+
+
+
+
+
+
+
+		self.botaoSBCPPE                         		= Button(self.ContainerSBCP)
+		self.botaoSBCPPE                         		["text"]       = "PE"
+		self.botaoSBCPPE                         		["background"] = Info.SBCP.PE.ModuloCor
+		self.botaoSBCPPE                         		["width"]      = 13
+		self.botaoSBCPPE                         		["height"]     = 1
+		self.botaoSBCPPE.bind                    		("<Button-1>",lambda e: popup("SBCP","PE",
+														Info.SBCP.PE.IP, 
+														Info.SBCP.PE.Porta, 
+														Info.SBCP.PE.NumeroRep, 
+														Info.SBCP.PE.Responsavel, 
+														Info.SBCP.PE.Telefone))
+
+		self.botaoSBCPPERelogio                  		= Button(self.ContainerSBCP)
+		self.botaoSBCPPERelogio                  		["text"]       = "R"
+		self.botaoSBCPPERelogio                  		["background"] = Info.SBCP.PE.RelogioCor
+		self.botaoSBCPPERelogio                  		["height"]     = 1
+		self.botaoSBCPPERelogio                  		["width"]      = 1
+
+
+		self.botaoSBCPPE.grid                    		(row=11,column=0,sticky = "N")
+		self.botaoSBCPPERelogio.grid             		(row=11,column=1,sticky = "N")
+
+
+
+
+
+
+
+
+		self.botaoSBCPMG                         		= Button(self.ContainerSBCP)
+		self.botaoSBCPMG                         		["text"]       = "MG"
+		self.botaoSBCPMG                         		["background"] = Info.SBCP.MG.ModuloCor
+		self.botaoSBCPMG                         		["width"]      = 13
+		self.botaoSBCPMG                         		["height"]     = 1
+		self.botaoSBCPMG.bind                    		("<Button-1>",lambda e: popup("SBCP","MG",
+														Info.SBCP.MG.IP, 
+														Info.SBCP.MG.Porta, 
+														Info.SBCP.MG.NumeroRep, 
+														Info.SBCP.MG.Responsavel, 
+														Info.SBCP.MG.Telefone))
+
+		self.botaoSBCPMGRelogio                  		= Button(self.ContainerSBCP)
+		self.botaoSBCPMGRelogio                  		["text"]       = "R"
+		self.botaoSBCPMGRelogio                  		["background"] = Info.SBCP.MG.RelogioCor
+		self.botaoSBCPMGRelogio                  		["height"]     = 1
+		self.botaoSBCPMGRelogio                  		["width"]      = 1
+
+
+		self.botaoSBCPMG.grid                    		(row=12,column=0,sticky = "N")
+		self.botaoSBCPMGRelogio.grid             		(row=12,column=1,sticky = "N")
+
+
+
+
+
+
+
+
+		self.botaoSBCPGO                         		= Button(self.ContainerSBCP)
+		self.botaoSBCPGO                         		["text"]       = "GO"
+		self.botaoSBCPGO                         		["background"] = Info.SBCP.GO.ModuloCor
+		self.botaoSBCPGO                         		["width"]      = 13
+		self.botaoSBCPGO                         		["height"]     = 1
+		self.botaoSBCPGO.bind                    		("<Button-1>",lambda e: popup("SBCP","GO",
+														Info.SBCP.GO.IP, 
+														Info.SBCP.GO.Porta, 
+														Info.SBCP.GO.NumeroRep, 
+														Info.SBCP.GO.Responsavel, 
+														Info.SBCP.GO.Telefone))
+
+		self.botaoSBCPGORelogio                  		= Button(self.ContainerSBCP)
+		self.botaoSBCPGORelogio                  		["text"]       = "R"
+		self.botaoSBCPGORelogio                  		["background"] = Info.SBCP.GO.RelogioCor
+		self.botaoSBCPGORelogio                  		["height"]     = 1
+		self.botaoSBCPGORelogio                  		["width"]      = 1
+
+
+		self.botaoSBCPGO.grid                    		(row=13,column=0,sticky = "N")
+		self.botaoSBCPGORelogio.grid             		(row=13,column=1,sticky = "N")
+
+
+
+
 	def Create_ContainerGeral(self,root):
 
 		self.ContainerRelogios		      = Frame (root)
@@ -2403,9 +2796,11 @@ class TelaRelogios1(object):
 
 		self.ContainerColuna2             = Frame (self.ContainerRelogios)
 		self.ContainerGravex              = Frame (self.ContainerColuna2)
+		self.ContainerSBCP				  = Frame (self.ContainerColuna2)
 
-		self.ContainerColuna2.grid                (row=0, column=2,pady=5, padx=1, columnspan=1, sticky="N")
-		self.ContainerGravex.grid                 (row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
+		self.ContainerColuna2.grid                	(row=0, column=2,pady=5, padx=1, columnspan=1, sticky="N")
+		self.ContainerGravex.grid                 	(row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
+		self.ContainerSBCP.grid 					(row=1, column=0,pady=5, padx=1, columnspan=1, sticky="N")
 
 
 
@@ -2947,7 +3342,101 @@ class TelaRelogios1(object):
 																str(Info.IsoRadio.Status.TotalRelogios))
 
 
+	def updateSBCP(self, relogio):
 
+
+		if relogio == "nacional":
+
+			self.botaoSBCPNacional.configure						(bg=Info.SBCP.Nacional.ModuloCor)
+			self.botaoSBCPNacionalRelogio.configure					(bg=Info.SBCP.Nacional.RelogioCor)
+
+
+		elif relogio == "es":
+
+			self.botaoSBCPES.configure								(bg=Info.SBCP.ES.ModuloCor)
+			self.botaoSBCPESRelogio.configure						(bg=Info.SBCP.ES.RelogioCor)
+
+
+
+		elif relogio == "df":
+
+			self.botaoSBCPDF.configure								(bg=Info.SBCP.DF.ModuloCor)
+			self.botaoSBCPDFRelogio.configure						(bg=Info.SBCP.DF.RelogioCor)
+
+
+
+		elif relogio == "ce":
+
+			self.botaoSBCPCE.configure								(bg=Info.SBCP.CE.ModuloCor)
+			self.botaoSBCPCERelogio.configure						(bg=Info.SBCP.CE.RelogioCor)
+
+
+
+		elif relogio == "ba":
+
+			self.botaoSBCPBA.configure								(bg=Info.SBCP.BA.ModuloCor)
+			self.botaoSBCPBARelogio.configure						(bg=Info.SBCP.BA.RelogioCor)
+
+
+
+		elif relogio == "sp":
+
+			self.botaoSBCPSP.configure								(bg=Info.SBCP.SP.ModuloCor)
+			self.botaoSBCPSPRelogio.configure						(bg=Info.SBCP.SP.RelogioCor)
+
+
+
+		elif relogio == "nacional":
+
+			self.botaoSBCPSC.configure								(bg=Info.SBCP.SC.ModuloCor)
+			self.botaoSBCPSCRelogio.configure						(bg=Info.SBCP.SC.RelogioCor)
+
+
+
+		elif relogio == "nacional":
+
+			self.botaoSBCPRS.configure								(bg=Info.SBCP.RS.ModuloCor)
+			self.botaoSBCPRSRelogio.configure						(bg=Info.SBCP.RS.RelogioCor)
+
+
+
+		elif relogio == "nacional":
+
+			self.botaoSBCPRJ.configure								(bg=Info.SBCP.RJ.ModuloCor)
+			self.botaoSBCPRJRelogio.configure						(bg=Info.SBCP.RJ.RelogioCor)
+
+
+
+		elif relogio == "nacional":
+
+			self.botaoSBCPPR.configure								(bg=Info.SBCP.PR.ModuloCor)
+			self.botaoSBCPPRRelogio.configure						(bg=Info.SBCP.PR.RelogioCor)
+
+
+
+		elif relogio == "nacional":
+
+			self.botaoSBCPPE.configure								(bg=Info.SBCP.PE.ModuloCor)
+			self.botaoSBCPPERelogio.configure						(bg=Info.SBCP.PE.RelogioCor)
+
+
+
+		elif relogio == "nacional":
+
+			self.botaoSBCPMG.configure								(bg=Info.SBCP.MG.ModuloCor)
+			self.botaoSBCPMGRelogio.configure						(bg=Info.SBCP.MG.RelogioCor)
+
+
+
+		elif relogio == "nacional":
+
+			self.botaoSBCPGO.configure								(bg=Info.SBCP.GO.ModuloCor)
+			self.botaoSBCPGORelogio.configure						(bg=Info.SBCP.GO.RelogioCor)
+
+
+
+
+		
 
 	def update(self,empresa,relogio):
 

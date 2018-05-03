@@ -1204,7 +1204,184 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+		
+
+	class SBCP(object):
+
+		class Status(object):
+			Contage         = 0
+			TotalRelogios   = 9
+
+		class Nacional(object):
+
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+		class ES(object):
+
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+		class DF(object):
+
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+		class CE(object):
+
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+		class BA(object):
+
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+		class SP(object):
+
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+		class SC(object):
+
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+		class RS(object):
+
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+		class RJ(object):
+
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+		class PR(object):
+
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+		class PE(object):
+
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+		class MG(object):
+
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+		class GO(object):
+
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+
 
 
 class Controle(object):
