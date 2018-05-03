@@ -3409,15 +3409,20 @@ class TelaRelogios1(object):
 		self.ContainerPai.bind('<Configure>', self.resize)
 
 		self.cavatura = Canvas(self.ContainerPai)
-		self.cavatura.configure(width=1400,height=700)
+		self.cavatura.configure(width=800,height=500)
 		self.cavatura.grid               (row=0, column= 0 ,sticky = N + S + E + W)	
 		self.ContainerRelogios		      = Canvas (self.cavatura)
 	
-		self.ScrollBar					  = Scrollbar(self.ContainerPai,command=self.cavatura.yview)
+		self.ScrollBar					  = Scrollbar(self.ContainerPai,command=self.cavatura.yview,orient = VERTICAL)
 		self.ScrollBar.grid(row=0, column= 1 ,sticky = N + E)
-		self.cavatura.config(yscrollcommand = self.ScrollBar.set)
-		self.cavatura.bind('<Configure>', self.on_configure)
+		self.ScrollBar2					  = Scrollbar(self.ContainerPai,command=self.cavatura.xview,orient = HORIZONTAL)
+		self.ScrollBar2.grid(row=1, column= 0 ,sticky = N + E)
 		
+
+		self.cavatura.bind('<Configure>', self.on_configure)
+
+		self.cavatura.config(yscrollcommand = self.ScrollBar.set,xscrollcommand = self.ScrollBar2.set)
+
 		self.frame_ID =self.cavatura.create_window((-1000,0), window = self.ContainerRelogios, anchor='nw')
 		#self.ContainerRelogios.grid               (row=0, column= 0 ,sticky = N + S + E + W)
 

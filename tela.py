@@ -38,7 +38,7 @@ class Iniciooo:
 
 
 		Relo1 = Toplevel(master=None)
-		Relo1.geometry('1400x700')
+		Relo1.geometry('900x600')
 		Relo1.title("Monitor Relogios 1")
 		Relo1.protocol("WM_DELETE_WINDOW",on_closing)
 		Telas.GUI_Tela1 = TelaRelogios1(Relo1)
