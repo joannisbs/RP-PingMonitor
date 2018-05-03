@@ -585,6 +585,11 @@ class TelaRelogios1(object):
 		self.msgPredman.grid(row=0,column=0,sticky = "N")
 
 
+		self.msgPredmancount = Label (self.ContainerPredman,text = str(Info.Predman.Status.Contage)+"/"+
+																	str(Info.Predman.Status.TotalRelogios))
+
+		self.msgPredmancount.grid(row=0,column=1,sticky = "N")
+
 
 
 		self.botaoPredmanBunge                                    = Button(self.ContainerPredman)
@@ -726,25 +731,25 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoPredmanOxiteno3                                = Button(self.ContainerPredman)
-		self.botaoPredmanOxiteno3                 ["text"]       = "Oxiteno 3"
-		self.botaoPredmanOxiteno3                 ["background"] = Info.Predman.Oxiteno3.ModuloCor
-		self.botaoPredmanOxiteno3                 ["width"]      = 13
-		self.botaoPredmanOxiteno3                 ["height"]     = 1
-		self.botaoPredmanOxiteno3.bind            ("<Button-1>",lambda e: popup("Predman","Oxiteno 3",
-													Info.Predman.Oxiteno3.IP, 
-													Info.Predman.Oxiteno3.Porta, 
-													Info.Predman.Oxiteno3.NumeroRep, 
-													Info.Predman.Oxiteno3.Responsavel, 
-													Info.Predman.Oxiteno3.Telefone))
-		self.botaoPredmanOxiteno3.grid           (row=7,column=0,sticky = "N")
+		self.botaoPredmanSantoAndre                                = Button(self.ContainerPredman)
+		self.botaoPredmanSantoAndre                 ["text"]       = "Santo Andre"
+		self.botaoPredmanSantoAndre                 ["background"] = Info.Predman.SantoAndre.ModuloCor
+		self.botaoPredmanSantoAndre                 ["width"]      = 13
+		self.botaoPredmanSantoAndre                 ["height"]     = 1
+		self.botaoPredmanSantoAndre.bind            ("<Button-1>",lambda e: popup("Predman","Santo Andre",
+													Info.Predman.SantoAndre.IP, 
+													Info.Predman.SantoAndre.Porta, 
+													Info.Predman.SantoAndre.NumeroRep, 
+													Info.Predman.SantoAndre.Responsavel, 
+													Info.Predman.SantoAndre.Telefone))
+		self.botaoPredmanSantoAndre.grid           (row=7,column=0,sticky = "N")
 
-		self.botaoPredmanOxiteno3Relogio                         = Button(self.ContainerPredman)
-		self.botaoPredmanOxiteno3Relogio          ["text"]       = "R"
-		self.botaoPredmanOxiteno3Relogio          ["background"] = Info.Predman.Oxiteno3.RelogioCor
-		self.botaoPredmanOxiteno3Relogio          ["width"]      = 1
-		self.botaoPredmanOxiteno3Relogio          ["height"]     = 1
-		self.botaoPredmanOxiteno3Relogio.grid      (row=7,column=1,sticky = "N")
+		self.botaoPredmanSantoAndreRelogio                         = Button(self.ContainerPredman)
+		self.botaoPredmanSantoAndreRelogio          ["text"]       = "R"
+		self.botaoPredmanSantoAndreRelogio          ["background"] = Info.Predman.SantoAndre.RelogioCor
+		self.botaoPredmanSantoAndreRelogio          ["width"]      = 1
+		self.botaoPredmanSantoAndreRelogio          ["height"]     = 1
+		self.botaoPredmanSantoAndreRelogio.grid      (row=7,column=1,sticky = "N")
 
 
 
@@ -4011,6 +4016,113 @@ class TelaRelogios1(object):
 
 
 
+	def updatePredman(self, relogio):
+
+		if relogio == "bunge":
+
+			self.botaoPredmanBunge.configure						(bg=Info.Predman.Bunge.ModuloCor)
+			self.botaoPredmanBungeRelogio.configure				   	(bg=Info.Predman.Bunge.RelogioCor)
+		
+		elif relogio == "cabot":
+
+			self.botaoPredmanCabot.configure						(bg=Info.Predman.Cabot.ModuloCor)
+			self.botaoPredmanCabotRelogio.configure				   	(bg=Info.Predman.Cabot.RelogioCor)
+			
+	
+		elif relogio == "kellogs":
+
+			self.botaoPredmanKellogs.configure						(bg=Info.Predman.Kellogs.ModuloCor)
+			self.botaoPredmanKellogsRelogio.configure				(bg=Info.Predman.Kellogs.RelogioCor)
+			
+	
+		elif relogio == "magazine":
+
+			self.botaoPredmanMagazine.configure						(bg=Info.Predman.Magazine.ModuloCor)
+			self.botaoPredmanMagazineRelogio.configure				(bg=Info.Predman.Magazine.RelogioCor)
+			
+	
+		elif relogio == "oxiteno1":
+
+			self.botaoPredmanOxiteno1.configure						(bg=Info.Predman.Oxiteno1.ModuloCor)
+			self.botaoPredmanOxiteno1Relogio.configure				(bg=Info.Predman.Oxiteno1.RelogioCor)
+			
+	
+		elif relogio == "oxiteno2":
+
+			self.botaoPredmanOxiteno2.configure						(bg=Info.Predman.Oxiteno2.ModuloCor)
+			self.botaoPredmanOxiteno2Relogio.configure				(bg=Info.Predman.Oxiteno2.RelogioCor)
+			
+	
+		elif relogio == "santoandre":
+
+			self.botaoPredmanSantoAndre.configure					(bg=Info.Predman.SantoAndre.ModuloCor)
+			self.botaoPredmanSantoAndreRelogio.configure			(bg=Info.Predman.SantoAndre.RelogioCor)
+			
+	
+		elif relogio == "pysmianes":
+
+			self.botaoPredmanPrysmianES.configure					(bg=Info.Predman.PrysmianES.ModuloCor)
+			self.botaoPredmanPrysmianESRelogio.configure			(bg=Info.Predman.PrysmianES.RelogioCor)
+			
+	
+		elif relogio == "tradegar":
+
+			self.botaoPredmanTradegar.configure						(bg=Info.Predman.Tradegar.ModuloCor)
+			self.botaoPredmanTradegarRelogio.configure				(bg=Info.Predman.Tradegar.RelogioCor)
+			
+	
+		elif relogio == "portao1":
+
+			self.botaoPredmanPortao1.configure						(bg=Info.Predman.Portao1.ModuloCor)
+			self.botaoPredmanPortao1Relogio.configure				(bg=Info.Predman.Portao1.RelogioCor)
+			
+	
+		elif relogio == "cabot":
+
+			self.botaoPredmanPortao2.configure						(bg=Info.Predman.Portao2.ModuloCor)
+			self.botaoPredmanPortao2Relogio.configure				(bg=Info.Predman.Portao2.RelogioCor)
+			
+	
+		elif relogio == "sabic":
+
+			self.botaoPredmanSabic.configure						(bg=Info.Predman.Sabic.ModuloCor)
+			self.botaoPredmanSabicRelogio.configure				   	(bg=Info.Predman.Sabic.RelogioCor)
+			
+	
+		elif relogio == "santhebrag":
+
+			self.botaoPredmanSantherBraganca.configure				(bg=Info.Predman.SBraganca.ModuloCor)
+			self.botaoPredmanSantherBragancaRelogio.configure		(bg=Info.Predman.SBraganca.RelogioCor)
+			
+	
+		elif relogio == "santhepenha":
+
+			self.botaoPredmanSantherPenha.configure					(bg=Info.Predman.SPenha.ModuloCor)
+			self.botaoPredmanSantherPenhaRelogio.configure			(bg=Info.Predman.SPenha.RelogioCor)
+			
+	
+		elif relogio == "faurencia":
+
+			self.botaoPredmanFaurencia.configure					(bg=Info.Predman.Faurencia.ModuloCor)
+			self.botaoPredmanFaurenciaRelogio.configure				(bg=Info.Predman.Faurencia.RelogioCor)
+			
+	
+		elif relogio == "admrondo":
+
+			self.botaoPredmanAdmRondonopolis.configure				(bg=Info.Predman.AdmRondonopolis.ModuloCor)
+			self.botaoPredmanAdmRondonopolisRelogio.configure		(bg=Info.Predman.AdmRondonopolis.RelogioCor)
+			
+	
+		elif relogio == "vilavelha":
+
+			self.botaoPredmanVilaVelha.configure					(bg=Info.Predman.VilaVelha.ModuloCor)
+			self.botaoPredmanVilaVelhaRelogio.configure			   	(bg=Info.Predman.VilaVelha.RelogioCor)
+			
+		
+		self.msgPredmancount.configure 								(text = str(Info.Predman.Status.Contage)+"/"+
+																	str(Info.Predman.Status.TotalRelogios))
+
+
 	def update(self,empresa,relogio):
 
 
@@ -4064,6 +4176,8 @@ class TelaRelogios1(object):
 
 
 
+		elif empresa == "predman":
+			self.updatePredman(relogio)
 
 
 

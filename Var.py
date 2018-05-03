@@ -572,6 +572,11 @@ class Info(object):
 
 	class Predman(object):
 
+		class Status(object):
+			Contage         = 0
+			TotalRelogios   = 17
+
+
 		class Bunge(object):
 
 			Empresa         = "None"
@@ -644,7 +649,7 @@ class Info(object):
 			Responsavel     = "None"
 			Telefone        = "None"
 			
-		class Oxiteno3(object):
+		class SantoAndre(object):
 
 			Empresa         = "None"
 			Relogio         = "None"
