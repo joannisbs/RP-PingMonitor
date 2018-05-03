@@ -523,7 +523,7 @@ class TelaRelogios1(object):
 		
 
 
-		self.msgLaser = Label (self.ContainerLaser,text = "Laser")
+		self.msgLaser = Label (self.ContainerLaser,text = "Laser", font = "arialblack 12 bold")
 		self.msgLaser["height"]=1
 		self.msgLaser.grid(row=0,column=0,sticky = "N")
 
@@ -1194,7 +1194,7 @@ class TelaRelogios1(object):
 
 	def Create_Lotten(self):
 
-		self.msgLotten = Label (self.ContainerLotten,text = "Lotten")
+		self.msgLotten = Label (self.ContainerLotten,text = "Lotten", font = "arialblack 12 bold")
 		self.msgLotten.grid(row=0,column=0,sticky = "N")
 
 		self.msgLottenContage = Label (self.ContainerLotten,text=str(Info.Lotten.Status.Contage)+"/"+
@@ -2150,7 +2150,7 @@ class TelaRelogios1(object):
 	def Create_GrupoNK(self):
 
 
-		self.msgGrupoNk                            		= Label (self.ContainerGrupoNk,text = "Grupo Nk")
+		self.msgGrupoNk                            		= Label (self.ContainerGrupoNk,text = "Grupo Nk",font = "arialblack 12 bold")
 		self.msgGrupoNk                            		["height"]     = 1
 		self.msgGrupoNk.grid                       		(row=0,column=0,sticky = "N")
 
@@ -3389,17 +3389,27 @@ class TelaRelogios1(object):
 
 
 
+	def on_configure(self,event):
 
-
+		canvas.configure(scrollregion=canvas.bbox('all'))
 
 
 
 	def Create_ContainerGeral(self,root):
 
-		self.ContainerRelogios		      = Frame (root)
-		self.ContainerRelogios.grid               (row=0, sticky = N + S + E + W)
 
+		self.canvas = Canvas(root)
+		self.canvas.pack(side=LEFT)
 
+		self.ScrollBar					  = Scrollbar(root,command=self.canvas.yview)
+		self.ScrollBar.pack(side=LEFT,fill=Y)
+		self.canvas.config(yscrollcommand = self.ScrollBar.set)
+
+		self.canvas.bind('<Configure>', self.on_configure)
+
+		self.ContainerRelogios		      = Frame (self.canvas)
+		self.canvas.create_window((0,0), window = self.ContainerRelogios, anchor='nw')
+		#self.ContainerRelogios.grid               (row=0, column= 0 ,sticky = N + S + E + W)
 
 	def Create_ContainerColuna0(self,root):
 
@@ -3428,10 +3438,10 @@ class TelaRelogios1(object):
 		self.ContainerGrupoNk             			= Frame (self.ContainerColuna1)
 
 
-		self.ContainerColuna1.grid                	(row=0, column=1,pady=5, padx=1, columnspan=1, sticky="N")
-		self.ContainerLaser.grid                  	(row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
-		self.ContainerLotten.grid                 	(row=2, column=0,pady=5, padx=1, columnspan=1, sticky="N")
-		self.ContainerGrupoNk.grid                 	(row=3, column=0,pady=5, padx=1, columnspan=1, sticky="N")
+		self.ContainerColuna1.grid                	(row=0, column=1, pady=3 , padx=1, columnspan=1, sticky="N")
+		self.ContainerLaser.grid                  	(row=0, column=0, pady=3 ,padx=1, columnspan=1, sticky="N")
+		self.ContainerLotten.grid                 	(row=2, column=0, pady=3 ,padx=1, columnspan=1, sticky="N")
+		self.ContainerGrupoNk.grid                 	(row=3, column=0, pady=3 ,padx=1, columnspan=1, sticky="N")
 
 
 
@@ -3448,6 +3458,7 @@ class TelaRelogios1(object):
 		self.ContainerGravex.grid                 	(row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
 		self.ContainerElRio.grid 					(row=1, column=0,pady=5, padx=1, columnspan=1, sticky="N")
 		self.ContainerOlimpark.grid 				(row=2, column=0,pady=5, padx=1, columnspan=1, sticky="N")
+
 
 
 	def Create_ContainerColuna3(self,root):
