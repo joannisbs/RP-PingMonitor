@@ -2081,10 +2081,483 @@ def AtualizaSBCP(relogio, result):
 				Info.SBCP.Status.Contage = Info.SBCP.Status.Contage +1
 
 
+def AtualizaPredman(relogio, result):
+
+
+
+	if relogio == "bunge":
+
+		if result == 1:
+			Info.Predman.Bunge.ModuloCor  = "firebrick1"
+			Info.Predman.Bunge.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.Predman.Bunge.ModuloCor  = "green3"
+			Info.Predman.Bunge.RelogioCor = "red4"
+		elif result == 3:
+			Info.Predman.Bunge.ModuloCor  = "green3"
+			Info.Predman.Bunge.RelogioCor = "green3"
+		elif result == 4:
+			Info.Predman.Bunge.ModuloCor  = "cyan"
+			#Info.Predman.Bunge.RelogioCor = "cyan"
+		else:
+			Info.Predman.Bunge.ModuloCor  = "pink"
+			Info.Predman.Bunge.RelogioCor = "pink"
 
 
 
 
+
+
+
+	elif relogio == "cabot":
+
+			if result == 1:
+			Info.Predman.Cabot.ModuloCor  = "firebrick1"
+			Info.Predman.Cabot.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.Predman.Cabot.ModuloCor  = "green3"
+			Info.Predman.Cabot.RelogioCor = "red4"
+		elif result == 3:
+			Info.Predman.Cabot.ModuloCor  = "green3"
+			Info.Predman.Cabot.RelogioCor = "green3"
+		elif result == 4:
+			Info.Predman.Cabot.ModuloCor  = "cyan"
+			#Info.Predman.Cabot.RelogioCor = "cyan"
+		else:
+			Info.Predman.Cabot.ModuloCor  = "pink"
+			Info.Predman.Cabot.RelogioCor = "pink"
+
+
+
+
+
+
+
+
+	elif relogio == "kellogs":
+
+			if result == 1:
+			Info.Predman.Kellogs.ModuloCor  = "firebrick1"
+			Info.Predman.Kellogs.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.Predman.Kellogs.ModuloCor  = "green3"
+			Info.Predman.Kellogs.RelogioCor = "red4"
+		elif result == 3:
+			Info.Predman.Kellogs.ModuloCor  = "green3"
+			Info.Predman.Kellogs.RelogioCor = "green3"
+		elif result == 4:
+			Info.Predman.Kellogs.ModuloCor  = "cyan"
+			#Info.Predman.Kellogs.RelogioCor = "cyan"
+		else:
+			Info.Predman.Kellogs.ModuloCor  = "pink"
+			Info.Predman.Kellogs.RelogioCor = "pink"
+
+
+
+
+
+
+
+
+	elif relogio == "magazine":
+
+			if result == 1:
+			Info.Predman.Magazine.ModuloCor  = "firebrick1"
+			Info.Predman.Magazine.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.Predman.Magazine.ModuloCor  = "green3"
+			Info.Predman.Magazine.RelogioCor = "red4"
+		elif result == 3:
+			Info.Predman.Magazine.ModuloCor  = "green3"
+			Info.Predman.Magazine.RelogioCor = "green3"
+		elif result == 4:
+			Info.Predman.Magazine.ModuloCor  = "cyan"
+			#Info.Predman.Magazine.RelogioCor = "cyan"
+		else:
+			Info.Predman.Magazine.ModuloCor  = "pink"
+			Info.Predman.Magazine.RelogioCor = "pink"
+
+
+
+
+
+
+
+
+	elif relogio == "oxiteno1":
+
+			if result == 1:
+			Info.Predman.Oxiteno1.ModuloCor  = "firebrick1"
+			Info.Predman.Oxiteno1.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.Predman.Oxiteno1.ModuloCor  = "green3"
+			Info.Predman.Oxiteno1.RelogioCor = "red4"
+		elif result == 3:
+			Info.Predman.Oxiteno1.ModuloCor  = "green3"
+			Info.Predman.Oxiteno1.RelogioCor = "green3"
+		elif result == 4:
+			Info.Predman.Oxiteno1.ModuloCor  = "cyan"
+			#Info.Predman.Oxiteno1.RelogioCor = "cyan"
+		else:
+			Info.Predman.Oxiteno1.ModuloCor  = "pink"
+			Info.Predman.Oxiteno1.RelogioCor = "pink"
+
+
+
+
+
+
+
+
+	elif relogio == "oxiteno2":
+
+			if result == 1:
+			Info.Predman.Oxiteno2.ModuloCor  = "firebrick1"
+			Info.Predman.Oxiteno2.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.Predman.Oxiteno2.ModuloCor  = "green3"
+			Info.Predman.Oxiteno2.RelogioCor = "red4"
+		elif result == 3:
+			Info.Predman.Oxiteno2.ModuloCor  = "green3"
+			Info.Predman.Oxiteno2.RelogioCor = "green3"
+		elif result == 4:
+			Info.Predman.Oxiteno2.ModuloCor  = "cyan"
+			#Info.Predman.Oxiteno2.RelogioCor = "cyan"
+		else:
+			Info.Predman.Oxiteno2.ModuloCor  = "pink"
+			Info.Predman.Oxiteno2.RelogioCor = "pink"
+
+
+
+
+
+
+
+
+	elif relogio == "santoandre":
+
+			if result == 1:
+			Info.Predman.SantoAndre.ModuloCor  = "firebrick1"
+			Info.Predman.SantoAndre.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.Predman.SantoAndre.ModuloCor  = "green3"
+			Info.Predman.SantoAndre.RelogioCor = "red4"
+		elif result == 3:
+			Info.Predman.SantoAndre.ModuloCor  = "green3"
+			Info.Predman.SantoAndre.RelogioCor = "green3"
+		elif result == 4:
+			Info.Predman.SantoAndre.ModuloCor  = "cyan"
+			#Info.Predman.SantoAndre.RelogioCor = "cyan"
+		else:
+			Info.Predman.SantoAndre.ModuloCor  = "pink"
+			Info.Predman.SantoAndre.RelogioCor = "pink"
+
+
+
+
+
+
+
+
+	elif relogio == "pysmianes":
+
+			if result == 1:
+			Info.Predman.PrysmianES.ModuloCor  = "firebrick1"
+			Info.Predman.PrysmianES.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.Predman.PrysmianES.ModuloCor  = "green3"
+			Info.Predman.PrysmianES.RelogioCor = "red4"
+		elif result == 3:
+			Info.Predman.PrysmianES.ModuloCor  = "green3"
+			Info.Predman.PrysmianES.RelogioCor = "green3"
+		elif result == 4:
+			Info.Predman.PrysmianES.ModuloCor  = "cyan"
+			#Info.Predman.PrysmianES.RelogioCor = "cyan"
+		else:
+			Info.Predman.PrysmianES.ModuloCor  = "pink"
+			Info.Predman.PrysmianES.RelogioCor = "pink"
+
+
+
+
+
+
+
+
+	elif relogio == "tradegar":
+
+			if result == 1:
+			Info.Predman.Tradegar.ModuloCor  = "firebrick1"
+			Info.Predman.Tradegar.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.Predman.Tradegar.ModuloCor  = "green3"
+			Info.Predman.Tradegar.RelogioCor = "red4"
+		elif result == 3:
+			Info.Predman.Tradegar.ModuloCor  = "green3"
+			Info.Predman.Tradegar.RelogioCor = "green3"
+		elif result == 4:
+			Info.Predman.Tradegar.ModuloCor  = "cyan"
+			#Info.Predman.Tradegar.RelogioCor = "cyan"
+		else:
+			Info.Predman.Tradegar.ModuloCor  = "pink"
+			Info.Predman.Tradegar.RelogioCor = "pink"
+
+
+
+
+
+
+
+
+	elif relogio == "portao1":
+
+			if result == 1:
+			Info.Predman.Portao1.ModuloCor  = "firebrick1"
+			Info.Predman.Portao1.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.Predman.Portao1.ModuloCor  = "green3"
+			Info.Predman.Portao1.RelogioCor = "red4"
+		elif result == 3:
+			Info.Predman.Portao1.ModuloCor  = "green3"
+			Info.Predman.Portao1.RelogioCor = "green3"
+		elif result == 4:
+			Info.Predman.Portao1.ModuloCor  = "cyan"
+			#Info.Predman.Portao1.RelogioCor = "cyan"
+		else:
+			Info.Predman.Portao1.ModuloCor  = "pink"
+			Info.Predman.Portao1.RelogioCor = "pink"
+
+
+
+
+
+
+
+
+	elif relogio == "portao2":
+
+			if result == 1:
+			Info.Predman.Portao2.ModuloCor  = "firebrick1"
+			Info.Predman.Portao2.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.Predman.Portao2.ModuloCor  = "green3"
+			Info.Predman.Portao2.RelogioCor = "red4"
+		elif result == 3:
+			Info.Predman.Portao2.ModuloCor  = "green3"
+			Info.Predman.Portao2.RelogioCor = "green3"
+		elif result == 4:
+			Info.Predman.Portao2.ModuloCor  = "cyan"
+			#Info.Predman.Portao2.RelogioCor = "cyan"
+		else:
+			Info.Predman.Portao2.ModuloCor  = "pink"
+			Info.Predman.Portao2.RelogioCor = "pink"
+
+
+
+
+
+
+
+
+	elif relogio == "sabic":
+
+			if result == 1:
+			Info.Predman.Sabic.ModuloCor  = "firebrick1"
+			Info.Predman.Sabic.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.Predman.Sabic.ModuloCor  = "green3"
+			Info.Predman.Sabic.RelogioCor = "red4"
+		elif result == 3:
+			Info.Predman.Sabic.ModuloCor  = "green3"
+			Info.Predman.Sabic.RelogioCor = "green3"
+		elif result == 4:
+			Info.Predman.Sabic.ModuloCor  = "cyan"
+			#Info.Predman.Sabic.RelogioCor = "cyan"
+		else:
+			Info.Predman.Sabic.ModuloCor  = "pink"
+			Info.Predman.Sabic.RelogioCor = "pink"
+
+
+
+
+
+
+
+
+	elif relogio == "santhebrag":
+
+			if result == 1:
+			Info.Predman.SBraganca.ModuloCor  = "firebrick1"
+			Info.Predman.SBraganca.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.Predman.SBraganca.ModuloCor  = "green3"
+			Info.Predman.SBraganca.RelogioCor = "red4"
+		elif result == 3:
+			Info.Predman.SBraganca.ModuloCor  = "green3"
+			Info.Predman.SBraganca.RelogioCor = "green3"
+		elif result == 4:
+			Info.Predman.SBraganca.ModuloCor  = "cyan"
+			#Info.Predman.SBraganca.RelogioCor = "cyan"
+		else:
+			Info.Predman.SBraganca.ModuloCor  = "pink"
+			Info.Predman.SBraganca.RelogioCor = "pink"
+
+
+
+
+
+
+
+
+	elif relogio == "santhepenha":
+
+			if result == 1:
+			Info.Predman.SPenha.ModuloCor  = "firebrick1"
+			Info.Predman.SPenha.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.Predman.SPenha.ModuloCor  = "green3"
+			Info.Predman.SPenha.RelogioCor = "red4"
+		elif result == 3:
+			Info.Predman.SPenha.ModuloCor  = "green3"
+			Info.Predman.SPenha.RelogioCor = "green3"
+		elif result == 4:
+			Info.Predman.SPenha.ModuloCor  = "cyan"
+			#Info.Predman.SPenha.RelogioCor = "cyan"
+		else:
+			Info.Predman.SPenha.ModuloCor  = "pink"
+			Info.Predman.SPenha.RelogioCor = "pink"
+
+
+
+
+
+
+
+
+	elif relogio == "vilavelha":
+
+			if result == 1:
+			Info.Predman.VilaVelha.ModuloCor  = "firebrick1"
+			Info.Predman.VilaVelha.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.Predman.VilaVelha.ModuloCor  = "green3"
+			Info.Predman.VilaVelha.RelogioCor = "red4"
+		elif result == 3:
+			Info.Predman.VilaVelha.ModuloCor  = "green3"
+			Info.Predman.VilaVelha.RelogioCor = "green3"
+		elif result == 4:
+			Info.Predman.VilaVelha.ModuloCor  = "cyan"
+			#Info.Predman.VilaVelha.RelogioCor = "cyan"
+		else:
+			Info.Predman.VilaVelha.ModuloCor  = "pink"
+			Info.Predman.VilaVelha.RelogioCor = "pink"
+
+
+
+
+
+
+
+
+	elif relogio == "faurencia":
+
+			if result == 1:
+			Info.Predman.Faurencia.ModuloCor  = "firebrick1"
+			Info.Predman.Faurencia.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.Predman.Faurencia.ModuloCor  = "green3"
+			Info.Predman.Faurencia.RelogioCor = "red4"
+		elif result == 3:
+			Info.Predman.Faurencia.ModuloCor  = "green3"
+			Info.Predman.Faurencia.RelogioCor = "green3"
+		elif result == 4:
+			Info.Predman.Faurencia.ModuloCor  = "cyan"
+			#Info.Predman.Faurencia.RelogioCor = "cyan"
+		else:
+			Info.Predman.Faurencia.ModuloCor  = "pink"
+			Info.Predman.Faurencia.RelogioCor = "pink"
+
+
+
+
+
+
+
+
+	elif relogio == "admrondo":
+
+			if result == 1:
+			Info.Predman.AdmRondonopolis.ModuloCor  = "firebrick1"
+			Info.Predman.AdmRondonopolis.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.Predman.AdmRondonopolis.ModuloCor  = "green3"
+			Info.Predman.AdmRondonopolis.RelogioCor = "red4"
+		elif result == 3:
+			Info.Predman.AdmRondonopolis.ModuloCor  = "green3"
+			Info.Predman.AdmRondonopolis.RelogioCor = "green3"
+		elif result == 4:
+			Info.Predman.AdmRondonopolis.ModuloCor  = "cyan"
+			#Info.Predman.AdmRondonopolis.RelogioCor = "cyan"
+		else:
+			Info.Predman.AdmRondonopolis.ModuloCor  = "pink"
+			Info.Predman.AdmRondonopolis.RelogioCor = "pink"
+
+
+	if result != 4:
+		Info.Predman.Status.Contage = 0
+
+		if Info.Predman.Bunge.RelogioCor == "green3" : 
+			Info.Predman.Status.Contage = Info.Predman.Status.Contage +1
+
+		if Info.Predman.Cabot.RelogioCor == "green3" : 
+			Info.Predman.Status.Contage = Info.Predman.Status.Contage +1
+
+		if Info.Predman.Kellogs.RelogioCor == "green3" : 
+			Info.Predman.Status.Contage = Info.Predman.Status.Contage +1
+
+		if Info.Predman.Magazine.RelogioCor == "green3" : 
+			Info.Predman.Status.Contage = Info.Predman.Status.Contage +1
+
+		if Info.Predman.Oxiteno1.RelogioCor == "green3" : 
+			Info.Predman.Status.Contage = Info.Predman.Status.Contage +1
+
+		if Info.Predman.Oxiteno2.RelogioCor == "green3" : 
+			Info.Predman.Status.Contage = Info.Predman.Status.Contage +1
+
+		if Info.Predman.SantoAndre.RelogioCor == "green3" : 
+			Info.Predman.Status.Contage = Info.Predman.Status.Contage +1
+
+		if Info.Predman.PrysmianES.RelogioCor == "green3" : 
+			Info.Predman.Status.Contage = Info.Predman.Status.Contage +1
+
+		if Info.Predman.Tradegar.RelogioCor == "green3" : 
+			Info.Predman.Status.Contage = Info.Predman.Status.Contage +1
+
+		if Info.Predman.Portao1.RelogioCor == "green3" : 
+			Info.Predman.Status.Contage = Info.Predman.Status.Contage +1
+
+		if Info.Predman.Portao2.RelogioCor == "green3" : 
+			Info.Predman.Status.Contage = Info.Predman.Status.Contage +1
+
+		if Info.Predman.Sabic.RelogioCor == "green3" : 
+			Info.Predman.Status.Contage = Info.Predman.Status.Contage +1
+
+		if Info.Predman.SBraganca.RelogioCor == "green3" : 
+			Info.Predman.Status.Contage = Info.Predman.Status.Contage +1
+
+		if Info.Predman.SPenha.RelogioCor == "green3" : 
+			Info.Predman.Status.Contage = Info.Predman.Status.Contage +1
+
+		if Info.Predman.Faurencia.RelogioCor == "green3" : 
+			Info.Predman.Status.Contage = Info.Predman.Status.Contage +1
+
+		if Info.Predman.AdmRondonopolis.RelogioCor == "green3" : 
+			Info.Predman.Status.Contage = Info.Predman.Status.Contage +1
+
+		if Info.Predman.VilaVelha.RelogioCor == "green3" : 
+			Info.Predman.Status.Contage = Info.Predman.Status.Contage +1
+
+	
 def AtualizaCor(empresa,relogio,result):
 
 
@@ -2128,6 +2601,12 @@ def AtualizaCor(empresa,relogio,result):
 		AtualizaSBCP(relogio, result)
 
 
+	elif empresa == "predman":
+		AtualizaPredman(relogio, result)
+
+
+
+
 
 	if result != 4:
 		Controle.TotalON = 0	
@@ -2142,6 +2621,7 @@ def AtualizaCor(empresa,relogio,result):
 		Controle.TotalON = Controle.TotalON + Info.ElRio.Status.Contage
 		Controle.TotalON = Controle.TotalON + Info.SBCP.Status.Contage
 		Controle.TotalON = Controle.TotalON + Info.Gravex.Status.Contage
+		Controle.TotalON = Controle.TotalON + Info.Predman.Status.Contage
 
 
 
@@ -2160,3 +2640,4 @@ def Contagem():
 	Controle.TotalRelogios = Controle.TotalRelogios + Info.ElRio.Status.TotalRelogios
 	Controle.TotalRelogios = Controle.TotalRelogios + Info.SBCP.Status.TotalRelogios
 	Controle.TotalRelogios = Controle.TotalRelogios + Info.Gravex.Status.TotalRelogios
+	Controle.TotalRelogios = Controle.TotalRelogios + Info.Predman.Status.TotalRelogios

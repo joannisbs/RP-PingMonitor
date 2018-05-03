@@ -1,6 +1,156 @@
 from Var import *
 
 
+def BancoAtribui(EstRelogio, word):
+	#word              		= line.split(",")
+	EstRelogio.Empresa      = word[0] 
+	EstRelogio.Relogio      = word[1]
+	EstRelogio.IP   	    = word[2]
+	EstRelogio.Porta        = word[3]
+	EstRelogio.NumeroRep    = word[4]
+	EstRelogio.Responsavel  = word[5]
+	EstRelogio.Telefone     = word[6]
+
+
+def LeBancoBuilding(relogio_lido,word):
+
+
+	if relogio_lido == "allianz":
+		
+		EstRelogio = Info.Building.Allianz
+		BancoAtribui(EstRelogio, word)
+
+	elif relogio_lido == "wtorre":
+
+
+		EstRelogio = Info.Building.WTorre
+		BancoAtribui(EstRelogio, word)
+
+
+	elif relogio_lido == "riojaneiro":
+
+		EstRelogio = Info.Building.RioJaneiro
+		BancoAtribui(EstRelogio, word)
+
+
+def LeBancoPredman(relogio_lido,word):
+
+	if relogio_lido == "bunge" :
+
+		EstRelogio = Info.Predman.Bunge
+		BancoAtribui(EstRelogio, word)
+
+	elif relogio_lido == "cabot":
+
+
+		EstRelogio = Info.Predman.Cabot
+		BancoAtribui(EstRelogio, word)
+
+
+	elif relogio_lido == "kellogs":
+
+
+		EstRelogio = Info.Predman.Kellogs
+		BancoAtribui(EstRelogio, word)
+
+
+	elif relogio_lido == "magazine":
+
+
+		EstRelogio = Info.Predman.Magazine
+		BancoAtribui(EstRelogio, word)
+
+
+	elif relogio_lido == "oxiteno1":
+
+
+		EstRelogio = Info.Predman.Oxiteno1
+		BancoAtribui(EstRelogio, word)
+
+
+	elif relogio_lido == "oxiteno2":
+
+
+		EstRelogio = Info.Predman.Oxiteno2
+		BancoAtribui(EstRelogio, word)
+
+
+	elif relogio_lido == "santoandre":
+
+
+		EstRelogio = Info.Predman.SantoAndre
+		BancoAtribui(EstRelogio, word)
+
+
+	elif relogio_lido == "pysmianes":
+
+
+		EstRelogio = Info.Predman.PrysmianES
+		BancoAtribui(EstRelogio, word)
+
+
+	elif relogio_lido == "tradegar":
+
+
+		EstRelogio = Info.Predman.Tradegar
+		BancoAtribui(EstRelogio, word)
+
+
+	elif relogio_lido == "portao1":
+
+
+		EstRelogio = Info.Predman.Portao1
+		BancoAtribui(EstRelogio, word)
+
+
+	elif relogio_lido == "portao2":
+
+
+		EstRelogio = Info.Predman.Portao2
+		BancoAtribui(EstRelogio, word)
+
+
+	elif relogio_lido == "sabic":
+
+
+		EstRelogio = Info.Predman.Sabic
+		BancoAtribui(EstRelogio, word)
+
+
+	elif relogio_lido == "santhebrag":
+
+
+		EstRelogio = Info.Predman.SBraganca
+		BancoAtribui(EstRelogio, word)
+
+
+	elif relogio_lido == "santhepenha":
+
+
+		EstRelogio = Info.Predman.SPenha
+		BancoAtribui(EstRelogio, word)
+
+
+	elif relogio_lido == "faurencia":
+
+
+		EstRelogio = Info.Predman.Faurencia
+		BancoAtribui(EstRelogio, word)
+
+
+	elif relogio_lido == "admrondo":
+
+
+		EstRelogio = Info.Predman.AdmRondonopolis
+		BancoAtribui(EstRelogio, word)
+
+
+	elif relogio_lido == "vilavelha":
+
+
+		EstRelogio = Info.Predman.VilaVelha
+		BancoAtribui(EstRelogio, word)
+
 
 def leBanco():
 
@@ -27,41 +177,11 @@ def leBanco():
 
 		if empresa_lido == "building":
 
+			LeBancoBuilding(relogio_lido,word)
+			
+		elif empresa_lido == "predman":
 
-			if relogio_lido == "allianz":
-				
-				Info.Building.Allianz.Empresa               = empresa_lido
-				Info.Building.Allianz.Relogio               = relogio_lido
-				Info.Building.Allianz.IP                    = ip_lido
-				Info.Building.Allianz.Porta                 = port_lido
-				Info.Building.Allianz.NumeroRep             = NumeroReP_Lido
-				Info.Building.Allianz.Responsavel           = Responsavel_Lido
-				Info.Building.Allianz.Telefone              = Telefone_Lido
-
-
-			elif relogio_lido == "wtorre":
-
-				Info.Building.WTorre.Empresa                = empresa_lido
-				Info.Building.WTorre.Relogio                = relogio_lido
-				Info.Building.WTorre.IP                     = ip_lido
-				Info.Building.WTorre.Porta                  = port_lido
-				Info.Building.WTorre.NumeroRep              = NumeroReP_Lido
-				Info.Building.WTorre.Responsavel            = Responsavel_Lido
-				Info.Building.WTorre.Telefone               = Telefone_Lido
-				
-
-
-			elif relogio_lido == "riojaneiro":
-
-
-				Info.Building.RioJaneiro.Empresa            = empresa_lido
-				Info.Building.RioJaneiro.Relogio            = relogio_lido
-				Info.Building.RioJaneiro.IP                 = ip_lido
-				Info.Building.RioJaneiro.Porta              = port_lido
-				Info.Building.RioJaneiro.NumeroRep          = NumeroReP_Lido
-				Info.Building.RioJaneiro.Responsavel        = Responsavel_Lido
-				Info.Building.RioJaneiro.Telefone           = Telefone_Lido
-
+			LeBancoPredman(relogio_lido,word)
 
 	######################################################### GRAVEX ###################################################
 
