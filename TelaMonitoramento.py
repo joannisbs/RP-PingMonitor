@@ -57,12 +57,12 @@ class TelaMonitor(object):
 
 
 	def update(self):
-		print "AQUI"
+
 
 		self.msgStatusON.configure										(text=str(Controle.TotalON))
 		self.msgStatusTotal.configure									(text=str(Controle.TotalRelogios))
 
-		print "AQUI"
+
 	def IniciaThreadTela1(self):
 			
 		ThreadloopBuilding().start()
@@ -73,6 +73,8 @@ class TelaMonitor(object):
 		ThreadloopGravex().start()
 		ThreadloopGrupoNk().start()
 		ThreadloopLotten().start()
+		ThreadloopElRio().start()
+
 
 	def Inicia(self,event):
 		if self.botaoStatus["background"]=="red":

@@ -3896,6 +3896,8 @@ class TelaRelogios1(object):
 
 	def updateElRio(self, relogio):
 
+		
+
 		if relogio == "botafogomuniz":
 
 			self.botaoElRioBotafogoMuniz.configure					(bg=Info.ElRio.BotafogoMuniz.ModuloCor)
@@ -3907,7 +3909,8 @@ class TelaRelogios1(object):
 			self.botaoElRioBotafogoPraiaRelogio.configure			(bg=Info.ElRio.BotafogoPraia.RelogioCor)
 
 
-		elif relogio == "Boulevard":
+		if relogio == "boulevard":
+			
 
 			self.botaoElRioBoulevard.configure						(bg=Info.ElRio.Boulevard.ModuloCor)
 			self.botaoElRioBoulevardRelogio.configure				(bg=Info.ElRio.Boulevard.RelogioCor)
@@ -3979,13 +3982,13 @@ class TelaRelogios1(object):
 			self.botaoElRioShopNorteRelogio.configure				(bg=Info.ElRio.ShopNorte.RelogioCor)
 
 
-		elif relogio == "botafogomuniz":
+		elif relogio == "backup1":
 
 			self.botaoElRioBackup1.configure						(bg=Info.ElRio.Backup1.ModuloCor)
 			self.botaoElRioBackup1Relogio.configure					(bg=Info.ElRio.Backup1.RelogioCor)
 
 
-		elif relogio == "botafogomuniz":
+		elif relogio == "backup2":
 
 			self.botaoElRioBackup2.configure						(bg=Info.ElRio.Backup2.ModuloCor)
 			self.botaoElRioBackup2Relogio.configure					(bg=Info.ElRio.Backup2.RelogioCor)
@@ -4045,7 +4048,7 @@ class TelaRelogios1(object):
 	
 
 
-		elif empresa == "ElRio":
+		elif empresa == "elrio":
 			self.updateElRio(relogio)
 
 
@@ -4055,4 +4058,3 @@ class TelaRelogios1(object):
 
 
 
-	

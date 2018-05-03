@@ -1394,7 +1394,7 @@ def AtualizaElRio(relogio, result):
 			Info.ElRio.BotafogoPraia.RelogioCor = "pink"
 
 
-	elif relogio == "Boulevard":
+	elif relogio == "boulevard":
 
 		if result == 1:
 			Info.ElRio.Boulevard.ModuloCor  = "firebrick1"
@@ -1663,7 +1663,7 @@ def AtualizaElRio(relogio, result):
 		else:
 			Info.ElRio.Backup2.ModuloCor  = "pink"
 			Info.ElRio.Backup2.RelogioCor = "pink"
-			
+
 
 	if result != 4:
 		Info.ElRio.Status.Contage = 0
@@ -1780,7 +1780,7 @@ def AtualizaCor(empresa,relogio,result):
 		AtualizaLotten(relogio,result)
 
 
-	elif empresa == "ElRio":
+	elif empresa == "elrio":
 		AtualizaElRio(relogio, result)
 
 

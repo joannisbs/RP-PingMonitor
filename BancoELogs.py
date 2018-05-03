@@ -751,7 +751,7 @@ def leBanco():
 
 
 
-			elif relogio_lido == "Boulevard":
+			elif relogio_lido == "boulevard":
 				
 				Info.ElRio.Boulevard.Empresa               		= empresa_lido
 				Info.ElRio.Boulevard.Relogio               		= relogio_lido

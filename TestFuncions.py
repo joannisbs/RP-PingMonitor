@@ -184,13 +184,6 @@ def TestaLotten():
 	if Controle.Stop : return
 
 
-	TestaFuncion(Info.Lotten.Santana.Empresa,
-				Info.Lotten.Santana.Relogio,
-				Info.Lotten.Santana.IP,
-				Info.Lotten.Santana.Porta)
-	if Controle.Stop : return
-
-
 	TestaFuncion(Info.Lotten.Tatuape.Empresa,
 				Info.Lotten.Tatuape.Relogio,
 				Info.Lotten.Tatuape.IP,
@@ -219,17 +212,17 @@ def TestaLotten():
 	if Controle.Stop : return
 
 
-	TestaFuncion(Info.Lotten.Lapa.Empresa,
-				Info.Lotten.Lapa.Relogio,
-				Info.Lotten.Lapa.IP,
-				Info.Lotten.Lapa.Porta)
-	if Controle.Stop : return
-
-
 	TestaFuncion(Info.Lotten.Perdizes.Empresa,
 				Info.Lotten.Perdizes.Relogio,
 				Info.Lotten.Perdizes.IP,
 				Info.Lotten.Perdizes.Porta)
+	if Controle.Stop : return
+
+
+	TestaFuncion(Info.Lotten.Lapa.Empresa,
+				Info.Lotten.Lapa.Relogio,
+				Info.Lotten.Lapa.IP,
+				Info.Lotten.Lapa.Porta)
 	if Controle.Stop : return
 
 
@@ -288,7 +281,6 @@ def TestaLotten():
 				Info.Lotten.Guarulhos.IP,
 				Info.Lotten.Guarulhos.Porta)
 	if Controle.Stop : return
-
 
 
 
@@ -440,7 +432,118 @@ def TestaGrupoNk():
 	if Controle.Stop : return
 
 
+def TestaElRio():
 
+	TestaFuncion(Info.ElRio.BotafogoMuniz.Empresa,
+				Info.ElRio.BotafogoMuniz.Relogio,
+				Info.ElRio.BotafogoMuniz.IP,
+				Info.ElRio.BotafogoMuniz.Porta)
+	if Controle.Stop : return
+
+
+	TestaFuncion(Info.ElRio.BotafogoPraia.Empresa,
+				Info.ElRio.BotafogoPraia.Relogio,
+				Info.ElRio.BotafogoPraia.IP,
+				Info.ElRio.BotafogoPraia.Porta)
+	if Controle.Stop : return
+
+
+	TestaFuncion(Info.ElRio.Boulevard.Empresa,
+				Info.ElRio.Boulevard.Relogio,
+				Info.ElRio.Boulevard.IP,
+				Info.ElRio.Boulevard.Porta)
+	if Controle.Stop : return
+
+
+	TestaFuncion(Info.ElRio.Carioca.Empresa,
+				Info.ElRio.Carioca.Relogio,
+				Info.ElRio.Carioca.IP,
+				Info.ElRio.Carioca.Porta)
+	if Controle.Stop : return
+
+
+	TestaFuncion(Info.ElRio.Centro1.Empresa,
+				Info.ElRio.Centro1.Relogio,
+				Info.ElRio.Centro1.IP,
+				Info.ElRio.Centro1.Porta)
+	if Controle.Stop : return
+
+
+	TestaFuncion(Info.ElRio.Centro2.Empresa,
+				Info.ElRio.Centro2.Relogio,
+				Info.ElRio.Centro2.IP,
+				Info.ElRio.Centro2.Porta)
+	if Controle.Stop : return
+
+
+	TestaFuncion(Info.ElRio.Centro3.Empresa,
+				Info.ElRio.Centro3.Relogio,
+				Info.ElRio.Centro3.IP,
+				Info.ElRio.Centro3.Porta)
+	if Controle.Stop : return
+
+
+	TestaFuncion(Info.ElRio.Fashion.Empresa,
+				Info.ElRio.Fashion.Relogio,
+				Info.ElRio.Fashion.IP,
+				Info.ElRio.Fashion.Porta)
+	if Controle.Stop : return
+
+
+	TestaFuncion(Info.ElRio.Flamengo.Empresa,
+				Info.ElRio.Flamengo.Relogio,
+				Info.ElRio.Flamengo.IP,
+				Info.ElRio.Flamengo.Porta)
+	if Controle.Stop : return
+
+
+	TestaFuncion(Info.ElRio.Leblon.Empresa,
+				Info.ElRio.Leblon.Relogio,
+				Info.ElRio.Leblon.IP,
+				Info.ElRio.Leblon.Porta)
+	if Controle.Stop : return
+
+
+	TestaFuncion(Info.ElRio.NovaAmerica.Empresa,
+				Info.ElRio.NovaAmerica.Relogio,
+				Info.ElRio.NovaAmerica.IP,
+				Info.ElRio.NovaAmerica.Porta)
+	if Controle.Stop : return
+
+
+	TestaFuncion(Info.ElRio.ShopGrande.Empresa,
+				Info.ElRio.ShopGrande.Relogio,
+				Info.ElRio.ShopGrande.IP,
+				Info.ElRio.ShopGrande.Porta)
+	if Controle.Stop : return
+
+
+	TestaFuncion(Info.ElRio.ShopMacae.Empresa,
+				Info.ElRio.ShopMacae.Relogio,
+				Info.ElRio.ShopMacae.IP,
+				Info.ElRio.ShopMacae.Porta)
+	if Controle.Stop : return
+
+
+	TestaFuncion(Info.ElRio.ShopNorte.Empresa,
+				Info.ElRio.ShopNorte.Relogio,
+				Info.ElRio.ShopNorte.IP,
+				Info.ElRio.ShopNorte.Porta)
+	if Controle.Stop : return
+
+
+	TestaFuncion(Info.ElRio.Backup1.Empresa,
+				Info.ElRio.Backup1.Relogio,
+				Info.ElRio.Backup1.IP,
+				Info.ElRio.Backup1.Porta)
+	if Controle.Stop : return
+
+
+	TestaFuncion(Info.ElRio.Backup2.Empresa,
+				Info.ElRio.Backup2.Relogio,
+				Info.ElRio.Backup2.IP,
+				Info.ElRio.Backup2.Porta)
+	if Controle.Stop : return
 
 
 
@@ -506,7 +609,7 @@ def TestaPorta(ip,port):
 		return 1
 
 def TestaPing(ip):
-	resposta = os.system("ping " + ip + " -c 4")
+	resposta = os.system("ping " + ip + " -c 4 > logping.txt")
 
 	if resposta == 0 :
 		#print "ping ok"

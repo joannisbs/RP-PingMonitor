@@ -54,7 +54,32 @@ class ThreadloopLotten(threading.Thread):
 	def run(self):
 		loopLotten()
 
+
+
+
+
+class ThreadloopElRio(threading.Thread):
+	def __init__(self):
+		threading.Thread.__init__(self)
+	def run(self):
+		loopElRio()
+
+
+
+
+def loopElRio():
+	print "Inicio do Servico da El Rio"
+	while(1):
+		TestaElRio()
+		if Controle.Stop : break 
+	Flag.quit = True
+
+
+
+
+
 def loopLotten():
+	print "Inicio do Servico da Lotten"
 	while(1):
 		TestaLotten()
 		if Controle.Stop : break 
@@ -65,6 +90,7 @@ def loopLotten():
 
 
 def loopGrupoNk():
+	print "Inicio do Servico do Grupo Nk"
 	while(1):
 		TestaGrupoNk()
 		if Controle.Stop : break 
@@ -72,6 +98,7 @@ def loopGrupoNk():
 
 
 def loopGravex():
+	print "Inicio do Servico da Gravex"
 	while(1):
 		TestaGravex()
 		if Controle.Stop : break 
@@ -80,6 +107,7 @@ def loopGravex():
 
 
 def loopLaser():
+	print "Inicio do Servico da Laser"
 	while(1):
 		TestaLaser()
 		if Controle.Stop : break 
@@ -88,7 +116,7 @@ def loopLaser():
 
 
 def loopBuilding():
-
+	print "Inicio do Servico da Building"
 	while(1):
 		TestaBuilding()
 		if Controle.Stop : break 
@@ -99,6 +127,7 @@ def loopBuilding():
 
 
 def loopBestInClass():
+	print "Inicio do Servico da Best In Class"
 	while(1):
 		TestaBestInClass()
 		if Controle.Stop : break 
@@ -106,6 +135,7 @@ def loopBestInClass():
 
 
 def loopCasaCristo():
+	print "Inicio do Servico da CasaCristo"
 	while(1):
 		TestaCasCristo()
 		if Controle.Stop : break 
@@ -114,6 +144,7 @@ def loopCasaCristo():
 
 
 def loopIsoRadio():
+	print "Inicio do Servico da Iso Radiologia"
 	while(1):
 		TestaIsoRadio()
 		if Controle.Stop : break 
