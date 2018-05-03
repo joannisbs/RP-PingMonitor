@@ -1,0 +1,79 @@
+
+
+Adcionando uma nova empresa:
+
+
+Etapa 1 Criar Container Pai
+ - Escolhor onde ela vai entrar. 
+ - Adcionar novo container no arquivo da tela onde vai entrar. 
+ - ir na função create Container referente a coluna desejada. 
+ - Criar um container novo, seguir os padrões já estabelecidos. 
+ - Colocar a Linha referente a ordem da empresa que sera mostrada (row)
+
+Execute.
+
+Etapa 2 Criar a Classe da Empresa. 
+ - Ir no aquivo Var.py 
+ - Ir na Classe Info
+ - Adcionar uma nova classe. 
+ - Adcionar na classe todos os relogios
+
+Execute.
+
+Etapa 3 Criar a estrutura do container
+ - No Arquivo da tela onde foi criado o container, criar funcao da empresa. 
+ - Copiar a estrutura e o padrao de uma funcao de outra empresa
+ - Alterar o container
+ - Alterar os nomes da empresa e dos relogios (usar mesmos nomes utilizados na classe criada)
+ - Se necessario alterar o numero de botoes
+ - Editar linhas dos botoes (row) no methodo grid
+ 
+Execute.
+
+Etapa 4 Chamar a funcao criadora
+ - Chamar a funcao criadora da estrutura no metodo __INIT__ (construtor) no arquivo da tela. 
+
+ Execute. (GRANDE CHANCE DE DAR ERROS. qualquer erro de digitacao deve aparecer aqui)  
+
+ ETAPA 5 CORRIJA OS ERROS. 
+
+
+Etapa 5 Adcionando Funcao le banco
+ - No aquivo Banco E Logs achar a funcao LeBanco()
+ - Veja que existe um if para cada empresa dentro de um loop for. 
+ - adcione o if da empresa pretendida e seus respectivos casos. 
+
+ Execute. para testar abra o popup e veja se o programa atribuiu o IP certo. 
+
+Etapa 6 Adcionar Funcao de Atualizar Cor
+ - No arquivo Atualizacao e COntagem Crie um novo def AtualizaCorEMpresa 
+ - Siga os mesmos padroes dos outros defs
+ - Adciona a chamada da funcao dentro da funcao AtualizaCor
+
+Execute.
+
+Etapa 7 Adcionar fucao de atualizar tela
+ - ir no arquivo da tela e criar um novo updateEmpresa
+ -
+
+Execute
+
+Etapa 8 Criar nova Funcao Testa 
+ - Arquivo Testa Funcions
+
+ Etapa 9 Cria Trhead
+  - Cria Thread
+
+ Etapa 10 CHama Thread
+  - Chama thread
+
+
+
+
+
+
+
+
+
+
+

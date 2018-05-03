@@ -3482,4 +3482,7 @@ class TelaRelogios1(object):
 			self.updateIsoRadio(relogio)
 
 
+
+		elif empresa == "sbcp":
+			self.updateSBCP(relogio)
 			
