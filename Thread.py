@@ -47,15 +47,11 @@ class ThreadloopGrupoNk(threading.Thread):
 	def run(self):
 		loopGrupoNk()
 
-
 class ThreadloopLotten(threading.Thread):
 	def __init__(self):
 		threading.Thread.__init__(self)
 	def run(self):
 		loopLotten()
-
-
-
 
 
 class ThreadloopElRio(threading.Thread):
@@ -65,14 +61,28 @@ class ThreadloopElRio(threading.Thread):
 		loopElRio()
 
 
-
-
 class ThreadloopSBCP(threading.Thread):
 	def __init__(self):
 		threading.Thread.__init__(self)
 	def run(self):
 		loopSBCP()
 
+
+class ThreadloopPredman(threading.Thread):
+	def __init__(self):
+		threading.Thread.__init__(self)
+	def run(self):
+		loopPredman()
+
+
+
+
+def loopPredman():
+	print "Inicio do Servico da Predman"
+	while(1):
+		TestaPredman()
+		if Controle.Stop : break 
+	Flag.quit = True
 
 
 
@@ -86,19 +96,12 @@ def loopSBCP():
 
 
 
-
-
 def loopElRio():
 	print "Inicio do Servico da El Rio"
 	while(1):
 		TestaElRio()
 		if Controle.Stop : break 
 	Flag.quit = True
-
-
-
-
-
 
 
 

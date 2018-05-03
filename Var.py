@@ -601,7 +601,7 @@ class Info(object):
 			Responsavel     = "None"
 			Telefone        = "None"
 			
-		class Kellogs(object):
+		class Kelloggs(object):
 
 			Empresa         = "None"
 			Relogio         = "None"

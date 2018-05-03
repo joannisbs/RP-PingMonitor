@@ -75,6 +75,7 @@ class TelaMonitor(object):
 		ThreadloopLotten().start()
 		ThreadloopElRio().start()
 		ThreadloopSBCP().start()
+		ThreadloopPredman().start()
 
 
 	def Inicia(self,event):

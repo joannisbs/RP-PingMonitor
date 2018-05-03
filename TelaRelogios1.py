@@ -638,25 +638,25 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoPredmanKellogs                                 = Button(self.ContainerPredman)
-		self.botaoPredmanKellogs                  ["text"]       = "Kellogs"
-		self.botaoPredmanKellogs                  ["background"] = Info.Predman.Kellogs.ModuloCor
-		self.botaoPredmanKellogs                  ["width"]      = 13
-		self.botaoPredmanKellogs                  ["height"]     = 1
-		self.botaoPredmanKellogs.bind             ("<Button-1>",lambda e: popup("Predman","Kellogs",
-													Info.Predman.Kellogs.IP, 
-													Info.Predman.Kellogs.Porta, 
-													Info.Predman.Kellogs.NumeroRep, 
-													Info.Predman.Kellogs.Responsavel, 
-													Info.Predman.Kellogs.Telefone))
-		self.botaoPredmanKellogs.grid             (row=3,column=0,sticky = "N")
+		self.botaoPredmanKelloggs                                 = Button(self.ContainerPredman)
+		self.botaoPredmanKelloggs                  ["text"]       = "Kelloggs"
+		self.botaoPredmanKelloggs                  ["background"] = Info.Predman.Kelloggs.ModuloCor
+		self.botaoPredmanKelloggs                  ["width"]      = 13
+		self.botaoPredmanKelloggs                  ["height"]     = 1
+		self.botaoPredmanKelloggs.bind             ("<Button-1>",lambda e: popup("Predman","Kelloggs",
+													Info.Predman.Kelloggs.IP, 
+													Info.Predman.Kelloggs.Porta, 
+													Info.Predman.Kelloggs.NumeroRep, 
+													Info.Predman.Kelloggs.Responsavel, 
+													Info.Predman.Kelloggs.Telefone))
+		self.botaoPredmanKelloggs.grid             (row=3,column=0,sticky = "N")
 
-		self.botaoPredmanKellogsRelogio                          = Button(self.ContainerPredman)
-		self.botaoPredmanKellogsRelogio           ["text"]       = "R"
-		self.botaoPredmanKellogsRelogio           ["background"] = Info.Predman.Kellogs.RelogioCor
-		self.botaoPredmanKellogsRelogio           ["width"]      = 1
-		self.botaoPredmanKellogsRelogio           ["height"]     = 1		
-		self.botaoPredmanKellogsRelogio.grid      (row=3,column=1,sticky = "N")
+		self.botaoPredmanKelloggsRelogio                          = Button(self.ContainerPredman)
+		self.botaoPredmanKelloggsRelogio           ["text"]       = "R"
+		self.botaoPredmanKelloggsRelogio           ["background"] = Info.Predman.Kelloggs.RelogioCor
+		self.botaoPredmanKelloggsRelogio           ["width"]      = 1
+		self.botaoPredmanKelloggsRelogio           ["height"]     = 1		
+		self.botaoPredmanKelloggsRelogio.grid      (row=3,column=1,sticky = "N")
 
 
 
@@ -836,12 +836,12 @@ class TelaRelogios1(object):
 													  Info.Predman.Portao2.Telefone))
 		self.botaoPredmanPortao2.grid             (row=11,column=0,sticky = "N")
 
-		self.botaoPredmanPortao2                                 = Button(self.ContainerPredman)
-		self.botaoPredmanPortao2                  ["text"]       = "R"
-		self.botaoPredmanPortao2                  ["background"] = Info.Predman.Portao2.RelogioCor
-		self.botaoPredmanPortao2                  ["width"]      = 1
-		self.botaoPredmanPortao2                  ["height"]     = 1
-		self.botaoPredmanPortao2.grid             (row=11,column=1,sticky = "N")
+		self.botaoPredmanPortao2Relogio                                 = Button(self.ContainerPredman)
+		self.botaoPredmanPortao2Relogio              ["text"]       = "R"
+		self.botaoPredmanPortao2Relogio                  ["background"] = Info.Predman.Portao2.RelogioCor
+		self.botaoPredmanPortao2Relogio                  ["width"]      = 1
+		self.botaoPredmanPortao2Relogio                  ["height"]     = 1
+		self.botaoPredmanPortao2Relogio.grid             (row=11,column=1,sticky = "N")
 
 
 
@@ -4029,10 +4029,10 @@ class TelaRelogios1(object):
 			self.botaoPredmanCabotRelogio.configure				   	(bg=Info.Predman.Cabot.RelogioCor)
 			
 	
-		elif relogio == "kellogs":
+		elif relogio == "kelloggs":
 
-			self.botaoPredmanKellogs.configure						(bg=Info.Predman.Kellogs.ModuloCor)
-			self.botaoPredmanKellogsRelogio.configure				(bg=Info.Predman.Kellogs.RelogioCor)
+			self.botaoPredmanKelloggs.configure						(bg=Info.Predman.Kelloggs.ModuloCor)
+			self.botaoPredmanKelloggsRelogio.configure				(bg=Info.Predman.Kelloggs.RelogioCor)
 			
 	
 		elif relogio == "magazine":
@@ -4077,7 +4077,7 @@ class TelaRelogios1(object):
 			self.botaoPredmanPortao1Relogio.configure				(bg=Info.Predman.Portao1.RelogioCor)
 			
 	
-		elif relogio == "cabot":
+		elif relogio == "portao2":
 
 			self.botaoPredmanPortao2.configure						(bg=Info.Predman.Portao2.ModuloCor)
 			self.botaoPredmanPortao2Relogio.configure				(bg=Info.Predman.Portao2.RelogioCor)

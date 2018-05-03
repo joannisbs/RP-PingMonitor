@@ -665,6 +665,142 @@ def TestaSBCP():
 	if Controle.Stop : return
 
 
+def TestaPredman():
+
+	relo = Info.Predman.Bunge
+	TestaFuncion(relo.Empresa,
+				relo.Relogio,
+				relo.IP,
+				relo.Porta)
+	if Controle.Stop : return
+
+	
+	relo = Info.Predman.Cabot
+	TestaFuncion(relo.Empresa,
+				relo.Relogio,
+				relo.IP,
+				relo.Porta)
+	if Controle.Stop : return
+
+	
+	relo = Info.Predman.Kelloggs
+	TestaFuncion(relo.Empresa,
+				relo.Relogio,
+				relo.IP,
+				relo.Porta)
+	if Controle.Stop : return
+
+	
+	relo = Info.Predman.Magazine
+	TestaFuncion(relo.Empresa,
+				relo.Relogio,
+				relo.IP,
+				relo.Porta)
+	if Controle.Stop : return
+
+	
+	relo = Info.Predman.Oxiteno1
+	TestaFuncion(relo.Empresa,
+				relo.Relogio,
+				relo.IP,
+				relo.Porta)
+	if Controle.Stop : return
+
+	
+	relo = Info.Predman.Oxiteno2
+	TestaFuncion(relo.Empresa,
+				relo.Relogio,
+				relo.IP,
+				relo.Porta)
+	if Controle.Stop : return
+
+	
+	relo = Info.Predman.SantoAndre
+	TestaFuncion(relo.Empresa,
+				relo.Relogio,
+				relo.IP,
+				relo.Porta)
+	if Controle.Stop : return
+
+	
+	relo = Info.Predman.PrysmianES
+	TestaFuncion(relo.Empresa,
+				relo.Relogio,
+				relo.IP,
+				relo.Porta)
+	if Controle.Stop : return
+
+	
+	relo = Info.Predman.Tradegar
+	TestaFuncion(relo.Empresa,
+				relo.Relogio,
+				relo.IP,
+				relo.Porta)
+	if Controle.Stop : return
+
+	
+	relo = Info.Predman.Portao1
+	TestaFuncion(relo.Empresa,
+				relo.Relogio,
+				relo.IP,
+				relo.Porta)
+	if Controle.Stop : return
+
+	
+	relo = Info.Predman.Portao2
+	TestaFuncion(relo.Empresa,
+				relo.Relogio,
+				relo.IP,
+				relo.Porta)
+	if Controle.Stop : return
+
+	
+	relo = Info.Predman.Sabic
+	TestaFuncion(relo.Empresa,
+				relo.Relogio,
+				relo.IP,
+				relo.Porta)
+	if Controle.Stop : return
+
+	
+	relo = Info.Predman.SBraganca
+	TestaFuncion(relo.Empresa,
+				relo.Relogio,
+				relo.IP,
+				relo.Porta)
+	if Controle.Stop : return
+
+	
+	relo = Info.Predman.SPenha
+	TestaFuncion(relo.Empresa,
+				relo.Relogio,
+				relo.IP,
+				relo.Porta)
+	if Controle.Stop : return
+
+	
+	relo = Info.Predman.Faurencia
+	TestaFuncion(relo.Empresa,
+				relo.Relogio,
+				relo.IP,
+				relo.Porta)
+	if Controle.Stop : return
+
+	
+	relo = Info.Predman.AdmRondonopolis
+	TestaFuncion(relo.Empresa,
+				relo.Relogio,
+				relo.IP,
+				relo.Porta)
+	if Controle.Stop : return
+
+	
+	relo = Info.Predman.VilaVelha
+	TestaFuncion(relo.Empresa,
+				relo.Relogio,
+				relo.IP,
+				relo.Porta)
+	if Controle.Stop : return
 
 
 def TestaFuncion(empresa2,relogio2,ip2,port2):

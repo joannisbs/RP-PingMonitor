@@ -2111,7 +2111,7 @@ def AtualizaPredman(relogio, result):
 
 	elif relogio == "cabot":
 
-			if result == 1:
+		if result == 1:
 			Info.Predman.Cabot.ModuloCor  = "firebrick1"
 			Info.Predman.Cabot.RelogioCor = "firebrick1"
 		elif result == 2:
@@ -2134,23 +2134,23 @@ def AtualizaPredman(relogio, result):
 
 
 
-	elif relogio == "kellogs":
+	elif relogio == "kelloggs":
 
-			if result == 1:
-			Info.Predman.Kellogs.ModuloCor  = "firebrick1"
-			Info.Predman.Kellogs.RelogioCor = "firebrick1"
+		if result == 1:
+			Info.Predman.Kelloggs.ModuloCor  = "firebrick1"
+			Info.Predman.Kelloggs.RelogioCor = "firebrick1"
 		elif result == 2:
-			Info.Predman.Kellogs.ModuloCor  = "green3"
-			Info.Predman.Kellogs.RelogioCor = "red4"
+			Info.Predman.Kelloggs.ModuloCor  = "green3"
+			Info.Predman.Kelloggs.RelogioCor = "red4"
 		elif result == 3:
-			Info.Predman.Kellogs.ModuloCor  = "green3"
-			Info.Predman.Kellogs.RelogioCor = "green3"
+			Info.Predman.Kelloggs.ModuloCor  = "green3"
+			Info.Predman.Kelloggs.RelogioCor = "green3"
 		elif result == 4:
-			Info.Predman.Kellogs.ModuloCor  = "cyan"
-			#Info.Predman.Kellogs.RelogioCor = "cyan"
+			Info.Predman.Kelloggs.ModuloCor  = "cyan"
+			#Info.Predman.Kelloggs.RelogioCor = "cyan"
 		else:
-			Info.Predman.Kellogs.ModuloCor  = "pink"
-			Info.Predman.Kellogs.RelogioCor = "pink"
+			Info.Predman.Kelloggs.ModuloCor  = "pink"
+			Info.Predman.Kelloggs.RelogioCor = "pink"
 
 
 
@@ -2161,7 +2161,7 @@ def AtualizaPredman(relogio, result):
 
 	elif relogio == "magazine":
 
-			if result == 1:
+		if result == 1:
 			Info.Predman.Magazine.ModuloCor  = "firebrick1"
 			Info.Predman.Magazine.RelogioCor = "firebrick1"
 		elif result == 2:
@@ -2186,7 +2186,7 @@ def AtualizaPredman(relogio, result):
 
 	elif relogio == "oxiteno1":
 
-			if result == 1:
+		if result == 1:
 			Info.Predman.Oxiteno1.ModuloCor  = "firebrick1"
 			Info.Predman.Oxiteno1.RelogioCor = "firebrick1"
 		elif result == 2:
@@ -2211,7 +2211,7 @@ def AtualizaPredman(relogio, result):
 
 	elif relogio == "oxiteno2":
 
-			if result == 1:
+		if result == 1:
 			Info.Predman.Oxiteno2.ModuloCor  = "firebrick1"
 			Info.Predman.Oxiteno2.RelogioCor = "firebrick1"
 		elif result == 2:
@@ -2236,7 +2236,7 @@ def AtualizaPredman(relogio, result):
 
 	elif relogio == "santoandre":
 
-			if result == 1:
+		if result == 1:
 			Info.Predman.SantoAndre.ModuloCor  = "firebrick1"
 			Info.Predman.SantoAndre.RelogioCor = "firebrick1"
 		elif result == 2:
@@ -2261,7 +2261,7 @@ def AtualizaPredman(relogio, result):
 
 	elif relogio == "pysmianes":
 
-			if result == 1:
+		if result == 1:
 			Info.Predman.PrysmianES.ModuloCor  = "firebrick1"
 			Info.Predman.PrysmianES.RelogioCor = "firebrick1"
 		elif result == 2:
@@ -2286,7 +2286,7 @@ def AtualizaPredman(relogio, result):
 
 	elif relogio == "tradegar":
 
-			if result == 1:
+		if result == 1:
 			Info.Predman.Tradegar.ModuloCor  = "firebrick1"
 			Info.Predman.Tradegar.RelogioCor = "firebrick1"
 		elif result == 2:
@@ -2311,7 +2311,7 @@ def AtualizaPredman(relogio, result):
 
 	elif relogio == "portao1":
 
-			if result == 1:
+		if result == 1:
 			Info.Predman.Portao1.ModuloCor  = "firebrick1"
 			Info.Predman.Portao1.RelogioCor = "firebrick1"
 		elif result == 2:
@@ -2336,7 +2336,7 @@ def AtualizaPredman(relogio, result):
 
 	elif relogio == "portao2":
 
-			if result == 1:
+		if result == 1:
 			Info.Predman.Portao2.ModuloCor  = "firebrick1"
 			Info.Predman.Portao2.RelogioCor = "firebrick1"
 		elif result == 2:
@@ -2361,7 +2361,7 @@ def AtualizaPredman(relogio, result):
 
 	elif relogio == "sabic":
 
-			if result == 1:
+		if result == 1:
 			Info.Predman.Sabic.ModuloCor  = "firebrick1"
 			Info.Predman.Sabic.RelogioCor = "firebrick1"
 		elif result == 2:
@@ -2386,7 +2386,7 @@ def AtualizaPredman(relogio, result):
 
 	elif relogio == "santhebrag":
 
-			if result == 1:
+		if result == 1:
 			Info.Predman.SBraganca.ModuloCor  = "firebrick1"
 			Info.Predman.SBraganca.RelogioCor = "firebrick1"
 		elif result == 2:
@@ -2411,7 +2411,7 @@ def AtualizaPredman(relogio, result):
 
 	elif relogio == "santhepenha":
 
-			if result == 1:
+		if result == 1:
 			Info.Predman.SPenha.ModuloCor  = "firebrick1"
 			Info.Predman.SPenha.RelogioCor = "firebrick1"
 		elif result == 2:
@@ -2436,7 +2436,7 @@ def AtualizaPredman(relogio, result):
 
 	elif relogio == "vilavelha":
 
-			if result == 1:
+		if result == 1:
 			Info.Predman.VilaVelha.ModuloCor  = "firebrick1"
 			Info.Predman.VilaVelha.RelogioCor = "firebrick1"
 		elif result == 2:
@@ -2461,7 +2461,7 @@ def AtualizaPredman(relogio, result):
 
 	elif relogio == "faurencia":
 
-			if result == 1:
+		if result == 1:
 			Info.Predman.Faurencia.ModuloCor  = "firebrick1"
 			Info.Predman.Faurencia.RelogioCor = "firebrick1"
 		elif result == 2:
@@ -2486,7 +2486,7 @@ def AtualizaPredman(relogio, result):
 
 	elif relogio == "admrondo":
 
-			if result == 1:
+		if result == 1:
 			Info.Predman.AdmRondonopolis.ModuloCor  = "firebrick1"
 			Info.Predman.AdmRondonopolis.RelogioCor = "firebrick1"
 		elif result == 2:
@@ -2512,7 +2512,7 @@ def AtualizaPredman(relogio, result):
 		if Info.Predman.Cabot.RelogioCor == "green3" : 
 			Info.Predman.Status.Contage = Info.Predman.Status.Contage +1
 
-		if Info.Predman.Kellogs.RelogioCor == "green3" : 
+		if Info.Predman.Kelloggs.RelogioCor == "green3" : 
 			Info.Predman.Status.Contage = Info.Predman.Status.Contage +1
 
 		if Info.Predman.Magazine.RelogioCor == "green3" : 

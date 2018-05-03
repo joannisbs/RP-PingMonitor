@@ -47,10 +47,10 @@ def LeBancoPredman(relogio_lido,word):
 		BancoAtribui(EstRelogio, word)
 
 
-	elif relogio_lido == "kellogs":
+	elif relogio_lido == "kelloggs":
 
 
-		EstRelogio = Info.Predman.Kellogs
+		EstRelogio = Info.Predman.Kelloggs
 		BancoAtribui(EstRelogio, word)
 
 
