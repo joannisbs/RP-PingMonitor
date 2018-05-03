@@ -1714,10 +1714,6 @@ def AtualizaElRio(relogio, result):
 
 		if Info.ElRio.Backup2.RelogioCor == "green3" : 
 				Info.ElRio.Status.Contage = Info.ElRio.Status.Contage +1
-
-
-
-
 	
 
 
@@ -1740,6 +1736,336 @@ def AtualizaSBCP(relogio, result):
 		else:
 			Info.SBCP.Nacional.ModuloCor  = "pink"
 			Info.SBCP.Nacional.RelogioCor = "pink"
+
+
+
+
+
+
+
+	elif relogio == "es":
+
+		if result == 1:
+			Info.SBCP.ES.ModuloCor  = "firebrick1"
+			Info.SBCP.ES.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.SBCP.ES.ModuloCor  = "green3"
+			Info.SBCP.ES.RelogioCor = "red4"
+		elif result == 3:
+			Info.SBCP.ES.ModuloCor  = "green3"
+			Info.SBCP.ES.RelogioCor = "green3"
+		elif result == 4:
+			Info.SBCP.ES.ModuloCor  = "cyan"
+			#Info.SBCP.ES.RelogioCor = "cyan"
+		else:
+			Info.SBCP.ES.ModuloCor  = "pink"
+			Info.SBCP.ES.RelogioCor = "pink"
+
+
+
+
+
+
+
+	elif relogio == "df":
+
+		if result == 1:
+			Info.SBCP.DF.ModuloCor  = "firebrick1"
+			Info.SBCP.DF.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.SBCP.DF.ModuloCor  = "green3"
+			Info.SBCP.DF.RelogioCor = "red4"
+		elif result == 3:
+			Info.SBCP.DF.ModuloCor  = "green3"
+			Info.SBCP.DF.RelogioCor = "green3"
+		elif result == 4:
+			Info.SBCP.DF.ModuloCor  = "cyan"
+			#Info.SBCP.DF.RelogioCor = "cyan"
+		else:
+			Info.SBCP.DF.ModuloCor  = "pink"
+			Info.SBCP.DF.RelogioCor = "pink"
+
+
+
+
+
+
+
+	elif relogio == "ce":
+
+		if result == 1:
+			Info.SBCP.CE.ModuloCor  = "firebrick1"
+			Info.SBCP.CE.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.SBCP.CE.ModuloCor  = "green3"
+			Info.SBCP.CE.RelogioCor = "red4"
+		elif result == 3:
+			Info.SBCP.CE.ModuloCor  = "green3"
+			Info.SBCP.CE.RelogioCor = "green3"
+		elif result == 4:
+			Info.SBCP.CE.ModuloCor  = "cyan"
+			#Info.SBCP.CE.RelogioCor = "cyan"
+		else:
+			Info.SBCP.CE.ModuloCor  = "pink"
+			Info.SBCP.CE.RelogioCor = "pink"
+
+
+
+
+
+
+
+	elif relogio == "ba":
+
+		if result == 1:
+			Info.SBCP.BA.ModuloCor  = "firebrick1"
+			Info.SBCP.BA.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.SBCP.BA.ModuloCor  = "green3"
+			Info.SBCP.BA.RelogioCor = "red4"
+		elif result == 3:
+			Info.SBCP.BA.ModuloCor  = "green3"
+			Info.SBCP.BA.RelogioCor = "green3"
+		elif result == 4:
+			Info.SBCP.BA.ModuloCor  = "cyan"
+			#Info.SBCP.BA.RelogioCor = "cyan"
+		else:
+			Info.SBCP.BA.ModuloCor  = "pink"
+			Info.SBCP.BA.RelogioCor = "pink"
+
+
+
+
+
+
+
+	elif relogio == "sp":
+
+		if result == 1:
+			Info.SBCP.SP.ModuloCor  = "firebrick1"
+			Info.SBCP.SP.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.SBCP.SP.ModuloCor  = "green3"
+			Info.SBCP.SP.RelogioCor = "red4"
+		elif result == 3:
+			Info.SBCP.SP.ModuloCor  = "green3"
+			Info.SBCP.SP.RelogioCor = "green3"
+		elif result == 4:
+			Info.SBCP.SP.ModuloCor  = "cyan"
+			#Info.SBCP.SP.RelogioCor = "cyan"
+		else:
+			Info.SBCP.SP.ModuloCor  = "pink"
+			Info.SBCP.SP.RelogioCor = "pink"
+
+
+
+
+
+
+
+	elif relogio == "sc":
+
+		if result == 1:
+			Info.SBCP.SC.ModuloCor  = "firebrick1"
+			Info.SBCP.SC.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.SBCP.SC.ModuloCor  = "green3"
+			Info.SBCP.SC.RelogioCor = "red4"
+		elif result == 3:
+			Info.SBCP.SC.ModuloCor  = "green3"
+			Info.SBCP.SC.RelogioCor = "green3"
+		elif result == 4:
+			Info.SBCP.SC.ModuloCor  = "cyan"
+			#Info.SBCP.SC.RelogioCor = "cyan"
+		else:
+			Info.SBCP.SC.ModuloCor  = "pink"
+			Info.SBCP.SC.RelogioCor = "pink"
+
+
+
+
+
+
+
+	elif relogio == "rs":
+
+		if result == 1:
+			Info.SBCP.RS.ModuloCor  = "firebrick1"
+			Info.SBCP.RS.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.SBCP.RS.ModuloCor  = "green3"
+			Info.SBCP.RS.RelogioCor = "red4"
+		elif result == 3:
+			Info.SBCP.RS.ModuloCor  = "green3"
+			Info.SBCP.RS.RelogioCor = "green3"
+		elif result == 4:
+			Info.SBCP.RS.ModuloCor  = "cyan"
+			#Info.SBCP.RS.RelogioCor = "cyan"
+		else:
+			Info.SBCP.RS.ModuloCor  = "pink"
+			Info.SBCP.RS.RelogioCor = "pink"
+
+
+
+
+
+
+
+	elif relogio == "rj":
+
+		if result == 1:
+			Info.SBCP.RJ.ModuloCor  = "firebrick1"
+			Info.SBCP.RJ.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.SBCP.RJ.ModuloCor  = "green3"
+			Info.SBCP.RJ.RelogioCor = "red4"
+		elif result == 3:
+			Info.SBCP.RJ.ModuloCor  = "green3"
+			Info.SBCP.RJ.RelogioCor = "green3"
+		elif result == 4:
+			Info.SBCP.RJ.ModuloCor  = "cyan"
+			#Info.SBCP.RJ.RelogioCor = "cyan"
+		else:
+			Info.SBCP.RJ.ModuloCor  = "pink"
+			Info.SBCP.RJ.RelogioCor = "pink"
+
+
+
+
+
+
+
+	elif relogio == "pr":
+
+		if result == 1:
+			Info.SBCP.PR.ModuloCor  = "firebrick1"
+			Info.SBCP.PR.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.SBCP.PR.ModuloCor  = "green3"
+			Info.SBCP.PR.RelogioCor = "red4"
+		elif result == 3:
+			Info.SBCP.PR.ModuloCor  = "green3"
+			Info.SBCP.PR.RelogioCor = "green3"
+		elif result == 4:
+			Info.SBCP.PR.ModuloCor  = "cyan"
+			#Info.SBCP.PR.RelogioCor = "cyan"
+		else:
+			Info.SBCP.PR.ModuloCor  = "pink"
+			Info.SBCP.PR.RelogioCor = "pink"
+
+
+
+
+
+
+
+	elif relogio == "pe":
+
+		if result == 1:
+			Info.SBCP.PE.ModuloCor  = "firebrick1"
+			Info.SBCP.PE.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.SBCP.PE.ModuloCor  = "green3"
+			Info.SBCP.PE.RelogioCor = "red4"
+		elif result == 3:
+			Info.SBCP.PE.ModuloCor  = "green3"
+			Info.SBCP.PE.RelogioCor = "green3"
+		elif result == 4:
+			Info.SBCP.PE.ModuloCor  = "cyan"
+			#Info.SBCP.PE.RelogioCor = "cyan"
+		else:
+			Info.SBCP.PE.ModuloCor  = "pink"
+			Info.SBCP.PE.RelogioCor = "pink"
+
+
+
+
+
+
+
+	elif relogio == "mg":
+
+		if result == 1:
+			Info.SBCP.MG.ModuloCor  = "firebrick1"
+			Info.SBCP.MG.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.SBCP.MG.ModuloCor  = "green3"
+			Info.SBCP.MG.RelogioCor = "red4"
+		elif result == 3:
+			Info.SBCP.MG.ModuloCor  = "green3"
+			Info.SBCP.MG.RelogioCor = "green3"
+		elif result == 4:
+			Info.SBCP.MG.ModuloCor  = "cyan"
+			#Info.SBCP.MG.RelogioCor = "cyan"
+		else:
+			Info.SBCP.MG.ModuloCor  = "pink"
+			Info.SBCP.MG.RelogioCor = "pink"
+
+
+
+
+
+
+
+	elif relogio == "go":
+
+		if result == 1:
+			Info.SBCP.GO.ModuloCor  = "firebrick1"
+			Info.SBCP.GO.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.SBCP.GO.ModuloCor  = "green3"
+			Info.SBCP.GO.RelogioCor = "red4"
+		elif result == 3:
+			Info.SBCP.GO.ModuloCor  = "green3"
+			Info.SBCP.GO.RelogioCor = "green3"
+		elif result == 4:
+			Info.SBCP.GO.ModuloCor  = "cyan"
+			#Info.SBCP.GO.RelogioCor = "cyan"
+		else:
+			Info.SBCP.GO.ModuloCor  = "pink"
+			Info.SBCP.GO.RelogioCor = "pink"
+
+	if result != 4:
+		Info.SBCP.Status.Contage = 0
+		if Info.SBCP.Nacional.RelogioCor == "green3" : 
+				Info.SBCP.Status.Contage = Info.SBCP.Status.Contage +1
+
+		if Info.SBCP.ES.RelogioCor == "green3" : 
+				Info.SBCP.Status.Contage = Info.SBCP.Status.Contage +1
+
+		if Info.SBCP.DF.RelogioCor == "green3" : 
+				Info.SBCP.Status.Contage = Info.SBCP.Status.Contage +1
+
+		if Info.SBCP.CE.RelogioCor == "green3" : 
+				Info.SBCP.Status.Contage = Info.SBCP.Status.Contage +1
+
+		if Info.SBCP.BA.RelogioCor == "green3" : 
+				Info.SBCP.Status.Contage = Info.SBCP.Status.Contage +1
+
+		if Info.SBCP.SP.RelogioCor == "green3" : 
+				Info.SBCP.Status.Contage = Info.SBCP.Status.Contage +1
+
+		if Info.SBCP.SC.RelogioCor == "green3" : 
+				Info.SBCP.Status.Contage = Info.SBCP.Status.Contage +1
+
+		if Info.SBCP.RS.RelogioCor == "green3" : 
+				Info.SBCP.Status.Contage = Info.SBCP.Status.Contage +1
+
+		if Info.SBCP.RJ.RelogioCor == "green3" : 
+				Info.SBCP.Status.Contage = Info.SBCP.Status.Contage +1
+
+		if Info.SBCP.PR.RelogioCor == "green3" : 
+				Info.SBCP.Status.Contage = Info.SBCP.Status.Contage +1
+
+		if Info.SBCP.PE.RelogioCor == "green3" : 
+				Info.SBCP.Status.Contage = Info.SBCP.Status.Contage +1
+
+		if Info.SBCP.MG.RelogioCor == "green3" : 
+				Info.SBCP.Status.Contage = Info.SBCP.Status.Contage +1
+
+		if Info.SBCP.GO.RelogioCor == "green3" : 
+				Info.SBCP.Status.Contage = Info.SBCP.Status.Contage +1
+
 
 
 
