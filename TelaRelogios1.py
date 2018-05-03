@@ -41,7 +41,7 @@ class TelaRelogios1(object):
 
 		self.Create_SBCP()
 
-
+		self.Create_ElRio()
 
 
 	def Create_IsoRadio(self):
@@ -2749,6 +2749,457 @@ class TelaRelogios1(object):
 
 
 
+	def Create_ElRio(self):
+
+		self.msgElRio                              			= Label (self.ContainerElRio,text = "ElRio")
+		self.msgElRio                              			["height"]     = 1
+		self.msgElRio.grid                         			(row=0,column=0,sticky = "N")
+
+
+		self.msgElRioCount                              	= Label (self.ContainerElRio,text= str(Info.ElRio.Status.Contage)+"/"+
+																						 str(Info.ElRio.Status.TotalRelogios))	
+
+		self.msgElRioCount                              	["height"]     = 1
+		self.msgElRioCount.grid                         	(row=0,column=1,sticky = "N")
+
+
+
+
+
+
+		self.botaoElRioBotafogoMuniz                       	= Button(self.ContainerElRio)
+		self.botaoElRioBotafogoMuniz                       	["text"]       = "Botafogo Muniz"
+		self.botaoElRioBotafogoMuniz                     	["background"] = Info.ElRio.BotafogoMuniz.ModuloCor
+		self.botaoElRioBotafogoMuniz                     	["width"]      = 13
+		self.botaoElRioBotafogoMuniz                      	["height"]     = 1
+		self.botaoElRioBotafogoMuniz.bind                 	("<Button-1>",lambda e: popup("ElRio","Botafogo Muniz",
+															Info.ElRio.BotafogoMuniz.IP, 
+															Info.ElRio.BotafogoMuniz.Porta, 
+															Info.ElRio.BotafogoMuniz.NumeroRep, 
+															Info.ElRio.BotafogoMuniz.Responsavel, 
+															Info.ElRio.BotafogoMuniz.Telefone))
+
+		self.botaoElRioBotafogoMunizRelogio                 = Button(self.ContainerElRio)
+		self.botaoElRioBotafogoMunizRelogio                 ["text"]       = "R"
+		self.botaoElRioBotafogoMunizRelogio                 ["background"] = Info.ElRio.BotafogoMuniz.RelogioCor
+		self.botaoElRioBotafogoMunizRelogio                 ["height"]     = 1
+		self.botaoElRioBotafogoMunizRelogio                 ["width"]      = 1
+
+
+		self.botaoElRioBotafogoMuniz.grid                   (row=1,column=0,sticky = "N")
+		self.botaoElRioBotafogoMunizRelogio.grid            (row=1,column=1,sticky = "N")
+
+
+
+
+
+
+		self.botaoElRioBotafogoPraia                      	= Button(self.ContainerElRio)
+		self.botaoElRioBotafogoPraia                      	["text"]       = "Botafogo Praia"
+		self.botaoElRioBotafogoPraia                      	["background"] = Info.ElRio.BotafogoPraia.ModuloCor
+		self.botaoElRioBotafogoPraia                      	["width"]      = 13
+		self.botaoElRioBotafogoPraia                      	["height"]     = 1
+		self.botaoElRioBotafogoPraia.bind               	("<Button-1>",lambda e: popup("ElRio","Botafogo Praia",
+															Info.ElRio.BotafogoPraia.IP, 
+															Info.ElRio.BotafogoPraia.Porta, 
+															Info.ElRio.BotafogoPraia.NumeroRep, 
+															Info.ElRio.BotafogoPraia.Responsavel, 
+															Info.ElRio.BotafogoPraia.Telefone))
+
+		self.botaoElRioBotafogoPraiaRelogio                 = Button(self.ContainerElRio)
+		self.botaoElRioBotafogoPraiaRelogio                 ["text"]       = "R"
+		self.botaoElRioBotafogoPraiaRelogio                 ["background"] = Info.ElRio.BotafogoPraia.RelogioCor
+		self.botaoElRioBotafogoPraiaRelogio                 ["height"]     = 1
+		self.botaoElRioBotafogoPraiaRelogio                 ["width"]      = 1
+
+
+		self.botaoElRioBotafogoPraia.grid                   (row=2,column=0,sticky = "N")
+		self.botaoElRioBotafogoPraiaRelogio.grid            (row=2,column=1,sticky = "N")
+
+
+
+
+
+
+		self.botaoElRioBoulevard                         	= Button(self.ContainerElRio)
+		self.botaoElRioBoulevard                         	["text"]       = "Boulevard"
+		self.botaoElRioBoulevard                         	["background"] = Info.ElRio.Boulevard.ModuloCor
+		self.botaoElRioBoulevard                         	["width"]      = 13
+		self.botaoElRioBoulevard                         	["height"]     = 1
+		self.botaoElRioBoulevard.bind                    	("<Button-1>",lambda e: popup("ElRio","Boulevard",
+															Info.ElRio.Boulevard.IP, 
+															Info.ElRio.Boulevard.Porta, 
+															Info.ElRio.Boulevard.NumeroRep, 
+															Info.ElRio.Boulevard.Responsavel, 
+															Info.ElRio.Boulevard.Telefone))
+
+		self.botaoElRioBoulevardRelogio                  	= Button(self.ContainerElRio)
+		self.botaoElRioBoulevardRelogio                  	["text"]       = "R"
+		self.botaoElRioBoulevardRelogio                  	["background"] = Info.ElRio.Boulevard.RelogioCor
+		self.botaoElRioBoulevardRelogio                  	["height"]     = 1
+		self.botaoElRioBoulevardRelogio                  	["width"]      = 1
+
+
+		self.botaoElRioBoulevard.grid                    	(row=3,column=0,sticky = "N")
+		self.botaoElRioBoulevardRelogio.grid             	(row=3,column=1,sticky = "N")
+
+
+
+
+
+
+		self.botaoElRioCarioca                         		= Button(self.ContainerElRio)
+		self.botaoElRioCarioca                         		["text"]       = "Carioca"
+		self.botaoElRioCarioca                         		["background"] = Info.ElRio.Carioca.ModuloCor
+		self.botaoElRioCarioca                         		["width"]      = 13
+		self.botaoElRioCarioca                         		["height"]     = 1
+		self.botaoElRioCarioca.bind                    		("<Button-1>",lambda e: popup("ElRio","Carioca",
+															Info.ElRio.Carioca.IP, 
+															Info.ElRio.Carioca.Porta, 
+															Info.ElRio.Carioca.NumeroRep, 
+															Info.ElRio.Carioca.Responsavel, 
+															Info.ElRio.Carioca.Telefone))
+
+		self.botaoElRioCariocaRelogio                  		= Button(self.ContainerElRio)
+		self.botaoElRioCariocaRelogio                  		["text"]       = "R"
+		self.botaoElRioCariocaRelogio                  		["background"] = Info.ElRio.Carioca.RelogioCor
+		self.botaoElRioCariocaRelogio                  		["height"]     = 1
+		self.botaoElRioCariocaRelogio                  		["width"]      = 1
+
+
+		self.botaoElRioCarioca.grid                    		(row=4,column=0,sticky = "N")
+		self.botaoElRioCariocaRelogio.grid             		(row=4,column=1,sticky = "N")
+
+
+
+
+
+
+		self.botaoElRioCentro1                         		= Button(self.ContainerElRio)
+		self.botaoElRioCentro1                         		["text"]       = "Centro I"
+		self.botaoElRioCentro1                         		["background"] = Info.ElRio.Centro1.ModuloCor
+		self.botaoElRioCentro1                         		["width"]      = 13
+		self.botaoElRioCentro1                         		["height"]     = 1
+		self.botaoElRioCentro1.bind                    		("<Button-1>",lambda e: popup("ElRio","Centro I",
+															Info.ElRio.Centro1.IP, 
+															Info.ElRio.Centro1.Porta, 
+															Info.ElRio.Centro1.NumeroRep, 
+															Info.ElRio.Centro1.Responsavel, 
+															Info.ElRio.Centro1.Telefone))
+
+		self.botaoElRioCentro1Relogio                  		= Button(self.ContainerElRio)
+		self.botaoElRioCentro1Relogio                  		["text"]       = "R"
+		self.botaoElRioCentro1Relogio                  		["background"] = Info.ElRio.Centro1.RelogioCor
+		self.botaoElRioCentro1Relogio                  		["height"]     = 1
+		self.botaoElRioCentro1Relogio                  		["width"]      = 1
+
+
+		self.botaoElRioCentro1.grid                    		(row=5,column=0,sticky = "N")
+		self.botaoElRioCentro1Relogio.grid             		(row=5,column=1,sticky = "N")
+
+
+
+
+
+
+		self.botaoElRioCentro2                         		= Button(self.ContainerElRio)
+		self.botaoElRioCentro2                         		["text"]       = "Centro II"
+		self.botaoElRioCentro2                         		["background"] = Info.ElRio.Centro2.ModuloCor
+		self.botaoElRioCentro2                         		["width"]      = 13
+		self.botaoElRioCentro2                         		["height"]     = 1
+		self.botaoElRioCentro2.bind                    		("<Button-1>",lambda e: popup("ElRio","Centro II",
+															Info.ElRio.Centro2.IP, 
+															Info.ElRio.Centro2.Porta, 
+															Info.ElRio.Centro2.NumeroRep, 
+															Info.ElRio.Centro2.Responsavel, 
+															Info.ElRio.Centro2.Telefone))
+
+		self.botaoElRioCentro2Relogio                  		= Button(self.ContainerElRio)
+		self.botaoElRioCentro2Relogio                  		["text"]       = "R"
+		self.botaoElRioCentro2Relogio                  		["background"] = Info.ElRio.Centro2.RelogioCor
+		self.botaoElRioCentro2Relogio                  		["height"]     = 1
+		self.botaoElRioCentro2Relogio                  		["width"]      = 1
+
+		self.botaoElRioCentro2.grid                    		(row=6,column=0,sticky = "N")
+		self.botaoElRioCentro2Relogio.grid             		(row=6,column=1,sticky = "N")
+
+
+
+
+
+
+		self.botaoElRioCentro3                         		= Button(self.ContainerElRio)
+		self.botaoElRioCentro3                         		["text"]       = "Centro III"
+		self.botaoElRioCentro3                         		["background"] = Info.ElRio.Centro3.ModuloCor
+		self.botaoElRioCentro3                         		["width"]      = 13
+		self.botaoElRioCentro3                         		["height"]     = 1
+		self.botaoElRioCentro3.bind                    		("<Button-1>",lambda e: popup("ElRio","Centro III",
+															Info.ElRio.Centro3.IP, 
+															Info.ElRio.Centro3.Porta, 
+															Info.ElRio.Centro3.NumeroRep, 
+															Info.ElRio.Centro3.Responsavel, 
+															Info.ElRio.Centro3.Telefone))
+
+		self.botaoElRioCentro3Relogio                  		= Button(self.ContainerElRio)
+		self.botaoElRioCentro3Relogio                  		["text"]       = "R"
+		self.botaoElRioCentro3Relogio                  		["background"] = Info.ElRio.Centro3.RelogioCor
+		self.botaoElRioCentro3Relogio                  		["height"]     = 1
+		self.botaoElRioCentro3Relogio                  		["width"]      = 1
+
+
+		self.botaoElRioCentro3.grid             	       	(row=7,column=0,sticky = "N")
+		self.botaoElRioCentro3Relogio.grid     	        	(row=7,column=1,sticky = "N")
+
+
+
+
+
+
+
+		self.botaoElRioFashion                         		= Button(self.ContainerElRio)
+		self.botaoElRioFashion                         		["text"]       = "Fashion"
+		self.botaoElRioFashion                         		["background"] = Info.ElRio.Fashion.ModuloCor
+		self.botaoElRioFashion                         		["width"]      = 13
+		self.botaoElRioFashion                         		["height"]     = 1
+		self.botaoElRioFashion.bind                    		("<Button-1>",lambda e: popup("ElRio","Fashion",
+															Info.ElRio.Fashion.IP, 
+															Info.ElRio.Fashion.Porta, 
+															Info.ElRio.Fashion.NumeroRep, 
+															Info.ElRio.Fashion.Responsavel, 
+															Info.ElRio.Fashion.Telefone))
+
+		self.botaoElRioFashionRelogio                  		= Button(self.ContainerElRio)
+		self.botaoElRioFashionRelogio                  		["text"]       = "R"
+		self.botaoElRioFashionRelogio                  		["background"] = Info.ElRio.Fashion.RelogioCor
+		self.botaoElRioFashionRelogio                  		["height"]     = 1
+		self.botaoElRioFashionRelogio                  		["width"]      = 1
+
+
+		self.botaoElRioFashion.grid                    		(row=8,column=0,sticky = "N")
+		self.botaoElRioFashionRelogio.grid             		(row=8,column=1,sticky = "N")
+
+
+
+
+
+		self.botaoElRioFlamengo                         	= Button(self.ContainerElRio)
+		self.botaoElRioFlamengo                         	["text"]       = "Flamengo"
+		self.botaoElRioFlamengo                         	["background"] = Info.ElRio.Flamengo.ModuloCor
+		self.botaoElRioFlamengo                         	["width"]      = 13
+		self.botaoElRioFlamengo                         	["height"]     = 1
+		self.botaoElRioFlamengo.bind                    	("<Button-1>",lambda e: popup("ElRio","Flamengo",
+															Info.ElRio.Flamengo.IP, 
+															Info.ElRio.Flamengo.Porta, 
+															Info.ElRio.Flamengo.NumeroRep, 
+															Info.ElRio.Flamengo.Responsavel, 
+															Info.ElRio.Flamengo.Telefone))
+
+		self.botaoElRioFlamengoRelogio                  	= Button(self.ContainerElRio)
+		self.botaoElRioFlamengoRelogio                  	["text"]       = "R"
+		self.botaoElRioFlamengoRelogio                  	["background"] = Info.ElRio.Flamengo.RelogioCor
+		self.botaoElRioFlamengoRelogio                  	["height"]     = 1
+		self.botaoElRioFlamengoRelogio                  	["width"]      = 1
+
+
+		self.botaoElRioFlamengo.grid                    	(row=9,column=0,sticky = "N")
+		self.botaoElRioFlamengoRelogio.grid             	(row=9,column=1,sticky = "N")
+
+
+
+
+
+
+		self.botaoElRioLeblon                         		= Button(self.ContainerElRio)
+		self.botaoElRioLeblon                         		["text"]       = "Leblon"
+		self.botaoElRioLeblon                         		["background"] = Info.ElRio.Leblon.ModuloCor
+		self.botaoElRioLeblon                         		["width"]      = 13
+		self.botaoElRioLeblon                         		["height"]     = 1
+		self.botaoElRioLeblon.bind                    		("<Button-1>",lambda e: popup("ElRio","Leblon",
+															Info.ElRio.Leblon.IP, 
+															Info.ElRio.Leblon.Porta, 
+															Info.ElRio.Leblon.NumeroRep, 
+															Info.ElRio.Leblon.Responsavel, 
+															Info.ElRio.Leblon.Telefone))
+
+		self.botaoElRioLeblonRelogio                  		= Button(self.ContainerElRio)
+		self.botaoElRioLeblonRelogio                  		["text"]       = "R"
+		self.botaoElRioLeblonRelogio                  		["background"] = Info.ElRio.Leblon.RelogioCor
+		self.botaoElRioLeblonRelogio                  		["height"]     = 1
+		self.botaoElRioLeblonRelogio                  		["width"]      = 1
+
+
+		self.botaoElRioLeblon.grid                    		(row=10,column=0,sticky = "N")
+		self.botaoElRioLeblonRelogio.grid             		(row=10,column=1,sticky = "N")
+
+
+
+
+
+
+		self.botaoElRioNovaAmerica                      	= Button(self.ContainerElRio)
+		self.botaoElRioNovaAmerica                         	["text"]       = "Nova America"
+		self.botaoElRioNovaAmerica                         	["background"] = Info.ElRio.NovaAmerica.ModuloCor
+		self.botaoElRioNovaAmerica                         	["width"]      = 13
+		self.botaoElRioNovaAmerica                         	["height"]     = 1
+		self.botaoElRioNovaAmerica.bind                    	("<Button-1>",lambda e: popup("ElRio","Nova America",
+															Info.ElRio.NovaAmerica.IP, 
+															Info.ElRio.NovaAmerica.Porta, 
+															Info.ElRio.NovaAmerica.NumeroRep, 
+															Info.ElRio.NovaAmerica.Responsavel, 
+															Info.ElRio.NovaAmerica.Telefone))
+
+		self.botaoElRioNovaAmericaRelogio                  	= Button(self.ContainerElRio)
+		self.botaoElRioNovaAmericaRelogio                  	["text"]       = "R"
+		self.botaoElRioNovaAmericaRelogio                  	["background"] = Info.ElRio.NovaAmerica.RelogioCor
+		self.botaoElRioNovaAmericaRelogio                  	["height"]     = 1
+		self.botaoElRioNovaAmericaRelogio                  	["width"]      = 1
+
+
+		self.botaoElRioNovaAmerica.grid                    	(row=11,column=0,sticky = "N")
+		self.botaoElRioNovaAmericaRelogio.grid             	(row=11,column=1,sticky = "N")
+
+
+
+
+
+
+		self.botaoElRioShopGrande                         	= Button(self.ContainerElRio)
+		self.botaoElRioShopGrande                         	["text"]       = "Shop Grande"
+		self.botaoElRioShopGrande                         	["background"] = Info.ElRio.ShopGrande.ModuloCor
+		self.botaoElRioShopGrande                         	["width"]      = 13
+		self.botaoElRioShopGrande                         	["height"]     = 1
+		self.botaoElRioShopGrande.bind                    	("<Button-1>",lambda e: popup("ElRio","Shop Grande",
+															Info.ElRio.ShopGrande.IP, 
+															Info.ElRio.ShopGrande.Porta, 
+															Info.ElRio.ShopGrande.NumeroRep, 
+															Info.ElRio.ShopGrande.Responsavel, 
+															Info.ElRio.ShopGrande.Telefone))
+
+		self.botaoElRioShopGrandeRelogio                  	= Button(self.ContainerElRio)
+		self.botaoElRioShopGrandeRelogio                  	["text"]       = "R"
+		self.botaoElRioShopGrandeRelogio                  	["background"] = Info.ElRio.ShopGrande.RelogioCor
+		self.botaoElRioShopGrandeRelogio                  	["height"]     = 1
+		self.botaoElRioShopGrandeRelogio                  	["width"]      = 1
+
+
+		self.botaoElRioShopGrande.grid                    	(row=12,column=0,sticky = "N")
+		self.botaoElRioShopGrandeRelogio.grid             	(row=12,column=1,sticky = "N")
+
+
+
+
+
+
+		self.botaoElRioShopMacae                         	= Button(self.ContainerElRio)
+		self.botaoElRioShopMacae                         	["text"]       = "Shop Macae"
+		self.botaoElRioShopMacae                         	["background"] = Info.ElRio.ShopMacae.ModuloCor
+		self.botaoElRioShopMacae                         	["width"]      = 13
+		self.botaoElRioShopMacae                         	["height"]     = 1
+		self.botaoElRioShopMacae.bind                    	("<Button-1>",lambda e: popup("ElRio","Shop Macae",
+															Info.ElRio.ShopMacae.IP, 
+															Info.ElRio.ShopMacae.Porta, 
+															Info.ElRio.ShopMacae.NumeroRep, 
+															Info.ElRio.ShopMacae.Responsavel, 
+															Info.ElRio.ShopMacae.Telefone))
+
+		self.botaoElRioShopMacaeRelogio                  	= Button(self.ContainerElRio)
+		self.botaoElRioShopMacaeRelogio                  	["text"]       = "R"
+		self.botaoElRioShopMacaeRelogio                  	["background"] = Info.ElRio.ShopMacae.RelogioCor
+		self.botaoElRioShopMacaeRelogio                  	["height"]     = 1
+		self.botaoElRioShopMacaeRelogio                  	["width"]      = 1
+
+
+		self.botaoElRioShopMacae.grid                    	(row=13,column=0,sticky = "N")
+		self.botaoElRioShopMacaeRelogio.grid             	(row=13,column=1,sticky = "N")
+
+
+
+
+
+
+		self.botaoElRioShopNorte                         	= Button(self.ContainerElRio)
+		self.botaoElRioShopNorte                         	["text"]       = "Shop Norte"
+		self.botaoElRioShopNorte                         	["background"] = Info.ElRio.ShopNorte.ModuloCor
+		self.botaoElRioShopNorte                         	["width"]      = 13
+		self.botaoElRioShopNorte                         	["height"]     = 1
+		self.botaoElRioShopNorte.bind                    	("<Button-1>",lambda e: popup("ElRio","Shop Norte",
+															Info.ElRio.ShopNorte.IP, 
+															Info.ElRio.ShopNorte.Porta, 
+															Info.ElRio.ShopNorte.NumeroRep, 
+															Info.ElRio.ShopNorte.Responsavel, 
+															Info.ElRio.ShopNorte.Telefone))
+
+		self.botaoElRioShopNorteRelogio                  	= Button(self.ContainerElRio)
+		self.botaoElRioShopNorteRelogio                  	["text"]       = "R"
+		self.botaoElRioShopNorteRelogio                  	["background"] = Info.ElRio.ShopNorte.RelogioCor
+		self.botaoElRioShopNorteRelogio                  	["height"]     = 1
+		self.botaoElRioShopNorteRelogio                  	["width"]      = 1
+
+
+		self.botaoElRioShopNorte.grid                    	(row=14,column=0,sticky = "N")
+		self.botaoElRioShopNorteRelogio.grid             	(row=14,column=1,sticky = "N")
+
+
+
+
+
+
+		self.botaoElRioBackup1                         		= Button(self.ContainerElRio)
+		self.botaoElRioBackup1                         		["text"]       = "Backup1"
+		self.botaoElRioBackup1                         		["background"] = Info.ElRio.Backup1.ModuloCor
+		self.botaoElRioBackup1                         		["width"]      = 13
+		self.botaoElRioBackup1                         		["height"]     = 1
+		self.botaoElRioBackup1.bind                    		("<Button-1>",lambda e: popup("ElRio","Backup1",
+															Info.ElRio.Backup1.IP, 
+															Info.ElRio.Backup1.Porta, 
+															Info.ElRio.Backup1.NumeroRep, 
+															Info.ElRio.Backup1.Responsavel, 
+															Info.ElRio.Backup1.Telefone))
+
+		self.botaoElRioBackup1Relogio                  		= Button(self.ContainerElRio)
+		self.botaoElRioBackup1Relogio                  		["text"]       = "R"
+		self.botaoElRioBackup1Relogio                  		["background"] = Info.ElRio.Backup1.RelogioCor
+		self.botaoElRioBackup1Relogio                  		["height"]     = 1
+		self.botaoElRioBackup1Relogio                  		["width"]      = 1
+
+
+		self.botaoElRioBackup1.grid                    		(row=15,column=0,sticky = "N")
+		self.botaoElRioBackup1Relogio.grid             		(row=15,column=1,sticky = "N")
+
+
+
+
+
+
+		self.botaoElRioBackup2                         		= Button(self.ContainerElRio)
+		self.botaoElRioBackup2                         		["text"]       = "Backup2"
+		self.botaoElRioBackup2                         		["background"] = Info.ElRio.Backup2.ModuloCor
+		self.botaoElRioBackup2                         		["width"]      = 13
+		self.botaoElRioBackup2                         		["height"]     = 1
+		self.botaoElRioBackup2.bind                    		("<Button-1>",lambda e: popup("ElRio","Backup2",
+															Info.ElRio.Backup2.IP, 
+															Info.ElRio.Backup2.Porta, 
+															Info.ElRio.Backup2.NumeroRep, 
+															Info.ElRio.Backup2.Responsavel, 
+															Info.ElRio.Backup2.Telefone))
+
+		self.botaoElRioBackup2Relogio                  		= Button(self.ContainerElRio)
+		self.botaoElRioBackup2Relogio                  		["text"]       = "R"
+		self.botaoElRioBackup2Relogio                  		["background"] = Info.ElRio.Backup2.RelogioCor
+		self.botaoElRioBackup2Relogio                  		["height"]     = 1
+		self.botaoElRioBackup2Relogio                  		["width"]      = 1
+
+
+		self.botaoElRioBackup2.grid                    		(row=16,column=0,sticky = "N")
+		self.botaoElRioBackup2Relogio.grid             		(row=16,column=1,sticky = "N")
+
+
+
+
+
+
+
+
 
 	def Create_ContainerGeral(self,root):
 
@@ -2794,13 +3245,14 @@ class TelaRelogios1(object):
 	def Create_ContainerColuna2(self,root):
 
 
-		self.ContainerColuna2             = Frame (self.ContainerRelogios)
-		self.ContainerGravex              = Frame (self.ContainerColuna2)
-		self.ContainerSBCP				  = Frame (self.ContainerColuna2)
+		self.ContainerColuna2             			= Frame (self.ContainerRelogios)
+		self.ContainerGravex              			= Frame (self.ContainerColuna2)
+		self.ContainerElRio							= Frame (self.ContainerColuna2)
+
 
 		self.ContainerColuna2.grid                	(row=0, column=2,pady=5, padx=1, columnspan=1, sticky="N")
 		self.ContainerGravex.grid                 	(row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
-		self.ContainerSBCP.grid 					(row=1, column=0,pady=5, padx=1, columnspan=1, sticky="N")
+		self.ContainerElRio.grid 					(row=1, column=0,pady=5, padx=1, columnspan=1, sticky="N")
 
 
 
@@ -2809,9 +3261,11 @@ class TelaRelogios1(object):
 
 		self.ContainerColuna3             = Frame (self.ContainerRelogios)
 		self.ContainerPredman             = Frame (self.ContainerColuna3)
+		self.ContainerSBCP				  = Frame (self.ContainerColuna3)
 
-		self.ContainerColuna3.grid                (row=0, column=3,pady=5, padx=1, columnspan=1, sticky="N")
-		self.ContainerPredman.grid                (row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
+		self.ContainerColuna3.grid                	(row=0, column=3,pady=5, padx=1, columnspan=1, sticky="N")
+		self.ContainerPredman.grid                	(row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
+		self.ContainerSBCP.grid 					(row=1, column=0,pady=5, padx=1, columnspan=1, sticky="N")
 
 
 
@@ -3440,6 +3894,109 @@ class TelaRelogios1(object):
 
 		
 
+	def updateElRio(self, relogio):
+
+		if relogio == "botafogomuniz":
+
+			self.botaoElRioBotafogoMuniz.configure					(bg=Info.ElRio.BotafogoMuniz.ModuloCor)
+			self.botaoElRioBotafogoMunizRelogio.configure			(bg=Info.ElRio.BotafogoMuniz.RelogioCor)
+
+		elif relogio == "botafogopraia":
+
+			self.botaoElRioBotafogoPraia.configure					(bg=Info.ElRio.BotafogoPraia.ModuloCor)
+			self.botaoElRioBotafogoPraiaRelogio.configure			(bg=Info.ElRio.BotafogoPraia.RelogioCor)
+
+
+		elif relogio == "Boulevard":
+
+			self.botaoElRioBoulevard.configure						(bg=Info.ElRio.Boulevard.ModuloCor)
+			self.botaoElRioBoulevardRelogio.configure				(bg=Info.ElRio.Boulevard.RelogioCor)
+
+
+		elif relogio == "carioca":
+
+			self.botaoElRioCarioca.configure						(bg=Info.ElRio.Carioca.ModuloCor)
+			self.botaoElRioCariocaRelogio.configure					(bg=Info.ElRio.Carioca.RelogioCor)
+
+
+		elif relogio == "centro1":
+
+			self.botaoElRioCentro1.configure						(bg=Info.ElRio.Centro1.ModuloCor)
+			self.botaoElRioCentro1Relogio.configure					(bg=Info.ElRio.Centro1.RelogioCor)
+
+
+		elif relogio == "centro2":
+
+			self.botaoElRioCentro2.configure						(bg=Info.ElRio.Centro2.ModuloCor)
+			self.botaoElRioCentro2Relogio.configure					(bg=Info.ElRio.Centro2.RelogioCor)
+
+
+		elif relogio == "centro3":
+
+			self.botaoElRioCentro3.configure						(bg=Info.ElRio.Centro3.ModuloCor)
+			self.botaoElRioCentro3Relogio.configure					(bg=Info.ElRio.Centro3.RelogioCor)
+
+
+		elif relogio == "fashion":
+
+			self.botaoElRioFashion.configure						(bg=Info.ElRio.Fashion.ModuloCor)
+			self.botaoElRioFashionRelogio.configure					(bg=Info.ElRio.Fashion.RelogioCor)
+
+
+		elif relogio == "flamengo":
+
+			self.botaoElRioFlamengo.configure						(bg=Info.ElRio.Flamengo.ModuloCor)
+			self.botaoElRioFlamengoRelogio.configure				(bg=Info.ElRio.Flamengo.RelogioCor)
+
+
+		elif relogio == "leblon":
+
+			self.botaoElRioLeblon.configure							(bg=Info.ElRio.Leblon.ModuloCor)
+			self.botaoElRioLeblonRelogio.configure					(bg=Info.ElRio.Leblon.RelogioCor)
+
+
+		elif relogio == "novaamerica":
+
+			self.botaoElRioNovaAmerica.configure					(bg=Info.ElRio.NovaAmerica.ModuloCor)
+			self.botaoElRioNovaAmericaRelogio.configure				(bg=Info.ElRio.NovaAmerica.RelogioCor)
+
+
+		elif relogio == "shopgrande":
+
+			self.botaoElRioShopGrande.configure						(bg=Info.ElRio.ShopGrande.ModuloCor)
+			self.botaoElRioShopGrandeRelogio.configure				(bg=Info.ElRio.ShopGrande.RelogioCor)
+
+
+		elif relogio == "shopmacae":
+
+			self.botaoElRioShopMacae.configure						(bg=Info.ElRio.ShopMacae.ModuloCor)
+			self.botaoElRioShopMacaeRelogio.configure				(bg=Info.ElRio.ShopMacae.RelogioCor)
+
+
+		elif relogio == "shopnorte":
+
+			self.botaoElRioShopNorte.configure						(bg=Info.ElRio.ShopNorte.ModuloCor)
+			self.botaoElRioShopNorteRelogio.configure				(bg=Info.ElRio.ShopNorte.RelogioCor)
+
+
+		elif relogio == "botafogomuniz":
+
+			self.botaoElRioBackup1.configure						(bg=Info.ElRio.Backup1.ModuloCor)
+			self.botaoElRioBackup1Relogio.configure					(bg=Info.ElRio.Backup1.RelogioCor)
+
+
+		elif relogio == "botafogomuniz":
+
+			self.botaoElRioBackup2.configure						(bg=Info.ElRio.Backup2.ModuloCor)
+			self.botaoElRioBackup2Relogio.configure					(bg=Info.ElRio.Backup2.RelogioCor)
+
+
+
+		self.msgElRioCount.configure   								(text=str(Info.ElRio.Status.Contage)+"/"+
+										 							str(Info.ElRio.Status.TotalRelogios))	
+
+
+
 	def update(self,empresa,relogio):
 
 
@@ -3485,4 +4042,17 @@ class TelaRelogios1(object):
 
 		elif empresa == "sbcp":
 			self.updateSBCP(relogio)
-			
+	
+
+
+		elif empresa == "ElRio":
+			self.updateElRio(relogio)
+
+
+
+
+
+
+
+
+	

@@ -1210,7 +1210,7 @@ class Info(object):
 
 		class Status(object):
 			Contage         = 0
-			TotalRelogios   = 9
+			TotalRelogios   = 13
 
 		class Nacional(object):
 
@@ -1369,6 +1369,236 @@ class Info(object):
 			Telefone        = "None"
 
 		class GO(object):
+
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+
+	class ElRio(object):
+
+		class Status(object):
+			Contage         = 0
+			TotalRelogios   = 16
+
+		class Centro2(object):
+
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+
+		class Leblon(object):
+
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+
+		class BotafogoPraia(object):
+
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+
+		class Centro1(object):
+
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+
+		class ShopGrande(object):
+
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+
+		class Carioca(object):
+
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+
+		class ShopNorte(object):
+
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+
+		class NovaAmerica(object):
+
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+
+		class Boulevard(object):
+
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+
+		class Fashion(object):
+
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+
+		class BotafogoMuniz(object):
+
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+
+		class Flamengo(object):
+
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+
+		class Centro3(object):
+
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+
+		class ShopMacae(object):
+
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+
+		class Backup1(object):
+
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+
+		class Backup2(object):
 
 
 			Empresa         = "None"
