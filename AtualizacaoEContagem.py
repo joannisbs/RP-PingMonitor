@@ -1353,8 +1353,393 @@ def AtualizaLotten(relogio,result):
 				Info.Lotten.Status.Contage = Info.Lotten.Status.Contage +1
 
 
+def AtualizaElRio(relogio, result):
 
 
+
+	if relogio == "botafogomuniz":
+
+		if result == 1:
+			Info.ElRio.BotafogoMuniz.ModuloCor  = "firebrick1"
+			Info.ElRio.BotafogoMuniz.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.ElRio.BotafogoMuniz.ModuloCor  = "green3"
+			Info.ElRio.BotafogoMuniz.RelogioCor = "red4"
+		elif result == 3:
+			Info.ElRio.BotafogoMuniz.ModuloCor  = "green3"
+			Info.ElRio.BotafogoMuniz.RelogioCor = "green3"
+		elif result == 4:
+			Info.ElRio.BotafogoMuniz.ModuloCor  = "cyan"
+			#Info.ElRio.BotafogoMuniz.RelogioCor = "cyan"
+		else:
+			Info.ElRio.BotafogoMuniz.ModuloCor  = "pink"
+			Info.ElRio.BotafogoMuniz.RelogioCor = "pink"
+
+	elif relogio == "botafogopraia":
+
+		if result == 1:
+			Info.ElRio.BotafogoPraia.ModuloCor  = "firebrick1"
+			Info.ElRio.BotafogoPraia.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.ElRio.BotafogoPraia.ModuloCor  = "green3"
+			Info.ElRio.BotafogoPraia.RelogioCor = "red4"
+		elif result == 3:
+			Info.ElRio.BotafogoPraia.ModuloCor  = "green3"
+			Info.ElRio.BotafogoPraia.RelogioCor = "green3"
+		elif result == 4:
+			Info.ElRio.BotafogoPraia.ModuloCor  = "cyan"
+			#Info.ElRio.BotafogoPraia.RelogioCor = "cyan"
+		else:
+			Info.ElRio.BotafogoPraia.ModuloCor  = "pink"
+			Info.ElRio.BotafogoPraia.RelogioCor = "pink"
+
+
+	elif relogio == "Boulevard":
+
+		if result == 1:
+			Info.ElRio.Boulevard.ModuloCor  = "firebrick1"
+			Info.ElRio.Boulevard.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.ElRio.Boulevard.ModuloCor  = "green3"
+			Info.ElRio.Boulevard.RelogioCor = "red4"
+		elif result == 3:
+			Info.ElRio.Boulevard.ModuloCor  = "green3"
+			Info.ElRio.Boulevard.RelogioCor = "green3"
+		elif result == 4:
+			Info.ElRio.Boulevard.ModuloCor  = "cyan"
+			#Info.ElRio.Boulevard.RelogioCor = "cyan"
+		else:
+			Info.ElRio.Boulevard.ModuloCor  = "pink"
+			Info.ElRio.Boulevard.RelogioCor = "pink"
+
+	elif relogio == "carioca":
+
+		if result == 1:
+			Info.ElRio.Carioca.ModuloCor  = "firebrick1"
+			Info.ElRio.Carioca.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.ElRio.Carioca.ModuloCor  = "green3"
+			Info.ElRio.Carioca.RelogioCor = "red4"
+		elif result == 3:
+			Info.ElRio.Carioca.ModuloCor  = "green3"
+			Info.ElRio.Carioca.RelogioCor = "green3"
+		elif result == 4:
+			Info.ElRio.Carioca.ModuloCor  = "cyan"
+			#Info.ElRio.Carioca.RelogioCor = "cyan"
+		else:
+			Info.ElRio.Carioca.ModuloCor  = "pink"
+			Info.ElRio.Carioca.RelogioCor = "pink"
+
+	
+	elif relogio == "centro1":
+
+		if result == 1:
+			Info.ElRio.Centro1.ModuloCor  = "firebrick1"
+			Info.ElRio.Centro1.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.ElRio.Centro1.ModuloCor  = "green3"
+			Info.ElRio.Centro1.RelogioCor = "red4"
+		elif result == 3:
+			Info.ElRio.Centro1.ModuloCor  = "green3"
+			Info.ElRio.Centro1.RelogioCor = "green3"
+		elif result == 4:
+			Info.ElRio.Centro1.ModuloCor  = "cyan"
+			#Info.ElRio.Centro1.RelogioCor = "cyan"
+		else:
+			Info.ElRio.Centro1.ModuloCor  = "pink"
+			Info.ElRio.Centro1.RelogioCor = "pink"
+
+	elif relogio == "centro2":
+	
+		if result == 1:
+			Info.ElRio.Centro2.ModuloCor  = "firebrick1"
+			Info.ElRio.Centro2.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.ElRio.Centro2.ModuloCor  = "green3"
+			Info.ElRio.Centro2.RelogioCor = "red4"
+		elif result == 3:
+			Info.ElRio.Centro2.ModuloCor  = "green3"
+			Info.ElRio.Centro2.RelogioCor = "green3"
+		elif result == 4:
+			Info.ElRio.Centro2.ModuloCor  = "cyan"
+			#Info.ElRio.Centro2.RelogioCor = "cyan"
+		else:
+			Info.ElRio.Centro2.ModuloCor  = "pink"
+			Info.ElRio.Centro2.RelogioCor = "pink"
+
+	elif relogio == "centro3":
+
+		if result == 1:
+			Info.ElRio.Centro3.ModuloCor  = "firebrick1"
+			Info.ElRio.Centro3.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.ElRio.Centro3.ModuloCor  = "green3"
+			Info.ElRio.Centro3.RelogioCor = "red4"
+		elif result == 3:
+			Info.ElRio.Centro3.ModuloCor  = "green3"
+			Info.ElRio.Centro3.RelogioCor = "green3"
+		elif result == 4:
+			Info.ElRio.Centro3.ModuloCor  = "cyan"
+			#Info.ElRio.Centro3.RelogioCor = "cyan"
+		else:
+			Info.ElRio.Centro3.ModuloCor  = "pink"
+			Info.ElRio.Centro3.RelogioCor = "pink"
+
+
+
+	elif relogio == "fashion":
+
+		if result == 1:
+			Info.ElRio.Fashion.ModuloCor  = "firebrick1"
+			Info.ElRio.Fashion.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.ElRio.Fashion.ModuloCor  = "green3"
+			Info.ElRio.Fashion.RelogioCor = "red4"
+		elif result == 3:
+			Info.ElRio.Fashion.ModuloCor  = "green3"
+			Info.ElRio.Fashion.RelogioCor = "green3"
+		elif result == 4:
+			Info.ElRio.Fashion.ModuloCor  = "cyan"
+			#Info.ElRio.Fashion.RelogioCor = "cyan"
+		else:
+			Info.ElRio.Fashion.ModuloCor  = "pink"
+			Info.ElRio.Fashion.RelogioCor = "pink"
+
+
+	elif relogio == "flamengo":
+
+		if result == 1:
+			Info.ElRio.Flamengo.ModuloCor  = "firebrick1"
+			Info.ElRio.Flamengo.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.ElRio.Flamengo.ModuloCor  = "green3"
+			Info.ElRio.Flamengo.RelogioCor = "red4"
+		elif result == 3:
+			Info.ElRio.Flamengo.ModuloCor  = "green3"
+			Info.ElRio.Flamengo.RelogioCor = "green3"
+		elif result == 4:
+			Info.ElRio.Flamengo.ModuloCor  = "cyan"
+			#Info.ElRio.Flamengo.RelogioCor = "cyan"
+		else:
+			Info.ElRio.Flamengo.ModuloCor  = "pink"
+			Info.ElRio.Flamengo.RelogioCor = "pink"
+
+	
+
+	elif relogio == "leblon":
+
+		if result == 1:
+			Info.ElRio.Leblon.ModuloCor  = "firebrick1"
+			Info.ElRio.Leblon.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.ElRio.Leblon.ModuloCor  = "green3"
+			Info.ElRio.Leblon.RelogioCor = "red4"
+		elif result == 3:
+			Info.ElRio.Leblon.ModuloCor  = "green3"
+			Info.ElRio.Leblon.RelogioCor = "green3"
+		elif result == 4:
+			Info.ElRio.Leblon.ModuloCor  = "cyan"
+			#Info.ElRio.Leblon.RelogioCor = "cyan"
+		else:
+			Info.ElRio.Leblon.ModuloCor  = "pink"
+			Info.ElRio.Leblon.RelogioCor = "pink"
+
+	
+
+	elif relogio == "novaamerica":
+
+		if result == 1:
+			Info.ElRio.NovaAmerica.ModuloCor  = "firebrick1"
+			Info.ElRio.NovaAmerica.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.ElRio.NovaAmerica.ModuloCor  = "green3"
+			Info.ElRio.NovaAmerica.RelogioCor = "red4"
+		elif result == 3:
+			Info.ElRio.NovaAmerica.ModuloCor  = "green3"
+			Info.ElRio.NovaAmerica.RelogioCor = "green3"
+		elif result == 4:
+			Info.ElRio.NovaAmerica.ModuloCor  = "cyan"
+			#Info.ElRio.NovaAmerica.RelogioCor = "cyan"
+		else:
+			Info.ElRio.NovaAmerica.ModuloCor  = "pink"
+			Info.ElRio.NovaAmerica.RelogioCor = "pink"
+
+	
+
+	elif relogio == "shopgrande":
+
+		if result == 1:
+			Info.ElRio.ShopGrande.ModuloCor  = "firebrick1"
+			Info.ElRio.ShopGrande.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.ElRio.ShopGrande.ModuloCor  = "green3"
+			Info.ElRio.ShopGrande.RelogioCor = "red4"
+		elif result == 3:
+			Info.ElRio.ShopGrande.ModuloCor  = "green3"
+			Info.ElRio.ShopGrande.RelogioCor = "green3"
+		elif result == 4:
+			Info.ElRio.ShopGrande.ModuloCor  = "cyan"
+			#Info.ElRio.ShopGrande.RelogioCor = "cyan"
+		else:
+			Info.ElRio.ShopGrande.ModuloCor  = "pink"
+			Info.ElRio.ShopGrande.RelogioCor = "pink"
+
+	
+
+	elif relogio == "shopmacae":
+
+		if result == 1:
+			Info.ElRio.ShopMacae.ModuloCor  = "firebrick1"
+			Info.ElRio.ShopMacae.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.ElRio.ShopMacae.ModuloCor  = "green3"
+			Info.ElRio.ShopMacae.RelogioCor = "red4"
+		elif result == 3:
+			Info.ElRio.ShopMacae.ModuloCor  = "green3"
+			Info.ElRio.ShopMacae.RelogioCor = "green3"
+		elif result == 4:
+			Info.ElRio.ShopMacae.ModuloCor  = "cyan"
+			#Info.ElRio.ShopMacae.RelogioCor = "cyan"
+		else:
+			Info.ElRio.ShopMacae.ModuloCor  = "pink"
+			Info.ElRio.ShopMacae.RelogioCor = "pink"
+
+	
+
+	elif relogio == "shopnorte":
+
+		if result == 1:
+			Info.ElRio.ShopNorte.ModuloCor  = "firebrick1"
+			Info.ElRio.ShopNorte.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.ElRio.ShopNorte.ModuloCor  = "green3"
+			Info.ElRio.ShopNorte.RelogioCor = "red4"
+		elif result == 3:
+			Info.ElRio.ShopNorte.ModuloCor  = "green3"
+			Info.ElRio.ShopNorte.RelogioCor = "green3"
+		elif result == 4:
+			Info.ElRio.ShopNorte.ModuloCor  = "cyan"
+			#Info.ElRio.ShopNorte.RelogioCor = "cyan"
+		else:
+			Info.ElRio.ShopNorte.ModuloCor  = "pink"
+			Info.ElRio.ShopNorte.RelogioCor = "pink"
+
+	
+
+	elif relogio == "backup1":
+
+		if result == 1:
+			Info.ElRio.Backup1.ModuloCor  = "firebrick1"
+			Info.ElRio.Backup1.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.ElRio.Backup1.ModuloCor  = "green3"
+			Info.ElRio.Backup1.RelogioCor = "red4"
+		elif result == 3:
+			Info.ElRio.Backup1.ModuloCor  = "green3"
+			Info.ElRio.Backup1.RelogioCor = "green3"
+		elif result == 4:
+			Info.ElRio.Backup1.ModuloCor  = "cyan"
+			#Info.ElRio.Backup1.RelogioCor = "cyan"
+		else:
+			Info.ElRio.Backup1.ModuloCor  = "pink"
+			Info.ElRio.Backup1.RelogioCor = "pink"
+
+	
+
+	elif relogio == "backup2":
+
+		if result == 1:
+			Info.ElRio.Backup2.ModuloCor  = "firebrick1"
+			Info.ElRio.Backup2.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.ElRio.Backup2.ModuloCor  = "green3"
+			Info.ElRio.Backup2.RelogioCor = "red4"
+		elif result == 3:
+			Info.ElRio.Backup2.ModuloCor  = "green3"
+			Info.ElRio.Backup2.RelogioCor = "green3"
+		elif result == 4:
+			Info.ElRio.Backup2.ModuloCor  = "cyan"
+			#Info.ElRio.Backup2.RelogioCor = "cyan"
+		else:
+			Info.ElRio.Backup2.ModuloCor  = "pink"
+			Info.ElRio.Backup2.RelogioCor = "pink"
+			
+
+	if result != 4:
+		Info.ElRio.Status.Contage = 0
+		if Info.ElRio.BotafogoMuniz.RelogioCor == "green3" : 
+				Info.ElRio.Status.Contage = Info.ElRio.Status.Contage +1
+
+		if Info.ElRio.BotafogoPraia.RelogioCor == "green3" : 
+				Info.ElRio.Status.Contage = Info.ElRio.Status.Contage +1
+
+		if Info.ElRio.Boulevard.RelogioCor == "green3" : 
+				Info.ElRio.Status.Contage = Info.ElRio.Status.Contage +1
+
+		if Info.ElRio.Carioca.RelogioCor == "green3" : 
+				Info.ElRio.Status.Contage = Info.ElRio.Status.Contage +1
+
+		if Info.ElRio.Centro3.RelogioCor == "green3" : 
+				Info.ElRio.Status.Contage = Info.ElRio.Status.Contage +1
+
+		if Info.ElRio.Centro2.RelogioCor == "green3" : 
+				Info.ElRio.Status.Contage = Info.ElRio.Status.Contage +1
+
+		if Info.ElRio.Centro1.RelogioCor == "green3" : 
+				Info.ElRio.Status.Contage = Info.ElRio.Status.Contage +1
+
+		if Info.ElRio.Fashion.RelogioCor == "green3" : 
+				Info.ElRio.Status.Contage = Info.ElRio.Status.Contage +1
+
+		if Info.ElRio.Flamengo.RelogioCor == "green3" : 
+				Info.ElRio.Status.Contage = Info.ElRio.Status.Contage +1
+
+		if Info.ElRio.Leblon.RelogioCor == "green3" : 
+				Info.ElRio.Status.Contage = Info.ElRio.Status.Contage +1
+
+		if Info.ElRio.NovaAmerica.RelogioCor == "green3" : 
+				Info.ElRio.Status.Contage = Info.ElRio.Status.Contage +1
+
+		if Info.ElRio.ShopNorte.RelogioCor == "green3" : 
+				Info.ElRio.Status.Contage = Info.ElRio.Status.Contage +1
+
+		if Info.ElRio.ShopGrande.RelogioCor == "green3" : 
+				Info.ElRio.Status.Contage = Info.ElRio.Status.Contage +1
+
+		if Info.ElRio.ShopMacae.RelogioCor == "green3" : 
+				Info.ElRio.Status.Contage = Info.ElRio.Status.Contage +1
+
+		if Info.ElRio.Backup1.RelogioCor == "green3" : 
+				Info.ElRio.Status.Contage = Info.ElRio.Status.Contage +1
+
+		if Info.ElRio.Backup2.RelogioCor == "green3" : 
+				Info.ElRio.Status.Contage = Info.ElRio.Status.Contage +1
+
+
+
+
+	
+
+
+def AtualizaSBCP(relogio, result):
+
+	if relogio == "nacional":
+
+		if result == 1:
+			Info.SBCP.Nacional.ModuloCor  = "firebrick1"
+			Info.SBCP.Nacional.RelogioCor = "firebrick1"
+		elif result == 2:
+			Info.SBCP.Nacional.ModuloCor  = "green3"
+			Info.SBCP.Nacional.RelogioCor = "red4"
+		elif result == 3:
+			Info.SBCP.Nacional.ModuloCor  = "green3"
+			Info.SBCP.Nacional.RelogioCor = "green3"
+		elif result == 4:
+			Info.SBCP.Nacional.ModuloCor  = "cyan"
+			#Info.SBCP.Nacional.RelogioCor = "cyan"
+		else:
+			Info.SBCP.Nacional.ModuloCor  = "pink"
+			Info.SBCP.Nacional.RelogioCor = "pink"
 
 
 
@@ -1395,6 +1780,10 @@ def AtualizaCor(empresa,relogio,result):
 		AtualizaLotten(relogio,result)
 
 
+	elif empresa == "ElRio":
+		AtualizaElRio(relogio, result)
+
+
 
 	if result != 4:
 		Controle.TotalON = 0	
@@ -1406,7 +1795,7 @@ def AtualizaCor(empresa,relogio,result):
 		Controle.TotalON = Controle.TotalON + Info.Laser.Status.Contage
 		Controle.TotalON = Controle.TotalON + Info.Lotten.Status.Contage
 		Controle.TotalON = Controle.TotalON + Info.GrupoNk.Status.Contage
-
+		Controle.TotalON = Controle.TotalON + Info.ElRio.Status.Contage
 
 
 
@@ -1415,10 +1804,11 @@ def Contagem():
 	Controle.TotalRelogios = 0
 
 
-	Controle.TotalRelogios = Controle.TotalRelogios + Info.Building.Status.TotalRelogios
+	Controle.TotalRelogios = Info.Building.Status.TotalRelogios
 	Controle.TotalRelogios = Controle.TotalRelogios + Info.CasaCristo.Status.TotalRelogios
 	Controle.TotalRelogios = Controle.TotalRelogios + Info.BestInClass.Status.TotalRelogios
 	Controle.TotalRelogios = Controle.TotalRelogios + Info.Laser.Status.TotalRelogios
 	Controle.TotalRelogios = Controle.TotalRelogios + Info.Lotten.Status.TotalRelogios
 	Controle.TotalRelogios = Controle.TotalRelogios + Info.GrupoNk.Status.TotalRelogios
 	Controle.TotalRelogios = Controle.TotalRelogios + Info.IsoRadio.Status.TotalRelogios
+	Controle.TotalRelogios = Controle.TotalRelogios + Info.ElRio.Status.TotalRelogios

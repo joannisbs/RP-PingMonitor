@@ -719,3 +719,226 @@ def leBanco():
 				Info.Lotten.Guarulhos.NumeroRep             = NumeroReP_Lido
 				Info.Lotten.Guarulhos.Responsavel           = Responsavel_Lido
 				Info.Lotten.Guarulhos.Telefone              = Telefone_Lido
+
+
+
+		elif empresa_lido == "elrio":
+
+
+			if relogio_lido == "botafogomuniz":
+				
+				Info.ElRio.BotafogoMuniz.Empresa               = empresa_lido
+				Info.ElRio.BotafogoMuniz.Relogio               = relogio_lido
+				Info.ElRio.BotafogoMuniz.IP                    = ip_lido
+				Info.ElRio.BotafogoMuniz.Porta                 = port_lido
+				Info.ElRio.BotafogoMuniz.NumeroRep             = NumeroReP_Lido
+				Info.ElRio.BotafogoMuniz.Responsavel           = Responsavel_Lido
+				Info.ElRio.BotafogoMuniz.Telefone              = Telefone_Lido
+
+
+
+
+			elif relogio_lido == "botafogopraia":
+				
+				Info.ElRio.BotafogoPraia.Empresa               = empresa_lido
+				Info.ElRio.BotafogoPraia.Relogio               = relogio_lido
+				Info.ElRio.BotafogoPraia.IP                    = ip_lido
+				Info.ElRio.BotafogoPraia.Porta                 = port_lido
+				Info.ElRio.BotafogoPraia.NumeroRep             = NumeroReP_Lido
+				Info.ElRio.BotafogoPraia.Responsavel           = Responsavel_Lido
+				Info.ElRio.BotafogoPraia.Telefone              = Telefone_Lido
+
+
+
+
+			elif relogio_lido == "Boulevard":
+				
+				Info.ElRio.Boulevard.Empresa               		= empresa_lido
+				Info.ElRio.Boulevard.Relogio               		= relogio_lido
+				Info.ElRio.Boulevard.IP                    		= ip_lido
+				Info.ElRio.Boulevard.Porta                 		= port_lido
+				Info.ElRio.Boulevard.NumeroRep             		= NumeroReP_Lido
+				Info.ElRio.Boulevard.Responsavel           		= Responsavel_Lido
+				Info.ElRio.Boulevard.Telefone              		= Telefone_Lido
+
+
+
+
+			elif relogio_lido == "carioca":
+				
+				Info.ElRio.Carioca.Empresa               = empresa_lido
+				Info.ElRio.Carioca.Relogio               = relogio_lido
+				Info.ElRio.Carioca.IP                    = ip_lido
+				Info.ElRio.Carioca.Porta                 = port_lido
+				Info.ElRio.Carioca.NumeroRep             = NumeroReP_Lido
+				Info.ElRio.Carioca.Responsavel           = Responsavel_Lido
+				Info.ElRio.Carioca.Telefone              = Telefone_Lido
+
+
+
+
+			elif relogio_lido == "centro1":
+				
+				Info.ElRio.Centro1.Empresa               = empresa_lido
+				Info.ElRio.Centro1.Relogio               = relogio_lido
+				Info.ElRio.Centro1.IP                    = ip_lido
+				Info.ElRio.Centro1.Porta                 = port_lido
+				Info.ElRio.Centro1.NumeroRep             = NumeroReP_Lido
+				Info.ElRio.Centro1.Responsavel           = Responsavel_Lido
+				Info.ElRio.Centro1.Telefone              = Telefone_Lido
+
+
+
+
+			elif relogio_lido == "centro2":
+				
+				Info.ElRio.Centro2.Empresa               = empresa_lido
+				Info.ElRio.Centro2.Relogio               = relogio_lido
+				Info.ElRio.Centro2.IP                    = ip_lido
+				Info.ElRio.Centro2.Porta                 = port_lido
+				Info.ElRio.Centro2.NumeroRep             = NumeroReP_Lido
+				Info.ElRio.Centro2.Responsavel           = Responsavel_Lido
+				Info.ElRio.Centro2.Telefone              = Telefone_Lido
+
+
+
+
+			elif relogio_lido == "centro3":
+				
+				Info.ElRio.Centro3.Empresa               = empresa_lido
+				Info.ElRio.Centro3.Relogio               = relogio_lido
+				Info.ElRio.Centro3.IP                    = ip_lido
+				Info.ElRio.Centro3.Porta                 = port_lido
+				Info.ElRio.Centro3.NumeroRep             = NumeroReP_Lido
+				Info.ElRio.Centro3.Responsavel           = Responsavel_Lido
+				Info.ElRio.Centro3.Telefone              = Telefone_Lido
+
+
+
+
+			elif relogio_lido == "fashion":
+				
+				Info.ElRio.Fashion.Empresa               = empresa_lido
+				Info.ElRio.Fashion.Relogio               = relogio_lido
+				Info.ElRio.Fashion.IP                    = ip_lido
+				Info.ElRio.Fashion.Porta                 = port_lido
+				Info.ElRio.Fashion.NumeroRep             = NumeroReP_Lido
+				Info.ElRio.Fashion.Responsavel           = Responsavel_Lido
+				Info.ElRio.Fashion.Telefone              = Telefone_Lido
+
+
+
+
+			elif relogio_lido == "flamengo":
+				
+				Info.ElRio.Flamengo.Empresa               = empresa_lido
+				Info.ElRio.Flamengo.Relogio               = relogio_lido
+				Info.ElRio.Flamengo.IP                    = ip_lido
+				Info.ElRio.Flamengo.Porta                 = port_lido
+				Info.ElRio.Flamengo.NumeroRep             = NumeroReP_Lido
+				Info.ElRio.Flamengo.Responsavel           = Responsavel_Lido
+				Info.ElRio.Flamengo.Telefone              = Telefone_Lido
+
+
+
+
+			elif relogio_lido == "leblon":
+				
+				Info.ElRio.Leblon.Empresa               = empresa_lido
+				Info.ElRio.Leblon.Relogio               = relogio_lido
+				Info.ElRio.Leblon.IP                    = ip_lido
+				Info.ElRio.Leblon.Porta                 = port_lido
+				Info.ElRio.Leblon.NumeroRep             = NumeroReP_Lido
+				Info.ElRio.Leblon.Responsavel           = Responsavel_Lido
+				Info.ElRio.Leblon.Telefone              = Telefone_Lido
+
+
+
+
+			elif relogio_lido == "novaamerica":
+				
+				Info.ElRio.NovaAmerica.Empresa               = empresa_lido
+				Info.ElRio.NovaAmerica.Relogio               = relogio_lido
+				Info.ElRio.NovaAmerica.IP                    = ip_lido
+				Info.ElRio.NovaAmerica.Porta                 = port_lido
+				Info.ElRio.NovaAmerica.NumeroRep             = NumeroReP_Lido
+				Info.ElRio.NovaAmerica.Responsavel           = Responsavel_Lido
+				Info.ElRio.NovaAmerica.Telefone              = Telefone_Lido
+
+
+
+
+			elif relogio_lido == "botafogomuniz":
+				
+				Info.ElRio.BotafogoMuniz.Empresa               = empresa_lido
+				Info.ElRio.BotafogoMuniz.Relogio               = relogio_lido
+				Info.ElRio.BotafogoMuniz.IP                    = ip_lido
+				Info.ElRio.BotafogoMuniz.Porta                 = port_lido
+				Info.ElRio.BotafogoMuniz.NumeroRep             = NumeroReP_Lido
+				Info.ElRio.BotafogoMuniz.Responsavel           = Responsavel_Lido
+				Info.ElRio.BotafogoMuniz.Telefone              = Telefone_Lido
+
+
+
+
+			elif relogio_lido == "shopgrande":
+				
+				Info.ElRio.ShopGrande.Empresa               = empresa_lido
+				Info.ElRio.ShopGrande.Relogio               = relogio_lido
+				Info.ElRio.ShopGrande.IP                    = ip_lido
+				Info.ElRio.ShopGrande.Porta                 = port_lido
+				Info.ElRio.ShopGrande.NumeroRep             = NumeroReP_Lido
+				Info.ElRio.ShopGrande.Responsavel           = Responsavel_Lido
+				Info.ElRio.ShopGrande.Telefone              = Telefone_Lido
+
+
+
+
+			elif relogio_lido == "shopmacae":
+				
+				Info.ElRio.ShopMacae.Empresa               = empresa_lido
+				Info.ElRio.ShopMacae.Relogio               = relogio_lido
+				Info.ElRio.ShopMacae.IP                    = ip_lido
+				Info.ElRio.ShopMacae.Porta                 = port_lido
+				Info.ElRio.ShopMacae.NumeroRep             = NumeroReP_Lido
+				Info.ElRio.ShopMacae.Responsavel           = Responsavel_Lido
+				Info.ElRio.ShopMacae.Telefone              = Telefone_Lido
+
+
+
+
+			elif relogio_lido == "shopnorte":
+				
+				Info.ElRio.ShopNorte.Empresa               = empresa_lido
+				Info.ElRio.ShopNorte.Relogio               = relogio_lido
+				Info.ElRio.ShopNorte.IP                    = ip_lido
+				Info.ElRio.ShopNorte.Porta                 = port_lido
+				Info.ElRio.ShopNorte.NumeroRep             = NumeroReP_Lido
+				Info.ElRio.ShopNorte.Responsavel           = Responsavel_Lido
+				Info.ElRio.ShopNorte.Telefone              = Telefone_Lido
+
+
+
+
+			elif relogio_lido == "backup1":
+				
+				Info.ElRio.Backup1.Empresa               = empresa_lido
+				Info.ElRio.Backup1.Relogio               = relogio_lido
+				Info.ElRio.Backup1.IP                    = ip_lido
+				Info.ElRio.Backup1.Porta                 = port_lido
+				Info.ElRio.Backup1.NumeroRep             = NumeroReP_Lido
+				Info.ElRio.Backup1.Responsavel           = Responsavel_Lido
+				Info.ElRio.Backup1.Telefone              = Telefone_Lido
+
+
+
+
+			elif relogio_lido == "backup2":
+				
+				Info.ElRio.Backup2.Empresa               = empresa_lido
+				Info.ElRio.Backup2.Relogio               = relogio_lido
+				Info.ElRio.Backup2.IP                    = ip_lido
+				Info.ElRio.Backup2.Porta                 = port_lido
+				Info.ElRio.Backup2.NumeroRep             = NumeroReP_Lido
+				Info.ElRio.Backup2.Responsavel           = Responsavel_Lido
+				Info.ElRio.Backup2.Telefone              = Telefone_Lido
