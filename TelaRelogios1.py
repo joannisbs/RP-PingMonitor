@@ -48,17 +48,35 @@ class TelaRelogios1(object):
 
 	def Create_IsoRadio(self):
 
-		self.msgIsoRad 									= Label (self.ContainerIsoRadio,text = "Iso Radiologia")
+		self.msgIsoRad 									= Label (self.ContainerIsoRadio,text = "Iso Radiologia", font = "arialblack 12 bold")
 		self.msgIsoRad 									["height"] = 1
 		self.msgIsoRad.grid 							(row=0,column=0,sticky = "N")
 
 
+
+		self.botaoIsoRadAtencao                                        = Button(self.ContainerIsoRadio)
+		self.botaoIsoRadAtencao                         ["text"]       = "A"
+		self.botaoIsoRadAtencao                         ["height"]     = 1
+		self.botaoIsoRadAtencao                         ["background"] = "green3"
+		self.botaoIsoRadAtencao                         ["width"]      = 1
+
+		self.botaoIsoRadAtencao.grid                     (row=0,column=1,sticky = "N")
+
+
+
+
+
+
+
 		self.msgIsoRadCont 								= Label (self.ContainerIsoRadio,text = str(Info.IsoRadio.Status.Contage)+"/"
-																							+str(Info.IsoRadio.Status.TotalRelogios))
+																			+str(Info.IsoRadio.Status.TotalRelogios),font="arial 11")
 		self.msgIsoRadCont 								["height"] = 1
-		self.msgIsoRadCont.grid 						(row=0,column=1,sticky = "N")
+		self.msgIsoRadCont.grid 						(row=1,column=1,pady=2,sticky = "N")
 
 
+		self.msgIsoRadHora = Label (self.ContainerIsoRadio,text = "00:00",font="arial 11")
+																			
+		self.msgIsoRadHora.grid(row=1,column=0,pady=2, sticky = "N")
 
 		self.botaoIsoRadioSantana                      		           = Button(self.ContainerIsoRadio)
 		self.botaoIsoRadioSantana              			["text"]       = "Santana"
@@ -71,14 +89,14 @@ class TelaRelogios1(object):
 														Info.IsoRadio.Santana.NumeroRep, 
 														Info.IsoRadio.Santana.Responsavel, 
 														Info.IsoRadio.Santana.Telefone))
-		self.botaoIsoRadioSantana.grid         			(row=1, column=0, sticky = "N")
+		self.botaoIsoRadioSantana.grid         			(row=2, column=0, sticky = "N")
 
 		self.botaoIsoRadioSantanaRelogio                      		   = Button(self.ContainerIsoRadio)
 		self.botaoIsoRadioSantanaRelogio       			["text"]       = "R"
 		self.botaoIsoRadioSantanaRelogio       			["background"] = Info.IsoRadio.Santana.RelogioCor
 		self.botaoIsoRadioSantanaRelogio       			["width"]      = 1
 		self.botaoIsoRadioSantanaRelogio       			["height"]     = 1
-		self.botaoIsoRadioSantanaRelogio.grid  			(row=1, column=1, sticky = "N")
+		self.botaoIsoRadioSantanaRelogio.grid  			(row=2, column=1, sticky = "N")
 
 
 
@@ -93,14 +111,14 @@ class TelaRelogios1(object):
 														Info.IsoRadio.SaoMatheus.NumeroRep, 
 														Info.IsoRadio.SaoMatheus.Responsavel, 
 														Info.IsoRadio.SaoMatheus.Telefone))
-		self.botaoIsoRadioSaoMatheus.grid         		(row=2, column=0, sticky = "N")
+		self.botaoIsoRadioSaoMatheus.grid         		(row=3, column=0, sticky = "N")
 
 		self.botaoIsoRadioSaoMatheusRelogio                    		   = Button(self.ContainerIsoRadio)
 		self.botaoIsoRadioSaoMatheusRelogio       		["text"]       = "R"
 		self.botaoIsoRadioSaoMatheusRelogio       		["background"] = Info.IsoRadio.SaoMatheus.RelogioCor
 		self.botaoIsoRadioSaoMatheusRelogio       		["width"]      = 1
 		self.botaoIsoRadioSaoMatheusRelogio       		["height"]     = 1
-		self.botaoIsoRadioSaoMatheusRelogio.grid  		(row=2, column=1, sticky = "N")
+		self.botaoIsoRadioSaoMatheusRelogio.grid  		(row=3, column=1, sticky = "N")
 
 
 		self.botaoIsoRadioVMariana                    	               = Button(self.ContainerIsoRadio)
@@ -114,14 +132,14 @@ class TelaRelogios1(object):
 														Info.IsoRadio.VilaMariana.NumeroRep, 
 														Info.IsoRadio.VilaMariana.Responsavel, 
 														Info.IsoRadio.VilaMariana.Telefone))
-		self.botaoIsoRadioVMariana.grid         		(row=3, column=0, sticky = "N")
+		self.botaoIsoRadioVMariana.grid         		(row=4, column=0, sticky = "N")
 
 		self.botaoIsoRadioVMarianaRelogio                    		   = Button(self.ContainerIsoRadio)
 		self.botaoIsoRadioVMarianaRelogio       		["text"]       = "R"
 		self.botaoIsoRadioVMarianaRelogio       		["background"] = Info.IsoRadio.VilaMariana.RelogioCor
 		self.botaoIsoRadioVMarianaRelogio       		["width"]      = 1
 		self.botaoIsoRadioVMarianaRelogio       		["height"]     = 1
-		self.botaoIsoRadioVMarianaRelogio.grid  		(row=3, column=1, sticky = "N")
+		self.botaoIsoRadioVMarianaRelogio.grid  		(row=4, column=1, sticky = "N")
 
 
 
@@ -139,14 +157,14 @@ class TelaRelogios1(object):
 														Info.IsoRadio.Lapa.NumeroRep, 
 														Info.IsoRadio.Lapa.Responsavel, 
 														Info.IsoRadio.Lapa.Telefone))
-		self.botaoIsoRadioLapa.grid         			(row=4, column=0, sticky = "N")
+		self.botaoIsoRadioLapa.grid         			(row=5, column=0, sticky = "N")
 
 		self.botaoIsoRadioLapaRelogio                    		       = Button(self.ContainerIsoRadio)
 		self.botaoIsoRadioLapaRelogio       			["text"]       = "R"
 		self.botaoIsoRadioLapaRelogio       			["background"] = Info.IsoRadio.Lapa.RelogioCor
 		self.botaoIsoRadioLapaRelogio       			["width"]      = 1
 		self.botaoIsoRadioLapaRelogio       			["height"]     = 1
-		self.botaoIsoRadioLapaRelogio.grid  			(row=4, column=1, sticky = "N")
+		self.botaoIsoRadioLapaRelogio.grid  			(row=5, column=1, sticky = "N")
 
 
 
@@ -164,14 +182,14 @@ class TelaRelogios1(object):
 														Info.IsoRadio.SAmaro.NumeroRep, 
 														Info.IsoRadio.SAmaro.Responsavel, 
 														Info.IsoRadio.SAmaro.Telefone))
-		self.botaoIsoRadioSAmaro.grid         			(row=5, column=0, sticky = "N")
+		self.botaoIsoRadioSAmaro.grid         			(row=6, column=0, sticky = "N")
 
 		self.botaoIsoRadioSAmaroRelogio             	       		   = Button(self.ContainerIsoRadio)
 		self.botaoIsoRadioSAmaroRelogio       			["text"]       = "R"
 		self.botaoIsoRadioSAmaroRelogio       			["background"] = Info.IsoRadio.SAmaro.RelogioCor
 		self.botaoIsoRadioSAmaroRelogio       			["width"]      = 1
 		self.botaoIsoRadioSAmaroRelogio       			["height"]     = 1
-		self.botaoIsoRadioSAmaroRelogio.grid  			(row=5, column=1, sticky = "N")
+		self.botaoIsoRadioSAmaroRelogio.grid  			(row=6, column=1, sticky = "N")
 
 
 
@@ -189,14 +207,14 @@ class TelaRelogios1(object):
 														Info.IsoRadio.CDutra.NumeroRep, 
 														Info.IsoRadio.CDutra.Responsavel, 
 														Info.IsoRadio.CDutra.Telefone))
-		self.botaoIsoRadioCDutra.grid         			(row=6, column=0, sticky = "N")
+		self.botaoIsoRadioCDutra.grid         			(row=7, column=0, sticky = "N")
 
 		self.botaoIsoRadioCDutraRelogio                	    		   = Button(self.ContainerIsoRadio)
 		self.botaoIsoRadioCDutraRelogio       			["text"]       = "R"
 		self.botaoIsoRadioCDutraRelogio       			["background"] = Info.IsoRadio.CDutra.RelogioCor
 		self.botaoIsoRadioCDutraRelogio       			["width"]      = 1
 		self.botaoIsoRadioCDutraRelogio       			["height"]     = 1
-		self.botaoIsoRadioCDutraRelogio.grid  			(row=6, column=1, sticky = "N")
+		self.botaoIsoRadioCDutraRelogio.grid  			(row=7, column=1, sticky = "N")
 
 
 
@@ -214,14 +232,14 @@ class TelaRelogios1(object):
 														Info.IsoRadio.Tatuape.NumeroRep, 
 														Info.IsoRadio.Tatuape.Responsavel, 
 														Info.IsoRadio.Tatuape.Telefone))
-		self.botaoIsoRadioTatuape.grid         			(row=7, column=0, sticky = "N")
+		self.botaoIsoRadioTatuape.grid         			(row=8, column=0, sticky = "N")
 
 		self.botaoIsoRadioTatuapeRelogio                    		   = Button(self.ContainerIsoRadio)
 		self.botaoIsoRadioTatuapeRelogio       			["text"]       = "R"
 		self.botaoIsoRadioTatuapeRelogio       			["background"] = Info.IsoRadio.Tatuape.RelogioCor
 		self.botaoIsoRadioTatuapeRelogio       			["width"]      = 1
 		self.botaoIsoRadioTatuapeRelogio       			["height"]     = 1
-		self.botaoIsoRadioTatuapeRelogio.grid  			(row=7, column=1, sticky = "N")
+		self.botaoIsoRadioTatuapeRelogio.grid  			(row=8, column=1, sticky = "N")
 
 
 
@@ -239,14 +257,14 @@ class TelaRelogios1(object):
 														Info.IsoRadio.CLimpo.NumeroRep, 
 														Info.IsoRadio.CLimpo.Responsavel, 
 														Info.IsoRadio.CLimpo.Telefone))
-		self.botaoIsoRadioCLimpo.grid         			(row=8, column=0, sticky = "N")
+		self.botaoIsoRadioCLimpo.grid         			(row=9, column=0, sticky = "N")
 
 		self.botaoIsoRadioCLimpoRelogio            	        		   = Button(self.ContainerIsoRadio)
 		self.botaoIsoRadioCLimpoRelogio       			["text"]       = "R"
 		self.botaoIsoRadioCLimpoRelogio       			["background"] = Info.IsoRadio.CLimpo.RelogioCor
 		self.botaoIsoRadioCLimpoRelogio       			["width"]      = 1
 		self.botaoIsoRadioCLimpoRelogio       			["height"]     = 1
-		self.botaoIsoRadioCLimpoRelogio.grid  			(row=8, column=1, sticky = "N")
+		self.botaoIsoRadioCLimpoRelogio.grid  			(row=9, column=1, sticky = "N")
 
 
 
@@ -263,14 +281,14 @@ class TelaRelogios1(object):
 														Info.IsoRadio.Ipiranga.NumeroRep, 
 														Info.IsoRadio.Ipiranga.Responsavel, 
 														Info.IsoRadio.Ipiranga.Telefone))
-		self.botaoIsoRadioIpiranga.grid         		(row=9, column=0, sticky = "N")
+		self.botaoIsoRadioIpiranga.grid         		(row=10, column=0, sticky = "N")
 
 		self.botaoIsoRadioIpirangaRelogio                    		   = Button(self.ContainerIsoRadio)
 		self.botaoIsoRadioIpirangaRelogio       		["text"]       = "R"
 		self.botaoIsoRadioIpirangaRelogio       		["background"] = Info.IsoRadio.Ipiranga.RelogioCor
 		self.botaoIsoRadioIpirangaRelogio       		["width"]      = 1
 		self.botaoIsoRadioIpirangaRelogio       		["height"]     = 1
-		self.botaoIsoRadioIpirangaRelogio.grid  		(row=9, column=1, sticky = "N")
+		self.botaoIsoRadioIpirangaRelogio.grid  		(row=10, column=1, sticky = "N")
 
 
 
@@ -287,14 +305,14 @@ class TelaRelogios1(object):
 														Info.IsoRadio.AnaRosa.NumeroRep, 
 														Info.IsoRadio.AnaRosa.Responsavel, 
 														Info.IsoRadio.AnaRosa.Telefone))
-		self.botaoIsoRadioAnaRosa.grid         			(row=10, column=0, sticky = "N")
+		self.botaoIsoRadioAnaRosa.grid         			(row=11, column=0, sticky = "N")
 
 		self.botaoIsoRadioAnaRosaRelogio                    		   = Button(self.ContainerIsoRadio)
 		self.botaoIsoRadioAnaRosaRelogio       			["text"]       = "R"
 		self.botaoIsoRadioAnaRosaRelogio       			["background"] = Info.IsoRadio.AnaRosa.RelogioCor
 		self.botaoIsoRadioAnaRosaRelogio       			["width"]      = 1
 		self.botaoIsoRadioAnaRosaRelogio       			["height"]     = 1
-		self.botaoIsoRadioAnaRosaRelogio.grid  			(row=10, column=1, sticky = "N")
+		self.botaoIsoRadioAnaRosaRelogio.grid  			(row=11, column=1, sticky = "N")
 
 
 
@@ -521,17 +539,35 @@ class TelaRelogios1(object):
 
 	def Create_Laser(self):
 		
-
+		hora = "10:30"
 
 		self.msgLaser = Label (self.ContainerLaser,text = "Laser", font = "arialblack 12 bold")
 		self.msgLaser["height"]=1
 		self.msgLaser.grid(row=0,column=0,sticky = "N")
 
 
+		self.botaoLaserAtencao                                        = Button(self.ContainerLaser)
+		self.botaoLaserAtencao                         ["text"]       = "A"
+		self.botaoLaserAtencao                         ["height"]     = 1
+		self.botaoLaserAtencao                         ["background"] = "green"
+		self.botaoLaserAtencao                         ["width"]      = 1
+
+		self.botaoLaserAtencao.grid                     (row=0,column=1,sticky = "N")
+	
+
+
+
+
 		self.msgLaserContage = Label (self.ContainerLaser,text = str(Info.Laser.Status.Contage)+"/"+
-																	str(Info.Laser.Status.TotalRelogios))
+																	str(Info.Laser.Status.TotalRelogios)
+																	,font="arial 11")
 		self.msgLaserContage["height"]=1
-		self.msgLaserContage.grid(row=0,column=1,sticky = "N")
+		self.msgLaserContage.grid(row=1,column=1,sticky = "N")
+
+
+		self.msgLaserHora = Label (self.ContainerLaser,text = "00:00",font="arial 11")
+																			
+		self.msgLaserHora.grid(row=1,column=0, sticky = "N")
 
 
 
@@ -553,8 +589,8 @@ class TelaRelogios1(object):
 		self.botaoRAcademia                         ["background"] = Info.Laser.Academia.RelogioCor
 		self.botaoRAcademia                         ["width"]      = 1
 
-		self.botaoAcademia.grid                     (row=1,column=0,sticky = "N")
-		self.botaoRAcademia.grid                    (row=1,column=1,sticky = "N")
+		self.botaoAcademia.grid                     (row=2,column=0,sticky = "N")
+		self.botaoRAcademia.grid                    (row=2,column=1,sticky = "N")
 
 
 		self.botaoInstituto                                        = Button(self.ContainerLaser)
@@ -576,8 +612,8 @@ class TelaRelogios1(object):
 		self.botaoRInstituto                        ["height"]     = 1
 
 
-		self.botaoInstituto.grid                    (row=2,column=0,sticky = "N")
-		self.botaoRInstituto.grid                   (row=2,column=1,sticky = "N")
+		self.botaoInstituto.grid                    (row=3,column=0,sticky = "N")
+		self.botaoRInstituto.grid                   (row=3,column=1,sticky = "N")
 
 
 
@@ -1194,13 +1230,33 @@ class TelaRelogios1(object):
 
 	def Create_Lotten(self):
 
+		
 		self.msgLotten = Label (self.ContainerLotten,text = "Lotten", font = "arialblack 12 bold")
 		self.msgLotten.grid(row=0,column=0,sticky = "N")
 
-		self.msgLottenContage = Label (self.ContainerLotten,text=str(Info.Lotten.Status.Contage)+"/"+
-														  str(Info.Lotten.Status.TotalRelogios))
 
-		self.msgLottenContage.grid(row=0,column=1,sticky = "N")
+		self.botaoLottenAtencao                                        = Button(self.ContainerLotten)
+		self.botaoLottenAtencao                         ["text"]       = "A"
+		self.botaoLottenAtencao                         ["height"]     = 1
+		self.botaoLottenAtencao                         ["background"] = "green3"
+		self.botaoLottenAtencao                         ["width"]      = 1
+
+		self.botaoLottenAtencao.grid                     (row=0,column=1,sticky = "N")
+
+
+
+
+
+
+		self.msgLottenContage = Label (self.ContainerLotten,text=str(Info.Lotten.Status.Contage)+"/"+
+														  str(Info.Lotten.Status.TotalRelogios),
+														  font="arial 11")
+
+		self.msgLottenContage.grid(row=1,column=1,pady=2,sticky = "N")
+
+		self.msgLottenHora = Label (self.ContainerLotten,text = "00:00",font="arial 11")
+																			
+		self.msgLottenHora.grid(row=1,column=0, pady=2,sticky = "N")
 
 
 
@@ -1218,14 +1274,14 @@ class TelaRelogios1(object):
 													Info.Lotten.Jardins.NumeroRep, 
 													Info.Lotten.Jardins.Responsavel, 
 													Info.Lotten.Jardins.Telefone))
-		self.botaoLottenJardins.grid              (row=1,column=0,sticky = "N")
+		self.botaoLottenJardins.grid              (row=2,column=0,sticky = "N")
 
 		self.botaoLottenJardinsRelogio                           = Button(self.ContainerLotten)
 		self.botaoLottenJardinsRelogio            ["text"]       = "R"
 		self.botaoLottenJardinsRelogio            ["background"] = Info.Lotten.Jardins.RelogioCor
 		self.botaoLottenJardinsRelogio            ["width"]      = 1
 		self.botaoLottenJardinsRelogio            ["height"]     = 1
-		self.botaoLottenJardinsRelogio.grid       (row=1,column=1,sticky = "N")
+		self.botaoLottenJardinsRelogio.grid       (row=2,column=1,sticky = "N")
 
 
 
@@ -1241,14 +1297,14 @@ class TelaRelogios1(object):
 													Info.Lotten.Alphaville.NumeroRep, 
 													Info.Lotten.Alphaville.Responsavel, 
 													Info.Lotten.Alphaville.Telefone))
-		self.botaoLottenAlphaville.grid           (row=2,column=0,sticky = "N")
+		self.botaoLottenAlphaville.grid           (row=3,column=0,sticky = "N")
 
 		self.botaoLottenAlphavilleRelogio                        = Button(self.ContainerLotten)
 		self.botaoLottenAlphavilleRelogio         ["text"]       = "R"
 		self.botaoLottenAlphavilleRelogio         ["background"] = Info.Lotten.Alphaville.RelogioCor
 		self.botaoLottenAlphavilleRelogio         ["width"]      = 1
 		self.botaoLottenAlphavilleRelogio         ["height"]     = 1		
-		self.botaoLottenAlphavilleRelogio.grid    (row=2,column=1,sticky = "N")
+		self.botaoLottenAlphavilleRelogio.grid    (row=3,column=1,sticky = "N")
 
 
 
@@ -1264,14 +1320,14 @@ class TelaRelogios1(object):
 													Info.Lotten.Osasco.NumeroRep, 
 													Info.Lotten.Osasco.Responsavel, 
 													Info.Lotten.Osasco.Telefone))
-		self.botaoLottenOsasco.grid              (row=3,column=0,sticky = "N")
+		self.botaoLottenOsasco.grid              (row=4,column=0,sticky = "N")
 
 		self.botaoLottenOsascoRelogio                           = Button(self.ContainerLotten)
 		self.botaoLottenOsascoRelogio            ["text"]       = "R"
 		self.botaoLottenOsascoRelogio            ["background"] = Info.Lotten.Osasco.RelogioCor
 		self.botaoLottenOsascoRelogio            ["width"]      = 1
 		self.botaoLottenOsascoRelogio            ["height"]     = 1		
-		self.botaoLottenOsascoRelogio.grid       (row=3,column=1,sticky = "N")
+		self.botaoLottenOsascoRelogio.grid       (row=4,column=1,sticky = "N")
 
 
 
@@ -1287,14 +1343,14 @@ class TelaRelogios1(object):
 													Info.Lotten.Santana.NumeroRep, 
 													Info.Lotten.Santana.Responsavel, 
 													Info.Lotten.Santana.Telefone))
-		self.botaoLottenSantana.grid             (row=4,column=0,sticky = "N")
+		self.botaoLottenSantana.grid             (row=5,column=0,sticky = "N")
 
 		self.botaoLottenSantanaRelogio                          = Button(self.ContainerLotten)
 		self.botaoLottenSantanaRelogio           ["text"]       = "R"
 		self.botaoLottenSantanaRelogio           ["background"] = Info.Lotten.Santana.RelogioCor
 		self.botaoLottenSantanaRelogio           ["width"]      = 1
 		self.botaoLottenSantanaRelogio           ["height"]     = 1
-		self.botaoLottenSantanaRelogio.grid      (row=4,column=1,sticky = "N")
+		self.botaoLottenSantanaRelogio.grid      (row=5,column=1,sticky = "N")
 
 
 
@@ -1310,14 +1366,14 @@ class TelaRelogios1(object):
 													Info.Lotten.Tatuape.NumeroRep, 
 													Info.Lotten.Tatuape.Responsavel, 
 													Info.Lotten.Tatuape.Telefone))
-		self.botaoLottenTatuape.grid            (row=5,column=0,sticky = "N")
+		self.botaoLottenTatuape.grid            (row=6,column=0,sticky = "N")
 
 		self.botaoLottenTatuapeRelogio                         = Button(self.ContainerLotten)
 		self.botaoLottenTatuapeRelogio          ["text"]       = "R"
 		self.botaoLottenTatuapeRelogio          ["background"] = Info.Lotten.Tatuape.RelogioCor
 		self.botaoLottenTatuapeRelogio          ["width"]      = 1
 		self.botaoLottenTatuapeRelogio          ["height"]     = 1		
-		self.botaoLottenTatuapeRelogio.grid     (row=5,column=1,sticky = "N")
+		self.botaoLottenTatuapeRelogio.grid     (row=6,column=1,sticky = "N")
 
 
 
@@ -1333,14 +1389,14 @@ class TelaRelogios1(object):
 													Info.Lotten.Moema.NumeroRep, 
 													Info.Lotten.Moema.Responsavel, 
 													Info.Lotten.Moema.Telefone))
-		self.botaoLottenMoema.grid              (row=6,column=0,sticky = "N")
+		self.botaoLottenMoema.grid              (row=7,column=0,sticky = "N")
 
 		self.botaoLottenMoemaRelogio                           = Button(self.ContainerLotten)
 		self.botaoLottenMoemaRelogio            ["text"]       = "R"
 		self.botaoLottenMoemaRelogio            ["background"] = Info.Lotten.Moema.RelogioCor
 		self.botaoLottenMoemaRelogio            ["width"]      = 1
 		self.botaoLottenMoemaRelogio            ["height"]     = 1
-		self.botaoLottenMoemaRelogio.grid       (row=6,column=1,sticky = "N")
+		self.botaoLottenMoemaRelogio.grid       (row=7,column=1,sticky = "N")
 
 
 
@@ -1357,14 +1413,14 @@ class TelaRelogios1(object):
 													Info.Lotten.JardimSul.NumeroRep, 
 													Info.Lotten.JardimSul.Responsavel, 
 													Info.Lotten.JardimSul.Telefone))
-		self.botaoLottenJardimSul.grid          (row=7,column=0,sticky = "N")
+		self.botaoLottenJardimSul.grid          (row=8,column=0,sticky = "N")
 
 		self.botaoLottenJardimSulRelogio                       = Button(self.ContainerLotten)
 		self.botaoLottenJardimSulRelogio        ["text"]       = "R"
 		self.botaoLottenJardimSulRelogio        ["background"] = Info.Lotten.JardimSul.RelogioCor
 		self.botaoLottenJardimSulRelogio        ["width"]      = 1
 		self.botaoLottenJardimSulRelogio        ["height"]     = 1
-		self.botaoLottenJardimSulRelogio.grid   (row=7,column=1,sticky = "N")
+		self.botaoLottenJardimSulRelogio.grid   (row=8,column=1,sticky = "N")
 
 
 
@@ -1380,14 +1436,14 @@ class TelaRelogios1(object):
 													Info.Lotten.Conceicao.NumeroRep, 
 													Info.Lotten.Conceicao.Responsavel, 
 													Info.Lotten.Conceicao.Telefone))
-		self.botaoLottenConceicao.grid          (row=8,column=0,sticky = "N")
+		self.botaoLottenConceicao.grid          (row=9,column=0,sticky = "N")
 
 		self.botaoLottenConceicaoRelogio                       = Button(self.ContainerLotten)
 		self.botaoLottenConceicaoRelogio        ["text"]       = "R"
 		self.botaoLottenConceicaoRelogio        ["background"] = Info.Lotten.Conceicao.RelogioCor
 		self.botaoLottenConceicaoRelogio        ["width"]      = 1
 		self.botaoLottenConceicaoRelogio        ["height"]     = 1
-		self.botaoLottenConceicaoRelogio.grid   (row=8,column=1,sticky = "N")
+		self.botaoLottenConceicaoRelogio.grid   (row=9,column=1,sticky = "N")
 
 
 
@@ -1403,14 +1459,14 @@ class TelaRelogios1(object):
 													Info.Lotten.Perdizes.NumeroRep, 
 													Info.Lotten.Perdizes.Responsavel, 
 													Info.Lotten.Perdizes.Telefone))
-		self.botaoLottenPerdizes.grid           (row=9,column=0,sticky = "N")
+		self.botaoLottenPerdizes.grid           (row=10,column=0,sticky = "N")
 
 		self.botaoLottenPerdizesRelogio                        = Button(self.ContainerLotten)
 		self.botaoLottenPerdizesRelogio         ["text"]       = "R"
 		self.botaoLottenPerdizesRelogio         ["background"] = Info.Lotten.Perdizes.RelogioCor
 		self.botaoLottenPerdizesRelogio         ["width"]      = 1
 		self.botaoLottenPerdizesRelogio         ["height"]     = 1
-		self.botaoLottenPerdizesRelogio.grid    (row=9,column=1,sticky = "N")
+		self.botaoLottenPerdizesRelogio.grid    (row=10,column=1,sticky = "N")
 
 
 
@@ -1426,14 +1482,14 @@ class TelaRelogios1(object):
 													Info.Lotten.Lapa.NumeroRep, 
 													Info.Lotten.Lapa.Responsavel, 
 													Info.Lotten.Lapa.Telefone))
-		self.botaoLottenLapa.grid               (row=10,column=0,sticky = "N")
+		self.botaoLottenLapa.grid               (row=11,column=0,sticky = "N")
 
 		self.botaoLottenLapaRelogio                            = Button(self.ContainerLotten)
 		self.botaoLottenLapaRelogio             ["text"]       = "R"
 		self.botaoLottenLapaRelogio             ["background"] = Info.Lotten.Lapa.RelogioCor
 		self.botaoLottenLapaRelogio             ["width"]      = 1
 		self.botaoLottenLapaRelogio             ["height"]     = 1
-		self.botaoLottenLapaRelogio.grid        (row=10,column=1,sticky = "N")
+		self.botaoLottenLapaRelogio.grid        (row=11,column=1,sticky = "N")
 
 
 
@@ -1449,14 +1505,14 @@ class TelaRelogios1(object):
 													Info.Lotten.SaoCaetano.NumeroRep, 
 													Info.Lotten.SaoCaetano.Responsavel, 
 													Info.Lotten.SaoCaetano.Telefone))
-		self.botaoLottenSaoCaetano.grid         (row=11,column=0,sticky = "N")
+		self.botaoLottenSaoCaetano.grid         (row=12,column=0,sticky = "N")
 
 		self.botaoLottenSaoCaetanoRelogio                      = Button(self.ContainerLotten)
 		self.botaoLottenSaoCaetanoRelogio       ["text"]       = "R"
 		self.botaoLottenSaoCaetanoRelogio       ["background"] = Info.Lotten.SaoCaetano.RelogioCor
 		self.botaoLottenSaoCaetanoRelogio       ["width"]      = 1
 		self.botaoLottenSaoCaetanoRelogio       ["height"]     = 1
-		self.botaoLottenSaoCaetanoRelogio.grid  (row=11,column=1,sticky = "N")
+		self.botaoLottenSaoCaetanoRelogio.grid  (row=12,column=1,sticky = "N")
 
 
 
@@ -1472,14 +1528,14 @@ class TelaRelogios1(object):
 													Info.Lotten.Pinheiros.NumeroRep, 
 													Info.Lotten.Pinheiros.Responsavel, 
 													Info.Lotten.Pinheiros.Telefone))
-		self.botaoLottenPinheiros.grid          (row=12,column=0,sticky = "N")
+		self.botaoLottenPinheiros.grid          (row=13,column=0,sticky = "N")
 
 		self.botaoLottenPinheirosRelogio                       = Button(self.ContainerLotten)
 		self.botaoLottenPinheirosRelogio        ["text"]       = "R"
 		self.botaoLottenPinheirosRelogio        ["background"] = Info.Lotten.Pinheiros.RelogioCor
 		self.botaoLottenPinheirosRelogio        ["width"]      = 1
 		self.botaoLottenPinheirosRelogio        ["height"]     = 1
-		self.botaoLottenPinheirosRelogio.grid   (row=12,column=1,sticky = "N")
+		self.botaoLottenPinheirosRelogio.grid   (row=13,column=1,sticky = "N")
 
 
 
@@ -1495,14 +1551,14 @@ class TelaRelogios1(object):
 													Info.Lotten.Morumbi.NumeroRep, 
 													Info.Lotten.Morumbi.Responsavel, 
 													Info.Lotten.Morumbi.Telefone))
-		self.botaoLottenMorumbi.grid            (row=13,column=0,sticky = "N")
+		self.botaoLottenMorumbi.grid            (row=14,column=0,sticky = "N")
 
 		self.botaoLottenMorumbiRelogio                         = Button(self.ContainerLotten)
 		self.botaoLottenMorumbiRelogio          ["text"]       = "R"
 		self.botaoLottenMorumbiRelogio          ["background"] = Info.Lotten.Morumbi.RelogioCor
 		self.botaoLottenMorumbiRelogio          ["width"]      = 1
 		self.botaoLottenMorumbiRelogio          ["height"]     = 1
-		self.botaoLottenMorumbiRelogio.grid     (row=13,column=1,sticky = "N")
+		self.botaoLottenMorumbiRelogio.grid     (row=14,column=1,sticky = "N")
 
 
 
@@ -1519,14 +1575,14 @@ class TelaRelogios1(object):
 													Info.Lotten.Berrini.NumeroRep, 
 													Info.Lotten.Berrini.Responsavel, 
 													Info.Lotten.Berrini.Telefone))
-		self.botaoLottenBerrini.grid            (row=14,column=0,sticky = "N")
+		self.botaoLottenBerrini.grid            (row=15,column=0,sticky = "N")
 
 		self.botaoLottenBerriniRelogio                         = Button(self.ContainerLotten)
 		self.botaoLottenBerriniRelogio          ["text"]       = "R"
 		self.botaoLottenBerriniRelogio          ["background"] = Info.Lotten.Berrini.RelogioCor
 		self.botaoLottenBerriniRelogio          ["width"]      = 1
 		self.botaoLottenBerriniRelogio          ["height"]     = 1
-		self.botaoLottenBerriniRelogio.grid     (row=14,column=1,sticky = "N")
+		self.botaoLottenBerriniRelogio.grid     (row=15,column=1,sticky = "N")
 
 
 
@@ -1543,14 +1599,14 @@ class TelaRelogios1(object):
 													Info.Lotten.VilaMariana.NumeroRep, 
 													Info.Lotten.VilaMariana.Responsavel, 
 													Info.Lotten.VilaMariana.Telefone))
-		self.botaoLottenVilaMariana.grid        (row=15,column=0,sticky = "N")
+		self.botaoLottenVilaMariana.grid        (row=16,column=0,sticky = "N")
 
 		self.botaoLottenVilaMarianaRelogio                     = Button(self.ContainerLotten)
 		self.botaoLottenVilaMarianaRelogio      ["text"]       = "R"
 		self.botaoLottenVilaMarianaRelogio      ["background"] = Info.Lotten.VilaMariana.RelogioCor
 		self.botaoLottenVilaMarianaRelogio      ["width"]      = 1
 		self.botaoLottenVilaMarianaRelogio      ["height"]     = 1
-		self.botaoLottenVilaMarianaRelogio.grid (row=15,column=1,sticky = "N")
+		self.botaoLottenVilaMarianaRelogio.grid (row=16,column=1,sticky = "N")
 
 
 
@@ -1567,14 +1623,14 @@ class TelaRelogios1(object):
 													Info.Lotten.VilaOlimpia.NumeroRep, 
 													Info.Lotten.VilaOlimpia.Responsavel, 
 													Info.Lotten.VilaOlimpia.Telefone))
-		self.botaoLottenVilaOlimpia.grid        (row=16,column=0,sticky = "N")
+		self.botaoLottenVilaOlimpia.grid        (row=17,column=0,sticky = "N")
 
 		self.botaoLottenVilaOlimpiaRelogio                     = Button(self.ContainerLotten)
 		self.botaoLottenVilaOlimpiaRelogio      ["text"]       = "R"
 		self.botaoLottenVilaOlimpiaRelogio      ["background"] = Info.Lotten.VilaOlimpia.RelogioCor
 		self.botaoLottenVilaOlimpiaRelogio      ["width"]      = 1
 		self.botaoLottenVilaOlimpiaRelogio      ["height"]     = 1
-		self.botaoLottenVilaOlimpiaRelogio.grid (row=16,column=1,sticky = "N")
+		self.botaoLottenVilaOlimpiaRelogio.grid (row=17,column=1,sticky = "N")
 
 
 
@@ -1591,14 +1647,14 @@ class TelaRelogios1(object):
 													Info.Lotten.Itaim.NumeroRep, 
 													Info.Lotten.Itaim.Responsavel, 
 													Info.Lotten.Itaim.Telefone))
-		self.botaoLottenItaim.grid             (row=17,column=0,sticky = "N")
+		self.botaoLottenItaim.grid             (row=18,column=0,sticky = "N")
 
 		self.botaoLottenItaimRelogio                          = Button(self.ContainerLotten)
 		self.botaoLottenItaimRelogio           ["text"]       = "R"
 		self.botaoLottenItaimRelogio           ["background"] = Info.Lotten.Itaim.RelogioCor
 		self.botaoLottenItaimRelogio           ["width"]      = 1
 		self.botaoLottenItaimRelogio           ["height"]     = 1
-		self.botaoLottenItaimRelogio.grid      (row=17,column=1,sticky = "N")
+		self.botaoLottenItaimRelogio.grid      (row=18,column=1,sticky = "N")
 
 
 
@@ -1616,27 +1672,45 @@ class TelaRelogios1(object):
 													Info.Lotten.Guarulhos.NumeroRep, 
 													Info.Lotten.Guarulhos.Responsavel, 
 													Info.Lotten.Guarulhos.Telefone))
-		self.botaoLottenGuarulhos.grid          (row=18,column=0,sticky = "N")
+		self.botaoLottenGuarulhos.grid          (row=19,column=0,sticky = "N")
 
 		self.botaoLottenGuarulhosRelogio                       = Button(self.ContainerLotten)
 		self.botaoLottenGuarulhosRelogio        ["text"]       = "R"
 		self.botaoLottenGuarulhosRelogio        ["background"] = Info.Lotten.Guarulhos.RelogioCor
 		self.botaoLottenGuarulhosRelogio        ["width"]      = 1
 		self.botaoLottenGuarulhosRelogio        ["height"]     = 1
-		self.botaoLottenGuarulhosRelogio.grid   (row=18,column=1,sticky = "N")
+		self.botaoLottenGuarulhosRelogio.grid   (row=19,column=1,sticky = "N")
 
 
 
 	def Create_BestInClass(self):
 
-		self.msgBestInClass = Label (self.ContainerBestInClass,text = "Best In Class")
+		self.msgBestInClass = Label (self.ContainerBestInClass,text = "Best In Class",font = "arialblack 12 bold")
 		self.msgBestInClassCont = Label (self.ContainerBestInClass,text = str(Info.BestInClass.Status.Contage)+"/"
-															+str(Info.BestInClass.Status.TotalRelogios))
+															+str(Info.BestInClass.Status.TotalRelogios),
+															font="arial 11")
 
-		self.msgBestInClass.grid                   (row=0,column=0,sticky = "N")
-		self.msgBestInClassCont.grid             (row=0,column=1,sticky = "N")
+		self.msgBestInClass.grid                   	(row=0,column=0,sticky = "N")
 
 
+		self.botaoLaserAtencao                                        = Button(self.ContainerBestInClass)
+		self.botaoLaserAtencao                         ["text"]       = "A"
+		self.botaoLaserAtencao                         ["height"]     = 1
+		self.botaoLaserAtencao                         ["background"] = "green3"
+		self.botaoLaserAtencao                         ["width"]      = 1
+
+		self.botaoLaserAtencao.grid                     (row=0,column=1,sticky = "N")
+	
+
+
+
+
+		self.msgBestInClassCont.grid             	(row=1,column=1,pady=3,sticky = "N")
+
+		self.msgBestInClassHora = Label (self.ContainerBestInClass,text = "00:00",font="arial 11")
+																			
+		self.msgBestInClassHora.grid(row=1,column=0,pady=3, sticky = "N")
+		
 
 
 
@@ -1659,8 +1733,8 @@ class TelaRelogios1(object):
 		self.botaoBestInClassRecifeRelogio         ["width"]      = 1
 		self.botaoBestInClassRecifeRelogio         ["height"]     = 1
 
-		self.botaoBestInClassRecife.grid           (row=1,column=0,sticky = "N")
-		self.botaoBestInClassRecifeRelogio.grid    (row=1,column=1,sticky = "N")
+		self.botaoBestInClassRecife.grid           (row=2,column=0,sticky = "N")
+		self.botaoBestInClassRecifeRelogio.grid    (row=2,column=1,sticky = "N")
 
 
 
@@ -1686,8 +1760,8 @@ class TelaRelogios1(object):
 		self.botaoBestInClassItaqueraRelogio       ["width"]      = 1
 		self.botaoBestInClassItaqueraRelogio       ["height"]     = 1		
 
-		self.botaoBestInClassItaquera.grid         (row=2,column=0,sticky = "N")
-		self.botaoBestInClassItaqueraRelogio.grid  (row=2,column=1,sticky = "N")
+		self.botaoBestInClassItaquera.grid         (row=3,column=0,sticky = "N")
+		self.botaoBestInClassItaqueraRelogio.grid  (row=3,column=1,sticky = "N")
 
 
 
@@ -1713,8 +1787,8 @@ class TelaRelogios1(object):
 		self.botaoBestInClassItapeviRelogio        ["width"]      = 1
 		self.botaoBestInClassItapeviRelogio        ["height"]     = 1		
 
-		self.botaoBestInClassItapevi.grid          (row=3,column=0,sticky = "N")
-		self.botaoBestInClassItapeviRelogio.grid   (row=3,column=1,sticky = "N")
+		self.botaoBestInClassItapevi.grid          (row=4,column=0,sticky = "N")
+		self.botaoBestInClassItapeviRelogio.grid   (row=4,column=1,sticky = "N")
 
 
 
@@ -1738,8 +1812,8 @@ class TelaRelogios1(object):
 		self.botaoBestInClassSorocabaRelogio       ["width"]      = 1
 		self.botaoBestInClassSorocabaRelogio       ["height"]     = 1
 
-		self.botaoBestInClassSorocaba.grid         (row=4,column=0,sticky = "N")
-		self.botaoBestInClassSorocabaRelogio.grid  (row=4,column=1,sticky = "N")
+		self.botaoBestInClassSorocaba.grid         (row=5,column=0,sticky = "N")
+		self.botaoBestInClassSorocabaRelogio.grid  (row=5,column=1,sticky = "N")
 
 
 
@@ -1762,8 +1836,8 @@ class TelaRelogios1(object):
 		self.botaoBestInClassSeteLagoasRelogio     ["width"]      = 1
 		self.botaoBestInClassSeteLagoasRelogio     ["height"]     = 1		
 
-		self.botaoBestInClassSeteLagoas.grid       (row=5,column=0,sticky = "N")
-		self.botaoBestInClassSeteLagoasRelogio.grid(row=5,column=1,sticky = "N")
+		self.botaoBestInClassSeteLagoas.grid       (row=6,column=0,sticky = "N")
+		self.botaoBestInClassSeteLagoasRelogio.grid(row=6,column=1,sticky = "N")
 
 
 
@@ -1787,8 +1861,8 @@ class TelaRelogios1(object):
 		self.botaoBestInClassCuritibaRelogio       ["width"]      = 1
 		self.botaoBestInClassCuritibaRelogio       ["height"]     = 1
 
-		self.botaoBestInClassCuritiba.grid         (row=6,column=0,sticky = "N")
-		self.botaoBestInClassCuritibaRelogio.grid  (row=6,column=1,sticky = "N")
+		self.botaoBestInClassCuritiba.grid         (row=7,column=0,sticky = "N")
+		self.botaoBestInClassCuritibaRelogio.grid  (row=7,column=1,sticky = "N")
 
 
 
@@ -1813,8 +1887,8 @@ class TelaRelogios1(object):
 		self.botaoBestInClassSFsatRelogio          ["width"]      = 1
 		self.botaoBestInClassSFsatRelogio          ["height"]     = 1
 
-		self.botaoBestInClassSFsat.grid            (row=7,column=0,sticky = "N")
-		self.botaoBestInClassSFsatRelogio.grid     (row=7,column=1,sticky = "N")
+		self.botaoBestInClassSFsat.grid            (row=8,column=0,sticky = "N")
+		self.botaoBestInClassSFsatRelogio.grid     (row=8,column=1,sticky = "N")
 
 
 
@@ -1841,8 +1915,8 @@ class TelaRelogios1(object):
 		self.botaoBestInClassItuRelogio            ["height"]     = 1
 
 
-		self.botaoBestInClassItu.grid              (row=8,column=0,sticky = "N")
-		self.botaoBestInClassItuRelogio.grid       (row=8,column=1,sticky = "N")
+		self.botaoBestInClassItu.grid              (row=9,column=0,sticky = "N")
+		self.botaoBestInClassItuRelogio.grid       (row=9,column=1,sticky = "N")
 
 
 
@@ -1869,8 +1943,8 @@ class TelaRelogios1(object):
 		self.botaoBestInClassGuarulhosRelogio       ["height"]     = 1
 
 
-		self.botaoBestInClassGuarulhos.grid         (row=9,column=0,sticky = "N")
-		self.botaoBestInClassGuarulhosRelogio.grid  (row=9,column=1,sticky = "N")
+		self.botaoBestInClassGuarulhos.grid         (row=10,column=0,sticky = "N")
+		self.botaoBestInClassGuarulhosRelogio.grid  (row=10,column=1,sticky = "N")
 
 
 
@@ -1897,8 +1971,8 @@ class TelaRelogios1(object):
 		self.botaoBestInClassItaporangaRelogio      ["height"]     = 1
 
 
-		self.botaoBestInClassItaporanga.grid        (row=10,column=0,sticky = "N")
-		self.botaoBestInClassItaporangaRelogio.grid (row=10,column=1,sticky = "N")
+		self.botaoBestInClassItaporanga.grid        (row=11,column=0,sticky = "N")
+		self.botaoBestInClassItaporangaRelogio.grid (row=11,column=1,sticky = "N")
 
 
 
@@ -1923,23 +1997,43 @@ class TelaRelogios1(object):
 		self.botaoBestInClassLinharesRelogio        ["width"]      = 1
 		self.botaoBestInClassLinharesRelogio        ["height"]     = 1
 
-		self.botaoBestInClassLinhares.grid          (row=11,column=0,sticky = "N")
-		self.botaoBestInClassLinharesRelogio.grid   (row=11,column=1,sticky = "N")
+		self.botaoBestInClassLinhares.grid          (row=12,column=0,sticky = "N")
+		self.botaoBestInClassLinharesRelogio.grid   (row=12,column=1,sticky = "N")
 
 
 
 	def Create_CasaCristo(self):
 
 
-		self.msgCasaCristo = Label (self.ContainerCasaCristo,text = "Casa do Cristo")
+		self.msgCasaCristo = Label (self.ContainerCasaCristo,text = "Casa Cristo",font= "arialblack 12 bold")
+
 		self.msgCasaCristoContage = Label (self.ContainerCasaCristo,text = str(Info.CasaCristo.Status.Contage)+"/"+
-																			str(Info.CasaCristo.Status.TotalRelogios))
+																			str(Info.CasaCristo.Status.TotalRelogios)
+																			,font="arial 11")
 
-		self.msgCasaCristo.grid(row=0,column=0, sticky = "N")
-		self.msgCasaCristoContage.grid(row=0,column=1, sticky = "N")
+		self.msgCasaCristo.grid(row=0, column=0 , sticky = "N")
+
+
+		self.botaoLaserAtencao                                        = Button(self.ContainerCasaCristo)
+		self.botaoLaserAtencao                         ["text"]       = "A"
+		self.botaoLaserAtencao                         ["height"]     = 1
+		self.botaoLaserAtencao                         ["background"] = "green3"
+		self.botaoLaserAtencao                         ["width"]      = 1
+
+		self.botaoLaserAtencao.grid                     (row=0,column=1,sticky = "N")
 
 
 
+
+
+		self.msgCasaCristoContage.grid(row=1,column=1,pady=2, sticky = "N")
+
+
+
+		self.msgCasaCristoHora = Label (self.ContainerCasaCristo,text = "00:00",font="arial 11")
+																			
+		self.msgCasaCristoHora.grid(row=1,column=0,pady=2, sticky = "N")
+		
 
 		self.botaoCasaCristoADM                                   = Button(self.ContainerCasaCristo)
 		self.botaoCasaCristoADM                    ["text"]       = "ADM"
@@ -1957,8 +2051,8 @@ class TelaRelogios1(object):
 		self.botaoCasaCristoADMRelogio             ["background"] = Info.CasaCristo.ADM.RelogioCor
 		self.botaoCasaCristoADMRelogio             ["width"]      = 1
 
-		self.botaoCasaCristoADM.grid               (row=1,column=0,sticky = "N")
-		self.botaoCasaCristoADMRelogio.grid        (row=1,column=1,sticky = "N")
+		self.botaoCasaCristoADM.grid               (row=2,column=0,sticky = "N")
+		self.botaoCasaCristoADMRelogio.grid        (row=2,column=1,sticky = "N")
 
 
 
@@ -1980,8 +2074,8 @@ class TelaRelogios1(object):
 		self.botaoCasaCristoCEI1Relogio            ["background"] = Info.CasaCristo.CEI1.RelogioCor
 		self.botaoCasaCristoCEI1Relogio            ["width"]      = 1
 
-		self.botaoCasaCristoCEI1.grid              (row=2,column=0,sticky = "N")
-		self.botaoCasaCristoCEI1Relogio.grid       (row=2,column=1,sticky = "N")
+		self.botaoCasaCristoCEI1.grid              (row=3,column=0,sticky = "N")
+		self.botaoCasaCristoCEI1Relogio.grid       (row=3,column=1,sticky = "N")
 
 
 
@@ -2003,8 +2097,8 @@ class TelaRelogios1(object):
 		self.botaoCasaCristoCEI2Relogio            ["background"] = Info.CasaCristo.CEI2.RelogioCor
 		self.botaoCasaCristoCEI2Relogio            ["width"]=1
 
-		self.botaoCasaCristoCEI2.grid              (row=3,column=0,sticky = "N")
-		self.botaoCasaCristoCEI2Relogio.grid       (row=3,column=1,sticky = "N")
+		self.botaoCasaCristoCEI2.grid              (row=4,column=0,sticky = "N")
+		self.botaoCasaCristoCEI2Relogio.grid       (row=4,column=1,sticky = "N")
 		
 
 
@@ -2027,8 +2121,8 @@ class TelaRelogios1(object):
 		self.botaoCasaCristoCEI3Relogio            ["background"] = Info.CasaCristo.CEI3.RelogioCor
 		self.botaoCasaCristoCEI3Relogio            ["width"]      = 1
 
-		self.botaoCasaCristoCEI3.grid              (row=4,column=0,sticky = "N")
-		self.botaoCasaCristoCEI3Relogio.grid       (row=4,column=1,sticky = "N")
+		self.botaoCasaCristoCEI3.grid              (row=5,column=0,sticky = "N")
+		self.botaoCasaCristoCEI3Relogio.grid       (row=5,column=1,sticky = "N")
 
 
 
@@ -2050,8 +2144,8 @@ class TelaRelogios1(object):
 		self.botaoCasaCristoVMatildeRelogio        ["background"] = Info.CasaCristo.VovoMatilde.RelogioCor
 		self.botaoCasaCristoVMatildeRelogio        ["width"]      = 1
 
-		self.botaoCasaCristoVMatilde.grid          (row=5,column=0,sticky = "N")
-		self.botaoCasaCristoVMatildeRelogio.grid   (row=5,column=1,sticky = "N")
+		self.botaoCasaCristoVMatilde.grid          (row=6,column=0,sticky = "N")
+		self.botaoCasaCristoVMatildeRelogio.grid   (row=6,column=1,sticky = "N")
 
 
 
@@ -2149,15 +2243,29 @@ class TelaRelogios1(object):
 
 	def Create_GrupoNK(self):
 
-
+		
 		self.msgGrupoNk                            		= Label (self.ContainerGrupoNk,text = "Grupo Nk",font = "arialblack 12 bold")
 		self.msgGrupoNk                            		["height"]     = 1
 		self.msgGrupoNk.grid                       		(row=0,column=0,sticky = "N")
 
 		self.msgGrupoNkContage                        	= Label (self.ContainerGrupoNk,text=str(Info.GrupoNk.Status.Contage)+"/"+
-																								str(Info.GrupoNk.Status.TotalRelogios))	
+																		str(Info.GrupoNk.Status.TotalRelogios),font = "arial 11")	
+
 		self.msgGrupoNkContage                        	["height"]     = 1
-		self.msgGrupoNkContage.grid                   	(row=0,column=1,sticky = "N")
+		self.msgGrupoNkContage.grid                   	(row=1,column=1,pady=2,sticky = "N")
+
+
+		self.botaoGrupoNkAtencao                                        = Button(self.ContainerGrupoNk)
+		self.botaoGrupoNkAtencao                         ["text"]       = "A"
+		self.botaoGrupoNkAtencao                         ["height"]     = 1
+		self.botaoGrupoNkAtencao                         ["background"] = "green3"
+		self.botaoGrupoNkAtencao                         ["width"]      = 1
+
+		self.botaoGrupoNkAtencao.grid                     (row=0,column=1,sticky = "N")
+
+		self.msgGrupoNkHora                            		= Label (self.ContainerGrupoNk,text = "00:00",font = "arial 11")
+		self.msgGrupoNkHora                            		["height"]     = 1
+		self.msgGrupoNkHora.grid                       		(row=1,column=0,pady=2,sticky = "N")
 
 
 
@@ -2179,8 +2287,8 @@ class TelaRelogios1(object):
 		self.botaoGrupoNkNelsonKioshiRelogio            ["width"]      = 1
 		self.botaoGrupoNkNelsonKioshiRelogio            ["height"]     = 1
 
-		self.botaoGrupoNkNelsonKioshi.grid       		(row=1, column=0, sticky = "N")
-		self.botaoGrupoNkNelsonKioshiRelogio.grid       (row=1, column=1, sticky = "N")
+		self.botaoGrupoNkNelsonKioshi.grid       		(row=2, column=0, sticky = "N")
+		self.botaoGrupoNkNelsonKioshiRelogio.grid       (row=2, column=1, sticky = "N")
 
 
 
@@ -2205,8 +2313,8 @@ class TelaRelogios1(object):
 		self.botaoGrupoNkRDFurukawaRelogio              ["width"]       = 1
 		self.botaoGrupoNkRDFurukawaRelogio              ["height"]      = 1
 
-		self.botaoGrupoNkRDFurukawa.grid                (row=2,column=0,sticky = "N")
-		self.botaoGrupoNkRDFurukawaRelogio.grid         (row=2,column=1,sticky = "N")
+		self.botaoGrupoNkRDFurukawa.grid                (row=3,column=0,sticky = "N")
+		self.botaoGrupoNkRDFurukawaRelogio.grid         (row=3,column=1,sticky = "N")
 
 
 
@@ -2232,8 +2340,8 @@ class TelaRelogios1(object):
 		self.botaoGrupoNkKio1Relogio         			["height"]      = 1
 
 
-		self.botaoGrupoNkKio1.grid           			(row=3,column=0,sticky = "N")
-		self.botaoGrupoNkKio1Relogio.grid    			(row=3,column=1,sticky = "N")
+		self.botaoGrupoNkKio1.grid           			(row=4,column=0,sticky = "N")
+		self.botaoGrupoNkKio1Relogio.grid    			(row=4,column=1,sticky = "N")
 
 
 
@@ -2258,8 +2366,8 @@ class TelaRelogios1(object):
 		self.botaoGrupoNkKio2Relogio         			["height"]      = 1
 
 
-		self.botaoGrupoNkKio2.grid           			(row=4,column=0,sticky = "N")
-		self.botaoGrupoNkKio2Relogio.grid    			(row=4,column=1,sticky = "N")
+		self.botaoGrupoNkKio2.grid           			(row=5,column=0,sticky = "N")
+		self.botaoGrupoNkKio2Relogio.grid    			(row=5,column=1,sticky = "N")
 
 
 		self.botaoGrupoNkGranjaViana                          			= Button(self.ContainerGrupoNk)
@@ -2281,8 +2389,8 @@ class TelaRelogios1(object):
 		self.botaoGrupoNkGranjaVianaRelogio         	["height"]      = 1
 
 
-		self.botaoGrupoNkGranjaViana.grid           	(row=5,column=0,sticky = "N")
-		self.botaoGrupoNkGranjaVianaRelogio.grid    	(row=5,column=1,sticky = "N")
+		self.botaoGrupoNkGranjaViana.grid           	(row=6,column=0,sticky = "N")
+		self.botaoGrupoNkGranjaVianaRelogio.grid    	(row=6,column=1,sticky = "N")
 
 
 
@@ -2305,8 +2413,8 @@ class TelaRelogios1(object):
 		self.botaoGrupoNkSantaCeciliaRelogio         	["height"]      = 1
 
 
-		self.botaoGrupoNkSantaCecilia.grid           	(row=6,column=0,sticky = "N")
-		self.botaoGrupoNkSantaCeciliaRelogio.grid    	(row=6,column=1,sticky = "N")
+		self.botaoGrupoNkSantaCecilia.grid           	(row=7,column=0,sticky = "N")
+		self.botaoGrupoNkSantaCeciliaRelogio.grid    	(row=7,column=1,sticky = "N")
 
 
 		self.botaoGrupoNkTransfruit                            			= Button(self.ContainerGrupoNk)
@@ -2327,8 +2435,8 @@ class TelaRelogios1(object):
 		self.botaoGrupoNkTransfruitRelogio         		["width"]       = 1
 		self.botaoGrupoNkTransfruitRelogio         		["height"]      = 1
 
-		self.botaoGrupoNkTransfruit.grid           		(row=7,column=0,sticky = "N")
-		self.botaoGrupoNkTransfruitRelogio.grid    		(row=7,column=1,sticky = "N")
+		self.botaoGrupoNkTransfruit.grid           		(row=8,column=0,sticky = "N")
+		self.botaoGrupoNkTransfruitRelogio.grid    		(row=8,column=1,sticky = "N")
 
 
 		self.botaoGrupoNkDistribuidora                         			= Button(self.ContainerGrupoNk)
@@ -2349,8 +2457,8 @@ class TelaRelogios1(object):
 		self.botaoGrupoNkDistribuidoraRelogio         	["width"]       = 1
 		self.botaoGrupoNkDistribuidoraRelogio         	["height"]      = 1
 
-		self.botaoGrupoNkDistribuidora.grid           	(row=8,column=0,sticky = "N")
-		self.botaoGrupoNkDistribuidoraRelogio.grid    	(row=8,column=1,sticky = "N")
+		self.botaoGrupoNkDistribuidora.grid           	(row=9,column=0,sticky = "N")
+		self.botaoGrupoNkDistribuidoraRelogio.grid    	(row=9,column=1,sticky = "N")
 
 
 
@@ -2372,8 +2480,8 @@ class TelaRelogios1(object):
 		self.botaoGrupoNkNKFilialRelogio         		["width"]       = 1
 		self.botaoGrupoNkNKFilialRelogio         		["height"]      = 1
 
-		self.botaoGrupoNkNKFilial.grid           		(row=9,column=0,sticky = "N")
-		self.botaoGrupoNkNKFilialRelogio.grid    		(row=9,column=1,sticky = "N")
+		self.botaoGrupoNkNKFilial.grid           		(row=10,column=0,sticky = "N")
+		self.botaoGrupoNkNKFilialRelogio.grid    		(row=10,column=1,sticky = "N")
 
 
 
@@ -3390,17 +3498,28 @@ class TelaRelogios1(object):
 
 	def resize(self,event):
 		self.ContainerPai.config(width=event.width,height=event.height)
-
+		print event.width 
+		print event.height
 
 
 	def on_configure(self,event):
 		#canvas_width = event.width
 		#self.canvas.itemconfig(self.frame_ID, width = event.width, height=event.height)
-		self.cavatura.configure(scrollregion=self.cavatura.bbox('all'))
+		#self.cavatura.configure(scrollregion=self.cavatura.bbox('all'))
+		#print event.width 
+		#print event.height
+		#self.cavatura.config(width=event.width,height=event.height)
+		pass
 
 
 
 	def Create_ContainerGeral(self,root):
+
+		self.ContainerRelogios = Frame (root)
+		self.ContainerRelogios.grid               (row=0, column= 0 ,sticky = N + S + E + W)
+		#self.Create_ContainerGeralResize(root)
+
+	def Create_ContainerGeralResize(self,root):
 
 
 
@@ -3417,7 +3536,7 @@ class TelaRelogios1(object):
 		self.ScrollBar.grid(row=0, column= 1 ,sticky = N + E)
 		self.ScrollBar2					  = Scrollbar(self.ContainerPai,command=self.cavatura.xview,orient = HORIZONTAL)
 		self.ScrollBar2.grid(row=1, column= 0 ,sticky = N + E)
-		
+		self.cavatura.configure(scrollregion=self.cavatura.bbox('all'))
 
 		self.cavatura.bind('<Configure>', self.on_configure)
 
@@ -3449,33 +3568,30 @@ class TelaRelogios1(object):
 
 
 		self.ContainerColuna0             			= Frame (self.ContainerRelogios)
-		self.ContainerBuilding           			= Frame (self.ContainerColuna0)
+		
 		self.ContainerCasaCristo          			= Frame (self.ContainerColuna0)
 		self.ContainerBestInClass         			= Frame (self.ContainerColuna0)
 		self.ContainerIsoRadio			  			= Frame (self.ContainerColuna0)
 
 
-		self.ContainerColuna0.grid                	(row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
-		self.ContainerBuilding.grid               	(row=0, column=0,pady=5, padx=1, columnspan=1 ,sticky="N")
-		self.ContainerCasaCristo.grid             	(row=1, column=0,pady=5, padx=1, columnspan=1, sticky="N")
-		self.ContainerBestInClass.grid            	(row=2, column=0,pady=5, padx=1, columnspan=1, sticky="N")
-		self.ContainerIsoRadio.grid               	(row=3, column=0,pady=5, padx=1, columnspan=1, sticky="N")
+		self.ContainerColuna0.grid                	(row=0, column=0,pady=0, padx=3, columnspan=1, sticky="N")
+		self.ContainerCasaCristo.grid             	(row=0, column=0,pady=0, padx=3, columnspan=1, sticky="N")
+		self.ContainerBestInClass.grid            	(row=1, column=0,pady=0, padx=3, columnspan=1, sticky="N")
+		self.ContainerIsoRadio.grid               	(row=2, column=0,pady=0, padx=3, columnspan=1, sticky="N")
 
-
+		self.ContainerColuna0.grid_rowconfigure(0,weight=1)
 
 	def Create_ContainerColuna1(self,root):
 
 
 		self.ContainerColuna1             			= Frame (self.ContainerRelogios)
-		self.ContainerLaser               			= Frame (self.ContainerColuna1)
 		self.ContainerLotten              			= Frame (self.ContainerColuna1)
 		self.ContainerGrupoNk             			= Frame (self.ContainerColuna1)
 
 
-		self.ContainerColuna1.grid                	(row=0, column=1, pady=3 , padx=1, columnspan=1, sticky="N")
-		self.ContainerLaser.grid                  	(row=0, column=0, pady=3 ,padx=1, columnspan=1, sticky="N")
-		self.ContainerLotten.grid                 	(row=2, column=0, pady=3 ,padx=1, columnspan=1, sticky="N")
-		self.ContainerGrupoNk.grid                 	(row=3, column=0, pady=3 ,padx=1, columnspan=1, sticky="N")
+		self.ContainerColuna1.grid                	(row=0, column=1, pady=0 ,padx=3, columnspan=1, sticky="N")
+		self.ContainerLotten.grid                 	(row=1, column=0, pady=0 ,padx=3, columnspan=1, sticky="N")
+		self.ContainerGrupoNk.grid                 	(row=2, column=0, pady=0 ,padx=3, columnspan=1, sticky="N")
 
 
 
@@ -3513,11 +3629,15 @@ class TelaRelogios1(object):
 
 		self.ContainerColuna4             = Frame (self.ContainerRelogios)
 		self.ContainerTarek               = Frame (self.ContainerColuna4)
-
+		self.ContainerBuilding           			= Frame (self.ContainerColuna4)
+		self.ContainerLaser               			= Frame (self.ContainerColuna4)
+		
 
 		self.ContainerColuna4.grid                (row=0, column=4,pady=5, padx=1, columnspan=1, sticky="N")
 		self.ContainerTarek.grid                  (row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
-
+		self.ContainerBuilding.grid               (row=1, column=0,pady=5, padx=1, columnspan=1 ,sticky="N")
+		self.ContainerLaser.grid                  (row=2, column=0, pady=3 ,padx=1, columnspan=1, sticky="N")
+		
 
 
 	def Create_ContainerColuna5(self,root):
@@ -4384,8 +4504,6 @@ class TelaRelogios1(object):
 
 		self.msgOlimparkCount.configure									(text=str(Info.Olimpark.Status.Contage)+"/"+
 																		str(Info.Olimpark.Status.TotalRelogios))	
-
-
 
 
 

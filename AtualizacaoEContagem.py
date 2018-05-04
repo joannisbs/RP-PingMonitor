@@ -2678,7 +2678,7 @@ def AtualizaOlimpark(relogio, result):
 			relo.RelogioCor = "green3"
 		elif result == 4:
 			relo.ModuloCor  = "cyan"
-			#relo.RelogioCor = "cyan"
+			#relo.RelogioCor = "cyan"25.39.3116 3127
 		else:
 			relo.ModuloCor  = "pink"
 			relo.RelogioCor = "pink"

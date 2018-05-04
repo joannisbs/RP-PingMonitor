@@ -6,8 +6,11 @@ class Info(object):
 	class Building(object):
 
 		class Status(object):
+			Horaultima         = "00:00"
+
 			Contage         = 0
 			TotalRelogios   = 3
+			Atencao 		= "green3"
 
 		class Allianz(object):
 
@@ -21,7 +24,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 
 		class WTorre(object):
 
@@ -35,7 +39,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 
 		class RioJaneiro(object):
 
@@ -48,13 +53,17 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 
 	class CasaCristo(object):
 
 		class Status(object):
+			Horaultima         = "00:00"
+
 			Contage         = 0
 			TotalRelogios   = 5
+			Atencao 		= "green3"
 
 		class ADM(object):
 
@@ -67,7 +76,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class CEI1(object):
 
 			Empresa         = "None"
@@ -79,7 +89,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class CEI2(object):
 
 			Empresa         = "None"
@@ -91,7 +102,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class CEI3(object):
 
 			Empresa         = "None"
@@ -103,7 +115,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class VovoMatilde(object):
 
 			Empresa         = "None"
@@ -115,13 +128,17 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 
 	class BestInClass(object):
 
 		class Status(object):
+			Horaultima         = "00:00"
+
 			Contage         = 0
 			TotalRelogios   = 11
+			Atencao 		= "green3"
 
 		class Recife(object):
 	
@@ -134,7 +151,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Itaquera(object):
 
 			Empresa         = "None"
@@ -146,7 +164,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Itapevi(object):
 
 			Empresa         = "None"
@@ -158,7 +177,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Sorocaba(object):
 
 			Empresa         = "None"
@@ -170,7 +190,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class SeteLagoas(object):
 
 			Empresa         = "None"
@@ -182,7 +203,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Curitiba(object):
 
 			Empresa         = "None"
@@ -194,7 +216,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Fsantana(object):
 
 			Empresa         = "None"
@@ -206,7 +229,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Itu(object):
 
 			Empresa         = "None"
@@ -218,7 +242,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Guarulhos(object):
 
 			Empresa         = "None"
@@ -230,7 +255,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Linhares(object):
 
 			Empresa         = "None"
@@ -242,7 +268,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Itaporanga(object):
 
 			Empresa         = "None"
@@ -254,14 +281,18 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 
 	class Lotten(object):
 
 
 		class Status(object):
+			Horaultima         = "00:00"
+
 			Contage         = 0
 			TotalRelogios   = 18
+			Atencao 		= "green3"
 
 
 		class Jardins(object):
@@ -275,7 +306,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Alphaville(object):
 
 			Empresa         = "None"
@@ -287,7 +319,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Osasco(object):
 
 			Empresa         = "None"
@@ -299,7 +332,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Santana(object):
 
 			Empresa         = "None"
@@ -311,7 +345,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Tatuape(object):
 
 			Empresa         = "None"
@@ -323,7 +358,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Moema(object):
 
 			Empresa         = "None"
@@ -335,7 +371,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class JardimSul(object):
 
 			Empresa         = "None"
@@ -347,7 +384,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 
 		class SaoCaetano(object):
 
@@ -360,7 +398,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Conceicao(object):
 
 			Empresa         = "None"
@@ -372,7 +411,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Perdizes(object):
 
 			Empresa         = "None"
@@ -384,7 +424,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Lapa(object):
 
 			Empresa         = "None"
@@ -396,7 +437,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Pinheiros(object):
 
 			Empresa         = "None"
@@ -408,7 +450,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Morumbi(object):
 
 			Empresa         = "None"
@@ -420,7 +463,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Berrini(object):
 
 			Empresa         = "None"
@@ -432,7 +476,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class VilaMariana(object):
 
 			Empresa         = "None"
@@ -444,7 +489,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class VilaOlimpia(object):
 
 			Empresa         = "None"
@@ -456,7 +502,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Itaim(object):
 
 			Empresa         = "None"
@@ -468,7 +515,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Guarulhos(object):
 
 			Empresa         = "None"
@@ -480,13 +528,17 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 
 	class Laser(object):
 
 		class Status(object):
+			Horaultima         = "00:00"
+
 			Contage         = 0
 			TotalRelogios   = 2
+			Atencao 		= "green3"
 
 
 		class Academia(object):
@@ -500,7 +552,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Instituto(object):
 
 			Empresa         = "None"
@@ -512,13 +565,17 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 
 	class Gravex(object):
 
 		class Status(object):
+			Horaultima         = "00:00"
+
 			Contage         = 0
 			TotalRelogios   = 4
+			Atencao 		= "green3"
 
 
 		class ADM(object):
@@ -532,7 +589,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Loja1(object):
 
 			Empresa         = "None"
@@ -544,7 +602,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class MiMarcos(object):
 
 			Empresa         = "None"
@@ -556,7 +615,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class DantChini(object):
 
 			Empresa         = "None"
@@ -573,8 +633,11 @@ class Info(object):
 	class Predman(object):
 
 		class Status(object):
+			Horaultima         = "00:00"
+
 			Contage         = 0
 			TotalRelogios   = 17
+			Atencao 		= "green3"
 
 
 		class Bunge(object):
@@ -588,7 +651,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Cabot(object):
 
 			Empresa         = "None"
@@ -600,7 +664,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Kelloggs(object):
 
 			Empresa         = "None"
@@ -612,7 +677,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Magazine(object):
 
 			Empresa         = "None"
@@ -624,7 +690,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Oxiteno1(object):
 
 			Empresa         = "None"
@@ -636,7 +703,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Oxiteno2(object):
 
 			Empresa         = "None"
@@ -648,7 +716,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class SantoAndre(object):
 
 			Empresa         = "None"
@@ -660,7 +729,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class PrysmianES(object):
 
 			Empresa         = "None"
@@ -672,7 +742,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Tradegar(object):
 
 			Empresa         = "None"
@@ -684,7 +755,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Portao1(object):
 
 			Empresa         = "None"
@@ -696,7 +768,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Portao2(object):
 
 			Empresa         = "None"
@@ -708,7 +781,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Sabic(object):
 
 			Empresa         = "None"
@@ -720,7 +794,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class SBraganca(object):
 
 			Empresa         = "None"
@@ -732,7 +807,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class SPenha(object):
 
 			Empresa         = "None"
@@ -744,7 +820,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Faurencia(object):
 
 			Empresa         = "None"
@@ -756,7 +833,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class AdmRondonopolis(object):
 
 			Empresa         = "None"
@@ -768,7 +846,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class VilaVelha(object):
 
 			Empresa         = "None"
@@ -780,14 +859,18 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 
 	class Tarek(object):
 
 		class Status(object):
+			Horaultima         = "00:00"
+
 
 			QuantoOn		= 0
 			QuantoTotal		= 4
+			Atencao 		= "green3"
 
 
 		class Tahine(object):
@@ -801,7 +884,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Tarek(object):
 
 			Empresa         = "None"
@@ -813,7 +897,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Tafadalu(object):
 
 			Empresa         = "None"
@@ -825,7 +910,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Talami(object):
 
 			Empresa         = "None"
@@ -837,14 +923,18 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 
 	class MilenioErvas(object):
 
 		class Status(object):
+			Horaultima         = "00:00"
+
 
 			QuantoOn		= 0
 			QuantoTotal		= 4
+			Atencao 		= "green3"
 
 
 		class Loja1(object):
@@ -858,7 +948,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Loja2(object):
 
 			Empresa         = "None"
@@ -870,7 +961,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class SaoMatheus(object):
 
 			Empresa         = "None"
@@ -882,7 +974,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Diadema(object):
 
 			Empresa         = "None"
@@ -899,9 +992,12 @@ class Info(object):
 	class Uniman(object):
 
 		class Status(object):
+			Horaultima         = "00:00"
+
 
 			QuantoOn		= 0
 			QuantoTotal		= 4
+			Atencao 		= "green3"
 
 
 		class SaintGobain(object):
@@ -915,7 +1011,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class PPMSecoia(object):
 
 			Empresa         = "None"
@@ -927,7 +1024,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 		class Sekurity(object):
 
 			Empresa         = "None"
@@ -956,9 +1054,12 @@ class Info(object):
 	class IsoRadio(object):
 
 		class Status(object):
+			Horaultima         = "00:00"
+
 
 			Contage         = 0
 			TotalRelogios   = 10
+			Atencao 		= "green3"
 
 
 		class Santana(object):
@@ -1086,8 +1187,11 @@ class Info(object):
 	class GrupoNk(object):
 
 		class Status(object):
+			Horaultima         = "00:00"
+
 			Contage         = 0
 			TotalRelogios   = 9
+			Atencao 		= "green3"
 
 		class NelsonKioshi(object):
 
@@ -1115,7 +1219,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 
 		class Kio1(object):
 
@@ -1156,7 +1261,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 
 		class SantaCecilia(object):
 
@@ -1196,7 +1302,8 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-			
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
 
 		class NKFilial(object):
 
@@ -1214,7 +1321,10 @@ class Info(object):
 	class SBCP(object):
 
 		class Status(object):
+			Horaultima         = "00:00"
+
 			Contage         = 0
+			Atencao 		= "green3"
 			TotalRelogios   = 13
 
 		class Nacional(object):
@@ -1390,8 +1500,11 @@ class Info(object):
 	class ElRio(object):
 
 		class Status(object):
+			Horaultima         = "00:00"
+
 			Contage         = 0
 			TotalRelogios   = 16
+			Atencao 		= "green3"
 
 		class Centro2(object):
 
@@ -1620,8 +1733,11 @@ class Info(object):
 	class Olimpark(object):
 
 		class Status(object):
+			Horaultima         = "00:00"
+
 			Contage         = 0
 			TotalRelogios   = 6
+			Atencao 		= "green3"
 
 		class JdPaulista(object):
 
