@@ -677,18 +677,49 @@ class TelaRelogios1(object):
 
 	def Create_Predman(self):
 
-		self.msgPredman = Label (self.ContainerPredman,text = "Predman")
+		self.msgPredman = Label (self.ContainerPredman,text = "Predman",font="arialblack 12 bold",bg="black",fg="white")
 		self.msgPredman.grid(row=0,column=0,sticky = "N")
 
 
 		self.msgPredmancount = Label (self.ContainerPredman,text = str(Info.Predman.Status.Contage)+"/"+
-																	str(Info.Predman.Status.TotalRelogios))
+																	str(Info.Predman.Status.TotalRelogios),
+																	font="arial 11",bg="black",fg="white")
 
-		self.msgPredmancount.grid(row=0,column=1,sticky = "N")
+		self.msgPredmancount.grid(row=1,column=1,pady=3.5,sticky = "N")
 
 
 
-		self.botaoPredmanBunge                                    = Button(self.ContainerPredman)
+
+
+		self.botaoPredmanAtencao                                        = Button(self.ContainerPredman,  highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoPredmanAtencao                         ["text"]       = "A"
+		self.botaoPredmanAtencao                         ["height"]     = 1
+		self.botaoPredmanAtencao                         ["background"] = Info.Predman.Status.Atencao
+		self.botaoPredmanAtencao                         ["width"]      = 2
+
+		self.botaoPredmanAtencao.grid                     (row=0,column=1,sticky = "N")
+
+
+
+
+
+
+		self.msgPredmanHora = Label (self.ContainerPredman,text = Info.Predman.Status.Horaultima,font="arial 11",bg="black",fg="white")
+																			
+		self.msgPredmanHora.grid(row=1,column=0,pady=3.5, sticky = "N")
+		
+
+
+
+
+
+
+
+		self.botaoPredmanBunge                                   =  Button(self.ContainerPredman, 
+																				highlightbackground="black",
+																				activebackground="black",
+																				activeforeground="white")
+
 		self.botaoPredmanBunge                     ["text"]       = "Bunge"
 		self.botaoPredmanBunge                     ["background"] = Info.Predman.Bunge.ModuloCor
 		self.botaoPredmanBunge                      ["width"]      = 13
@@ -699,19 +730,27 @@ class TelaRelogios1(object):
 													Info.Predman.Bunge.NumeroRep, 
 													Info.Predman.Bunge.Responsavel, 
 													Info.Predman.Bunge.Telefone))
-		self.botaoPredmanBunge.grid                (row=1,column=0,sticky = "N")
+		self.botaoPredmanBunge.grid                (row=2,column=0,sticky = "N")
 
-		self.botaoPredmanBungeRelogio                             = Button(self.ContainerPredman)
+		self.botaoPredmanBungeRelogio                             =  Button(self.ContainerPredman, 
+																				highlightbackground="black",
+																				activebackground="black",
+																				activeforeground="white")
+		
 		self.botaoPredmanBungeRelogio              ["text"]       = "R"
 		self.botaoPredmanBungeRelogio              ["background"] = Info.Predman.Bunge.RelogioCor
 		self.botaoPredmanBungeRelogio              ["width"]      = 2
 		self.botaoPredmanBungeRelogio              ["height"]     = 1
-		self.botaoPredmanBungeRelogio.grid         (row=1,column=1,sticky = "N")
+		self.botaoPredmanBungeRelogio.grid         (row=2,column=1,sticky = "N")
 
 
 
 
-		self.botaoPredmanCabot                                    = Button(self.ContainerPredman)
+		self.botaoPredmanCabot                                    =  Button(self.ContainerPredman, 
+																				highlightbackground="black",
+																				activebackground="black",
+																				activeforeground="white")
+		
 		self.botaoPredmanCabot                     ["text"]       = "Cabot"
 		self.botaoPredmanCabot                     ["background"] = Info.Predman.Cabot.ModuloCor
 		self.botaoPredmanCabot                      ["width"]      = 13
@@ -722,19 +761,27 @@ class TelaRelogios1(object):
 													Info.Predman.Cabot.NumeroRep, 
 													Info.Predman.Cabot.Responsavel, 
 													Info.Predman.Cabot.Telefone))
-		self.botaoPredmanCabot.grid                (row=2,column=0,sticky = "N")
+		self.botaoPredmanCabot.grid                (row=3,column=0,sticky = "N")
 
-		self.botaoPredmanCabotRelogio                             = Button(self.ContainerPredman)
+		self.botaoPredmanCabotRelogio                             =  Button(self.ContainerPredman, 
+																				highlightbackground="black",
+																				activebackground="black",
+																				activeforeground="white")
+		
 		self.botaoPredmanCabotRelogio              ["text"]       = "R"
 		self.botaoPredmanCabotRelogio              ["background"] = Info.Predman.Cabot.RelogioCor
 		self.botaoPredmanCabotRelogio              ["width"]      = 2
 		self.botaoPredmanCabotRelogio              ["height"]     = 1		
-		self.botaoPredmanCabotRelogio.grid         (row=2,column=1,sticky = "N")
+		self.botaoPredmanCabotRelogio.grid         (row=3,column=1,sticky = "N")
 
 
 
 
-		self.botaoPredmanKelloggs                                 = Button(self.ContainerPredman)
+		self.botaoPredmanKelloggs                                 =  Button(self.ContainerPredman, 
+																				highlightbackground="black",
+																				activebackground="black",
+																				activeforeground="white")
+		
 		self.botaoPredmanKelloggs                  ["text"]       = "Kelloggs"
 		self.botaoPredmanKelloggs                  ["background"] = Info.Predman.Kelloggs.ModuloCor
 		self.botaoPredmanKelloggs                   ["width"]      = 13
@@ -745,19 +792,27 @@ class TelaRelogios1(object):
 													Info.Predman.Kelloggs.NumeroRep, 
 													Info.Predman.Kelloggs.Responsavel, 
 													Info.Predman.Kelloggs.Telefone))
-		self.botaoPredmanKelloggs.grid             (row=3,column=0,sticky = "N")
+		self.botaoPredmanKelloggs.grid             (row=4,column=0,sticky = "N")
 
-		self.botaoPredmanKelloggsRelogio                          = Button(self.ContainerPredman)
+		self.botaoPredmanKelloggsRelogio                          =  Button(self.ContainerPredman, 
+																				highlightbackground="black",
+																				activebackground="black",
+																				activeforeground="white")
+		
 		self.botaoPredmanKelloggsRelogio           ["text"]       = "R"
 		self.botaoPredmanKelloggsRelogio           ["background"] = Info.Predman.Kelloggs.RelogioCor
 		self.botaoPredmanKelloggsRelogio           ["width"]      = 2
 		self.botaoPredmanKelloggsRelogio           ["height"]     = 1		
-		self.botaoPredmanKelloggsRelogio.grid      (row=3,column=1,sticky = "N")
+		self.botaoPredmanKelloggsRelogio.grid      (row=4,column=1,sticky = "N")
 
 
 
 
-		self.botaoPredmanMagazine                                = Button(self.ContainerPredman)
+		self.botaoPredmanMagazine                                =  Button(self.ContainerPredman, 
+																				highlightbackground="black",
+																				activebackground="black",
+																				activeforeground="white")
+		
 		self.botaoPredmanMagazine                 ["text"]       = "Magazine"
 		self.botaoPredmanMagazine                 ["background"] = Info.Predman.Magazine.ModuloCor
 		self.botaoPredmanMagazine                  ["width"]      = 13
@@ -768,19 +823,27 @@ class TelaRelogios1(object):
 													Info.Predman.Magazine.NumeroRep, 
 													Info.Predman.Magazine.Responsavel, 
 													Info.Predman.Magazine.Telefone))
-		self.botaoPredmanMagazine.grid            (row=4,column=0,sticky = "N")
+		self.botaoPredmanMagazine.grid            (row=5,column=0,sticky = "N")
 
-		self.botaoPredmanMagazineRelogio                         = Button(self.ContainerPredman)
+		self.botaoPredmanMagazineRelogio                         =  Button(self.ContainerPredman, 
+																				highlightbackground="black",
+																				activebackground="black",
+																				activeforeground="white")
+		
 		self.botaoPredmanMagazineRelogio          ["text"]       = "R"
 		self.botaoPredmanMagazineRelogio          ["background"] = Info.Predman.Magazine.RelogioCor
 		self.botaoPredmanMagazineRelogio          ["width"]      = 2
 		self.botaoPredmanMagazineRelogio          ["height"]     = 1
-		self.botaoPredmanMagazineRelogio.grid     (row=4,column=1,sticky = "N")
+		self.botaoPredmanMagazineRelogio.grid     (row=5,column=1,sticky = "N")
 
 
 
 
-		self.botaoPredmanOxiteno1                                = Button(self.ContainerPredman)
+		self.botaoPredmanOxiteno1                                =  Button(self.ContainerPredman, 
+																				highlightbackground="black",
+																				activebackground="black",
+																				activeforeground="white")
+		
 		self.botaoPredmanOxiteno1                 ["text"]       = "Oxiteno 1"
 		self.botaoPredmanOxiteno1                 ["background"] = Info.Predman.Oxiteno1.ModuloCor
 		self.botaoPredmanOxiteno1                  ["width"]      = 13
@@ -791,19 +854,27 @@ class TelaRelogios1(object):
 													Info.Predman.Oxiteno1.NumeroRep, 
 													Info.Predman.Oxiteno1.Responsavel, 
 													Info.Predman.Oxiteno1.Telefone))
-		self.botaoPredmanOxiteno1.grid            (row=5,column=0,sticky = "N")
+		self.botaoPredmanOxiteno1.grid            (row=6,column=0,sticky = "N")
 
-		self.botaoPredmanOxiteno1Relogio                         = Button(self.ContainerPredman)
+		self.botaoPredmanOxiteno1Relogio                         =  Button(self.ContainerPredman, 
+																				highlightbackground="black",
+																				activebackground="black",
+																				activeforeground="white")
+		
 		self.botaoPredmanOxiteno1Relogio          ["text"]       = "R"
 		self.botaoPredmanOxiteno1Relogio          ["background"] = Info.Predman.Oxiteno1.RelogioCor
 		self.botaoPredmanOxiteno1Relogio          ["width"]      = 2
 		self.botaoPredmanOxiteno1Relogio          ["height"]     = 1		
-		self.botaoPredmanOxiteno1Relogio.grid     (row=5,column=1,sticky = "N")
+		self.botaoPredmanOxiteno1Relogio.grid     (row=6,column=1,sticky = "N")
 
 
 
 
-		self.botaoPredmanOxiteno2                                = Button(self.ContainerPredman)
+		self.botaoPredmanOxiteno2                                =  Button(self.ContainerPredman, 
+																				highlightbackground="black",
+																				activebackground="black",
+																				activeforeground="white")
+		
 		self.botaoPredmanOxiteno2                 ["text"]       = "Oxiteno 2"
 		self.botaoPredmanOxiteno2                 ["background"] = Info.Predman.Oxiteno2.ModuloCor
 		self.botaoPredmanOxiteno2                  ["width"]      = 13
@@ -814,20 +885,28 @@ class TelaRelogios1(object):
 													Info.Predman.Oxiteno2.NumeroRep, 
 													Info.Predman.Oxiteno2.Responsavel, 
 													Info.Predman.Oxiteno2.Telefone))
-		self.botaoPredmanOxiteno2.grid            (row=6,column=0,sticky = "N")
+		self.botaoPredmanOxiteno2.grid            (row=7,column=0,sticky = "N")
 
-		self.botaoPredmanOxiteno2Relogio                         = Button(self.ContainerPredman)
+		self.botaoPredmanOxiteno2Relogio                         =  Button(self.ContainerPredman, 
+																				highlightbackground="black",
+																				activebackground="black",
+																				activeforeground="white")
+		
 		self.botaoPredmanOxiteno2Relogio          ["text"]       = "R"
 		self.botaoPredmanOxiteno2Relogio          ["background"] = Info.Predman.Oxiteno2.RelogioCor
 		self.botaoPredmanOxiteno2Relogio          ["width"]      = 2
 		self.botaoPredmanOxiteno2Relogio          ["height"]     = 1
-		self.botaoPredmanOxiteno2Relogio.grid     (row=6,column=1,sticky = "N")
+		self.botaoPredmanOxiteno2Relogio.grid     (row=7,column=1,sticky = "N")
 
 
 
 
 
-		self.botaoPredmanSantoAndre                                = Button(self.ContainerPredman)
+		self.botaoPredmanSantoAndre                                =  Button(self.ContainerPredman, 
+																				highlightbackground="black",
+																				activebackground="black",
+																				activeforeground="white")
+		
 		self.botaoPredmanSantoAndre                 ["text"]       = "Santo Andre"
 		self.botaoPredmanSantoAndre                 ["background"] = Info.Predman.SantoAndre.ModuloCor
 		self.botaoPredmanSantoAndre                  ["width"]      = 13
@@ -838,19 +917,27 @@ class TelaRelogios1(object):
 													Info.Predman.SantoAndre.NumeroRep, 
 													Info.Predman.SantoAndre.Responsavel, 
 													Info.Predman.SantoAndre.Telefone))
-		self.botaoPredmanSantoAndre.grid           (row=7,column=0,sticky = "N")
+		self.botaoPredmanSantoAndre.grid           (row=8,column=0,sticky = "N")
 
-		self.botaoPredmanSantoAndreRelogio                         = Button(self.ContainerPredman)
+		self.botaoPredmanSantoAndreRelogio                         =  Button(self.ContainerPredman, 
+																				highlightbackground="black",
+																				activebackground="black",
+																				activeforeground="white")
+		
 		self.botaoPredmanSantoAndreRelogio          ["text"]       = "R"
 		self.botaoPredmanSantoAndreRelogio          ["background"] = Info.Predman.SantoAndre.RelogioCor
 		self.botaoPredmanSantoAndreRelogio          ["width"]      = 2
 		self.botaoPredmanSantoAndreRelogio          ["height"]     = 1
-		self.botaoPredmanSantoAndreRelogio.grid      (row=7,column=1,sticky = "N")
+		self.botaoPredmanSantoAndreRelogio.grid      (row=8,column=1,sticky = "N")
 
 
 
 
-		self.botaoPredmanPrysmianES                              = Button(self.ContainerPredman)
+		self.botaoPredmanPrysmianES                              =  Button(self.ContainerPredman, 
+																				highlightbackground="black",
+																				activebackground="black",
+																				activeforeground="white")
+		
 		self.botaoPredmanPrysmianES               ["text"]       = "Prysmian ES"
 		self.botaoPredmanPrysmianES               ["background"] = Info.Predman.PrysmianES.ModuloCor
 		self.botaoPredmanPrysmianES                ["width"]      = 13
@@ -861,19 +948,27 @@ class TelaRelogios1(object):
 													Info.Predman.PrysmianES.NumeroRep, 
 													Info.Predman.PrysmianES.Responsavel, 
 													Info.Predman.PrysmianES.Telefone))
-		self.botaoPredmanPrysmianES.grid          (row=8,column=0,sticky = "N")
+		self.botaoPredmanPrysmianES.grid          (row=9,column=0,sticky = "N")
 
-		self.botaoPredmanPrysmianESRelogio                       = Button(self.ContainerPredman)
+		self.botaoPredmanPrysmianESRelogio                       =  Button(self.ContainerPredman, 
+																				highlightbackground="black",
+																				activebackground="black",
+																				activeforeground="white")
+		
 		self.botaoPredmanPrysmianESRelogio        ["text"]       = "R"
 		self.botaoPredmanPrysmianESRelogio        ["background"] = Info.Predman.PrysmianES.RelogioCor
 		self.botaoPredmanPrysmianESRelogio        ["width"]      = 2
 		self.botaoPredmanPrysmianESRelogio        ["height"]     = 1
-		self.botaoPredmanPrysmianESRelogio.grid   (row=8,column=1,sticky = "N")
+		self.botaoPredmanPrysmianESRelogio.grid   (row=9,column=1,sticky = "N")
 
 
 
 
-		self.botaoPredmanTradegar                                = Button(self.ContainerPredman)
+		self.botaoPredmanTradegar                                =  Button(self.ContainerPredman, 
+																				highlightbackground="black",
+																				activebackground="black",
+																				activeforeground="white")
+		
 		self.botaoPredmanTradegar                 ["text"]       = "Tradegar"
 		self.botaoPredmanTradegar                 ["background"] = Info.Predman.Tradegar.ModuloCor
 		self.botaoPredmanTradegar                  ["width"]      = 13
@@ -884,19 +979,27 @@ class TelaRelogios1(object):
 													Info.Predman.Tradegar.NumeroRep, 
 													Info.Predman.Tradegar.Responsavel, 
 													Info.Predman.Tradegar.Telefone))
-		self.botaoPredmanTradegar.grid            (row=9,column=0,sticky = "N")
+		self.botaoPredmanTradegar.grid            (row=10,column=0,sticky = "N")
 
-		self.botaoPredmanTradegarRelogio                         = Button(self.ContainerPredman)
+		self.botaoPredmanTradegarRelogio                         =  Button(self.ContainerPredman, 
+																				highlightbackground="black",
+																				activebackground="black",
+																				activeforeground="white")
+		
 		self.botaoPredmanTradegarRelogio          ["text"]       = "R"
 		self.botaoPredmanTradegarRelogio          ["background"] = Info.Predman.Tradegar.RelogioCor
 		self.botaoPredmanTradegarRelogio          ["width"]      = 2
 		self.botaoPredmanTradegarRelogio          ["height"]     = 1
-		self.botaoPredmanTradegarRelogio.grid     (row=9,column=1,sticky = "N")
+		self.botaoPredmanTradegarRelogio.grid     (row=10,column=1,sticky = "N")
 
 
 
 
-		self.botaoPredmanPortao1                                 = Button(self.ContainerPredman)
+		self.botaoPredmanPortao1                                 =  Button(self.ContainerPredman, 
+																				highlightbackground="black",
+																				activebackground="black",
+																				activeforeground="white")
+		
 		self.botaoPredmanPortao1                  ["text"]       = "Sorocaba PP1"
 		self.botaoPredmanPortao1                  ["background"] = Info.Predman.Portao1.ModuloCor
 		self.botaoPredmanPortao1                   ["width"]      = 13
@@ -907,19 +1010,27 @@ class TelaRelogios1(object):
 													Info.Predman.Portao1.NumeroRep, 
 													Info.Predman.Portao1.Responsavel, 
 													Info.Predman.Portao1.Telefone))
-		self.botaoPredmanPortao1.grid             (row=10,column=0,sticky = "N")
+		self.botaoPredmanPortao1.grid             (row=11,column=0,sticky = "N")
 
-		self.botaoPredmanPortao1Relogio                          = Button(self.ContainerPredman)
+		self.botaoPredmanPortao1Relogio                          =  Button(self.ContainerPredman, 
+																				highlightbackground="black",
+																				activebackground="black",
+																				activeforeground="white")
+		
 		self.botaoPredmanPortao1Relogio           ["text"]       = "R"
 		self.botaoPredmanPortao1Relogio           ["background"] = Info.Predman.Portao1.RelogioCor
 		self.botaoPredmanPortao1Relogio           ["width"]      = 2
 		self.botaoPredmanPortao1Relogio           ["height"]     = 1
-		self.botaoPredmanPortao1Relogio.grid      (row=10,column=1,sticky = "N")
+		self.botaoPredmanPortao1Relogio.grid      (row=11,column=1,sticky = "N")
 
 
 
 
-		self.botaoPredmanPortao2                                 = Button(self.ContainerPredman)
+		self.botaoPredmanPortao2                                 =  Button(self.ContainerPredman, 
+																				highlightbackground="black",
+																				activebackground="black",
+																				activeforeground="white")
+		
 		self.botaoPredmanPortao2                  ["text"]       = "Sorocaba PP2"
 		self.botaoPredmanPortao2                  ["background"] = Info.Predman.Portao2.ModuloCor
 		self.botaoPredmanPortao2                   ["width"]      = 13
@@ -930,19 +1041,27 @@ class TelaRelogios1(object):
 													  Info.Predman.Portao2.NumeroRep, 
 													  Info.Predman.Portao2.Responsavel, 
 													  Info.Predman.Portao2.Telefone))
-		self.botaoPredmanPortao2.grid             (row=11,column=0,sticky = "N")
+		self.botaoPredmanPortao2.grid             (row=12,column=0,sticky = "N")
 
-		self.botaoPredmanPortao2Relogio                                 = Button(self.ContainerPredman)
+		self.botaoPredmanPortao2Relogio                                 =  Button(self.ContainerPredman, 
+																				highlightbackground="black",
+																				activebackground="black",
+																				activeforeground="white")
+		
 		self.botaoPredmanPortao2Relogio              ["text"]       = "R"
 		self.botaoPredmanPortao2Relogio                  ["background"] = Info.Predman.Portao2.RelogioCor
 		self.botaoPredmanPortao2Relogio                  ["width"]      = 2
 		self.botaoPredmanPortao2Relogio                  ["height"]     = 1
-		self.botaoPredmanPortao2Relogio.grid             (row=11,column=1,sticky = "N")
+		self.botaoPredmanPortao2Relogio.grid             (row=12,column=1,sticky = "N")
 
 
 
 
-		self.botaoPredmanSabic                                   = Button(self.ContainerPredman)
+		self.botaoPredmanSabic                                   =  Button(self.ContainerPredman, 
+																				highlightbackground="black",
+																				activebackground="black",
+																				activeforeground="white")
+		
 		self.botaoPredmanSabic                    ["text"]       = "Sabic"
 		self.botaoPredmanSabic                    ["background"] = Info.Predman.Sabic.ModuloCor
 		self.botaoPredmanSabic                     ["width"]      = 13
@@ -953,19 +1072,27 @@ class TelaRelogios1(object):
 													Info.Predman.Sabic.NumeroRep, 
 													Info.Predman.Sabic.Responsavel, 
 													Info.Predman.Sabic.Telefone))
-		self.botaoPredmanSabic.grid                (row=12,column=0,sticky = "N")
+		self.botaoPredmanSabic.grid                (row=13,column=0,sticky = "N")
 
-		self.botaoPredmanSabicRelogio                            = Button(self.ContainerPredman)
+		self.botaoPredmanSabicRelogio                            =  Button(self.ContainerPredman, 
+																				highlightbackground="black",
+																				activebackground="black",
+																				activeforeground="white")
+		
 		self.botaoPredmanSabicRelogio             ["text"]       = "R"
 		self.botaoPredmanSabicRelogio             ["background"] = Info.Predman.Sabic.RelogioCor
 		self.botaoPredmanSabicRelogio             ["width"]      = 2
 		self.botaoPredmanSabicRelogio             ["height"]     = 1
-		self.botaoPredmanSabicRelogio.grid        (row=12,column=1,sticky = "N")
+		self.botaoPredmanSabicRelogio.grid        (row=13,column=1,sticky = "N")
 
 
 
 
-		self.botaoPredmanSantherBraganca                         = Button(self.ContainerPredman)
+		self.botaoPredmanSantherBraganca                         =  Button(self.ContainerPredman, 
+																				highlightbackground="black",
+																				activebackground="black",
+																				activeforeground="white")
+		
 		self.botaoPredmanSantherBraganca          ["text"]       = "S. Braganca"
 		self.botaoPredmanSantherBraganca          ["background"] = Info.Predman.SBraganca.ModuloCor
 		self.botaoPredmanSantherBraganca           ["width"]      = 13
@@ -976,20 +1103,28 @@ class TelaRelogios1(object):
 														Info.Predman.SBraganca.NumeroRep, 
 														Info.Predman.SBraganca.Responsavel, 
 														Info.Predman.SBraganca.Telefone))
-		self.botaoPredmanSantherBraganca.grid      (row=13,column=0,sticky = "N")
+		self.botaoPredmanSantherBraganca.grid      (row=14,column=0,sticky = "N")
 
-		self.botaoPredmanSantherBragancaRelogio                  = Button(self.ContainerPredman)
+		self.botaoPredmanSantherBragancaRelogio                  =  Button(self.ContainerPredman, 
+																				highlightbackground="black",
+																				activebackground="black",
+																				activeforeground="white")
+		
 		self.botaoPredmanSantherBragancaRelogio   ["text"]       = "R"
 		self.botaoPredmanSantherBragancaRelogio   ["background"] = Info.Predman.SBraganca.RelogioCor
 		self.botaoPredmanSantherBragancaRelogio   ["width"]      = 2
 		self.botaoPredmanSantherBragancaRelogio   ["height"]     = 1
-		self.botaoPredmanSantherBragancaRelogio.grid (row=13,column=1,sticky = "N")
+		self.botaoPredmanSantherBragancaRelogio.grid (row=14,column=1,sticky = "N")
 
 
 
 
 
-		self.botaoPredmanSantherPenha                             = Button(self.ContainerPredman)
+		self.botaoPredmanSantherPenha                             =  Button(self.ContainerPredman, 
+																				highlightbackground="black",
+																				activebackground="black",
+																				activeforeground="white")
+		
 		self.botaoPredmanSantherPenha              ["text"]       = "S. Penha"
 		self.botaoPredmanSantherPenha              ["background"] = Info.Predman.SPenha.ModuloCor
 		self.botaoPredmanSantherPenha               ["width"]      = 13
@@ -1000,20 +1135,28 @@ class TelaRelogios1(object):
 														Info.Predman.SPenha.NumeroRep, 
 														Info.Predman.SPenha.Responsavel, 
 														Info.Predman.SPenha.Telefone))
-		self.botaoPredmanSantherPenha.grid         (row=14,column=0,sticky = "N")
+		self.botaoPredmanSantherPenha.grid         (row=15,column=0,sticky = "N")
 
-		self.botaoPredmanSantherPenhaRelogio                      = Button(self.ContainerPredman)
+		self.botaoPredmanSantherPenhaRelogio                      =  Button(self.ContainerPredman, 
+																				highlightbackground="black",
+																				activebackground="black",
+																				activeforeground="white")
+		
 		self.botaoPredmanSantherPenhaRelogio       ["text"]       = "R"
 		self.botaoPredmanSantherPenhaRelogio       ["background"] = Info.Predman.SPenha.RelogioCor
 		self.botaoPredmanSantherPenhaRelogio       ["width"]      = 2
 		self.botaoPredmanSantherPenhaRelogio       ["height"]     = 1
-		self.botaoPredmanSantherPenhaRelogio.grid  (row=14,column=1,sticky = "N")
+		self.botaoPredmanSantherPenhaRelogio.grid  (row=15,column=1,sticky = "N")
 
 
 
 
 
-		self.botaoPredmanFaurencia                               = Button(self.ContainerPredman)
+		self.botaoPredmanFaurencia                               =  Button(self.ContainerPredman, 
+																				highlightbackground="black",
+																				activebackground="black",
+																				activeforeground="white")
+		
 		self.botaoPredmanFaurencia                ["text"]       = "Faurencia"
 		self.botaoPredmanFaurencia                ["background"] = Info.Predman.Faurencia.ModuloCor
 		self.botaoPredmanFaurencia                 ["width"]      = 13
@@ -1024,20 +1167,28 @@ class TelaRelogios1(object):
 														Info.Predman.Faurencia.NumeroRep, 
 														Info.Predman.Faurencia.Responsavel, 
 														Info.Predman.Faurencia.Telefone))
-		self.botaoPredmanFaurencia.grid           (row=15,column=0,sticky = "N")
+		self.botaoPredmanFaurencia.grid           (row=16,column=0,sticky = "N")
 
-		self.botaoPredmanFaurenciaRelogio                        = Button(self.ContainerPredman)
+		self.botaoPredmanFaurenciaRelogio                        =  Button(self.ContainerPredman, 
+																				highlightbackground="black",
+																				activebackground="black",
+																				activeforeground="white")
+		
 		self.botaoPredmanFaurenciaRelogio         ["text"]       = "R"
 		self.botaoPredmanFaurenciaRelogio         ["background"] = Info.Predman.Faurencia.RelogioCor
 		self.botaoPredmanFaurenciaRelogio         ["width"]      = 2
 		self.botaoPredmanFaurenciaRelogio         ["height"]     = 1
-		self.botaoPredmanFaurenciaRelogio.grid    (row=15,column=1,sticky = "N")
+		self.botaoPredmanFaurenciaRelogio.grid    (row=16,column=1,sticky = "N")
 
 
 
 
 
-		self.botaoPredmanAdmRondonopolis                         = Button(self.ContainerPredman)
+		self.botaoPredmanAdmRondonopolis                         =  Button(self.ContainerPredman, 
+																				highlightbackground="black",
+																				activebackground="black",
+																				activeforeground="white")
+		
 		self.botaoPredmanAdmRondonopolis          ["text"]       = "Adm Rond."
 		self.botaoPredmanAdmRondonopolis          ["background"] = Info.Predman.AdmRondonopolis.ModuloCor
 		self.botaoPredmanAdmRondonopolis           ["width"]      = 13
@@ -1048,20 +1199,28 @@ class TelaRelogios1(object):
 														Info.Predman.AdmRondonopolis.NumeroRep, 
 														Info.Predman.AdmRondonopolis.Responsavel, 
 														Info.Predman.AdmRondonopolis.Telefone))
-		self.botaoPredmanAdmRondonopolis.grid     (row=16,column=0,sticky = "N")
+		self.botaoPredmanAdmRondonopolis.grid     (row=17,column=0,sticky = "N")
 
-		self.botaoPredmanAdmRondonopolisRelogio                  = Button(self.ContainerPredman)
+		self.botaoPredmanAdmRondonopolisRelogio                  =  Button(self.ContainerPredman, 
+																				highlightbackground="black",
+																				activebackground="black",
+																				activeforeground="white")
+		
 		self.botaoPredmanAdmRondonopolisRelogio   ["text"]       = "R"
 		self.botaoPredmanAdmRondonopolisRelogio   ["background"] = Info.Predman.AdmRondonopolis.RelogioCor
 		self.botaoPredmanAdmRondonopolisRelogio   ["width"]      = 2
 		self.botaoPredmanAdmRondonopolisRelogio   ["height"]     = 1
-		self.botaoPredmanAdmRondonopolisRelogio.grid  (row=16,column=1,sticky = "N")
+		self.botaoPredmanAdmRondonopolisRelogio.grid  (row=17,column=1,sticky = "N")
 
 
 
 
 
-		self.botaoPredmanVilaVelha                               = Button(self.ContainerPredman)
+		self.botaoPredmanVilaVelha                               =  Button(self.ContainerPredman, 
+																				highlightbackground="black",
+																				activebackground="black",
+																				activeforeground="white")
+		
 		self.botaoPredmanVilaVelha                ["text"]       = "Vila Velha"
 		self.botaoPredmanVilaVelha                ["background"] = Info.Predman.VilaVelha.ModuloCor
 		self.botaoPredmanVilaVelha                 ["width"]      = 13
@@ -1072,14 +1231,18 @@ class TelaRelogios1(object):
 														Info.Predman.VilaVelha.NumeroRep, 
 														Info.Predman.VilaVelha.Responsavel, 
 														Info.Predman.VilaVelha.Telefone))
-		self.botaoPredmanVilaVelha.grid           (row=17,column=0,sticky = "N")
+		self.botaoPredmanVilaVelha.grid           (row=18,column=0,sticky = "N")
 
-		self.botaoPredmanVilaVelhaRelogio                        = Button(self.ContainerPredman)
+		self.botaoPredmanVilaVelhaRelogio                        =  Button(self.ContainerPredman, 
+																				highlightbackground="black",
+																				activebackground="black",
+																				activeforeground="white")
+		
 		self.botaoPredmanVilaVelhaRelogio         ["text"]       = "R"
 		self.botaoPredmanVilaVelhaRelogio         ["background"] = Info.Predman.VilaVelha.RelogioCor
 		self.botaoPredmanVilaVelhaRelogio         ["width"]      = 2
 		self.botaoPredmanVilaVelhaRelogio         ["height"]     = 1
-		self.botaoPredmanVilaVelhaRelogio.grid    (row=17,column=1,sticky = "N")
+		self.botaoPredmanVilaVelhaRelogio.grid    (row=18,column=1,sticky = "N")
 
 
 
@@ -1087,102 +1250,204 @@ class TelaRelogios1(object):
 
 
 
-		self.msgUniman = Label (self.ContainerUniman,text = "Uniman")
-		self.msgUniman["height"] = 1
-		self.msgUniman.grid(row=0,column=0,sticky = "N")
+		self.msgUniman 									= Label (self.ContainerUniman,
+																text = "Uniman",
+																font= "arialblack 12 bold",
+																bg="black",
+																fg="white")
 
 
 
+		self.msgUniman 									["height"] = 1
 
-		self.botaoUnimanSaintGobain                                  = Button(self.ContainerUniman)
-		self.botaoUnimanSaintGobain                   ["text"]       = "Saint Gobain"
-		self.botaoUnimanSaintGobain                   ["background"] = Info.Uniman.SaintGobain.ModuloCor
-		self.botaoUnimanSaintGobain                    ["width"]      = 13
-		self.botaoUnimanSaintGobain                   ["height"]     = 1
-		self.botaoUnimanSaintGobain.bind             ("<Button-1>",lambda e: popup("Uniman","Saint Gobain",
-														Info.Uniman.SaintGobain.IP, 
-														Info.Uniman.SaintGobain.Porta, 
-														Info.Uniman.SaintGobain.NumeroRep, 
-														Info.Uniman.SaintGobain.Responsavel, 
-														Info.Uniman.SaintGobain.Telefone))
-		self.botaoUnimanSaintGobain.grid              (row=1, column=0, sticky = "N")
-
-		self.botaoUnimanSaintGobainRelogio                           = Button(self.ContainerUniman)
-		self.botaoUnimanSaintGobainRelogio            ["text"]       = "R"
-		self.botaoUnimanSaintGobainRelogio            ["background"] = Info.Uniman.SaintGobain.RelogioCor
-		self.botaoUnimanSaintGobainRelogio            ["width"]      = 2
-		self.botaoUnimanSaintGobainRelogio            ["height"]     = 1
-		self.botaoUnimanSaintGobainRelogio.grid       (row=1, column=1, sticky = "N")
+		self.msgUniman.grid 							(row=0,column=0,sticky = "N")
 
 
 
+		
+		self.msgUnimanContage  							= Label (self.ContainerUniman,
+																text = str(Info.Uniman.Status.Contage)+"/"+
+																str(Info.Uniman.Status.TotalRelogios),
+																font="arial 11",
+																bg="black",
+																fg="white")
 
-		self.botaoUnimanPPMSecoia                                   = Button(self.ContainerUniman)
-		self.botaoUnimanPPMSecoia                    ["text"]       = "PPM Secoia"
-		self.botaoUnimanPPMSecoia                    ["background"] = Info.Uniman.PPMSecoia.ModuloCor
-		self.botaoUnimanPPMSecoia                     ["width"]      = 13
-		self.botaoUnimanPPMSecoia                    ["height"]     = 1
-		self.botaoUnimanPPMSecoia.bind              ("<Button-1>",lambda e: popup("Uniman","PPM Secoia",
-														Info.Uniman.PPMSecoia.IP, 
-														Info.Uniman.PPMSecoia.Porta, 
-														Info.Uniman.PPMSecoia.NumeroRep, 
-														Info.Uniman.PPMSecoia.Responsavel, 
-														Info.Uniman.PPMSecoia.Telefone))
-		self.botaoUnimanPPMSecoia.grid               (row=2,column=0,sticky = "N")
-
-		self.botaoUnimanPPMSecoiaRelogio                            = Button(self.ContainerUniman)
-		self.botaoUnimanPPMSecoiaRelogio             ["text"]       = "R"
-		self.botaoUnimanPPMSecoiaRelogio             ["background"] = Info.Uniman.PPMSecoia.RelogioCor
-		self.botaoUnimanPPMSecoiaRelogio             ["width"]      = 2
-		self.botaoUnimanPPMSecoiaRelogio             ["height"]     = 1
-		self.botaoUnimanPPMSecoiaRelogio.grid        (row=2,column=1,sticky = "N")
+	
 
 
+		self.botaoUnimanAtencao                      	= Button(self.ContainerUniman, 
+														highlightbackground="black",
+														activebackground="black",
+														activeforeground="white")
 
+		self.botaoUnimanAtencao                         ["text"]       = "A"
+		self.botaoUnimanAtencao                         ["height"]     = 1
+		self.botaoUnimanAtencao                         ["background"] = Info.Uniman.Status.Atencao
+		self.botaoUnimanAtencao                         ["width"]      = 2
 
-		self.botaoUnimanTitan                                       = Button(self.ContainerUniman)
-		self.botaoUnimanTitan                        ["text"]       = "Titan"
-		self.botaoUnimanTitan                        ["background"] = Info.Uniman.Titan.ModuloCor
-		self.botaoUnimanTitan                         ["width"]      = 13
-		self.botaoUnimanTitan                        ["height"]     = 1
-		self.botaoUnimanPPMSecoia.bind               ("<Button-1>",lambda e: popup("Uniman","Titan",
-														Info.Uniman.Titan.IP, 
-														Info.Uniman.Titan.Porta, 
-														Info.Uniman.Titan.NumeroRep, 
-														Info.Uniman.Titan.Responsavel, 
-														Info.Uniman.Titan.Telefone))
-		self.botaoUnimanTitan.grid                   (row=3,column=0,sticky = "N")
-
-		self.botaoUnimanTitanRelogio                                = Button(self.ContainerUniman)
-		self.botaoUnimanTitanRelogio                 ["text"]       = "R"
-		self.botaoUnimanTitanRelogio                 ["background"] = Info.Uniman.Titan.RelogioCor
-		self.botaoUnimanTitanRelogio                 ["width"]      = 2
-		self.botaoUnimanTitanRelogio                 ["height"]     =  1
-		self.botaoUnimanTitanRelogio.grid            (row=3,column=1,sticky = "N")
+		self.botaoUnimanAtencao.grid                     (row=0,column=1,sticky = "N")
 
 
 
 
 
-		self.botaoUnimanSekurity                                   = Button(self.ContainerUniman)
-		self.botaoUnimanSekurity                    ["text"]       = "Sekurity"
-		self.botaoUnimanSekurity                    ["background"] = Info.Uniman.Sekurity.ModuloCor
-		self.botaoUnimanSekurity                     ["width"]      = 13
-		self.botaoUnimanSekurity                    ["height"]     = 1
-		self.botaoUnimanSekurity.bind                ("<Button-1>",lambda e: popup("Uniman","Sekurity",
-														Info.Uniman.Sekurity.IP, 
-														Info.Uniman.Sekurity.Porta, 
-														Info.Uniman.Sekurity.NumeroRep, 
-														Info.Uniman.Sekurity.Responsavel, 
-														Info.Uniman.Sekurity.Telefone))
-		self.botaoUnimanSekurity.grid               (row=4,column=0,sticky = "N")
+		self.msgUnimanContage.grid 						(row=1,column=1,pady=3.5, sticky = "N")
 
-		self.botaoUnimanSekurityRelogio                            = Button(self.ContainerUniman)
-		self.botaoUnimanSekurityRelogio             ["text"]       = "R"
-		self.botaoUnimanSekurityRelogio             ["background"] = Info.Uniman.Sekurity.RelogioCor
-		self.botaoUnimanSekurityRelogio             ["width"]      = 2
-		self.botaoUnimanSekurityRelogio             ["height"]     =  1
-		self.botaoUnimanSekurityRelogio.grid        (row=4,column=1,sticky = "N")
+
+
+		self.msgUnimanHora  							= Label (self.ContainerUniman,
+														text = Info.Uniman.Status.Horaultima,
+														font="arial 11",
+														bg="black",
+														fg="white")
+																			
+		self.msgUnimanHora.grid 						(row=1,column=0,pady=3.5, sticky = "N")
+
+
+
+
+
+
+
+		relo=Info.Uniman.SaintGobain
+		self.botaoUnimanSaintGobain                    	= Button(self.ContainerUniman, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoUnimanSaintGobain                   	["text"]       = "Saint Gobain"
+		self.botaoUnimanSaintGobain                   	["background"] = relo.ModuloCor
+		self.botaoUnimanSaintGobain                  	["width"]      = 13
+		self.botaoUnimanSaintGobain                  	["height"]     = 1
+		self.botaoUnimanSaintGobain.bind             	("<Button-1>",lambda e: popup(
+														"Uniman",
+														"Saint Gobain",
+														relo.IP, 
+														relo.Porta, 
+														relo.NumeroRep, 
+														relo.Responsavel, 
+														relo.Telefone))
+
+		self.botaoUnimanSaintGobain.grid              	(row=2, column=0, sticky = "N")
+
+		self.botaoUnimanSaintGobainRelogio                           = Button(self.ContainerUniman, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoUnimanSaintGobainRelogio            	["text"]       = "R"
+		self.botaoUnimanSaintGobainRelogio            	["background"] = relo.RelogioCor
+		self.botaoUnimanSaintGobainRelogio            	["width"]      = 2
+		self.botaoUnimanSaintGobainRelogio            	["height"]     = 1
+		self.botaoUnimanSaintGobainRelogio.grid       	(row=2, column=1, sticky = "N")
+
+
+
+
+
+
+
+
+		relo=Info.Uniman.PPMSecoia
+		self.botaoUnimanPPMSecoia                       = Button(self.ContainerUniman, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoUnimanPPMSecoia                    	["text"]       = "PPM Secoia"
+		self.botaoUnimanPPMSecoia                    	["background"] = relo.ModuloCor
+		self.botaoUnimanPPMSecoia                     	["width"]      = 13
+		self.botaoUnimanPPMSecoia                    	["height"]     = 1
+		self.botaoUnimanPPMSecoia.bind              	("<Button-1>",lambda e: popup(
+														"Uniman",
+														"PPM Secoia",
+														relo.IP, 
+														relo.Porta, 
+														relo.NumeroRep, 
+														relo.Responsavel, 
+														relo.Telefone))
+		self.botaoUnimanPPMSecoia.grid               	(row=3,column=0,sticky = "N")
+
+
+		self.botaoUnimanPPMSecoiaRelogio                = Button(self.ContainerUniman, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoUnimanPPMSecoiaRelogio             	["text"]       = "R"
+		self.botaoUnimanPPMSecoiaRelogio             	["background"] = relo.RelogioCor
+		self.botaoUnimanPPMSecoiaRelogio             	["width"]      = 2
+		self.botaoUnimanPPMSecoiaRelogio             	["height"]     = 1
+		self.botaoUnimanPPMSecoiaRelogio.grid        	(row=3,column=1,sticky = "N")
+
+
+
+
+
+
+
+		relo=Info.Uniman.Titan
+		self.botaoUnimanTitan                           = Button(self.ContainerUniman, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoUnimanTitan                        	["text"]       = "Titan"
+		self.botaoUnimanTitan                        	["background"] = relo.ModuloCor
+		self.botaoUnimanTitan                         	["width"]      = 13
+		self.botaoUnimanTitan                        	["height"]     = 1
+		self.botaoUnimanPPMSecoia.bind               	("<Button-1>",lambda e: popup("Uniman","Titan",
+														relo.Titan.IP, 
+														relo.Titan.Porta, 
+														relo.Titan.NumeroRep, 
+														relo.Titan.Responsavel, 
+														relo.Titan.Telefone))
+		self.botaoUnimanTitan.grid                   	(row=4,column=0,sticky = "N")
+
+		self.botaoUnimanTitanRelogio                    = Button(self.ContainerUniman, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+
+		self.botaoUnimanTitanRelogio                 	["text"]       = "R"
+		self.botaoUnimanTitanRelogio                 	["background"] = relo.RelogioCor
+		self.botaoUnimanTitanRelogio                 	["width"]      = 2
+		self.botaoUnimanTitanRelogio                 	["height"]     =  1
+		self.botaoUnimanTitanRelogio.grid            	(row=4,column=1,sticky = "N")
+
+
+
+
+
+		relo=Info.Uniman.Sekurity
+		self.botaoUnimanSekurity                        = Button(self.ContainerUniman, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoUnimanSekurity                    	["text"]       = "Sekurity"
+		self.botaoUnimanSekurity                    	["background"] = relo.ModuloCor
+		self.botaoUnimanSekurity                     	["width"]      = 13
+		self.botaoUnimanSekurity                    	["height"]     = 1
+		self.botaoUnimanSekurity.bind                	("<Button-1>",lambda e: popup("Uniman","Sekurity",
+														relo.IP, 
+														relo.Porta, 
+														relo.NumeroRep, 
+														relo.Responsavel, 
+														relo.Telefone))
+		self.botaoUnimanSekurity.grid               	(row=5,column=0,sticky = "N")
+
+		self.botaoUnimanSekurityRelogio                            = Button(self.ContainerUniman, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoUnimanSekurityRelogio             	["text"]       = "R"
+		self.botaoUnimanSekurityRelogio             	["background"] = relo.RelogioCor
+		self.botaoUnimanSekurityRelogio             	["width"]      = 2
+		self.botaoUnimanSekurityRelogio             	["height"]     =  1
+		self.botaoUnimanSekurityRelogio.grid        	(row=5,column=1,sticky = "N")
 
 
 
@@ -3914,11 +4179,17 @@ class TelaRelogios1(object):
 
 		self.ContainerColuna3             = Frame (self.ContainerRelogios)
 		self.ContainerPredman             = Frame (self.ContainerColuna3)
+		self.ContainerUniman              = Frame (self.ContainerColuna3)
 		
-		self.ContainerColuna3.grid                	(row=0, column=3,pady=5, padx=1, columnspan=1, sticky="N")
-		self.ContainerPredman.grid                	(row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
-	
+		self.ContainerColuna3.grid                	(row=0, column=3,pady=5  , padx=3, columnspan=1, sticky="N")
+		self.ContainerPredman.grid                	(row=0, column=0,pady=3.5, padx=3, columnspan=1, sticky="N")
+		self.ContainerUniman.grid                 	(row=1, column=0,pady=3.5, padx=3, columnspan=1, sticky="N")
 
+	
+		self.ContainerColuna3.configure(bg="black")
+		self.ContainerPredman.configure(bg="black")
+		self.ContainerUniman.configure(bg="black")
+	
 
 	def Create_ContainerColuna4(self,root):
 
@@ -3930,19 +4201,19 @@ class TelaRelogios1(object):
 		self.ContainerSBCP				 			= Frame (self.ContainerColuna4)
 
 
-		self.ContainerColuna4.grid                	(row=0, column=4,pady=5  , padx=1, columnspan=1, sticky="N")
-		self.ContainerTarek.grid                  	(row=0, column=0,pady=3.5, padx=1, columnspan=1, sticky="N")
-		self.ContainerBuilding.grid               	(row=1, column=0,pady=3.5, padx=1, columnspan=1 ,sticky="N")
-		self.ContainerLaser.grid                  	(row=2, column=0,pady=3.5 ,padx=1, columnspan=1, sticky="N")
-		self.ContainerSBCP.grid 					(row=3, column=0,pady=3.5, padx=1, columnspan=1, sticky="N")
+		self.ContainerColuna4.grid                	(row=0, column=4,pady=5  , padx=3, columnspan=1, sticky="N")
+		self.ContainerTarek.grid                  	(row=0, column=0,pady=3.5, padx=3, columnspan=1, sticky="N")
+		self.ContainerBuilding.grid               	(row=1, column=0,pady=3.5, padx=3, columnspan=1 ,sticky="N")
+		self.ContainerLaser.grid                  	(row=2, column=0,pady=3.5 ,padx=3, columnspan=1, sticky="N")
+		self.ContainerSBCP.grid 					(row=3, column=0,pady=3.5, padx=3, columnspan=1, sticky="N")
 
 
 
 	def Create_ContainerColuna5(self,root):
 
 
-		self.ContainerColuna5             = Frame (self.ContainerRelogios)
-		self.ContainerMilenioErvas        = Frame (self.ContainerColuna5)
+		self.ContainerColuna5             			= Frame (self.ContainerRelogios)
+		self.ContainerMilenioErvas        			= Frame (self.ContainerColuna5)
 
 
 		self.ContainerColuna5.grid                (row=0, column=5,pady=5, padx=1, columnspan=1, sticky="N")
@@ -3954,21 +4225,21 @@ class TelaRelogios1(object):
 
 
 		self.ContainerColuna6             = Frame (self.ContainerRelogios)
-		self.ContainerUniman              = Frame (self.ContainerColuna6)
+		#self.ContainerUniman              = Frame (self.ContainerColuna6)
 
 
 		self.ContainerColuna6.grid                (row=0, column=6,pady=5, padx=1, columnspan=1, sticky="N")
-		self.ContainerUniman.grid                 (row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
+		#self.ContainerUniman.grid                 (row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
 
 
 
 	def Create_ContainerColuna7(self,root):
 
 		self.ContainerColuna7             = Frame (self.ContainerRelogios)
-		self.ContainerUniman              = Frame (self.ContainerColuna7)
+		#self.ContainerUniman              = Frame (self.ContainerColuna7)
 
 		self.ContainerColuna7.grid                (row=0, column=7,pady=5, padx=1, columnspan=1, sticky="N")
-		self.ContainerUniman.grid                 (row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
+		#self.ContainerUniman.grid                 (row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
 
 
 
@@ -3976,23 +4247,23 @@ class TelaRelogios1(object):
 
 
 		self.ContainerColuna8             = Frame (self.ContainerRelogios)
-		self.ContainerUniman              = Frame (self.ContainerColuna8)
+		#self.ContainerUniman              = Frame (self.ContainerColuna8)
 		
 
 		self.ContainerColuna8.grid                (row=0, column=8,pady=5, padx=1, columnspan=1, sticky="N")
-		self.ContainerUniman.grid                 (row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
+		#self.ContainerUniman.grid                 (row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
 
 
 
 	def Create_ContainerColuna9(self,root):
 
 		self.ContainerColuna9             = Frame (self.ContainerRelogios)
-		self.ContainerUniman              = Frame (self.ContainerColuna9)
+		#self.ContainerUniman              = Frame (self.ContainerColuna9)
 		
 
 		self.ContainerColuna9.grid                (row=0, column=9,pady=5, padx=1, columnspan=1, sticky="N")
 
-		self.ContainerUniman.grid                 (row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
+		#self.ContainerUniman.grid                 (row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
 
 
 
@@ -4001,10 +4272,10 @@ class TelaRelogios1(object):
 	
 		self.ContainerColuna10             = Frame (self.ContainerRelogios)
 		
-		self.ContainerUniman              = Frame (self.ContainerColuna10)
+		#self.ContainerUniman              = Frame (self.ContainerColuna10)
 
 		self.ContainerColuna10.grid                (row=0, column=10,pady=5, padx=1, columnspan=1, sticky="N")
-		self.ContainerUniman.grid                 (row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
+		#self.ContainerUniman.grid                 (row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
 
 
 
@@ -4012,12 +4283,12 @@ class TelaRelogios1(object):
 
 
 		self.ContainerColuna11             = Frame (self.ContainerRelogios)
-		self.ContainerUniman              = Frame (self.ContainerColuna11)
+		#self.ContainerUniman              = Frame (self.ContainerColuna11)
 		
 
 		self.ContainerColuna11.grid                (row=0, column=11,pady=5, padx=1, columnspan=1, sticky="N")
 
-		self.ContainerUniman.grid                 (row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
+		#self.ContainerUniman.grid                 (row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
 
 
 
