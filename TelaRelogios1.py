@@ -3776,18 +3776,18 @@ class TelaRelogios1(object):
 
 	def resize(self,event):
 		self.ContainerPai.config(width=event.width,height=event.height)
-		print event.width 
-		print event.height
+		#print event.width 
+		#print event.height
 		self.cavatura.configure(width=event.width-15,height=event.height-15)
 
 	def on_configure(self,event):
 		#canvas_width = event.width
 		#self.canvas.itemconfig(self.frame_ID, width = event.width, height=event.height)
-		#self.cavatura.configure(scrollregion=self.cavatura.bbox('all'))
+		self.cavatura.configure(scrollregion=self.cavatura.bbox('all'))
 		#print event.width 
 		#print event.height
 		#self.cavatura.config(width=event.width,height=event.height)
-		pass
+		
 
 
 
@@ -3801,31 +3801,32 @@ class TelaRelogios1(object):
 
 
 
-		self.ContainerPai = Canvas (root)
+		self.ContainerPai = Canvas (root,border = 0)
 		self.ContainerPai.grid               (row=0, column= 0 ,sticky = N + S + E + W)
 		self.ContainerPai.bind('<Configure>', self.resize)
 
-		self.cavatura = Canvas(self.ContainerPai)
+		self.cavatura = Canvas(self.ContainerPai,border = 0)
 		self.cavatura.configure(width=800,height=500)
 		self.cavatura.grid               (row=0, column= 0 ,sticky = N + S + E + W)	
-		self.ContainerRelogios		      = Canvas (self.cavatura)
+		self.ContainerRelogios		      = Canvas (self.cavatura,border = 0)
 	
 		self.ScrollBar					  = Scrollbar(self.ContainerPai,command=self.cavatura.yview,orient = VERTICAL)
-		self.ScrollBar.grid(row=0, column= 1 ,sticky = N + E)
+		self.ScrollBar.grid(row=0, column= 1 ,sticky = N + S + E + W)
 		self.ScrollBar2					  = Scrollbar(self.ContainerPai,command=self.cavatura.xview,orient = HORIZONTAL)
-		self.ScrollBar2.grid(row=1, column= 0 ,sticky = N + E)
-		self.cavatura.configure(scrollregion=self.cavatura.bbox('all'))
+		self.ScrollBar2.grid(row=1, column= 0 ,sticky =  N + S + E + W)
+		#self.cavatura.configure(scrollregion=self.cavatura.bbox('all'))
+		self.cavatura.config(xscrollcommand = self.ScrollBar2.set,yscrollcommand = self.ScrollBar.set)
+							
+
 
 		self.cavatura.bind('<Configure>', self.on_configure)
 
-		self.cavatura.config(yscrollcommand = self.ScrollBar.set,xscrollcommand = self.ScrollBar2.set)
-
-
+	
 
 		self.ContainerPai.configure(bg="black")
 		self.cavatura.configure(bg="black")
-		self.ScrollBar.configure(bg="black")
-		self.ScrollBar2.configure(bg="black")
+		self.ScrollBar.configure(bg="gray33",troughcolor="black",activebackground="gray")
+		self.ScrollBar2.configure(bg="gray33",troughcolor="black",activebackground="gray")
 
 
 
