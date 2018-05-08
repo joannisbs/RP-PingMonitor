@@ -3793,9 +3793,9 @@ class TelaRelogios1(object):
 
 	def Create_ContainerGeral(self,root):
 
-		self.ContainerRelogios = Frame (root)
-		self.ContainerRelogios.grid               (row=0, column= 0 ,sticky = N + S + E + W)
-		#self.Create_ContainerGeralResize(root)
+		#self.ContainerRelogios = Frame (root)
+		#self.ContainerRelogios.grid               (row=0, column= 0 ,sticky = N + S + E + W)
+		self.Create_ContainerGeralResize(root)
 
 	def Create_ContainerGeralResize(self,root):
 

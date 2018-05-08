@@ -38,9 +38,9 @@ class Iniciooo:
 
 
 		Relo1 = Toplevel(master=None)
-		#Relo1.geometry('1950x950')
-		#Relo1.update()
-		#Relo1.grid_rowconfigure(0,weight=1)
+		Relo1.geometry('1950x950')
+		Relo1.update()
+		Relo1.grid_rowconfigure(0,weight=1)
 		Relo1.resizable(False,False)
 		Relo1.configure(background="black")		
 		#Relo1.geometry(Relo1.geometry())
