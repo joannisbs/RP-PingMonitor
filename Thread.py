@@ -5,6 +5,9 @@ import time
 from TestFuncions import *
 
 
+
+
+
 class ThreadloopBuilding(threading.Thread):
 	def __init__(self):
 		threading.Thread.__init__(self)
@@ -123,7 +126,9 @@ def loopElRio():
 def loopLotten():
 	print "Inicio do Servico da Lotten"
 	while(1):
+		Info.Lotten.Status.Horaultima = "Hora: " + GetTime().horaminuto()
 		TestaLotten()
+		
 		if Controle.Stop : break 
 	Flag.quit = True
 
@@ -179,7 +184,9 @@ def loopBestInClass():
 def loopCasaCristo():
 	print "Inicio do Servico da CasaCristo"
 	while(1):
+		Info.CasaCristo.Status.Horaultima = "Hora: " + GetTime().horaminuto()
 		TestaCasCristo()
+		#Info.CasaCristo.Status.Horaultima = "10:30"
 		if Controle.Stop : break 
 		time.sleep(60)
 	Flag.quit = True
