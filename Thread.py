@@ -89,6 +89,7 @@ class ThreadloopOlimpark(threading.Thread):
 def loopOlimpark():
 	print "Inicio do Servico da Olimpark"
 	while(1):
+		Info.Olimpark.Status.Horaultima = "Hora: " + GetTime().horaminuto()
 		TestaOlimpark()
 		if Controle.Stop : break 
 	Flag.quit = True
@@ -107,6 +108,7 @@ def loopPredman():
 def loopSBCP():
 	print "Inicio do Servico da SBCP"
 	while(1):
+		
 		TestaSBCP()
 		if Controle.Stop : break 
 	Flag.quit = True
@@ -117,6 +119,7 @@ def loopSBCP():
 def loopElRio():
 	print "Inicio do Servico da El Rio"
 	while(1):
+		Info.ElRio.Status.Horaultima = "Hora: " + GetTime().horaminuto()
 		TestaElRio()
 		if Controle.Stop : break 
 	Flag.quit = True
@@ -139,6 +142,7 @@ def loopLotten():
 def loopGrupoNk():
 	print "Inicio do Servico do Grupo Nk"
 	while(1):
+		Info.GrupoNk.Status.Horaultima = "Hora: " + GetTime().horaminuto()
 		TestaGrupoNk()
 		if Controle.Stop : break 
 	Flag.quit = True
@@ -147,6 +151,7 @@ def loopGrupoNk():
 def loopGravex():
 	print "Inicio do Servico da Gravex"
 	while(1):
+		Info.Gravex.Status.Horaultima = "Hora: " + GetTime().horaminuto()
 		TestaGravex()
 		if Controle.Stop : break 
 		time.sleep(60)
@@ -176,6 +181,7 @@ def loopBuilding():
 def loopBestInClass():
 	print "Inicio do Servico da Best In Class"
 	while(1):
+		Info.BestInClass.Status.Horaultima = "Hora: " + GetTime().horaminuto()
 		TestaBestInClass()
 		if Controle.Stop : break 
 	Flag.quit = True
@@ -195,6 +201,7 @@ def loopCasaCristo():
 def loopIsoRadio():
 	print "Inicio do Servico da Iso Radiologia"
 	while(1):
+		Info.IsoRadio.Status.Horaultima = "Hora: " + GetTime().horaminuto()
 		TestaIsoRadio()
 		if Controle.Stop : break 
 	Flag.quit = True
