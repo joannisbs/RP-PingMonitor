@@ -3778,7 +3778,7 @@ class TelaRelogios1(object):
 		self.ContainerPai.config(width=event.width,height=event.height)
 		print event.width 
 		print event.height
-
+		self.cavatura.configure(width=event.width-15,height=event.height-15)
 
 	def on_configure(self,event):
 		#canvas_width = event.width
@@ -3820,7 +3820,16 @@ class TelaRelogios1(object):
 
 		self.cavatura.config(yscrollcommand = self.ScrollBar.set,xscrollcommand = self.ScrollBar2.set)
 
-		self.frame_ID =self.cavatura.create_window((-1000,0), window = self.ContainerRelogios, anchor='nw')
+
+
+		self.ContainerPai.configure(bg="black")
+		self.cavatura.configure(bg="black")
+		self.ScrollBar.configure(bg="black")
+		self.ScrollBar2.configure(bg="black")
+
+
+
+		self.frame_ID =self.cavatura.create_window((0,0), window = self.ContainerRelogios, anchor='nw')
 		#self.ContainerRelogios.grid               (row=0, column= 0 ,sticky = N + S + E + W)
 
 		#self.ContainerPai		      = Frame (root)
