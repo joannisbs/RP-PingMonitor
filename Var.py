@@ -2323,41 +2323,6 @@ class Info(object):
 			Responsavel     = "None"
 			Telefone        = "None"
 
-	class FocoForca(object):
-
-		class Status(object):
-			Horaultima         = "00:00"
-
-
-			Contage         = 0
-			TotalRelogios   = 10
-			Atencao 		= "green3"
-
-
-		class IFSP_SC(object):
-
-			Empresa         = "None"
-			Relogio         = "None"
-			ModuloCor		= "yellow"
-			RelogioCor		= "yellow"
-			IP 				= "None"
-			Porta           = "None"
-			NumeroRep       = "None"
-			Responsavel     = "None"
-			Telefone        = "None"
-
-		class ShopHB(object):
-
-			Empresa         = "None"
-			Relogio         = "None"
-			ModuloCor		= "yellow"
-			RelogioCor		= "yellow"
-			IP 				= "None"
-			Porta           = "None"
-			NumeroRep       = "None"
-			Responsavel     = "None"
-			Telefone        = "None"
-
 	class Helca(object):
 
 		class Status(object):
