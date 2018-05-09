@@ -645,7 +645,6 @@ class Info(object):
 			Responsavel     = "None"
 			Telefone        = "None"
 
-
 	class Predman(object):
 
 		class Status(object):
@@ -1004,7 +1003,6 @@ class Info(object):
 			Responsavel     = "None"
 			Telefone        = "None"
 	
-
 	class Uniman(object):
 
 		class Status(object):
@@ -1063,7 +1061,6 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-
 
 	class IsoRadio(object):
 
@@ -1196,7 +1193,6 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-
 
 	class GrupoNk(object):
 
@@ -1331,7 +1327,6 @@ class Info(object):
 			Responsavel     = "None"
 			Telefone        = "None"
 		
-
 	class SBCP(object):
 
 		class Status(object):
@@ -1509,7 +1504,6 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-
 
 	class ElRio(object):
 
@@ -1743,7 +1737,6 @@ class Info(object):
 			Responsavel     = "None"
 			Telefone        = "None"
 
-
 	class Olimpark(object):
 
 		class Status(object):
@@ -1829,8 +1822,6 @@ class Info(object):
 			NumeroRep       = "None"
 			Responsavel     = "None"
 			Telefone        = "None"
-
-
 
 	class Fancold1(object):
 
@@ -2262,6 +2253,157 @@ class Info(object):
 			HoraOn          = "00:00"
 			HoraOff         = "00:00"
 
+	class NaciCorretores(object):
+
+		class Status(object):
+			Horaultima         = "00:00"
+
+
+			Contage         = 0
+			TotalRelogios   = 10
+			Atencao 		= "green3"
+
+
+		class ShopMund(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+		class Portal(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+	class FocoForca(object):
+
+		class Status(object):
+			Horaultima         = "00:00"
+
+
+			Contage         = 0
+			TotalRelogios   = 10
+			Atencao 		= "green3"
+
+
+		class IFSP_SC(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+		class ShopHB(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+	class FocoForca(object):
+
+		class Status(object):
+			Horaultima         = "00:00"
+
+
+			Contage         = 0
+			TotalRelogios   = 10
+			Atencao 		= "green3"
+
+
+		class IFSP_SC(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+		class ShopHB(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+	class Helca(object):
+
+		class Status(object):
+			Horaultima         = "00:00"
+
+
+			Contage         = 0
+			TotalRelogios   = 10
+			Atencao 		= "green3"
+
+
+		class Barral(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+		class NewBone(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+
+		class Orthomedical(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
 
 
 class Controle(object):
