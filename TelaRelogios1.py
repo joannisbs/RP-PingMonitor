@@ -4039,6 +4039,8 @@ class TelaRelogios1(object):
 		self.botaoOlimparkSantana.grid                    	(row=7,column=0,sticky = "N")
 		self.botaoOlimparkSantanaRelogio.grid             	(row=7,column=1,sticky = "N")
 
+
+
 	def Create_Fancold1(self):
 
 
@@ -4261,7 +4263,7 @@ class TelaRelogios1(object):
 														relo.NumeroRep, 
 														relo.Responsavel, 
 														relo.Telefone))
-		self.botaoFancold1HospJundiai.grid               	(row=6,column=0,sticky = "N")
+		self.botaoFancold1EscritRioNegro.grid               	(row=6,column=0,sticky = "N")
 
 		self.botaoFancold1HospJundiaiRelogio                            = Button(self.ContainerFancold1, 
 																	highlightbackground="black",
@@ -5039,7 +5041,7 @@ class TelaRelogios1(object):
 		self.botaoFancold1MaayanRJRelogio             	["background"] = relo.RelogioCor
 		self.botaoFancold1MaayanRJRelogio             	["width"]      = 2
 		self.botaoFancold1MaayanRJRelogio             	["height"]     =  1
-		self.botaoFancold1OnTheParkRelogio.grid        	(row=30,column=1,sticky = "N")
+		self.botaoFancold1MaayanRJRelogio.grid        	(row=30,column=1,sticky = "N")
 
 
 	def resize(self,event):
