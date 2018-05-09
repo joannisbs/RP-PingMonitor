@@ -531,67 +531,64 @@ def LeBancoElRio(relogio_lido,word):
 		BancoAtribui(EstRelogio, word)
 		
 	elif relogio_lido == "botafogopraia":
-		EstRelogio = Info.ElRio.BotafogoMuniz
+		EstRelogio = Info.ElRio.BotafogoPraia
 		BancoAtribui(EstRelogio, word)
 		
 	elif relogio_lido == "boulevard":
-		EstRelogio = Info.ElRio.BotafogoMuniz
+		EstRelogio = Info.ElRio.Boulevard
 		BancoAtribui(EstRelogio, word)
 	
 	elif relogio_lido == "carioca":
-		EstRelogio = Info.ElRio.BotafogoMuniz
+		EstRelogio = Info.ElRio.Carioca
 		BancoAtribui(EstRelogio, word)
 		
 	elif relogio_lido == "centro1":
-		EstRelogio = Info.ElRio.BotafogoMuniz
+		EstRelogio = Info.ElRio.Centro1
 		BancoAtribui(EstRelogio, word)
 
 	elif relogio_lido == "centro2":
-		EstRelogio = Info.ElRio.BotafogoMuniz
+		EstRelogio = Info.ElRio.Centro2
 		BancoAtribui(EstRelogio, word)
 		
 	elif relogio_lido == "centro3":
-		EstRelogio = Info.ElRio.BotafogoMuniz
+		EstRelogio = Info.ElRio.Centro3
 		BancoAtribui(EstRelogio, word)
 		
 	elif relogio_lido == "fashion":
-		EstRelogio = Info.ElRio.BotafogoMuniz
+		EstRelogio = Info.ElRio.Fashion
 		BancoAtribui(EstRelogio, word)
 		
 	elif relogio_lido == "flamengo":
-		EstRelogio = Info.ElRio.BotafogoMuniz
+		EstRelogio = Info.ElRio.Flamengo
 		BancoAtribui(EstRelogio, word)
 		
 	elif relogio_lido == "leblon":
-		EstRelogio = Info.ElRio.BotafogoMuniz
+		EstRelogio = Info.ElRio.Leblon
 		BancoAtribui(EstRelogio, word)
 		
 	elif relogio_lido == "novaamerica":
-		EstRelogio = Info.ElRio.BotafogoMuniz
+		EstRelogio = Info.ElRio.NovaAmerica
 		BancoAtribui(EstRelogio, word)
 		
-	elif relogio_lido == "botafogomuniz":
-		EstRelogio = Info.ElRio.BotafogoMuniz
-		BancoAtribui(EstRelogio, word)
-		
+
 	elif relogio_lido == "shopgrande":
-		EstRelogio = Info.ElRio.BotafogoMuniz
+		EstRelogio = Info.ElRio.ShopGrande
 		BancoAtribui(EstRelogio, word)
 		
 	elif relogio_lido == "shopmacae":
-		EstRelogio = Info.ElRio.BotafogoMuniz
+		EstRelogio = Info.ElRio.ShopMacae
 		BancoAtribui(EstRelogio, word)
 		
 	elif relogio_lido == "shopnorte":
-		EstRelogio = Info.ElRio.BotafogoMuniz
+		EstRelogio = Info.ElRio.ShopNorte
 		BancoAtribui(EstRelogio, word)
 		
 	elif relogio_lido == "backup1":
-		EstRelogio = Info.ElRio.BotafogoMuniz
+		EstRelogio = Info.ElRio.Backup1
 		BancoAtribui(EstRelogio, word)
 		
 	elif relogio_lido == "backup2":
-		EstRelogio = Info.ElRio.BotafogoMuniz
+		EstRelogio = Info.ElRio.Backup2
 		BancoAtribui(EstRelogio, word)
 
 

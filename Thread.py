@@ -99,6 +99,7 @@ def loopOlimpark():
 def loopPredman():
 	print "Inicio do Servico da Predman"
 	while(1):
+		Info.Predman.Status.Horaultima = "Hora: " + GetTime().horaminuto()
 		TestaPredman()
 		if Controle.Stop : break 
 	Flag.quit = True
@@ -108,7 +109,7 @@ def loopPredman():
 def loopSBCP():
 	print "Inicio do Servico da SBCP"
 	while(1):
-		
+		Info.SBCP.Status.Horaultima = "Hora: " + GetTime().horaminuto()
 		TestaSBCP()
 		if Controle.Stop : break 
 	Flag.quit = True
@@ -161,6 +162,7 @@ def loopGravex():
 def loopLaser():
 	print "Inicio do Servico da Laser"
 	while(1):
+		Info.Laser.Status.Horaultima = "Hora: " + GetTime().horaminuto()
 		TestaLaser()
 		if Controle.Stop : break 
 		time.sleep(100)
@@ -170,6 +172,7 @@ def loopLaser():
 def loopBuilding():
 	print "Inicio do Servico da Building"
 	while(1):
+		Info.Building.Status.Horaultima = "Hora: " + GetTime().horaminuto()
 		TestaBuilding()
 		if Controle.Stop : break 
 		time.sleep(100)

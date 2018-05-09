@@ -671,39 +671,74 @@ class TelaRelogios1(object):
 
 	def Create_Laser(self):
 		
-		hora = "10:30"
-
-		self.msgLaser = Label (self.ContainerLaser,text = "Laser", font = "arialblack 12 bold")
-		self.msgLaser["height"]=1
-		self.msgLaser.grid(row=0,column=0,sticky = "N")
 
 
-		self.botaoLaserAtencao                                        = Button(self.ContainerLaser)
-		self.botaoLaserAtencao                         ["text"]       = "A"
-		self.botaoLaserAtencao                         ["height"]     = 1
-		self.botaoLaserAtencao                         ["background"] = "green"
-		self.botaoLaserAtencao                         ["width"]      = 2
+		self.msgLaser 									= Label (self.ContainerLaser,
+																text = "Laser",
+																font= "arialblack 12 bold",
+																bg="black",
+																fg="white")
 
-		self.botaoLaserAtencao.grid                     (row=0,column=1,sticky = "N")
+
+
+		self.msgLaser 									["height"] = 1
+
+		self.msgLaser.grid 							(row=0,column=0,sticky = "N")
+
+
+
+		
+		self.msgLaserContage  							= Label (self.ContainerLaser,
+																text = str(Info.Laser.Status.Contage)+"/"+
+																str(Info.Laser.Status.TotalRelogios),
+																font="arial 11",
+																bg="black",
+																fg="white")
+
 	
 
 
+		self.botaoLaserAtencao                      	= Button(self.ContainerLaser, 
+														highlightbackground="black",
+														activebackground="black",
+														activeforeground="white")
+
+		self.botaoLaserAtencao                         ["text"]       = "A"
+		self.botaoLaserAtencao                         ["height"]     = 1
+		self.botaoLaserAtencao                         ["background"] = Info.Laser.Status.Atencao
+		self.botaoLaserAtencao                         ["width"]      = 2
+
+		self.botaoLaserAtencao.grid                    (row=0,column=1,sticky = "N")
 
 
-		self.msgLaserContage = Label (self.ContainerLaser,text = str(Info.Laser.Status.Contage)+"/"+
-																	str(Info.Laser.Status.TotalRelogios)
-																	,font="arial 11")
-		self.msgLaserContage["height"]=1
-		self.msgLaserContage.grid(row=1,column=1,sticky = "N")
 
 
-		self.msgLaserHora = Label (self.ContainerLaser,text = "00:00",font="arial 11")
+
+		self.msgLaserContage.grid 					(row=1,column=1,pady=3.5, sticky = "N")
+
+
+
+		self.msgLaserHora  							= Label (self.ContainerLaser,
+														text = Info.Laser.Status.Horaultima,
+														font="arial 11",
+														bg="black",
+														fg="white")
 																			
-		self.msgLaserHora.grid(row=1,column=0, sticky = "N")
+		self.msgLaserHora.grid 						(row=1,column=0,pady=3.5, sticky = "N")
 
 
 
-		self.botaoAcademia                                         = Button(self.ContainerLaser)
+
+
+
+												
+
+
+		self.botaoAcademia                                          = Button(self.ContainerLaser, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
 		self.botaoAcademia                          ["text"]       = "Academia"
 		self.botaoAcademia                          ["background"] = Info.Laser.Academia.ModuloCor
 		self.botaoAcademia                          ["height"]     = 1
@@ -715,7 +750,11 @@ class TelaRelogios1(object):
 													Info.Laser.Academia.Responsavel, 
 													Info.Laser.Academia.Telefone))
 
-		self.botaoRAcademia                                        = Button(self.ContainerLaser)
+		self.botaoRAcademia                                         = Button(self.ContainerLaser, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
 		self.botaoRAcademia                         ["text"]       = "R"
 		self.botaoRAcademia                         ["height"]     = 1
 		self.botaoRAcademia                         ["background"] = Info.Laser.Academia.RelogioCor
@@ -725,7 +764,11 @@ class TelaRelogios1(object):
 		self.botaoRAcademia.grid                    (row=2,column=1,sticky = "N")
 
 
-		self.botaoInstituto                                        = Button(self.ContainerLaser)
+		self.botaoInstituto                                         = Button(self.ContainerLaser, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
 		self.botaoInstituto                         ["text"]       = "Instituto"
 		self.botaoInstituto                         ["background"] = Info.Laser.Instituto.ModuloCor
 		self.botaoInstituto                          ["width"]      = 13
@@ -737,7 +780,11 @@ class TelaRelogios1(object):
 													Info.Laser.Instituto.Responsavel, 
 													Info.Laser.Instituto.Telefone))
 
-		self.botaoRInstituto                                       = Button(self.ContainerLaser)
+		self.botaoRInstituto                                        = Button(self.ContainerLaser, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
 		self.botaoRInstituto                        ["text"]       = "R"
 		self.botaoRInstituto                        ["background"] = Info.Laser.Instituto.RelogioCor
 		self.botaoRInstituto                        ["width"]      = 2
@@ -1527,14 +1574,74 @@ class TelaRelogios1(object):
 
 	def Create_Tarek(self):
 
-		self.msgTarek = Label (self.ContainerTarek,text = "Grupo Tarek")
-		self.msgTarek["height"] = 1
-		self.msgTarek.grid(row=0,column=0,sticky = "N")
 
 
 
 
-		self.botaoTahine                                         = Button(self.ContainerTarek)
+		self.msgTarek 									= Label (self.ContainerTarek,
+																text = "Tarek",
+																font= "arialblack 12 bold",
+																bg="black",
+																fg="white")
+
+
+
+		self.msgTarek 									["height"] = 1
+
+		self.msgTarek.grid 							(row=0,column=0,sticky = "N")
+
+
+
+		
+		self.msgTarekContage  							= Label (self.ContainerTarek,
+																text = str(Info.Tarek.Status.Contage)+"/"+
+																str(Info.Tarek.Status.TotalRelogios),
+																font="arial 11",
+																bg="black",
+																fg="white")
+
+	
+
+
+		self.botaoTarekAtencao                      	= Button(self.ContainerTarek, 
+														highlightbackground="black",
+														activebackground="black",
+														activeforeground="white")
+
+		self.botaoTarekAtencao                         ["text"]       = "A"
+		self.botaoTarekAtencao                         ["height"]     = 1
+		self.botaoTarekAtencao                         ["background"] = Info.Tarek.Status.Atencao
+		self.botaoTarekAtencao                         ["width"]      = 2
+
+		self.botaoTarekAtencao.grid                     (row=0,column=1,sticky = "N")
+
+
+
+
+
+		self.msgTarekContage.grid 						(row=1,column=1,pady=3.5, sticky = "N")
+
+
+
+		self.msgTarekHora  							= Label (self.ContainerTarek,
+														text = Info.Tarek.Status.Horaultima,
+														font="arial 11",
+														bg="black",
+														fg="white")
+																			
+		self.msgTarekHora.grid 						(row=1,column=0,pady=3.5, sticky = "N")
+
+
+
+
+
+
+
+		self.botaoTahine                                         = Button(self.ContainerTarek, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
 		self.botaoTahine                          ["text"]       = "Tahine"
 		self.botaoTahine                          ["background"] = Info.Tarek.Tahine.ModuloCor
 		self.botaoTahine                           ["width"]      = 13
@@ -1545,19 +1652,27 @@ class TelaRelogios1(object):
 													Info.Tarek.Tahine.NumeroRep, 
 													Info.Tarek.Tahine.Responsavel, 
 													Info.Tarek.Tahine.Telefone))
-		self.botaoTahine.grid                     (row=1,column=0,sticky = "N")
+		self.botaoTahine.grid                     (row=2,column=0,sticky = "N")
 
-		self.botaoTahineRelogio                                  = Button(self.ContainerTarek)
+		self.botaoTahineRelogio                                  = Button(self.ContainerTarek, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
 		self.botaoTahineRelogio                   ["text"]       = "R"
 		self.botaoTahineRelogio                   ["background"] = Info.Tarek.Tahine.RelogioCor
 		self.botaoTahineRelogio                   ["height"]     = 1
 		self.botaoTahineRelogio                   ["width"]      = 2
-		self.botaoTahineRelogio.grid              (row=1,column=1,sticky = "N")
+		self.botaoTahineRelogio.grid              (row=2,column=1,sticky = "N")
 
 
 
 
-		self.botaoTarek                                          = Button(self.ContainerTarek)
+		self.botaoTarek                                          = Button(self.ContainerTarek, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
 		self.botaoTarek                           ["text"]       = "Tarek"
 		self.botaoTarek                           ["background"] = Info.Tarek.Tarek.ModuloCor
 		self.botaoTarek                           ["height"]     = 1
@@ -1568,19 +1683,27 @@ class TelaRelogios1(object):
 													Info.Tarek.Tarek.NumeroRep, 
 													Info.Tarek.Tarek.Responsavel, 
 													Info.Tarek.Tarek.Telefone))
-		self.botaoTarek.grid                      (row=2,column=0,sticky = "N")
+		self.botaoTarek.grid                      (row=3,column=0,sticky = "N")
 
-		self.botaoTarekRelogio                                   = Button(self.ContainerTarek)
+		self.botaoTarekRelogio                                   = Button(self.ContainerTarek, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
 		self.botaoTarekRelogio                    ["text"]       = "R"
 		self.botaoTarekRelogio                    ["background"] = Info.Tarek.Tarek.RelogioCor
 		self.botaoTarekRelogio                    ["width"]      = 2
 		self.botaoTarekRelogio                    ["height"]     = 1
-		self.botaoTarekRelogio.grid               (row=2,column=1,sticky = "N")
+		self.botaoTarekRelogio.grid               (row=3,column=1,sticky = "N")
 
 
 
 
-		self.botaoTafadalu                                       = Button(self.ContainerTarek)
+		self.botaoTafadalu                                       = Button(self.ContainerTarek, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
 		self.botaoTafadalu                        ["text"]       = "Tafadalu"
 		self.botaoTafadalu                        ["background"] = Info.Tarek.Tafadalu.ModuloCor
 		self.botaoTafadalu                        ["height"]     = 1
@@ -1591,19 +1714,27 @@ class TelaRelogios1(object):
 													Info.Tarek.Tafadalu.NumeroRep, 
 													Info.Tarek.Tafadalu.Responsavel, 
 													Info.Tarek.Tafadalu.Telefone))
-		self.botaoTafadalu.grid                   (row=3,column=0,sticky = "N")
+		self.botaoTafadalu.grid                   (row=4,column=0,sticky = "N")
 
-		self.botaoTafadaluRelogio                               = Button(self.ContainerTarek)
+		self.botaoTafadaluRelogio                               = Button(self.ContainerTarek, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
 		self.botaoTafadaluRelogio                ["text"]       = "R"
 		self.botaoTafadaluRelogio                ["background"] = Info.Tarek.Tafadalu.RelogioCor
 		self.botaoTafadaluRelogio                ["height"]     = 1
 		self.botaoTafadaluRelogio                ["width"]      = 2
-		self.botaoTafadaluRelogio.grid           (row=3,column=1,sticky = "N")
+		self.botaoTafadaluRelogio.grid           (row=4,column=1,sticky = "N")
 
 
 
 
-		self.botaoTalami                                        = Button(self.ContainerTarek)
+		self.botaoTalami                                        = Button(self.ContainerTarek, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
 		self.botaoTalami                         ["text"]       = "Talami"
 		self.botaoTalami                         ["background"] = Info.Tarek.Talami.ModuloCor
 		self.botaoTalami                          ["width"]      = 13
@@ -1614,14 +1745,18 @@ class TelaRelogios1(object):
 													Info.Tarek.Talami.NumeroRep, 
 													Info.Tarek.Talami.Responsavel, 
 													Info.Tarek.Talami.Telefone))
-		self.botaoTalami.grid                    (row=4,column=0,sticky = "N")
+		self.botaoTalami.grid                    (row=5,column=0,sticky = "N")
 
-		self.botaoTalamiRelogio                                 = Button(self.ContainerTarek)
+		self.botaoTalamiRelogio                                 = Button(self.ContainerTarek, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
 		self.botaoTalamiRelogio                  ["text"]       = "R"
 		self.botaoTalamiRelogio                  ["background"] = Info.Tarek.Talami.RelogioCor
 		self.botaoTalamiRelogio                  ["width"]      = 2
 		self.botaoTalamiRelogio                  ["height"]     = 1
-		self.botaoTalamiRelogio.grid             (row=4,column=1,sticky = "N")
+		self.botaoTalamiRelogio.grid             (row=5,column=1,sticky = "N")
 
 
 
@@ -2549,20 +2684,74 @@ class TelaRelogios1(object):
 	def Create_Building(self):
 
 
-		self.msgBuilding                            = Label (self.ContainerBuilding,text = "Building")
-		self.msgBuilding                            ["height"]     = 1
-		self.msgBuilding.grid                       (row=0,column=0,sticky = "N")
-
-		self.msgBuildingCont                        = Label (self.ContainerBuilding,text = str(Info.Building.Status.Contage)+"/3")
-		self.msgBuildingCont                        ["height"]     = 1
-		self.msgBuildingCont.grid                   (row=0,column=1,sticky = "N")
 
 
 
+		self.msgBuilding 									= Label (self.ContainerBuilding,
+																text = "Building",
+																font= "arialblack 12 bold",
+																bg="black",
+																fg="white")
 
 
 
-		self.botaoBuildingAllianz                                  = Button(self.ContainerBuilding)
+		self.msgBuilding 									["height"] = 1
+
+		self.msgBuilding.grid 							(row=0,column=0,sticky = "N")
+
+
+
+		
+		self.msgBuildingContage  							= Label (self.ContainerBuilding,
+																text = str(Info.Building.Status.Contage)+"/"+
+																str(Info.Building.Status.TotalRelogios),
+																font="arial 11",
+																bg="black",
+																fg="white")
+
+	
+
+
+		self.botaoBuildingAtencao                      	= Button(self.ContainerBuilding, 
+														highlightbackground="black",
+														activebackground="black",
+														activeforeground="white")
+
+		self.botaoBuildingAtencao                         ["text"]       = "A"
+		self.botaoBuildingAtencao                         ["height"]     = 1
+		self.botaoBuildingAtencao                         ["background"] = Info.Building.Status.Atencao
+		self.botaoBuildingAtencao                         ["width"]      = 2
+
+		self.botaoBuildingAtencao.grid                    (row=0,column=1,sticky = "N")
+
+
+
+
+
+		self.msgBuildingContage.grid 					(row=1,column=1,pady=3.5, sticky = "N")
+
+
+
+		self.msgBuildingHora  							= Label (self.ContainerBuilding,
+														text = Info.Building.Status.Horaultima,
+														font="arial 11",
+														bg="black",
+														fg="white")
+																			
+		self.msgBuildingHora.grid 						(row=1,column=0,pady=3.5, sticky = "N")
+
+
+
+
+
+
+
+		self.botaoBuildingAllianz                   = Button(self.ContainerBuilding, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+
 		self.botaoBuildingAllianz                   ["text"]       = "Allianz"
 		self.botaoBuildingAllianz                   ["background"] = Info.Building.Allianz.ModuloCor
 		self.botaoBuildingAllianz                    ["width"]      = 13
@@ -2574,50 +2763,70 @@ class TelaRelogios1(object):
 													Info.Building.Allianz.Responsavel, 
 													Info.Building.Allianz.Telefone))
 
-		self.botaoBuildingAllianzRelogio                           = Button(self.ContainerBuilding)
+		self.botaoBuildingAllianzRelogio            = Button(self.ContainerBuilding, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+
 		self.botaoBuildingAllianzRelogio            ["text"]       = "R"
 		self.botaoBuildingAllianzRelogio            ["background"] = Info.Building.Allianz.RelogioCor
 		self.botaoBuildingAllianzRelogio            ["width"]      = 2
 		self.botaoBuildingAllianzRelogio            ["height"]     = 1
 
-		self.botaoBuildingAllianz.grid       		(row=1, column=0, sticky = "N")
-		self.botaoBuildingAllianzRelogio.grid       (row=1, column=1, sticky = "N")
+		self.botaoBuildingAllianz.grid       		(row=2, column=0, sticky = "N")
+		self.botaoBuildingAllianzRelogio.grid       (row=2, column=1, sticky = "N")
 
 
 
 
 
 
-		self.botaoBuildingWTorre                                   = Button(self.ContainerBuilding)
+		self.botaoBuildingWTorre                    = Button(self.ContainerBuilding, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+
 		self.botaoBuildingWTorre                    ["text"]       = "WTorre"
 		self.botaoBuildingWTorre                    ["background"] = Info.Building.WTorre.ModuloCor
-		self.botaoBuildingWTorre                     ["width"]      = 13
+		self.botaoBuildingWTorre                    ["width"]      = 13
 		self.botaoBuildingWTorre                    ["height"]     = 1
-		self.botaoBuildingWTorre.bind              ("<Button-1>",lambda e: popup("Building","WTorre",
+		self.botaoBuildingWTorre.bind              	("<Button-1>",lambda e: popup("Building","WTorre",
 													Info.Building.WTorre.IP, 
 													Info.Building.WTorre.Porta, 
 													Info.Building.WTorre.NumeroRep, 
 													Info.Building.WTorre.Responsavel, 
 													Info.Building.WTorre.Telefone))
 
-		self.botaoBuildingWTorreRelogio                            = Button(self.ContainerBuilding)
+		self.botaoBuildingWTorreRelogio             = Button(self.ContainerBuilding, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+
 		self.botaoBuildingWTorreRelogio             ["text"]       = "R"
 		self.botaoBuildingWTorreRelogio             ["background"] = Info.Building.WTorre.RelogioCor
 		self.botaoBuildingWTorreRelogio             ["width"]      = 2
 		self.botaoBuildingWTorreRelogio             ["height"]     = 1
 
-		self.botaoBuildingWTorre.grid               (row=2,column=0,sticky = "N")
-		self.botaoBuildingWTorreRelogio.grid        (row=2,column=1,sticky = "N")
+		self.botaoBuildingWTorre.grid               (row=3,column=0,sticky = "N")
+		self.botaoBuildingWTorreRelogio.grid        (row=3,column=1,sticky = "N")
 
 
 
 
 
 
-		self.botaoBuildingRioJaneiro                               = Button(self.ContainerBuilding)
+		self.botaoBuildingRioJaneiro                = Button(self.ContainerBuilding, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+
 		self.botaoBuildingRioJaneiro                ["text"]       = "Rio De Janeiro"
 		self.botaoBuildingRioJaneiro                ["background"] = Info.Building.RioJaneiro.ModuloCor
-		self.botaoBuildingRioJaneiro                 ["width"]      = 13
+		self.botaoBuildingRioJaneiro                ["width"]      = 13
 		self.botaoBuildingRioJaneiro                ["height"]     = 1
 		self.botaoBuildingRioJaneiro.bind           ("<Button-1>",lambda e: popup("Building","Rio de Janeiro",
 													Info.Building.RioJaneiro.IP, 
@@ -2626,15 +2835,20 @@ class TelaRelogios1(object):
 													Info.Building.RioJaneiro.Responsavel, 
 													Info.Building.RioJaneiro.Telefone))
 
-		self.botaoBuildingRioJaneiroRelogio                        = Button(self.ContainerBuilding)
+		self.botaoBuildingRioJaneiroRelogio                        = Button(self.ContainerBuilding, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+
 		self.botaoBuildingRioJaneiroRelogio         ["text"]       = "R"
 		self.botaoBuildingRioJaneiroRelogio         ["background"] = Info.Building.RioJaneiro.RelogioCor
 		self.botaoBuildingRioJaneiroRelogio         ["width"]      = 2
 		self.botaoBuildingRioJaneiroRelogio         ["height"]     =  1
 
 
-		self.botaoBuildingRioJaneiro.grid           (row=3,column=0,sticky = "N")
-		self.botaoBuildingRioJaneiroRelogio.grid    (row=3,column=1,sticky = "N")
+		self.botaoBuildingRioJaneiro.grid           (row=4,column=0,sticky = "N")
+		self.botaoBuildingRioJaneiroRelogio.grid    (row=4,column=1,sticky = "N")
 
 
 
@@ -2889,21 +3103,75 @@ class TelaRelogios1(object):
 
 	def Create_SBCP(self):
 
-		self.msgSBCP                              		= Label (self.ContainerSBCP,text = "SBCP")
-		self.msgSBCP                              		["height"]     = 1
-		self.msgSBCP.grid                         		(row=0,column=0,sticky = "N")
+		
 
-
-		self.msgSBCPCount                              	= Label (self.ContainerSBCP,text= str(Info.SBCP.Status.Contage)+"/"+
-																						 str(Info.SBCP.Status.TotalRelogios))	
-
-		self.msgSBCPCount                              	["height"]     = 1
-		self.msgSBCPCount.grid                         	(row=0,column=1,sticky = "N")
+		self.msgSBCP 									= Label (self.ContainerSBCP,
+																text = "SBCP",
+																font= "arialblack 12 bold",
+																bg="black",
+																fg="white")
 
 
 
+		self.msgSBCP 									["height"] = 1
 
-		self.botaoSBCPNacional                         	= Button(self.ContainerSBCP)
+		self.msgSBCP.grid 							(row=0,column=0,sticky = "N")
+
+
+
+		
+		self.msgSBCPContage  							= Label (self.ContainerSBCP,
+																text = str(Info.SBCP.Status.Contage)+"/"+
+																str(Info.SBCP.Status.TotalRelogios),
+																font="arial 11",
+																bg="black",
+																fg="white")
+
+	
+
+
+		self.botaoSBCPAtencao                      	= Button(self.ContainerSBCP, 
+														highlightbackground="black",
+														activebackground="black",
+														activeforeground="white")
+
+		self.botaoSBCPAtencao                         ["text"]       = "A"
+		self.botaoSBCPAtencao                         ["height"]     = 1
+		self.botaoSBCPAtencao                         ["background"] = Info.SBCP.Status.Atencao
+		self.botaoSBCPAtencao                         ["width"]      = 2
+
+		self.botaoSBCPAtencao.grid                    (row=0,column=1,sticky = "N")
+
+
+
+
+
+		self.msgSBCPContage.grid 					(row=1,column=1,pady=3.5, sticky = "N")
+
+
+
+		self.msgSBCPHora  							= Label (self.ContainerSBCP,
+														text = Info.SBCP.Status.Horaultima,
+														font="arial 11",
+														bg="black",
+														fg="white")
+																			
+		self.msgSBCPHora.grid 						(row=1,column=0,pady=3.5, sticky = "N")
+
+
+
+
+
+
+
+
+
+
+		self.botaoSBCPNacional                         	= Button(self.ContainerSBCP, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+																	
 		self.botaoSBCPNacional                         	["text"]       = "Nacional"
 		self.botaoSBCPNacional                         	["background"] = Info.SBCP.Nacional.ModuloCor
 		self.botaoSBCPNacional                         	["width"]      = 13
@@ -2915,15 +3183,19 @@ class TelaRelogios1(object):
 														Info.SBCP.Nacional.Responsavel, 
 														Info.SBCP.Nacional.Telefone))
 
-		self.botaoSBCPNacionalRelogio                  	= Button(self.ContainerSBCP)
+		self.botaoSBCPNacionalRelogio                  	= Button(self.ContainerSBCP, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+																	
 		self.botaoSBCPNacionalRelogio                  	["text"]       = "R"
 		self.botaoSBCPNacionalRelogio                  	["background"] = Info.SBCP.Nacional.RelogioCor
 		self.botaoSBCPNacionalRelogio                  	["height"]     = 1
 		self.botaoSBCPNacionalRelogio                  	["width"]      = 2
 
 
-		self.botaoSBCPNacional.grid                    	(row=1,column=0,sticky = "N")
-		self.botaoSBCPNacionalRelogio.grid             	(row=1,column=1,sticky = "N")
+		self.botaoSBCPNacional.grid                    	(row=2,column=0,sticky = "N")
+		self.botaoSBCPNacionalRelogio.grid             	(row=2,column=1,sticky = "N")
 
 
 
@@ -2932,7 +3204,11 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoSBCPES                         		= Button(self.ContainerSBCP)
+		self.botaoSBCPES                         		= Button(self.ContainerSBCP, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+																	
 		self.botaoSBCPES                         		["text"]       = "ES"
 		self.botaoSBCPES                         		["background"] = Info.SBCP.ES.ModuloCor
 		self.botaoSBCPES                         		["width"]      = 13
@@ -2944,15 +3220,19 @@ class TelaRelogios1(object):
 														Info.SBCP.ES.Responsavel, 
 														Info.SBCP.ES.Telefone))
 
-		self.botaoSBCPESRelogio                  		= Button(self.ContainerSBCP)
+		self.botaoSBCPESRelogio                  		= Button(self.ContainerSBCP, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+																	
 		self.botaoSBCPESRelogio                  		["text"]       = "R"
 		self.botaoSBCPESRelogio                  		["background"] = Info.SBCP.ES.RelogioCor
 		self.botaoSBCPESRelogio                  		["height"]     = 1
 		self.botaoSBCPESRelogio                  		["width"]      = 2
 
 
-		self.botaoSBCPES.grid                    		(row=2,column=0,sticky = "N")
-		self.botaoSBCPESRelogio.grid             		(row=2,column=1,sticky = "N")
+		self.botaoSBCPES.grid                    		(row=3,column=0,sticky = "N")
+		self.botaoSBCPESRelogio.grid             		(row=3,column=1,sticky = "N")
 
 
 
@@ -2961,7 +3241,11 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoSBCPDF                         		= Button(self.ContainerSBCP)
+		self.botaoSBCPDF                         		= Button(self.ContainerSBCP, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+																	
 		self.botaoSBCPDF                         		["text"]       = "DF"
 		self.botaoSBCPDF                         		["background"] = Info.SBCP.DF.ModuloCor
 		self.botaoSBCPDF                         		["width"]      = 13
@@ -2973,15 +3257,19 @@ class TelaRelogios1(object):
 														Info.SBCP.DF.Responsavel, 
 														Info.SBCP.DF.Telefone))
 
-		self.botaoSBCPDFRelogio                  		= Button(self.ContainerSBCP)
+		self.botaoSBCPDFRelogio                  		= Button(self.ContainerSBCP, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+																	
 		self.botaoSBCPDFRelogio                  		["text"]       = "R"
 		self.botaoSBCPDFRelogio                  		["background"] = Info.SBCP.DF.RelogioCor
 		self.botaoSBCPDFRelogio                  		["height"]     = 1
 		self.botaoSBCPDFRelogio                  		["width"]      = 2
 
 
-		self.botaoSBCPDF.grid                    		(row=3,column=0,sticky = "N")
-		self.botaoSBCPDFRelogio.grid             		(row=3,column=1,sticky = "N")
+		self.botaoSBCPDF.grid                    		(row=4,column=0,sticky = "N")
+		self.botaoSBCPDFRelogio.grid             		(row=4,column=1,sticky = "N")
 
 
 
@@ -2990,7 +3278,11 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoSBCPCE                         		= Button(self.ContainerSBCP)
+		self.botaoSBCPCE                         		= Button(self.ContainerSBCP, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+																	
 		self.botaoSBCPCE                         		["text"]       = "CE"
 		self.botaoSBCPCE                         		["background"] = Info.SBCP.CE.ModuloCor
 		self.botaoSBCPCE                         		["width"]      = 13
@@ -3002,15 +3294,19 @@ class TelaRelogios1(object):
 														Info.SBCP.CE.Responsavel, 
 														Info.SBCP.CE.Telefone))
 
-		self.botaoSBCPCERelogio                  		= Button(self.ContainerSBCP)
+		self.botaoSBCPCERelogio                  		= Button(self.ContainerSBCP, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+																	
 		self.botaoSBCPCERelogio                  		["text"]       = "R"
 		self.botaoSBCPCERelogio                  		["background"] = Info.SBCP.CE.RelogioCor
 		self.botaoSBCPCERelogio                  		["height"]     = 1
 		self.botaoSBCPCERelogio                  		["width"]      = 2
 
 
-		self.botaoSBCPCE.grid                    		(row=4,column=0,sticky = "N")
-		self.botaoSBCPCERelogio.grid             		(row=4,column=1,sticky = "N")
+		self.botaoSBCPCE.grid                    		(row=5,column=0,sticky = "N")
+		self.botaoSBCPCERelogio.grid             		(row=5,column=1,sticky = "N")
 
 
 
@@ -3019,7 +3315,11 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoSBCPBA                         		= Button(self.ContainerSBCP)
+		self.botaoSBCPBA                         		= Button(self.ContainerSBCP, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+																	
 		self.botaoSBCPBA                         		["text"]       = "BA"
 		self.botaoSBCPBA                         		["background"] = Info.SBCP.BA.ModuloCor
 		self.botaoSBCPBA                         		["width"]      = 13
@@ -3031,15 +3331,19 @@ class TelaRelogios1(object):
 														Info.SBCP.BA.Responsavel, 
 														Info.SBCP.BA.Telefone))
 
-		self.botaoSBCPBARelogio                  		= Button(self.ContainerSBCP)
+		self.botaoSBCPBARelogio                  		= Button(self.ContainerSBCP, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+																	
 		self.botaoSBCPBARelogio                  		["text"]       = "R"
 		self.botaoSBCPBARelogio                  		["background"] = Info.SBCP.BA.RelogioCor
 		self.botaoSBCPBARelogio                  		["height"]     = 1
 		self.botaoSBCPBARelogio                  		["width"]      = 2
 
 
-		self.botaoSBCPBA.grid                    		(row=5,column=0,sticky = "N")
-		self.botaoSBCPBARelogio.grid             		(row=5,column=1,sticky = "N")
+		self.botaoSBCPBA.grid                    		(row=6,column=0,sticky = "N")
+		self.botaoSBCPBARelogio.grid             		(row=6,column=1,sticky = "N")
 
 
 
@@ -3048,7 +3352,11 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoSBCPSP                         		= Button(self.ContainerSBCP)
+		self.botaoSBCPSP                         		= Button(self.ContainerSBCP, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+																	
 		self.botaoSBCPSP                         		["text"]       = "SP"
 		self.botaoSBCPSP                         		["background"] = Info.SBCP.SP.ModuloCor
 		self.botaoSBCPSP                         		["width"]      = 13
@@ -3060,15 +3368,19 @@ class TelaRelogios1(object):
 														Info.SBCP.SP.Responsavel, 
 														Info.SBCP.SP.Telefone))
 
-		self.botaoSBCPSPRelogio                  		= Button(self.ContainerSBCP)
+		self.botaoSBCPSPRelogio                  		= Button(self.ContainerSBCP, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+																	
 		self.botaoSBCPSPRelogio                  		["text"]       = "R"
 		self.botaoSBCPSPRelogio                  		["background"] = Info.SBCP.SP.RelogioCor
 		self.botaoSBCPSPRelogio                  		["height"]     = 1
 		self.botaoSBCPSPRelogio                  		["width"]      = 2
 
 
-		self.botaoSBCPSP.grid                    		(row=6,column=0,sticky = "N")
-		self.botaoSBCPSPRelogio.grid             		(row=6,column=1,sticky = "N")
+		self.botaoSBCPSP.grid                    		(row=7,column=0,sticky = "N")
+		self.botaoSBCPSPRelogio.grid             		(row=7,column=1,sticky = "N")
 
 
 
@@ -3077,7 +3389,11 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoSBCPSC                         		= Button(self.ContainerSBCP)
+		self.botaoSBCPSC                         		= Button(self.ContainerSBCP, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+																	
 		self.botaoSBCPSC                         		["text"]       = "SC"
 		self.botaoSBCPSC                         		["background"] = Info.SBCP.SC.ModuloCor
 		self.botaoSBCPSC                         		["width"]      = 13
@@ -3089,15 +3405,19 @@ class TelaRelogios1(object):
 														Info.SBCP.SC.Responsavel, 
 														Info.SBCP.SC.Telefone))
 
-		self.botaoSBCPSCRelogio                  		= Button(self.ContainerSBCP)
+		self.botaoSBCPSCRelogio                  		= Button(self.ContainerSBCP, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+																	
 		self.botaoSBCPSCRelogio                  		["text"]       = "R"
 		self.botaoSBCPSCRelogio                  		["background"] = Info.SBCP.SC.RelogioCor
 		self.botaoSBCPSCRelogio                  		["height"]     = 1
 		self.botaoSBCPSCRelogio                  		["width"]      = 2
 
 
-		self.botaoSBCPSC.grid                    		(row=7,column=0,sticky = "N")
-		self.botaoSBCPSCRelogio.grid             		(row=7,column=1,sticky = "N")
+		self.botaoSBCPSC.grid                    		(row=8,column=0,sticky = "N")
+		self.botaoSBCPSCRelogio.grid             		(row=8,column=1,sticky = "N")
 
 
 
@@ -3106,7 +3426,11 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoSBCPRS                         		= Button(self.ContainerSBCP)
+		self.botaoSBCPRS                         		= Button(self.ContainerSBCP, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+																	
 		self.botaoSBCPRS                         		["text"]       = "RS"
 		self.botaoSBCPRS                         		["background"] = Info.SBCP.RS.ModuloCor
 		self.botaoSBCPRS                         		["width"]      = 13
@@ -3118,15 +3442,19 @@ class TelaRelogios1(object):
 														Info.SBCP.RS.Responsavel, 
 														Info.SBCP.RS.Telefone))
 
-		self.botaoSBCPRSRelogio                  		= Button(self.ContainerSBCP)
+		self.botaoSBCPRSRelogio                  		= Button(self.ContainerSBCP, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+																	
 		self.botaoSBCPRSRelogio                  		["text"]       = "R"
 		self.botaoSBCPRSRelogio                  		["background"] = Info.SBCP.RS.RelogioCor
 		self.botaoSBCPRSRelogio                  		["height"]     = 1
 		self.botaoSBCPRSRelogio                  		["width"]      = 2
 
 
-		self.botaoSBCPRS.grid                    		(row=8,column=0,sticky = "N")
-		self.botaoSBCPRSRelogio.grid             		(row=8,column=1,sticky = "N")
+		self.botaoSBCPRS.grid                    		(row=9,column=0,sticky = "N")
+		self.botaoSBCPRSRelogio.grid             		(row=9,column=1,sticky = "N")
 
 
 
@@ -3135,7 +3463,11 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoSBCPRJ                         		= Button(self.ContainerSBCP)
+		self.botaoSBCPRJ                         		= Button(self.ContainerSBCP, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+																	
 		self.botaoSBCPRJ                         		["text"]       = "RJ"
 		self.botaoSBCPRJ                         		["background"] = Info.SBCP.RJ.ModuloCor
 		self.botaoSBCPRJ                         		["width"]      = 13
@@ -3147,15 +3479,19 @@ class TelaRelogios1(object):
 														Info.SBCP.RJ.Responsavel, 
 														Info.SBCP.RJ.Telefone))
 
-		self.botaoSBCPRJRelogio                  		= Button(self.ContainerSBCP)
+		self.botaoSBCPRJRelogio                  		= Button(self.ContainerSBCP, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+																	
 		self.botaoSBCPRJRelogio                  		["text"]       = "R"
 		self.botaoSBCPRJRelogio                  		["background"] = Info.SBCP.RJ.RelogioCor
 		self.botaoSBCPRJRelogio                  		["height"]     = 1
 		self.botaoSBCPRJRelogio                  		["width"]      = 2
 
 
-		self.botaoSBCPRJ.grid                    		(row=9,column=0,sticky = "N")
-		self.botaoSBCPRJRelogio.grid             		(row=9,column=1,sticky = "N")
+		self.botaoSBCPRJ.grid                    		(row=10,column=0,sticky = "N")
+		self.botaoSBCPRJRelogio.grid             		(row=10,column=1,sticky = "N")
 
 
 
@@ -3164,7 +3500,11 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoSBCPPR                         		= Button(self.ContainerSBCP)
+		self.botaoSBCPPR                         		= Button(self.ContainerSBCP, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+																	
 		self.botaoSBCPPR                         		["text"]       = "PR"
 		self.botaoSBCPPR                         		["background"] = Info.SBCP.PR.ModuloCor
 		self.botaoSBCPPR                         		["width"]      = 13
@@ -3176,15 +3516,19 @@ class TelaRelogios1(object):
 														Info.SBCP.PR.Responsavel, 
 														Info.SBCP.PR.Telefone))
 
-		self.botaoSBCPPRRelogio                  		= Button(self.ContainerSBCP)
+		self.botaoSBCPPRRelogio                  		= Button(self.ContainerSBCP, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+																	
 		self.botaoSBCPPRRelogio                  		["text"]       = "R"
 		self.botaoSBCPPRRelogio                  		["background"] = Info.SBCP.PR.RelogioCor
 		self.botaoSBCPPRRelogio                  		["height"]     = 1
 		self.botaoSBCPPRRelogio                  		["width"]      = 2
 
 
-		self.botaoSBCPPR.grid                    		(row=10,column=0,sticky = "N")
-		self.botaoSBCPPRRelogio.grid             		(row=10,column=1,sticky = "N")
+		self.botaoSBCPPR.grid                    		(row=11,column=0,sticky = "N")
+		self.botaoSBCPPRRelogio.grid             		(row=11,column=1,sticky = "N")
 
 
 
@@ -3193,7 +3537,11 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoSBCPPE                         		= Button(self.ContainerSBCP)
+		self.botaoSBCPPE                         		= Button(self.ContainerSBCP, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+																	
 		self.botaoSBCPPE                         		["text"]       = "PE"
 		self.botaoSBCPPE                         		["background"] = Info.SBCP.PE.ModuloCor
 		self.botaoSBCPPE                         		["width"]      = 13
@@ -3205,15 +3553,19 @@ class TelaRelogios1(object):
 														Info.SBCP.PE.Responsavel, 
 														Info.SBCP.PE.Telefone))
 
-		self.botaoSBCPPERelogio                  		= Button(self.ContainerSBCP)
+		self.botaoSBCPPERelogio                  		= Button(self.ContainerSBCP, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+																	
 		self.botaoSBCPPERelogio                  		["text"]       = "R"
 		self.botaoSBCPPERelogio                  		["background"] = Info.SBCP.PE.RelogioCor
 		self.botaoSBCPPERelogio                  		["height"]     = 1
 		self.botaoSBCPPERelogio                  		["width"]      = 2
 
 
-		self.botaoSBCPPE.grid                    		(row=11,column=0,sticky = "N")
-		self.botaoSBCPPERelogio.grid             		(row=11,column=1,sticky = "N")
+		self.botaoSBCPPE.grid                    		(row=12,column=0,sticky = "N")
+		self.botaoSBCPPERelogio.grid             		(row=12,column=1,sticky = "N")
 
 
 
@@ -3222,7 +3574,11 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoSBCPMG                         		= Button(self.ContainerSBCP)
+		self.botaoSBCPMG                         		= Button(self.ContainerSBCP, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+																	
 		self.botaoSBCPMG                         		["text"]       = "MG"
 		self.botaoSBCPMG                         		["background"] = Info.SBCP.MG.ModuloCor
 		self.botaoSBCPMG                         		["width"]      = 13
@@ -3234,15 +3590,19 @@ class TelaRelogios1(object):
 														Info.SBCP.MG.Responsavel, 
 														Info.SBCP.MG.Telefone))
 
-		self.botaoSBCPMGRelogio                  		= Button(self.ContainerSBCP)
+		self.botaoSBCPMGRelogio                  		= Button(self.ContainerSBCP, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+																	
 		self.botaoSBCPMGRelogio                  		["text"]       = "R"
 		self.botaoSBCPMGRelogio                  		["background"] = Info.SBCP.MG.RelogioCor
 		self.botaoSBCPMGRelogio                  		["height"]     = 1
 		self.botaoSBCPMGRelogio                  		["width"]      = 2
 
 
-		self.botaoSBCPMG.grid                    		(row=12,column=0,sticky = "N")
-		self.botaoSBCPMGRelogio.grid             		(row=12,column=1,sticky = "N")
+		self.botaoSBCPMG.grid                    		(row=13,column=0,sticky = "N")
+		self.botaoSBCPMGRelogio.grid             		(row=13,column=1,sticky = "N")
 
 
 
@@ -3251,7 +3611,11 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoSBCPGO                         		= Button(self.ContainerSBCP)
+		self.botaoSBCPGO                         		= Button(self.ContainerSBCP, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+																	
 		self.botaoSBCPGO                         		["text"]       = "GO"
 		self.botaoSBCPGO                         		["background"] = Info.SBCP.GO.ModuloCor
 		self.botaoSBCPGO                         		["width"]      = 13
@@ -3263,15 +3627,19 @@ class TelaRelogios1(object):
 														Info.SBCP.GO.Responsavel, 
 														Info.SBCP.GO.Telefone))
 
-		self.botaoSBCPGORelogio                  		= Button(self.ContainerSBCP)
+		self.botaoSBCPGORelogio                  		= Button(self.ContainerSBCP, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+																	
 		self.botaoSBCPGORelogio                  		["text"]       = "R"
 		self.botaoSBCPGORelogio                  		["background"] = Info.SBCP.GO.RelogioCor
 		self.botaoSBCPGORelogio                  		["height"]     = 1
 		self.botaoSBCPGORelogio                  		["width"]      = 2
 
 
-		self.botaoSBCPGO.grid                    		(row=13,column=0,sticky = "N")
-		self.botaoSBCPGORelogio.grid             		(row=13,column=1,sticky = "N")
+		self.botaoSBCPGO.grid                    		(row=14,column=0,sticky = "N")
+		self.botaoSBCPGORelogio.grid             		(row=14,column=1,sticky = "N")
 
 
 
@@ -5287,6 +5655,12 @@ class TelaRelogios1(object):
 		self.ContainerLaser.grid                  	(row=2, column=0,pady=0  , padx=3, columnspan=1, sticky="N")
 		self.ContainerSBCP.grid 					(row=3, column=0,pady=0  , padx=3, columnspan=1, sticky="N")
 
+		self.ContainerColuna4.configure(bg="black")
+		self.ContainerTarek.configure(bg="black")
+		self.ContainerBuilding.configure(bg="black")
+		self.ContainerLaser.configure(bg="black")
+		self.ContainerSBCP.configure(bg="black")
+
 
 
 	def Create_ContainerColuna5(self,root):
@@ -5427,6 +5801,9 @@ class TelaRelogios1(object):
 		self.msgLaserContage.configure								(text=str(Info.Laser.Status.Contage)+"/"+
 																	str(Info.Laser.Status.TotalRelogios)								)
 
+		self.msgLaserHora.configure 									(text=str(Info.Laser.Status.Horaultima))
+
+
 
 
 	def updateLaser(self):
@@ -5457,9 +5834,10 @@ class TelaRelogios1(object):
 			self.botaoBuildingRioJaneiro.configure               	(bg=Info.Building.RioJaneiro.ModuloCor)
 			self.botaoBuildingRioJaneiroRelogio.configure        	(bg=Info.Building.RioJaneiro.RelogioCor)
 
-		self.msgBuildingCont.configure								(text=str(Info.Building.Status.Contage)+"/"+
+		self.msgBuildingContage.configure								(text=str(Info.Building.Status.Contage)+"/"+
 																	str(Info.Building.Status.TotalRelogios)								)
 
+		self.msgBuildingHora.configure 							(text=str(Info.Building.Status.Horaultima))
 
 
 	def updateGravex(self, relogio):
@@ -5918,8 +6296,14 @@ class TelaRelogios1(object):
 			self.botaoSBCPGORelogio.configure						(bg=Info.SBCP.GO.RelogioCor)
 
 
-		self.msgSBCPCount.configure	  						(text=str(Info.SBCP.Status.Contage)+"/"+
-																str(Info.SBCP.Status.TotalRelogios))
+		self.msgSBCPContage.configure	  								(text=str(Info.SBCP.Status.Contage)+"/"+
+																	str(Info.SBCP.Status.TotalRelogios))
+
+
+		self.msgSBCPHora.configure 									(text=str(Info.SBCP.Status.Horaultima))
+
+
+
 
 		
 
@@ -6136,6 +6520,10 @@ class TelaRelogios1(object):
 		
 		self.msgPredmancount.configure 								(text = str(Info.Predman.Status.Contage)+"/"+
 																	str(Info.Predman.Status.TotalRelogios))
+
+
+
+		self.msgPredmanHora.configure 									(text=str(Info.Predman.Status.Horaultima))
 
 
 
