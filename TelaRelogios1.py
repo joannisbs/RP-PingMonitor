@@ -4043,7 +4043,7 @@ class TelaRelogios1(object):
 
 
 
-		self.msgFancold1 									= Label (self.ContainerUniman,
+		self.msgFancold1 									= Label (self.ContainerFancold1,
 																text = "Fancold-1",
 																font= "arialblack 12 bold",
 																bg="black",
@@ -4219,11 +4219,11 @@ class TelaRelogios1(object):
 																	activebackground="black",
 																	activeforeground="white")
 
-		self.botaoFancold1HospJundiai                    	["text"]       = "HospJundiai"
-		self.botaoFancold1HospJundiai                    	["background"] = relo.ModuloCor
-		self.botaoFancold1HospJundiai                     	["width"]      = 13
-		self.botaoFancold1HospJundiai                    	["height"]     = 1
-		self.botaoFancold1HospJundiai.bind                	("<Button-1>",lambda e: popup("Fancold1","HospJundiai",
+		self.botaoFancold1HospJundiai                   ["text"]       = "Hosp. Jundiai"
+		self.botaoFancold1HospJundiai                   ["background"] = relo.ModuloCor
+		self.botaoFancold1HospJundiai                   ["width"]      = 13
+		self.botaoFancold1HospJundiai                   ["height"]     = 1
+		self.botaoFancold1HospJundiai.bind              ("<Button-1>",lambda e: popup("Fancold1","HospJundiai",
 														relo.IP, 
 														relo.Porta, 
 														relo.NumeroRep, 
@@ -4242,6 +4242,804 @@ class TelaRelogios1(object):
 		self.botaoFancold1HospJundiaiRelogio             	["height"]     =  1
 		self.botaoFancold1HospJundiaiRelogio.grid        	(row=5,column=1,sticky = "N")
 
+
+
+
+		relo=Info.Fancold1.EscritRioNegro
+		self.botaoFancold1EscritRioNegro                      = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1EscritRioNegro                ["text"]       = "Esc.Rio Negro"
+		self.botaoFancold1EscritRioNegro                ["background"] = relo.ModuloCor
+		self.botaoFancold1EscritRioNegro                ["width"]      = 13
+		self.botaoFancold1EscritRioNegro                ["height"]     = 1
+		self.botaoFancold1EscritRioNegro.bind           ("<Button-1>",lambda e: popup("Fancold1","HospJundiai",
+														relo.IP, 
+														relo.Porta, 
+														relo.NumeroRep, 
+														relo.Responsavel, 
+														relo.Telefone))
+		self.botaoFancold1HospJundiai.grid               	(row=6,column=0,sticky = "N")
+
+		self.botaoFancold1HospJundiaiRelogio                            = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1HospJundiaiRelogio             	["text"]       = "R"
+		self.botaoFancold1HospJundiaiRelogio             	["background"] = relo.RelogioCor
+		self.botaoFancold1HospJundiaiRelogio             	["width"]      = 2
+		self.botaoFancold1HospJundiaiRelogio             	["height"]     =  1
+		self.botaoFancold1HospJundiaiRelogio.grid        	(row=6,column=1,sticky = "N")
+
+
+
+
+		relo=Info.Fancold1.MorumbiPrime
+		self.botaoFancold1MorumbiPrime                      = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1MorumbiPrime                ["text"]       = "Morumbi Prime"
+		self.botaoFancold1MorumbiPrime                ["background"] = relo.ModuloCor
+		self.botaoFancold1MorumbiPrime                ["width"]      = 13
+		self.botaoFancold1MorumbiPrime                ["height"]     = 1
+		self.botaoFancold1MorumbiPrime.bind           ("<Button-1>",lambda e: popup("Fancold1","HospJundiai",
+														relo.IP, 
+														relo.Porta, 
+														relo.NumeroRep, 
+														relo.Responsavel, 
+														relo.Telefone))
+		self.botaoFancold1MorumbiPrime.grid               	(row=7,column=0,sticky = "N")
+
+		self.botaoFancold1MorumbiPrimeRelogio                  = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1MorumbiPrimeRelogio             	["text"]       = "R"
+		self.botaoFancold1MorumbiPrimeRelogio             	["background"] = relo.RelogioCor
+		self.botaoFancold1MorumbiPrimeRelogio             	["width"]      = 2
+		self.botaoFancold1MorumbiPrimeRelogio             	["height"]     =  1
+		self.botaoFancold1MorumbiPrimeRelogio.grid        	(row=7,column=1,sticky = "N")
+
+
+
+
+		relo=Info.Fancold1.HospMarioCovas
+		self.botaoFancold1HospMarioCovas                      = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1HospMarioCovas                ["text"]       = "Hosp. Mario Covas"
+		self.botaoFancold1HospMarioCovas                ["background"] = relo.ModuloCor
+		self.botaoFancold1HospMarioCovas                ["width"]      = 13
+		self.botaoFancold1HospMarioCovas                ["height"]     = 1
+		self.botaoFancold1HospMarioCovas.bind           ("<Button-1>",lambda e: popup("Fancold1","HospJundiai",
+														relo.IP, 
+														relo.Porta, 
+														relo.NumeroRep, 
+														relo.Responsavel, 
+														relo.Telefone))
+		self.botaoFancold1HospMarioCovas.grid               	(row=8,column=0,sticky = "N")
+
+		self.botaoFancold1HospMarioCovasRelogio                  = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1HospMarioCovasRelogio             	["text"]       = "R"
+		self.botaoFancold1HospMarioCovasRelogio             	["background"] = relo.RelogioCor
+		self.botaoFancold1HospMarioCovasRelogio             	["width"]      = 2
+		self.botaoFancold1HospMarioCovasRelogio             	["height"]     =  1
+		self.botaoFancold1HospMarioCovasRelogio.grid        	(row=8,column=1,sticky = "N")
+
+
+
+
+		relo=Info.Fancold1.CondVerboDivino
+		self.botaoFancold1CondVerboDivino                      = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1CondVerboDivino                ["text"]       = "Cond. Verbo Divino"
+		self.botaoFancold1CondVerboDivino                ["background"] = relo.ModuloCor
+		self.botaoFancold1CondVerboDivino                ["width"]      = 13
+		self.botaoFancold1CondVerboDivino                ["height"]     = 1
+		self.botaoFancold1CondVerboDivino.bind           ("<Button-1>",lambda e: popup("Fancold1","HospJundiai",
+														relo.IP, 
+														relo.Porta, 
+														relo.NumeroRep, 
+														relo.Responsavel, 
+														relo.Telefone))
+		self.botaoFancold1CondVerboDivino.grid               	(row=9,column=0,sticky = "N")
+
+		self.botaoFancold1CondVerboDivinoRelogio                  = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1CondVerboDivinoRelogio             	["text"]       = "R"
+		self.botaoFancold1CondVerboDivinoRelogio             	["background"] = relo.RelogioCor
+		self.botaoFancold1CondVerboDivinoRelogio             	["width"]      = 2
+		self.botaoFancold1CondVerboDivinoRelogio             	["height"]     =  1
+		self.botaoFancold1CondVerboDivinoRelogio.grid        	(row=9,column=1,sticky = "N")
+
+
+
+
+		relo=Info.Fancold1.HelborBerrini
+		self.botaoFancold1HelborBerrini                      = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1HelborBerrini                ["text"]       = "Helbor Berrini"
+		self.botaoFancold1HelborBerrini                ["background"] = relo.ModuloCor
+		self.botaoFancold1HelborBerrini                ["width"]      = 13
+		self.botaoFancold1HelborBerrini                ["height"]     = 1
+		self.botaoFancold1HelborBerrini.bind           ("<Button-1>",lambda e: popup("Fancold1","HospJundiai",
+														relo.IP, 
+														relo.Porta, 
+														relo.NumeroRep, 
+														relo.Responsavel, 
+														relo.Telefone))
+		self.botaoFancold1HelborBerrini.grid               	(row=10,column=0,sticky = "N")
+
+		self.botaoFancold1HelborBerriniRelogio                  = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1HelborBerriniRelogio             	["text"]       = "R"
+		self.botaoFancold1HelborBerriniRelogio             	["background"] = relo.RelogioCor
+		self.botaoFancold1HelborBerriniRelogio             	["width"]      = 2
+		self.botaoFancold1HelborBerriniRelogio             	["height"]     =  1
+		self.botaoFancold1HelborBerriniRelogio.grid        	(row=10,column=1,sticky = "N")
+
+
+
+
+		relo=Info.Fancold1.PortoAtlantico
+		self.botaoFancold1PortoAtlantico                      = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1PortoAtlantico                ["text"]       = "Porto Atlantico"
+		self.botaoFancold1PortoAtlantico                ["background"] = relo.ModuloCor
+		self.botaoFancold1PortoAtlantico                ["width"]      = 13
+		self.botaoFancold1PortoAtlantico                ["height"]     = 1
+		self.botaoFancold1PortoAtlantico.bind           ("<Button-1>",lambda e: popup("Fancold1","HospJundiai",
+														relo.IP, 
+														relo.Porta, 
+														relo.NumeroRep, 
+														relo.Responsavel, 
+														relo.Telefone))
+		self.botaoFancold1PortoAtlantico.grid               	(row=11,column=0,sticky = "N")
+
+		self.botaoFancold1PortoAtlanticoRelogio                  = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1PortoAtlanticoRelogio             	["text"]       = "R"
+		self.botaoFancold1PortoAtlanticoRelogio             	["background"] = relo.RelogioCor
+		self.botaoFancold1PortoAtlanticoRelogio             	["width"]      = 2
+		self.botaoFancold1PortoAtlanticoRelogio             	["height"]     =  1
+		self.botaoFancold1PortoAtlanticoRelogio.grid        	(row=11,column=1,sticky = "N")
+
+
+
+
+		relo=Info.Fancold1.AwpFreiGaspar
+		self.botaoFancold1AwpFreiGaspar                      = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1AwpFreiGaspar                ["text"]       = "AWP Frei Gaspar"
+		self.botaoFancold1AwpFreiGaspar                ["background"] = relo.ModuloCor
+		self.botaoFancold1AwpFreiGaspar                ["width"]      = 13
+		self.botaoFancold1AwpFreiGaspar                ["height"]     = 1
+		self.botaoFancold1AwpFreiGaspar.bind           ("<Button-1>",lambda e: popup("Fancold1","HospJundiai",
+														relo.IP, 
+														relo.Porta, 
+														relo.NumeroRep, 
+														relo.Responsavel, 
+														relo.Telefone))
+		self.botaoFancold1AwpFreiGaspar.grid               	(row=12,column=0,sticky = "N")
+
+		self.botaoFancold1AwpFreiGasparRelogio                  = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1AwpFreiGasparRelogio             	["text"]       = "R"
+		self.botaoFancold1AwpFreiGasparRelogio             	["background"] = relo.RelogioCor
+		self.botaoFancold1AwpFreiGasparRelogio             	["width"]      = 2
+		self.botaoFancold1AwpFreiGasparRelogio             	["height"]     =  1
+		self.botaoFancold1AwpFreiGasparRelogio.grid        	(row=12,column=1,sticky = "N")
+
+
+
+
+		relo=Info.Fancold1.PrestCold
+		self.botaoFancold1PrestCold                      = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1PrestCold                ["text"]       = "Prest Cold"
+		self.botaoFancold1PrestCold                ["background"] = relo.ModuloCor
+		self.botaoFancold1PrestCold                ["width"]      = 13
+		self.botaoFancold1PrestCold                ["height"]     = 1
+		self.botaoFancold1PrestCold.bind           ("<Button-1>",lambda e: popup("Fancold1","HospJundiai",
+														relo.IP, 
+														relo.Porta, 
+														relo.NumeroRep, 
+														relo.Responsavel, 
+														relo.Telefone))
+		self.botaoFancold1PrestCold.grid               	(row=13,column=0,sticky = "N")
+
+		self.botaoFancold1PrestColdRelogio                  = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1PrestColdRelogio             	["text"]       = "R"
+		self.botaoFancold1PrestColdRelogio             	["background"] = relo.RelogioCor
+		self.botaoFancold1PrestColdRelogio             	["width"]      = 2
+		self.botaoFancold1PrestColdRelogio             	["height"]     =  1
+		self.botaoFancold1PrestColdRelogio.grid        	(row=13,column=1,sticky = "N")
+
+
+
+
+		relo=Info.Fancold1.UnimedSantos
+		self.botaoFancold1UnimedSantos                      = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1UnimedSantos                ["text"]       = "Unimed Santos"
+		self.botaoFancold1UnimedSantos                ["background"] = relo.ModuloCor
+		self.botaoFancold1UnimedSantos                ["width"]      = 13
+		self.botaoFancold1UnimedSantos                ["height"]     = 1
+		self.botaoFancold1UnimedSantos.bind           ("<Button-1>",lambda e: popup("Fancold1","HospJundiai",
+														relo.IP, 
+														relo.Porta, 
+														relo.NumeroRep, 
+														relo.Responsavel, 
+														relo.Telefone))
+		self.botaoFancold1UnimedSantos.grid               	(row=14,column=0,sticky = "N")
+
+		self.botaoFancold1UnimedSantosRelogio                  = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1UnimedSantosRelogio             	["text"]       = "R"
+		self.botaoFancold1UnimedSantosRelogio             	["background"] = relo.RelogioCor
+		self.botaoFancold1UnimedSantosRelogio             	["width"]      = 2
+		self.botaoFancold1UnimedSantosRelogio             	["height"]     =  1
+		self.botaoFancold1UnimedSantosRelogio.grid        	(row=14,column=1,sticky = "N")
+
+
+
+
+		relo=Info.Fancold1.CruzadaBandeirante
+		self.botaoFancold1CruzadaBandeirante                      = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1CruzadaBandeirante                ["text"]       = "Cruzada Bandeirante"
+		self.botaoFancold1CruzadaBandeirante                ["background"] = relo.ModuloCor
+		self.botaoFancold1CruzadaBandeirante                ["width"]      = 13
+		self.botaoFancold1CruzadaBandeirante                ["height"]     = 1
+		self.botaoFancold1CruzadaBandeirante.bind           ("<Button-1>",lambda e: popup("Fancold1","HospJundiai",
+														relo.IP, 
+														relo.Porta, 
+														relo.NumeroRep, 
+														relo.Responsavel, 
+														relo.Telefone))
+		self.botaoFancold1CruzadaBandeirante.grid               	(row=15,column=0,sticky = "N")
+
+		self.botaoFancold1CruzadaBandeiranteRelogio                  = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1CruzadaBandeiranteRelogio             	["text"]       = "R"
+		self.botaoFancold1CruzadaBandeiranteRelogio             	["background"] = relo.RelogioCor
+		self.botaoFancold1CruzadaBandeiranteRelogio             	["width"]      = 2
+		self.botaoFancold1CruzadaBandeiranteRelogio             	["height"]     =  1
+		self.botaoFancold1CruzadaBandeiranteRelogio.grid        	(row=15,column=1,sticky = "N")
+
+
+
+
+		relo=Info.Fancold1.ColgateAnchieta
+		self.botaoFancold1ColgateAnchieta                      = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1ColgateAnchieta                ["text"]       = "Colgate Anchieta"
+		self.botaoFancold1ColgateAnchieta                ["background"] = relo.ModuloCor
+		self.botaoFancold1ColgateAnchieta                ["width"]      = 13
+		self.botaoFancold1ColgateAnchieta                ["height"]     = 1
+		self.botaoFancold1ColgateAnchieta.bind           ("<Button-1>",lambda e: popup("Fancold1","HospJundiai",
+														relo.IP, 
+														relo.Porta, 
+														relo.NumeroRep, 
+														relo.Responsavel, 
+														relo.Telefone))
+		self.botaoFancold1ColgateAnchieta.grid               	(row=16,column=0,sticky = "N")
+
+		self.botaoFancold1ColgateAnchietaRelogio                  = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1ColgateAnchietaRelogio             	["text"]       = "R"
+		self.botaoFancold1ColgateAnchietaRelogio             	["background"] = relo.RelogioCor
+		self.botaoFancold1ColgateAnchietaRelogio             	["width"]      = 2
+		self.botaoFancold1ColgateAnchietaRelogio             	["height"]     =  1
+		self.botaoFancold1ColgateAnchietaRelogio.grid        	(row=16,column=1,sticky = "N")
+
+
+
+
+		relo=Info.Fancold1.MDCaieiras
+		self.botaoFancold1MDCaieiras                      = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1MDCaieiras                ["text"]       = "MD Caieiras"
+		self.botaoFancold1MDCaieiras                ["background"] = relo.ModuloCor
+		self.botaoFancold1MDCaieiras                ["width"]      = 13
+		self.botaoFancold1MDCaieiras                ["height"]     = 1
+		self.botaoFancold1MDCaieiras.bind           ("<Button-1>",lambda e: popup("Fancold1","HospJundiai",
+														relo.IP, 
+														relo.Porta, 
+														relo.NumeroRep, 
+														relo.Responsavel, 
+														relo.Telefone))
+		self.botaoFancold1MDCaieiras.grid               	(row=17,column=0,sticky = "N")
+
+		self.botaoFancold1MDCaieirasRelogio                  = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1MDCaieirasRelogio             	["text"]       = "R"
+		self.botaoFancold1MDCaieirasRelogio             	["background"] = relo.RelogioCor
+		self.botaoFancold1MDCaieirasRelogio             	["width"]      = 2
+		self.botaoFancold1MDCaieirasRelogio             	["height"]     =  1
+		self.botaoFancold1MDCaieirasRelogio.grid        	(row=17,column=1,sticky = "N")
+
+
+
+
+		relo=Info.Fancold1.CondMandarim
+		self.botaoFancold1CondMandarim                      = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1CondMandarim                ["text"]       = "Cond. Mandarim"
+		self.botaoFancold1CondMandarim                ["background"] = relo.ModuloCor
+		self.botaoFancold1CondMandarim                ["width"]      = 13
+		self.botaoFancold1CondMandarim                ["height"]     = 1
+		self.botaoFancold1CondMandarim.bind           ("<Button-1>",lambda e: popup("Fancold1","HospJundiai",
+														relo.IP, 
+														relo.Porta, 
+														relo.NumeroRep, 
+														relo.Responsavel, 
+														relo.Telefone))
+		self.botaoFancold1CondMandarim.grid               	(row=18,column=0,sticky = "N")
+
+		self.botaoFancold1CondMandarimRelogio                  = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1CondMandarimRelogio             	["text"]       = "R"
+		self.botaoFancold1CondMandarimRelogio             	["background"] = relo.RelogioCor
+		self.botaoFancold1CondMandarimRelogio             	["width"]      = 2
+		self.botaoFancold1CondMandarimRelogio             	["height"]     =  1
+		self.botaoFancold1CondMandarimRelogio.grid        	(row=18,column=1,sticky = "N")
+
+
+
+
+		relo=Info.Fancold1.RhodiaPoliamida
+		self.botaoFancold1RhodiaPoliamida                      = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1RhodiaPoliamida                ["text"]       = "Rhodia Poliamida"
+		self.botaoFancold1RhodiaPoliamida                ["background"] = relo.ModuloCor
+		self.botaoFancold1RhodiaPoliamida                ["width"]      = 13
+		self.botaoFancold1RhodiaPoliamida                ["height"]     = 1
+		self.botaoFancold1RhodiaPoliamida.bind           ("<Button-1>",lambda e: popup("Fancold1","HospJundiai",
+														relo.IP, 
+														relo.Porta, 
+														relo.NumeroRep, 
+														relo.Responsavel, 
+														relo.Telefone))
+		self.botaoFancold1RhodiaPoliamida.grid               	(row=19,column=0,sticky = "N")
+
+		self.botaoFancold1RhodiaPoliamidaRelogio                  = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1RhodiaPoliamidaRelogio             	["text"]       = "R"
+		self.botaoFancold1RhodiaPoliamidaRelogio             	["background"] = relo.RelogioCor
+		self.botaoFancold1RhodiaPoliamidaRelogio             	["width"]      = 2
+		self.botaoFancold1RhodiaPoliamidaRelogio             	["height"]     =  1
+		self.botaoFancold1RhodiaPoliamidaRelogio.grid        	(row=19,column=1,sticky = "N")
+
+
+
+
+		relo=Info.Fancold1.BarraTradePrime
+		self.botaoFancold1BarraTradePrime                      = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1BarraTradePrime                ["text"]       = "Barra Trade Prime"
+		self.botaoFancold1BarraTradePrime                ["background"] = relo.ModuloCor
+		self.botaoFancold1BarraTradePrime                ["width"]      = 13
+		self.botaoFancold1BarraTradePrime                ["height"]     = 1
+		self.botaoFancold1BarraTradePrime.bind           ("<Button-1>",lambda e: popup("Fancold1","HospJundiai",
+														relo.IP, 
+														relo.Porta, 
+														relo.NumeroRep, 
+														relo.Responsavel, 
+														relo.Telefone))
+		self.botaoFancold1BarraTradePrime.grid               	(row=20,column=0,sticky = "N")
+
+		self.botaoFancold1BarraTradePrimeRelogio                  = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1BarraTradePrimeRelogio             	["text"]       = "R"
+		self.botaoFancold1BarraTradePrimeRelogio             	["background"] = relo.RelogioCor
+		self.botaoFancold1BarraTradePrimeRelogio             	["width"]      = 2
+		self.botaoFancold1BarraTradePrimeRelogio             	["height"]     =  1
+		self.botaoFancold1BarraTradePrimeRelogio.grid        	(row=20,column=1,sticky = "N")
+
+
+
+
+		relo=Info.Fancold1.NovaSPCMF
+		self.botaoFancold1NovaSPCMF                      = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1NovaSPCMF                ["text"]       = "Nova SPCMF"
+		self.botaoFancold1NovaSPCMF                ["background"] = relo.ModuloCor
+		self.botaoFancold1NovaSPCMF                ["width"]      = 13
+		self.botaoFancold1NovaSPCMF                ["height"]     = 1
+		self.botaoFancold1NovaSPCMF.bind           ("<Button-1>",lambda e: popup("Fancold1","HospJundiai",
+														relo.IP, 
+														relo.Porta, 
+														relo.NumeroRep, 
+														relo.Responsavel, 
+														relo.Telefone))
+		self.botaoFancold1NovaSPCMF.grid               	(row=21,column=0,sticky = "N")
+
+		self.botaoFancold1NovaSPCMFRelogio                  = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1NovaSPCMFRelogio             	["text"]       = "R"
+		self.botaoFancold1NovaSPCMFRelogio             	["background"] = relo.RelogioCor
+		self.botaoFancold1NovaSPCMFRelogio             	["width"]      = 2
+		self.botaoFancold1NovaSPCMFRelogio             	["height"]     =  1
+		self.botaoFancold1NovaSPCMFRelogio.grid        	(row=21,column=1,sticky = "N")
+
+
+
+
+		relo=Info.Fancold1.UnimedPamplona
+		self.botaoFancold1UnimedPamplona                      = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1UnimedPamplona                ["text"]       = "Unimed Pamplona"
+		self.botaoFancold1UnimedPamplona                ["background"] = relo.ModuloCor
+		self.botaoFancold1UnimedPamplona                ["width"]      = 13
+		self.botaoFancold1UnimedPamplona                ["height"]     = 1
+		self.botaoFancold1UnimedPamplona.bind           ("<Button-1>",lambda e: popup("Fancold1","HospJundiai",
+														relo.IP, 
+														relo.Porta, 
+														relo.NumeroRep, 
+														relo.Responsavel, 
+														relo.Telefone))
+		self.botaoFancold1UnimedPamplona.grid               	(row=22,column=0,sticky = "N")
+
+		self.botaoFancold1UnimedPamplonaRelogio                  = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1UnimedPamplonaRelogio             	["text"]       = "R"
+		self.botaoFancold1UnimedPamplonaRelogio             	["background"] = relo.RelogioCor
+		self.botaoFancold1UnimedPamplonaRelogio             	["width"]      = 2
+		self.botaoFancold1UnimedPamplonaRelogio             	["height"]     =  1
+		self.botaoFancold1UnimedPamplonaRelogio.grid        	(row=22,column=1,sticky = "N")
+
+
+
+
+		relo=Info.Fancold1.Ushin
+		self.botaoFancold1Ushin                      = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1Ushin                ["text"]       = "Ushin"
+		self.botaoFancold1Ushin                ["background"] = relo.ModuloCor
+		self.botaoFancold1Ushin                ["width"]      = 13
+		self.botaoFancold1Ushin                ["height"]     = 1
+		self.botaoFancold1Ushin.bind           ("<Button-1>",lambda e: popup("Fancold1","HospJundiai",
+														relo.IP, 
+														relo.Porta, 
+														relo.NumeroRep, 
+														relo.Responsavel, 
+														relo.Telefone))
+		self.botaoFancold1Ushin.grid               	(row=23,column=0,sticky = "N")
+
+		self.botaoFancold1UshinRelogio                  = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1UshinRelogio             	["text"]       = "R"
+		self.botaoFancold1UshinRelogio             	["background"] = relo.RelogioCor
+		self.botaoFancold1UshinRelogio             	["width"]      = 2
+		self.botaoFancold1UshinRelogio             	["height"]     =  1
+		self.botaoFancold1UshinRelogio.grid        	(row=23,column=1,sticky = "N")
+
+
+
+
+		relo=Info.Fancold1.CondManagerCenter
+		self.botaoFancold1CondManagerCenter                      = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1CondManagerCenter                ["text"]       = "Cond. Manager Center"
+		self.botaoFancold1CondManagerCenter                ["background"] = relo.ModuloCor
+		self.botaoFancold1CondManagerCenter                ["width"]      = 13
+		self.botaoFancold1CondManagerCenter                ["height"]     = 1
+		self.botaoFancold1CondManagerCenter.bind           ("<Button-1>",lambda e: popup("Fancold1","HospJundiai",
+														relo.IP, 
+														relo.Porta, 
+														relo.NumeroRep, 
+														relo.Responsavel, 
+														relo.Telefone))
+		self.botaoFancold1CondManagerCenter.grid               	(row=24,column=0,sticky = "N")
+
+		self.botaoFancold1CondManagerCenterRelogio                  = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1CondManagerCenterRelogio             	["text"]       = "R"
+		self.botaoFancold1CondManagerCenterRelogio             	["background"] = relo.RelogioCor
+		self.botaoFancold1CondManagerCenterRelogio             	["width"]      = 2
+		self.botaoFancold1CondManagerCenterRelogio             	["height"]     =  1
+		self.botaoFancold1CondManagerCenterRelogio.grid        	(row=24,column=1,sticky = "N")
+
+
+
+
+		relo=Info.Fancold1.ChoiceSublimeRJ
+		self.botaoFancold1ChoiceSublimeRJ                      = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1ChoiceSublimeRJ                ["text"]       = "Choice Sublime RJ"
+		self.botaoFancold1ChoiceSublimeRJ                ["background"] = relo.ModuloCor
+		self.botaoFancold1ChoiceSublimeRJ                ["width"]      = 13
+		self.botaoFancold1ChoiceSublimeRJ                ["height"]     = 1
+		self.botaoFancold1ChoiceSublimeRJ.bind           ("<Button-1>",lambda e: popup("Fancold1","HospJundiai",
+														relo.IP, 
+														relo.Porta, 
+														relo.NumeroRep, 
+														relo.Responsavel, 
+														relo.Telefone))
+		self.botaoFancold1ChoiceSublimeRJ.grid               	(row=25,column=0,sticky = "N")
+
+		self.botaoFancold1ChoiceSublimeRJRelogio                  = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1ChoiceSublimeRJRelogio             	["text"]       = "R"
+		self.botaoFancold1ChoiceSublimeRJRelogio             	["background"] = relo.RelogioCor
+		self.botaoFancold1ChoiceSublimeRJRelogio             	["width"]      = 2
+		self.botaoFancold1ChoiceSublimeRJRelogio             	["height"]     =  1
+		self.botaoFancold1ChoiceSublimeRJRelogio.grid        	(row=25,column=1,sticky = "N")
+
+
+
+
+		relo=Info.Fancold1.HelborMogiDasCruzes
+		self.botaoFancold1HelborMogiDasCruzes                      = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1HelborMogiDasCruzes                ["text"]       = "Helbor Mogi Das Cruzes"
+		self.botaoFancold1HelborMogiDasCruzes                ["background"] = relo.ModuloCor
+		self.botaoFancold1HelborMogiDasCruzes                ["width"]      = 13
+		self.botaoFancold1HelborMogiDasCruzes                ["height"]     = 1
+		self.botaoFancold1HelborMogiDasCruzes.bind           ("<Button-1>",lambda e: popup("Fancold1","HospJundiai",
+														relo.IP, 
+														relo.Porta, 
+														relo.NumeroRep, 
+														relo.Responsavel, 
+														relo.Telefone))
+		self.botaoFancold1HelborMogiDasCruzes.grid               	(row=26,column=0,sticky = "N")
+
+		self.botaoFancold1HelborMogiDasCruzesRelogio                  = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1HelborMogiDasCruzesRelogio             	["text"]       = "R"
+		self.botaoFancold1HelborMogiDasCruzesRelogio             	["background"] = relo.RelogioCor
+		self.botaoFancold1HelborMogiDasCruzesRelogio             	["width"]      = 2
+		self.botaoFancold1HelborMogiDasCruzesRelogio             	["height"]     =  1
+		self.botaoFancold1HelborMogiDasCruzesRelogio.grid        	(row=26,column=1,sticky = "N")
+
+
+
+		relo=Info.Fancold1.AWPTomeDeSouza
+		self.botaoFancold1AWPTomeDeSouza                      = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1AWPTomeDeSouza                ["text"]       = "AWP Tome De Souza"
+		self.botaoFancold1AWPTomeDeSouza                ["background"] = relo.ModuloCor
+		self.botaoFancold1AWPTomeDeSouza                ["width"]      = 13
+		self.botaoFancold1AWPTomeDeSouza                ["height"]     = 1
+		self.botaoFancold1AWPTomeDeSouza.bind           ("<Button-1>",lambda e: popup("Fancold1","HospJundiai",
+														relo.IP, 
+														relo.Porta, 
+														relo.NumeroRep, 
+														relo.Responsavel, 
+														relo.Telefone))
+		self.botaoFancold1AWPTomeDeSouza.grid               	(row=27,column=0,sticky = "N")
+
+		self.botaoFancold1AWPTomeDeSouzaRelogio                  = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1AWPTomeDeSouzaRelogio             	["text"]       = "R"
+		self.botaoFancold1AWPTomeDeSouzaRelogio             	["background"] = relo.RelogioCor
+		self.botaoFancold1AWPTomeDeSouzaRelogio             	["width"]      = 2
+		self.botaoFancold1AWPTomeDeSouzaRelogio             	["height"]     =  1
+		self.botaoFancold1AWPTomeDeSouzaRelogio.grid        	(row=27,column=1,sticky = "N")
+
+
+
+
+		relo=Info.Fancold1.EmilioRibas
+		self.botaoFancold1EmilioRibas                      = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1EmilioRibas                ["text"]       = "Emilio Ribas"
+		self.botaoFancold1EmilioRibas                ["background"] = relo.ModuloCor
+		self.botaoFancold1EmilioRibas                ["width"]      = 13
+		self.botaoFancold1EmilioRibas                ["height"]     = 1
+		self.botaoFancold1EmilioRibas.bind           ("<Button-1>",lambda e: popup("Fancold1","HospJundiai",
+														relo.IP, 
+														relo.Porta, 
+														relo.NumeroRep, 
+														relo.Responsavel, 
+														relo.Telefone))
+		self.botaoFancold1EmilioRibas.grid               	(row=28,column=0,sticky = "N")
+
+		self.botaoFancold1EmilioRibasRelogio                  = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1EmilioRibasRelogio             	["text"]       = "R"
+		self.botaoFancold1EmilioRibasRelogio             	["background"] = relo.RelogioCor
+		self.botaoFancold1EmilioRibasRelogio             	["width"]      = 2
+		self.botaoFancold1EmilioRibasRelogio             	["height"]     =  1
+		self.botaoFancold1EmilioRibasRelogio.grid        	(row=28,column=1,sticky = "N")
+
+
+
+
+		relo=Info.Fancold1.OnThePark
+		self.botaoFancold1OnThePark                      = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1OnThePark                ["text"]       = "On The Park"
+		self.botaoFancold1OnThePark                ["background"] = relo.ModuloCor
+		self.botaoFancold1OnThePark                ["width"]      = 13
+		self.botaoFancold1OnThePark                ["height"]     = 1
+		self.botaoFancold1OnThePark.bind           ("<Button-1>",lambda e: popup("Fancold1","HospJundiai",
+														relo.IP, 
+														relo.Porta, 
+														relo.NumeroRep, 
+														relo.Responsavel, 
+														relo.Telefone))
+		self.botaoFancold1OnThePark.grid               	(row=29,column=0,sticky = "N")
+
+		self.botaoFancold1OnTheParkRelogio                  = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1OnTheParkRelogio             	["text"]       = "R"
+		self.botaoFancold1OnTheParkRelogio             	["background"] = relo.RelogioCor
+		self.botaoFancold1OnTheParkRelogio             	["width"]      = 2
+		self.botaoFancold1OnTheParkRelogio             	["height"]     =  1
+		self.botaoFancold1OnTheParkRelogio.grid        	(row=29,column=1,sticky = "N")
+
+
+
+
+		lo=Info.Fancold1.MaayanRJ
+		self.botaoFancold1MaayanRJ                      = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1MaayanRJ                ["text"]       = "Maayan RJ"
+		self.botaoFancold1MaayanRJ                ["background"] = relo.ModuloCor
+		self.botaoFancold1MaayanRJ                ["width"]      = 13
+		self.botaoFancold1MaayanRJ                ["height"]     = 1
+		self.botaoFancold1MaayanRJ.bind           ("<Button-1>",lambda e: popup("Fancold1","HospJundiai",
+														relo.IP, 
+														relo.Porta, 
+														relo.NumeroRep, 
+														relo.Responsavel, 
+														relo.Telefone))
+		self.botaoFancold1MaayanRJ.grid               	(row=30,column=0,sticky = "N")
+
+		self.botaoFancold1MaayanRJRelogio                  = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1MaayanRJRelogio             	["text"]       = "R"
+		self.botaoFancold1MaayanRJRelogio             	["background"] = relo.RelogioCor
+		self.botaoFancold1MaayanRJRelogio             	["width"]      = 2
+		self.botaoFancold1MaayanRJRelogio             	["height"]     =  1
+		self.botaoFancold1OnTheParkRelogio.grid        	(row=30,column=1,sticky = "N")
 
 
 	def resize(self,event):
