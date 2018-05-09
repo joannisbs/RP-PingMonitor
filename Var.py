@@ -1831,6 +1831,439 @@ class Info(object):
 			Telefone        = "None"
 
 
+
+	class Fancold1(object):
+
+		class Status(object):
+			Horaultima         = "00:00"
+			Contage         = 0
+			TotalRelogios   = 30
+			Atencao 		= "green3"
+
+
+		class Givaudan(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
+
+
+		class Yamaha(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
+
+		class Odebrecht(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
+
+		class HospJundiai(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
+
+		class EscritRioNegro(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
+
+		class MorumbiPrime(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
+
+		class HospMarioCovas(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
+
+		class CondVerboDivino(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
+
+		class HelborBerrini(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
+
+		class PortoAtlantico(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
+
+		class AwpFreiGaspar(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
+
+		class PrestCold(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
+
+		class UnimedSantos(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
+
+		class CruzadaBandeirante(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
+
+		class ColgateAnchieta(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
+
+		class MDCaieiras(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
+
+		class CondMandarim(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
+
+		class RhodiaPoliamida(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
+
+		class BarraTradePrime(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
+
+		class NovaSPCMF(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
+
+		class UnimedPamplona(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
+
+		class Ushin(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
+
+		class CondManagerCenter(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
+
+		class ChoiceSublimeRJ(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
+
+		class HelborMogiDasCruzes(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
+
+		class AWPTomeDeSouza(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
+
+		class EmilioRibas(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
+
+		class OnThePark(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
+
+		class MaayanRJ(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
+
+		class CyrellaJK(object):
+
+			Empresa         = "None"
+			Relogio         = "None"
+			ModuloCor		= "yellow"
+			RelogioCor		= "yellow"
+			IP 				= "None"
+			Porta           = "None"
+			NumeroRep       = "None"
+			Responsavel     = "None"
+			Telefone        = "None"
+			HoraOn          = "00:00"
+			HoraOff         = "00:00"
+
+
+
 class Controle(object):
 
 	Status 		      		        = "red"
