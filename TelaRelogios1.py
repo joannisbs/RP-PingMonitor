@@ -45,6 +45,8 @@ class TelaRelogios1(object):
 
 		self.Create_Olimpark()
 
+		self.Create_Fancold1()
+
 
 	def Create_IsoRadio(self):
 
@@ -1396,12 +1398,12 @@ class TelaRelogios1(object):
 		self.botaoUnimanTitan                        	["background"] = relo.ModuloCor
 		self.botaoUnimanTitan                         	["width"]      = 13
 		self.botaoUnimanTitan                        	["height"]     = 1
-		self.botaoUnimanPPMSecoia.bind               	("<Button-1>",lambda e: popup("Uniman","Titan",
-														relo.Titan.IP, 
-														relo.Titan.Porta, 
-														relo.Titan.NumeroRep, 
-														relo.Titan.Responsavel, 
-														relo.Titan.Telefone))
+		self.botaoUnimanTitan.bind               	("<Button-1>",lambda e: popup("Uniman","Titan",
+														relo.IP, 
+														relo.Porta, 
+														relo.NumeroRep, 
+														relo.Responsavel, 
+														relo.Telefone))
 		self.botaoUnimanTitan.grid                   	(row=4,column=0,sticky = "N")
 
 		self.botaoUnimanTitanRelogio                    = Button(self.ContainerUniman, 
@@ -4037,6 +4039,209 @@ class TelaRelogios1(object):
 		self.botaoOlimparkSantana.grid                    	(row=7,column=0,sticky = "N")
 		self.botaoOlimparkSantanaRelogio.grid             	(row=7,column=1,sticky = "N")
 
+	def Create_Fancold1(self):
+
+
+
+		self.msgFancold1 									= Label (self.ContainerUniman,
+																text = "Fancold-1",
+																font= "arialblack 12 bold",
+																bg="black",
+																fg="white")
+
+
+
+		self.msgFancold1 									["height"] = 1
+
+		self.msgFancold1.grid 							(row=0,column=0,sticky = "N")
+
+
+
+		
+		self.msgFancold1Contage  							= Label (self.ContainerFancold1,
+																text = str(Info.Fancold1.Status.Contage)+"/"+
+																str(Info.Fancold1.Status.TotalRelogios),
+																font="arial 11",
+																bg="black",
+																fg="white")
+
+	
+
+
+		self.botaoFancold1Atencao                      	= Button(self.ContainerFancold1, 
+														highlightbackground="black",
+														activebackground="black",
+														activeforeground="white")
+
+		self.botaoFancold1Atencao                         ["text"]       = "A"
+		self.botaoFancold1Atencao                         ["height"]     = 1
+		self.botaoFancold1Atencao                         ["background"] = Info.Fancold1.Status.Atencao
+		self.botaoFancold1Atencao                         ["width"]      = 2
+
+		self.botaoFancold1Atencao.grid                     (row=0,column=1,sticky = "N")
+
+
+
+
+
+		self.msgFancold1Contage.grid 						(row=1,column=1,pady=3.5, sticky = "N")
+
+
+
+		self.msgFancold1Hora  							= Label (self.ContainerFancold1,
+														text = Info.Fancold1.Status.Horaultima,
+														font="arial 11",
+														bg="black",
+														fg="white")
+																			
+		self.msgFancold1Hora.grid 						(row=1,column=0,pady=3.5, sticky = "N")
+
+
+
+
+
+
+
+		relo=Info.Fancold1.Givaudan
+		self.botaoFancold1Givaudan                    	= Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1Givaudan                   	["text"]       = "Givaudan"
+		self.botaoFancold1Givaudan                   	["background"] = relo.ModuloCor
+		self.botaoFancold1Givaudan                  	["width"]      = 13
+		self.botaoFancold1Givaudan                  	["height"]     = 1
+		self.botaoFancold1Givaudan.bind             	("<Button-1>",lambda e: popup(
+														"Fancold1",
+														"Saint Gobain",
+														relo.IP, 
+														relo.Porta, 
+														relo.NumeroRep, 
+														relo.Responsavel, 
+														relo.Telefone))
+
+		self.botaoFancold1Givaudan.grid              	(row=2, column=0, sticky = "N")
+
+		self.botaoFancold1GivaudanRelogio                           = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1GivaudanRelogio            	["text"]       = "R"
+		self.botaoFancold1GivaudanRelogio            	["background"] = relo.RelogioCor
+		self.botaoFancold1GivaudanRelogio            	["width"]      = 2
+		self.botaoFancold1GivaudanRelogio            	["height"]     = 1
+		self.botaoFancold1GivaudanRelogio.grid       	(row=2, column=1, sticky = "N")
+
+
+
+
+
+
+
+
+		relo=Info.Fancold1.Yamaha
+		self.botaoFancold1Yamaha                       = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1Yamaha                    	["text"]       = "Yamaha"
+		self.botaoFancold1Yamaha                    	["background"] = relo.ModuloCor
+		self.botaoFancold1Yamaha                     	["width"]      = 13
+		self.botaoFancold1Yamaha                    	["height"]     = 1
+		self.botaoFancold1Yamaha.bind               	("<Button-1>",lambda e: popup(
+														"Fancold1",
+														"PPM Secoia",
+														relo.IP, 
+														relo.Porta, 
+														relo.NumeroRep, 
+														relo.Responsavel, 
+														relo.Telefone))
+		self.botaoFancold1Yamaha.grid               	(row=3,column=0,sticky = "N")
+
+
+		self.botaoFancold1YamahaRelogio                = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1YamahaRelogio             	["text"]       = "R"
+		self.botaoFancold1YamahaRelogio             	["background"] = relo.RelogioCor
+		self.botaoFancold1YamahaRelogio             	["width"]      = 2
+		self.botaoFancold1YamahaRelogio             	["height"]     = 1
+		self.botaoFancold1YamahaRelogio.grid        	(row=3,column=1,sticky = "N")
+
+
+
+
+
+
+
+		relo=Info.Fancold1.Odebrecht
+		self.botaoFancold1Odebrecht                     = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1Odebrecht                     ["text"]       = "Odebrecht"
+		self.botaoFancold1Odebrecht                     ["background"] = relo.ModuloCor
+		self.botaoFancold1Odebrecht                     ["width"]      = 13
+		self.botaoFancold1Odebrecht                     ["height"]     = 1
+		self.botaoFancold1Odebrecht.bind               	("<Button-1>",lambda e: popup("Fancold1","Odebrecht",
+														relo.IP, 
+														relo.Porta, 
+														relo.NumeroRep, 
+														relo.Responsavel, 
+														relo.Telefone))
+		self.botaoFancold1Odebrecht.grid                   	(row=4,column=0,sticky = "N")
+
+		self.botaoFancold1OdebrechtRelogio                    = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+
+		self.botaoFancold1OdebrechtRelogio                 	["text"]       = "R"
+		self.botaoFancold1OdebrechtRelogio                 	["background"] = relo.RelogioCor
+		self.botaoFancold1OdebrechtRelogio                 	["width"]      = 2
+		self.botaoFancold1OdebrechtRelogio                 	["height"]     =  1
+		self.botaoFancold1OdebrechtRelogio.grid            	(row=4,column=1,sticky = "N")
+
+
+
+
+
+		relo=Info.Fancold1.HospJundiai
+		self.botaoFancold1HospJundiai                        = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1HospJundiai                    	["text"]       = "HospJundiai"
+		self.botaoFancold1HospJundiai                    	["background"] = relo.ModuloCor
+		self.botaoFancold1HospJundiai                     	["width"]      = 13
+		self.botaoFancold1HospJundiai                    	["height"]     = 1
+		self.botaoFancold1HospJundiai.bind                	("<Button-1>",lambda e: popup("Fancold1","HospJundiai",
+														relo.IP, 
+														relo.Porta, 
+														relo.NumeroRep, 
+														relo.Responsavel, 
+														relo.Telefone))
+		self.botaoFancold1HospJundiai.grid               	(row=5,column=0,sticky = "N")
+
+		self.botaoFancold1HospJundiaiRelogio                            = Button(self.ContainerFancold1, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
+		self.botaoFancold1HospJundiaiRelogio             	["text"]       = "R"
+		self.botaoFancold1HospJundiaiRelogio             	["background"] = relo.RelogioCor
+		self.botaoFancold1HospJundiaiRelogio             	["width"]      = 2
+		self.botaoFancold1HospJundiaiRelogio             	["height"]     =  1
+		self.botaoFancold1HospJundiaiRelogio.grid        	(row=5,column=1,sticky = "N")
+
 
 
 	def resize(self,event):
@@ -4180,15 +4385,18 @@ class TelaRelogios1(object):
 		self.ContainerColuna3             = Frame (self.ContainerRelogios)
 		self.ContainerPredman             = Frame (self.ContainerColuna3)
 		self.ContainerUniman              = Frame (self.ContainerColuna3)
+		self.ContainerMilenioErvas        = Frame (self.ContainerColuna3)
 		
 		self.ContainerColuna3.grid                	(row=0, column=3,pady=5  , padx=3, columnspan=1, sticky="N")
 		self.ContainerPredman.grid                	(row=0, column=0,pady=3.5, padx=3, columnspan=1, sticky="N")
 		self.ContainerUniman.grid                 	(row=1, column=0,pady=3.5, padx=3, columnspan=1, sticky="N")
+		self.ContainerMilenioErvas.grid           	(row=2, column=0,pady=3.5, padx=3, columnspan=1, sticky="N")
 
 	
 		self.ContainerColuna3.configure(bg="black")
 		self.ContainerPredman.configure(bg="black")
 		self.ContainerUniman.configure(bg="black")
+		self.ContainerMilenioErvas.configure(bg="black")
 	
 
 	def Create_ContainerColuna4(self,root):
@@ -4213,11 +4421,14 @@ class TelaRelogios1(object):
 
 
 		self.ContainerColuna5             			= Frame (self.ContainerRelogios)
-		self.ContainerMilenioErvas        			= Frame (self.ContainerColuna5)
+		self.ContainerFancold1       				= Frame (self.ContainerColuna5)
 
 
-		self.ContainerColuna5.grid                (row=0, column=5,pady=5, padx=1, columnspan=1, sticky="N")
-		self.ContainerMilenioErvas.grid           (row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
+		self.ContainerColuna5.grid               	(row=0, column=5,pady=5  , padx=3, columnspan=1, sticky="N")
+		self.ContainerFancold1.grid           		(row=0, column=0,pady=3.5, padx=3, columnspan=1, sticky="N")
+
+		self.ContainerFancold1.configure(bg="black")
+		self.ContainerColuna5.configure(bg="black")
 
 
 
