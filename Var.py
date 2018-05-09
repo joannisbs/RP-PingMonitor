@@ -947,8 +947,8 @@ class Info(object):
 			Horaultima         = "00:00"
 
 
-			QuantoOn		= 0
-			QuantoTotal		= 4
+			Contage         = 0
+			TotalRelogios   = 4
 			Atencao 		= "green3"
 
 

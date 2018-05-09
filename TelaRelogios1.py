@@ -321,14 +321,58 @@ class TelaRelogios1(object):
 	def Create_MilenioErvas(self):
 
 
-		self.msgMilenioErvas = Label (self.ContainerMilenioErvas,text = "Milenio Ervas")
-		self.msgMilenioErvas["height"] = 1
-		self.msgMilenioErvas.grid(row=0,column=0,columnspan=2,sticky = "N")
+		self.msgMilenioErvas 			 				= Label (self.ContainerMilenioErvas,
+														text = "Milenio Ervas",
+														font = "arialblack 12 bold",
+														bg="black",
+														fg="white")
+
+		self.msgMilenioErvas 							["height"] = 1
+		self.msgMilenioErvas.grid 						(row=0,column=0,sticky = "N")
+
+
+		self.msgMilenioErvasContage                     = Label (self.ContainerMilenioErvas,
+														text=str(Info.MilenioErvas.Status.Contage)+"/"+
+														str(Info.MilenioErvas.Status.TotalRelogios),
+														font = "arial 11",
+														bg="black",
+														fg="white")	
+
+		self.msgMilenioErvasContage                     ["height"]     = 1
+		self.msgMilenioErvasContage.grid                (row=1,column=1,pady=3.5,sticky = "N")
+
+
+		self.botaoMilenioErvasAtencao                   = Button(self.ContainerMilenioErvas, 
+														highlightbackground="black",
+														activebackground="black",
+														activeforeground="white")
+
+		self.botaoMilenioErvasAtencao                   ["text"]       = "A"
+		self.botaoMilenioErvasAtencao                   ["height"]     = 1
+		self.botaoMilenioErvasAtencao                   ["background"] = Info.MilenioErvas.Status.Atencao
+		self.botaoMilenioErvasAtencao                   ["width"]      = 2
+
+		self.botaoMilenioErvasAtencao.grid              (row=0,column=1,sticky = "N")
+
+		self.msgMilenioErvasHora                        = Label (self.ContainerMilenioErvas,
+														text =Info.MilenioErvas.Status.Horaultima,
+														font = "arial 11",
+														bg="black",
+														fg="white")
+
+		self.msgMilenioErvasHora                        ["height"]     = 1
+		self.msgMilenioErvasHora.grid                   (row=1,column=0,pady=3.5,sticky = "N")
 
 
 
 
-		self.botaoMilenioErvasSBC1620Loja1                             = Button(self.ContainerMilenioErvas)
+
+
+		self.botaoMilenioErvasSBC1620Loja1              = Button(self.ContainerMilenioErvas, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
 		self.botaoMilenioErvasSBC1620Loja1              ["text"]       = "1620 Loja1"
 		self.botaoMilenioErvasSBC1620Loja1              ["background"] = Info.MilenioErvas.Loja1.ModuloCor
 		self.botaoMilenioErvasSBC1620Loja1               ["width"]      = 13
@@ -339,19 +383,27 @@ class TelaRelogios1(object):
 														Info.MilenioErvas.Loja1.NumeroRep, 
 														Info.MilenioErvas.Loja1.Responsavel, 
 														Info.MilenioErvas.Loja1.Telefone))
-		self.botaoMilenioErvasSBC1620Loja1.grid         (row=1, column=0, sticky = "N")
+		self.botaoMilenioErvasSBC1620Loja1.grid         (row=2, column=0, sticky = "N")
 
-		self.botaoMilenioErvasSBC1620Loja1Relogio                      = Button(self.ContainerMilenioErvas)
+		self.botaoMilenioErvasSBC1620Loja1Relogio                      = Button(self.ContainerMilenioErvas, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
 		self.botaoMilenioErvasSBC1620Loja1Relogio       ["text"]       = "R"
 		self.botaoMilenioErvasSBC1620Loja1Relogio       ["background"] = Info.MilenioErvas.Loja1.RelogioCor
 		self.botaoMilenioErvasSBC1620Loja1Relogio       ["width"]      = 2
 		self.botaoMilenioErvasSBC1620Loja1Relogio       ["height"]     = 1
-		self.botaoMilenioErvasSBC1620Loja1Relogio.grid  (row=1, column=1, sticky = "N")
+		self.botaoMilenioErvasSBC1620Loja1Relogio.grid  (row=2, column=1, sticky = "N")
 
 
 
 
-		self.botaoMilenioErvasSBC692Loja2                               = Button(self.ContainerMilenioErvas)
+		self.botaoMilenioErvasSBC692Loja2                               = Button(self.ContainerMilenioErvas, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
 		self.botaoMilenioErvasSBC692Loja2                ["text"]       = "SBC692 Loja2"
 		self.botaoMilenioErvasSBC692Loja2                ["background"] = Info.MilenioErvas.Loja2.ModuloCor
 		self.botaoMilenioErvasSBC692Loja2                 ["width"]      = 13
@@ -362,19 +414,27 @@ class TelaRelogios1(object):
 														Info.MilenioErvas.Loja2.NumeroRep, 
 														Info.MilenioErvas.Loja2.Responsavel, 
 														Info.MilenioErvas.Loja2.Telefone))
-		self.botaoMilenioErvasSBC692Loja2.grid           (row=2,column=0,sticky = "N")
+		self.botaoMilenioErvasSBC692Loja2.grid           (row=3,column=0,sticky = "N")
 
-		self.botaoMilenioErvasSBC692Loja2Relogio                        = Button(self.ContainerMilenioErvas)
+		self.botaoMilenioErvasSBC692Loja2Relogio                        = Button(self.ContainerMilenioErvas, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
 		self.botaoMilenioErvasSBC692Loja2Relogio         ["text"]       = "R"
 		self.botaoMilenioErvasSBC692Loja2Relogio         ["background"] = Info.MilenioErvas.Loja2.RelogioCor
 		self.botaoMilenioErvasSBC692Loja2Relogio         ["width"]      = 2
 		self.botaoMilenioErvasSBC692Loja2Relogio         ["height"]     = 1
-		self.botaoMilenioErvasSBC692Loja2Relogio.grid    (row=2,column=1,sticky = "N")
+		self.botaoMilenioErvasSBC692Loja2Relogio.grid    (row=3,column=1,sticky = "N")
 
 
 
 
-		self.botaoMilenioErvasSaoMatheus                                = Button(self.ContainerMilenioErvas)
+		self.botaoMilenioErvasSaoMatheus                                = Button(self.ContainerMilenioErvas, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
 		self.botaoMilenioErvasSaoMatheus                ["text"]       = "Sao Matheus"
 		self.botaoMilenioErvasSaoMatheus                ["background"] = Info.MilenioErvas.SaoMatheus.ModuloCor
 		self.botaoMilenioErvasSaoMatheus                 ["width"]      = 13
@@ -385,20 +445,28 @@ class TelaRelogios1(object):
 														Info.MilenioErvas.SaoMatheus.NumeroRep, 
 														Info.MilenioErvas.SaoMatheus.Responsavel, 
 														Info.MilenioErvas.SaoMatheus.Telefone))
-		self.botaoMilenioErvasSaoMatheus.grid           (row=3,column=0,sticky = "N")
+		self.botaoMilenioErvasSaoMatheus.grid           (row=4,column=0,sticky = "N")
 
-		self.botaoMilenioErvasSaoMatheusRelogio                        = Button(self.ContainerMilenioErvas)
+		self.botaoMilenioErvasSaoMatheusRelogio                        = Button(self.ContainerMilenioErvas, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
 		self.botaoMilenioErvasSaoMatheusRelogio         ["text"]       = "R"
 		self.botaoMilenioErvasSaoMatheusRelogio         ["background"] = Info.MilenioErvas.SaoMatheus.RelogioCor
 		self.botaoMilenioErvasSaoMatheusRelogio         ["width"]      = 2
 		self.botaoMilenioErvasSaoMatheusRelogio         ["height"]     =  1
-		self.botaoMilenioErvasSaoMatheusRelogio.grid    (row=3,column=1,sticky = "N")
+		self.botaoMilenioErvasSaoMatheusRelogio.grid    (row=4,column=1,sticky = "N")
 
 
 
 
 
-		self.botaoMilenioErvasDiadema                                 = Button(self.ContainerMilenioErvas)
+		self.botaoMilenioErvasDiadema                                 = Button(self.ContainerMilenioErvas, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
 		self.botaoMilenioErvasDiadema                  ["text"]       = "Diadema"
 		self.botaoMilenioErvasDiadema                  ["background"] = Info.MilenioErvas.Diadema.ModuloCor
 		self.botaoMilenioErvasDiadema                   ["width"]      = 13
@@ -409,14 +477,18 @@ class TelaRelogios1(object):
 														Info.MilenioErvas.Diadema.NumeroRep, 
 														Info.MilenioErvas.Diadema.Responsavel, 
 														Info.MilenioErvas.Diadema.Telefone))
-		self.botaoMilenioErvasDiadema.grid             (row=4,column=0,sticky = "N")
+		self.botaoMilenioErvasDiadema.grid             (row=5,column=0,sticky = "N")
 
-		self.botaoMilenioErvasDiademaRelogio                          = Button(self.ContainerMilenioErvas)
+		self.botaoMilenioErvasDiademaRelogio                          = Button(self.ContainerMilenioErvas, 
+																	highlightbackground="black",
+																	activebackground="black",
+																	activeforeground="white")
+
 		self.botaoMilenioErvasDiademaRelogio           ["text"]       = "R"
 		self.botaoMilenioErvasDiademaRelogio           ["background"] = Info.MilenioErvas.Diadema.RelogioCor
 		self.botaoMilenioErvasDiademaRelogio           ["width"]      = 2
 		self.botaoMilenioErvasDiademaRelogio           ["height"]     =  1
-		self.botaoMilenioErvasDiademaRelogio.grid      (row=4,column=1,sticky = "N")
+		self.botaoMilenioErvasDiademaRelogio.grid      (row=5,column=1,sticky = "N")
 
 
 
@@ -2640,7 +2712,7 @@ class TelaRelogios1(object):
 		self.botaoGrupoNkRDFurukawaRelogio                            	= Button(self.ContainerGrupoNk, highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoGrupoNkRDFurukawaRelogio              ["text"]        = "R"
 		self.botaoGrupoNkRDFurukawaRelogio              ["background"]  = Info.GrupoNk.RDFurukawa.RelogioCor
-		self.botaoGrupoNkRDFurukawaRelogio              ["width"]       = 1
+		self.botaoGrupoNkRDFurukawaRelogio              ["width"]       = 2
 		self.botaoGrupoNkRDFurukawaRelogio              ["height"]      = 1
 
 		self.botaoGrupoNkRDFurukawa.grid                (row=3,column=0,sticky = "N")
@@ -2666,7 +2738,7 @@ class TelaRelogios1(object):
 		self.botaoGrupoNkKio1Relogio         		               		= Button(self.ContainerGrupoNk, highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoGrupoNkKio1Relogio         			["text"]        = "R"
 		self.botaoGrupoNkKio1Relogio         			["background"]  = Info.GrupoNk.Kio1.RelogioCor
-		self.botaoGrupoNkKio1Relogio         			["width"]       = 1
+		self.botaoGrupoNkKio1Relogio         			["width"]       = 2
 		self.botaoGrupoNkKio1Relogio         			["height"]      = 1
 
 
@@ -2692,7 +2764,7 @@ class TelaRelogios1(object):
 		self.botaoGrupoNkKio2Relogio         		               		= Button(self.ContainerGrupoNk, highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoGrupoNkKio2Relogio         			["text"]        = "R"
 		self.botaoGrupoNkKio2Relogio         			["background"]  = Info.GrupoNk.Kio2.RelogioCor
-		self.botaoGrupoNkKio2Relogio         			["width"]       = 1
+		self.botaoGrupoNkKio2Relogio         			["width"]       = 2
 		self.botaoGrupoNkKio2Relogio         			["height"]      = 1
 
 
@@ -2715,7 +2787,7 @@ class TelaRelogios1(object):
 		self.botaoGrupoNkGranjaVianaRelogio         		            = Button(self.ContainerGrupoNk, highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoGrupoNkGranjaVianaRelogio         	["text"]        = "R"
 		self.botaoGrupoNkGranjaVianaRelogio         	["background"]  = Info.GrupoNk.GranjaViana.RelogioCor
-		self.botaoGrupoNkGranjaVianaRelogio         	["width"]       = 1
+		self.botaoGrupoNkGranjaVianaRelogio         	["width"]       = 2
 		self.botaoGrupoNkGranjaVianaRelogio         	["height"]      = 1
 
 
@@ -2739,7 +2811,7 @@ class TelaRelogios1(object):
 		self.botaoGrupoNkSantaCeciliaRelogio         	           		= Button(self.ContainerGrupoNk, highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoGrupoNkSantaCeciliaRelogio         	["text"]        = "R"
 		self.botaoGrupoNkSantaCeciliaRelogio         	["background"]  = Info.GrupoNk.SantaCecilia.RelogioCor
-		self.botaoGrupoNkSantaCeciliaRelogio         	["width"]       = 1
+		self.botaoGrupoNkSantaCeciliaRelogio         	["width"]       = 2
 		self.botaoGrupoNkSantaCeciliaRelogio         	["height"]      = 1
 
 
@@ -2762,7 +2834,7 @@ class TelaRelogios1(object):
 		self.botaoGrupoNkTransfruitRelogio         		           		= Button(self.ContainerGrupoNk, highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoGrupoNkTransfruitRelogio         		["text"]        = "R"
 		self.botaoGrupoNkTransfruitRelogio         		["background"]  = Info.GrupoNk.Transfruit.RelogioCor
-		self.botaoGrupoNkTransfruitRelogio         		["width"]       = 1
+		self.botaoGrupoNkTransfruitRelogio         		["width"]       = 2
 		self.botaoGrupoNkTransfruitRelogio         		["height"]      = 1
 
 		self.botaoGrupoNkTransfruit.grid           		(row=8,column=0,sticky = "N")
@@ -2784,7 +2856,7 @@ class TelaRelogios1(object):
 		self.botaoGrupoNkDistribuidoraRelogio         	           		= Button(self.ContainerGrupoNk, highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoGrupoNkDistribuidoraRelogio         	["text"]        = "R"
 		self.botaoGrupoNkDistribuidoraRelogio         	["background"]  = Info.GrupoNk.Distribuidora.RelogioCor
-		self.botaoGrupoNkDistribuidoraRelogio         	["width"]       = 1
+		self.botaoGrupoNkDistribuidoraRelogio         	["width"]       = 2
 		self.botaoGrupoNkDistribuidoraRelogio         	["height"]      = 1
 
 		self.botaoGrupoNkDistribuidora.grid           	(row=9,column=0,sticky = "N")
@@ -2807,7 +2879,7 @@ class TelaRelogios1(object):
 		self.botaoGrupoNkNKFilialRelogio         		           		= Button(self.ContainerGrupoNk, highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoGrupoNkNKFilialRelogio         		["text"]        = "R"
 		self.botaoGrupoNkNKFilialRelogio         		["background"]  = Info.GrupoNk.NKFilial.RelogioCor
-		self.botaoGrupoNkNKFilialRelogio         		["width"]       = 1
+		self.botaoGrupoNkNKFilialRelogio         		["width"]       = 2
 		self.botaoGrupoNkNKFilialRelogio         		["height"]      = 1
 
 		self.botaoGrupoNkNKFilial.grid           		(row=10,column=0,sticky = "N")
@@ -5187,10 +5259,10 @@ class TelaRelogios1(object):
 		self.ContainerUniman              = Frame (self.ContainerColuna3)
 		self.ContainerMilenioErvas        = Frame (self.ContainerColuna3)
 		
-		self.ContainerColuna3.grid                	(row=0, column=3,pady=5  , padx=3, columnspan=1, sticky="N")
-		self.ContainerPredman.grid                	(row=0, column=0,pady=3.5, padx=3, columnspan=1, sticky="N")
-		self.ContainerUniman.grid                 	(row=1, column=0,pady=3.5, padx=3, columnspan=1, sticky="N")
-		self.ContainerMilenioErvas.grid           	(row=2, column=0,pady=3.5, padx=3, columnspan=1, sticky="N")
+		self.ContainerColuna3.grid                	(row=0, column=3,pady=5, padx=3, columnspan=1, sticky="N")
+		self.ContainerPredman.grid                	(row=0, column=0,pady=0, padx=3, columnspan=1, sticky="N")
+		self.ContainerUniman.grid                 	(row=1, column=0,pady=0, padx=3, columnspan=1, sticky="N")
+		self.ContainerMilenioErvas.grid           	(row=2, column=0,pady=0, padx=3, columnspan=1, sticky="N")
 
 	
 		self.ContainerColuna3.configure(bg="black")
@@ -5210,10 +5282,10 @@ class TelaRelogios1(object):
 
 
 		self.ContainerColuna4.grid                	(row=0, column=4,pady=5  , padx=3, columnspan=1, sticky="N")
-		self.ContainerTarek.grid                  	(row=0, column=0,pady=3.5, padx=3, columnspan=1, sticky="N")
-		self.ContainerBuilding.grid               	(row=1, column=0,pady=3.5, padx=3, columnspan=1 ,sticky="N")
-		self.ContainerLaser.grid                  	(row=2, column=0,pady=3.5 ,padx=3, columnspan=1, sticky="N")
-		self.ContainerSBCP.grid 					(row=3, column=0,pady=3.5, padx=3, columnspan=1, sticky="N")
+		self.ContainerTarek.grid                  	(row=0, column=0,pady=0  , padx=3, columnspan=1, sticky="N")
+		self.ContainerBuilding.grid               	(row=1, column=0,pady=0  , padx=3, columnspan=1 ,sticky="N")
+		self.ContainerLaser.grid                  	(row=2, column=0,pady=0  , padx=3, columnspan=1, sticky="N")
+		self.ContainerSBCP.grid 					(row=3, column=0,pady=0  , padx=3, columnspan=1, sticky="N")
 
 
 
@@ -5225,7 +5297,7 @@ class TelaRelogios1(object):
 
 
 		self.ContainerColuna5.grid               	(row=0, column=5,pady=5  , padx=3, columnspan=1, sticky="N")
-		self.ContainerFancold1.grid           		(row=0, column=0,pady=3.5, padx=3, columnspan=1, sticky="N")
+		self.ContainerFancold1.grid           		(row=0, column=0,pady=0  , padx=3, columnspan=1, sticky="N")
 
 		self.ContainerFancold1.configure(bg="black")
 		self.ContainerColuna5.configure(bg="black")
