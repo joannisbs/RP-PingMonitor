@@ -2384,8 +2384,12 @@ class Telas(object):
 	GUI_Tela1 							= "null"
 	GUI_Tela2							= "null"
 	GUI_Monitor							= "null"
-	root 								= "null"
+	S1_Width							= "null"
+	S1_height							= "null"
+	
 
 class Flag(object):
 
 	quit = False
+	HideScrollS1	= False
+

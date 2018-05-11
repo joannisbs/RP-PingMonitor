@@ -15,6 +15,8 @@ class TelaRelogios1(object):
 
 		self.Create_container(root)
 
+		self.Create_menus(root)
+
 		self.Create_Building()
 
 		self.Create_CasaCristo()
@@ -48,6 +50,28 @@ class TelaRelogios1(object):
 		self.Create_Fancold1()
 
 
+
+
+	def Create_menus(self,root):
+		MenuBar = Menu(root)
+		MenuShow = Menu(MenuBar)
+		root.configure(menu=MenuBar)
+		MenuBar.add_cascade(label='Exibir',menu=MenuShow)
+		MenuShow.add_command(label='Exibir/Ocultar Scrollbar', command= lambda : self.EsconderScroll(root))
+
+
+	def EsconderScroll(self,root):
+		if Flag.HideScrollS1 == False:
+			Flag.HideScrollS1 = True
+			self.cavatura.configure(width=Telas.S1_Width+15,height=Telas.S1_height+15)
+		else:
+			Flag.HideScrollS1 = False
+			self.cavatura.configure(width=Telas.S1_Width-15,height=Telas.S1_height-15)
+		#print Flag.HideScrollS1
+
+
+
+
 	def Create_IsoRadio(self):
 
 		self.msgIsoRad 									= Label (self.ContainerIsoRadio,text = "Iso Radiologia", font = "arialblack 12 bold",bg="black",fg="white")
@@ -56,7 +80,11 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoIsoRadAtencao                                        = Button(self.ContainerIsoRadio, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoIsoRadAtencao                                        = Button(self.ContainerIsoRadio, font="arial 11 bold" , 
+														highlightbackground="black",
+														activebackground="black",
+														activeforeground="white")
+
 		self.botaoIsoRadAtencao                         ["text"]       = "A"
 		self.botaoIsoRadAtencao                         ["height"]     = 1
 		self.botaoIsoRadAtencao                         ["background"] = "green3"
@@ -80,7 +108,11 @@ class TelaRelogios1(object):
 																			
 		self.msgIsoRadHora.grid(row=1,column=0,pady=3.5, sticky = "N")
 
-		self.botaoIsoRadioSantana                      		           = Button(self.ContainerIsoRadio, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoIsoRadioSantana                      		           = Button(self.ContainerIsoRadio,font="arial 11 bold" ,  
+																			highlightbackground="black",
+																			activebackground="black",
+																			activeforeground="white")
+
 		self.botaoIsoRadioSantana              			["text"]       = "Santana"
 		self.botaoIsoRadioSantana              			["background"] = Info.IsoRadio.Santana.ModuloCor
 		self.botaoIsoRadioSantana              			["width"]      = 13
@@ -93,7 +125,12 @@ class TelaRelogios1(object):
 														Info.IsoRadio.Santana.Telefone))
 		self.botaoIsoRadioSantana.grid         			(row=2, column=0, sticky = "N")
 
-		self.botaoIsoRadioSantanaRelogio                      		   = Button(self.ContainerIsoRadio, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoIsoRadioSantanaRelogio                      		   = Button(self.ContainerIsoRadio, 
+																		font="arial 11 bold" , 
+																		highlightbackground="black",
+																		activebackground="black",
+																		activeforeground="white")
+
 		self.botaoIsoRadioSantanaRelogio       			["text"]       = "R"
 		self.botaoIsoRadioSantanaRelogio       			["background"] = Info.IsoRadio.Santana.RelogioCor
 		self.botaoIsoRadioSantanaRelogio       			["width"]      = 2
@@ -102,7 +139,12 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoIsoRadioSaoMatheus                    	           = Button(self.ContainerIsoRadio, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoIsoRadioSaoMatheus                    	           = Button(self.ContainerIsoRadio, 
+																		font="arial 11 bold" , 
+																		highlightbackground="black",
+																		activebackground="black",
+																		activeforeground="white")
+
 		self.botaoIsoRadioSaoMatheus              		["text"]       = "Sao Matheus"
 		self.botaoIsoRadioSaoMatheus              		["background"] = Info.IsoRadio.SaoMatheus.ModuloCor
 		self.botaoIsoRadioSaoMatheus              		["width"]      = 13
@@ -115,7 +157,12 @@ class TelaRelogios1(object):
 														Info.IsoRadio.SaoMatheus.Telefone))
 		self.botaoIsoRadioSaoMatheus.grid         		(row=3, column=0, sticky = "N")
 
-		self.botaoIsoRadioSaoMatheusRelogio                    		   = Button(self.ContainerIsoRadio, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoIsoRadioSaoMatheusRelogio                    		   = Button(self.ContainerIsoRadio, 
+																		font="arial 11 bold" , 
+																		highlightbackground="black",
+																		activebackground="black",
+																		activeforeground="white")
+
 		self.botaoIsoRadioSaoMatheusRelogio       		["text"]       = "R"
 		self.botaoIsoRadioSaoMatheusRelogio       		["background"] = Info.IsoRadio.SaoMatheus.RelogioCor
 		self.botaoIsoRadioSaoMatheusRelogio       		["width"]      = 2
@@ -123,7 +170,12 @@ class TelaRelogios1(object):
 		self.botaoIsoRadioSaoMatheusRelogio.grid  		(row=3, column=1, sticky = "N")
 
 
-		self.botaoIsoRadioVMariana                    	               = Button(self.ContainerIsoRadio, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoIsoRadioVMariana                    	               = Button(self.ContainerIsoRadio, 
+																		font="arial 11 bold" , 
+																		highlightbackground="black",
+																		activebackground="black",
+																		activeforeground="white")
+
 		self.botaoIsoRadioVMariana              		["text"]       = "Vila Mariana"
 		self.botaoIsoRadioVMariana              		["background"] = Info.IsoRadio.SaoMatheus.ModuloCor
 		self.botaoIsoRadioVMariana              		["width"]      = 13
@@ -136,7 +188,12 @@ class TelaRelogios1(object):
 														Info.IsoRadio.VilaMariana.Telefone))
 		self.botaoIsoRadioVMariana.grid         		(row=4, column=0, sticky = "N")
 
-		self.botaoIsoRadioVMarianaRelogio                    		   = Button(self.ContainerIsoRadio, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoIsoRadioVMarianaRelogio                    		   = Button(self.ContainerIsoRadio, 
+																		font="arial 11 bold" , 
+																		highlightbackground="black",
+																		activebackground="black",
+																		activeforeground="white")
+
 		self.botaoIsoRadioVMarianaRelogio       		["text"]       = "R"
 		self.botaoIsoRadioVMarianaRelogio       		["background"] = Info.IsoRadio.VilaMariana.RelogioCor
 		self.botaoIsoRadioVMarianaRelogio       		["width"]      = 2
@@ -148,7 +205,12 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoIsoRadioLapa                    	                   = Button(self.ContainerIsoRadio, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoIsoRadioLapa                    	                   = Button(self.ContainerIsoRadio, 
+																		font="arial 11 bold" , 
+																		highlightbackground="black",
+																		activebackground="black",
+																		activeforeground="white")
+
 		self.botaoIsoRadioLapa              			["text"]       = "Lapa"
 		self.botaoIsoRadioLapa              			["background"] = Info.IsoRadio.Lapa.ModuloCor
 		self.botaoIsoRadioLapa              			["width"]      = 13
@@ -161,7 +223,12 @@ class TelaRelogios1(object):
 														Info.IsoRadio.Lapa.Telefone))
 		self.botaoIsoRadioLapa.grid         			(row=5, column=0, sticky = "N")
 
-		self.botaoIsoRadioLapaRelogio                    		       = Button(self.ContainerIsoRadio, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoIsoRadioLapaRelogio                    		       = Button(self.ContainerIsoRadio, 
+																		font="arial 11 bold" , 
+																		highlightbackground="black",
+																		activebackground="black",
+																		activeforeground="white")
+
 		self.botaoIsoRadioLapaRelogio       			["text"]       = "R"
 		self.botaoIsoRadioLapaRelogio       			["background"] = Info.IsoRadio.Lapa.RelogioCor
 		self.botaoIsoRadioLapaRelogio       			["width"]      = 2
@@ -173,7 +240,12 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoIsoRadioSAmaro                    		           = Button(self.ContainerIsoRadio, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoIsoRadioSAmaro                    		           = Button(self.ContainerIsoRadio, 
+																		font="arial 11 bold" , 
+																		highlightbackground="black",
+																		activebackground="black",
+																		activeforeground="white")
+
 		self.botaoIsoRadioSAmaro              			["text"]       = "Santo Amaro"
 		self.botaoIsoRadioSAmaro              			["background"] = Info.IsoRadio.SAmaro.ModuloCor
 		self.botaoIsoRadioSAmaro              			["width"]      = 13
@@ -186,7 +258,12 @@ class TelaRelogios1(object):
 														Info.IsoRadio.SAmaro.Telefone))
 		self.botaoIsoRadioSAmaro.grid         			(row=6, column=0, sticky = "N")
 
-		self.botaoIsoRadioSAmaroRelogio             	       		   = Button(self.ContainerIsoRadio, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoIsoRadioSAmaroRelogio             	       		   = Button(self.ContainerIsoRadio,
+																		font="arial 11 bold" , 
+																		highlightbackground="black",
+																		activebackground="black",
+																		activeforeground="white")
+
 		self.botaoIsoRadioSAmaroRelogio       			["text"]       = "R"
 		self.botaoIsoRadioSAmaroRelogio       			["background"] = Info.IsoRadio.SAmaro.RelogioCor
 		self.botaoIsoRadioSAmaroRelogio       			["width"]      = 2
@@ -198,7 +275,12 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoIsoRadioCDutra                    		           = Button(self.ContainerIsoRadio, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoIsoRadioCDutra                    		           = Button(self.ContainerIsoRadio, 
+																		font="arial 11 bold" , 
+																		highlightbackground="black",
+																		activebackground="black",
+																		activeforeground="white")
+
 		self.botaoIsoRadioCDutra              			["text"]       = "Cidade Dutra"
 		self.botaoIsoRadioCDutra              			["background"] = Info.IsoRadio.CDutra.ModuloCor
 		self.botaoIsoRadioCDutra              			["width"]      = 13
@@ -211,7 +293,12 @@ class TelaRelogios1(object):
 														Info.IsoRadio.CDutra.Telefone))
 		self.botaoIsoRadioCDutra.grid         			(row=7, column=0, sticky = "N")
 
-		self.botaoIsoRadioCDutraRelogio                	    		   = Button(self.ContainerIsoRadio, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoIsoRadioCDutraRelogio                	    		   = Button(self.ContainerIsoRadio, 
+																		font="arial 11 bold" , 
+																		highlightbackground="black",
+																		activebackground="black",
+																		activeforeground="white")
+
 		self.botaoIsoRadioCDutraRelogio       			["text"]       = "R"
 		self.botaoIsoRadioCDutraRelogio       			["background"] = Info.IsoRadio.CDutra.RelogioCor
 		self.botaoIsoRadioCDutraRelogio       			["width"]      = 2
@@ -223,7 +310,12 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoIsoRadioTatuape                   	 	           = Button(self.ContainerIsoRadio, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoIsoRadioTatuape                   	 	           = Button(self.ContainerIsoRadio, 
+																		font="arial 11 bold" , 
+																		highlightbackground="black",
+																		activebackground="black",
+																		activeforeground="white")
+
 		self.botaoIsoRadioTatuape              			["text"]       = "Tatuape"
 		self.botaoIsoRadioTatuape              			["background"] = Info.IsoRadio.Tatuape.ModuloCor
 		self.botaoIsoRadioTatuape              			["width"]      = 13
@@ -236,7 +328,12 @@ class TelaRelogios1(object):
 														Info.IsoRadio.Tatuape.Telefone))
 		self.botaoIsoRadioTatuape.grid         			(row=8, column=0, sticky = "N")
 
-		self.botaoIsoRadioTatuapeRelogio                    		   = Button(self.ContainerIsoRadio, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoIsoRadioTatuapeRelogio                    		   = Button(self.ContainerIsoRadio, 
+																		font="arial 11 bold" , 
+																		highlightbackground="black",
+																		activebackground="black",
+																		activeforeground="white")
+
 		self.botaoIsoRadioTatuapeRelogio       			["text"]       = "R"
 		self.botaoIsoRadioTatuapeRelogio       			["background"] = Info.IsoRadio.Tatuape.RelogioCor
 		self.botaoIsoRadioTatuapeRelogio       			["width"]      = 2
@@ -248,7 +345,12 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoIsoRadioCLimpo                    		           = Button(self.ContainerIsoRadio, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoIsoRadioCLimpo                    		           = Button(self.ContainerIsoRadio, 
+																		font="arial 11 bold" , 
+																		highlightbackground="black",
+																		activebackground="black",
+																		activeforeground="white")
+
 		self.botaoIsoRadioCLimpo              			["text"]       = "Campo Limpo"
 		self.botaoIsoRadioCLimpo              			["background"] = Info.IsoRadio.CLimpo.ModuloCor
 		self.botaoIsoRadioCLimpo              			["width"]      = 13
@@ -261,7 +363,12 @@ class TelaRelogios1(object):
 														Info.IsoRadio.CLimpo.Telefone))
 		self.botaoIsoRadioCLimpo.grid         			(row=9, column=0, sticky = "N")
 
-		self.botaoIsoRadioCLimpoRelogio            	        		   = Button(self.ContainerIsoRadio, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoIsoRadioCLimpoRelogio            	        		   = Button(self.ContainerIsoRadio, 
+																		font="arial 11 bold" , 
+																		highlightbackground="black",
+																		activebackground="black",
+																		activeforeground="white")
+
 		self.botaoIsoRadioCLimpoRelogio       			["text"]       = "R"
 		self.botaoIsoRadioCLimpoRelogio       			["background"] = Info.IsoRadio.CLimpo.RelogioCor
 		self.botaoIsoRadioCLimpoRelogio       			["width"]      = 2
@@ -272,7 +379,12 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoIsoRadioIpiranga                   	 	           = Button(self.ContainerIsoRadio, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoIsoRadioIpiranga                   	 	           = Button(self.ContainerIsoRadio, 
+																		font="arial 11 bold" , 
+																		highlightbackground="black",
+																		activebackground="black",
+																		activeforeground="white")
+
 		self.botaoIsoRadioIpiranga              		["text"]       = "Ipiranga"
 		self.botaoIsoRadioIpiranga              		["background"] = Info.IsoRadio.Ipiranga.ModuloCor
 		self.botaoIsoRadioIpiranga              		["width"]      = 13
@@ -285,7 +397,12 @@ class TelaRelogios1(object):
 														Info.IsoRadio.Ipiranga.Telefone))
 		self.botaoIsoRadioIpiranga.grid         		(row=10, column=0, sticky = "N")
 
-		self.botaoIsoRadioIpirangaRelogio                    		   = Button(self.ContainerIsoRadio, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoIsoRadioIpirangaRelogio                    		   = Button(self.ContainerIsoRadio, 
+																		font="arial 11 bold" , 
+																		highlightbackground="black",
+																		activebackground="black",
+																		activeforeground="white")
+
 		self.botaoIsoRadioIpirangaRelogio       		["text"]       = "R"
 		self.botaoIsoRadioIpirangaRelogio       		["background"] = Info.IsoRadio.Ipiranga.RelogioCor
 		self.botaoIsoRadioIpirangaRelogio       		["width"]      = 2
@@ -296,7 +413,12 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoIsoRadioAnaRosa                    		           = Button(self.ContainerIsoRadio, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoIsoRadioAnaRosa                    		           = Button(self.ContainerIsoRadio, 
+														font="arial 11 bold" , 
+														highlightbackground="black",
+														activebackground="black",
+														activeforeground="white")
+
 		self.botaoIsoRadioAnaRosa              			["text"]       = "Ana Rosa"
 		self.botaoIsoRadioAnaRosa              			["background"] = Info.IsoRadio.AnaRosa.ModuloCor
 		self.botaoIsoRadioAnaRosa              			["width"]      = 13
@@ -309,7 +431,12 @@ class TelaRelogios1(object):
 														Info.IsoRadio.AnaRosa.Telefone))
 		self.botaoIsoRadioAnaRosa.grid         			(row=11, column=0, sticky = "N")
 
-		self.botaoIsoRadioAnaRosaRelogio                    		   = Button(self.ContainerIsoRadio, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoIsoRadioAnaRosaRelogio                    		   = Button(self.ContainerIsoRadio, 
+														font="arial 11 bold" , 
+														highlightbackground="black",
+														activebackground="black",
+														activeforeground="white")
+
 		self.botaoIsoRadioAnaRosaRelogio       			["text"]       = "R"
 		self.botaoIsoRadioAnaRosaRelogio       			["background"] = Info.IsoRadio.AnaRosa.RelogioCor
 		self.botaoIsoRadioAnaRosaRelogio       			["width"]      = 2
@@ -343,6 +470,7 @@ class TelaRelogios1(object):
 
 
 		self.botaoMilenioErvasAtencao                   = Button(self.ContainerMilenioErvas, 
+														font="arial 11 bold" , 
 														highlightbackground="black",
 														activebackground="black",
 														activeforeground="white")
@@ -369,6 +497,7 @@ class TelaRelogios1(object):
 
 
 		self.botaoMilenioErvasSBC1620Loja1              = Button(self.ContainerMilenioErvas, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -386,6 +515,7 @@ class TelaRelogios1(object):
 		self.botaoMilenioErvasSBC1620Loja1.grid         (row=2, column=0, sticky = "N")
 
 		self.botaoMilenioErvasSBC1620Loja1Relogio                      = Button(self.ContainerMilenioErvas, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -400,6 +530,7 @@ class TelaRelogios1(object):
 
 
 		self.botaoMilenioErvasSBC692Loja2                               = Button(self.ContainerMilenioErvas, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -417,6 +548,7 @@ class TelaRelogios1(object):
 		self.botaoMilenioErvasSBC692Loja2.grid           (row=3,column=0,sticky = "N")
 
 		self.botaoMilenioErvasSBC692Loja2Relogio                        = Button(self.ContainerMilenioErvas, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -431,6 +563,7 @@ class TelaRelogios1(object):
 
 
 		self.botaoMilenioErvasSaoMatheus                                = Button(self.ContainerMilenioErvas, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -448,6 +581,7 @@ class TelaRelogios1(object):
 		self.botaoMilenioErvasSaoMatheus.grid           (row=4,column=0,sticky = "N")
 
 		self.botaoMilenioErvasSaoMatheusRelogio                        = Button(self.ContainerMilenioErvas, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -463,6 +597,7 @@ class TelaRelogios1(object):
 
 
 		self.botaoMilenioErvasDiadema                                 = Button(self.ContainerMilenioErvas, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -480,6 +615,7 @@ class TelaRelogios1(object):
 		self.botaoMilenioErvasDiadema.grid             (row=5,column=0,sticky = "N")
 
 		self.botaoMilenioErvasDiademaRelogio                          = Button(self.ContainerMilenioErvas, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -513,7 +649,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoGravexAtencao                                        = Button(self.ContainerGravex, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -538,7 +675,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoGravexADM                         = Button(self.ContainerGravex, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -554,7 +692,8 @@ class TelaRelogios1(object):
 													Info.Gravex.ADM.Telefone))
 
 		self.botaoGravexADMRelogio                  = Button(self.ContainerGravex, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -571,7 +710,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoGravexLoja                        = Button(self.ContainerGravex, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -587,7 +727,8 @@ class TelaRelogios1(object):
 													Info.Gravex.Loja1.Telefone))
 
 		self.botaoGravexLojaRelogio                 = Button(self.ContainerGravex, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -605,7 +746,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoGravexMiMarcos                    = Button(self.ContainerGravex, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -621,7 +763,8 @@ class TelaRelogios1(object):
 													Info.Gravex.MiMarcos.Telefone))
 
 		self.botaoGravexMiMarcosRelogio             = Button(self.ContainerGravex, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -638,7 +781,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoGravexDantChini                   = Button(self.ContainerGravex, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -654,7 +798,8 @@ class TelaRelogios1(object):
 													Info.Gravex.DantChini.Telefone))
 
 		self.botaoGravexDantChiniRelogio            = Button(self.ContainerGravex, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -699,7 +844,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoLaserAtencao                      	= Button(self.ContainerLaser, 
-														highlightbackground="black",
+														font="arial 11 bold" , 
+																	highlightbackground="black",
 														activebackground="black",
 														activeforeground="white")
 
@@ -735,6 +881,7 @@ class TelaRelogios1(object):
 
 
 		self.botaoAcademia                                          = Button(self.ContainerLaser, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -751,6 +898,7 @@ class TelaRelogios1(object):
 													Info.Laser.Academia.Telefone))
 
 		self.botaoRAcademia                                         = Button(self.ContainerLaser, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -765,6 +913,7 @@ class TelaRelogios1(object):
 
 
 		self.botaoInstituto                                         = Button(self.ContainerLaser, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -781,6 +930,7 @@ class TelaRelogios1(object):
 													Info.Laser.Instituto.Telefone))
 
 		self.botaoRInstituto                                        = Button(self.ContainerLaser, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -812,7 +962,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoPredmanAtencao                                        = Button(self.ContainerPredman,  highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoPredmanAtencao                                        = Button(self.ContainerPredman,  font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoPredmanAtencao                         ["text"]       = "A"
 		self.botaoPredmanAtencao                         ["height"]     = 1
 		self.botaoPredmanAtencao                         ["background"] = Info.Predman.Status.Atencao
@@ -837,7 +988,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoPredmanBunge                                   =  Button(self.ContainerPredman, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -854,7 +1006,8 @@ class TelaRelogios1(object):
 		self.botaoPredmanBunge.grid                (row=2,column=0,sticky = "N")
 
 		self.botaoPredmanBungeRelogio                             =  Button(self.ContainerPredman, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 		
@@ -868,7 +1021,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoPredmanCabot                                    =  Button(self.ContainerPredman, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 		
@@ -885,7 +1039,8 @@ class TelaRelogios1(object):
 		self.botaoPredmanCabot.grid                (row=3,column=0,sticky = "N")
 
 		self.botaoPredmanCabotRelogio                             =  Button(self.ContainerPredman, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 		
@@ -899,7 +1054,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoPredmanKelloggs                                 =  Button(self.ContainerPredman, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 		
@@ -916,7 +1072,8 @@ class TelaRelogios1(object):
 		self.botaoPredmanKelloggs.grid             (row=4,column=0,sticky = "N")
 
 		self.botaoPredmanKelloggsRelogio                          =  Button(self.ContainerPredman, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 		
@@ -930,7 +1087,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoPredmanMagazine                                =  Button(self.ContainerPredman, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 		
@@ -947,7 +1105,8 @@ class TelaRelogios1(object):
 		self.botaoPredmanMagazine.grid            (row=5,column=0,sticky = "N")
 
 		self.botaoPredmanMagazineRelogio                         =  Button(self.ContainerPredman, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 		
@@ -961,7 +1120,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoPredmanOxiteno1                                =  Button(self.ContainerPredman, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 		
@@ -978,7 +1138,8 @@ class TelaRelogios1(object):
 		self.botaoPredmanOxiteno1.grid            (row=6,column=0,sticky = "N")
 
 		self.botaoPredmanOxiteno1Relogio                         =  Button(self.ContainerPredman, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 		
@@ -992,7 +1153,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoPredmanOxiteno2                                =  Button(self.ContainerPredman, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 		
@@ -1009,7 +1171,8 @@ class TelaRelogios1(object):
 		self.botaoPredmanOxiteno2.grid            (row=7,column=0,sticky = "N")
 
 		self.botaoPredmanOxiteno2Relogio                         =  Button(self.ContainerPredman, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 		
@@ -1024,7 +1187,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoPredmanSantoAndre                                =  Button(self.ContainerPredman, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 		
@@ -1041,7 +1205,8 @@ class TelaRelogios1(object):
 		self.botaoPredmanSantoAndre.grid           (row=8,column=0,sticky = "N")
 
 		self.botaoPredmanSantoAndreRelogio                         =  Button(self.ContainerPredman, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 		
@@ -1055,7 +1220,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoPredmanPrysmianES                              =  Button(self.ContainerPredman, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 		
@@ -1072,7 +1238,8 @@ class TelaRelogios1(object):
 		self.botaoPredmanPrysmianES.grid          (row=9,column=0,sticky = "N")
 
 		self.botaoPredmanPrysmianESRelogio                       =  Button(self.ContainerPredman, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 		
@@ -1086,7 +1253,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoPredmanTradegar                                =  Button(self.ContainerPredman, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 		
@@ -1103,7 +1271,8 @@ class TelaRelogios1(object):
 		self.botaoPredmanTradegar.grid            (row=10,column=0,sticky = "N")
 
 		self.botaoPredmanTradegarRelogio                         =  Button(self.ContainerPredman, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 		
@@ -1117,7 +1286,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoPredmanPortao1                                 =  Button(self.ContainerPredman, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 		
@@ -1134,7 +1304,8 @@ class TelaRelogios1(object):
 		self.botaoPredmanPortao1.grid             (row=11,column=0,sticky = "N")
 
 		self.botaoPredmanPortao1Relogio                          =  Button(self.ContainerPredman, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 		
@@ -1148,7 +1319,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoPredmanPortao2                                 =  Button(self.ContainerPredman, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 		
@@ -1165,7 +1337,8 @@ class TelaRelogios1(object):
 		self.botaoPredmanPortao2.grid             (row=12,column=0,sticky = "N")
 
 		self.botaoPredmanPortao2Relogio                                 =  Button(self.ContainerPredman, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 		
@@ -1179,7 +1352,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoPredmanSabic                                   =  Button(self.ContainerPredman, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 		
@@ -1196,7 +1370,8 @@ class TelaRelogios1(object):
 		self.botaoPredmanSabic.grid                (row=13,column=0,sticky = "N")
 
 		self.botaoPredmanSabicRelogio                            =  Button(self.ContainerPredman, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 		
@@ -1210,7 +1385,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoPredmanSantherBraganca                         =  Button(self.ContainerPredman, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 		
@@ -1227,7 +1403,8 @@ class TelaRelogios1(object):
 		self.botaoPredmanSantherBraganca.grid      (row=14,column=0,sticky = "N")
 
 		self.botaoPredmanSantherBragancaRelogio                  =  Button(self.ContainerPredman, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 		
@@ -1242,7 +1419,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoPredmanSantherPenha                             =  Button(self.ContainerPredman, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 		
@@ -1259,7 +1437,8 @@ class TelaRelogios1(object):
 		self.botaoPredmanSantherPenha.grid         (row=15,column=0,sticky = "N")
 
 		self.botaoPredmanSantherPenhaRelogio                      =  Button(self.ContainerPredman, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 		
@@ -1274,7 +1453,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoPredmanFaurencia                               =  Button(self.ContainerPredman, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 		
@@ -1291,7 +1471,8 @@ class TelaRelogios1(object):
 		self.botaoPredmanFaurencia.grid           (row=16,column=0,sticky = "N")
 
 		self.botaoPredmanFaurenciaRelogio                        =  Button(self.ContainerPredman, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 		
@@ -1306,7 +1487,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoPredmanAdmRondonopolis                         =  Button(self.ContainerPredman, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 		
@@ -1323,7 +1505,8 @@ class TelaRelogios1(object):
 		self.botaoPredmanAdmRondonopolis.grid     (row=17,column=0,sticky = "N")
 
 		self.botaoPredmanAdmRondonopolisRelogio                  =  Button(self.ContainerPredman, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 		
@@ -1338,7 +1521,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoPredmanVilaVelha                               =  Button(self.ContainerPredman, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 		
@@ -1355,7 +1539,8 @@ class TelaRelogios1(object):
 		self.botaoPredmanVilaVelha.grid           (row=18,column=0,sticky = "N")
 
 		self.botaoPredmanVilaVelhaRelogio                        =  Button(self.ContainerPredman, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 		
@@ -1397,7 +1582,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoUnimanAtencao                      	= Button(self.ContainerUniman, 
-														highlightbackground="black",
+														font="arial 11 bold" , 
+																	highlightbackground="black",
 														activebackground="black",
 														activeforeground="white")
 
@@ -1432,6 +1618,7 @@ class TelaRelogios1(object):
 
 		relo=Info.Uniman.SaintGobain
 		self.botaoUnimanSaintGobain                    	= Button(self.ContainerUniman, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -1452,6 +1639,7 @@ class TelaRelogios1(object):
 		self.botaoUnimanSaintGobain.grid              	(row=2, column=0, sticky = "N")
 
 		self.botaoUnimanSaintGobainRelogio                           = Button(self.ContainerUniman, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -1471,6 +1659,7 @@ class TelaRelogios1(object):
 
 		relo=Info.Uniman.PPMSecoia
 		self.botaoUnimanPPMSecoia                       = Button(self.ContainerUniman, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -1491,6 +1680,7 @@ class TelaRelogios1(object):
 
 
 		self.botaoUnimanPPMSecoiaRelogio                = Button(self.ContainerUniman, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -1509,6 +1699,7 @@ class TelaRelogios1(object):
 
 		relo=Info.Uniman.Titan
 		self.botaoUnimanTitan                           = Button(self.ContainerUniman, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -1526,6 +1717,7 @@ class TelaRelogios1(object):
 		self.botaoUnimanTitan.grid                   	(row=4,column=0,sticky = "N")
 
 		self.botaoUnimanTitanRelogio                    = Button(self.ContainerUniman, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -1543,6 +1735,7 @@ class TelaRelogios1(object):
 
 		relo=Info.Uniman.Sekurity
 		self.botaoUnimanSekurity                        = Button(self.ContainerUniman, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -1560,6 +1753,7 @@ class TelaRelogios1(object):
 		self.botaoUnimanSekurity.grid               	(row=5,column=0,sticky = "N")
 
 		self.botaoUnimanSekurityRelogio                            = Button(self.ContainerUniman, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -1604,7 +1798,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoTarekAtencao                      	= Button(self.ContainerTarek, 
-														highlightbackground="black",
+														font="arial 11 bold" , 
+																	highlightbackground="black",
 														activebackground="black",
 														activeforeground="white")
 
@@ -1638,6 +1833,7 @@ class TelaRelogios1(object):
 
 
 		self.botaoTahine                                         = Button(self.ContainerTarek, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -1655,6 +1851,7 @@ class TelaRelogios1(object):
 		self.botaoTahine.grid                     (row=2,column=0,sticky = "N")
 
 		self.botaoTahineRelogio                                  = Button(self.ContainerTarek, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -1669,6 +1866,7 @@ class TelaRelogios1(object):
 
 
 		self.botaoTarek                                          = Button(self.ContainerTarek, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -1686,6 +1884,7 @@ class TelaRelogios1(object):
 		self.botaoTarek.grid                      (row=3,column=0,sticky = "N")
 
 		self.botaoTarekRelogio                                   = Button(self.ContainerTarek, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -1700,6 +1899,7 @@ class TelaRelogios1(object):
 
 
 		self.botaoTafadalu                                       = Button(self.ContainerTarek, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -1717,6 +1917,7 @@ class TelaRelogios1(object):
 		self.botaoTafadalu.grid                   (row=4,column=0,sticky = "N")
 
 		self.botaoTafadaluRelogio                               = Button(self.ContainerTarek, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -1731,6 +1932,7 @@ class TelaRelogios1(object):
 
 
 		self.botaoTalami                                        = Button(self.ContainerTarek, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -1748,6 +1950,7 @@ class TelaRelogios1(object):
 		self.botaoTalami.grid                    (row=5,column=0,sticky = "N")
 
 		self.botaoTalamiRelogio                                 = Button(self.ContainerTarek, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -1767,7 +1970,8 @@ class TelaRelogios1(object):
 		self.msgLotten.grid(row=0,column=0,sticky = "N")
 
 
-		self.botaoLottenAtencao                                        = Button(self.ContainerLotten, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoLottenAtencao                                        = Button(self.ContainerLotten, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoLottenAtencao                         ["text"]       = "A"
 		self.botaoLottenAtencao                         ["height"]     = 1
 		self.botaoLottenAtencao                         ["background"] = Info.Lotten.Status.Atencao
@@ -1795,7 +1999,8 @@ class TelaRelogios1(object):
 		
 
 
-		self.botaoLottenJardins                                  = Button(self.ContainerLotten, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoLottenJardins                                  = Button(self.ContainerLotten, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoLottenJardins                   ["text"]       = "Jardins"
 		self.botaoLottenJardins                   ["background"] = Info.Lotten.Jardins.ModuloCor
 		self.botaoLottenJardins                    ["width"]      = 13
@@ -1808,7 +2013,8 @@ class TelaRelogios1(object):
 													Info.Lotten.Jardins.Telefone))
 		self.botaoLottenJardins.grid              (row=2,column=0,sticky = "N")
 
-		self.botaoLottenJardinsRelogio                           = Button(self.ContainerLotten, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoLottenJardinsRelogio                           = Button(self.ContainerLotten, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoLottenJardinsRelogio            ["text"]       = "R"
 		self.botaoLottenJardinsRelogio            ["background"] = Info.Lotten.Jardins.RelogioCor
 		self.botaoLottenJardinsRelogio            ["width"]      = 2
@@ -1818,7 +2024,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoLottenAlphaville                               = Button(self.ContainerLotten, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoLottenAlphaville                               = Button(self.ContainerLotten, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoLottenAlphaville                ["text"]       = "Alphaville"
 		self.botaoLottenAlphaville                ["background"] = Info.Lotten.Alphaville.ModuloCor
 		self.botaoLottenAlphaville                 ["width"]      = 13
@@ -1831,7 +2038,8 @@ class TelaRelogios1(object):
 													Info.Lotten.Alphaville.Telefone))
 		self.botaoLottenAlphaville.grid           (row=3,column=0,sticky = "N")
 
-		self.botaoLottenAlphavilleRelogio                        = Button(self.ContainerLotten, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoLottenAlphavilleRelogio                        = Button(self.ContainerLotten, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoLottenAlphavilleRelogio         ["text"]       = "R"
 		self.botaoLottenAlphavilleRelogio         ["background"] = Info.Lotten.Alphaville.RelogioCor
 		self.botaoLottenAlphavilleRelogio         ["width"]      = 2
@@ -1841,7 +2049,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoLottenOsasco                                  = Button(self.ContainerLotten, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoLottenOsasco                                  = Button(self.ContainerLotten, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoLottenOsasco                   ["text"]       = "Osasco"
 		self.botaoLottenOsasco                   ["background"] = Info.Lotten.Osasco.ModuloCor
 		self.botaoLottenOsasco                    ["width"]      = 13
@@ -1854,7 +2063,8 @@ class TelaRelogios1(object):
 													Info.Lotten.Osasco.Telefone))
 		self.botaoLottenOsasco.grid              (row=4,column=0,sticky = "N")
 
-		self.botaoLottenOsascoRelogio                           = Button(self.ContainerLotten, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoLottenOsascoRelogio                           = Button(self.ContainerLotten, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoLottenOsascoRelogio            ["text"]       = "R"
 		self.botaoLottenOsascoRelogio            ["background"] = Info.Lotten.Osasco.RelogioCor
 		self.botaoLottenOsascoRelogio            ["width"]      = 2
@@ -1864,7 +2074,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoLottenSantana                                 = Button(self.ContainerLotten, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoLottenSantana                                 = Button(self.ContainerLotten, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoLottenSantana                  ["text"]       = "Santana"
 		self.botaoLottenSantana                  ["background"] = Info.Lotten.Santana.ModuloCor
 		self.botaoLottenSantana                   ["width"]      = 13
@@ -1877,7 +2088,8 @@ class TelaRelogios1(object):
 													Info.Lotten.Santana.Telefone))
 		self.botaoLottenSantana.grid             (row=5,column=0,sticky = "N")
 
-		self.botaoLottenSantanaRelogio                          = Button(self.ContainerLotten, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoLottenSantanaRelogio                          = Button(self.ContainerLotten, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoLottenSantanaRelogio           ["text"]       = "R"
 		self.botaoLottenSantanaRelogio           ["background"] = Info.Lotten.Santana.RelogioCor
 		self.botaoLottenSantanaRelogio           ["width"]      = 2
@@ -1887,7 +2099,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoLottenTatuape                                = Button(self.ContainerLotten, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoLottenTatuape                                = Button(self.ContainerLotten, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoLottenTatuape                 ["text"]       = "Tatuape"
 		self.botaoLottenTatuape                 ["background"] = Info.Lotten.Tatuape.ModuloCor
 		self.botaoLottenTatuape                  ["width"]      = 13
@@ -1900,7 +2113,8 @@ class TelaRelogios1(object):
 													Info.Lotten.Tatuape.Telefone))
 		self.botaoLottenTatuape.grid            (row=6,column=0,sticky = "N")
 
-		self.botaoLottenTatuapeRelogio                         = Button(self.ContainerLotten, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoLottenTatuapeRelogio                         = Button(self.ContainerLotten, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoLottenTatuapeRelogio          ["text"]       = "R"
 		self.botaoLottenTatuapeRelogio          ["background"] = Info.Lotten.Tatuape.RelogioCor
 		self.botaoLottenTatuapeRelogio          ["width"]      = 2
@@ -1910,7 +2124,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoLottenMoema                                  = Button(self.ContainerLotten, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoLottenMoema                                  = Button(self.ContainerLotten, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoLottenMoema                   ["text"]       = "Moema"
 		self.botaoLottenMoema                   ["background"] = Info.Lotten.Moema.ModuloCor
 		self.botaoLottenMoema                    ["width"]      = 13
@@ -1923,7 +2138,8 @@ class TelaRelogios1(object):
 													Info.Lotten.Moema.Telefone))
 		self.botaoLottenMoema.grid              (row=7,column=0,sticky = "N")
 
-		self.botaoLottenMoemaRelogio                           = Button(self.ContainerLotten, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoLottenMoemaRelogio                           = Button(self.ContainerLotten, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoLottenMoemaRelogio            ["text"]       = "R"
 		self.botaoLottenMoemaRelogio            ["background"] = Info.Lotten.Moema.RelogioCor
 		self.botaoLottenMoemaRelogio            ["width"]      = 2
@@ -1934,7 +2150,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoLottenJardimSul                              = Button(self.ContainerLotten, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoLottenJardimSul                              = Button(self.ContainerLotten, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoLottenJardimSul               ["text"]       = "Jardim Sul"
 		self.botaoLottenJardimSul               ["background"] = Info.Lotten.JardimSul.ModuloCor
 		self.botaoLottenJardimSul                ["width"]      = 13
@@ -1947,7 +2164,8 @@ class TelaRelogios1(object):
 													Info.Lotten.JardimSul.Telefone))
 		self.botaoLottenJardimSul.grid          (row=8,column=0,sticky = "N")
 
-		self.botaoLottenJardimSulRelogio                       = Button(self.ContainerLotten, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoLottenJardimSulRelogio                       = Button(self.ContainerLotten, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoLottenJardimSulRelogio        ["text"]       = "R"
 		self.botaoLottenJardimSulRelogio        ["background"] = Info.Lotten.JardimSul.RelogioCor
 		self.botaoLottenJardimSulRelogio        ["width"]      = 2
@@ -1957,7 +2175,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoLottenConceicao                              = Button(self.ContainerLotten, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoLottenConceicao                              = Button(self.ContainerLotten, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoLottenConceicao               ["text"]       = "Conceicao"
 		self.botaoLottenConceicao               ["background"] = Info.Lotten.Conceicao.ModuloCor
 		self.botaoLottenConceicao                ["width"]      = 13
@@ -1970,7 +2189,8 @@ class TelaRelogios1(object):
 													Info.Lotten.Conceicao.Telefone))
 		self.botaoLottenConceicao.grid          (row=9,column=0,sticky = "N")
 
-		self.botaoLottenConceicaoRelogio                       = Button(self.ContainerLotten, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoLottenConceicaoRelogio                       = Button(self.ContainerLotten, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoLottenConceicaoRelogio        ["text"]       = "R"
 		self.botaoLottenConceicaoRelogio        ["background"] = Info.Lotten.Conceicao.RelogioCor
 		self.botaoLottenConceicaoRelogio        ["width"]      = 2
@@ -1980,7 +2200,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoLottenPerdizes                               = Button(self.ContainerLotten, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoLottenPerdizes                               = Button(self.ContainerLotten, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoLottenPerdizes                ["text"]       = "Perdizes"
 		self.botaoLottenPerdizes                ["background"] = Info.Lotten.Perdizes.ModuloCor
 		self.botaoLottenPerdizes                 ["width"]      = 13
@@ -1993,7 +2214,8 @@ class TelaRelogios1(object):
 													Info.Lotten.Perdizes.Telefone))
 		self.botaoLottenPerdizes.grid           (row=10,column=0,sticky = "N")
 
-		self.botaoLottenPerdizesRelogio                        = Button(self.ContainerLotten, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoLottenPerdizesRelogio                        = Button(self.ContainerLotten, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoLottenPerdizesRelogio         ["text"]       = "R"
 		self.botaoLottenPerdizesRelogio         ["background"] = Info.Lotten.Perdizes.RelogioCor
 		self.botaoLottenPerdizesRelogio         ["width"]      = 2
@@ -2003,7 +2225,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoLottenLapa                                   = Button(self.ContainerLotten, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoLottenLapa                                   = Button(self.ContainerLotten, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoLottenLapa                    ["text"]       = "Lapa"
 		self.botaoLottenLapa                    ["background"] = Info.Lotten.Lapa.ModuloCor
 		self.botaoLottenLapa                     ["width"]      = 13
@@ -2016,7 +2239,8 @@ class TelaRelogios1(object):
 													Info.Lotten.Lapa.Telefone))
 		self.botaoLottenLapa.grid               (row=11,column=0,sticky = "N")
 
-		self.botaoLottenLapaRelogio                            = Button(self.ContainerLotten, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoLottenLapaRelogio                            = Button(self.ContainerLotten, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoLottenLapaRelogio             ["text"]       = "R"
 		self.botaoLottenLapaRelogio             ["background"] = Info.Lotten.Lapa.RelogioCor
 		self.botaoLottenLapaRelogio             ["width"]      = 2
@@ -2026,7 +2250,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoLottenSaoCaetano                             = Button(self.ContainerLotten, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoLottenSaoCaetano                             = Button(self.ContainerLotten, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoLottenSaoCaetano              ["text"]       = "Sao Caetano"
 		self.botaoLottenSaoCaetano              ["background"] = Info.Lotten.SaoCaetano.ModuloCor
 		self.botaoLottenSaoCaetano               ["width"]      = 13
@@ -2039,7 +2264,8 @@ class TelaRelogios1(object):
 													Info.Lotten.SaoCaetano.Telefone))
 		self.botaoLottenSaoCaetano.grid         (row=12,column=0,sticky = "N")
 
-		self.botaoLottenSaoCaetanoRelogio                      = Button(self.ContainerLotten, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoLottenSaoCaetanoRelogio                      = Button(self.ContainerLotten, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoLottenSaoCaetanoRelogio       ["text"]       = "R"
 		self.botaoLottenSaoCaetanoRelogio       ["background"] = Info.Lotten.SaoCaetano.RelogioCor
 		self.botaoLottenSaoCaetanoRelogio       ["width"]      = 2
@@ -2049,7 +2275,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoLottenPinheiros                              = Button(self.ContainerLotten, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoLottenPinheiros                              = Button(self.ContainerLotten, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoLottenPinheiros               ["text"]       = "Pinheiros"
 		self.botaoLottenPinheiros               ["background"] = Info.Lotten.Pinheiros.ModuloCor
 		self.botaoLottenPinheiros                ["width"]      = 13
@@ -2062,7 +2289,8 @@ class TelaRelogios1(object):
 													Info.Lotten.Pinheiros.Telefone))
 		self.botaoLottenPinheiros.grid          (row=13,column=0,sticky = "N")
 
-		self.botaoLottenPinheirosRelogio                       = Button(self.ContainerLotten, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoLottenPinheirosRelogio                       = Button(self.ContainerLotten, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoLottenPinheirosRelogio        ["text"]       = "R"
 		self.botaoLottenPinheirosRelogio        ["background"] = Info.Lotten.Pinheiros.RelogioCor
 		self.botaoLottenPinheirosRelogio        ["width"]      = 2
@@ -2072,7 +2300,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoLottenMorumbi                                = Button(self.ContainerLotten, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoLottenMorumbi                                = Button(self.ContainerLotten, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoLottenMorumbi                 ["text"]       = "Morumbi"
 		self.botaoLottenMorumbi                 ["background"] = Info.Lotten.Morumbi.ModuloCor
 		self.botaoLottenMorumbi                  ["width"]      = 13
@@ -2085,7 +2314,8 @@ class TelaRelogios1(object):
 													Info.Lotten.Morumbi.Telefone))
 		self.botaoLottenMorumbi.grid            (row=14,column=0,sticky = "N")
 
-		self.botaoLottenMorumbiRelogio                         = Button(self.ContainerLotten, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoLottenMorumbiRelogio                         = Button(self.ContainerLotten, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoLottenMorumbiRelogio          ["text"]       = "R"
 		self.botaoLottenMorumbiRelogio          ["background"] = Info.Lotten.Morumbi.RelogioCor
 		self.botaoLottenMorumbiRelogio          ["width"]      = 2
@@ -2096,7 +2326,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoLottenBerrini                                = Button(self.ContainerLotten, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoLottenBerrini                                = Button(self.ContainerLotten, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoLottenBerrini                 ["text"]       = "Berrini"
 		self.botaoLottenBerrini                 ["background"] = Info.Lotten.Berrini.ModuloCor
 		self.botaoLottenBerrini                  ["width"]      = 13
@@ -2109,7 +2340,8 @@ class TelaRelogios1(object):
 													Info.Lotten.Berrini.Telefone))
 		self.botaoLottenBerrini.grid            (row=15,column=0,sticky = "N")
 
-		self.botaoLottenBerriniRelogio                         = Button(self.ContainerLotten, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoLottenBerriniRelogio                         = Button(self.ContainerLotten, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoLottenBerriniRelogio          ["text"]       = "R"
 		self.botaoLottenBerriniRelogio          ["background"] = Info.Lotten.Berrini.RelogioCor
 		self.botaoLottenBerriniRelogio          ["width"]      = 2
@@ -2120,7 +2352,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoLottenVilaMariana                            = Button(self.ContainerLotten, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoLottenVilaMariana                            = Button(self.ContainerLotten, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoLottenVilaMariana             ["text"]       = "Vila Mariana"
 		self.botaoLottenVilaMariana             ["background"] = Info.Lotten.VilaMariana.ModuloCor
 		self.botaoLottenVilaMariana              ["width"]      = 13
@@ -2133,7 +2366,8 @@ class TelaRelogios1(object):
 													Info.Lotten.VilaMariana.Telefone))
 		self.botaoLottenVilaMariana.grid        (row=16,column=0,sticky = "N")
 
-		self.botaoLottenVilaMarianaRelogio                     = Button(self.ContainerLotten, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoLottenVilaMarianaRelogio                     = Button(self.ContainerLotten, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoLottenVilaMarianaRelogio      ["text"]       = "R"
 		self.botaoLottenVilaMarianaRelogio      ["background"] = Info.Lotten.VilaMariana.RelogioCor
 		self.botaoLottenVilaMarianaRelogio      ["width"]      = 2
@@ -2144,7 +2378,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoLottenVilaOlimpia                            = Button(self.ContainerLotten, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoLottenVilaOlimpia                            = Button(self.ContainerLotten, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoLottenVilaOlimpia             ["text"]       = "Vila Olimpia"
 		self.botaoLottenVilaOlimpia             ["background"] = Info.Lotten.VilaOlimpia.ModuloCor
 		self.botaoLottenVilaOlimpia              ["width"]      = 13
@@ -2157,7 +2392,8 @@ class TelaRelogios1(object):
 													Info.Lotten.VilaOlimpia.Telefone))
 		self.botaoLottenVilaOlimpia.grid        (row=17,column=0,sticky = "N")
 
-		self.botaoLottenVilaOlimpiaRelogio                     = Button(self.ContainerLotten, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoLottenVilaOlimpiaRelogio                     = Button(self.ContainerLotten, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoLottenVilaOlimpiaRelogio      ["text"]       = "R"
 		self.botaoLottenVilaOlimpiaRelogio      ["background"] = Info.Lotten.VilaOlimpia.RelogioCor
 		self.botaoLottenVilaOlimpiaRelogio      ["width"]      = 2
@@ -2168,7 +2404,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoLottenItaim                                 = Button(self.ContainerLotten, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoLottenItaim                                 = Button(self.ContainerLotten, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoLottenItaim                  ["text"]       = "Itaim"
 		self.botaoLottenItaim                  ["background"] = Info.Lotten.Itaim.ModuloCor
 		self.botaoLottenItaim                   ["width"]      = 13
@@ -2181,7 +2418,8 @@ class TelaRelogios1(object):
 													Info.Lotten.Itaim.Telefone))
 		self.botaoLottenItaim.grid             (row=18,column=0,sticky = "N")
 
-		self.botaoLottenItaimRelogio                          = Button(self.ContainerLotten, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoLottenItaimRelogio                          = Button(self.ContainerLotten, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoLottenItaimRelogio           ["text"]       = "R"
 		self.botaoLottenItaimRelogio           ["background"] = Info.Lotten.Itaim.RelogioCor
 		self.botaoLottenItaimRelogio           ["width"]      = 2
@@ -2193,7 +2431,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoLottenGuarulhos                              = Button(self.ContainerLotten, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoLottenGuarulhos                              = Button(self.ContainerLotten, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoLottenGuarulhos               ["text"]       = "Guarulhos"
 		self.botaoLottenGuarulhos               ["background"] = Info.Lotten.Guarulhos.ModuloCor
 		self.botaoLottenGuarulhos                ["width"]      = 13
@@ -2206,7 +2445,8 @@ class TelaRelogios1(object):
 													Info.Lotten.Guarulhos.Telefone))
 		self.botaoLottenGuarulhos.grid          (row=19,column=0,sticky = "N")
 
-		self.botaoLottenGuarulhosRelogio                       = Button(self.ContainerLotten, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoLottenGuarulhosRelogio                       = Button(self.ContainerLotten, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoLottenGuarulhosRelogio        ["text"]       = "R"
 		self.botaoLottenGuarulhosRelogio        ["background"] = Info.Lotten.Guarulhos.RelogioCor
 		self.botaoLottenGuarulhosRelogio        ["width"]      = 2
@@ -2225,7 +2465,8 @@ class TelaRelogios1(object):
 		self.msgBestInClass.grid                   	(row=0,column=0,sticky = "N")
 
 
-		self.botaoBestInClassAtencao                                        = Button(self.ContainerBestInClass, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoBestInClassAtencao                                        = Button(self.ContainerBestInClass, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoBestInClassAtencao                         ["text"]       = "A"
 		self.botaoBestInClassAtencao                         ["height"]     = 1
 		self.botaoBestInClassAtencao                         ["background"] = Info.BestInClass.Status.Atencao
@@ -2247,7 +2488,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoBestInClassRecife                               = Button(self.ContainerBestInClass, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoBestInClassRecife                               = Button(self.ContainerBestInClass, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoBestInClassRecife                ["text"]       = "Recife"
 		self.botaoBestInClassRecife                ["background"] = Info.BestInClass.Recife.ModuloCor
 		self.botaoBestInClassRecife                 ["width"]      = 13
@@ -2259,7 +2501,8 @@ class TelaRelogios1(object):
 													Info.BestInClass.Recife.Responsavel, 
 													Info.BestInClass.Recife.Telefone))
 
-		self.botaoBestInClassRecifeRelogio                        = Button(self.ContainerBestInClass, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoBestInClassRecifeRelogio                        = Button(self.ContainerBestInClass, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoBestInClassRecifeRelogio         ["text"]       = "R"
 		self.botaoBestInClassRecifeRelogio         ["background"] = Info.BestInClass.Recife.RelogioCor
 		self.botaoBestInClassRecifeRelogio         ["width"]      = 2
@@ -2273,7 +2516,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoBestInClassItaquera                             = Button(self.ContainerBestInClass, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoBestInClassItaquera                             = Button(self.ContainerBestInClass, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoBestInClassItaquera              ["text"]       = "Itaquera"
 		self.botaoBestInClassItaquera              ["background"] = Info.BestInClass.Itaquera.ModuloCor
 		self.botaoBestInClassItaquera               ["width"]      = 13
@@ -2286,7 +2530,8 @@ class TelaRelogios1(object):
 													Info.BestInClass.Itaquera.Telefone))
 
 
-		self.botaoBestInClassItaqueraRelogio                      = Button(self.ContainerBestInClass, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoBestInClassItaqueraRelogio                      = Button(self.ContainerBestInClass, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoBestInClassItaqueraRelogio       ["text"]       = "R"
 		self.botaoBestInClassItaqueraRelogio       ["background"] = Info.BestInClass.Itaquera.RelogioCor
 		self.botaoBestInClassItaqueraRelogio       ["width"]      = 2
@@ -2300,7 +2545,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoBestInClassItapevi                              = Button(self.ContainerBestInClass, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoBestInClassItapevi                              = Button(self.ContainerBestInClass, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoBestInClassItapevi               ["text"]       = "Itapevi"
 		self.botaoBestInClassItapevi               ["background"] = Info.BestInClass.Itapevi.ModuloCor
 		self.botaoBestInClassItapevi                ["width"]      = 13
@@ -2313,7 +2559,8 @@ class TelaRelogios1(object):
 													Info.BestInClass.Itapevi.Telefone))
 
 
-		self.botaoBestInClassItapeviRelogio                       = Button(self.ContainerBestInClass, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoBestInClassItapeviRelogio                       = Button(self.ContainerBestInClass, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoBestInClassItapeviRelogio        ["text"]       = "R"
 		self.botaoBestInClassItapeviRelogio        ["background"] = Info.BestInClass.Itapevi.RelogioCor
 		self.botaoBestInClassItapeviRelogio        ["width"]      = 2
@@ -2326,7 +2573,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoBestInClassSorocaba                             = Button(self.ContainerBestInClass, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoBestInClassSorocaba                             = Button(self.ContainerBestInClass, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoBestInClassSorocaba              ["text"]       = "Sorocaba"
 		self.botaoBestInClassSorocaba              ["background"] = Info.BestInClass.Sorocaba.ModuloCor
 		self.botaoBestInClassSorocaba               ["width"]      = 13
@@ -2338,7 +2586,8 @@ class TelaRelogios1(object):
 													Info.BestInClass.Sorocaba.Responsavel, 
 													Info.BestInClass.Sorocaba.Telefone))
 
-		self.botaoBestInClassSorocabaRelogio                      = Button(self.ContainerBestInClass, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoBestInClassSorocabaRelogio                      = Button(self.ContainerBestInClass, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoBestInClassSorocabaRelogio       ["text"]       = "R"
 		self.botaoBestInClassSorocabaRelogio       ["background"] = Info.BestInClass.Sorocaba.RelogioCor
 		self.botaoBestInClassSorocabaRelogio       ["width"]      = 2
@@ -2350,7 +2599,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoBestInClassSeteLagoas                           = Button(self.ContainerBestInClass, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoBestInClassSeteLagoas                           = Button(self.ContainerBestInClass, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoBestInClassSeteLagoas            ["text"]       = "Sete Lagoas"
 		self.botaoBestInClassSeteLagoas            ["background"] = Info.BestInClass.SeteLagoas.ModuloCor
 		self.botaoBestInClassSeteLagoas             ["width"]      = 13
@@ -2362,7 +2612,8 @@ class TelaRelogios1(object):
 													Info.BestInClass.SeteLagoas.Responsavel, 
 													Info.BestInClass.SeteLagoas.Telefone))
 
-		self.botaoBestInClassSeteLagoasRelogio                    = Button(self.ContainerBestInClass, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoBestInClassSeteLagoasRelogio                    = Button(self.ContainerBestInClass, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoBestInClassSeteLagoasRelogio     ["text"]       = "R"
 		self.botaoBestInClassSeteLagoasRelogio     ["background"] = Info.BestInClass.SeteLagoas.RelogioCor
 		self.botaoBestInClassSeteLagoasRelogio     ["width"]      = 2
@@ -2374,7 +2625,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoBestInClassCuritiba                             = Button(self.ContainerBestInClass, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoBestInClassCuritiba                             = Button(self.ContainerBestInClass, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoBestInClassCuritiba              ["text"]       = "Curitiba"
 		self.botaoBestInClassCuritiba              ["background"] = Info.BestInClass.Curitiba.ModuloCor
 		self.botaoBestInClassCuritiba               ["width"]      = 13
@@ -2387,7 +2639,8 @@ class TelaRelogios1(object):
 													Info.BestInClass.Curitiba.Telefone))
 
 
-		self.botaoBestInClassCuritibaRelogio                      = Button(self.ContainerBestInClass, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoBestInClassCuritibaRelogio                      = Button(self.ContainerBestInClass, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoBestInClassCuritibaRelogio       ["text"]       = "R"
 		self.botaoBestInClassCuritibaRelogio       ["background"] = Info.BestInClass.Curitiba.RelogioCor
 		self.botaoBestInClassCuritibaRelogio       ["width"]      = 2
@@ -2401,7 +2654,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoBestInClassSFsat                                = Button(self.ContainerBestInClass, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoBestInClassSFsat                                = Button(self.ContainerBestInClass, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoBestInClassSFsat                 ["text"]       = "F Santana"
 		self.botaoBestInClassSFsat                 ["background"] = Info.BestInClass.Fsantana.ModuloCor
 		self.botaoBestInClassSFsat                  ["width"]      = 13
@@ -2413,7 +2667,8 @@ class TelaRelogios1(object):
 													Info.BestInClass.Fsantana.Responsavel, 
 													Info.BestInClass.Fsantana.Telefone))
 
-		self.botaoBestInClassSFsatRelogio                         = Button(self.ContainerBestInClass, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoBestInClassSFsatRelogio                         = Button(self.ContainerBestInClass, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoBestInClassSFsatRelogio          ["text"]       = "R"
 		self.botaoBestInClassSFsatRelogio          ["background"] = Info.BestInClass.Fsantana.RelogioCor
 		self.botaoBestInClassSFsatRelogio          ["width"]      = 2
@@ -2428,7 +2683,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoBestInClassItu                                  = Button(self.ContainerBestInClass, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoBestInClassItu                                  = Button(self.ContainerBestInClass, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoBestInClassItu                   ["text"]       = "Itu"
 		self.botaoBestInClassItu                   ["background"] = Info.BestInClass.Itu.ModuloCor
 		self.botaoBestInClassItu                    ["width"]      = 13
@@ -2440,7 +2696,8 @@ class TelaRelogios1(object):
 													Info.BestInClass.Itu.Responsavel, 
 													Info.BestInClass.Itu.Telefone))
 
-		self.botaoBestInClassItuRelogio                           = Button(self.ContainerBestInClass, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoBestInClassItuRelogio                           = Button(self.ContainerBestInClass, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoBestInClassItuRelogio            ["text"]       = "R"
 		self.botaoBestInClassItuRelogio            ["background"] = Info.BestInClass.Itu.RelogioCor
 		self.botaoBestInClassItuRelogio            ["width"]      = 2
@@ -2456,7 +2713,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoBestInClassGuarulhos                             = Button(self.ContainerBestInClass, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoBestInClassGuarulhos                             = Button(self.ContainerBestInClass, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoBestInClassGuarulhos              ["text"]       = "Guraulhos"
 		self.botaoBestInClassGuarulhos              ["background"] = Info.BestInClass.Guarulhos.ModuloCor
 		self.botaoBestInClassGuarulhos               ["width"]      = 13
@@ -2468,7 +2726,8 @@ class TelaRelogios1(object):
 													Info.BestInClass.Guarulhos.Responsavel, 
 													Info.BestInClass.Guarulhos.Telefone))
 
-		self.botaoBestInClassGuarulhosRelogio                      = Button(self.ContainerBestInClass, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoBestInClassGuarulhosRelogio                      = Button(self.ContainerBestInClass, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoBestInClassGuarulhosRelogio       ["text"]       = "R"
 		self.botaoBestInClassGuarulhosRelogio       ["background"] = Info.BestInClass.Guarulhos.RelogioCor
 		self.botaoBestInClassGuarulhosRelogio       ["width"]      = 2
@@ -2484,7 +2743,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoBestInClassItaporanga                            = Button(self.ContainerBestInClass, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoBestInClassItaporanga                            = Button(self.ContainerBestInClass, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoBestInClassItaporanga             ["text"]       = "Itaporanga"
 		self.botaoBestInClassItaporanga             ["background"] = Info.BestInClass.Itaporanga.ModuloCor
 		self.botaoBestInClassItaporanga              ["width"]      = 13
@@ -2496,7 +2756,8 @@ class TelaRelogios1(object):
 													Info.BestInClass.Itaporanga.Responsavel, 
 													Info.BestInClass.Itaporanga.Telefone))
 
-		self.botaoBestInClassItaporangaRelogio                     = Button(self.ContainerBestInClass, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoBestInClassItaporangaRelogio                     = Button(self.ContainerBestInClass, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoBestInClassItaporangaRelogio      ["text"]       = "R"
 		self.botaoBestInClassItaporangaRelogio      ["background"] = Info.BestInClass.Itaporanga.RelogioCor
 		self.botaoBestInClassItaporangaRelogio      ["width"]      = 2
@@ -2511,7 +2772,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoBestInClassLinhares                              = Button(self.ContainerBestInClass, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoBestInClassLinhares                              = Button(self.ContainerBestInClass, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoBestInClassLinhares               ["text"]       = "Linhares"
 		self.botaoBestInClassLinhares               ["background"] = Info.BestInClass.Linhares.ModuloCor
 		self.botaoBestInClassLinhares                ["width"]      = 13
@@ -2523,7 +2785,8 @@ class TelaRelogios1(object):
 													Info.BestInClass.Linhares.Responsavel, 
 													Info.BestInClass.Linhares.Telefone))
 
-		self.botaoBestInClassLinharesRelogio                       = Button(self.ContainerBestInClass, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoBestInClassLinharesRelogio                       = Button(self.ContainerBestInClass, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoBestInClassLinharesRelogio        ["text"]       = "R"
 		self.botaoBestInClassLinharesRelogio        ["background"] = Info.BestInClass.Linhares.RelogioCor
 		self.botaoBestInClassLinharesRelogio        ["width"]      = 2
@@ -2546,7 +2809,8 @@ class TelaRelogios1(object):
 		self.msgCasaCristo.grid(row=0, column=0 , sticky = "N")
 
 
-		self.botaoCasaCristoAtencao                                        = Button(self.ContainerCasaCristo,  highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoCasaCristoAtencao                                        = Button(self.ContainerCasaCristo,  font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoCasaCristoAtencao                         ["text"]       = "A"
 		self.botaoCasaCristoAtencao                         ["height"]     = 1
 		self.botaoCasaCristoAtencao                         ["background"] = Info.CasaCristo.Status.Atencao
@@ -2567,7 +2831,8 @@ class TelaRelogios1(object):
 		self.msgCasaCristoHora.grid(row=1,column=0,pady=3.5, sticky = "N")
 		
 
-		self.botaoCasaCristoADM                                   = Button(self.ContainerCasaCristo, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoCasaCristoADM                                   = Button(self.ContainerCasaCristo, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoCasaCristoADM                    ["text"]       = "ADM"
 		self.botaoCasaCristoADM                    ["background"] = Info.CasaCristo.ADM.ModuloCor
 		self.botaoCasaCristoADM                     ["width"]      = 13
@@ -2578,7 +2843,8 @@ class TelaRelogios1(object):
 													Info.CasaCristo.ADM.Responsavel, 
 													Info.CasaCristo.ADM.Telefone))
 
-		self.botaoCasaCristoADMRelogio                            = Button(self.ContainerCasaCristo, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoCasaCristoADMRelogio                            = Button(self.ContainerCasaCristo, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoCasaCristoADMRelogio             ["text"]       = "R"
 		self.botaoCasaCristoADMRelogio             ["background"] = Info.CasaCristo.ADM.RelogioCor
 		self.botaoCasaCristoADMRelogio             ["width"]      = 2
@@ -2590,7 +2856,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoCasaCristoCEI1                                  = Button(self.ContainerCasaCristo, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoCasaCristoCEI1                                  = Button(self.ContainerCasaCristo, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoCasaCristoCEI1                   ["text"]       = "CEI1"
 		self.botaoCasaCristoCEI1                   ["background"] = Info.CasaCristo.CEI1.ModuloCor
 		self.botaoCasaCristoCEI1                    ["width"]      = 13
@@ -2601,7 +2868,8 @@ class TelaRelogios1(object):
 													Info.CasaCristo.CEI1.Responsavel, 
 													Info.CasaCristo.CEI1.Telefone))
 
-		self.botaoCasaCristoCEI1Relogio                           = Button(self.ContainerCasaCristo,highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoCasaCristoCEI1Relogio                           = Button(self.ContainerCasaCristo,font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoCasaCristoCEI1Relogio            ["text"]       = "R"
 		self.botaoCasaCristoCEI1Relogio            ["background"] = Info.CasaCristo.CEI1.RelogioCor
 		self.botaoCasaCristoCEI1Relogio            ["width"]      = 2
@@ -2613,7 +2881,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoCasaCristoCEI2                                  = Button(self.ContainerCasaCristo, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoCasaCristoCEI2                                  = Button(self.ContainerCasaCristo, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoCasaCristoCEI2                   ["text"]       = "CEI2"
 		self.botaoCasaCristoCEI2                   ["background"] = Info.CasaCristo.CEI2.ModuloCor
 		self.botaoCasaCristoCEI2                    ["width"]      = 13
@@ -2624,7 +2893,8 @@ class TelaRelogios1(object):
 													Info.CasaCristo.CEI2.Responsavel, 
 													Info.CasaCristo.CEI2.Telefone))
 
-		self.botaoCasaCristoCEI2Relogio                           = Button(self.ContainerCasaCristo, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoCasaCristoCEI2Relogio                           = Button(self.ContainerCasaCristo, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoCasaCristoCEI2Relogio            ["text"]       = "R"
 		self.botaoCasaCristoCEI2Relogio            ["background"] = Info.CasaCristo.CEI2.RelogioCor
 		self.botaoCasaCristoCEI2Relogio            ["width"]=2
@@ -2637,7 +2907,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoCasaCristoCEI3                                  = Button(self.ContainerCasaCristo, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoCasaCristoCEI3                                  = Button(self.ContainerCasaCristo, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoCasaCristoCEI3                   ["text"]       = "CEI3"
 		self.botaoCasaCristoCEI3                   ["background"] = Info.CasaCristo.CEI3.ModuloCor
 		self.botaoCasaCristoCEI3                    ["width"]      = 13
@@ -2648,7 +2919,8 @@ class TelaRelogios1(object):
 													Info.CasaCristo.CEI3.Responsavel, 
 													Info.CasaCristo.CEI3.Telefone))
 
-		self.botaoCasaCristoCEI3Relogio                           = Button(self.ContainerCasaCristo, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoCasaCristoCEI3Relogio                           = Button(self.ContainerCasaCristo, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoCasaCristoCEI3Relogio            ["text"]       = "R"
 		self.botaoCasaCristoCEI3Relogio            ["background"] = Info.CasaCristo.CEI3.RelogioCor
 		self.botaoCasaCristoCEI3Relogio            ["width"]      = 2
@@ -2660,7 +2932,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoCasaCristoVMatilde                              = Button(self.ContainerCasaCristo, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoCasaCristoVMatilde                              = Button(self.ContainerCasaCristo, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoCasaCristoVMatilde               ["text"]       = "Vovo Matilde"
 		self.botaoCasaCristoVMatilde               ["background"] = Info.CasaCristo.VovoMatilde.ModuloCor
 		self.botaoCasaCristoVMatilde                ["width"]      = 13
@@ -2671,7 +2944,8 @@ class TelaRelogios1(object):
 													Info.CasaCristo.VovoMatilde.Responsavel, 
 													Info.CasaCristo.VovoMatilde.Telefone))
 
-		self.botaoCasaCristoVMatildeRelogio                       = Button(self.ContainerCasaCristo, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoCasaCristoVMatildeRelogio                       = Button(self.ContainerCasaCristo, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoCasaCristoVMatildeRelogio        ["text"]       = "R"
 		self.botaoCasaCristoVMatildeRelogio        ["background"] = Info.CasaCristo.VovoMatilde.RelogioCor
 		self.botaoCasaCristoVMatildeRelogio        ["width"]      = 2
@@ -2713,7 +2987,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoBuildingAtencao                      	= Button(self.ContainerBuilding, 
-														highlightbackground="black",
+														font="arial 11 bold" , 
+																	highlightbackground="black",
 														activebackground="black",
 														activeforeground="white")
 
@@ -2747,6 +3022,7 @@ class TelaRelogios1(object):
 
 
 		self.botaoBuildingAllianz                   = Button(self.ContainerBuilding, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -2764,6 +3040,7 @@ class TelaRelogios1(object):
 													Info.Building.Allianz.Telefone))
 
 		self.botaoBuildingAllianzRelogio            = Button(self.ContainerBuilding, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -2783,6 +3060,7 @@ class TelaRelogios1(object):
 
 
 		self.botaoBuildingWTorre                    = Button(self.ContainerBuilding, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -2800,6 +3078,7 @@ class TelaRelogios1(object):
 													Info.Building.WTorre.Telefone))
 
 		self.botaoBuildingWTorreRelogio             = Button(self.ContainerBuilding, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -2819,6 +3098,7 @@ class TelaRelogios1(object):
 
 
 		self.botaoBuildingRioJaneiro                = Button(self.ContainerBuilding, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -2836,6 +3116,7 @@ class TelaRelogios1(object):
 													Info.Building.RioJaneiro.Telefone))
 
 		self.botaoBuildingRioJaneiroRelogio                        = Button(self.ContainerBuilding, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -2867,7 +3148,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoGrupoNkAtencao                                        = Button(self.ContainerGrupoNk, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -2885,7 +3167,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoGrupoNkNelsonKioshi                                  = Button(self.ContainerGrupoNk, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoGrupoNkNelsonKioshi                                  = Button(self.ContainerGrupoNk, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoGrupoNkNelsonKioshi                  	["text"]       = "Nelson Kioshi"
 		self.botaoGrupoNkNelsonKioshi                   ["background"] = Info.GrupoNk.NelsonKioshi.ModuloCor
 		self.botaoGrupoNkNelsonKioshi                    ["width"]      = 13
@@ -2897,7 +3180,8 @@ class TelaRelogios1(object):
 														Info.GrupoNk.NelsonKioshi.Responsavel, 
 														Info.GrupoNk.NelsonKioshi.Telefone))
 
-		self.botaoGrupoNkNelsonKioshiRelogio                           = Button(self.ContainerGrupoNk, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoGrupoNkNelsonKioshiRelogio                           = Button(self.ContainerGrupoNk, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoGrupoNkNelsonKioshiRelogio            ["text"]       = "R"
 		self.botaoGrupoNkNelsonKioshiRelogio            ["background"] = Info.GrupoNk.NelsonKioshi.RelogioCor
 		self.botaoGrupoNkNelsonKioshiRelogio            ["width"]      = 2
@@ -2911,7 +3195,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoGrupoNkRDFurukawa                                   	= Button(self.ContainerGrupoNk, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoGrupoNkRDFurukawa                                   	= Button(self.ContainerGrupoNk, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoGrupoNkRDFurukawa                    	["text"]        = "RD Furukawa"
 		self.botaoGrupoNkRDFurukawa                    	["background"]  = Info.GrupoNk.RDFurukawa.ModuloCor
 		self.botaoGrupoNkRDFurukawa                    	["width"]       = 13
@@ -2923,7 +3208,8 @@ class TelaRelogios1(object):
 														Info.GrupoNk.RDFurukawa.Responsavel, 
 														Info.GrupoNk.RDFurukawa.Telefone))
 
-		self.botaoGrupoNkRDFurukawaRelogio                            	= Button(self.ContainerGrupoNk, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoGrupoNkRDFurukawaRelogio                            	= Button(self.ContainerGrupoNk, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoGrupoNkRDFurukawaRelogio              ["text"]        = "R"
 		self.botaoGrupoNkRDFurukawaRelogio              ["background"]  = Info.GrupoNk.RDFurukawa.RelogioCor
 		self.botaoGrupoNkRDFurukawaRelogio              ["width"]       = 2
@@ -2937,7 +3223,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoGrupoNkKio1                               			= Button(self.ContainerGrupoNk, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoGrupoNkKio1                               			= Button(self.ContainerGrupoNk, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoGrupoNkKio1                			["text"]        = "Kio 1"
 		self.botaoGrupoNkKio1                			["background"]  = Info.GrupoNk.Kio1.ModuloCor
 		self.botaoGrupoNkKio1                			["width"]       = 13
@@ -2949,7 +3236,8 @@ class TelaRelogios1(object):
 														Info.GrupoNk.Kio1.Responsavel, 
 														Info.GrupoNk.Kio1.Telefone))
 
-		self.botaoGrupoNkKio1Relogio         		               		= Button(self.ContainerGrupoNk, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoGrupoNkKio1Relogio         		               		= Button(self.ContainerGrupoNk, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoGrupoNkKio1Relogio         			["text"]        = "R"
 		self.botaoGrupoNkKio1Relogio         			["background"]  = Info.GrupoNk.Kio1.RelogioCor
 		self.botaoGrupoNkKio1Relogio         			["width"]       = 2
@@ -2963,7 +3251,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoGrupoNkKio2                               			= Button(self.ContainerGrupoNk, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoGrupoNkKio2                               			= Button(self.ContainerGrupoNk, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoGrupoNkKio2                			["text"]        = "Kio 2"
 		self.botaoGrupoNkKio2                			["background"]  = Info.GrupoNk.Kio2.ModuloCor
 		self.botaoGrupoNkKio2                			["width"]       = 13
@@ -2975,7 +3264,8 @@ class TelaRelogios1(object):
 														Info.GrupoNk.Kio2.Responsavel, 
 														Info.GrupoNk.Kio2.Telefone))
 
-		self.botaoGrupoNkKio2Relogio         		               		= Button(self.ContainerGrupoNk, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoGrupoNkKio2Relogio         		               		= Button(self.ContainerGrupoNk, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoGrupoNkKio2Relogio         			["text"]        = "R"
 		self.botaoGrupoNkKio2Relogio         			["background"]  = Info.GrupoNk.Kio2.RelogioCor
 		self.botaoGrupoNkKio2Relogio         			["width"]       = 2
@@ -2986,7 +3276,8 @@ class TelaRelogios1(object):
 		self.botaoGrupoNkKio2Relogio.grid    			(row=5,column=1,sticky = "N")
 
 
-		self.botaoGrupoNkGranjaViana                          			= Button(self.ContainerGrupoNk, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoGrupoNkGranjaViana                          			= Button(self.ContainerGrupoNk, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoGrupoNkGranjaViana                	["text"]        = "Granja Viana"
 		self.botaoGrupoNkGranjaViana                	["background"]  = Info.GrupoNk.GranjaViana.ModuloCor
 		self.botaoGrupoNkGranjaViana                	["width"]       = 13
@@ -2998,7 +3289,8 @@ class TelaRelogios1(object):
 														Info.GrupoNk.GranjaViana.Responsavel, 
 														Info.GrupoNk.GranjaViana.Telefone))
 
-		self.botaoGrupoNkGranjaVianaRelogio         		            = Button(self.ContainerGrupoNk, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoGrupoNkGranjaVianaRelogio         		            = Button(self.ContainerGrupoNk, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoGrupoNkGranjaVianaRelogio         	["text"]        = "R"
 		self.botaoGrupoNkGranjaVianaRelogio         	["background"]  = Info.GrupoNk.GranjaViana.RelogioCor
 		self.botaoGrupoNkGranjaVianaRelogio         	["width"]       = 2
@@ -3010,7 +3302,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoGrupoNkSantaCecilia                               	= Button(self.ContainerGrupoNk, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoGrupoNkSantaCecilia                               	= Button(self.ContainerGrupoNk, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoGrupoNkSantaCecilia                	["text"]        = "Santa Cecilia"
 		self.botaoGrupoNkSantaCecilia                	["background"]  = Info.GrupoNk.SantaCecilia.ModuloCor
 		self.botaoGrupoNkSantaCecilia                	["width"]       = 13
@@ -3022,7 +3315,8 @@ class TelaRelogios1(object):
 														Info.GrupoNk.SantaCecilia.Responsavel, 
 														Info.GrupoNk.SantaCecilia.Telefone))
 
-		self.botaoGrupoNkSantaCeciliaRelogio         	           		= Button(self.ContainerGrupoNk, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoGrupoNkSantaCeciliaRelogio         	           		= Button(self.ContainerGrupoNk, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoGrupoNkSantaCeciliaRelogio         	["text"]        = "R"
 		self.botaoGrupoNkSantaCeciliaRelogio         	["background"]  = Info.GrupoNk.SantaCecilia.RelogioCor
 		self.botaoGrupoNkSantaCeciliaRelogio         	["width"]       = 2
@@ -3033,7 +3327,8 @@ class TelaRelogios1(object):
 		self.botaoGrupoNkSantaCeciliaRelogio.grid    	(row=7,column=1,sticky = "N")
 
 
-		self.botaoGrupoNkTransfruit                            			= Button(self.ContainerGrupoNk, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoGrupoNkTransfruit                            			= Button(self.ContainerGrupoNk, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoGrupoNkTransfruit                		["text"]        = "Transfruit"
 		self.botaoGrupoNkTransfruit                		["background"]  = Info.GrupoNk.Transfruit.ModuloCor
 		self.botaoGrupoNkTransfruit                		["width"]       = 13
@@ -3045,7 +3340,8 @@ class TelaRelogios1(object):
 														Info.GrupoNk.Transfruit.Responsavel, 
 														Info.GrupoNk.Transfruit.Telefone))
 
-		self.botaoGrupoNkTransfruitRelogio         		           		= Button(self.ContainerGrupoNk, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoGrupoNkTransfruitRelogio         		           		= Button(self.ContainerGrupoNk, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoGrupoNkTransfruitRelogio         		["text"]        = "R"
 		self.botaoGrupoNkTransfruitRelogio         		["background"]  = Info.GrupoNk.Transfruit.RelogioCor
 		self.botaoGrupoNkTransfruitRelogio         		["width"]       = 2
@@ -3055,7 +3351,8 @@ class TelaRelogios1(object):
 		self.botaoGrupoNkTransfruitRelogio.grid    		(row=8,column=1,sticky = "N")
 
 
-		self.botaoGrupoNkDistribuidora                         			= Button(self.ContainerGrupoNk, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoGrupoNkDistribuidora                         			= Button(self.ContainerGrupoNk, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoGrupoNkDistribuidora                	["text"]        = "Distribuidora"
 		self.botaoGrupoNkDistribuidora                	["background"]  = Info.GrupoNk.Distribuidora.ModuloCor
 		self.botaoGrupoNkDistribuidora                	["width"]       = 13
@@ -3067,7 +3364,8 @@ class TelaRelogios1(object):
 														Info.GrupoNk.Distribuidora.Responsavel, 
 														Info.GrupoNk.Distribuidora.Telefone))
 
-		self.botaoGrupoNkDistribuidoraRelogio         	           		= Button(self.ContainerGrupoNk, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoGrupoNkDistribuidoraRelogio         	           		= Button(self.ContainerGrupoNk, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoGrupoNkDistribuidoraRelogio         	["text"]        = "R"
 		self.botaoGrupoNkDistribuidoraRelogio         	["background"]  = Info.GrupoNk.Distribuidora.RelogioCor
 		self.botaoGrupoNkDistribuidoraRelogio         	["width"]       = 2
@@ -3078,7 +3376,8 @@ class TelaRelogios1(object):
 
 
 
-		self.botaoGrupoNkNKFilial                             			= Button(self.ContainerGrupoNk, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoGrupoNkNKFilial                             			= Button(self.ContainerGrupoNk, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoGrupoNkNKFilial                		["text"]        = "NK Filial"
 		self.botaoGrupoNkNKFilial                		["background"]  = Info.GrupoNk.NKFilial.ModuloCor
 		self.botaoGrupoNkNKFilial                		["width"]       = 13
@@ -3090,7 +3389,8 @@ class TelaRelogios1(object):
 														Info.GrupoNk.NKFilial.Responsavel, 
 														Info.GrupoNk.NKFilial.Telefone))
 
-		self.botaoGrupoNkNKFilialRelogio         		           		= Button(self.ContainerGrupoNk, highlightbackground="black",activebackground="black",activeforeground="white")
+		self.botaoGrupoNkNKFilialRelogio         		           		= Button(self.ContainerGrupoNk, font="arial 11 bold" , 
+																	highlightbackground="black",activebackground="black",activeforeground="white")
 		self.botaoGrupoNkNKFilialRelogio         		["text"]        = "R"
 		self.botaoGrupoNkNKFilialRelogio         		["background"]  = Info.GrupoNk.NKFilial.RelogioCor
 		self.botaoGrupoNkNKFilialRelogio         		["width"]       = 2
@@ -3131,7 +3431,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoSBCPAtencao                      	= Button(self.ContainerSBCP, 
-														highlightbackground="black",
+														font="arial 11 bold" , 
+																	highlightbackground="black",
 														activebackground="black",
 														activeforeground="white")
 
@@ -3168,6 +3469,7 @@ class TelaRelogios1(object):
 
 
 		self.botaoSBCPNacional                         	= Button(self.ContainerSBCP, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -3184,6 +3486,7 @@ class TelaRelogios1(object):
 														Info.SBCP.Nacional.Telefone))
 
 		self.botaoSBCPNacionalRelogio                  	= Button(self.ContainerSBCP, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -3205,6 +3508,7 @@ class TelaRelogios1(object):
 
 
 		self.botaoSBCPES                         		= Button(self.ContainerSBCP, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -3221,6 +3525,7 @@ class TelaRelogios1(object):
 														Info.SBCP.ES.Telefone))
 
 		self.botaoSBCPESRelogio                  		= Button(self.ContainerSBCP, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -3242,6 +3547,7 @@ class TelaRelogios1(object):
 
 
 		self.botaoSBCPDF                         		= Button(self.ContainerSBCP, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -3258,6 +3564,7 @@ class TelaRelogios1(object):
 														Info.SBCP.DF.Telefone))
 
 		self.botaoSBCPDFRelogio                  		= Button(self.ContainerSBCP, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -3279,6 +3586,7 @@ class TelaRelogios1(object):
 
 
 		self.botaoSBCPCE                         		= Button(self.ContainerSBCP, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -3295,6 +3603,7 @@ class TelaRelogios1(object):
 														Info.SBCP.CE.Telefone))
 
 		self.botaoSBCPCERelogio                  		= Button(self.ContainerSBCP, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -3316,6 +3625,7 @@ class TelaRelogios1(object):
 
 
 		self.botaoSBCPBA                         		= Button(self.ContainerSBCP, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -3332,6 +3642,7 @@ class TelaRelogios1(object):
 														Info.SBCP.BA.Telefone))
 
 		self.botaoSBCPBARelogio                  		= Button(self.ContainerSBCP, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -3353,6 +3664,7 @@ class TelaRelogios1(object):
 
 
 		self.botaoSBCPSP                         		= Button(self.ContainerSBCP, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -3369,6 +3681,7 @@ class TelaRelogios1(object):
 														Info.SBCP.SP.Telefone))
 
 		self.botaoSBCPSPRelogio                  		= Button(self.ContainerSBCP, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -3390,6 +3703,7 @@ class TelaRelogios1(object):
 
 
 		self.botaoSBCPSC                         		= Button(self.ContainerSBCP, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -3406,6 +3720,7 @@ class TelaRelogios1(object):
 														Info.SBCP.SC.Telefone))
 
 		self.botaoSBCPSCRelogio                  		= Button(self.ContainerSBCP, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -3427,6 +3742,7 @@ class TelaRelogios1(object):
 
 
 		self.botaoSBCPRS                         		= Button(self.ContainerSBCP, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -3443,6 +3759,7 @@ class TelaRelogios1(object):
 														Info.SBCP.RS.Telefone))
 
 		self.botaoSBCPRSRelogio                  		= Button(self.ContainerSBCP, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -3464,6 +3781,7 @@ class TelaRelogios1(object):
 
 
 		self.botaoSBCPRJ                         		= Button(self.ContainerSBCP, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -3480,6 +3798,7 @@ class TelaRelogios1(object):
 														Info.SBCP.RJ.Telefone))
 
 		self.botaoSBCPRJRelogio                  		= Button(self.ContainerSBCP, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -3501,6 +3820,7 @@ class TelaRelogios1(object):
 
 
 		self.botaoSBCPPR                         		= Button(self.ContainerSBCP, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -3517,6 +3837,7 @@ class TelaRelogios1(object):
 														Info.SBCP.PR.Telefone))
 
 		self.botaoSBCPPRRelogio                  		= Button(self.ContainerSBCP, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -3538,6 +3859,7 @@ class TelaRelogios1(object):
 
 
 		self.botaoSBCPPE                         		= Button(self.ContainerSBCP, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -3554,6 +3876,7 @@ class TelaRelogios1(object):
 														Info.SBCP.PE.Telefone))
 
 		self.botaoSBCPPERelogio                  		= Button(self.ContainerSBCP, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -3575,6 +3898,7 @@ class TelaRelogios1(object):
 
 
 		self.botaoSBCPMG                         		= Button(self.ContainerSBCP, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -3591,6 +3915,7 @@ class TelaRelogios1(object):
 														Info.SBCP.MG.Telefone))
 
 		self.botaoSBCPMGRelogio                  		= Button(self.ContainerSBCP, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -3612,6 +3937,7 @@ class TelaRelogios1(object):
 
 
 		self.botaoSBCPGO                         		= Button(self.ContainerSBCP, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -3628,6 +3954,7 @@ class TelaRelogios1(object):
 														Info.SBCP.GO.Telefone))
 
 		self.botaoSBCPGORelogio                  		= Button(self.ContainerSBCP, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -3661,7 +3988,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoElRioAtencao                                        = Button(self.ContainerElRio, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -3682,7 +4010,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoElRioBotafogoMuniz                       	= Button(self.ContainerElRio, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -3698,7 +4027,8 @@ class TelaRelogios1(object):
 															Info.ElRio.BotafogoMuniz.Telefone))
 
 		self.botaoElRioBotafogoMunizRelogio                 = Button(self.ContainerElRio, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -3717,7 +4047,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoElRioBotafogoPraia                      	= Button(self.ContainerElRio, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -3733,7 +4064,8 @@ class TelaRelogios1(object):
 															Info.ElRio.BotafogoPraia.Telefone))
 
 		self.botaoElRioBotafogoPraiaRelogio                 = Button(self.ContainerElRio, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -3752,7 +4084,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoElRioBoulevard                         	= Button(self.ContainerElRio, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -3768,7 +4101,8 @@ class TelaRelogios1(object):
 															Info.ElRio.Boulevard.Telefone))
 
 		self.botaoElRioBoulevardRelogio                  	= Button(self.ContainerElRio, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -3787,7 +4121,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoElRioCarioca                         		= Button(self.ContainerElRio, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -3803,7 +4138,8 @@ class TelaRelogios1(object):
 															Info.ElRio.Carioca.Telefone))
 
 		self.botaoElRioCariocaRelogio                  		= Button(self.ContainerElRio, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -3822,7 +4158,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoElRioCentro1                         		= Button(self.ContainerElRio, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -3838,7 +4175,8 @@ class TelaRelogios1(object):
 															Info.ElRio.Centro1.Telefone))
 
 		self.botaoElRioCentro1Relogio                  		= Button(self.ContainerElRio, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -3857,7 +4195,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoElRioCentro2                         		= Button(self.ContainerElRio, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -3873,7 +4212,8 @@ class TelaRelogios1(object):
 															Info.ElRio.Centro2.Telefone))
 
 		self.botaoElRioCentro2Relogio                  		= Button(self.ContainerElRio, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -3891,7 +4231,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoElRioCentro3                         		= Button(self.ContainerElRio, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -3907,7 +4248,8 @@ class TelaRelogios1(object):
 															Info.ElRio.Centro3.Telefone))
 
 		self.botaoElRioCentro3Relogio                  		= Button(self.ContainerElRio, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -3927,7 +4269,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoElRioFashion                         		= Button(self.ContainerElRio, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -3943,7 +4286,8 @@ class TelaRelogios1(object):
 															Info.ElRio.Fashion.Telefone))
 
 		self.botaoElRioFashionRelogio                  		= Button(self.ContainerElRio, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -3961,7 +4305,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoElRioFlamengo                         	= Button(self.ContainerElRio, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -3977,7 +4322,8 @@ class TelaRelogios1(object):
 															Info.ElRio.Flamengo.Telefone))
 
 		self.botaoElRioFlamengoRelogio                  	= Button(self.ContainerElRio, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -3996,7 +4342,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoElRioLeblon                         		= Button(self.ContainerElRio, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -4012,7 +4359,8 @@ class TelaRelogios1(object):
 															Info.ElRio.Leblon.Telefone))
 
 		self.botaoElRioLeblonRelogio                  		= Button(self.ContainerElRio, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -4031,7 +4379,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoElRioNovaAmerica                      	= Button(self.ContainerElRio, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -4047,7 +4396,8 @@ class TelaRelogios1(object):
 															Info.ElRio.NovaAmerica.Telefone))
 
 		self.botaoElRioNovaAmericaRelogio                  	= Button(self.ContainerElRio, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -4066,7 +4416,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoElRioShopGrande                         	= Button(self.ContainerElRio, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -4082,7 +4433,8 @@ class TelaRelogios1(object):
 															Info.ElRio.ShopGrande.Telefone))
 
 		self.botaoElRioShopGrandeRelogio                  	= Button(self.ContainerElRio, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -4101,7 +4453,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoElRioShopMacae                         	= Button(self.ContainerElRio, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -4117,7 +4470,8 @@ class TelaRelogios1(object):
 															Info.ElRio.ShopMacae.Telefone))
 
 		self.botaoElRioShopMacaeRelogio                  	= Button(self.ContainerElRio, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -4136,7 +4490,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoElRioShopNorte                         	= Button(self.ContainerElRio, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -4152,7 +4507,8 @@ class TelaRelogios1(object):
 															Info.ElRio.ShopNorte.Telefone))
 
 		self.botaoElRioShopNorteRelogio                  	= Button(self.ContainerElRio, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -4171,7 +4527,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoElRioBackup1                         		= Button(self.ContainerElRio, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -4187,7 +4544,8 @@ class TelaRelogios1(object):
 															Info.ElRio.Backup1.Telefone))
 
 		self.botaoElRioBackup1Relogio                  		= Button(self.ContainerElRio, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -4206,7 +4564,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoElRioBackup2                         		= Button(self.ContainerElRio, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -4222,7 +4581,8 @@ class TelaRelogios1(object):
 															Info.ElRio.Backup2.Telefone))
 
 		self.botaoElRioBackup2Relogio                  		= Button(self.ContainerElRio, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -4256,7 +4616,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoOlimparkAtencao                                        = Button(self.ContainerOlimpark, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 
@@ -4275,7 +4636,8 @@ class TelaRelogios1(object):
 
 		relo=Info.Olimpark.JdPaulista
 		self.botaoOlimparkPaulista                         	= Button(self.ContainerOlimpark, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 																				
@@ -4291,7 +4653,8 @@ class TelaRelogios1(object):
 															relo.Telefone))
 
 		self.botaoOlimparkPaulistaRelogio                  	= Button(self.ContainerOlimpark, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 																				
@@ -4310,7 +4673,8 @@ class TelaRelogios1(object):
 
 		relo=Info.Olimpark.SantaCecilia
 		self.botaoOlimparkSantaCecilia                      = Button(self.ContainerOlimpark, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 																				
@@ -4326,7 +4690,8 @@ class TelaRelogios1(object):
 															relo.Telefone))
 
 		self.botaoOlimparkSantaCeciliaRelogio               = Button(self.ContainerOlimpark, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 																				
@@ -4345,7 +4710,8 @@ class TelaRelogios1(object):
 
 		relo=Info.Olimpark.VilaOlimpia
 		self.botaoOlimparkVilaOlimpia                       = Button(self.ContainerOlimpark, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 																				
@@ -4361,7 +4727,8 @@ class TelaRelogios1(object):
 															relo.Telefone))
 
 		self.botaoOlimparkVilaOlimpiaRelogio            	= Button(self.ContainerOlimpark, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 																				
@@ -4380,7 +4747,8 @@ class TelaRelogios1(object):
 
 		relo=Info.Olimpark.Previdencia
 		self.botaoOlimparkPrevidencia                       = Button(self.ContainerOlimpark, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 																				
@@ -4396,7 +4764,8 @@ class TelaRelogios1(object):
 															relo.Telefone))
 
 		self.botaoOlimparkPrevidenciaRelogio                = Button(self.ContainerOlimpark, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 																				
@@ -4415,7 +4784,8 @@ class TelaRelogios1(object):
 
 		relo=Info.Olimpark.Belezinho
 		self.botaoOlimparkBelezinho                         = Button(self.ContainerOlimpark, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 																				
@@ -4431,7 +4801,8 @@ class TelaRelogios1(object):
 															relo.Telefone))
 
 		self.botaoOlimparkBelezinhoRelogio                  = Button(self.ContainerOlimpark, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 																				
@@ -4450,7 +4821,8 @@ class TelaRelogios1(object):
 
 		relo=Info.Olimpark.Santana
 		self.botaoOlimparkSantana                         	= Button(self.ContainerOlimpark, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 																				
@@ -4466,7 +4838,8 @@ class TelaRelogios1(object):
 															relo.Telefone))
 
 		self.botaoOlimparkSantanaRelogio                  	= Button(self.ContainerOlimpark, 
-																				highlightbackground="black",
+																				font="arial 11 bold" , 
+																	highlightbackground="black",
 																				activebackground="black",
 																				activeforeground="white")
 																				
@@ -4511,7 +4884,8 @@ class TelaRelogios1(object):
 
 
 		self.botaoFancold1Atencao                      	= Button(self.ContainerFancold1, 
-														highlightbackground="black",
+														font="arial 11 bold" , 
+																	highlightbackground="black",
 														activebackground="black",
 														activeforeground="white")
 
@@ -4546,6 +4920,7 @@ class TelaRelogios1(object):
 
 		relo=Info.Fancold1.Givaudan
 		self.botaoFancold1Givaudan                    	= Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -4566,6 +4941,7 @@ class TelaRelogios1(object):
 		self.botaoFancold1Givaudan.grid              	(row=2, column=0, sticky = "N")
 
 		self.botaoFancold1GivaudanRelogio                           = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -4585,6 +4961,7 @@ class TelaRelogios1(object):
 
 		relo=Info.Fancold1.Yamaha
 		self.botaoFancold1Yamaha                       = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -4605,6 +4982,7 @@ class TelaRelogios1(object):
 
 
 		self.botaoFancold1YamahaRelogio                = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -4623,6 +5001,7 @@ class TelaRelogios1(object):
 
 		relo=Info.Fancold1.Odebrecht
 		self.botaoFancold1Odebrecht                     = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -4640,6 +5019,7 @@ class TelaRelogios1(object):
 		self.botaoFancold1Odebrecht.grid                   	(row=4,column=0,sticky = "N")
 
 		self.botaoFancold1OdebrechtRelogio                    = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -4657,6 +5037,7 @@ class TelaRelogios1(object):
 
 		relo=Info.Fancold1.HospJundiai
 		self.botaoFancold1HospJundiai                        = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -4674,6 +5055,7 @@ class TelaRelogios1(object):
 		self.botaoFancold1HospJundiai.grid               	(row=5,column=0,sticky = "N")
 
 		self.botaoFancold1HospJundiaiRelogio                            = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -4689,6 +5071,7 @@ class TelaRelogios1(object):
 
 		relo=Info.Fancold1.EscritRioNegro
 		self.botaoFancold1EscritRioNegro                      = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -4706,6 +5089,7 @@ class TelaRelogios1(object):
 		self.botaoFancold1EscritRioNegro.grid               	(row=6,column=0,sticky = "N")
 
 		self.botaoFancold1HospJundiaiRelogio                            = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -4721,6 +5105,7 @@ class TelaRelogios1(object):
 
 		relo=Info.Fancold1.MorumbiPrime
 		self.botaoFancold1MorumbiPrime                      = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -4738,6 +5123,7 @@ class TelaRelogios1(object):
 		self.botaoFancold1MorumbiPrime.grid               	(row=7,column=0,sticky = "N")
 
 		self.botaoFancold1MorumbiPrimeRelogio                  = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -4753,6 +5139,7 @@ class TelaRelogios1(object):
 
 		relo=Info.Fancold1.HospMarioCovas
 		self.botaoFancold1HospMarioCovas                      = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -4770,6 +5157,7 @@ class TelaRelogios1(object):
 		self.botaoFancold1HospMarioCovas.grid               	(row=8,column=0,sticky = "N")
 
 		self.botaoFancold1HospMarioCovasRelogio                  = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -4785,6 +5173,7 @@ class TelaRelogios1(object):
 
 		relo=Info.Fancold1.CondVerboDivino
 		self.botaoFancold1CondVerboDivino                      = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -4802,6 +5191,7 @@ class TelaRelogios1(object):
 		self.botaoFancold1CondVerboDivino.grid               	(row=9,column=0,sticky = "N")
 
 		self.botaoFancold1CondVerboDivinoRelogio                  = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -4817,6 +5207,7 @@ class TelaRelogios1(object):
 
 		relo=Info.Fancold1.HelborBerrini
 		self.botaoFancold1HelborBerrini                      = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -4834,6 +5225,7 @@ class TelaRelogios1(object):
 		self.botaoFancold1HelborBerrini.grid               	(row=10,column=0,sticky = "N")
 
 		self.botaoFancold1HelborBerriniRelogio                  = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -4849,6 +5241,7 @@ class TelaRelogios1(object):
 
 		relo=Info.Fancold1.PortoAtlantico
 		self.botaoFancold1PortoAtlantico                      = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -4866,6 +5259,7 @@ class TelaRelogios1(object):
 		self.botaoFancold1PortoAtlantico.grid               	(row=11,column=0,sticky = "N")
 
 		self.botaoFancold1PortoAtlanticoRelogio                  = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -4881,6 +5275,7 @@ class TelaRelogios1(object):
 
 		relo=Info.Fancold1.AwpFreiGaspar
 		self.botaoFancold1AwpFreiGaspar                      = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -4898,6 +5293,7 @@ class TelaRelogios1(object):
 		self.botaoFancold1AwpFreiGaspar.grid               	(row=12,column=0,sticky = "N")
 
 		self.botaoFancold1AwpFreiGasparRelogio                  = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -4913,6 +5309,7 @@ class TelaRelogios1(object):
 
 		relo=Info.Fancold1.PrestCold
 		self.botaoFancold1PrestCold                      = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -4930,6 +5327,7 @@ class TelaRelogios1(object):
 		self.botaoFancold1PrestCold.grid               	(row=13,column=0,sticky = "N")
 
 		self.botaoFancold1PrestColdRelogio                  = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -4945,6 +5343,7 @@ class TelaRelogios1(object):
 
 		relo=Info.Fancold1.UnimedSantos
 		self.botaoFancold1UnimedSantos                      = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -4962,6 +5361,7 @@ class TelaRelogios1(object):
 		self.botaoFancold1UnimedSantos.grid               	(row=14,column=0,sticky = "N")
 
 		self.botaoFancold1UnimedSantosRelogio                  = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -4977,6 +5377,7 @@ class TelaRelogios1(object):
 
 		relo=Info.Fancold1.CruzadaBandeirante
 		self.botaoFancold1CruzadaBandeirante                      = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -4994,6 +5395,7 @@ class TelaRelogios1(object):
 		self.botaoFancold1CruzadaBandeirante.grid               	(row=15,column=0,sticky = "N")
 
 		self.botaoFancold1CruzadaBandeiranteRelogio                  = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -5009,6 +5411,7 @@ class TelaRelogios1(object):
 
 		relo=Info.Fancold1.ColgateAnchieta
 		self.botaoFancold1ColgateAnchieta                      = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -5026,6 +5429,7 @@ class TelaRelogios1(object):
 		self.botaoFancold1ColgateAnchieta.grid               	(row=16,column=0,sticky = "N")
 
 		self.botaoFancold1ColgateAnchietaRelogio                  = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -5041,6 +5445,7 @@ class TelaRelogios1(object):
 
 		relo=Info.Fancold1.MDCaieiras
 		self.botaoFancold1MDCaieiras                      = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -5058,6 +5463,7 @@ class TelaRelogios1(object):
 		self.botaoFancold1MDCaieiras.grid               	(row=17,column=0,sticky = "N")
 
 		self.botaoFancold1MDCaieirasRelogio                  = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -5073,6 +5479,7 @@ class TelaRelogios1(object):
 
 		relo=Info.Fancold1.CondMandarim
 		self.botaoFancold1CondMandarim                      = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -5090,6 +5497,7 @@ class TelaRelogios1(object):
 		self.botaoFancold1CondMandarim.grid               	(row=18,column=0,sticky = "N")
 
 		self.botaoFancold1CondMandarimRelogio                  = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -5105,6 +5513,7 @@ class TelaRelogios1(object):
 
 		relo=Info.Fancold1.RhodiaPoliamida
 		self.botaoFancold1RhodiaPoliamida                      = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -5122,6 +5531,7 @@ class TelaRelogios1(object):
 		self.botaoFancold1RhodiaPoliamida.grid               	(row=19,column=0,sticky = "N")
 
 		self.botaoFancold1RhodiaPoliamidaRelogio                  = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -5137,6 +5547,7 @@ class TelaRelogios1(object):
 
 		relo=Info.Fancold1.BarraTradePrime
 		self.botaoFancold1BarraTradePrime                      = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -5154,6 +5565,7 @@ class TelaRelogios1(object):
 		self.botaoFancold1BarraTradePrime.grid               	(row=20,column=0,sticky = "N")
 
 		self.botaoFancold1BarraTradePrimeRelogio                  = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -5169,6 +5581,7 @@ class TelaRelogios1(object):
 
 		relo=Info.Fancold1.NovaSPCMF
 		self.botaoFancold1NovaSPCMF                      = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -5186,6 +5599,7 @@ class TelaRelogios1(object):
 		self.botaoFancold1NovaSPCMF.grid               	(row=21,column=0,sticky = "N")
 
 		self.botaoFancold1NovaSPCMFRelogio                  = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -5201,6 +5615,7 @@ class TelaRelogios1(object):
 
 		relo=Info.Fancold1.UnimedPamplona
 		self.botaoFancold1UnimedPamplona                      = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -5218,6 +5633,7 @@ class TelaRelogios1(object):
 		self.botaoFancold1UnimedPamplona.grid               	(row=22,column=0,sticky = "N")
 
 		self.botaoFancold1UnimedPamplonaRelogio                  = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -5233,6 +5649,7 @@ class TelaRelogios1(object):
 
 		relo=Info.Fancold1.Ushin
 		self.botaoFancold1Ushin                      = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -5250,6 +5667,7 @@ class TelaRelogios1(object):
 		self.botaoFancold1Ushin.grid               	(row=23,column=0,sticky = "N")
 
 		self.botaoFancold1UshinRelogio                  = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -5265,6 +5683,7 @@ class TelaRelogios1(object):
 
 		relo=Info.Fancold1.CondManagerCenter
 		self.botaoFancold1CondManagerCenter                      = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -5282,6 +5701,7 @@ class TelaRelogios1(object):
 		self.botaoFancold1CondManagerCenter.grid               	(row=24,column=0,sticky = "N")
 
 		self.botaoFancold1CondManagerCenterRelogio                  = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -5297,6 +5717,7 @@ class TelaRelogios1(object):
 
 		relo=Info.Fancold1.ChoiceSublimeRJ
 		self.botaoFancold1ChoiceSublimeRJ                      = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -5314,6 +5735,7 @@ class TelaRelogios1(object):
 		self.botaoFancold1ChoiceSublimeRJ.grid               	(row=25,column=0,sticky = "N")
 
 		self.botaoFancold1ChoiceSublimeRJRelogio                  = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -5329,6 +5751,7 @@ class TelaRelogios1(object):
 
 		relo=Info.Fancold1.HelborMogiDasCruzes
 		self.botaoFancold1HelborMogiDasCruzes                      = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -5346,6 +5769,7 @@ class TelaRelogios1(object):
 		self.botaoFancold1HelborMogiDasCruzes.grid               	(row=26,column=0,sticky = "N")
 
 		self.botaoFancold1HelborMogiDasCruzesRelogio                  = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -5360,6 +5784,7 @@ class TelaRelogios1(object):
 
 		relo=Info.Fancold1.AWPTomeDeSouza
 		self.botaoFancold1AWPTomeDeSouza                      = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -5377,6 +5802,7 @@ class TelaRelogios1(object):
 		self.botaoFancold1AWPTomeDeSouza.grid               	(row=27,column=0,sticky = "N")
 
 		self.botaoFancold1AWPTomeDeSouzaRelogio                  = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -5392,6 +5818,7 @@ class TelaRelogios1(object):
 
 		relo=Info.Fancold1.EmilioRibas
 		self.botaoFancold1EmilioRibas                      = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -5409,6 +5836,7 @@ class TelaRelogios1(object):
 		self.botaoFancold1EmilioRibas.grid               	(row=28,column=0,sticky = "N")
 
 		self.botaoFancold1EmilioRibasRelogio                  = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -5424,6 +5852,7 @@ class TelaRelogios1(object):
 
 		relo=Info.Fancold1.OnThePark
 		self.botaoFancold1OnThePark                      = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -5441,6 +5870,7 @@ class TelaRelogios1(object):
 		self.botaoFancold1OnThePark.grid               	(row=29,column=0,sticky = "N")
 
 		self.botaoFancold1OnTheParkRelogio                  = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -5456,6 +5886,7 @@ class TelaRelogios1(object):
 
 		lo=Info.Fancold1.MaayanRJ
 		self.botaoFancold1MaayanRJ                      = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -5473,6 +5904,7 @@ class TelaRelogios1(object):
 		self.botaoFancold1MaayanRJ.grid               	(row=30,column=0,sticky = "N")
 
 		self.botaoFancold1MaayanRJRelogio                  = Button(self.ContainerFancold1, 
+																	font="arial 11 bold" , 
 																	highlightbackground="black",
 																	activebackground="black",
 																	activeforeground="white")
@@ -5486,9 +5918,19 @@ class TelaRelogios1(object):
 
 	def resize(self,event):
 		self.ContainerPai.config(width=event.width,height=event.height)
+		
+		Telas.S1_Width = event.width
+		Telas.S1_height = event.height
 		#print event.width 
 		#print event.height
-		self.cavatura.configure(width=event.width-15,height=event.height-15)
+		#self.cavatura.configure(width=event.width-15,height=event.height-15)
+		if Flag.HideScrollS1 == True:
+			self.cavatura.configure(width=event.width,height=event.height)
+		else:
+			self.cavatura.configure(width=event.width-15,height=event.height-15)
+
+
+
 
 	def on_configure(self,event):
 		#canvas_width = event.width
@@ -5567,21 +6009,23 @@ class TelaRelogios1(object):
 
 		self.ContainerColuna0             			= Frame (self.ContainerRelogios)
 		
-		self.ContainerCasaCristo          			= Frame (self.ContainerColuna0)
 		self.ContainerBestInClass         			= Frame (self.ContainerColuna0)
 		self.ContainerIsoRadio			  			= Frame (self.ContainerColuna0)
+		#self.ContainerLaser               			= Frame (self.ContainerColuna0)
 
 
 		self.ContainerColuna0.grid                	(row=0, column=0,pady=5, padx=3, columnspan=1, sticky="N")
-		self.ContainerCasaCristo.grid             	(row=0, column=0,pady=0, padx=3, columnspan=1, sticky="N")
-		self.ContainerBestInClass.grid            	(row=1, column=0,pady=0, padx=3, columnspan=1, sticky="N")
-		self.ContainerIsoRadio.grid               	(row=2, column=0,pady=0, padx=3, columnspan=1, sticky="N")
-
+		self.ContainerBestInClass.grid            	(row=0, column=0,pady=0, padx=3, columnspan=1, sticky="N")
+		self.ContainerIsoRadio.grid               	(row=1, column=0,pady=0, padx=3, columnspan=1, sticky="N")
+		#self.ContainerLaser.grid                  	(row=2, column=0,pady=0  , padx=3, columnspan=1, sticky="N")
+		
 		self.ContainerRelogios.configure(bg="black")
-		self.ContainerCasaCristo.configure(bg="black")
+		
 		self.ContainerBestInClass.configure(bg="black")
 		self.ContainerIsoRadio.configure(bg="black")
 		self.ContainerColuna0.configure(bg="black")
+		#self.ContainerLaser.configure(bg="black")
+		
 
 	def Create_ContainerColuna1(self,root):
 
@@ -5605,19 +6049,19 @@ class TelaRelogios1(object):
 		self.ContainerColuna2             			= Frame (self.ContainerRelogios)
 		self.ContainerGravex              			= Frame (self.ContainerColuna2)
 		self.ContainerElRio							= Frame (self.ContainerColuna2)
-		self.ContainerOlimpark						= Frame (self.ContainerColuna2)
+		#self.ContainerMilenioErvas						= Frame (self.ContainerColuna2)
 
 
 		self.ContainerColuna2.grid                	(row=0, column=2,pady=5, padx=3, columnspan=1, sticky="N")
 		self.ContainerGravex.grid                 	(row=0, column=0,pady=0, padx=3, columnspan=1, sticky="N")
 		self.ContainerElRio.grid 					(row=1, column=0,pady=0, padx=3, columnspan=1, sticky="N")
-		self.ContainerOlimpark.grid 				(row=2, column=0,pady=0, padx=3, columnspan=1, sticky="N")
+		#self.ContainerMilenioErvas.grid 				(row=2, column=0,pady=0, padx=3, columnspan=1, sticky="N")
 
 
 		self.ContainerColuna2.configure(bg="black")
 		self.ContainerGravex.configure(bg="black")
 		self.ContainerElRio.configure(bg="black")
-		self.ContainerOlimpark.configure(bg="black")
+		#self.ContainerMilenioErvas.configure(bg="black")
 
 	def Create_ContainerColuna3(self,root):
 
@@ -5625,18 +6069,18 @@ class TelaRelogios1(object):
 		self.ContainerColuna3             = Frame (self.ContainerRelogios)
 		self.ContainerPredman             = Frame (self.ContainerColuna3)
 		self.ContainerUniman              = Frame (self.ContainerColuna3)
-		self.ContainerMilenioErvas        = Frame (self.ContainerColuna3)
+		self.ContainerOlimpark        = Frame (self.ContainerColuna3)
 		
 		self.ContainerColuna3.grid                	(row=0, column=3,pady=5, padx=3, columnspan=1, sticky="N")
 		self.ContainerPredman.grid                	(row=0, column=0,pady=0, padx=3, columnspan=1, sticky="N")
 		self.ContainerUniman.grid                 	(row=1, column=0,pady=0, padx=3, columnspan=1, sticky="N")
-		self.ContainerMilenioErvas.grid           	(row=2, column=0,pady=0, padx=3, columnspan=1, sticky="N")
+		self.ContainerOlimpark.grid           	(row=2, column=0,pady=0, padx=3, columnspan=1, sticky="N")
 
 	
 		self.ContainerColuna3.configure(bg="black")
 		self.ContainerPredman.configure(bg="black")
 		self.ContainerUniman.configure(bg="black")
-		self.ContainerMilenioErvas.configure(bg="black")
+		self.ContainerOlimpark.configure(bg="black")
 	
 
 	def Create_ContainerColuna4(self,root):
@@ -5645,20 +6089,17 @@ class TelaRelogios1(object):
 		self.ContainerColuna4             			= Frame (self.ContainerRelogios)
 		self.ContainerTarek              			= Frame (self.ContainerColuna4)
 		self.ContainerBuilding           			= Frame (self.ContainerColuna4)
-		self.ContainerLaser               			= Frame (self.ContainerColuna4)
 		self.ContainerSBCP				 			= Frame (self.ContainerColuna4)
 
 
 		self.ContainerColuna4.grid                	(row=0, column=4,pady=5  , padx=3, columnspan=1, sticky="N")
 		self.ContainerTarek.grid                  	(row=0, column=0,pady=0  , padx=3, columnspan=1, sticky="N")
 		self.ContainerBuilding.grid               	(row=1, column=0,pady=0  , padx=3, columnspan=1 ,sticky="N")
-		self.ContainerLaser.grid                  	(row=2, column=0,pady=0  , padx=3, columnspan=1, sticky="N")
 		self.ContainerSBCP.grid 					(row=3, column=0,pady=0  , padx=3, columnspan=1, sticky="N")
 
 		self.ContainerColuna4.configure(bg="black")
 		self.ContainerTarek.configure(bg="black")
 		self.ContainerBuilding.configure(bg="black")
-		self.ContainerLaser.configure(bg="black")
 		self.ContainerSBCP.configure(bg="black")
 
 
@@ -5667,15 +6108,15 @@ class TelaRelogios1(object):
 
 
 		self.ContainerColuna5             			= Frame (self.ContainerRelogios)
-		self.ContainerFancold1       				= Frame (self.ContainerColuna5)
+		self.ContainerCasaCristo          			= Frame (self.ContainerColuna5)
 
 
 		self.ContainerColuna5.grid               	(row=0, column=5,pady=5  , padx=3, columnspan=1, sticky="N")
-		self.ContainerFancold1.grid           		(row=0, column=0,pady=0  , padx=3, columnspan=1, sticky="N")
-
-		self.ContainerFancold1.configure(bg="black")
+		self.ContainerCasaCristo.grid             	(row=0, column=0,pady=0, padx=3, columnspan=1, sticky="N")
+	
+		
 		self.ContainerColuna5.configure(bg="black")
-
+		self.ContainerCasaCristo.configure(bg="black")
 
 
 	def Create_ContainerColuna6(self,root):
@@ -5683,21 +6124,27 @@ class TelaRelogios1(object):
 
 		self.ContainerColuna6             = Frame (self.ContainerRelogios)
 		#self.ContainerUniman              = Frame (self.ContainerColuna6)
+		self.ContainerFancold1       				= Frame (self.ContainerColuna6)
 
 
-		self.ContainerColuna6.grid                (row=0, column=6,pady=5, padx=1, columnspan=1, sticky="N")
-		#self.ContainerUniman.grid                 (row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
+		self.ContainerColuna6.grid                	(row=0, column=6,pady=5, padx=1, columnspan=1, sticky="N")
+		#self.ContainerUniman.grid                 	(row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
+		self.ContainerFancold1.grid           		(row=0, column=0,pady=0  , padx=3, columnspan=1, sticky="N")
 
-
+		self.ContainerColuna6.configure(bg="black")
+		self.ContainerFancold1.configure(bg="black")
 
 	def Create_ContainerColuna7(self,root):
 
 		self.ContainerColuna7             = Frame (self.ContainerRelogios)
 		#self.ContainerUniman              = Frame (self.ContainerColuna7)
+		self.ContainerMilenioErvas						= Frame (self.ContainerColuna7)
 
-		self.ContainerColuna7.grid                (row=0, column=7,pady=5, padx=1, columnspan=1, sticky="N")
-		#self.ContainerUniman.grid                 (row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
+		self.ContainerColuna7.grid              (row=0, column=7,pady=5, padx=1, columnspan=1, sticky="N")
+		#self.ContainerUniman.grid                (row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
+		self.ContainerMilenioErvas.grid 		(row=0, column=0,pady=0, padx=3, columnspan=1, sticky="N")
 
+		self.ContainerMilenioErvas.configure(bg="black")
 
 
 	def Create_ContainerColuna8(self,root):
@@ -5705,12 +6152,13 @@ class TelaRelogios1(object):
 
 		self.ContainerColuna8             = Frame (self.ContainerRelogios)
 		#self.ContainerUniman              = Frame (self.ContainerColuna8)
-		
+		self.ContainerLaser               			= Frame (self.ContainerColuna8)
 
 		self.ContainerColuna8.grid                (row=0, column=8,pady=5, padx=1, columnspan=1, sticky="N")
 		#self.ContainerUniman.grid                 (row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
-
-
+		self.ContainerLaser.grid                  	(row=2, column=0,pady=0  , padx=3, columnspan=1, sticky="N")
+		
+		self.ContainerLaser.configure(bg="black")
 
 	def Create_ContainerColuna9(self,root):
 
