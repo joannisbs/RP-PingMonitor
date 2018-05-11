@@ -15,7 +15,7 @@ class TelaRelogios1(object):
 
 		self.Create_container(root)
 
-		self.Create_menus(root)
+		#self.Create_menus(root)
 
 		self.Create_Building()
 
@@ -5924,11 +5924,11 @@ class TelaRelogios1(object):
 		#print event.width 
 		#print event.height
 		#self.cavatura.configure(width=event.width-15,height=event.height-15)
-		if Flag.HideScrollS1 == True:
-			self.cavatura.configure(width=event.width,height=event.height)
-		else:
-			self.cavatura.configure(width=event.width-15,height=event.height-15)
-
+		#if Flag.HideScrollS1 == True:
+		#	self.cavatura.configure(width=event.width,height=event.height)
+		#else:
+		#	self.cavatura.configure(width=event.width-15,height=event.height-15)
+		self.cavatura.configure(width=event.width,height=event.height)
 
 
 
