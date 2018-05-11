@@ -5928,7 +5928,7 @@ class TelaRelogios1(object):
 		#	self.cavatura.configure(width=event.width,height=event.height)
 		#else:
 		#	self.cavatura.configure(width=event.width-15,height=event.height-15)
-		self.cavatura.configure(width=event.width,height=event.height)
+		self.cavatura.configure(width=event.width+1,height=event.height+1)
 
 
 
@@ -6011,20 +6011,20 @@ class TelaRelogios1(object):
 		
 		self.ContainerBestInClass         			= Frame (self.ContainerColuna0)
 		self.ContainerIsoRadio			  			= Frame (self.ContainerColuna0)
-		#self.ContainerLaser               			= Frame (self.ContainerColuna0)
+		self.ContainerGravex               			= Frame (self.ContainerColuna0)
 
 
-		self.ContainerColuna0.grid                	(row=0, column=0,pady=5, padx=3, columnspan=1, sticky="N")
-		self.ContainerBestInClass.grid            	(row=0, column=0,pady=0, padx=3, columnspan=1, sticky="N")
-		self.ContainerIsoRadio.grid               	(row=1, column=0,pady=0, padx=3, columnspan=1, sticky="N")
-		#self.ContainerLaser.grid                  	(row=2, column=0,pady=0  , padx=3, columnspan=1, sticky="N")
+		self.ContainerColuna0.grid                	(row=0, column=0,pady=5, padx=0, columnspan=1, sticky="N")
+		self.ContainerBestInClass.grid            	(row=0, column=0,pady=0, padx=0, columnspan=1, sticky="N")
+		self.ContainerIsoRadio.grid               	(row=1, column=0,pady=0, padx=0, columnspan=1, sticky="N")
+		self.ContainerGravex.grid                  	(row=2, column=0,pady=0  , padx=0, columnspan=1, sticky="N")
 		
 		self.ContainerRelogios.configure(bg="black")
 		
 		self.ContainerBestInClass.configure(bg="black")
 		self.ContainerIsoRadio.configure(bg="black")
 		self.ContainerColuna0.configure(bg="black")
-		#self.ContainerLaser.configure(bg="black")
+		self.ContainerGravex.configure(bg="black")
 		
 
 	def Create_ContainerColuna1(self,root):
@@ -6035,9 +6035,9 @@ class TelaRelogios1(object):
 		self.ContainerGrupoNk             			= Frame (self.ContainerColuna1)
 
 
-		self.ContainerColuna1.grid                	(row=0, column=1, pady=5 ,padx=3, columnspan=1, sticky="N")
-		self.ContainerLotten.grid                 	(row=1, column=0, pady=0 ,padx=3, columnspan=1, sticky="N")
-		self.ContainerGrupoNk.grid                 	(row=2, column=0, pady=0 ,padx=3, columnspan=1, sticky="N")
+		self.ContainerColuna1.grid                	(row=0, column=1, pady=5 ,padx=0, columnspan=1, sticky="N")
+		self.ContainerLotten.grid                 	(row=1, column=0, pady=0 ,padx=0, columnspan=1, sticky="N")
+		self.ContainerGrupoNk.grid                 	(row=2, column=0, pady=0 ,padx=0, columnspan=1, sticky="N")
 
 		self.ContainerColuna1.configure(bg="black")
 		self.ContainerLotten.configure(bg="black")
@@ -6047,21 +6047,21 @@ class TelaRelogios1(object):
 
 
 		self.ContainerColuna2             			= Frame (self.ContainerRelogios)
-		self.ContainerGravex              			= Frame (self.ContainerColuna2)
+		self.ContainerBuilding              		= Frame (self.ContainerColuna2)
 		self.ContainerElRio							= Frame (self.ContainerColuna2)
-		#self.ContainerMilenioErvas						= Frame (self.ContainerColuna2)
+		self.ContainerOlimpark						= Frame (self.ContainerColuna2)
 
 
-		self.ContainerColuna2.grid                	(row=0, column=2,pady=5, padx=3, columnspan=1, sticky="N")
-		self.ContainerGravex.grid                 	(row=0, column=0,pady=0, padx=3, columnspan=1, sticky="N")
-		self.ContainerElRio.grid 					(row=1, column=0,pady=0, padx=3, columnspan=1, sticky="N")
-		#self.ContainerMilenioErvas.grid 				(row=2, column=0,pady=0, padx=3, columnspan=1, sticky="N")
+		self.ContainerColuna2.grid                	(row=0, column=2,pady=5, padx=0, columnspan=1, sticky="N")
+		self.ContainerBuilding.grid                 (row=0, column=0,pady=0, padx=0, columnspan=1, sticky="N")
+		self.ContainerElRio.grid 					(row=1, column=0,pady=0, padx=0, columnspan=1, sticky="N")
+		self.ContainerOlimpark.grid 				(row=2, column=0,pady=0, padx=0, columnspan=1, sticky="N")
 
 
 		self.ContainerColuna2.configure(bg="black")
-		self.ContainerGravex.configure(bg="black")
+		self.ContainerBuilding.configure(bg="black")
 		self.ContainerElRio.configure(bg="black")
-		#self.ContainerMilenioErvas.configure(bg="black")
+		self.ContainerOlimpark.configure(bg="black")
 
 	def Create_ContainerColuna3(self,root):
 
@@ -6069,18 +6069,18 @@ class TelaRelogios1(object):
 		self.ContainerColuna3             = Frame (self.ContainerRelogios)
 		self.ContainerPredman             = Frame (self.ContainerColuna3)
 		self.ContainerUniman              = Frame (self.ContainerColuna3)
-		self.ContainerOlimpark        = Frame (self.ContainerColuna3)
+		self.ContainerMilenioErvas        = Frame (self.ContainerColuna3)
 		
-		self.ContainerColuna3.grid                	(row=0, column=3,pady=5, padx=3, columnspan=1, sticky="N")
-		self.ContainerPredman.grid                	(row=0, column=0,pady=0, padx=3, columnspan=1, sticky="N")
-		self.ContainerUniman.grid                 	(row=1, column=0,pady=0, padx=3, columnspan=1, sticky="N")
-		self.ContainerOlimpark.grid           	(row=2, column=0,pady=0, padx=3, columnspan=1, sticky="N")
+		self.ContainerColuna3.grid                	(row=0, column=3,pady=5, padx=0, columnspan=1, sticky="N")
+		self.ContainerPredman.grid                	(row=0, column=0,pady=0, padx=0, columnspan=1, sticky="N")
+		self.ContainerUniman.grid                 	(row=1, column=0,pady=0, padx=0, columnspan=1, sticky="N")
+		self.ContainerMilenioErvas.grid           	(row=2, column=0,pady=0, padx=0, columnspan=1, sticky="N")
 
 	
 		self.ContainerColuna3.configure(bg="black")
 		self.ContainerPredman.configure(bg="black")
 		self.ContainerUniman.configure(bg="black")
-		self.ContainerOlimpark.configure(bg="black")
+		self.ContainerMilenioErvas.configure(bg="black")
 	
 
 	def Create_ContainerColuna4(self,root):
@@ -6088,19 +6088,21 @@ class TelaRelogios1(object):
 
 		self.ContainerColuna4             			= Frame (self.ContainerRelogios)
 		self.ContainerTarek              			= Frame (self.ContainerColuna4)
-		self.ContainerBuilding           			= Frame (self.ContainerColuna4)
+		self.ContainerLaser           				= Frame (self.ContainerColuna4)
 		self.ContainerSBCP				 			= Frame (self.ContainerColuna4)
+		self.ContainerCasaCristo          			= Frame (self.ContainerColuna4)
 
-
-		self.ContainerColuna4.grid                	(row=0, column=4,pady=5  , padx=3, columnspan=1, sticky="N")
-		self.ContainerTarek.grid                  	(row=0, column=0,pady=0  , padx=3, columnspan=1, sticky="N")
-		self.ContainerBuilding.grid               	(row=1, column=0,pady=0  , padx=3, columnspan=1 ,sticky="N")
-		self.ContainerSBCP.grid 					(row=3, column=0,pady=0  , padx=3, columnspan=1, sticky="N")
-
+		self.ContainerColuna4.grid                	(row=0, column=4,pady=5  , padx=0, columnspan=1, sticky="N")
+		self.ContainerTarek.grid                  	(row=0, column=0,pady=0  , padx=0, columnspan=1, sticky="N")
+		self.ContainerLaser.grid               		(row=1, column=0,pady=0  , padx=0, columnspan=1 ,sticky="N")
+		self.ContainerSBCP.grid 					(row=2, column=0,pady=0  , padx=0, columnspan=1, sticky="N")
+		self.ContainerCasaCristo.grid             	(row=3, column=0,pady=0, 	padx=0, columnspan=1, sticky="N")
+	
 		self.ContainerColuna4.configure(bg="black")
 		self.ContainerTarek.configure(bg="black")
-		self.ContainerBuilding.configure(bg="black")
+		self.ContainerLaser.configure(bg="black")
 		self.ContainerSBCP.configure(bg="black")
+		self.ContainerCasaCristo.configure(bg="black")
 
 
 
@@ -6108,15 +6110,15 @@ class TelaRelogios1(object):
 
 
 		self.ContainerColuna5             			= Frame (self.ContainerRelogios)
-		self.ContainerCasaCristo          			= Frame (self.ContainerColuna5)
+		self.ContainerFancold1          			= Frame (self.ContainerColuna5)
 
 
-		self.ContainerColuna5.grid               	(row=0, column=5,pady=5  , padx=3, columnspan=1, sticky="N")
-		self.ContainerCasaCristo.grid             	(row=0, column=0,pady=0, padx=3, columnspan=1, sticky="N")
+		self.ContainerColuna5.grid               	(row=0, column=5,pady=5  , padx=0, columnspan=1, sticky="N")
+		self.ContainerFancold1.grid             	(row=0, column=0,pady=0, padx=0, columnspan=1, sticky="N")
 	
 		
 		self.ContainerColuna5.configure(bg="black")
-		self.ContainerCasaCristo.configure(bg="black")
+		self.ContainerFancold1.configure(bg="black")
 
 
 	def Create_ContainerColuna6(self,root):
@@ -6124,27 +6126,27 @@ class TelaRelogios1(object):
 
 		self.ContainerColuna6             = Frame (self.ContainerRelogios)
 		#self.ContainerUniman              = Frame (self.ContainerColuna6)
-		self.ContainerFancold1       				= Frame (self.ContainerColuna6)
+		#self.ContainerFancold1       				= Frame (self.ContainerColuna6)
 
 
 		self.ContainerColuna6.grid                	(row=0, column=6,pady=5, padx=1, columnspan=1, sticky="N")
 		#self.ContainerUniman.grid                 	(row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
-		self.ContainerFancold1.grid           		(row=0, column=0,pady=0  , padx=3, columnspan=1, sticky="N")
+		#self.ContainerFancold1.grid           		(row=0, column=0,pady=0  , padx=0, columnspan=1, sticky="N")
 
 		self.ContainerColuna6.configure(bg="black")
-		self.ContainerFancold1.configure(bg="black")
+		#self.ContainerFancold1.configure(bg="black")
 
 	def Create_ContainerColuna7(self,root):
 
 		self.ContainerColuna7             = Frame (self.ContainerRelogios)
 		#self.ContainerUniman              = Frame (self.ContainerColuna7)
-		self.ContainerMilenioErvas						= Frame (self.ContainerColuna7)
+		#self.ContainerMilenioErvas						= Frame (self.ContainerColuna7)
 
 		self.ContainerColuna7.grid              (row=0, column=7,pady=5, padx=1, columnspan=1, sticky="N")
 		#self.ContainerUniman.grid                (row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
-		self.ContainerMilenioErvas.grid 		(row=0, column=0,pady=0, padx=3, columnspan=1, sticky="N")
+		#self.ContainerMilenioErvas.grid 		(row=0, column=0,pady=0, padx=0, columnspan=1, sticky="N")
 
-		self.ContainerMilenioErvas.configure(bg="black")
+		#self.ContainerMilenioErvas.configure(bg="black")
 
 
 	def Create_ContainerColuna8(self,root):
@@ -6152,13 +6154,13 @@ class TelaRelogios1(object):
 
 		self.ContainerColuna8             = Frame (self.ContainerRelogios)
 		#self.ContainerUniman              = Frame (self.ContainerColuna8)
-		self.ContainerLaser               			= Frame (self.ContainerColuna8)
+		#self.ContainerGravex               			= Frame (self.ContainerColuna8)
 
 		self.ContainerColuna8.grid                (row=0, column=8,pady=5, padx=1, columnspan=1, sticky="N")
 		#self.ContainerUniman.grid                 (row=0, column=0,pady=5, padx=1, columnspan=1, sticky="N")
-		self.ContainerLaser.grid                  	(row=2, column=0,pady=0  , padx=3, columnspan=1, sticky="N")
+		#self.ContainerGravex.grid                  	(row=2, column=0,pady=0  , padx=0, columnspan=1, sticky="N")
 		
-		self.ContainerLaser.configure(bg="black")
+		self.ContainerColuna8.configure(bg="black")
 
 	def Create_ContainerColuna9(self,root):
 
